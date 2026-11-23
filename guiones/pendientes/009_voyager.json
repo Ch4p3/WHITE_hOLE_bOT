@@ -1,0 +1,24 @@
+{
+  "titulo": "Voyager 1 is so far its messages take almost a day 🛰️",
+  "descripcion": "Launched in 1977, Voyager 1 is the most distant human-made object. Its radio signals now need close to 23 hours to reach Earth.",
+  "hashtags": "#space #nasa #voyager #science #shorts",
+  "fuentes": ["https://science.nasa.gov/mission/voyager/voyager-1/", "https://en.wikipedia.org/wiki/Voyager_1"],
+  "velocidad": 0.9,
+  "escenas": [
+    {"texto": "Voyager one left Earth in nineteen seventy seven, and it never stopped.",
+     "visual": {"tipo": "card", "title": "VOYAGER 1", "tag": "1977",
+                "panel": {"label": "Most distant human-made object", "value": "Still flying", "progress": 1.0, "color": "warm", "sync": "Voyager", "value_sync": "never"}}},
+    {"texto": "It is now more than twenty four billion kilometers away.",
+     "visual": {"tipo": "counter", "to": 24, "suffix": "B+ km", "label": "distance from Earth", "sync": "twenty"}},
+    {"texto": "Its messages, moving at the speed of light, take almost a full day to reach us.",
+     "visual": {"tipo": "counter", "to": 23, "suffix": " h", "label": "one-way signal time", "sync": "almost"}},
+    {"texto": "Its radio transmitter has about the power of a fridge light bulb.",
+     "visual": {"tipo": "versus", "left": {"label": "VOYAGER RADIO", "value": "≈ 23 W", "color": "warm"},
+                "right": {"label": "FRIDGE BULB", "value": "≈ 20 W", "sub": "about the same", "color": "blue", "sync": "fridge"},
+                "badge": {"top": "", "bottom": "=", "sync": "power"}}},
+    {"texto": "It carries a golden record with sounds and music from Earth.",
+     "visual": {"tipo": "bigword", "word": "GOLDEN RECORD", "size": 150, "sub": "a message for anyone out there", "sync": "golden"}},
+    {"texto": "Our farthest messenger is still talking to us. Follow for more space facts.",
+     "visual": {"tipo": "outro", "lines": ["STILL", "TALKING", "TO US."], "syncs": [null, "still", "talking"]}}
+  ]
+}

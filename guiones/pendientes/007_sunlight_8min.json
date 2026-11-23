@@ -1,0 +1,24 @@
+{
+  "titulo": "You always see the Sun 8 minutes late ☀️",
+  "descripcion": "Light takes about 8 minutes and 20 seconds to travel the ~150 million km from the Sun to Earth.",
+  "hashtags": "#science #space #sun #physics #shorts",
+  "fuentes": ["https://science.nasa.gov/sun/facts/", "https://en.wikipedia.org/wiki/Light-second"],
+  "velocidad": 0.9,
+  "escenas": [
+    {"texto": "When you look at the Sun, you're seeing the past.",
+     "visual": {"tipo": "bigword", "word": "THE PAST", "size": 210, "sub": "every time you look up", "sync": "past"}},
+    {"texto": "Sunlight takes about eight minutes and twenty seconds to reach Earth.",
+     "visual": {"tipo": "card", "title": "SUNLIGHT", "tag": "8:20",
+                "panel": {"label": "Travel time to Earth", "value": "≈ 8 min 20 s", "progress": 0.55, "color": "warm", "sync": "Sunlight", "value_sync": "eight"}}},
+    {"texto": "It crosses about one hundred fifty million kilometers.",
+     "visual": {"tipo": "counter", "to": 150, "suffix": "M km", "label": "Sun to Earth", "sync": "hundred"}},
+    {"texto": "At three hundred thousand kilometers every second.",
+     "visual": {"tipo": "counter", "to": 299792, "suffix": " km/s", "label": "speed of light", "sync": "three"}},
+    {"texto": "If the Sun vanished, the sky would stay bright for eight more minutes.",
+     "visual": {"tipo": "versus", "left": {"label": "SUN GONE", "value": "0:00", "color": "warm"},
+                "right": {"label": "YOU NOTICE", "value": "8:20", "sub": "minutes later", "color": "blue", "sync": "bright"},
+                "badge": {"top": "", "bottom": "DELAY", "sync": "eight"}}},
+    {"texto": "The Sun you see is always eight minutes old. Follow for more space facts.",
+     "visual": {"tipo": "outro", "lines": ["ALWAYS", "8 MINUTES", "OLD."], "syncs": [null, "eight", "old"]}}
+  ]
+}

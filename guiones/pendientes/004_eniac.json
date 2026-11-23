@@ -1,0 +1,24 @@
+{
+  "titulo": "The first general-purpose computer weighed 27 tons 🏭",
+  "descripcion": "ENIAC (1945) filled a room, used about 17,500 vacuum tubes and drew around 150 kilowatts of power.",
+  "hashtags": "#tech #history #computers #eniac #shorts",
+  "fuentes": ["https://en.wikipedia.org/wiki/ENIAC", "https://www.britannica.com/technology/ENIAC"],
+  "velocidad": 0.9,
+  "escenas": [
+    {"texto": "In nineteen forty five, one computer weighed about twenty seven tons.",
+     "visual": {"tipo": "card", "title": "ENIAC", "tag": "1945",
+                "panel": {"label": "Total weight", "value": "≈ 27 tons", "progress": 0.9, "color": "warm", "sync": "computer", "value_sync": "twenty"}}},
+    {"texto": "It used around seventeen thousand five hundred vacuum tubes.",
+     "visual": {"tipo": "counter", "to": 17468, "label": "vacuum tubes", "note": "and miles of wiring", "note_sync": "vacuum", "sync": "seventeen"}},
+    {"texto": "And it drew about one hundred fifty kilowatts of power.",
+     "visual": {"tipo": "counter", "to": 150, "suffix": " kW", "label": "power draw", "sync": "hundred"}},
+    {"texto": "Today, a chip smaller than your fingernail is millions of times faster.",
+     "visual": {"tipo": "versus", "left": {"label": "ENIAC", "value": "27 t", "color": "warm"},
+                "right": {"label": "A MODERN CHIP", "value": "< 1 g", "sub": "and far faster", "color": "blue", "sync": "chip"},
+                "badge": {"top": "", "bottom": "×1M+", "sync": "millions"}}},
+    {"texto": "Programming it meant rewiring cables by hand.",
+     "visual": {"tipo": "bigword", "word": "REWIRED", "size": 200, "sub": "programs were cables", "sync": "rewiring"}},
+    {"texto": "A whole room, to do what your watch does without trying. Follow for more tech history.",
+     "visual": {"tipo": "outro", "lines": ["A WHOLE", "ROOM.", "ONE WATCH."], "syncs": [null, "room", "watch"]}}
+  ]
+}

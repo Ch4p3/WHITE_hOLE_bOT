@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>White Hole · Authorization</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <img src="logo.png" alt="White Hole" width="96" height="96">
+  <h1>Authorization received</h1>
+  <p id="msg">You can close this window. White Hole's publishing tool will finish the connection.</p>
+  <p><code id="code" style="word-break:break-all"></code></p>
+  <p><a href="index.html">Back to White Hole</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</main>
+<script>
+  const p = new URLSearchParams(location.search);
+  const err = p.get("error") || p.get("error_description");
+  if (err) {
+    document.querySelector("h1").textContent = "Authorization not completed";
+    document.getElementById("msg").textContent = err;
+  } else if (p.get("code")) {
+    document.getElementById("code").textContent = "code=" + p.get("code");
+  }
+</script>
+</body>
+</html>

@@ -105,7 +105,8 @@ def main():
     if tt_conf.get("subir") and tiktok.creds_disponibles() and not a.prueba:
         try:
             pid, est = tiktok.subir(video, cfg.get("titulo", "") + " " + cfg.get("hashtags", ""),
-                                    tt_conf.get("privacidad", "PUBLIC_TO_EVERYONE"))
+                                    tt_conf.get("privacidad", "PUBLIC_TO_EVERYONE"),
+                                    tt_conf.get("modo", "bandeja"))
             yt_line += f"\n🎵 TikTok: {est}"
             print("Subido a TikTok:", pid, est)
         except Exception as e:

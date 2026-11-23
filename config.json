@@ -5,12 +5,13 @@
     "nota": "Poner subir=true cuando YouTube apruebe la auditoría de la API; antes de eso los videos subidos por API quedan bloqueados en privado."
   },
   "facebook": {
-    "subir": false,
-    "nota": "Se enciende cuando el token de la Página esté guardado en los secretos FB_PAGE_ID y FB_PAGE_TOKEN."
+    "subir": true,
+    "nota": "Publica cada Short como Reel en la Página White Hole (facebook.com/whiteholefacts)."
   },
   "tiktok": {
-    "subir": false,
+    "subir": true,
+    "modo": "bandeja",
     "privacidad": "PUBLIC_TO_EVERYONE",
-    "nota": "Encender solo cuando TikTok apruebe la auditoría de la app; antes de eso todo queda privado."
+    "nota": "modo bandeja: el video llega a la bandeja de TikTok y se publica con un toque en la app. Cambiar a modo directo solo si TikTok aprueba la auditoría."
   }
 }

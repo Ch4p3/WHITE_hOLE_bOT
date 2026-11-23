@@ -1,0 +1,7 @@
+{
+  "youtube": {
+    "subir": false,
+    "privacidad": "public",
+    "nota": "Poner subir=true cuando YouTube apruebe la auditoría de la API; antes de eso los videos subidos por API quedan bloqueados en privado."
+  }
+}

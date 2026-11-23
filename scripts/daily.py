@@ -11,6 +11,8 @@ import requests
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "engine"))
 from make_short import render  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import youtube  # noqa: E402
 
 PEND = os.path.join(ROOT, "guiones", "pendientes")
 PUB = os.path.join(ROOT, "guiones", "publicados")
@@ -38,7 +40,7 @@ def diagnose_chat(token):
         if c.get("type") == "private":
             chats[c["id"]] = c.get("first_name", "")
     for cid, name in chats.items():
-        print(f"  Chat privado encontrado: {cid} ({name})")
+        print(f"  Chat privado encontrado: ...{str(cid)[-3:]}")
     return list(chats)
 
 def main():
@@ -72,11 +74,25 @@ def main():
     render(guion, video, a.voz)
 
     quedan = len(pendientes) - 1
+    yt_line = ""
+    conf = json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8")).get("youtube", {})
+    if conf.get("subir") and youtube.creds_disponibles() and not a.prueba:
+        try:
+            tags = [t.lstrip("#") for t in cfg.get("hashtags", "").split()]
+            desc = (cfg.get("descripcion", "") + "\n\n" + cfg.get("hashtags", "") +
+                    "\n\nSources:\n" + "\n".join(cfg.get("fuentes", [])))
+            vid, estado = youtube.subir(video, cfg.get("titulo", "White Hole"), desc, tags,
+                                        conf.get("privacidad", "public"))
+            yt_line = f"\n\n▶️ YouTube ({estado}): https://youtube.com/shorts/{vid}"
+            print("Subido a YouTube:", vid, estado)
+        except Exception as e:
+            yt_line = f"\n\n⚠️ No se pudo subir a YouTube: {str(e)[:200]}"
+            print(yt_line)
     caption = (f"🎬 {cfg.get('titulo', '')}\n\n"
                f"{cfg.get('descripcion', '')}\n\n"
                f"{cfg.get('hashtags', '')}\n\n"
                f"📚 Fuentes:\n" + "\n".join(cfg.get("fuentes", [])) +
-               f"\n\n📦 Quedan {quedan} guiones en cola.")[:1024]
+               f"{yt_line}\n\n📦 Quedan {quedan} guiones en cola.")[:1024]
     if a.prueba:
         print("---- caption ----\n" + caption)
         print("Video de prueba en:", video)
@@ -96,7 +112,7 @@ def main():
         if len(found) != 1:
             raise SystemExit("No pude deducir el chat. Escríbele /start al bot y vuelve a intentar.")
         send(found[0])
-        print(f"✅ Enviado usando el chat {found[0]}. Actualiza el secreto TELEGRAM_CHAT_ID con ese número.")
+        print("✅ Enviado usando el chat detectado. Revisa el secreto TELEGRAM_CHAT_ID.")
     os.makedirs(PUB, exist_ok=True)
     hoy = datetime.date.today().isoformat()
     shutil.move(guion, os.path.join(PUB, f"{hoy}_{os.path.basename(guion)}"))

@@ -6,6 +6,11 @@ on:
     - cron: "23 18 * * *"   # 1:23 p. m.
     - cron: "23 0 * * *"    # 7:23 p. m.
   workflow_dispatch:         # botón "Run workflow" para lanzarlo a mano
+    inputs:
+      solo_verificar_youtube:
+        description: "Solo verificar la conexión con YouTube (no genera video)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -46,13 +51,26 @@ jobs:
             tar xzf voz.tar.gz && rm voz.tar.gz
           fi
 
-      - name: Generar el Short y enviarlo a Telegram
+      - name: Verificar conexión con YouTube
+        if: ${{ inputs.solo_verificar_youtube }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python scripts/youtube.py --verificar
+
+      - name: Generar el Short, subirlo y enviarlo a Telegram
+        if: ${{ !inputs.solo_verificar_youtube }}
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python scripts/daily.py
 
       - name: Guardar el progreso de la cola
+        if: ${{ !inputs.solo_verificar_youtube }}
         run: |
           git config user.name "white-hole-bot"
           git config user.email "white-hole-bot@users.noreply.github.com"

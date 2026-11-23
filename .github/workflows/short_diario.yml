@@ -1,0 +1,55 @@
+name: Short diario
+
+on:
+  schedule:
+    - cron: "23 12 * * *"   # todos los días a las 7:23 a. m. hora Colombia (12:23 UTC)
+  workflow_dispatch:         # botón "Run workflow" para lanzarlo a mano
+
+permissions:
+  contents: write
+
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Caché de la voz
+        uses: actions/cache@v4
+        with:
+          path: voices
+          key: piper-en-us-ryan-high-v1
+
+      - name: Descargar la voz (solo la primera vez)
+        run: |
+          if [ ! -f voices/en-us-ryan-high.onnx ]; then
+            mkdir -p voices && cd voices
+            curl -sSL -o voz.tar.gz https://github.com/rhasspy/piper/releases/download/v0.0.2/voice-en-us-ryan-high.tar.gz
+            tar xzf voz.tar.gz && rm voz.tar.gz
+          fi
+
+      - name: Generar el Short y enviarlo a Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/daily.py
+
+      - name: Guardar el progreso de la cola
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          git add guiones
+          git diff --cached --quiet || git commit -m "Short enviado: $(date -u +%F)"
+          git push

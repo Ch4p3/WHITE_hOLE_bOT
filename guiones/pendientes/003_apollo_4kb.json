@@ -1,0 +1,24 @@
+{
+  "titulo": "Apollo 11 landed on the Moon with ~4 KB of RAM 🚀",
+  "descripcion": "The Apollo Guidance Computer had 2,048 words of erasable memory and programs woven by hand into core rope.",
+  "hashtags": "#tech #space #nasa #apollo11 #shorts",
+  "fuentes": ["https://en.wikipedia.org/wiki/Apollo_Guidance_Computer", "https://www.righto.com/2019/01/inside-apollo-guidance-computers-core.html"],
+  "velocidad": 0.9,
+  "escenas": [
+    {"texto": "The computer that landed Apollo eleven on the Moon had about four kilobytes of working memory.",
+     "visual": {"tipo": "card", "title": "APOLLO 11", "tag": "1969",
+                "panel": {"label": "Guidance computer · working memory", "value": "≈ 4 KB", "progress": 0.03, "color": "warm", "sync": "about", "value_sync": "four"}}},
+    {"texto": "Two thousand forty eight words, sixteen bits each.",
+     "visual": {"tipo": "counter", "to": 2048, "label": "words of erasable memory", "note": "16 bits each", "note_sync": "sixteen", "sync": "Two"}},
+    {"texto": "Its clock ran at about one megahertz.",
+     "visual": {"tipo": "counter", "to": 1.024, "decimals": 3, "suffix": " MHz", "label": "clock speed", "sync": "clock"}},
+    {"texto": "Many phones today have eight gigabytes of memory. That's about two million times more.",
+     "visual": {"tipo": "versus", "left": {"label": "APOLLO 11", "value": "≈4 KB", "color": "warm"},
+                "right": {"label": "YOUR PHONE", "value": "8 GB", "sub": "of RAM", "color": "blue", "sync": "phones"},
+                "badge": {"top": "about", "bottom": "×2M", "sync": "million"}}},
+    {"texto": "Its programs were stored in core rope memory, woven by hand, wire by wire.",
+     "visual": {"tipo": "bigword", "word": "CORE ROPE", "size": 190, "sub": "memory woven by hand", "sync": "core"}},
+    {"texto": "It had less memory than one photo on your phone. Follow for more tech secrets.",
+     "visual": {"tipo": "outro", "lines": ["LESS MEMORY", "THAN ONE", "PHOTO."], "syncs": [null, "than", "photo"]}}
+  ]
+}

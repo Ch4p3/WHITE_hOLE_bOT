@@ -1,0 +1,39 @@
+{
+  "titulo": "Why your 1 TB drive shows only 931 GB 🤯",
+  "descripcion": "You didn't get scammed. Drive makers and Windows use two different rulers for the same bytes.",
+  "hashtags": "#tech #computers #windows #storage #shorts",
+  "fuentes": ["https://en.wikipedia.org/wiki/Gibibyte", "https://en.wikipedia.org/wiki/Binary_prefix"],
+  "velocidad": 0.9,
+  "escenas": [
+    {"texto": "You bought a one terabyte drive. Windows says you only got nine hundred thirty one gigabytes.",
+     "visual": {"tipo": "card", "title": "1 TB", "tag": "SSD",
+                "panel": {"label": "Local Disk (C:)", "value": "931 GB", "progress": 1.0, "sync": "Windows", "value_sync": "nine"}}},
+    {"texto": "So where did almost seventy gigabytes go?",
+     "visual": {"tipo": "bars", "items": [
+        {"label": "On the box", "value": 1000, "value_text": "1,000 GB", "color": "blue"},
+        {"label": "In Windows", "value": 931, "value_text": "931 GB", "color": "warm", "sync": "where"}],
+        "note": "~69 GB missing?", "note_sync": "seventy"}},
+    {"texto": "Nowhere. It's a units problem.",
+     "visual": {"tipo": "title", "pre": "Nowhere.", "lines": ["UNITS", "PROBLEM"], "sync": "units"}},
+    {"texto": "Drive makers count like the metric system. One gigabyte is one billion bytes.",
+     "visual": {"tipo": "counter", "pre": "DRIVE MAKERS", "to": 1000000000, "label": "bytes in 1 GB", "sync": "billion", "size": 150}},
+    {"texto": "But Windows counts in powers of two. Its gigabyte is one thousand twenty four, cubed. About seven percent bigger.",
+     "visual": {"tipo": "bars", "items": [
+        {"label": "Drive maker GB", "value": 1.0, "value_text": "10⁹", "color": "blue"},
+        {"label": "Windows \"GB\"", "value": 1.0737, "value_text": "1024³", "color": "warm", "sync": "two"}],
+        "note": "+7.4% bigger", "note_sync": "seven"}},
+    {"texto": "Divide one trillion bytes by that bigger unit, and you get nine hundred thirty one.",
+     "visual": {"tipo": "equation", "lines": [
+        {"text": "1,000,000,000,000", "sub": "bytes (1 TB)"},
+        {"text": "÷ 1,073,741,824", "color": "warm", "sync": "bigger"}],
+        "result": {"value": 931.32, "decimals": 2, "label": "\"GB\"", "sync": "nine"}}},
+    {"texto": "That bigger unit even has its own name. The gibibyte.",
+     "visual": {"tipo": "bigword", "pre": "the bigger unit has a name", "word": "GiB", "sub": "gibibyte", "sub2": "giga + binary", "sync": "gibibyte"}},
+    {"texto": "Macs switched to the metric count back in two thousand nine. The same drive shows a full terabyte there.",
+     "visual": {"tipo": "versus", "left": {"label": "WINDOWS", "value": "931 GB", "color": "warm"},
+                "right": {"label": "MAC", "value": "1 TB", "color": "blue", "sync": "Macs"},
+                "badge": {"top": "since", "bottom": "2009", "sync": "thousand"}}},
+    {"texto": "Same bytes. Different ruler. Follow for more tech secrets.",
+     "visual": {"tipo": "outro", "lines": ["SAME BYTES.", "DIFFERENT", "RULER."], "syncs": [null, "Different", "ruler"]}}
+  ]
+}

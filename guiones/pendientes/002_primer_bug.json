@@ -1,0 +1,23 @@
+{
+  "titulo": "The first computer bug was a REAL bug 🦋",
+  "descripcion": "In 1947, engineers found a moth inside the Harvard Mark II and taped it into the logbook. It's still at the Smithsonian.",
+  "hashtags": "#tech #history #programming #computers #shorts",
+  "fuentes": ["https://www.si.edu/object/log-book-computer-bug:nmah_334663", "https://www.computerhistory.org/tdih/September/09/"],
+  "velocidad": 0.9,
+  "escenas": [
+    {"texto": "In nineteen forty seven, a computer at Harvard kept making errors. The culprit? A moth.",
+     "visual": {"tipo": "title", "pre": "Harvard, 1947", "lines": ["THE CULPRIT:", "A MOTH"], "sync": "culprit"}},
+    {"texto": "Engineers found it stuck in relay number seventy, panel F, of the Mark Two computer.",
+     "visual": {"tipo": "bigword", "pre": "Harvard Mark II", "word": "RELAY #70", "size": 200, "sub": "Panel F", "sync": "relay"}},
+    {"texto": "So they did the obvious thing. They taped it into the logbook.",
+     "visual": {"tipo": "title", "lines": ["TAPED", "INTO THE LOG"], "sync": "taped"}},
+    {"texto": "Next to it, someone wrote: first actual case of bug being found.",
+     "visual": {"tipo": "bigword", "word": "\"FIRST ACTUAL CASE\"", "size": 120, "color": "white", "sub": "of bug being found", "sync": "first"}},
+    {"texto": "Here's the twist. Engineers already called glitches bugs. The joke was the word actual.",
+     "visual": {"tipo": "title", "pre": "Here's the twist", "lines": ["THE JOKE WAS", "\"ACTUAL\""], "size": 130, "sync": "joke"}},
+    {"texto": "That logbook page, moth still taped on, is kept at the Smithsonian today.",
+     "visual": {"tipo": "bigword", "word": "SMITHSONIAN", "size": 150, "sub": "moth still attached", "sync": "Smithsonian"}},
+    {"texto": "Every bug has a history. Follow for more tech secrets.",
+     "visual": {"tipo": "outro", "lines": ["EVERY BUG", "HAS A", "HISTORY."], "syncs": [null, "has", "history"]}}
+  ]
+}

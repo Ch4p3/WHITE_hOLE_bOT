@@ -1,0 +1,380 @@
+"""
+White Hole · motor de Shorts (1080x1920), 100% gratis y offline.
+
+Uso:  python engine/make_short.py guiones/pendientes/mi_guion.json salida.mp4 [--voz voices/modelo.onnx]
+
+Cada escena del guion tiene:
+  "texto":   lo que dice la voz
+  "visual":  una de las plantillas de abajo + sus parámetros
+  "sync":    (en los parámetros) palabra del texto en la que aparece cada elemento
+
+Plantillas disponibles (ver README para ejemplos):
+  title, counter, bars, versus, equation, bigword, card, outro
+"""
+import json, math, os, re, subprocess, sys, wave, argparse
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+W, H, FPS = 1080, 1920, 30
+
+# --- paleta de marca White Hole (negro, blanco, azul eléctrico) ---
+BG     = (8, 10, 20)
+BLUE   = (88, 166, 255)
+ICE    = (181, 212, 244)
+WHITE  = (244, 246, 251)
+GREY   = (128, 138, 160)
+WARM   = (255, 138, 76)       # acento de contraste (alertas, "falta", etc.)
+PANEL  = (20, 26, 46)
+COLORS = {"blue": BLUE, "ice": ICE, "white": WHITE, "grey": GREY, "warm": WARM}
+
+FONT_DIR = os.path.join(ROOT, "assets", "fonts")
+FONTS = {"black": "Inter-Black.otf", "xbold": "Inter-ExtraBold.otf",
+         "bold": "Inter-Bold.otf", "semi": "Inter-SemiBold.otf"}
+_fc = {}
+
+def font(size, weight="black"):
+    size = max(8, int(round(size / 2) * 2))
+    if (size, weight) not in _fc:
+        _fc[(size, weight)] = ImageFont.truetype(os.path.join(FONT_DIR, FONTS[weight]), size)
+    return _fc[(size, weight)]
+
+def col(c, default=WHITE):
+    if c is None: return default
+    if isinstance(c, (list, tuple)): return tuple(c)
+    return COLORS.get(c, default)
+
+# ---------------------------------------------------------------- animación
+def clamp(x, a=0.0, b=1.0): return max(a, min(b, x))
+def ease_out(x): x = clamp(x); return 1 - (1 - x) ** 3
+def back(x, s=1.9):
+    x = clamp(x) - 1
+    return x * x * ((s + 1) * x + s) + 1
+def prog(t, start, dur): return clamp((t - start) / dur)
+def mix(c1, c2, k): return tuple(int(a + (b - a) * k) for a, b in zip(c1, c2))
+
+def text(d, xy, s, size, fill, weight="black", anchor="mm"):
+    d.text(xy, s, font=font(size, weight), fill=fill, anchor=anchor)
+
+def fit(d, s, size, weight, maxw):
+    while size > 20 and d.textlength(s, font=font(size, weight)) > maxw:
+        size -= 4
+    return size
+
+def pop(d, xy, s, size, fill, t, start, weight="black", dur=0.4, maxw=900):
+    k = prog(t, start, dur)
+    if k <= 0: return
+    size = fit(d, s, size, weight, maxw)
+    text(d, xy, s, size * (0.4 + 0.6 * back(k)), fill, weight)
+
+def slide(d, xy, s, size, fill, t, start, dx=0, dy=60, weight="black", dur=0.45, maxw=900):
+    k = prog(t, start, dur)
+    if k <= 0: return
+    size = fit(d, s, size, weight, maxw)
+    e = ease_out(k)
+    text(d, (xy[0] + dx * (1 - e), xy[1] + dy * (1 - e)), s, size, mix(BG, fill, e), weight)
+
+# ---------------------------------------------------------------- fondo
+def make_background():
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    r = np.sqrt(((xx - W / 2) / W) ** 2 + ((yy - H * 0.40) / H) ** 2)
+    glow = np.clip(1 - r * 1.7, 0, 1)[..., None]
+    base = np.array(BG, np.float32) + glow * np.array([10, 18, 40], np.float32)
+    img = Image.fromarray(np.clip(base, 0, 255).astype(np.uint8))
+    d = ImageDraw.Draw(img)
+    rng = np.random.default_rng(7)
+    for _ in range(120):
+        x, y = rng.integers(0, W), rng.integers(0, H)
+        b = int(rng.uniform(30, 90))
+        d.ellipse([x, y, x + 2, y + 2], fill=(b, b + 8, b + 25))
+    # anillo de disco de acreción muy tenue al fondo (identidad de marca)
+    ring = Image.new("L", (W, H), 0); rd = ImageDraw.Draw(ring)
+    for i, a in enumerate([26, 18, 10]):
+        rd.ellipse([W / 2 - 520 - i * 40, 1640 - 90 - i * 10, W / 2 + 520 + i * 40, 1640 + 90 + i * 10],
+                   outline=a, width=6)
+    img.paste((60, 120, 220), mask=ring)
+    return img
+
+# ---------------------------------------------------------------- tiempos
+def word_times(textstr, dur, lead=0.08):
+    words = textstr.split()
+    wts = []
+    for w in words:
+        wt = len(re.sub(r"[^\w]", "", w)) + 2.0
+        if w.endswith((".", "?", "!")): wt += 5
+        elif w.endswith((",", ":", ";")): wt += 3
+        wts.append(wt)
+    span = max(0.1, dur - lead - 0.25)
+    times, acc = [], lead
+    for wt in wts:
+        times.append(acc); acc += span * wt / sum(wts)
+    return words, times
+
+def at(sc, needle, default=0.0):
+    """Momento en que se dice la palabra `needle` (o un número de segundos)."""
+    if needle is None: return default
+    if isinstance(needle, (int, float)): return float(needle)
+    n = needle.lower()
+    for w, t in zip(sc["words"], sc["times"]):
+        if n in re.sub(r"[^\w']", "", w.lower()): return t
+    return default
+
+# ---------------------------------------------------------------- plantillas
+def v_title(img, d, t, sc, p):
+    y0 = p.get("y", 640)
+    if p.get("pre"):
+        slide(d, (W // 2, y0 - 170), p["pre"], 74, GREY, t, at(sc, p.get("pre_sync"), 0), weight="xbold")
+    lines = p.get("lines", [])
+    colors = p.get("colors", ["white", "blue", "blue", "white"])
+    st = at(sc, p.get("sync"), 0.1)
+    for i, ln in enumerate(lines):
+        slide(d, (W // 2, y0 + i * 180), ln, p.get("size", 170), col(colors[i % len(colors)]), t,
+              st + i * 0.18, dx=(-120 if i % 2 == 0 else 120), dy=0, maxw=960)
+    ku = ease_out(prog(t, st + 0.3 + 0.18 * len(lines), 0.5))
+    if ku > 0 and p.get("underline", True):
+        yy = y0 + len(lines) * 180 - 70
+        d.rounded_rectangle([W / 2 - 300 * ku, yy, W / 2 + 300 * ku, yy + 20], 10, fill=BLUE)
+
+def v_counter(img, d, t, sc, p):
+    if p.get("pre"):
+        slide(d, (W // 2, 470), p["pre"], 56, GREY, t, 0.0, weight="xbold")
+    st = at(sc, p.get("sync"), 0.2)
+    k = ease_out(prog(t, st, p.get("dur", 1.2)))
+    if k > 0:
+        a, b = float(p.get("from", 0)), float(p["to"])
+        v = a + (b - a) * k
+        dec = int(p.get("decimals", 0))
+        s = f"{p.get('prefix', '')}{v:,.{dec}f}{p.get('suffix', '')}"
+        size = fit(d, s, p.get("size", 220), "black", 980)
+        text(d, (W // 2, 760), s, size, col(p.get("color"), BLUE))
+    if p.get("label"):
+        slide(d, (W // 2, 930), p["label"], 64, WHITE, t, st + 0.3, weight="xbold")
+    if p.get("note"):
+        pop(d, (W // 2, 1110), p["note"], 56, col(p.get("note_color"), GREY), t, at(sc, p.get("note_sync"), st + 0.8), "bold")
+
+def v_bars(img, d, t, sc, p):
+    items = p["items"]
+    vmax = max(float(it["value"]) for it in items)
+    x0, maxw = 120, 840
+    y = p.get("y", 520)
+    for i, it in enumerate(items):
+        st = at(sc, it.get("sync"), 0.15 * i)
+        k = ease_out(prog(t, st, 0.9))
+        if prog(t, st - 0.2, 0.3) <= 0: y += 270; continue
+        text(d, (x0, y), it["label"], 48, WHITE, "bold", "lm")
+        wbar = maxw * float(it["value"]) / vmax * k
+        d.rounded_rectangle([x0, y + 40, x0 + max(30, wbar), y + 150], 20, fill=col(it.get("color"), BLUE))
+        if it.get("show_value", True) and k > 0.6:
+            text(d, (x0 + max(30, wbar) - 24, y + 95), it.get("value_text", f"{it['value']}"), 52, BG, "black", "rm")
+        y += 270
+    if p.get("note"):
+        pop(d, (W // 2, y + 20), p["note"], 80, col(p.get("note_color"), WARM), t, at(sc, p.get("note_sync"), 1.0))
+
+def v_versus(img, d, t, sc, p):
+    L, R = p["left"], p["right"]
+    for x, c, dflt in [(70, L, 0.0), (W // 2 + 20, R, 0.6)]:
+        k = back(prog(t, at(sc, c.get("sync"), dflt), 0.5))
+        if k <= 0: continue
+        cw, ch = W // 2 - 90, 440
+        cy = 780 + 60 * (1 - k)
+        cc = col(c.get("color"), BLUE)
+        d.rounded_rectangle([x, cy - ch / 2, x + cw, cy + ch / 2], 34, fill=PANEL, outline=cc, width=6)
+        text(d, (x + cw / 2, cy - 120), c["label"], fit(d, c["label"], 52, "xbold", cw - 40), GREY, "xbold")
+        size = fit(d, c["value"], 120, "black", cw - 50)
+        text(d, (x + cw / 2, cy + 30), c["value"], size * (0.6 + 0.4 * k), cc)
+        if c.get("sub"):
+            text(d, (x + cw / 2, cy + 150), c["sub"], fit(d, c["sub"], 40, "semi", cw - 40), GREY, "semi")
+    if p.get("badge"):
+        b = p["badge"]
+        k = back(prog(t, at(sc, b.get("sync"), 1.5), 0.5))
+        if k > 0:
+            r = 120 * k
+            d.ellipse([W / 2 - r, 1150 - r, W / 2 + r, 1150 + r], fill=WHITE)
+            text(d, (W / 2, 1120), b.get("top", ""), 36 * k, BG, "bold")
+            text(d, (W / 2, 1172), b.get("bottom", ""), 64 * k, BG)
+
+def v_equation(img, d, t, sc, p):
+    y = 470
+    for i, ln in enumerate(p.get("lines", [])):
+        slide(d, (W // 2, y), ln["text"], ln.get("size", 96), col(ln.get("color"), WHITE), t,
+              at(sc, ln.get("sync"), 0.4 * i), dy=40, weight="xbold", maxw=980)
+        if ln.get("sub") and t > at(sc, ln.get("sync"), 0.4 * i) + 0.3:
+            text(d, (W // 2, y + 78), ln["sub"], 40, GREY, "semi")
+        y += 200
+    r = p.get("result")
+    if r:
+        st = at(sc, r.get("sync"), 1.5)
+        kl = ease_out(prog(t, st - 0.4, 0.5))
+        if kl > 0:
+            d.rounded_rectangle([W / 2 - 420 * kl, y - 70, W / 2 + 420 * kl, y - 58], 6, fill=WHITE)
+        kc = ease_out(prog(t, st, 1.1))
+        if kc > 0:
+            v = float(r.get("from", 0)) + (float(r["value"]) - float(r.get("from", 0))) * kc
+            s = f"{r.get('prefix', '')}{v:,.{int(r.get('decimals', 0))}f}{r.get('suffix', '')}"
+            text(d, (W // 2, y + 90), s, fit(d, s, 200, "black", 980), col(r.get("color"), BLUE))
+            if r.get("label"):
+                text(d, (W // 2, y + 230), r["label"], 60, WHITE, "xbold")
+
+def v_bigword(img, d, t, sc, p):
+    st = at(sc, p.get("sync"), 0.2)
+    if p.get("pre"):
+        slide(d, (W // 2, 470), p["pre"], 50, GREY, t, 0.0, weight="semi")
+    pop(d, (W // 2, 720), p["word"], p.get("size", 280), col(p.get("color"), BLUE), t, st - 0.15, maxw=980)
+    if p.get("sub"):
+        slide(d, (W // 2, 950), p["sub"], 86, WHITE, t, st + 0.25, weight="xbold")
+    if p.get("sub2"):
+        slide(d, (W // 2, 1070), p["sub2"], 50, GREY, t, st + 0.5, weight="semi")
+
+def v_card(img, d, t, sc, p):
+    k = back(prog(t, 0.0, 0.5))
+    cx, cy = W // 2, 640
+    w, h = 580 * (0.5 + 0.5 * k), 340 * (0.5 + 0.5 * k)
+    if k > 0:
+        d.rounded_rectangle([cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2], 38, fill=WHITE)
+        d.rounded_rectangle([cx - w / 2 + 34, cy + h / 2 - 54, cx - w / 2 + 120, cy + h / 2 - 32], 9, fill=BLUE)
+        text(d, (cx, cy - 10), p["title"], fit(d, p["title"], 150, "black", 520) * k, BG)
+        if p.get("tag"):
+            text(d, (cx + w / 2 - 40, cy + h / 2 - 43), p["tag"], 34 * k, GREY, "bold", "rm")
+    pnl = p.get("panel")
+    if pnl:
+        st = at(sc, pnl.get("sync"), 1.0)
+        k2 = ease_out(prog(t, st - 0.1, 0.5))
+        if k2 > 0:
+            py = 1080 + 80 * (1 - k2)
+            d.rounded_rectangle([130, py - 130, W - 130, py + 160], 30, fill=PANEL)
+            text(d, (180, py - 80), pnl.get("label", ""), 40, GREY, "semi", "lm")
+            d.rounded_rectangle([180, py - 25, W - 180, py + 15], 12, fill=(40, 50, 80))
+            fw = (W - 360) * float(pnl.get("progress", 1.0)) * ease_out(prog(t, st + 0.2, 0.9))
+            d.rounded_rectangle([180, py - 25, 180 + max(24, fw), py + 15], 12, fill=col(pnl.get("color"), WARM))
+            pop(d, (W // 2, py + 95), pnl["value"], 92, col(pnl.get("color"), WARM), t, at(sc, pnl.get("value_sync"), st + 0.4))
+
+def v_outro(img, d, t, sc, p):
+    lines = p.get("lines", ["SAME BYTES.", "DIFFERENT", "RULER."])
+    colors = p.get("colors", ["white", "blue", "blue"])
+    syncs = p.get("syncs", [None] * len(lines))
+    for i, ln in enumerate(lines):
+        slide(d, (W // 2, 600 + i * 165), ln, 130, col(colors[i % len(colors)]), t,
+              at(sc, syncs[i] if i < len(syncs) else None, 0.35 * i), dx=(-100 if i % 2 == 0 else 100), dy=0, maxw=980)
+    k = back(prog(t, at(sc, p.get("button_sync", "follow"), 1.2) - 0.1, 0.5))
+    if k > 0:
+        w2, h2 = 300 * k, 62 * k
+        yb = 600 + len(lines) * 165 + 40
+        d.rounded_rectangle([W / 2 - w2, yb - h2, W / 2 + w2, yb + h2], int(h2), fill=BLUE)
+        text(d, (W / 2, yb), p.get("button", "FOLLOW  +"), 58 * k, BG)
+
+VISUALS = {"title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
+           "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro}
+
+# ---------------------------------------------------------------- subtítulos
+def captions(d, t, sc):
+    words, times = sc["words"], sc["times"]
+    groups, cur = [], []
+    for i, w in enumerate(words):
+        cur.append(i)
+        if len(cur) == 3 or w.endswith((".", ",", "?", "!")):
+            groups.append(cur); cur = []
+    if cur: groups.append(cur)
+    active = None
+    for g in groups:
+        if t >= times[g[0]] - 0.05: active = g
+    if active is None: return
+    cw = max([i for i in range(len(words)) if times[i] <= t + 0.02] or [active[0]])
+    f = font(66, "black")
+    parts = [words[i].upper() for i in active]
+    widths = [d.textlength(p_ + " ", font=f) for p_ in parts]
+    x = W / 2 - sum(widths) / 2
+    for i, p_, wd in zip(active, parts, widths):
+        d.text((x, 1430), p_, font=f, fill=BLUE if i == cw else WHITE, anchor="lm",
+               stroke_width=8, stroke_fill=(0, 0, 0))
+        x += wd
+
+# ---------------------------------------------------------------- audio
+def synth_voice(scenes, voice_path, speed, outdir):
+    from piper import PiperVoice, SynthesisConfig
+    voice = PiperVoice.load(voice_path)
+    cfg = SynthesisConfig(length_scale=speed)
+    for i, sc in enumerate(scenes):
+        pth = os.path.join(outdir, f"v{i:02d}.wav")
+        with wave.open(pth, "wb") as wf:
+            voice.synthesize_wav(sc["texto"], wf, syn_config=cfg)
+        with wave.open(pth) as wf:
+            sc["audio_dur"] = wf.getnframes() / wf.getframerate(); sr = wf.getframerate()
+        sc["wav"] = pth
+    return sr
+
+def build_voice(scenes, sr, gap, out):
+    ch = []
+    for sc in scenes:
+        with wave.open(sc["wav"]) as wf:
+            ch.append(np.frombuffer(wf.readframes(wf.getnframes()), np.int16))
+        ch.append(np.zeros(int(gap * sr), np.int16))
+    with wave.open(out, "wb") as wf:
+        wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(sr)
+        wf.writeframes(np.concatenate(ch).tobytes())
+
+def build_music(dur, out, sr=44100):
+    tt = np.arange(int(dur * sr)) / sr
+    chords = [[220.0, 261.63, 329.63], [174.61, 220.0, 261.63], [196.0, 246.94, 293.66], [164.81, 196.0, 246.94]]
+    sig = np.zeros_like(tt)
+    for ci in range(int(dur // 4) + 1):
+        s0, s1 = ci * 4.0, (ci + 1) * 4.0 + 1.0
+        env = np.clip((tt - s0) / 0.8, 0, 1) * np.clip((s1 - tt) / 1.0, 0, 1)
+        for f in chords[ci % 4]:
+            sig += env * (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(4 * np.pi * f * tt))
+    ph = tt % 0.6
+    sig += 1.8 * np.sin(2 * np.pi * 55 * ph) * np.exp(-ph * 18)
+    sig *= np.clip(tt, 0, 1) * np.clip((dur - tt) / 1.5, 0, 1)
+    sig = sig / np.max(np.abs(sig)) * 0.9
+    with wave.open(out, "wb") as wf:
+        wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(sr)
+        wf.writeframes((sig * 32767).astype(np.int16).tobytes())
+
+# ---------------------------------------------------------------- render
+def render(script_path, out_path, voice_path, channel="@whitehole"):
+    cfg = json.load(open(script_path, encoding="utf-8"))
+    scenes = cfg["escenas"]
+    work = os.path.join(os.path.dirname(os.path.abspath(out_path)), "_work")
+    os.makedirs(work, exist_ok=True)
+    gap = 0.22
+    print("1/3 Voz...")
+    sr = synth_voice(scenes, voice_path, cfg.get("velocidad", 0.9), work)
+    t0 = 0.0
+    for sc in scenes:
+        sc["start"] = t0; sc["dur"] = sc["audio_dur"] + gap
+        sc["words"], sc["times"] = word_times(sc["texto"], sc["audio_dur"])
+        t0 += sc["dur"]
+    total = t0 + 0.6
+    vw, mw = os.path.join(work, "voice.wav"), os.path.join(work, "music.wav")
+    build_voice(scenes, sr, gap, vw); build_music(total, mw)
+    print(f"   duración: {total:.1f}s")
+    bg = make_background()
+    print("2/3 Frames...")
+    cmd = ["ffmpeg", "-y", "-loglevel", "error",
+           "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+           "-i", vw, "-i", mw,
+           "-filter_complex", "[2:a]volume=0.10[m];[1:a]aresample=44100[v];[v][m]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.89[a]",
+           "-map", "0:v", "-map", "[a]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+           "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out_path]
+    ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    for fi in range(int(total * FPS)):
+        T = fi / FPS
+        sc = scenes[max(i for i, s in enumerate(scenes) if s["start"] <= T)]
+        t = T - sc["start"]
+        img = bg.copy(); d = ImageDraw.Draw(img)
+        vis = sc["visual"]
+        VISUALS[vis["tipo"]](img, d, t, sc, vis)
+        captions(d, t, sc)
+        text(d, (70, 250), channel, 34, GREY, "bold", "lm")
+        ff.stdin.write(img.tobytes())
+    ff.stdin.close(); ff.wait()
+    print("3/3 Listo ->", out_path)
+    return total
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("guion"); ap.add_argument("salida")
+    ap.add_argument("--voz", default=os.path.join(ROOT, "voices", "en-us-ryan-high.onnx"))
+    ap.add_argument("--canal", default="@whitehole")
+    a = ap.parse_args()
+    render(a.guion, a.salida, a.voz, a.canal)

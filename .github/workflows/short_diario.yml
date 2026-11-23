@@ -8,7 +8,7 @@ on:
   workflow_dispatch:         # botón "Run workflow" para lanzarlo a mano
     inputs:
       solo_verificar_youtube:
-        description: "Solo verificar la conexión con YouTube (no genera video)"
+        description: "Solo verificar las conexiones (YouTube, Facebook, TikTok); no genera video"
         type: boolean
         default: false
 
@@ -57,7 +57,15 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python scripts/youtube.py --verificar
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
+        run: |
+          python scripts/youtube.py --verificar || true
+          python scripts/facebook.py --verificar || true
+          python scripts/tiktok.py --verificar || true
 
       - name: Generar el Short, subirlo y enviarlo a Telegram
         if: ${{ !inputs.solo_verificar_youtube }}
@@ -67,6 +75,11 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
         run: python scripts/daily.py
 
       - name: Guardar el progreso de la cola

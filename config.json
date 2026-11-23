@@ -3,5 +3,14 @@
     "subir": false,
     "privacidad": "public",
     "nota": "Poner subir=true cuando YouTube apruebe la auditoría de la API; antes de eso los videos subidos por API quedan bloqueados en privado."
+  },
+  "facebook": {
+    "subir": false,
+    "nota": "Se enciende cuando el token de la Página esté guardado en los secretos FB_PAGE_ID y FB_PAGE_TOKEN."
+  },
+  "tiktok": {
+    "subir": false,
+    "privacidad": "PUBLIC_TO_EVERYONE",
+    "nota": "Encender solo cuando TikTok apruebe la auditoría de la app; antes de eso todo queda privado."
   }
 }

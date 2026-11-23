@@ -13,6 +13,8 @@ sys.path.insert(0, os.path.join(ROOT, "engine"))
 from make_short import render  # noqa: E402
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import youtube  # noqa: E402
+import facebook  # noqa: E402
+import tiktok  # noqa: E402
 
 PEND = os.path.join(ROOT, "guiones", "pendientes")
 PUB = os.path.join(ROOT, "guiones", "publicados")
@@ -88,6 +90,27 @@ def main():
         except Exception as e:
             yt_line = f"\n\n⚠️ No se pudo subir a YouTube: {str(e)[:200]}"
             print(yt_line)
+    todo = json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8"))
+    fb_conf, tt_conf = todo.get("facebook", {}), todo.get("tiktok", {})
+    texto_social = (cfg.get("titulo", "") + "\n\n" + cfg.get("descripcion", "") + "\n\n" +
+                    cfg.get("hashtags", ""))
+    if fb_conf.get("subir") and facebook.creds_disponibles() and not a.prueba:
+        try:
+            fid, est = facebook.subir_reel(video, texto_social)
+            yt_line += f"\n📘 Facebook ({est}): https://www.facebook.com/reel/{fid}"
+            print("Subido a Facebook:", fid, est)
+        except Exception as e:
+            yt_line += f"\n⚠️ No se pudo subir a Facebook: {str(e)[:200]}"
+            print("Facebook:", e)
+    if tt_conf.get("subir") and tiktok.creds_disponibles() and not a.prueba:
+        try:
+            pid, est = tiktok.subir(video, cfg.get("titulo", "") + " " + cfg.get("hashtags", ""),
+                                    tt_conf.get("privacidad", "PUBLIC_TO_EVERYONE"))
+            yt_line += f"\n🎵 TikTok: {est}"
+            print("Subido a TikTok:", pid, est)
+        except Exception as e:
+            yt_line += f"\n⚠️ No se pudo subir a TikTok: {str(e)[:200]}"
+            print("TikTok:", e)
     caption = (f"🎬 {cfg.get('titulo', '')}\n\n"
                f"{cfg.get('descripcion', '')}\n\n"
                f"{cfg.get('hashtags', '')}\n\n"

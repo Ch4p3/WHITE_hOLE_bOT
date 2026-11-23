@@ -17,11 +17,29 @@ PUB = os.path.join(ROOT, "guiones", "publicados")
 VOZ = os.path.join(ROOT, "voices", "en-us-ryan-high.onnx")
 OUT = os.path.join(ROOT, "out")
 
+class TelegramError(Exception):
+    pass
+
 def telegram(method, token, **kw):
     r = requests.post(f"https://api.telegram.org/bot{token}/{method}", timeout=120, **kw)
     if not r.ok:
-        raise SystemExit(f"Telegram respondió {r.status_code}: {r.text[:300]}")
+        raise TelegramError(f"Telegram respondió {r.status_code}: {r.text[:300]}")
     return r.json()
+
+def diagnose_chat(token):
+    """Si el chat_id no sirve, mira quién le ha escrito al bot y propone el ID correcto."""
+    me = telegram("getMe", token)["result"]
+    print(f"Bot conectado: @{me.get('username')} ({me.get('first_name')})")
+    ups = telegram("getUpdates", token)["result"]
+    chats = {}
+    for u in ups:
+        m = u.get("message") or u.get("edited_message") or {}
+        c = m.get("chat", {})
+        if c.get("type") == "private":
+            chats[c["id"]] = c.get("first_name", "")
+    for cid, name in chats.items():
+        print(f"  Chat privado encontrado: {cid} ({name})")
+    return list(chats)
 
 def main():
     ap = argparse.ArgumentParser()
@@ -40,7 +58,10 @@ def main():
         msg = "⚠️ White Hole: no quedan guiones pendientes. Pídele a Claude un nuevo lote."
         print(msg)
         if not a.prueba:
-            telegram("sendMessage", token, data={"chat_id": chat, "text": msg})
+            try:
+                telegram("sendMessage", token, data={"chat_id": chat, "text": msg})
+            except TelegramError as e:
+                raise SystemExit(str(e))
         return
 
     guion = pendientes[0]
@@ -61,9 +82,21 @@ def main():
         print("Video de prueba en:", video)
         return
 
-    with open(video, "rb") as f:
-        telegram("sendVideo", token, data={"chat_id": chat, "caption": caption, "supports_streaming": "true"},
-                 files={"video": ("short.mp4", f, "video/mp4")})
+    def send(cid):
+        with open(video, "rb") as f:
+            telegram("sendVideo", token, data={"chat_id": cid, "caption": caption, "supports_streaming": "true"},
+                     files={"video": ("short.mp4", f, "video/mp4")})
+    try:
+        send(chat)
+    except TelegramError as e:
+        if "chat not found" not in str(e):
+            raise SystemExit(str(e))
+        print("El TELEGRAM_CHAT_ID guardado no funciona. Buscando el chat correcto...")
+        found = diagnose_chat(token)
+        if len(found) != 1:
+            raise SystemExit("No pude deducir el chat. Escríbele /start al bot y vuelve a intentar.")
+        send(found[0])
+        print(f"✅ Enviado usando el chat {found[0]}. Actualiza el secreto TELEGRAM_CHAT_ID con ese número.")
     os.makedirs(PUB, exist_ok=True)
     hoy = datetime.date.today().isoformat()
     shutil.move(guion, os.path.join(PUB, f"{hoy}_{os.path.basename(guion)}"))

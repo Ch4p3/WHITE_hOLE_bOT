@@ -6,7 +6,7 @@ listo para subir a YouTube, TikTok y Facebook.
 ## Cómo funciona
 
 1. En `guiones/pendientes/` hay una cola de guiones (archivos `.json`).
-2. Todos los días a las **7:23 a. m. (hora Colombia)**, GitHub Actions toma el primero de la cola,
+2. **Tres veces al día (7:23 a. m., 1:23 p. m. y 7:23 p. m., hora Colombia)**, GitHub Actions toma el primero de la cola,
    genera la voz (Piper, gratis), anima cada escena con código y arma el video con FFmpeg.
 3. El video te llega a **Telegram** con el título, la descripción, los hashtags y las fuentes.
 4. El guion pasa a `guiones/publicados/` para no repetirse.

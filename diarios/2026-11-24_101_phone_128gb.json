@@ -1,0 +1,124 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Your 128 GB phone doesn't have 128 GB 📱",
+ "descripcion": "Part of it goes to the operating system, part to how computers count gigabytes. Here's where your storage really goes.",
+ "hashtags": "#tech #iphone #android #storage #shorts",
+ "fuentes": [
+  "https://support.apple.com/en-us/102174",
+  "https://en.wikipedia.org/wiki/Binary_prefix"
+ ],
+ "escenas": [
+  {
+   "texto": "You bought a phone with one hundred twenty eight gigabytes. Then you open settings, and a big chunk is already gone.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "On the box",
+      "value": 128,
+      "value_text": "128 GB",
+      "color": "blue"
+     },
+     {
+      "label": "Free on day one",
+      "value": 105,
+      "value_text": "≈105 GB",
+      "color": "warm",
+      "sync": "settings"
+     }
+    ],
+    "note": "where did it go?",
+    "note_sync": "gone"
+   }
+  },
+  {
+   "texto": "First thief: the operating system. iOS or Android, plus the apps that come preinstalled, can take ten to twenty gigabytes before you install anything.",
+   "visual": {
+    "tipo": "card",
+    "title": "THE SYSTEM",
+    "tag": "THIEF #1",
+    "panel": {
+     "label": "OS + system files + built-in apps",
+     "value": "10–20 GB",
+     "progress": 0.15,
+     "color": "warm",
+     "sync": "operating",
+     "value_sync": "ten"
+    }
+   }
+  },
+  {
+   "texto": "Second thief: math. Phone makers count a gigabyte as one billion bytes. Your phone counts it as about seven percent more.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MAKER'S GB",
+     "value": "10⁹",
+     "sub": "1,000,000,000 bytes",
+     "color": "blue",
+     "sync": "makers"
+    },
+    "right": {
+     "label": "PHONE'S \"GB\"",
+     "value": "1024³",
+     "sub": "1,073,741,824 bytes",
+     "color": "warm",
+     "sync": "phone"
+    }
+   }
+  },
+  {
+   "texto": "So one hundred twenty eight real gigabytes show up as about one hundred nineteen.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "128 × 10⁹ ÷ 1024³",
+      "color": "white",
+      "sync": "real"
+     }
+    ],
+    "result": {
+     "value": 119.2,
+     "decimals": 1,
+     "label": "\"GB\" on your screen",
+     "sync": "nineteen",
+     "color": "warm"
+    }
+   }
+  },
+  {
+   "texto": "Third thief: you. Photos, chats, and app caches grow every single day. Messaging apps alone can quietly eat gigabytes.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "thief #3",
+    "word": "CACHE",
+    "size": 260,
+    "sync": "Photos",
+    "sub": "photos, chats, app data",
+    "sub2": "growing every day"
+   }
+  },
+  {
+   "texto": "Quick fix: open your storage settings, sort by size, and clear the biggest app caches first. Follow for more phone secrets.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "SORT",
+     "BY",
+     "SIZE."
+    ],
+    "syncs": [
+     null,
+     "sort",
+     "size"
+    ]
+   }
+  }
+ ]
+}

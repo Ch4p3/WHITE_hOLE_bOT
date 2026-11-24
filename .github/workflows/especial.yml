@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       guion_es:
-        description: "Guion en español (Facebook)"
+        description: "Guion en español (Facebook); escribe - para omitirlo"
         default: "guiones/es/pendientes/001_hipopotamos_escobar.json"
       guion_en:
-        description: "Guion en inglés (TikTok/YouTube)"
+        description: "Guion en inglés (TikTok/YouTube); escribe - para omitirlo"
         default: "guiones/en_especial/001_cocaine_hippos.json"
       publicar:
         description: "Publicar de verdad (si no, solo vista previa a Telegram)"
@@ -44,10 +44,10 @@ jobs:
           [ -f voices-v1.0.bin ] || curl -sSfL -o voices-v1.0.bin $B/voices-v1.0.bin
           ls -la
       - name: Generar video en español
-        if: ${{ inputs.guion_es != '' }}
+        if: ${{ inputs.guion_es != '' && inputs.guion_es != '-' }}
         run: mkdir -p out && python engine/make_short.py "${{ inputs.guion_es }}" out/es.mp4 --canal "White Hole"
       - name: Generar video en inglés
-        if: ${{ inputs.guion_en != '' }}
+        if: ${{ inputs.guion_en != '' && inputs.guion_en != '-' }}
         run: mkdir -p out && python engine/make_short.py "${{ inputs.guion_en }}" out/en.mp4 --canal "@whitehole"
       - name: Publicar y enviar a Telegram
         env:
@@ -60,8 +60,8 @@ jobs:
           TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
         run: |
           P=""; [ "${{ inputs.publicar }}" = "true" ] && P="--publicar"
-          [ -n "${{ inputs.guion_es }}" ] && python scripts/especial.py out/es.mp4 "${{ inputs.guion_es }}" --destino facebook $P || true
-          [ -n "${{ inputs.guion_en }}" ] && python scripts/especial.py out/en.mp4 "${{ inputs.guion_en }}" --destino tiktok $P || true
+          [ -f out/es.mp4 ] && python scripts/especial.py out/es.mp4 "${{ inputs.guion_es }}" --destino facebook $P || true
+          [ -f out/en.mp4 ] && python scripts/especial.py out/en.mp4 "${{ inputs.guion_en }}" --destino tiktok $P || true
       - name: Guardar vistas previas en la rama previews
         run: |
           git config user.name "white-hole-bot"

@@ -91,5 +91,8 @@ def obtener(src):
 
 
 def credito_corto(info):
-    autor = re.sub(r"\s+", " ", info.get("autor", ""))[:40]
+    autor = re.sub(r"\s+", " ", info.get("autor", ""))
+    if "machine-readable" in autor.lower() or not autor.strip():
+        autor = "autor en Wikimedia"
+    autor = autor[:40]
     return f"Foto: {autor} · {info.get('licencia', '')} · Wikimedia Commons"

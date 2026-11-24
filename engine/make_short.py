@@ -9,7 +9,8 @@ Cada escena del guion tiene:
   "sync":    (en los parámetros) palabra del texto en la que aparece cada elemento
 
 Plantillas disponibles (ver README para ejemplos):
-  title, counter, bars, versus, equation, bigword, card, outro
+  title, counter, bars, versus, equation, bigword, card, outro,
+  mapa (mapa de Colombia con zoom y río), grafica (línea animada), emoji (emoji grande)
 """
 import json, math, os, re, subprocess, sys, wave, argparse
 import numpy as np
@@ -52,7 +53,15 @@ def back(x, s=1.9):
     x = clamp(x) - 1
     return x * x * ((s + 1) * x + s) + 1
 def prog(t, start, dur): return clamp((t - start) / dur)
+def ease_inout(x): x = clamp(x); return 3 * x * x - 2 * x * x * x
 def mix(c1, c2, k): return tuple(int(a + (b - a) * k) for a, b in zip(c1, c2))
+
+LANG = {"code": "en"}
+def fmt_num(v, dec=0):
+    s = f"{v:,.{dec}f}"
+    if LANG["code"] == "es":
+        s = s.replace(",", "\u0001").replace(".", ",").replace("\u0001", ".")
+    return s
 
 def text(d, xy, s, size, fill, weight="black", anchor="mm"):
     d.text(xy, s, font=font(size, weight), fill=fill, anchor=anchor)
@@ -145,7 +154,7 @@ def v_counter(img, d, t, sc, p):
         a, b = float(p.get("from", 0)), float(p["to"])
         v = a + (b - a) * k
         dec = int(p.get("decimals", 0))
-        s = f"{p.get('prefix', '')}{v:,.{dec}f}{p.get('suffix', '')}"
+        s = f"{p.get('prefix', '')}{fmt_num(v, dec)}{p.get('suffix', '')}"
         size = fit(d, s, p.get("size", 220), "black", 980)
         text(d, (W // 2, 760), s, size, col(p.get("color"), BLUE))
     if p.get("label"):
@@ -211,7 +220,7 @@ def v_equation(img, d, t, sc, p):
         kc = ease_out(prog(t, st, 1.1))
         if kc > 0:
             v = float(r.get("from", 0)) + (float(r["value"]) - float(r.get("from", 0))) * kc
-            s = f"{r.get('prefix', '')}{v:,.{int(r.get('decimals', 0))}f}{r.get('suffix', '')}"
+            s = f"{r.get('prefix', '')}{fmt_num(v, int(r.get('decimals', 0)))}{r.get('suffix', '')}"
             text(d, (W // 2, y + 90), s, fit(d, s, 200, "black", 980), col(r.get("color"), BLUE))
             if r.get("label"):
                 text(d, (W // 2, y + 230), r["label"], 60, WHITE, "xbold")
@@ -263,8 +272,199 @@ def v_outro(img, d, t, sc, p):
         d.rounded_rectangle([W / 2 - w2, yb - h2, W / 2 + w2, yb + h2], int(h2), fill=BLUE)
         text(d, (W / 2, yb), p.get("button", "FOLLOW  +"), 58 * k, BG)
 
+
+# ---------------------------------------------------------------- plantillas "documental"
+_GEO = None
+def geo():
+    global _GEO
+    if _GEO is None:
+        _GEO = json.load(open(os.path.join(ROOT, "assets", "geo", "sudamerica.json"), encoding="utf-8"))
+    return _GEO
+
+def _lerp(a, b, k): return a + (b - a) * k
+
+def _path_point(pts, f):
+    """Punto a una fracción f (0-1) del largo de una polilínea en píxeles."""
+    segs = [math.dist(pts[i], pts[i + 1]) for i in range(len(pts) - 1)]
+    total = sum(segs) or 1
+    goal, acc = clamp(f) * total, 0.0
+    for i, L in enumerate(segs):
+        if acc + L >= goal:
+            k = (goal - acc) / (L or 1)
+            return (pts[i][0] + (pts[i + 1][0] - pts[i][0]) * k, pts[i][1] + (pts[i + 1][1] - pts[i][1]) * k), i
+        acc += L
+    return pts[-1], len(pts) - 2
+
+_FADE = None
+def _map_fade():
+    global _FADE
+    if _FADE is None:
+        g = np.ones((H, 1), np.float32)
+        yy = np.arange(H, dtype=np.float32)[:, None]
+        g = np.clip((1340 - yy) / 220, 0, 1) * np.clip((yy - 150) / 120, 0, 1)
+        _FADE = Image.fromarray((np.repeat(g, W, axis=1) * 255).astype(np.uint8))
+    return _FADE
+
+def v_mapa(img, d, t, sc, p):
+    """Mapa de Colombia con zoom de cámara, río Magdalena, marcadores y puntos que se expanden."""
+    g = geo()
+    c0 = p.get("desde", [-73.6, 4.3, 1.0]); c1 = p.get("hasta", c0)
+    kc = ease_inout(prog(t, at(sc, p.get("zoom_sync"), 0.0), p.get("zoom_dur", 2.6)))
+    lon_c, lat_c, z = _lerp(c0[0], c1[0], kc), _lerp(c0[1], c1[1], kc), _lerp(c0[2], c1[2], kc)
+    cy = p.get("y", 780); s = 50 * z; cosl = math.cos(math.radians(lat_c))
+    P = lambda lon, lat: (W / 2 + (lon - lon_c) * s * cosl, cy - (lat - lat_c) * s)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(layer)
+    fade = ease_out(prog(t, 0.0, 0.6))
+    for name, polys in g.items():
+        if name.startswith("_"): continue
+        main = name == p.get("pais", "Colombia")
+        fill = (30, 48, 92, int(255 * fade)) if main else (20, 28, 50, int(200 * fade))
+        line = (*BLUE, int(255 * fade)) if main else (50, 64, 100, int(200 * fade))
+        for poly in polys:
+            pts = [P(x, y) for x, y in poly]
+            ld.polygon(pts, fill=fill)
+            ld.line(pts + [pts[0]], fill=line, width=5 if main else 2, joint="curve")
+    rio = [P(x, y) for x, y in g["_rios"]["Magdalena"]]
+    if p.get("rio", True):
+        kr = ease_inout(prog(t, at(sc, p.get("rio_sync"), 0.3), p.get("rio_dur", 1.8)))
+        if kr > 0:
+            end, idx = _path_point(rio, kr)
+            ld.line(rio[:idx + 1] + [end], fill=(110, 190, 255, 255), width=max(5, int(4 * z ** 0.5)), joint="curve")
+            if p.get("rio_label") and kr > 0.6:
+                lp, _ = _path_point(rio, p.get("rio_label_pos", 0.82))
+                ld.text((lp[0] + 26, lp[1]), p["rio_label"], font=font(34, "xbold"), fill=(150, 205, 255, 255), anchor="lm")
+    sp = p.get("expansion")
+    if sp:
+        st = at(sc, sp.get("sync"), 1.0)
+        n = int(sp.get("n", 16)); f0, f1 = sp.get("desde", 0.4), sp.get("hasta", 0.6)
+        rng = np.random.default_rng(3)
+        for i in range(n):
+            k = back(prog(t, st + i * sp.get("paso", 0.12), 0.35))
+            if k <= 0: continue
+            q, _ = _path_point(rio, f0 + (f1 - f0) * (i / max(1, n - 1)))
+            jx, jy = rng.normal(0, 10 * z ** 0.5, 2)
+            r = 9 * k * z ** 0.3
+            ld.ellipse([q[0] + jx - r, q[1] + jy - r, q[0] + jx + r, q[1] + jy + r], fill=(*WARM, 235))
+    for m in p.get("marcadores", []):
+        st = at(sc, m.get("sync"), 0.6)
+        k = back(prog(t, st, 0.45))
+        if k <= 0: continue
+        x, y = P(m["lon"], m["lat"]); cc = col(m.get("color"), WARM)
+        pulse = (t - st) % 1.4 / 1.4
+        rr = 18 + 46 * pulse
+        ld.ellipse([x - rr, y - rr, x + rr, y + rr], outline=(*cc, int(220 * (1 - pulse))), width=5)
+        r0 = 16 * k
+        ld.ellipse([x - r0, y - r0, x + r0, y + r0], fill=(*cc, 255), outline=(255, 255, 255, 255), width=4)
+        if m.get("label"):
+            f = font(40, "black"); tw = ld.textlength(m["label"], font=f)
+            side = m.get("lado", "der")
+            bx = x + 40 if side == "der" else x - 40 - tw - 44
+            by = y - 34
+            ld.rounded_rectangle([bx, by, bx + tw + 44, by + 68], 34, fill=(255, 255, 255, int(255 * k)))
+            ld.text((bx + 22, by + 34), m["label"], font=f, fill=(*BG, 255), anchor="lm")
+            if m.get("sub"):
+                ld.text((bx + 22, by + 96), m["sub"], font=font(32, "semi"), fill=(*ICE, int(255 * k)), anchor="lm")
+    a = layer.getchannel("A")
+    a = Image.composite(a, Image.new("L", (W, H), 0), _map_fade())
+    layer.putalpha(a)
+    img.paste(layer, (0, 0), layer)
+    if p.get("titulo"):
+        slide(d, (W // 2, 330), p["titulo"], 64, WHITE, t, at(sc, p.get("titulo_sync"), 0.0), weight="black", dy=30)
+
+def v_grafica(img, d, t, sc, p):
+    """Gráfica de línea animada (ej. población por año). Puntos con "proyeccion": true van punteados."""
+    pts = p["puntos"]
+    bx0, bx1, by0, by1 = 150, W - 130, 1180, 560
+    xmin, xmax = p.get("xmin", pts[0]["x"]), p.get("xmax", pts[-1]["x"])
+    ymax = p.get("ymax", max(q["y"] for q in pts) * 1.18)
+    if p.get("categorico"):
+        idx = {q["x"]: i for i, q in enumerate(pts)}
+        X = lambda v: bx0 + 70 + idx[v] / max(1, len(pts) - 1) * (bx1 - bx0 - 140)
+    else:
+        X = lambda v: bx0 + (v - xmin) / (xmax - xmin) * (bx1 - bx0)
+    Y = lambda v: by0 - v / ymax * (by0 - by1)
+    ka = ease_out(prog(t, 0.0, 0.5))
+    if p.get("titulo"):
+        slide(d, (W // 2, 400), p["titulo"], 58, WHITE, t, 0.0, weight="black", dy=30)
+    d.line([bx0, by0, bx0 + (bx1 - bx0) * ka, by0], fill=(60, 74, 110), width=4)
+    for gy in (0.33, 0.66, 1.0):
+        yy = by0 - (by0 - by1) * gy
+        d.line([bx0, yy, bx0 + (bx1 - bx0) * ka, yy], fill=(28, 36, 62), width=2)
+    times = [at(sc, q.get("sync"), 0.4 + i * 0.9) for i, q in enumerate(pts)]
+    for i, q in enumerate(pts):
+        x, y = X(q["x"]), Y(q["y"])
+        if i > 0:
+            k = ease_inout(prog(t, times[i] - 0.55, 0.55))
+            if k > 0:
+                xa, ya = X(pts[i - 1]["x"]), Y(pts[i - 1]["y"])
+                xe, ye = xa + (x - xa) * k, ya + (y - ya) * k
+                cc = WARM if q.get("proyeccion") else BLUE
+                if q.get("proyeccion"):
+                    nseg = 14
+                    for j in range(nseg):
+                        if j % 2: continue
+                        f0, f1 = j / nseg, (j + 1) / nseg
+                        if f0 > k: break
+                        f1 = min(f1, k)
+                        d.line([xa + (x - xa) * f0, ya + (y - ya) * f0, xa + (x - xa) * f1, ya + (y - ya) * f1], fill=cc, width=10)
+                else:
+                    d.line([xa, ya, xe, ye], fill=cc, width=10)
+        kp = back(prog(t, times[i], 0.4))
+        if kp > 0:
+            cc = WARM if q.get("proyeccion") else BLUE
+            r = 16 * kp
+            d.ellipse([x - r, y - r, x + r, y + r], fill=cc, outline=WHITE, width=4)
+            lab = q.get("label", str(q["y"]))
+            text(d, (x, y - 64), lab, fit(d, lab, 70, "black", 300) * (0.5 + 0.5 * kp), cc)
+            text(d, (x, by0 + 50), str(q.get("xlabel", q["x"])), 40, GREY, "bold")
+            if q.get("nota"):
+                text(d, (x, by0 + 100), q["nota"], 30, GREY, "semi")
+
+_EMO = {}
+def emoji_img(ch, px):
+    key = (ch, px)
+    if key not in _EMO:
+        im = None
+        for pth in ["/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+                    "/usr/share/fonts/noto/NotoColorEmoji.ttf",
+                    os.path.join(ROOT, "assets", "fonts", "NotoColorEmoji.ttf")]:
+            if os.path.exists(pth):
+                f = ImageFont.truetype(pth, 109)
+                im = Image.new("RGBA", (200, 200), (0, 0, 0, 0))
+                ImageDraw.Draw(im).text((100, 100), ch, font=f, embedded_color=True, anchor="mm")
+                bb = im.getbbox()
+                if bb:
+                    im = im.crop(bb); r = px / max(im.size)
+                    im = im.resize((max(1, int(im.width * r)), max(1, int(im.height * r))), Image.LANCZOS)
+                break
+        _EMO[key] = im
+    return _EMO[key]
+
+def v_emoji(img, d, t, sc, p):
+    """Emoji grande flotando + texto opcional (ej. "4 → 200")."""
+    st = at(sc, p.get("sync"), 0.0)
+    y = p.get("y", 640)
+    if p.get("pre"):
+        slide(d, (W // 2, 330), p["pre"], 58, GREY, t, 0.0, weight="xbold", dy=30)
+    k = back(prog(t, st, 0.6))
+    em = emoji_img(p["emoji"], int(p.get("size", 420))) if k > 0 else None
+    if em is not None:
+        sc_k = 0.5 + 0.5 * k
+        e2 = em.resize((max(1, int(em.width * sc_k)), max(1, int(em.height * sc_k))))
+        bob = math.sin(t * 2.4) * 12
+        # sombra/halo
+        r = 260 * sc_k
+        d.ellipse([W / 2 - r, y - r * 0.92, W / 2 + r, y + r * 0.92], fill=(16, 24, 48))
+        img.paste(e2, (int(W / 2 - e2.width / 2), int(y - e2.height / 2 + bob)), e2)
+    if p.get("texto"):
+        pop(d, (W // 2, y + 360), p["texto"], p.get("tsize", 170), col(p.get("color"), BLUE), t,
+            at(sc, p.get("texto_sync"), st + 0.5), maxw=980)
+    if p.get("sub"):
+        slide(d, (W // 2, y + 500), p["sub"], 54, WHITE, t, at(sc, p.get("sub_sync"), st + 0.9), weight="xbold")
+
 VISUALS = {"title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
-           "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro}
+           "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
+           "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji}
 
 # ---------------------------------------------------------------- subtítulos
 def captions(d, t, sc):
@@ -280,8 +480,11 @@ def captions(d, t, sc):
         if t >= times[g[0]] - 0.05: active = g
     if active is None: return
     cw = max([i for i in range(len(words)) if times[i] <= t + 0.02] or [active[0]])
-    f = font(66, "black")
     parts = [words[i].upper() for i in active]
+    size = 66
+    while size > 40 and sum(d.textlength(p_ + " ", font=font(size, "black")) for p_ in parts) > 960:
+        size -= 4
+    f = font(size, "black")
     widths = [d.textlength(p_ + " ", font=f) for p_ in parts]
     x = W / 2 - sum(widths) / 2
     for i, p_, wd in zip(active, parts, widths):
@@ -333,6 +536,7 @@ def build_music(dur, out, sr=44100):
 # ---------------------------------------------------------------- render
 def render(script_path, out_path, voice_path, channel="@whitehole"):
     cfg = json.load(open(script_path, encoding="utf-8"))
+    LANG["code"] = cfg.get("idioma", "en")
     scenes = cfg["escenas"]
     work = os.path.join(os.path.dirname(os.path.abspath(out_path)), "_work")
     os.makedirs(work, exist_ok=True)

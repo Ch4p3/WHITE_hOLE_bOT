@@ -1,0 +1,79 @@
+name: Video en español (prueba)
+
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Ruta del guion en español"
+        default: "guiones/es/pendientes/001_hipopotamos_escobar.json"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar ffmpeg y emojis
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Caché de la voz en español
+        uses: actions/cache@v4
+        with:
+          path: voices_es
+          key: piper-es-mx-claude-high-v1
+
+      - name: Descargar la voz en español (solo la primera vez)
+        run: |
+          mkdir -p voices_es && cd voices_es
+          if [ ! -f es.onnx ]; then
+            B=https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_MX/claude/high
+            curl -sSfL -o es.onnx "$B/es_MX-claude-high.onnx" && curl -sSfL -o es.onnx.json "$B/es_MX-claude-high.onnx.json" || {
+              B=https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_MX/ald/medium
+              curl -sSfL -o es.onnx "$B/es_MX-ald-medium.onnx" && curl -sSfL -o es.onnx.json "$B/es_MX-ald-medium.onnx.json"; }
+          fi
+          ls -la
+
+      - name: Generar el video
+        run: |
+          mkdir -p out
+          python engine/make_short.py "${{ inputs.guion }}" out/es.mp4 --voz voices_es/es.onnx --canal "White Hole"
+
+      - name: Enviar a Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import json, os, requests
+          g = json.load(open("${{ inputs.guion }}", encoding="utf-8"))
+          cap = f"🧪 PRUEBA en español\n\n🎬 {g['titulo']}\n\n{g['descripcion']}\n\n{g['hashtags']}"[:1024]
+          with open("out/es.mp4", "rb") as f:
+              r = requests.post(f"https://api.telegram.org/bot{os.environ['TELEGRAM_TOKEN']}/sendVideo",
+                                data={"chat_id": os.environ["TELEGRAM_CHAT_ID"], "caption": cap, "supports_streaming": "true"},
+                                files={"video": ("video.mp4", f, "video/mp4")}, timeout=300)
+          print(r.status_code, r.text[:200])
+          PY
+
+      - name: Guardar la vista previa en la rama previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          name=$(basename "${{ inputs.guion }}" .json)
+          cp out/es.mp4 /tmp/$name.mp4
+          git fetch -q origin previews && git checkout -q previews || git checkout -q --orphan previews
+          git rm -rq --cached . 2>/dev/null || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp /tmp/$name.mp4 .
+          git add "$name.mp4" && git commit -qm "Vista previa $name" && git push -q origin previews

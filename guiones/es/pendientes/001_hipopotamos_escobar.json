@@ -1,0 +1,300 @@
+{
+  "titulo": "Escobar trajo 4 hipopótamos… hoy son casi 200 🦛",
+  "descripcion": "Llegaron a la Hacienda Nápoles en 1981. Tras la muerte de Escobar nadie se los llevó, y hoy son la única manada salvaje de hipopótamos fuera de África. ¿Tú qué harías con ellos?",
+  "hashtags": "#colombia #hipopotamos #pabloescobar #curiosidades #historia",
+  "fuentes": [
+    "https://www.teletica.com/internacional/por-que-el-gobierno-de-colombia-sacrificara-a-80-de-los-hipopotamos-de-pablo-escobar_406802 (BBC Mundo, abr. 2026)",
+    "https://eldesconcierto.cl/2023/02/15/el-paraiso-colombiano-donde-los-hipopotamos-de-pablo-escobar-se-multiplicaron-de-4-a-133 (estudio Humboldt–UNAL, 2022)",
+    "https://www.elcolombiano.com/antioquia/hipopotamos-rechazo-internacional-mutacion-genetica-HH35457123 (MinAmbiente: cerca de 200)",
+    "https://www.vanguardia.com/santander/barrancabermeja/2026/02/08/los-hipopotamos-de-pablo-ya-comen-en-santander/",
+    "https://www.primicias.ec/internacional/colombia-eutanasia-hipopotamos-descendientes-animales-pablo-escobar-137499/ (18 nov. 2026)"
+  ],
+  "velocidad": 0.92,
+  "escenas": [
+    {
+      "texto": "Pablo Escobar trajo cuatro hipopótamos a Colombia. Hoy son cerca de doscientos, y nadie ha podido detenerlos.",
+      "visual": {
+        "tipo": "emoji",
+        "emoji": "🦛",
+        "size": 430,
+        "y": 640,
+        "texto": "4 → 200",
+        "texto_sync": "doscientos",
+        "sub": "y nadie ha podido detenerlos",
+        "sub_sync": "nadie"
+      }
+    },
+    {
+      "texto": "Todo empezó en mil novecientos ochenta y uno. Escobar compró tres hembras y un macho a un zoológico de Estados Unidos.",
+      "visual": {
+        "tipo": "card",
+        "title": "1981",
+        "tag": "EL INICIO",
+        "panel": {
+          "label": "Llegaron desde un zoológico de EE. UU.",
+          "value": "3 hembras + 1 macho",
+          "progress": 1.0,
+          "color": "warm",
+          "sync": "compró",
+          "value_sync": "hembras"
+        }
+      }
+    },
+    {
+      "texto": "Los llevó a la Hacienda Nápoles, en Puerto Triunfo, Antioquia. Su zoológico privado, a orillas del río Magdalena.",
+      "visual": {
+        "tipo": "mapa",
+        "desde": [
+          -73.6,
+          4.3,
+          1.0
+        ],
+        "hasta": [
+          -74.5,
+          6.2,
+          1.75
+        ],
+        "zoom_sync": "Nápoles",
+        "zoom_dur": 2.4,
+        "rio_sync": "Puerto",
+        "rio_label": "Río Magdalena",
+        "rio_label_pos": 0.7,
+        "marcadores": [
+          {
+            "lon": -74.64,
+            "lat": 5.87,
+            "label": "Hacienda Nápoles",
+            "sub": "Puerto Triunfo, Antioquia",
+            "sync": "Nápoles"
+          }
+        ],
+        "rio_dur": 2.2
+      }
+    },
+    {
+      "texto": "En mil novecientos noventa y tres, Escobar murió. Al resto de animales se los llevaron a zoológicos, pero a los hipopótamos nadie se atrevió a moverlos.",
+      "visual": {
+        "tipo": "bigword",
+        "word": "1993",
+        "size": 300,
+        "sync": "murió",
+        "sub": "nadie se los llevó",
+        "sub2": "eran demasiado peligrosos de mover"
+      }
+    },
+    {
+      "texto": "Y aquí encontraron el paraíso: agua todo el año, comida de sobra, y ni un solo depredador.",
+      "visual": {
+        "tipo": "title",
+        "y": 600,
+        "size": 120,
+        "sync": "paraíso",
+        "lines": [
+          "AGUA",
+          "TODO EL AÑO",
+          "CERO",
+          "DEPREDADORES"
+        ],
+        "colors": [
+          "white",
+          "blue",
+          "white",
+          "warm"
+        ]
+      }
+    },
+    {
+      "texto": "En dos mil veintidós, un estudio del Instituto Humboldt y la Universidad Nacional contó ciento treinta y tres en libertad. Hoy, el Ministerio de Ambiente calcula cerca de doscientos.",
+      "visual": {
+        "tipo": "grafica",
+        "titulo": "Hipopótamos en Colombia",
+        "xmin": 1978,
+        "xmax": 2029,
+        "ymax": 240,
+        "puntos": [
+          {
+            "x": 1981,
+            "y": 4,
+            "label": "4",
+            "sync": "estudio"
+          },
+          {
+            "x": 2022,
+            "y": 133,
+            "label": "133",
+            "sync": "ciento",
+            "nota": "Humboldt–UNAL"
+          },
+          {
+            "x": 2026,
+            "y": 200,
+            "label": "≈200",
+            "sync": "Hoy",
+            "nota": "MinAmbiente"
+          }
+        ],
+        "categorico": true
+      }
+    },
+    {
+      "texto": "Y no se quedaron quietos: bajaron por el Magdalena, y ya los han visto hasta en Santander.",
+      "visual": {
+        "tipo": "mapa",
+        "desde": [
+          -74.5,
+          6.2,
+          1.75
+        ],
+        "hasta": [
+          -74.2,
+          6.8,
+          1.6
+        ],
+        "zoom_dur": 2.0,
+        "rio_sync": 0.0,
+        "rio_dur": 0.4,
+        "expansion": {
+          "sync": "bajaron",
+          "n": 18,
+          "desde": 0.44,
+          "hasta": 0.58,
+          "paso": 0.1
+        },
+        "marcadores": [
+          {
+            "lon": -74.64,
+            "lat": 5.87,
+            "sync": 0.0
+          },
+          {
+            "lon": -73.85,
+            "lat": 7.07,
+            "label": "Santander",
+            "sub": "Barrancabermeja",
+            "sync": "Santander",
+            "color": "blue"
+          }
+        ]
+      }
+    },
+    {
+      "texto": "Es la única manada salvaje de hipopótamos fuera de África.",
+      "visual": {
+        "tipo": "bigword",
+        "pre": "La única manada salvaje",
+        "word": "FUERA DE ÁFRICA",
+        "size": 170,
+        "sync": "África",
+        "color": "warm"
+      }
+    },
+    {
+      "texto": "Un hipopótamo puede pesar más de una tonelada, es muy territorial, y en Doradal ya ha habido personas heridas por sus ataques.",
+      "visual": {
+        "tipo": "counter",
+        "to": 1000,
+        "prefix": "+",
+        "suffix": " kg",
+        "label": "puede pesar un hipopótamo",
+        "sync": "tonelada",
+        "note": "ya hubo ataques a personas en Doradal",
+        "note_sync": "Doradal",
+        "note_color": "warm"
+      }
+    },
+    {
+      "texto": "Además le quitan espacio a especies nativas como el manatí, y ensucian el agua de la que viven los pescadores.",
+      "visual": {
+        "tipo": "versus",
+        "left": {
+          "label": "MANATÍ",
+          "value": "en riesgo",
+          "color": "blue",
+          "sync": "manatí"
+        },
+        "right": {
+          "label": "PESCADORES",
+          "value": "agua sucia",
+          "color": "warm",
+          "sync": "pescadores"
+        }
+      }
+    },
+    {
+      "texto": "Y como todos vienen de los mismos cuatro, su diversidad genética es muy baja. Por eso otros países se negaron a recibirlos.",
+      "visual": {
+        "tipo": "versus",
+        "left": {
+          "label": "ORIGEN",
+          "value": "4",
+          "sub": "los de Escobar",
+          "color": "warm",
+          "sync": "cuatro"
+        },
+        "right": {
+          "label": "HOY",
+          "value": "≈200",
+          "sub": "casi los mismos genes",
+          "color": "blue",
+          "sync": "genética"
+        },
+        "badge": {
+          "top": "",
+          "bottom": "NO",
+          "sync": "negaron"
+        }
+      }
+    },
+    {
+      "texto": "Si nadie hace nada, para dos mil cincuenta podrían ser miles.",
+      "visual": {
+        "tipo": "bigword",
+        "pre": "Si nadie hace nada, en 2050…",
+        "word": "MILES",
+        "size": 300,
+        "sync": "miles",
+        "color": "warm"
+      }
+    },
+    {
+      "texto": "Por eso, el dieciocho de noviembre, Cornare anunció la eutanasia de diez hipopótamos considerados de alto riesgo. Y el país quedó dividido.",
+      "visual": {
+        "tipo": "card",
+        "title": "18 NOV",
+        "tag": "2026",
+        "panel": {
+          "label": "Eutanasia anunciada · alto riesgo",
+          "value": "10",
+          "progress": 0.05,
+          "color": "warm",
+          "sync": "Cornare",
+          "value_sync": "diez"
+        }
+      }
+    },
+    {
+      "texto": "Tú qué harías: ¿sacrificarlos, esterilizarlos o dejarlos libres? Déjalo en los comentarios, y sígueme para más historias así.",
+      "visual": {
+        "tipo": "outro",
+        "lines": [
+          "¿SACRIFICAR?",
+          "¿ESTERILIZAR?",
+          "¿DEJARLOS?"
+        ],
+        "colors": [
+          "warm",
+          "blue",
+          "white"
+        ],
+        "syncs": [
+          "sacrificarlos",
+          "esterilizarlos",
+          "dejarlos"
+        ],
+        "button": "SÍGUEME  +",
+        "button_sync": "sígueme"
+      }
+    }
+  ],
+  "idioma": "es"
+}

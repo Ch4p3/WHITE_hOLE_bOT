@@ -278,11 +278,11 @@ def v_numeros(img, d, t, sc, p):
                 step = int(t * 2.5); sd = 0.35
             else:
                 step = int(t * 1.5); sd = 0.35
-            v = np.random.default_rng(idx * 131 + step * 7919).normal(0, sd)
+            v = np.random.default_rng(idx * 131 + (step + 5) * 7919).normal(0, sd)
             base = (90, 130, 190) if modo != "ruido" else (110, 115, 135)
             color = base
             if modo == "ajuste":
-                prev = np.random.default_rng(idx * 131 + (step - 1) * 7919).normal(0, sd)
+                prev = np.random.default_rng(idx * 131 + (step + 4) * 7919).normal(0, sd)
                 ph = (t * 2.5) % 1.0
                 if ph < 0.45 and (idx * 7 + step) % 3 == 0:
                     color = GREEN if v > prev else WARM

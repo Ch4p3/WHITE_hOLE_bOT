@@ -71,4 +71,5 @@ jobs:
           cp out/*.creditos.json /tmp/ 2>/dev/null || true
           git fetch -q origin previews && git checkout -q previews
           for f in /tmp/especial_es.mp4 /tmp/especial_en.mp4; do [ -f "$f" ] && cp "$f" "${n}_$(basename $f)"; done
-          git add *.mp4 2>/dev/null; git commit -qm "Vista previa especial $n" && git push -q origin previews
+          git add *.mp4 2>/dev/null; git commit -qm "Vista previa especial $n"
+          for i in 1 2 3 4 5; do git push -q origin previews && break; sleep $((RANDOM % 8 + 3)); git pull -q --rebase origin previews; done

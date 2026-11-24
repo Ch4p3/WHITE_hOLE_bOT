@@ -1,0 +1,64 @@
+name: Video largo semanal (horizontal 16:9)
+
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Guion del video largo"
+        default: "guiones/largos/001_what_is_ai.json"
+
+permissions:
+  contents: write
+
+jobs:
+  largo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Instalar ffmpeg y fuentes
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji fonts-dejavu-core
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Caché de la voz Kokoro
+        uses: actions/cache@v4
+        with:
+          path: voices/kokoro
+          key: kokoro-v1.0-int8
+      - name: Descargar Kokoro (solo la primera vez)
+        run: |
+          mkdir -p voices/kokoro && cd voices/kokoro
+          B=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+          [ -f kokoro-v1.0.int8.onnx ] || curl -sSfL -o kokoro-v1.0.int8.onnx $B/kokoro-v1.0.int8.onnx
+          [ -f voices-v1.0.bin ] || curl -sSfL -o voices-v1.0.bin $B/voices-v1.0.bin
+      - name: Generar video largo
+        run: mkdir -p out && python engine/make_long.py "${{ inputs.guion }}" out/largo.mp4
+      - name: Ajustar tamaño (límite de GitHub 100 MB)
+        run: |
+          s=$(stat -c %s out/largo.mp4); echo "tamaño: $((s/1048576)) MB"
+          if [ $s -gt 94000000 ]; then
+            ffmpeg -y -loglevel error -i out/largo.mp4 -c:v libx264 -preset veryfast -crf 27 -c:a copy -movflags +faststart out/l2.mp4
+            mv out/l2.mp4 out/largo.mp4; echo "re-codificado: $(( $(stat -c %s out/largo.mp4)/1048576 )) MB"
+          fi
+      - name: Subir como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-largo
+          path: |
+            out/largo.mp4
+            out/largo.mp4.jpg
+            out/largo.mp4.meta.json
+          retention-days: 14
+      - name: Guardar en la rama previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          n=$(basename "${{ inputs.guion }}" .json)
+          cp out/largo.mp4 /tmp/$n.mp4; cp out/largo.mp4.jpg /tmp/$n.jpg; cp out/largo.mp4.meta.json /tmp/$n.meta.json
+          git fetch -q origin previews && git checkout -q previews
+          mkdir -p largos && cp /tmp/$n.mp4 /tmp/$n.jpg /tmp/$n.meta.json largos/
+          git add largos && git commit -qm "Video largo $n" && git push -q origin previews

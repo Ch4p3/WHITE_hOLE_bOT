@@ -1,0 +1,878 @@
+{
+ "titulo": "What Is AI, Really? It's Just a File of Numbers",
+ "idioma": "en",
+ "kokoro": {
+  "voz": "am_michael",
+  "velocidad": 1.0,
+  "lang": "en-us"
+ },
+ "pausa": 0.4,
+ "intro_capitulo": "A file of numbers",
+ "miniatura": {
+  "lineas": [
+   "WHAT IS AI,",
+   "REALLY?"
+  ],
+  "colores": [
+   "white",
+   "blue"
+  ],
+  "chip": "810 GB OF NUMBERS"
+ },
+ "descripcion": "There's no rulebook inside an AI. Just a file of 405 billion numbers that predicts one word-piece at a time. Here's what's really happening when a chatbot answers you: tokens, next-token prediction, training on 15 trillion tokens, why it runs on GPUs, why it doesn't remember you, and why it makes things up.",
+ "fuentes": [
+  "Meta Llama 3.1 model card (parameters, 15T+ training tokens, 30.84M H100 GPU-hours): https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "Hugging Face, Llama 3.1 release notes (memory requirements, 128K context): https://huggingface.co/blog/llama31",
+  "NVIDIA, Llama 3.1 trained on 16K+ H100 GPUs: https://developer.nvidia.com/blog/supercharging-meta-llama-3-1-across-nvidia-platforms/",
+  "Llama 3.1 405B architecture (126 layers): Meta, The Llama 3 Herd of Models (2024), arXiv:2407.21783",
+  "NVIDIA H100 specifications (80 GB, 16,896 CUDA cores, SXM5): https://www.nvidia.com/en-us/data-center/h100/",
+  "Karpathy, llama2.c (Llama inference in a single small C file): https://github.com/karpathy/llama2.c"
+ ],
+ "hashtags": [
+  "#AI",
+  "#MachineLearning",
+  "#LLM",
+  "#HowItWorks",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "Somewhere right now, a computer is holding a file.",
+   "visual": {
+    "tipo": "archivo",
+    "nombre": "model.safetensors",
+    "tamano": 810,
+    "unidad": "GB",
+    "etiqueta": "one AI model",
+    "sync": "computer"
+   }
+  },
+  {
+   "texto": "It isn't an app. It isn't a list of instructions. It's eight hundred and ten gigabytes of numbers, and nothing else.",
+   "visual": {
+    "tipo": "numeros",
+    "modo": "flicker",
+    "etiqueta": "810 GB · JUST NUMBERS",
+    "etiqueta_sync": "numbers"
+   }
+  },
+  {
+   "texto": "And yet, when you type a question, those numbers answer you. They write essays, fix broken code, and explain black holes.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "AND YET, THEY ANSWER YOU",
+    "items": [
+     {
+      "texto": "They write essays",
+      "sync": "essays"
+     },
+     {
+      "texto": "They fix broken code",
+      "sync": "code"
+     },
+     {
+      "texto": "They explain black holes",
+      "sync": "black"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So what is actually going on in there? Is it thinking? Is it some kind of operating system? Let's open the file.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "WHAT IS AI,",
+     "REALLY?"
+    ],
+    "sync": "actually"
+   }
+  },
+  {
+   "texto": "Chapter one. It's not a program. At least, not the way you think.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "It's not a program",
+    "sub": "and not an operating system"
+   }
+  },
+  {
+   "texto": "A normal program is written by people, line by line. If this happens, do that. Every single rule was typed by a programmer.",
+   "visual": {
+    "tipo": "codigo",
+    "sync": "written",
+    "lineas": [
+     "# written by a human",
+     "if battery < 20:",
+     "    show_warning()",
+     "else:",
+     "    keep_going()"
+    ],
+    "etiqueta": "every rule typed by a person",
+    "etiqueta_sync": "every"
+   }
+  },
+  {
+   "texto": "An operating system, like Windows or Android, is the same idea on a massive scale. It manages your memory, your files and your apps, with rules that humans wrote.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "AN OPERATING SYSTEM = RULES HUMANS WROTE",
+    "items": [
+     {
+      "texto": "Manages memory",
+      "sync": "memory"
+     },
+     {
+      "texto": "Manages files",
+      "sync": "files"
+     },
+     {
+      "texto": "Runs your apps",
+      "sync": "apps"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A modern AI model is different. Nobody wrote its rules. In fact, nobody fully understands what most of them are.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "a modern AI model:",
+    "word": "NO RULES",
+    "sub": "nobody wrote them",
+    "sub_sync": "nobody",
+    "sync": "different",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "What it has instead is a giant table of numbers, called weights, or parameters. Meta's Llama three point one, one of the biggest open models ever released, has four hundred and five billion of them.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "what it has instead: weights",
+    "to": 405,
+    "suffix": " billion",
+    "label": "parameters in Llama 3.1 405B",
+    "sync": "four",
+    "note": "each one is just a number",
+    "note_sync": "them"
+   }
+  },
+  {
+   "texto": "Each of those numbers takes two bytes to store. Do the math, and you get that eight hundred and ten gigabyte file.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "405 billion numbers",
+      "sync": "numbers"
+     },
+     {
+      "text": "× 2 bytes each",
+      "sync": "bytes",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 810,
+     "suffix": " GB",
+     "sync": "math",
+     "label": "the whole model"
+    }
+   }
+  },
+  {
+   "texto": "The program that actually runs the model is tiny by comparison. Simple working versions have been written in around a thousand lines of code. Almost all of the intelligence lives in the numbers.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "THE CODE THAT RUNS IT",
+     "value": "~1,000 lines",
+     "color": "grey",
+     "sync": "program",
+     "size": 100
+    },
+    "right": {
+     "label": "THE WEIGHTS",
+     "value": "810 GB",
+     "color": "blue",
+     "sync": "intelligence"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "So here's a better picture. The model is not an operating system. It's more like a movie, and the code is the video player. The player is simple. The movie is where everything happens.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "THE CODE",
+     "value": "PLAYER",
+     "sub": "simple · loads the file",
+     "color": "grey",
+     "sync": "player"
+    },
+    "right": {
+     "label": "THE WEIGHTS",
+     "value": "MOVIE",
+     "sub": "where everything is",
+     "color": "blue",
+     "sync": "movie"
+    },
+    "vs_text": "=",
+    "vs": false
+   }
+  },
+  {
+   "texto": "Chapter two. How it reads.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "How it reads",
+    "sub": "tokens"
+   }
+  },
+  {
+   "texto": "Here's the first surprise. The model never sees letters or words. It only sees numbers.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "it never sees letters or words",
+    "pre_sync": "never",
+    "word": "ONLY NUMBERS",
+    "sync": "only"
+   }
+  },
+  {
+   "texto": "Before your message goes in, it gets chopped into pieces called tokens. A token is often a short word, or part of a longer one.",
+   "visual": {
+    "tipo": "tokens",
+    "frase": "The cat sat on the mat.",
+    "piezas": [
+     "The",
+     " cat",
+     " sat",
+     " on",
+     " the",
+     " mat",
+     "."
+    ],
+    "sync": "chopped"
+   }
+  },
+  {
+   "texto": "A word like unbelievable might be split into three pieces: un, believ, able.",
+   "visual": {
+    "tipo": "tokens",
+    "frase": "unbelievable",
+    "piezas": [
+     "un",
+     "believ",
+     "able"
+    ],
+    "sync": "split",
+    "stagger": 0.35,
+    "size": 90
+   }
+  },
+  {
+   "texto": "Then each piece is swapped for an ID number from a fixed dictionary. Llama three's dictionary has about a hundred and twenty eight thousand entries.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "The",
+     " cat",
+     " sat",
+     " on",
+     " the",
+     " mat",
+     "."
+    ],
+    "ids": [
+     791,
+     8415,
+     7731,
+     389,
+     279,
+     5634,
+     13
+    ],
+    "ids_sync": "swapped",
+    "stagger": 0.05,
+    "nota": "vocabulary: ~128,000 tokens · IDs shown are illustrative",
+    "nota_sync": "dictionary"
+   }
+  },
+  {
+   "texto": "On average, one token is about three quarters of an English word. So the whole script of this video is less than two thousand tokens.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "1 token",
+    "word": "≈ ¾ OF A WORD",
+    "sync": "three",
+    "sub": "this whole script: < 2,000 tokens",
+    "sub_sync": "script",
+    "size": 180
+   }
+  },
+  {
+   "texto": "Chapter three. The only job.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "One single job",
+    "sub": "guess what comes next"
+   }
+  },
+  {
+   "texto": "Now the numbers flow through the model, and here's the part that sounds too simple to be true. The model has exactly one job: guess the next token.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "its only job:",
+    "pre_sync": "one",
+    "word": "GUESS THE NEXT TOKEN",
+    "sync": "guess",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Give it, the cat sat on the. It doesn't look the answer up. It gives a score to every token in its dictionary. Mat scores high. Floor and couch get a little. Banana gets almost nothing.",
+   "visual": {
+    "tipo": "prediccion",
+    "contexto": "The cat sat on the",
+    "sync": "score",
+    "opciones": [
+     [
+      "mat",
+      0.41,
+      "mat"
+     ],
+     [
+      "floor",
+      0.17,
+      "floor"
+     ],
+     [
+      "couch",
+      0.12,
+      "couch"
+     ],
+     [
+      "bed",
+      0.08
+     ],
+     [
+      "banana",
+      0.001,
+      "banana"
+     ]
+    ]
+   }
+  },
+  {
+   "texto": "Then it picks one, adds it to the sentence, and starts over, predicting the token after that. And again. And again. One piece at a time.",
+   "visual": {
+    "tipo": "bucle",
+    "base": "The cat sat on the",
+    "nuevos": [
+     " mat",
+     ".",
+     " It",
+     " fell",
+     " asleep",
+     "."
+    ],
+    "sync": "picks",
+    "intervalo": 0.75
+   }
+  },
+  {
+   "texto": "That's what you're watching when a chatbot types out its answer. It isn't revealing a finished thought. It's predicting the reply live, piece by piece.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "NOT A FINISHED THOUGHT.",
+     "PIECE BY PIECE."
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "size": 120,
+    "sync": "watching"
+   }
+  },
+  {
+   "texto": "And every piece is expensive. For a model with four hundred and five billion parameters, one token takes roughly eight hundred billion arithmetic operations.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "for ONE token",
+    "to": 800,
+    "suffix": " billion",
+    "label": "arithmetic operations",
+    "sync": "eight",
+    "note": "≈ 2 × 405 billion parameters"
+   }
+  },
+  {
+   "texto": "Inside, the numbers pass through layer after layer. The biggest Llama has a hundred and twenty six of them. Each layer reshapes the meaning a little more, until the last one produces those scores.",
+   "visual": {
+    "tipo": "red",
+    "capas": [
+     5,
+     7,
+     7,
+     7,
+     7,
+     4
+    ],
+    "entrada": "your tokens",
+    "salida": "scores",
+    "medio": "126 LAYERS",
+    "medio_sync": "hundred",
+    "etiqueta": "each layer reshapes the meaning",
+    "etiqueta_sync": "reshapes"
+   }
+  },
+  {
+   "texto": "Somewhere in all that multiplying, things that look a lot like grammar, facts and reasoning show up. Nobody programmed them. They emerged.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "grammar · facts · reasoning",
+    "pre_sync": "grammar",
+    "word": "THEY EMERGED",
+    "sync": "emerged",
+    "sub": "nobody programmed them",
+    "sub_sync": "nobody"
+   }
+  },
+  {
+   "texto": "Chapter four. Where did the numbers come from?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "Where the numbers came from",
+    "sub": "training"
+   }
+  },
+  {
+   "texto": "At the very beginning, the weights are random. A brand new model is pure noise. Ask it anything and you get gibberish.",
+   "visual": {
+    "tipo": "numeros",
+    "modo": "ruido",
+    "etiqueta": "DAY ONE: RANDOM NOISE",
+    "etiqueta_sync": "random",
+    "color": "grey"
+   }
+  },
+  {
+   "texto": "Then comes training. You show it real text, hide the next token, and make it guess.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "Water",
+     " boils",
+     " at",
+     " 100",
+     " degrees",
+     " Celsius"
+    ],
+    "oculto": true,
+    "revela_sync": 99,
+    "sync": "show",
+    "stagger": 0.12,
+    "nota": "hide the next token · make it guess",
+    "nota_sync": "hide"
+   }
+  },
+  {
+   "texto": "When it guesses wrong, a bit of calculus works out which way to nudge every single weight, so the right answer becomes slightly more likely. Then it does it again. Trillions of times.",
+   "visual": {
+    "tipo": "numeros",
+    "modo": "ajuste",
+    "etiqueta": "NUDGE EVERY WEIGHT · REPEAT",
+    "etiqueta_sync": "nudge"
+   }
+  },
+  {
+   "texto": "Llama three was trained on more than fifteen trillion tokens. That's roughly a hundred million books' worth of text.",
+   "visual": {
+    "tipo": "counter",
+    "to": 15,
+    "suffix": " trillion",
+    "label": "tokens of training text",
+    "sync": "fifteen",
+    "note": "≈ 100 million books",
+    "note_sync": "hundred"
+   }
+  },
+  {
+   "texto": "For the biggest version, Meta used over sixteen thousand Nvidia H one hundred chips. In total, about thirty one million GPU hours.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "16,000+ Nvidia H100 GPUs",
+    "to": 31,
+    "decimals": 0,
+    "suffix": " million",
+    "label": "GPU-hours to train Llama 3.1 405B",
+    "sync": "thirty",
+    "note": "Meta's figure: 30.84 million"
+   }
+  },
+  {
+   "texto": "A single chip working alone would need about three and a half thousand years to do the same job.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "on just ONE chip",
+    "to": 3520,
+    "suffix": " years",
+    "label": "of nonstop computing",
+    "sync": "three",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "After that comes a second, smaller stage. People write example conversations and rate the model's answers, so it learns to behave like a helpful assistant, instead of just continuing random text.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "STAGE TWO · FINE-TUNING",
+    "items": [
+     {
+      "texto": "Example conversations",
+      "sync": "example"
+     },
+     {
+      "texto": "Humans rate the answers",
+      "sync": "rate"
+     },
+     {
+      "texto": "It learns to act like an assistant",
+      "sync": "assistant"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And then, training stops. The numbers are frozen. That frozen file is what you talk to.",
+   "visual": {
+    "tipo": "archivo",
+    "nombre": "weights · final",
+    "tamano": 810,
+    "unidad": "GB",
+    "etiqueta": "frozen. done.",
+    "sync": "frozen",
+    "candado": true,
+    "candado_sync": "frozen",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Chapter five. Why AI runs on graphics cards.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "Why graphics cards",
+    "sub": "the hardware"
+   }
+  },
+  {
+   "texto": "Almost all of that work is one tiny operation, repeated an absurd number of times. Multiply two numbers, add the result to a running total.",
+   "visual": {
+    "tipo": "formula",
+    "tex": "a_1 w_1 + a_2 w_2 + a_3 w_3 + \\cdots",
+    "size": 72,
+    "sync": "multiply",
+    "sub": "multiply · add · repeat",
+    "sub_sync": "running"
+   }
+  },
+  {
+   "texto": "A regular processor has a handful of powerful cores. It's brilliant at doing different things, one after another.",
+   "visual": {
+    "tipo": "gpu",
+    "fase": "cpu",
+    "cpu_label": "a handful of powerful cores"
+   }
+  },
+  {
+   "texto": "A graphics card has thousands of simpler cores. An H one hundred has almost seventeen thousand. They all do the same simple math at the same time, and that's exactly what a neural network needs.",
+   "visual": {
+    "tipo": "gpu",
+    "fase": "gpu",
+    "sync": "graphics",
+    "fuego_sync": "same",
+    "gpu_label": "H100: ~17,000 cores, all at once"
+   }
+  },
+  {
+   "texto": "Memory matters just as much. One H one hundred holds eighty gigabytes. The full Llama model, at sixteen bits, doesn't fit even in ten of them.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Memory of ONE H100",
+      "value": 80,
+      "value_text": "80 GB",
+      "color": "ice",
+      "sync": "eighty"
+     },
+     {
+      "label": "Llama 3.1 405B at 16-bit",
+      "value": 810,
+      "value_text": "810 GB",
+      "color": "warm",
+      "sync": "full"
+     }
+    ],
+    "note": "more than 10 GPUs just to hold it",
+    "note_sync": "ten"
+   }
+  },
+  {
+   "texto": "Chapter six. Does it remember you?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 6,
+    "titulo": "Does it remember you?",
+    "sub": "the context window"
+   }
+  },
+  {
+   "texto": "Here's something most people get wrong. When you chat with an AI, it isn't learning from you. The weights don't change. Not a single number.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "while you chat, the weights are",
+    "pre_sync": "chat",
+    "word": "FROZEN",
+    "sync": "change",
+    "color": "ice",
+    "sub": "not learning from you",
+    "sub_sync": "learning"
+   }
+  },
+  {
+   "texto": "So how does it remember what you said five messages ago? Every time you send something, the entire conversation is fed back in, from the very top.",
+   "visual": {
+    "tipo": "chat",
+    "feed_sync": "entire",
+    "etiqueta": "the whole chat, every single time",
+    "etiqueta_sync": "top",
+    "mensajes": [
+     {
+      "quien": "user",
+      "texto": "What's a black hole?",
+      "sync": "how"
+     },
+     {
+      "quien": "ai",
+      "texto": "A region where gravity traps light...",
+      "sync": "remember"
+     },
+     {
+      "quien": "user",
+      "texto": "How big can they get?",
+      "sync": "five"
+     },
+     {
+      "quien": "ai",
+      "texto": "Billions of times the Sun's mass...",
+      "sync": "ago"
+     },
+     {
+      "quien": "user",
+      "texto": "Wait, what did I ask first?",
+      "sync": "every"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That text is called the context window. It's the model's short term memory. Llama three point one can hold about a hundred and twenty eight thousand tokens at once. When a chat gets longer than that, the oldest part simply falls out. It isn't forgotten. It was never stored.",
+   "visual": {
+    "tipo": "ventana",
+    "sync": "context",
+    "mover_sync": "longer",
+    "nota": "never stored",
+    "nota_sync": "never"
+   }
+  },
+  {
+   "texto": "Features that look like long term memory usually work the same way. Saved notes get pasted into the context before your message. The model itself still learns nothing.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "\"MEMORY\" FEATURES",
+    "items": [
+     {
+      "texto": "Notes are saved outside the model",
+      "sync": "saved"
+     },
+     {
+      "texto": "Pasted into the context",
+      "sync": "pasted"
+     },
+     {
+      "texto": "The weights still never change",
+      "sync": "itself"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Chapter seven. Why it makes things up.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 7,
+    "titulo": "Why it makes things up",
+    "sub": "hallucinations"
+   }
+  },
+  {
+   "texto": "Remember the one job: predict a likely next token. Likely. Not true.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "WHAT IT WAS TRAINED FOR",
+     "value": "LIKELY",
+     "color": "blue",
+     "sync": "likely"
+    },
+    "right": {
+     "label": "WHAT YOU WANT",
+     "value": "TRUE",
+     "color": "warm",
+     "sync": "true"
+    },
+    "vs_text": "≠",
+    "vs_sync": "not"
+   }
+  },
+  {
+   "texto": "Most of the time, likely and true are the same thing, because most of the training text was right.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "LIKELY ≈ TRUE",
+    "sub": "most of the time",
+    "sync": "most",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "But ask about something rare, like an obscure paper or a tiny town, and the scores come out almost flat. The model still has to pick something, and it writes it in the same fluent, confident tone. That's a hallucination.",
+   "visual": {
+    "tipo": "prediccion",
+    "contexto": "That paper was written by",
+    "sync": "scores",
+    "elegido": 2,
+    "elegido_sync": "pick",
+    "opciones": [
+     [
+      "Smith",
+      0.09
+     ],
+     [
+      "Garcia",
+      0.08
+     ],
+     [
+      "Chen",
+      0.08
+     ],
+     [
+      "Kumar",
+      0.07
+     ],
+     [
+      "Ivanova",
+      0.07
+     ]
+    ]
+   }
+  },
+  {
+   "texto": "There's no fact checker hidden inside the file. Newer systems reduce the problem by letting the model search the web or check sources, but underneath, it's still a prediction machine.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "NO FACT-CHECKER",
+    "pre": "inside the file:",
+    "sync": "checker",
+    "sub": "underneath: still predicting",
+    "sub_sync": "underneath",
+    "color": "warm",
+    "size": 180
+   }
+  },
+  {
+   "texto": "So, what is AI, really?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 8,
+    "titulo": "So what is it?",
+    "sub": "putting it together"
+   }
+  },
+  {
+   "texto": "It's a file of numbers, shaped by trillions of guesses. A small program loads it onto powerful chips. Your words become tokens, the tokens flow through more than a hundred layers, and out comes a guess for the next piece. Repeated fast enough to feel like a conversation.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "YOUR\nWORDS",
+      "sync": "words"
+     },
+     {
+      "texto": "TOKENS",
+      "sync": "tokens"
+     },
+     {
+      "texto": "126\nLAYERS",
+      "sync": "flow"
+     },
+     {
+      "texto": "SCORES",
+      "sync": "comes"
+     },
+     {
+      "texto": "NEXT\nTOKEN",
+      "sync": "piece"
+     }
+    ],
+    "bucle_sync": "repeated",
+    "bucle": "repeat, fast"
+   }
+  },
+  {
+   "texto": "Not an operating system. Not a brain in a box. Something genuinely new: a compressed echo of almost everything people have written.",
+   "visual": {
+    "tipo": "titulo",
+    "pre": "not an OS · not a brain in a box",
+    "pre_sync": "not",
+    "lines": [
+     "A COMPRESSED ECHO",
+     "OF HUMAN WRITING"
+    ],
+    "sync": "compressed",
+    "size": 130
+   }
+  },
+  {
+   "texto": "Next week, we travel back more than two thousand years, to the numbers that still help protect your bank account: the primes. Subscribe, so you don't miss it.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NEXT WEEK",
+     "THE PRIMES"
+    ],
+    "colors": [
+     "grey",
+     "blue"
+    ],
+    "syncs": [
+     "next",
+     "primes"
+    ],
+    "button": "SUBSCRIBE",
+    "button_sync": "subscribe"
+   }
+  }
+ ]
+}

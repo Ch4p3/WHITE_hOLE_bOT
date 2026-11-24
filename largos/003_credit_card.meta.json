@@ -1,6 +1,6 @@
 {
  "titulo": "What Really Happens When You Tap Your Credit Card",
- "duracion": 447.0,
+ "duracion": 447.4,
  "capitulos": [
   {
    "t": "0:00",
@@ -19,7 +19,7 @@
    "titulo": "Tap and phone"
   },
   {
-   "t": "2:43",
+   "t": "2:44",
    "titulo": "The journey"
   },
   {
@@ -27,17 +27,17 @@
    "titulo": "Buying online"
   },
   {
-   "t": "4:41",
+   "t": "4:42",
    "titulo": "Who pays for all this?"
   },
   {
-   "t": "5:22",
+   "t": "5:23",
    "titulo": "The real business"
   },
   {
-   "t": "6:30",
+   "t": "6:31",
    "titulo": "When it goes wrong"
   }
  ],
- "descripcion": "What happens in the two seconds after you tap: what your card number encodes, how the chip makes a one-time cryptogram, why phone payments use tokens, the journey through acquirer, network and issuer, who pays the hidden interchange fee, and the math of minimum payments. Educational content, not financial advice.\n\nChapters:\n0:00 Two seconds\n0:25 The number\n1:24 The chip\n2:04 Tap and phone\n2:43 The journey\n3:55 Buying online\n4:41 Who pays for all this?\n5:22 The real business\n6:30 When it goes wrong\n\nSources:\n- Visa, inside VisaNet (up to 83,000 messages/second; AI fraud detection since 1993; $40B+ fraud prevented per year; Ashburn data center): https://corporate.visa.com/en/sites/visa-perspectives/security-trust/inside-visa-global-commerce-engine.html\n- Payment card numbers and Luhn check digit (ISO/IEC 7812): https://en.wikipedia.org/wiki/Payment_card_number\n- Visa, 8-digit BIN (April 2022): https://usa.visa.com/dam/VCOM/global/partner-with-us/documents/visa.com-numerics-faq.pdf\n- Apple Platform Security, card provisioning and Device Account Number: https://support.apple.com/guide/security/sec0f005981a/web\n- EU Interchange Fee Regulation caps (0.2% debit, 0.3% credit): https://www.eubusiness.com/focus/card-fees\n- Adyen, interchange fees explained (~2% average in the US): https://www.adyen.com/en_AU/knowledge-hub/interchange-fees-explained\n- Federal Reserve G.19, credit card interest rates (Aug 2026: 22.36% on accounts assessed interest): https://www.federalreserve.gov/releases/g19/20261106/g19.pdf\n- Minimum-payment example computed by White Hole: $3,000 at 22.36% APR, payment = interest + 1% of balance (min $25) vs fixed $150/month.\n- PCI SSC FAQ: card verification codes may not be stored after authorization: https://www.pcisecuritystandards.org/faqs/1574/\n- Visa, 3-D Secure: https://corporate.visa.com/en/solutions/visa-protect/insights/3d-secure.html\n- Cornell LII, Fair Credit Billing Act ($50 liability, 60 days): https://www.law.cornell.edu/wex/fair_credit_billing_act_(fcba)\n\n#creditcard #money #fintech #personalfinance #WhiteHole"
+ "descripcion": "What happens in the two seconds after you tap: what your card number encodes, how the chip makes a one-time cryptogram, why phone payments use tokens, the journey through acquirer, network and issuer, who pays the hidden interchange fee, and the math of minimum payments. Educational content, not financial advice.\n\nChapters:\n0:00 Two seconds\n0:25 The number\n1:24 The chip\n2:04 Tap and phone\n2:44 The journey\n3:55 Buying online\n4:42 Who pays for all this?\n5:23 The real business\n6:31 When it goes wrong\n\nSources:\n- Visa, inside VisaNet (up to 83,000 messages/second; AI fraud detection since 1993; $40B+ fraud prevented per year; Ashburn data center): https://corporate.visa.com/en/sites/visa-perspectives/security-trust/inside-visa-global-commerce-engine.html\n- Payment card numbers and Luhn check digit (ISO/IEC 7812): https://en.wikipedia.org/wiki/Payment_card_number\n- Visa, 8-digit BIN (April 2022): https://usa.visa.com/dam/VCOM/global/partner-with-us/documents/visa.com-numerics-faq.pdf\n- Apple Platform Security, card provisioning and Device Account Number: https://support.apple.com/guide/security/sec0f005981a/web\n- EU Interchange Fee Regulation caps (0.2% debit, 0.3% credit): https://www.eubusiness.com/focus/card-fees\n- Adyen, interchange fees explained (~2% average in the US): https://www.adyen.com/en_AU/knowledge-hub/interchange-fees-explained\n- Federal Reserve G.19, credit card interest rates (Aug 2026: 22.36% on accounts assessed interest): https://www.federalreserve.gov/releases/g19/20261106/g19.pdf\n- Minimum-payment example computed by White Hole: $3,000 at 22.36% APR, payment = interest + 1% of balance (min $25) vs fixed $150/month.\n- PCI SSC FAQ: card verification codes may not be stored after authorization: https://www.pcisecuritystandards.org/faqs/1574/\n- Visa, 3-D Secure: https://corporate.visa.com/en/solutions/visa-protect/insights/3d-secure.html\n- Cornell LII, Fair Credit Billing Act ($50 liability, 60 days): https://www.law.cornell.edu/wex/fair_credit_billing_act_(fcba)\n\n#creditcard #money #fintech #personalfinance #WhiteHole"
 }

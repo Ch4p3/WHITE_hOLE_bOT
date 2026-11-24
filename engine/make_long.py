@@ -16,7 +16,24 @@ from PIL import Image, ImageDraw, ImageFont
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_short as ms
 from make_short import (font, col, clamp, ease_out, back, prog, ease_inout, mix, fmt_num, text, fit,
-                        word_times, at, BG, BLUE, ICE, WHITE, GREY, WARM, PANEL, LANG)
+                        word_times, BG, BLUE, ICE, WHITE, GREY, WARM, PANEL, LANG)
+from make_short import at as _at_raw
+
+def at(sc, needle, default=0.0):
+    """Como make_short.at, pero adelanta todos los elementos de la escena si el primero
+    aparecería tarde (evita pantallas vacías mientras habla la voz)."""
+    v = _at_raw(sc, needle, default)
+    if isinstance(needle, str):
+        v = max(0.15, v - sc.get("shift", 0.0))
+    return v
+
+def _syncs(obj):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k.endswith("sync") and isinstance(v, str): yield v
+            else: yield from _syncs(v)
+    elif isinstance(obj, list):
+        for v in obj: yield from _syncs(v)
 
 W, H, FPS = 1920, 1080, 30
 GREEN = (90, 210, 150)
@@ -179,7 +196,7 @@ def v_versus(img, d, t, sc, p):
         text(d, (x + cw / 2, cy + 10), c["value"], size * (0.6 + 0.4 * k), cc)
         if c.get("sub"):
             text(d, (x + cw / 2, cy + 135), c["sub"], fit(d, c["sub"], 42, "semi", cw - 60), WHITE, "semi")
-    kb = back(prog(t, at(sc, p.get("vs_sync"), 0.4), 0.4))
+    kb = back(prog(t, at(sc, p.get("vs_sync") or L.get("sync"), 0.4), 0.4))
     if kb > 0 and p.get("vs", True):
         r = 52 * kb
         d.ellipse([W / 2 - r, 500 - r, W / 2 + r, 500 + r], fill=WHITE)
@@ -898,6 +915,10 @@ def plan(cfg, durs):
     for sc, dur in zip(cfg["escenas"], durs):
         sc["start"] = t0; sc["dur"] = dur + gap
         sc["words"], sc["times"] = word_times(sc["texto"], dur)
+        sc["shift"] = 0.0
+        ts_ = [_at_raw(sc, n, 0.0) for n in _syncs(sc["visual"])]
+        if ts_ and min(ts_) > 1.0:
+            sc["shift"] = min(ts_) - 0.6
         v = sc["visual"]
         if v["tipo"] == "capitulo":
             chapter = f"{int(v['num']):02d} · {v['titulo'].upper()}"

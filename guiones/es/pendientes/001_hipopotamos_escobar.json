@@ -184,7 +184,7 @@
         "pre": "La única manada salvaje",
         "word": "FUERA DE ÁFRICA",
         "size": 170,
-        "sync": "África",
+        "sync": "única",
         "color": "warm"
       }
     },
@@ -196,7 +196,7 @@
         "prefix": "+",
         "suffix": " kg",
         "label": "puede pesar un hipopótamo",
-        "sync": "tonelada",
+        "sync": "hipopótamo",
         "note": "ya hubo ataques a personas en Doradal",
         "note_sync": "Doradal",
         "note_color": "warm"
@@ -210,7 +210,7 @@
           "label": "MANATÍ",
           "value": "en riesgo",
           "color": "blue",
-          "sync": "manatí"
+          "sync": "quitan"
         },
         "right": {
           "label": "PESCADORES",
@@ -229,7 +229,7 @@
           "value": "4",
           "sub": "los de Escobar",
           "color": "warm",
-          "sync": "cuatro"
+          "sync": "todos"
         },
         "right": {
           "label": "HOY",
@@ -252,7 +252,7 @@
         "pre": "Si nadie hace nada, en 2050…",
         "word": "MILES",
         "size": 300,
-        "sync": "miles",
+        "sync": "cincuenta",
         "color": "warm"
       }
     },

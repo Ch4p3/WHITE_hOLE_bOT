@@ -1,0 +1,34 @@
+name: Buscar fotos (Wikimedia)
+
+on:
+  workflow_dispatch:
+    inputs:
+      consultas:
+        description: "Consultas separadas por ;"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pillow requests
+      - name: Buscar
+        run: |
+          IFS=';' read -ra Q <<< "${{ inputs.consultas }}"
+          python scripts/fotos.py "${Q[@]}"
+      - name: Guardar en la rama previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          cp -r out/fotos /tmp/fotos
+          git fetch -q origin previews && git checkout -q previews
+          rm -rf fotos && cp -r /tmp/fotos fotos
+          git add fotos && git commit -qm "Candidatas de fotos" && git push -q origin previews

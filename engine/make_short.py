@@ -462,9 +462,66 @@ def v_emoji(img, d, t, sc, p):
     if p.get("sub"):
         slide(d, (W // 2, y + 500), p["sub"], 54, WHITE, t, at(sc, p.get("sub_sync"), st + 0.9), weight="xbold")
 
+
+# ---------------------------------------------------------------- fotos reales (Wikimedia Commons)
+_IMG, CREDITOS = {}, []
+_SHADE = None
+def _shade():
+    global _SHADE
+    if _SHADE is None:
+        yy = np.arange(H, dtype=np.float32)[:, None]
+        a = 0.18 + 0.55 * np.clip((yy - 1050) / 600, 0, 1) + 0.45 * np.clip((380 - yy) / 380, 0, 1)
+        _SHADE = Image.fromarray((np.repeat(np.clip(a, 0, 0.92), W, axis=1) * 255).astype(np.uint8))
+    return _SHADE
+
+def foto_base(src):
+    if src not in _IMG:
+        sys.path.insert(0, HERE)
+        import imagenes
+        ruta, info = imagenes.obtener(src)
+        im = Image.open(ruta).convert("RGB")
+        r = max(W * 1.3 / im.width, H * 1.3 / im.height)
+        im = im.resize((int(im.width * r) + 2, int(im.height * r) + 2), Image.LANCZOS)
+        _IMG[src] = (im, info)
+        if info not in CREDITOS: CREDITOS.append(info)
+    return _IMG[src]
+
+def v_foto(img, d, t, sc, p):
+    """Foto a pantalla completa con movimiento lento (Ken Burns), chip de texto y crédito."""
+    im, info = foto_base(p["src"])
+    k = ease_inout(clamp(t / max(1.0, sc["dur"])))
+    z0, z1 = p.get("zoom", [1.0, 1.15])
+    z = clamp(z0 + (z1 - z0) * k, 1.0, 1.3)
+    f0 = p.get("foco", [0.5, 0.5]); f1 = p.get("foco_fin", f0)
+    fx, fy = f0[0] + (f1[0] - f0[0]) * k, f0[1] + (f1[1] - f0[1]) * k
+    cw, ch = W * 1.3 / z, H * 1.3 / z
+    cx = clamp(fx * im.width, cw / 2, im.width - cw / 2); cy = clamp(fy * im.height, ch / 2, im.height - ch / 2)
+    frame = im.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)
+    frame.paste((4, 6, 14), mask=_shade())
+    kin = ease_out(prog(t, 0.0, 0.35))
+    if kin < 1: frame = Image.blend(img, frame, kin)
+    img.paste(frame)
+    if p.get("chip"):
+        kk = ease_out(prog(t, at(sc, p.get("chip_sync"), 0.3), 0.4))
+        if kk > 0:
+            f = font(42, "black"); tw = d.textlength(p["chip"], font=f)
+            x0, y0 = 70 - 40 * (1 - kk), p.get("chip_y", 1210)
+            d.rounded_rectangle([x0, y0, x0 + tw + 48, y0 + 72], 36, fill=col(p.get("chip_color"), WARM))
+            d.text((x0 + 24, y0 + 36), p["chip"], font=f, fill=BG, anchor="lm")
+    if p.get("titulo"):
+        st = at(sc, p.get("titulo_sync"), 0.2)
+        kk = ease_out(prog(t, st, 0.45))
+        if kk > 0:
+            size = fit(d, p["titulo"], p.get("tsize", 110), "black", 960)
+            d.text((W // 2, p.get("ty", 1060) + 30 * (1 - kk)), p["titulo"], font=font(size, "black"),
+                   fill=col(p.get("color"), WHITE), anchor="mm", stroke_width=6, stroke_fill=(0, 0, 0))
+    sys.path.insert(0, HERE)
+    import imagenes
+    d.text((W // 2, 1868), imagenes.credito_corto(info), font=font(24, "semi"), fill=(170, 178, 196), anchor="mm")
+
 VISUALS = {"title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
            "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
-           "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji}
+           "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto}
 
 # ---------------------------------------------------------------- subtítulos
 def captions(d, t, sc):
@@ -493,6 +550,21 @@ def captions(d, t, sc):
         x += wd
 
 # ---------------------------------------------------------------- audio
+def synth_kokoro(scenes, kcfg, outdir):
+    from kokoro_onnx import Kokoro
+    kd = os.environ.get("KOKORO_DIR", os.path.join(ROOT, "voices", "kokoro"))
+    k = Kokoro(os.path.join(kd, "kokoro-v1.0.int8.onnx"), os.path.join(kd, "voices-v1.0.bin"))
+    sr = 24000
+    for i, sc in enumerate(scenes):
+        samples, sr = k.create(sc["texto"], voice=kcfg.get("voz", "am_michael"),
+                               speed=float(kcfg.get("velocidad", 1.0)), lang=kcfg.get("lang", "en-us"))
+        pcm = (np.clip(samples, -1, 1) * 32767).astype(np.int16)
+        pth = os.path.join(outdir, f"v{i:02d}.wav")
+        with wave.open(pth, "wb") as wf:
+            wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(sr); wf.writeframes(pcm.tobytes())
+        sc["audio_dur"] = len(pcm) / sr; sc["wav"] = pth
+    return sr
+
 def synth_voice(scenes, voice_path, speed, outdir):
     from piper import PiperVoice, SynthesisConfig
     voice = PiperVoice.load(voice_path)
@@ -542,7 +614,10 @@ def render(script_path, out_path, voice_path, channel="@whitehole"):
     os.makedirs(work, exist_ok=True)
     gap = 0.22
     print("1/3 Voz...")
-    sr = synth_voice(scenes, voice_path, cfg.get("velocidad", 0.9), work)
+    if cfg.get("kokoro") and os.environ.get("NO_KOKORO") != "1":
+        sr = synth_kokoro(scenes, cfg["kokoro"], work)
+    else:
+        sr = synth_voice(scenes, voice_path, cfg.get("velocidad", 0.9), work)
     t0 = 0.0
     for sc in scenes:
         sc["start"] = t0; sc["dur"] = sc["audio_dur"] + gap
@@ -572,6 +647,8 @@ def render(script_path, out_path, voice_path, channel="@whitehole"):
         text(d, (70, 250), channel, 34, GREY, "bold", "lm")
         ff.stdin.write(img.tobytes())
     ff.stdin.close(); ff.wait()
+    if CREDITOS:
+        json.dump(CREDITOS, open(out_path + ".creditos.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("3/3 Listo ->", out_path)
     return total
 

@@ -1,0 +1,99 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "A 2,300-year-old proof you can follow in 40 seconds 🧠",
+ "descripcion": "Euclid proved the primes never run out with one beautiful trick. Full history of primes, from Euclid to AI, in the linked video.",
+ "hashtags": "#math #primes #euclid #proof #shorts",
+ "fuentes": [
+  "https://t5k.org/notes/proofs/infinite/Euclid.html"
+ ],
+ "relacionado": "largo:002",
+ "escenas": [
+  {
+   "texto": "Two thousand three hundred years ago, Euclid proved that prime numbers never run out. Here's the whole proof.",
+   "visual": {
+    "tipo": "title",
+    "pre": "Euclid, ~300 BC",
+    "lines": [
+     "THE PRIMES",
+     "NEVER END"
+    ],
+    "sync": "proved"
+   }
+  },
+  {
+   "texto": "Pretend you have a complete list of every prime. Multiply them all, and add one.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "2 × 3 × 5 × 7",
+      "sync": "multiply"
+     },
+     {
+      "text": "+ 1",
+      "sync": "add",
+      "color": "blue"
+     }
+    ],
+    "result": {
+     "value": 211,
+     "sync": "one",
+     "label": "left over: 1"
+    }
+   }
+  },
+  {
+   "texto": "Divide that by any prime on your list, and there's always a remainder of one. So it's either a new prime, or built from primes you missed.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "divide by any prime on the list",
+    "word": "REMAINDER 1",
+    "sub": "→ a prime you missed",
+    "sync": "remainder",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Try the first six primes and you get thirty thousand and thirty one. That's fifty nine times five hundred nine. Two primes that weren't on the list.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "2·3·5·7·11·13 + 1",
+      "sync": "try"
+     },
+     {
+      "text": "= 30,031 = 59 × 509",
+      "sync": "fifty",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No list can ever be complete. Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

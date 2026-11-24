@@ -1,0 +1,97 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Your card rewards are partly paid by people using cash 💸",
+ "descripcion": "Stores pay interchange fees on card sales (around 2% in the US for credit, capped at 0.3% in the EU) and build them into prices. Full breakdown in the linked video.",
+ "hashtags": "#creditcard #money #economics #rewards #shorts",
+ "fuentes": [
+  "https://www.adyen.com/en_AU/knowledge-hub/interchange-fees-explained",
+  "https://www.eubusiness.com/focus/card-fees"
+ ],
+ "relacionado": "largo:003",
+ "escenas": [
+  {
+   "texto": "Your credit card cash back is partly paid by people who pay with cash.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "YOUR CASH BACK",
+     "IS PAID BY",
+     "EVERYONE"
+    ],
+    "colors": [
+     "white",
+     "white",
+     "blue"
+    ],
+    "sync": "cash"
+   }
+  },
+  {
+   "texto": "Every time you swipe, the store pays your bank a fee. In the US, it averages around two percent on credit cards.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "the store pays your bank",
+    "to": 2,
+    "suffix": "%",
+    "label": "average US credit interchange",
+    "sync": "two"
+   }
+  },
+  {
+   "texto": "Stores build that cost into their prices. Prices are the same whether you pay with cash or card.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "SAME PRICE",
+    "sub": "cash or card",
+    "sync": "same",
+    "size": 210
+   }
+  },
+  {
+   "texto": "In Europe, that fee is capped at zero point three percent, and the rewards are much smaller.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "US credit (no cap)",
+      "value": 2,
+      "value_text": "~2%",
+      "color": "warm",
+      "sync": "europe"
+     },
+     {
+      "label": "EU credit (capped)",
+      "value": 0.3,
+      "value_text": "0.3%",
+      "sync": "capped"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

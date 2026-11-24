@@ -1,0 +1,88 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "An AI helped crack a 35-year-old code challenge 🔐",
+ "descripcion": "In September 2026, RSA-260 and then RSA-896 were factored with help from AI agents. Your bank is still safe, here's why. Full story in the linked video.",
+ "hashtags": "#ai #cryptography #math #primes #shorts",
+ "fuentes": [
+  "https://cognition.com/blog/factoring-rsa-260",
+  "https://postquantum.com/security-pqc/rsa-896-factored-claude-gpus/"
+ ],
+ "relacionado": "largo:002",
+ "escenas": [
+  {
+   "texto": "In September, a 260 digit number that had resisted everyone since nineteen ninety one was finally split into two primes.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "RSA-260 · set in 1991",
+    "to": 260,
+    "suffix": " digits",
+    "label": "split into two primes",
+    "sync": "digit"
+   }
+  },
+  {
+   "texto": "The software that did it was built by an AI agent called Devin, running on spare GPUs, for about four hundred thousand dollars.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "BUILT BY",
+     "value": "an AI",
+     "color": "blue",
+     "sync": "agent"
+    },
+    "right": {
+     "label": "COST",
+     "value": "~$400K",
+     "color": "warm",
+     "sync": "four"
+    }
+   }
+  },
+  {
+   "texto": "Sixteen days later, a researcher at Anthropic used Claude on up to two thousand GPUs and broke the record again.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "16 days later · RSA-896",
+    "to": 2048,
+    "label": "GPUs, on idle capacity",
+    "sync": "two"
+   }
+  },
+  {
+   "texto": "So is your bank in danger? No. A real twenty forty eight bit key is about ninety one billion times harder.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "RSA-2048 is",
+    "word": "91 BILLION×",
+    "sub": "harder to crack",
+    "sync": "ninety",
+    "size": 170
+   }
+  },
+  {
+   "texto": "The real threat is quantum computers, and RSA's retirement date is already set. Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

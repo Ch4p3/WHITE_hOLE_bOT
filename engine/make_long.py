@@ -155,9 +155,13 @@ def v_ecuacion(img, d, t, sc, p):
             d.rounded_rectangle([W / 2 - 520 * kl, y - 50, W / 2 + 520 * kl, y - 40], 5, fill=WHITE)
         kc = ease_out(prog(t, st, 1.1))
         if kc > 0:
-            v = float(r.get("from", 0)) + (float(r["value"]) - float(r.get("from", 0))) * kc
-            s = f"{r.get('prefix', '')}{fmt_num(v, int(r.get('decimals', 0)))}{r.get('suffix', '')}"
-            text(d, (W / 2, y + 75), s, fit(d, s, 190, "black", 1600), col(r.get("color"), BLUE))
+            if r.get("texto"):
+                s = r["texto"]; kb = back(prog(t, st, 0.45))
+                text(d, (W / 2, y + 75), s, fit(d, s, 190, "black", 1600) * (0.5 + 0.5 * kb), col(r.get("color"), BLUE))
+            else:
+                v = float(r.get("from", 0)) + (float(r["value"]) - float(r.get("from", 0))) * kc
+                s = f"{r.get('prefix', '')}{fmt_num(v, int(r.get('decimals', 0)))}{r.get('suffix', '')}"
+                text(d, (W / 2, y + 75), s, fit(d, s, 190, "black", 1600), col(r.get("color"), BLUE))
             if r.get("label"):
                 text(d, (W / 2, y + 200), r["label"], 54, GREY, "xbold")
 
@@ -668,12 +672,166 @@ def v_emoji(img, d, t, sc, p):
     if p.get("texto"):
         slide(d, (W / 2, 720), p["texto"], 80, col(p.get("color"), WHITE), t, at(sc, p.get("texto_sync"), st + 0.3))
 
+def _isprime(n):
+    if n < 2: return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0: return False
+        i += 1
+    return True
+
+def v_criba(img, d, t, sc, p):
+    """Criba de Eratóstenes: cuadrícula 1..N, tacha múltiplos paso a paso."""
+    N = p.get("n", 100); cols = 10
+    rows = (N + cols - 1) // cols
+    cs = min(78, 700 / rows)
+    x0, y0 = p.get("x", 250), 520 - rows * cs / 2
+    pasos = p.get("pasos", [])
+    k0 = ease_out(prog(t, 0, 0.6))
+    starts = [(q["p"], at(sc, q.get("sync"), 0.8 + 1.2 * i)) for i, q in enumerate(pasos)]
+    fin = at(sc, p.get("final_sync"), 1e9)
+    activo = None
+    for q, st in starts:
+        if t >= st: activo = q
+    f = font(int(cs * 0.42), "xbold")
+    for n in range(1, N + 1):
+        r, c = divmod(n - 1, cols)
+        cx, cy = x0 + c * cs + cs / 2, y0 + r * cs + cs / 2
+        crossed = 0.0; who = None
+        for q, st in starts:
+            if n != q and n % q == 0 and n > q:
+                kk = ease_out(prog(t, st + 0.35 + (n / q) * 0.035, 0.25))
+                if kk > crossed: crossed, who = kk, q
+        is_p = _isprime(n)
+        lit_prime = is_p and (t >= fin or any(n == q and t >= st for q, st in starts))
+        if n == 1:
+            fill, fg = mix(BG, (24, 28, 44), k0), (70, 76, 96)
+        elif lit_prime:
+            fill, fg = mix(BG, BLUE, k0), BG
+        elif crossed > 0:
+            fill, fg = mix(mix(BG, PANEL, k0), (30, 22, 30), crossed), mix(WHITE, (90, 80, 96), crossed)
+        else:
+            fill, fg = mix(BG, PANEL, k0), mix(BG, WHITE, k0)
+        d.rounded_rectangle([cx - cs / 2 + 4, cy - cs / 2 + 4, cx + cs / 2 - 4, cy + cs / 2 - 4], 10, fill=fill)
+        d.text((cx, cy), str(n), font=f, fill=fg, anchor="mm")
+        if crossed > 0 and not lit_prime:
+            e = crossed
+            d.line([cx - cs * 0.3, cy + cs * 0.3, cx - cs * 0.3 + cs * 0.6 * e, cy + cs * 0.3 - cs * 0.6 * e], fill=WARM, width=3)
+    # panel derecho
+    px = x0 + cols * cs + 120
+    if activo is not None and t < fin:
+        text(d, (px, 380), "CROSS OUT", 46, GREY, "xbold", "lm")
+        text(d, (px, 470), f"multiples of {activo}", 76, WARM, "black", "lm")
+    if t >= fin:
+        kf = ease_out(prog(t, fin, 0.5))
+        cnt = sum(1 for n in range(2, N + 1) if _isprime(n))
+        text(d, (px, 400), f"{cnt} primes", 110 * (0.6 + 0.4 * kf), BLUE, "black", "lm")
+        text(d, (px, 500), f"between 1 and {N}", 48, mix(BG, WHITE, kf), "xbold", "lm")
+    if p.get("titulo"):
+        text(d, (px, 280), p["titulo"], 44, mix(BG, GREY, k0), "xbold", "lm")
+
+def v_linea(img, d, t, sc, p):
+    """Línea de tiempo horizontal con hitos que aparecen al decirlos."""
+    ev = p["eventos"]; n = len(ev)
+    x0, x1, y = 170, W - 170, 520
+    k0 = ease_out(prog(t, 0, 0.6))
+    d.line([x0, y, x0 + (x1 - x0) * k0, y], fill=DIM, width=6)
+    xs = [x0 + (x1 - x0) * (i + 0.5) / n for i in range(n)]
+    starts = [at(sc, e.get("sync"), 0.4 + 0.6 * i) for i, e in enumerate(ev)]
+    act = max([i for i, st in enumerate(starts) if t >= st] or [-1])
+    if act >= 0:
+        d.line([x0, y, xs[act], y], fill=BLUE, width=6)
+    for i, (e, x, st) in enumerate(zip(ev, xs, starts)):
+        k = back(prog(t, st, 0.45))
+        if k <= 0: continue
+        on = i == act
+        r = (18 if not on else 26) * k
+        d.ellipse([x - r, y - r, x + r, y + r], fill=BLUE if on else ICE, outline=BG, width=4)
+        up = i % 2 == 0
+        yy = y - 70 if up else y + 70
+        c = WHITE if on else (170, 180, 200)
+        text(d, (x, yy - (36 if up else -36) * 0), e["fecha"], 40 * min(1, k), BLUE if on else GREY, "black")
+        lines = e["texto"].split("\n")
+        L = len(lines)
+        for j, ln in enumerate(lines):
+            off = (L - j) * 50 if up else (j + 1) * 50
+            text(d, (x, yy - off if up else yy + off), ln, fit(d, ln, 40, "xbold", (x1 - x0) / n + 40) * min(1, k),
+                 c, "xbold" if j == 0 else "semi")
+    if p.get("titulo"):
+        slide(d, (W / 2, 200), p["titulo"], 56, GREY, t, 0, weight="black")
+
+def v_tarjeta(img, d, t, sc, p):
+    """Tarjeta de pago dibujada; resalta partes del número (BIN, cuenta, dígito de control) o el chip."""
+    k = back(prog(t, 0, 0.55))
+    cw, ch = 760 * (0.7 + 0.3 * k), 480 * (0.7 + 0.3 * k)
+    cx, cy = p.get("x", 640), 470
+    x0, y0 = cx - cw / 2, cy - ch / 2
+    card = Image.new("RGBA", (int(cw), int(ch)), (0, 0, 0, 0))
+    grad = Image.new("RGB", (int(cw), int(ch)))
+    gd = ImageDraw.Draw(grad)
+    for i in range(int(cw)):
+        gd.line([i, 0, i, ch], fill=mix((28, 46, 92), (12, 18, 40), i / cw))
+    m = Image.new("L", card.size, 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, cw - 1, ch - 1], int(34 * k), fill=255)
+    img.paste(grad, (int(x0), int(y0)), m)
+    d.rounded_rectangle([x0, y0, x0 + cw, y0 + ch], int(34 * k), outline=(70, 110, 190), width=3)
+    sk = cw / 760
+    # chip
+    chx, chy = x0 + 70 * sk, y0 + 150 * sk
+    hl_chip = t >= at(sc, p.get("chip_sync"), 1e9)
+    d.rounded_rectangle([chx, chy, chx + 110 * sk, chy + 84 * sk], int(14 * sk), fill=(232, 196, 110) if not hl_chip else WARM,
+                        outline=(160, 120, 50), width=2)
+    for j in range(1, 3):
+        d.line([chx + j * 37 * sk, chy, chx + j * 37 * sk, chy + 84 * sk], fill=(160, 120, 50), width=2)
+    d.line([chx, chy + 42 * sk, chx + 110 * sk, chy + 42 * sk], fill=(160, 120, 50), width=2)
+    # contactless
+    for j in range(3):
+        rr = (18 + j * 14) * sk
+        d.arc([x0 + 240 * sk - rr, chy + 42 * sk - rr, x0 + 240 * sk + rr, chy + 42 * sk + rr], -50, 50,
+              fill=BLUE if t >= at(sc, p.get("nfc_sync"), 1e9) else (150, 170, 210), width=max(2, int(5 * sk)))
+    d.text((x0 + cw - 50 * sk, y0 + 60 * sk), "WHITE HOLE", font=font(int(30 * sk), "black"), fill=(200, 210, 230), anchor="rm")
+    num = p.get("numero", "4111111111111111")
+    groups = [num[i:i + 4] for i in range(0, len(num), 4)]
+    fm = mono(int(54 * sk), True)
+    gx = x0 + 70 * sk; gy = y0 + 320 * sk
+    zones = {"bin": range(0, 8), "cuenta": range(8, 15), "check": range(15, 16)}
+    colors = {"bin": BLUE, "cuenta": ICE, "check": WARM}
+    hl = None
+    for z in ["bin", "cuenta", "check"]:
+        if t >= at(sc, p.get(f"{z}_sync"), 1e9): hl = z
+    idx = 0; positions = []
+    x = gx
+    for g in groups:
+        for chh in g:
+            col_ = WHITE
+            for z in ["bin", "cuenta", "check"]:
+                if t >= at(sc, p.get(f"{z}_sync"), 1e9) and idx in zones[z]: col_ = colors[z]
+            d.text((x, gy), chh, font=fm, fill=col_, anchor="lm")
+            positions.append(x); x += d.textlength(chh, font=fm); idx += 1
+        x += 22 * sk
+    d.text((gx, y0 + 410 * sk), p.get("nombre", "D. MEDINA"), font=font(int(30 * sk), "xbold"), fill=(200, 210, 230), anchor="lm")
+    d.text((x0 + cw - 60 * sk, y0 + 410 * sk), "12/30", font=mono(int(30 * sk)), fill=(200, 210, 230), anchor="rm")
+    # panel explicativo a la derecha
+    labels = {"bin": p.get("bin_label", "WHO ISSUED IT"), "cuenta": p.get("cuenta_label", "YOUR ACCOUNT"), "check": p.get("check_label", "CHECK DIGIT")}
+    subs = {"bin": p.get("bin_sub", "first 6–8 digits"), "cuenta": p.get("cuenta_sub", "the middle digits"), "check": p.get("check_sub", "catches typos")}
+    yy = 330
+    for z in ["bin", "cuenta", "check"]:
+        st = at(sc, p.get(f"{z}_sync"), 1e9)
+        kk = ease_out(prog(t, st, 0.45))
+        if kk <= 0: continue
+        d.rounded_rectangle([1150, yy - 8, 1162, yy + 72], 6, fill=mix(BG, colors[z], kk))
+        d.text((1190, yy + 10), labels[z], font=font(46, "black"), fill=mix(BG, colors[z], kk), anchor="lm")
+        d.text((1190, yy + 58), subs[z], font=font(36, "semi"), fill=mix(BG, GREY, kk), anchor="lm")
+        yy += 150
+    if p.get("nota"):
+        pop(d, (W / 2, 880), p["nota"], 48, WHITE, t, at(sc, p.get("nota_sync"), 1.5), "xbold")
+
 VISUALS = {
     "capitulo": v_capitulo, "titulo": v_titulo, "bigword": v_bigword, "counter": v_counter,
     "ecuacion": v_ecuacion, "versus": v_versus, "bars": v_bars, "lista": v_lista,
     "archivo": v_archivo, "numeros": v_numeros, "codigo": v_codigo, "tokens": v_tokens,
     "prediccion": v_prediccion, "bucle": v_bucle, "red": v_red, "gpu": v_gpu, "chat": v_chat,
     "ventana": v_ventana, "formula": v_formula, "flujo": v_flujo, "outro": v_outro, "emoji": v_emoji,
+    "criba": v_criba, "linea": v_linea, "tarjeta": v_tarjeta,
 }
 
 # ---------------------------------------------------------------- HUD y subtítulos

@@ -1,0 +1,94 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "The biggest prime ever found has 41 million digits 🤯",
+ "descripcion": "M136279841 was found in October 2024 by Luke Durant using thousands of cloud GPUs in 17 countries. Full story in the linked video.",
+ "hashtags": "#math #primes #nvidia #gpu #shorts",
+ "fuentes": [
+  "https://www.mersenne.org",
+  "https://www.scientificamerican.com/article/new-prime-number-41-million-digits-long-breaks-math-records"
+ ],
+ "relacionado": "largo:002",
+ "escenas": [
+  {
+   "texto": "The largest prime number ever found has forty one million digits.",
+   "visual": {
+    "tipo": "counter",
+    "to": 41024320,
+    "label": "digits",
+    "pre": "2^136,279,841 − 1",
+    "sync": "forty"
+   }
+  },
+  {
+   "texto": "It was found by Luke Durant, a former Nvidia engineer, using thousands of rented GPUs in seventeen countries.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "a former Nvidia engineer",
+    "to": 17,
+    "label": "countries of rented GPUs",
+    "sync": "seventeen"
+   }
+  },
+  {
+   "texto": "A GPU in Dublin spotted it. Another in Texas proved it was prime. The same kind of chips that train AI.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FLAGGED IN",
+     "value": "Dublin",
+     "color": "ice",
+     "sync": "dublin"
+    },
+    "right": {
+     "label": "CONFIRMED IN",
+     "value": "Texas",
+     "color": "blue",
+     "sync": "texas"
+    }
+   }
+  },
+  {
+   "texto": "He spent close to two million dollars. The prize was three thousand.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "SPENT",
+     "value": "~$2M",
+     "color": "warm",
+     "sync": "spent"
+    },
+    "right": {
+     "label": "PRIZE",
+     "value": "$3,000",
+     "color": "blue",
+     "sync": "prize"
+    }
+   }
+  },
+  {
+   "texto": "Watch the full history of primes, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

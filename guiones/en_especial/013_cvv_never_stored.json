@@ -1,0 +1,77 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Stores aren't allowed to keep your card's security code 🔒",
+ "descripcion": "Under the card industry's PCI DSS standard, merchants may not store card verification codes after authorization, even encrypted. Full breakdown in the linked video.",
+ "hashtags": "#creditcard #cybersecurity #tech #shopping #shorts",
+ "fuentes": [
+  "https://www.pcisecuritystandards.org/faqs/1574/"
+ ],
+ "relacionado": "largo:003",
+ "escenas": [
+  {
+   "texto": "Ever notice that some sites ask for the three digits on the back every single time?",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "WHY DO THEY ASK",
+     "EVERY TIME?"
+    ],
+    "sync": "three"
+   }
+  },
+  {
+   "texto": "It's because they're not allowed to keep it. Under the card industry's security rules, called PCI DSS, that code can't be stored after the purchase is approved.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "PCI DSS",
+    "word": "NOT STORED",
+    "sub": "after approval",
+    "sync": "allowed",
+    "size": 210
+   }
+  },
+  {
+   "texto": "Not even encrypted. Not even if you give them permission.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "ENCRYPTED?",
+     "value": "no",
+     "color": "warm",
+     "sync": "encrypted"
+    },
+    "right": {
+     "label": "WITH PERMISSION?",
+     "value": "no",
+     "color": "warm",
+     "sync": "permission"
+    }
+   }
+  },
+  {
+   "texto": "So if a store gets hacked, the code isn't sitting there to steal. Watch what happens when you pay, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

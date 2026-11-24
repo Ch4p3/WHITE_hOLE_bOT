@@ -1,0 +1,101 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Your bank's encryption has an expiration date ⏳",
+ "descripcion": "NIST's final transition plan (Oct 27, 2026): quantum-vulnerable algorithms like RSA are deprecated after 2030 and disallowed after 2035. Full story in the linked video.",
+ "hashtags": "#cybersecurity #quantum #cryptography #tech #shorts",
+ "fuentes": [
+  "https://postquantum.com/security-pqc/nist-ir-8547-final/",
+  "https://csrc.nist.gov/Projects/post-quantum-cryptography/pqc-standards"
+ ],
+ "relacionado": "largo:002",
+ "escenas": [
+  {
+   "texto": "The math that protects a lot of the internet has an expiration date.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "IT HAS AN",
+     "EXPIRATION",
+     "DATE"
+    ],
+    "colors": [
+     "white",
+     "blue",
+     "white"
+    ],
+    "sync": "expiration"
+   }
+  },
+  {
+   "texto": "It's called RSA, and it relies on one fact: multiplying two huge primes is easy, but splitting the result back is brutally hard.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MULTIPLY",
+     "value": "easy",
+     "color": "blue",
+     "sync": "multiplying"
+    },
+    "right": {
+     "label": "SPLIT BACK",
+     "value": "brutal",
+     "color": "warm",
+     "sync": "splitting"
+    }
+   }
+  },
+  {
+   "texto": "A big enough quantum computer could split it fast. So in October twenty twenty six, NIST set the deadlines.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the threat",
+    "word": "QUANTUM",
+    "sync": "quantum",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "RSA is deprecated after twenty thirty, and disallowed after twenty thirty five.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "AFTER 2030",
+     "value": "deprecated",
+     "color": "ice",
+     "sync": "deprecated"
+    },
+    "right": {
+     "label": "AFTER 2035",
+     "value": "disallowed",
+     "color": "warm",
+     "sync": "disallowed"
+    }
+   }
+  },
+  {
+   "texto": "Watch the full story of primes, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

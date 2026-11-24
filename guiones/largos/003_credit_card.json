@@ -1,0 +1,707 @@
+{
+ "titulo": "What Really Happens When You Tap Your Credit Card",
+ "idioma": "en",
+ "kokoro": {
+  "voz": "am_michael",
+  "velocidad": 0.97,
+  "lang": "en-us"
+ },
+ "pausa": 0.5,
+ "intro_capitulo": "Two seconds",
+ "miniatura": {
+  "lineas": [
+   "YOUR CARD,",
+   "INSIDE"
+  ],
+  "colores": [
+   "white",
+   "blue"
+  ],
+  "chip": "4 COMPANIES · 2 SECONDS"
+ },
+ "descripcion": "What happens in the two seconds after you tap: what your card number encodes, how the chip makes a one-time cryptogram, why phone payments use tokens, the journey through acquirer, network and issuer, who pays the hidden interchange fee, and the math of minimum payments. Educational content, not financial advice.",
+ "fuentes": [
+  "Visa, inside VisaNet (up to 83,000 messages/second; AI fraud detection since 1993; $40B+ fraud prevented per year; Ashburn data center): https://corporate.visa.com/en/sites/visa-perspectives/security-trust/inside-visa-global-commerce-engine.html",
+  "Payment card numbers and Luhn check digit (ISO/IEC 7812): https://en.wikipedia.org/wiki/Payment_card_number",
+  "Visa, 8-digit BIN (April 2022): https://usa.visa.com/dam/VCOM/global/partner-with-us/documents/visa.com-numerics-faq.pdf",
+  "Apple Platform Security, card provisioning and Device Account Number: https://support.apple.com/guide/security/sec0f005981a/web",
+  "EU Interchange Fee Regulation caps (0.2% debit, 0.3% credit): https://www.eubusiness.com/focus/card-fees",
+  "Adyen, interchange fees explained (~2% average in the US): https://www.adyen.com/en_AU/knowledge-hub/interchange-fees-explained",
+  "Federal Reserve G.19, credit card interest rates (Aug 2026: 22.36% on accounts assessed interest): https://www.federalreserve.gov/releases/g19/20261106/g19.pdf",
+  "Minimum-payment example computed by White Hole: $3,000 at 22.36% APR, payment = interest + 1% of balance (min $25) vs fixed $150/month.",
+  "PCI SSC FAQ: card verification codes may not be stored after authorization: https://www.pcisecuritystandards.org/faqs/1574/",
+  "Visa, 3-D Secure: https://corporate.visa.com/en/solutions/visa-protect/insights/3d-secure.html",
+  "Cornell LII, Fair Credit Billing Act ($50 liability, 60 days): https://www.law.cornell.edu/wex/fair_credit_billing_act_(fcba)"
+ ],
+ "hashtags": [
+  "#creditcard",
+  "#money",
+  "#fintech",
+  "#personalfinance",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "You tap your card. Two seconds later, it beeps. In those two seconds, your payment crossed at least four companies, passed a cryptographic test, and got scored by an AI for fraud.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "TWO SECONDS",
+    "pasos": [
+     {
+      "texto": "YOUR\nCARD",
+      "sync": "tap"
+     },
+     {
+      "texto": "THE\nSTORE",
+      "sync": "crossed"
+     },
+     {
+      "texto": "STORE'S\nBANK",
+      "sync": "four"
+     },
+     {
+      "texto": "VISA /\nMASTERCARD",
+      "sync": "companies"
+     },
+     {
+      "texto": "YOUR\nBANK",
+      "sync": "cryptographic"
+     }
+    ],
+    "bucle_sync": "scored",
+    "bucle": "approved ✓"
+   }
+  },
+  {
+   "texto": "Visa says its network can handle up to eighty three thousand of these messages every second. Let's follow one, from the plastic in your hand to the money leaving your account.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Visa's network",
+    "to": 83000,
+    "label": "transaction messages per second",
+    "sync": "eighty",
+    "note": "at peak capacity",
+    "note_sync": "second"
+   }
+  },
+  {
+   "texto": "Chapter one. The number.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "The number",
+    "sub": "sixteen digits with a secret structure"
+   }
+  },
+  {
+   "texto": "Your card number isn't random. The first digit tells you the network. A four is Visa. A five is usually Mastercard.",
+   "visual": {
+    "tipo": "tarjeta",
+    "bin_sync": 99,
+    "nfc_sync": 99,
+    "chip_sync": 99,
+    "nota": "4 = Visa · 5 = Mastercard (usually)",
+    "nota_sync": "four"
+   }
+  },
+  {
+   "texto": "The first six or eight digits identify the bank that issued it. The industry moved to eight digit bank numbers in twenty twenty two, because it was running out.",
+   "visual": {
+    "tipo": "tarjeta",
+    "bin_sync": "first",
+    "bin_sub": "since 2022: 8 digits"
+   }
+  },
+  {
+   "texto": "The middle digits are your account. And the very last digit is a check digit, calculated from all the others with a formula from the nineteen fifties called the Luhn algorithm.",
+   "visual": {
+    "tipo": "tarjeta",
+    "bin_sync": 0,
+    "cuenta_sync": "middle",
+    "check_sync": "last",
+    "check_sub": "the Luhn formula"
+   }
+  },
+  {
+   "texto": "Here's how it works. Starting from the right, double every second digit. If a result is more than nine, subtract nine. Add everything up. For a valid card, the total ends in zero.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "THE LUHN CHECK",
+    "items": [
+     {
+      "texto": "From the right, double every 2nd digit",
+      "sync": "double"
+     },
+     {
+      "texto": "If it's over 9, subtract 9",
+      "sync": "subtract"
+     },
+     {
+      "texto": "Add it all up",
+      "sync": "add"
+     },
+     {
+      "texto": "Valid cards end in 0",
+      "sync": "zero"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It's not security. It's a typo detector. Swap two neighboring digits or mistype one, and the website knows instantly, before anything is even sent to the bank.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "4111 1111 1111 1111",
+     "value": "valid",
+     "color": "blue",
+     "sync": "typo",
+     "size": 100
+    },
+    "right": {
+     "label": "4111 1111 1111 1112",
+     "value": "typo",
+     "color": "warm",
+     "sync": "mistype",
+     "size": 100
+    },
+    "vs": false,
+    "note": "example test numbers",
+    "note_sync": "instantly"
+   }
+  },
+  {
+   "texto": "Chapter two. The chip.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "The chip",
+    "sub": "why it can't be copied"
+   }
+  },
+  {
+   "texto": "The magnetic stripe on the back is ancient technology. It stores the same data every time, so anyone who reads it once can copy it. That's how skimmers work.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the magnetic stripe:",
+    "word": "SAME DATA",
+    "sub": "every time → easy to copy",
+    "sync": "same",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "The chip is different. It's a tiny computer with a secret key that never leaves the silicon. For every purchase, it mixes that key with the amount, the date and a counter, and produces a unique code called a cryptogram.",
+   "visual": {
+    "tipo": "tarjeta",
+    "chip_sync": "chip",
+    "nota": "secret key + amount + date + counter → cryptogram",
+    "nota_sync": "mixes"
+   }
+  },
+  {
+   "texto": "Your bank recalculates that code. If it matches, the card is real. And because the counter goes up with every purchase, a copied code is useless the next time.",
+   "visual": {
+    "tipo": "codigo",
+    "lineas": [
+     "# your bank, in milliseconds",
+     "expected = mac(card_key, amount,",
+     "              date, counter)",
+     "if cryptogram == expected:",
+     "    card_is_real()",
+     "counter += 1   # never reused"
+    ],
+    "sync": "recalculates",
+    "etiqueta": "a stolen code is worthless next time",
+    "etiqueta_sync": "copied"
+   }
+  },
+  {
+   "texto": "Chapter three. Tap and phone.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "Tap and phone",
+    "sub": "contactless and tokens"
+   }
+  },
+  {
+   "texto": "Tapping uses the same chip, just over radio. It's called near field communication, and it only works across a few centimeters, which is why you have to almost touch the reader.",
+   "visual": {
+    "tipo": "tarjeta",
+    "nfc_sync": "radio",
+    "chip_sync": "chip",
+    "nota": "NFC: works only within a few centimeters",
+    "nota_sync": "centimeters"
+   }
+  },
+  {
+   "texto": "Paying with your phone goes one step further. When you add a card to Apple Pay, your real card number isn't stored on the phone or on Apple's servers. Your bank creates a separate device account number instead.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "YOUR REAL CARD NUMBER",
+     "value": "hidden",
+     "color": "grey",
+     "sync": "real"
+    },
+    "right": {
+     "label": "WHAT THE PHONE USES",
+     "value": "a token",
+     "sub": "device account number",
+     "color": "blue",
+     "sync": "separate"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Each payment adds a one time security code. So even if a store gets hacked, what leaks can't be used on a website or copied onto a stripe.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "ONE-TIME CODE",
+    "pre": "every phone payment",
+    "sync": "code",
+    "sub": "a leak is useless elsewhere",
+    "sub_sync": "hacked",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Chapter four. The journey.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "The journey",
+    "sub": "four companies in two seconds"
+   }
+  },
+  {
+   "texto": "When you tap, the terminal sends the request to the store's bank, called the acquirer. The acquirer passes it to the card network, Visa or Mastercard. The network routes it to the bank that issued your card.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "TERMINAL",
+      "sync": "terminal"
+     },
+     {
+      "texto": "ACQUIRER\n(store's bank)",
+      "sync": "acquirer"
+     },
+     {
+      "texto": "NETWORK",
+      "sync": "network"
+     },
+     {
+      "texto": "ISSUER\n(your bank)",
+      "sync": "issued"
+     }
+    ],
+    "bucle_sync": 99
+   }
+  },
+  {
+   "texto": "A lot of that routing happens in a handful of fortress-like data centers. Visa says that at one of them, in Ashburn, Virginia, only seventy five of its employees worldwide are cleared to enter the secure data halls.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Visa's data center in Ashburn, Virginia",
+    "to": 75,
+    "label": "employees cleared to enter the data halls",
+    "sync": "seventy",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Your bank checks the cryptogram, your available credit, and runs fraud models on the purchase. Visa says it started using AI for fraud detection in nineteen ninety three, and that its AI systems now help prevent more than forty billion dollars of fraud a year.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "YOUR BANK CHECKS, IN MILLISECONDS",
+    "items": [
+     {
+      "texto": "Is the cryptogram real?",
+      "sync": "cryptogram"
+     },
+     {
+      "texto": "Is there enough credit?",
+      "sync": "credit"
+     },
+     {
+      "texto": "Does this look like fraud?",
+      "sync": "fraud"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then the answer races back the same way. Approved, or declined. The whole round trip usually takes a second or two.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "TERMINAL",
+      "sync": 0
+     },
+     {
+      "texto": "ACQUIRER",
+      "sync": 0
+     },
+     {
+      "texto": "NETWORK",
+      "sync": 0
+     },
+     {
+      "texto": "ISSUER",
+      "sync": 0
+     }
+    ],
+    "bucle_sync": "back",
+    "bucle": "approved ✓ in about 2 seconds"
+   }
+  },
+  {
+   "texto": "But here's a twist. At that moment, no money has moved. The approval is just a promise, a hold on your credit. The actual money is settled later, usually within a day or two.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "AT THE BEEP",
+     "value": "a promise",
+     "color": "ice",
+     "sync": "approval"
+    },
+    "right": {
+     "label": "A DAY OR TWO LATER",
+     "value": "real money",
+     "color": "blue",
+     "sync": "settled"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Chapter five. Buying online.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "Buying online",
+    "sub": "when there's no chip to ask"
+   }
+  },
+  {
+   "texto": "Online, there's no chip to produce a cryptogram. So the store asks for the three digit code on the back. It proves you probably have the physical card in front of you.",
+   "visual": {
+    "tipo": "tarjeta",
+    "nota": "the 3-digit code: proof you're holding the card",
+    "nota_sync": "three",
+    "bin_sync": 99
+   }
+  },
+  {
+   "texto": "And here's a rule most people don't know. Under the card industry's security standard, called PCI DSS, stores are not allowed to keep that code after the purchase is approved. Not even encrypted. Not even if you ask them to.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "PCI DSS rule:",
+    "word": "NEVER STORED",
+    "sub": "the security code, after approval",
+    "sub_sync": "approved",
+    "sub2": "not even encrypted",
+    "sub2_sync": "encrypted",
+    "sync": "allowed",
+    "color": "ice",
+    "size": 180
+   }
+  },
+  {
+   "texto": "For riskier purchases, your bank can step in directly. That's the pop-up asking you to confirm in your banking app, or type a one time code. It's called three D Secure, and it was originally developed by Visa.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "ONLINE\nSTORE",
+      "sync": "riskier"
+     },
+     {
+      "texto": "YOUR BANK\nscores risk",
+      "sync": "bank"
+     },
+     {
+      "texto": "LOW RISK\n→ approve",
+      "sync": "directly"
+     },
+     {
+      "texto": "HIGH RISK\n→ ask you",
+      "sync": "confirm"
+     }
+    ],
+    "bucle_sync": 99
+   }
+  },
+  {
+   "texto": "Chapter six. Who pays for all this?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 6,
+    "titulo": "Who pays for all this?",
+    "sub": "the hidden fee"
+   }
+  },
+  {
+   "texto": "You don't pay to swipe. The store does. On every purchase, the store's bank pays a fee to your bank, called interchange.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the store pays",
+    "word": "INTERCHANGE",
+    "sub": "a fee to your bank on every purchase",
+    "sync": "interchange",
+    "sub_sync": "every"
+   }
+  },
+  {
+   "texto": "In the United States, credit card interchange has no legal cap, and it averages around two percent. In the European Union, it's capped at zero point three percent for credit cards and zero point two for debit.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "United States · credit (no cap)",
+      "value": 2.0,
+      "value_text": "~2%",
+      "color": "warm",
+      "sync": "united"
+     },
+     {
+      "label": "European Union · credit (capped)",
+      "value": 0.3,
+      "value_text": "0.3%",
+      "sync": "european"
+     },
+     {
+      "label": "European Union · debit (capped)",
+      "value": 0.2,
+      "value_text": "0.2%",
+      "color": "ice",
+      "sync": "debit"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That gap is why American cards hand out such generous cash back and travel points. The rewards are paid by the stores, and stores build that cost into their prices. So everyone pays, even people paying cash.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "YOUR REWARDS",
+     "ARE IN THE PRICES"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "sync": "rewards",
+    "size": 130
+   }
+  },
+  {
+   "texto": "Chapter seven. The real business.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 7,
+    "titulo": "The real business",
+    "sub": "interest"
+   }
+  },
+  {
+   "texto": "Fees are nice for banks, but the big money is interest. According to the Federal Reserve, the average rate on US credit card accounts paying interest was about twenty two percent a year in August twenty twenty six.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "US average APR, accounts paying interest",
+    "to": 22.36,
+    "decimals": 2,
+    "suffix": "%",
+    "label": "per year (Federal Reserve, Aug 2026)",
+    "sync": "twenty",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And it adds up daily. Most cards divide that yearly rate by three hundred sixty five, and charge it on your balance every single day. Interest starts earning interest.",
+   "visual": {
+    "tipo": "formula",
+    "pre": "how most cards charge interest",
+    "tex": "\\mathrm{daily\\ rate} = \\frac{22.36\\%}{365} \\approx 0.061\\%",
+    "size": 64,
+    "sync": "divide",
+    "sub": "every day, on your balance",
+    "sub_sync": "every"
+   }
+  },
+  {
+   "texto": "Let's run the numbers. Say you owe three thousand dollars and only make a typical minimum payment: the interest, plus one percent of the balance.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "$3,000 balance at 22.4%",
+      "sync": "three"
+     },
+     {
+      "text": "minimum = interest + 1%",
+      "sync": "minimum",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 15,
+     "suffix": " years",
+     "sync": "interest",
+     "label": "to pay it off",
+     "texto": "15 years"
+    }
+   }
+  },
+  {
+   "texto": "It takes fifteen years to pay off, and you pay about four thousand five hundred dollars in interest. More than the original debt.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "What you borrowed",
+      "value": 3000,
+      "value_text": "$3,000",
+      "color": "ice",
+      "sync": "takes"
+     },
+     {
+      "label": "Interest paid (minimum payments)",
+      "value": 4515,
+      "value_text": "$4,515",
+      "color": "warm",
+      "sync": "interest"
+     }
+    ],
+    "note": "15 years",
+    "note_sync": "fifteen"
+   }
+  },
+  {
+   "texto": "Pay a fixed hundred and fifty a month instead, and you're done in about two years, with under eight hundred dollars of interest.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MINIMUM PAYMENTS",
+     "value": "15 yrs",
+     "sub": "$4,515 interest",
+     "color": "warm",
+     "sync": "instead"
+    },
+    "right": {
+     "label": "$150 PER MONTH",
+     "value": "26 mo",
+     "sub": "$789 interest",
+     "color": "blue",
+     "sync": "done"
+    },
+    "vs_text": "VS"
+   }
+  },
+  {
+   "texto": "And if you pay the full statement balance every month, most cards charge no interest at all. Then the card is basically a free short loan, paid for by the store.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "pay the full statement balance",
+    "word": "$0 INTEREST",
+    "sync": "full",
+    "sub": "on most cards",
+    "sub_sync": "most",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Chapter eight. When it goes wrong.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 8,
+    "titulo": "When it goes wrong",
+    "sub": "fraud and your rights"
+   }
+  },
+  {
+   "texto": "If someone steals your card number in the United States, federal law, the Fair Credit Billing Act from nineteen seventy four, caps what you can owe for unauthorized charges at fifty dollars. Many banks go further and promise zero.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FEDERAL LAW (FCBA)",
+     "value": "$50 max",
+     "color": "ice",
+     "sync": "fifty"
+    },
+    "right": {
+     "label": "MANY BANKS",
+     "value": "$0",
+     "color": "blue",
+     "sync": "zero"
+    },
+    "vs": false,
+    "note": "report it fast: within 60 days of the statement",
+    "note_sync": "many"
+   }
+  },
+  {
+   "texto": "The catch is speed. You have sixty days after the statement arrives to dispute a charge. So the cheapest security tool you have is simply checking your statement every month.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the cheapest security tool",
+    "word": "CHECK MONTHLY",
+    "sub": "60 days to dispute",
+    "sub_sync": "sixty",
+    "sync": "checking",
+    "color": "green",
+    "size": 180
+   }
+  },
+  {
+   "texto": "So a credit card is a tiny computer that proves it's real, a trip through four companies in two seconds, a fee hidden in every price, and a loan that can be free, or very expensive. It depends on you.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "WHAT YOUR CARD REALLY IS",
+    "items": [
+     {
+      "texto": "A tiny computer that proves it's real",
+      "sync": "computer"
+     },
+     {
+      "texto": "Four companies in two seconds",
+      "sync": "four"
+     },
+     {
+      "texto": "A fee hidden in every price",
+      "sync": "fee"
+     },
+     {
+      "texto": "A loan: free, or very expensive",
+      "sync": "loan"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Next, we'll look at the invisible tax that shrinks your money every single year: inflation. Subscribe so you don't miss it.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NEXT",
+     "INFLATION"
+    ],
+    "colors": [
+     "grey",
+     "blue"
+    ],
+    "syncs": [
+     "next",
+     "inflation"
+    ],
+    "button": "SUBSCRIBE",
+    "button_sync": "subscribe"
+   }
+  }
+ ]
+}

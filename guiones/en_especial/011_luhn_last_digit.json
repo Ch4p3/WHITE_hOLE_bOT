@@ -1,0 +1,100 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "The last digit of your card number is a math trick 💳",
+ "descripcion": "Card numbers end in a check digit computed with the Luhn algorithm, so typos get caught instantly. Full breakdown in the linked video.",
+ "hashtags": "#creditcard #math #tech #money #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Payment_card_number"
+ ],
+ "relacionado": "largo:003",
+ "escenas": [
+  {
+   "texto": "The last digit of your credit card number isn't random. It's math.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "THE LAST DIGIT",
+     "IS MATH"
+    ],
+    "sync": "math"
+   }
+  },
+  {
+   "texto": "From the right, double every second digit. If you get more than nine, subtract nine. Then add everything up.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "double every 2nd digit",
+      "sync": "double",
+      "size": 80
+     },
+     {
+      "text": "over 9? subtract 9",
+      "sync": "subtract",
+      "color": "ice",
+      "size": 80
+     },
+     {
+      "text": "add it all up",
+      "sync": "add",
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On a real card, the total always ends in zero. The last digit is chosen to make that happen.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "valid card total",
+    "word": "ENDS IN 0",
+    "sync": "zero",
+    "size": 200
+   }
+  },
+  {
+   "texto": "Mistype one digit, and the website knows before anything reaches your bank.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "4111 1111 1111 1111",
+     "value": "valid",
+     "color": "blue",
+     "sync": "mistype"
+    },
+    "right": {
+     "label": "4111 1111 1111 1112",
+     "value": "typo",
+     "color": "warm",
+     "sync": "knows"
+    }
+   }
+  },
+  {
+   "texto": "Watch what happens when you tap your card, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

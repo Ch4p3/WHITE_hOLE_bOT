@@ -61,4 +61,5 @@ jobs:
           cp out/largo.mp4 /tmp/$n.mp4; cp out/largo.mp4.jpg /tmp/$n.jpg; cp out/largo.mp4.meta.json /tmp/$n.meta.json
           git fetch -q origin previews && git checkout -q previews
           mkdir -p largos && cp /tmp/$n.mp4 /tmp/$n.jpg /tmp/$n.meta.json largos/
-          git add largos && git commit -qm "Video largo $n" && git push -q origin previews
+          git add largos && git commit -qm "Video largo $n"
+          for i in 1 2 3 4 5; do git push -q origin previews && break; sleep $((RANDOM % 8 + 3)); git pull -q --rebase origin previews; done

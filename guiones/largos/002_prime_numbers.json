@@ -1,0 +1,773 @@
+{
+ "titulo": "The History of Prime Numbers: From Euclid to AI",
+ "idioma": "en",
+ "kokoro": {
+  "voz": "am_michael",
+  "velocidad": 1.0,
+  "lang": "en-us"
+ },
+ "pausa": 0.4,
+ "intro_capitulo": "A record broken by AI",
+ "miniatura": {
+  "lineas": [
+   "PRIMES:",
+   "EUCLID → AI"
+  ],
+  "colores": [
+   "white",
+   "blue"
+  ],
+  "chip": "2,300 YEARS"
+ },
+ "descripcion": "From Euclid's 2,300-year-old proof to the AI agents that broke RSA factoring records in September 2026: the sieve, Gauss's pattern, twin primes, the 41-million-digit record prime found with GPUs, why primes protect your bank, and when RSA gets retired.",
+ "fuentes": [
+  "GIMPS, M136279841 discovery (Oct 2024): https://www.mersenne.org",
+  "Scientific American on Luke Durant's GPU search: https://www.scientificamerican.com/article/new-prime-number-41-million-digits-long-breaks-math-records",
+  "Integer factorization records (RSA-250, 2020): https://members.loria.fr/PZimmermann/records/factor.html",
+  "Cognition, Factoring RSA-260 (Sept 2026): https://cognition.com/blog/factoring-rsa-260",
+  "Post-Quantum, RSA-896 factored with Claude (Sept 2026): https://postquantum.com/security-pqc/rsa-896-factored-claude-gpus/",
+  "Polymath, bounded gaps between primes retrospective: https://arxiv.org/abs/1409.8361",
+  "NIST post-quantum standards FIPS 203/204/205 (Aug 2024): https://csrc.nist.gov/Projects/post-quantum-cryptography/pqc-standards",
+  "NIST IR 8547 final (Oct 27, 2026) summary: https://postquantum.com/security-pqc/nist-ir-8547-final/",
+  "Prime number theorem history: https://mathworld.wolfram.com/PrimeNumberTheorem.html"
+ ],
+ "hashtags": [
+  "#math",
+  "#primes",
+  "#cryptography",
+  "#AI",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "On September third, twenty twenty-six, an engineer posted a single number online. A hundred and thirty digits long. It broke a record that had stood for six and a half years.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "September 3, 2026",
+    "to": 130,
+    "suffix": " digits",
+    "label": "one number, posted online",
+    "sync": "hundred",
+    "note": "a record that stood 6½ years",
+    "note_sync": "record"
+   }
+  },
+  {
+   "texto": "That number was one of the two prime factors of RSA two sixty, a code-breaking challenge from nineteen ninety-one. And the software that cracked it was built with an AI agent.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "RSA-260 = p × q",
+      "sync": "factors"
+     },
+     {
+      "text": "two primes, 130 digits each",
+      "sync": "challenge",
+      "color": "ice",
+      "size": 64
+     }
+    ],
+    "result": {
+     "value": 1991,
+     "sync": "nineteen",
+     "label": "the year the challenge was set",
+     "texto": "1991"
+    }
+   }
+  },
+  {
+   "texto": "Sixteen days later, a researcher at Anthropic used Claude to break the record again. To understand why that matters for your bank account, we need to go back two thousand three hundred years.",
+   "visual": {
+    "tipo": "titulo",
+    "pre": "16 days later: broken again",
+    "pre_sync": "sixteen",
+    "lines": [
+     "FROM EUCLID",
+     "TO AI"
+    ],
+    "sync": "understand",
+    "colors": [
+     "white",
+     "blue"
+    ]
+   }
+  },
+  {
+   "texto": "Chapter one. The atoms of numbers.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "The atoms of numbers",
+    "sub": "what a prime really is"
+   }
+  },
+  {
+   "texto": "A prime is a whole number bigger than one that can only be divided evenly by one and itself. Two, three, five, seven, eleven, thirteen.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "2",
+     "3",
+     "5",
+     "7",
+     "11",
+     "13",
+     "17",
+     "19"
+    ],
+    "sync": "two",
+    "stagger": 0.25,
+    "size": 80,
+    "nota": "divisible only by 1 and itself",
+    "nota_sync": "itself"
+   }
+  },
+  {
+   "texto": "Every other number is built by multiplying primes together. Twelve is two times two times three. A thousand is two cubed times five cubed. And here's the beautiful part: every number has exactly one recipe.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "12 = 2 × 2 × 3",
+      "sync": "twelve"
+     },
+     {
+      "text": "1,000 = 2³ × 5³",
+      "sync": "thousand",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 1,
+     "sync": "exactly",
+     "prefix": "",
+     "suffix": " recipe",
+     "label": "for every whole number",
+     "texto": "1 recipe"
+    }
+   }
+  },
+  {
+   "texto": "That's why mathematicians call primes the atoms of arithmetic. And people have been chasing them since ancient Greece.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "ATOMS",
+    "pre": "primes are the",
+    "sub": "of arithmetic",
+    "sync": "atoms",
+    "sub_sync": "arithmetic"
+   }
+  },
+  {
+   "texto": "Chapter two. Euclid's proof.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "Euclid's proof",
+    "sub": "around 300 BC"
+   }
+  },
+  {
+   "texto": "Around three hundred BC, Euclid asked a simple question. Do the primes ever run out? His answer is one of the most elegant arguments ever written.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Euclid asked:",
+    "word": "DO THEY RUN OUT?",
+    "size": 170,
+    "sync": "simple",
+    "sub": "his proof still works 2,300 years later",
+    "sub_sync": "elegant"
+   }
+  },
+  {
+   "texto": "Imagine you had a complete list of every prime. Multiply them all together, then add one.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "2 × 3 × 5 × 7",
+      "sync": "multiply"
+     },
+     {
+      "text": "+ 1",
+      "sync": "add",
+      "color": "blue"
+     }
+    ],
+    "result": {
+     "value": 211,
+     "sync": "one",
+     "label": "not divisible by 2, 3, 5 or 7",
+     "texto": "211"
+    }
+   }
+  },
+  {
+   "texto": "That new number leaves a remainder of one when you divide it by any prime on your list. So either it's a brand new prime, or it's made of primes you missed. Either way, your list wasn't complete.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "DIVIDE BY ANY PRIME ON THE LIST → REMAINDER 1",
+    "items": [
+     {
+      "texto": "Either it's a new prime",
+      "sync": "either"
+     },
+     {
+      "texto": "Or it's built from primes you missed",
+      "sync": "missed"
+     },
+     {
+      "texto": "So no list can ever be complete",
+      "sync": "complete"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Try it with the first six primes, and you get thirty thousand and thirty one. It isn't prime. It's fifty nine times five hundred and nine. Two primes that weren't on the list.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "2·3·5·7·11·13 + 1 = 30,031",
+      "sync": "thirty"
+     },
+     {
+      "text": "= 59 × 509",
+      "sync": "fifty",
+      "color": "warm"
+     }
+    ],
+    "result": {
+     "value": 2,
+     "sync": "weren't",
+     "suffix": " new primes",
+     "label": "missing from the list",
+     "texto": "2 new primes"
+    }
+   }
+  },
+  {
+   "texto": "So the primes never end. There are infinitely many. But finding them is another story.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "INFINITE",
+    "sub": "the primes never end",
+    "sync": "infinitely",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Chapter three. The sieve.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "The sieve",
+    "sub": "Eratosthenes, around 240 BC"
+   }
+  },
+  {
+   "texto": "About sixty years after Euclid, Eratosthenes found a clever way to catch them. Write out the numbers. Keep two, and cross out every multiple of two. Keep three, and cross out its multiples. Then five. Then seven.",
+   "visual": {
+    "tipo": "criba",
+    "n": 100,
+    "titulo": "THE SIEVE OF ERATOSTHENES",
+    "pasos": [
+     {
+      "p": 2,
+      "sync": "two"
+     },
+     {
+      "p": 3,
+      "sync": "three"
+     },
+     {
+      "p": 5,
+      "sync": "five"
+     },
+     {
+      "p": 7,
+      "sync": "seven"
+     }
+    ],
+    "final_sync": "seven"
+   }
+  },
+  {
+   "texto": "Whatever survives is prime. Twenty five of them under a hundred. Computers still use versions of this trick today.",
+   "visual": {
+    "tipo": "criba",
+    "n": 100,
+    "pasos": [
+     {
+      "p": 2,
+      "sync": 0
+     },
+     {
+      "p": 3,
+      "sync": 0
+     },
+     {
+      "p": 5,
+      "sync": 0
+     },
+     {
+      "p": 7,
+      "sync": 0
+     }
+    ],
+    "final_sync": "survives"
+   }
+  },
+  {
+   "texto": "But look closer and something strange appears. The primes thin out. Among the first hundred numbers there are twenty five. Among the hundred numbers right after ten million, there are only two.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Primes from 1 to 100",
+      "value": 25,
+      "value_text": "25",
+      "sync": "first"
+     },
+     {
+      "label": "Primes from 10,000,001 to 10,000,100",
+      "value": 2,
+      "value_text": "2",
+      "color": "warm",
+      "sync": "million"
+     }
+    ],
+    "note": "the primes thin out",
+    "note_sync": "only"
+   }
+  },
+  {
+   "texto": "Chapter four. The pattern in the chaos.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "The pattern in the chaos",
+    "sub": "Gauss, Riemann and the prime number theorem"
+   }
+  },
+  {
+   "texto": "In seventeen ninety two, a fifteen year old named Carl Friedrich Gauss counted primes in blocks of a thousand. He noticed they thin out in a very specific way, following the natural logarithm.",
+   "visual": {
+    "tipo": "formula",
+    "pre": "Gauss, age 15 (1792)",
+    "tex": "\\pi(x) \\approx \\frac{x}{\\ln x}",
+    "size": 80,
+    "sync": "noticed",
+    "sub": "how many primes up to x",
+    "sub_sync": "logarithm"
+   }
+  },
+  {
+   "texto": "Up to a million, that simple formula predicts about seventy two thousand primes. The real answer is seventy eight thousand, four hundred and ninety eight. And the bigger you go, the closer the ratio gets to one.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FORMULA x / ln x",
+     "value": "72,382",
+     "color": "grey",
+     "sync": "predicts"
+    },
+    "right": {
+     "label": "ACTUAL PRIMES",
+     "value": "78,498",
+     "color": "blue",
+     "sync": "real"
+    },
+    "vs_text": "≈",
+    "note": "up to one million",
+    "note_sync": "million"
+   }
+  },
+  {
+   "texto": "Gauss couldn't prove it. Bernhard Riemann made the key breakthrough in eighteen fifty nine, and in eighteen ninety six two mathematicians finally proved it, independently, in the same year.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "FROM A GUESS TO A THEOREM",
+    "eventos": [
+     {
+      "fecha": "1792",
+      "texto": "Gauss\nnotices the pattern",
+      "sync": "gauss"
+     },
+     {
+      "fecha": "1859",
+      "texto": "Riemann\nthe zeta function",
+      "sync": "riemann"
+     },
+     {
+      "fecha": "1896",
+      "texto": "Hadamard &\nde la Vallée Poussin",
+      "sync": "ninety"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Riemann also left behind a question nobody has answered since. It's worth a million dollars, and we made a whole video about it.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "$1,000,000",
+    "pre": "the Riemann Hypothesis",
+    "sync": "million",
+    "sub": "still unsolved",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Chapter five. Twins.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "Twin primes",
+    "sub": "the problem that won't die"
+   }
+  },
+  {
+   "texto": "Some primes come in pairs, just two apart. Three and five. Eleven and thirteen. Forty one and forty three. Does that keep happening forever? Nobody knows.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "3 · 5",
+     "11 · 13",
+     "17 · 19",
+     "41 · 43",
+     "71 · 73"
+    ],
+    "sync": "pairs",
+    "stagger": 0.3,
+    "size": 72,
+    "nota": "twin primes: just 2 apart",
+    "nota_sync": "apart"
+   }
+  },
+  {
+   "texto": "In twenty thirteen, a little known mathematician named Yitang Zhang proved that there are infinitely many prime pairs less than seventy million apart.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Yitang Zhang, 2013",
+    "to": 70000000,
+    "label": "the first proven gap",
+    "sync": "seventy",
+    "note": "infinitely many prime pairs this close",
+    "note_sync": "infinitely"
+   }
+  },
+  {
+   "texto": "Seventy million sounds huge, but before Zhang, nobody could prove any limit at all. Within a year, mathematicians working together online, joined by James Maynard, pushed it down to two hundred forty six. The goal is two. It's still unsolved.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "THE GAP BETWEEN PRIME PAIRS",
+    "items": [
+     {
+      "texto": "2013 · Zhang: under 70,000,000",
+      "sync": "seventy"
+     },
+     {
+      "texto": "2014 · Polymath + Maynard: 246",
+      "sync": "pushed"
+     },
+     {
+      "texto": "The goal: 2 (still unproven)",
+      "sync": "goal",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Chapter six. Giants.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 6,
+    "titulo": "Giants",
+    "sub": "the largest prime ever found"
+   }
+  },
+  {
+   "texto": "Today's champion is two to the power of a hundred thirty six million, two hundred seventy nine thousand, eight hundred forty one, minus one. Written out, it has more than forty one million digits.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "2^136,279,841 − 1",
+    "to": 41024320,
+    "label": "digits",
+    "sync": "written",
+    "note": "the largest known prime",
+    "note_sync": "champion"
+   }
+  },
+  {
+   "texto": "It was found in October twenty twenty four by Luke Durant, a former Nvidia engineer. He rented thousands of server GPUs, spread across seventeen countries.",
+   "visual": {
+    "tipo": "gpu",
+    "fase": "gpu",
+    "sync": "found",
+    "fuego_sync": "rented",
+    "gpu_label": "thousands of GPUs · 17 countries",
+    "cpu_label": "ordinary PCs held the record for 28 years"
+   }
+  },
+  {
+   "texto": "A GPU in Dublin flagged the number. Another, in Texas, confirmed it was prime. He spent close to two million dollars. The prize was three thousand.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "WHAT HE SPENT",
+     "value": "~$2M",
+     "color": "warm",
+     "sync": "spent"
+    },
+    "right": {
+     "label": "THE PRIZE",
+     "value": "$3,000",
+     "color": "blue",
+     "sync": "prize"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Notice the hardware. The same kind of chips that train artificial intelligence are now the best prime hunters on Earth. Keep that in mind.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "SAME CHIPS",
+    "pre": "AI training · prime hunting",
+    "sync": "same",
+    "sub": "GPUs",
+    "sub_sync": "hunters"
+   }
+  },
+  {
+   "texto": "Chapter seven. Primes guard your secrets.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 7,
+    "titulo": "Primes guard your secrets",
+    "sub": "RSA, 1977"
+   }
+  },
+  {
+   "texto": "In nineteen seventy seven, Rivest, Shamir and Adleman turned primes into a lock. The idea is a trap door. Multiplying two huge primes takes a computer a fraction of a second. Going backwards, from the product to the two primes, is brutally hard.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MULTIPLY p × q",
+     "value": "instant",
+     "color": "blue",
+     "sync": "multiplying"
+    },
+    "right": {
+     "label": "FACTOR N → p, q",
+     "value": "brutal",
+     "color": "warm",
+     "sync": "backwards"
+    },
+    "vs_text": "≠"
+   }
+  },
+  {
+   "texto": "That one way street became RSA, and for decades it has protected logins, websites, software updates and digital signatures. A standard RSA key today is two thousand forty eight bits. That's a number six hundred seventeen digits long.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "a standard RSA-2048 key",
+    "to": 617,
+    "label": "digits long",
+    "sync": "six",
+    "note": "still considered safe today",
+    "note_sync": "standard"
+   }
+  },
+  {
+   "texto": "Chapter eight. The AI record.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 8,
+    "titulo": "Enter the AI",
+    "sub": "September 2026"
+   }
+  },
+  {
+   "texto": "Back in nineteen ninety one, RSA Laboratories published a list of giant numbers and dared people to factor them. For years, the record was a two hundred fifty digit number, cracked in twenty twenty with about two thousand seven hundred years of computer time.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "RSA-250 · February 2020",
+    "to": 2700,
+    "suffix": " core-years",
+    "label": "of computing to factor it",
+    "sync": "two",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Then, this September, Eric Lu at the company Cognition factored RSA two sixty. His AI agent, Devin, wrote a new version of the factoring software for GPUs and ran it on spare capacity. About fifteen days. About four hundred thousand dollars.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "RSA-260 · SEPTEMBER 3, 2026",
+    "items": [
+     {
+      "texto": "AI agent built a GPU factoring engine",
+      "sync": "devin"
+     },
+     {
+      "texto": "~15.6 days of compute",
+      "sync": "fifteen"
+     },
+     {
+      "texto": "~$400,000 at market prices",
+      "sync": "four"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sixteen days later, Stephen Weis at Anthropic used Claude to port the same open source tools to GPUs. Up to two thousand forty eight of them, in about ten days, cracked an eight hundred ninety six bit number. A new record.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "RSA-896 · SEPTEMBER 19, 2026",
+    "items": [
+     {
+      "texto": "Claude ported the software to GPUs",
+      "sync": "claude"
+     },
+     {
+      "texto": "Up to 2,048 GPUs on idle capacity",
+      "sync": "forty"
+     },
+     {
+      "texto": "~10 days · new public record",
+      "sync": "ten"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So, is your bank account in danger? Not from this. By Cognition's own estimate, a real twenty forty eight bit key is about ninety one billion times harder than RSA two sixty.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "RSA-2048 vs RSA-260",
+    "to": 91,
+    "suffix": " billion×",
+    "label": "harder to factor",
+    "sync": "ninety",
+    "color": "blue",
+    "note": "your bank is fine (for now)",
+    "note_sync": "danger"
+   }
+  },
+  {
+   "texto": "The real threat is quantum computers. In nineteen ninety four, Peter Shor showed that a big enough quantum computer could factor these numbers fast. That machine doesn't exist yet. But the world is already moving.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "QUANTUM",
+    "pre": "the real threat:",
+    "sync": "quantum",
+    "sub": "Shor's algorithm, 1994",
+    "sub_sync": "nineteen",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "NIST published new quantum resistant standards in twenty twenty four. And in October twenty twenty six, it set the deadline: RSA is deprecated after twenty thirty, and disallowed after twenty thirty five.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "THE END OF RSA",
+    "eventos": [
+     {
+      "fecha": "1977",
+      "texto": "RSA\nis born",
+      "sync": "nist"
+     },
+     {
+      "fecha": "2024",
+      "texto": "NIST post-quantum\nstandards",
+      "sync": "twenty"
+     },
+     {
+      "fecha": "2030",
+      "texto": "RSA\ndeprecated",
+      "sync": "deprecated"
+     },
+     {
+      "fecha": "2035",
+      "texto": "RSA\ndisallowed",
+      "sync": "disallowed"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Chapter nine. Still a mystery.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 9,
+    "titulo": "Still a mystery",
+    "sub": "2,300 years later"
+   }
+  },
+  {
+   "texto": "Twenty three centuries after Euclid, primes protect the internet, push our biggest computers, and now AI helps us hunt them. And we still can't answer questions a child could ask. Are there infinitely many twin primes? Where exactly is the next prime?",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "2,300 YEARS OF PRIMES",
+    "eventos": [
+     {
+      "fecha": "300 BC",
+      "texto": "Euclid\ninfinitely many",
+      "sync": "twenty"
+     },
+     {
+      "fecha": "240 BC",
+      "texto": "Eratosthenes\nthe sieve",
+      "sync": "euclid"
+     },
+     {
+      "fecha": "1792",
+      "texto": "Gauss\nthe pattern",
+      "sync": "protect"
+     },
+     {
+      "fecha": "1977",
+      "texto": "RSA\nprimes as locks",
+      "sync": "internet"
+     },
+     {
+      "fecha": "2024",
+      "texto": "Largest prime\n41M digits",
+      "sync": "computers"
+     },
+     {
+      "fecha": "2026",
+      "texto": "AI agents\nbreak records",
+      "sync": "ai"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Next time, we'll open up something you use every day: what really happens in the two seconds after you tap your credit card. Subscribe so you don't miss it.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NEXT",
+     "YOUR CREDIT CARD"
+    ],
+    "colors": [
+     "grey",
+     "blue"
+    ],
+    "syncs": [
+     "next",
+     "credit"
+    ],
+    "button": "SUBSCRIBE",
+    "button_sync": "subscribe"
+   }
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Paying the minimum on $3,000 takes 15 years 😳",
+ "descripcion": "At 22.36% APR (Federal Reserve, Aug 2026), minimum payments (interest + 1%) on $3,000 take 15 years and ~$4,515 of interest. $150/month: 26 months, ~$789. Educational, not financial advice. Full video linked.",
+ "hashtags": "#creditcard #money #personalfinance #debt #shorts",
+ "fuentes": [
+  "https://www.federalreserve.gov/releases/g19/20261106/g19.pdf"
+ ],
+ "relacionado": "largo:003",
+ "escenas": [
+  {
+   "texto": "You owe three thousand dollars on a credit card at twenty two percent, and you only pay the minimum.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "$3,000 at 22.4%",
+      "sync": "three"
+     },
+     {
+      "text": "pay only the minimum",
+      "sync": "minimum",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It takes fifteen years to pay off.",
+   "visual": {
+    "tipo": "counter",
+    "to": 15,
+    "suffix": " years",
+    "label": "to be debt-free",
+    "sync": "fifteen",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And you pay about four thousand five hundred dollars in interest. More than you borrowed.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Borrowed",
+      "value": 3000,
+      "value_text": "$3,000",
+      "color": "ice",
+      "sync": "pay"
+     },
+     {
+      "label": "Interest",
+      "value": 4515,
+      "value_text": "$4,515",
+      "color": "warm",
+      "sync": "interest"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pay a fixed hundred and fifty a month instead: about two years, under eight hundred dollars of interest.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MINIMUM",
+     "value": "15 yrs",
+     "sub": "$4,515 interest",
+     "color": "warm",
+     "sync": "pay"
+    },
+    "right": {
+     "label": "$150/MONTH",
+     "value": "26 mo",
+     "sub": "$789 interest",
+     "color": "blue",
+     "sync": "two"
+    }
+   }
+  },
+  {
+   "texto": "Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

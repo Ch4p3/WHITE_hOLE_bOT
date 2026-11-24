@@ -2,9 +2,9 @@ name: Short diario
 
 on:
   schedule:                  # 3 Shorts al día (hora Colombia = UTC-5)
-    - cron: "23 12 * * *"   # 7:23 a. m.
-    - cron: "23 18 * * *"   # 1:23 p. m.
-    - cron: "23 0 * * *"    # 7:23 p. m.
+    - cron: "17 12 * * *"   # 7:17 a. m.
+    - cron: "17 18 * * *"   # 1:17 p. m.
+    - cron: "17 0 * * *"    # 7:17 p. m.
   workflow_dispatch:         # botón "Run workflow" para lanzarlo a mano
     inputs:
       solo_verificar_youtube:

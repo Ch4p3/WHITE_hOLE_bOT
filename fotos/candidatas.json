@@ -1,97 +1,5 @@
 {
- "hippopotamus Colombia": [
-  {
-   "titulo": "File:Hipopótamo nadando.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Hipop%C3%B3tamo_nadando.jpg/960px-Hipop%C3%B3tamo_nadando.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hipop%C3%B3tamo_nadando.jpg",
-   "ancho": 1276,
-   "alto": 957,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 4.0",
-   "autor": "Ferferic",
-   "descripcion": "Hipopótamo (Hippopotamus amphibius) nadando."
-  }
- ],
- "Hacienda Nápoles": [
-  {
-   "titulo": "File:Lago Hacienda Napolés.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Lago_Hacienda_Napol%C3%A9s.jpg/960px-Lago_Hacienda_Napol%C3%A9s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Lago_Hacienda_Napol%C3%A9s.jpg",
-   "ancho": 1600,
-   "alto": 1200,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 4.0",
-   "autor": "Nathaly 1106",
-   "descripcion": ""
-  },
-  {
-   "titulo": "File:Pórtico Hacienda Nápoles.JPG",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/P%C3%B3rtico_Hacienda_N%C3%A1poles.JPG/960px-P%C3%B3rtico_Hacienda_N%C3%A1poles.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:P%C3%B3rtico_Hacienda_N%C3%A1poles.JPG",
-   "ancho": 2848,
-   "alto": 2134,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 3.0",
-   "autor": "XalD",
-   "descripcion": "Entrada a la Hacienda Nápoles. El avión ya no está en este lugar."
-  }
- ],
- "Magdalena River Colombia": [
-  {
-   "titulo": "File:Agraulis vanillae at Isla Margarita.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Agraulis_vanillae_at_Isla_Margarita.jpg/960px-Agraulis_vanillae_at_Isla_Margarita.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Agraulis_vanillae_at_Isla_Margarita.jpg",
-   "ancho": 4000,
-   "alto": 2705,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Wilfredor",
-   "descripcion": "Agraulis vanillae (Linnaeus, 1758) in Isla Margarita"
-  },
-  {
-   "titulo": "File:Backlit Margarita Island Sunset in Las Guevaras, Venezuela CaptureNX2.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Backlit_Margarita_Island_Sunset_in_Las_Guevaras%2C_Venezuela_CaptureNX2.jpg/960px-Backlit_Margarita_Island_Sunset_in_Las_Guevaras%2C_Venezuela_CaptureNX2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Backlit_Margarita_Island_Sunset_in_Las_Guevaras,_Venezuela_CaptureNX2.jpg",
-   "ancho": 2500,
-   "alto": 1683,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Wilfredor",
-   "descripcion": "Backlit Margarita Island Sunset in Las Guevaras, Venezuela"
-  },
-  {
-   "titulo": "File:Calidris alba on Margarita island 3.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Calidris_alba_on_Margarita_island_3.jpg/960px-Calidris_alba_on_Margarita_island_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Calidris_alba_on_Margarita_island_3.jpg",
-   "ancho": 3659,
-   "alto": 2848,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Wilfredor",
-   "descripcion": "Calidris alba (Sanderling) on Margarita Island, Venezuela"
-  },
-  {
-   "titulo": "File:Cassis madagascariensis from Margarita Island.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Cassis_madagascariensis_from_Margarita_Island.jpg/960px-Cassis_madagascariensis_from_Margarita_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Cassis_madagascariensis_from_Margarita_Island.jpg",
-   "ancho": 14936,
-   "alto": 6157,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Wilfredor",
-   "descripcion": "Cassis madagascariensis Lamarck, 1822 from Margarita Island"
-  },
-  {
-   "titulo": "File:Chlosyne lacinia.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Chlosyne_lacinia.jpg/960px-Chlosyne_lacinia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Chlosyne_lacinia.jpg",
-   "ancho": 2000,
-   "alto": 1356,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Wilfredor",
-   "descripcion": "Chlosyne lacinia (Bordered Patch) from Margarita Island, Venezuela. Its wingspan ranges from 1¼ to 1⅞ inches"
-  },
+ "Río Magdalena": [
   {
    "titulo": "File:Contaminacion Río Magdalena a la altura de la ciudad de Neiva.jpg",
    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Contaminacion_R%C3%ADo_Magdalena_a_la_altura_de_la_ciudad_de_Neiva.jpg/960px-Contaminacion_R%C3%ADo_Magdalena_a_la_altura_de_la_ciudad_de_Neiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -104,298 +12,267 @@
    "descripcion": "Fotografía que refleja la contaminación del Río Magdalena, mientras garzas y otras aves se alimentan con desechos contaminados. Foto tomada desde el puente Santander llegando a la altura de la ciudad "
   },
   {
-   "titulo": "File:El Guamache Bay, Margarita island.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/El_Guamache_Bay%2C_Margarita_island.jpg/960px-El_Guamache_Bay%2C_Margarita_island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:El_Guamache_Bay,_Margarita_island.jpg",
-   "ancho": 4169,
-   "alto": 2769,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Wilfredor",
-   "descripcion": "El Guamache Bay, Margarita island, Venezuela"
-  },
-  {
-   "titulo": "File:Endangered species Iguana Iguana from Margarita Island.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Endangered_species_Iguana_Iguana_from_Margarita_Island.jpg/960px-Endangered_species_Iguana_Iguana_from_Margarita_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Endangered_species_Iguana_Iguana_from_Margarita_Island.jpg",
-   "ancho": 4288,
-   "alto": 2848,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Wilfredor",
-   "descripcion": "Iguana Iguana female from Margarita Island. Endangered species found in wild environment"
-  }
- ],
- "hippopotamus mouth open": [
-  {
-   "titulo": "File:Hippopotamus, South Luangwa National Park (51866317963).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Hippopotamus%2C_South_Luangwa_National_Park_%2851866317963%29.jpg/960px-Hippopotamus%2C_South_Luangwa_National_Park_%2851866317963%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus,_South_Luangwa_National_Park_(51866317963).jpg",
-   "ancho": 3210,
-   "alto": 2140,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "I've Got It On Film!",
-   "descripcion": "Wildlife of South Luangwa National Park"
-  },
-  {
-   "titulo": "File:Hippopotamus, South Luangwa National Park (51866319188).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Hippopotamus%2C_South_Luangwa_National_Park_%2851866319188%29.jpg/960px-Hippopotamus%2C_South_Luangwa_National_Park_%2851866319188%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus,_South_Luangwa_National_Park_(51866319188).jpg",
-   "ancho": 3700,
-   "alto": 2467,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "I've Got It On Film!",
-   "descripcion": "Wildlife of South Luangwa National Park"
-  },
-  {
-   "titulo": "File:Hippopotamus, South Luangwa National Park (51866468229).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Hippopotamus%2C_South_Luangwa_National_Park_%2851866468229%29.jpg/960px-Hippopotamus%2C_South_Luangwa_National_Park_%2851866468229%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus,_South_Luangwa_National_Park_(51866468229).jpg",
-   "ancho": 3739,
-   "alto": 2493,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "I've Got It On Film!",
-   "descripcion": "Wildlife of South Luangwa National Park"
-  },
-  {
-   "titulo": "File:Hippopotamus, South Luangwa National Park (51866473429).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Hippopotamus%2C_South_Luangwa_National_Park_%2851866473429%29.jpg/960px-Hippopotamus%2C_South_Luangwa_National_Park_%2851866473429%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus,_South_Luangwa_National_Park_(51866473429).jpg",
-   "ancho": 3923,
-   "alto": 2615,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "I've Got It On Film!",
-   "descripcion": "Wildlife of South Luangwa National Park"
-  },
-  {
-   "titulo": "File:Hippopotamus (6672141083).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Hippopotamus_%286672141083%29.jpg/960px-Hippopotamus_%286672141083%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus_(6672141083).jpg",
-   "ancho": 1920,
-   "alto": 1213,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "Moyan Brenn from Italy",
-   "descripcion": "close look to face while opening wide its jaw"
-  },
-  {
-   "titulo": "File:Hippopotamus @ Barcelona zoo.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Hippopotamus_%40_Barcelona_zoo.jpg/960px-Hippopotamus_%40_Barcelona_zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus_@_Barcelona_zoo.jpg",
-   "ancho": 2816,
-   "alto": 2112,
+   "titulo": "File:Rio Magdalena Delta landsat.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Rio_Magdalena_Delta_landsat.jpg/960px-Rio_Magdalena_Delta_landsat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Rio_Magdalena_Delta_landsat.jpg",
+   "ancho": 1096,
+   "alto": 1006,
    "mime": "image/jpeg",
    "licencia": "Public domain",
-   "autor": "Pedroserafin",
-   "descripcion": "Two hippopotamus (Hippopotamus amphibius) fighting at the Barcelona Zoo (Catalonia, Spain)."
+   "autor": "Alexrk2",
+   "descripcion": "Landsat7 image of the Magdalena River delta."
   },
   {
-   "titulo": "File:Hippopotamus River.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Hippopotamus_River.jpg/960px-Hippopotamus_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus_River.jpg",
-   "ancho": 1280,
-   "alto": 871,
+   "titulo": "File:Rio magdalena mundung.JPG",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Rio_magdalena_mundung.JPG/960px-Rio_magdalena_mundung.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Rio_magdalena_mundung.JPG",
+   "ancho": 4064,
+   "alto": 4096,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "NASA",
+   "descripcion": "Magdalena River delta\nBarranquilla, Magdalena River Mouth, Colombia\nThe mouth of the sediment-laden Magdalena River and Colombia’s chief port, Barranquilla, can be seen in this south-southeast-looking"
+  }
+ ],
+ "Doradal Antioquia": [],
+ "Puerto Triunfo": [
+  {
+   "titulo": "File:1940 Census Enumeration District Descriptions - Puerto Rico - Humacao County - ED 68-1, ED 68-2, ED 68-3 - NARA - 5879295.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-1%2C_ED_68-2%2C_ED_68-3_-_NARA_-_5879295.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-1%2C_ED_68-2%2C_ED_68-3_-_NARA_-_5879295.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-1,_ED_68-2,_ED_68-3_-_NARA_-_5879295.jpg",
+   "ancho": 4408,
+   "alto": 2456,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Unknown authorUnknown author or not provided",
+   "descripcion": "Scope and content:  This item lists Enumeration Districts for:\nPR ED 68-1: HUMACAO TOWN COMPRISING BARRIO SAN FRANCISCO INCLUDING ENSANCHE JANER, PLAZUELA FRIAS, AND EASTERN PART OF ENSANCHE VALLADARE"
+  },
+  {
+   "titulo": "File:1940 Census Enumeration District Descriptions - Puerto Rico - Humacao County - ED 68-4, ED 68-5, ED 68-6, ED 68-7 - NARA - 5879296.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-4%2C_ED_68-5%2C_ED_68-6%2C_ED_68-7_-_NARA_-_5879296.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-4%2C_ED_68-5%2C_ED_68-6%2C_ED_68-7_-_NARA_-_5879296.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-4,_ED_68-5,_ED_68-6,_ED_68-7_-_NARA_-_5879296.jpg",
+   "ancho": 4312,
+   "alto": 2456,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Unknown authorUnknown author or not provided",
+   "descripcion": "Scope and content:  This item lists Enumeration Districts for:\nPR ED 68-4: HUMACAO TOWN COMPRISING BARRIO SANTIAGO BOUNDED BY (N) CALLE NOYA Y HERNANDEZ; (E) CALLE ANTONIO LOPEZ; (S) END OF URBAN ZONE"
+  },
+  {
+   "titulo": "File:1940 Census Enumeration District Descriptions - Puerto Rico - Humacao County - ED 68-8, ED 68-9, ED 68-10, ED 68-11, ED 68-12, ED 68-13 - NARA - 5879297.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-8%2C_ED_68-9%2C_ED_68-10%2C_ED_68-11%2C_ED_68-12%2C_ED_68-13_-_NARA_-_5879297.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-8%2C_ED_68-9%2C_ED_68-10%2C_ED_68-11%2C_ED_68-12%2C_ED_68-13_-_NARA_-_5879297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-8,_ED_68-9,_ED_68-10,_ED_68-11,_ED_68-12,_ED_68-13_-_NARA_-_5879297.jpg",
+   "ancho": 4328,
+   "alto": 2456,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Unknown authorUnknown author or not provided",
+   "descripcion": "Scope and content:  This item lists Enumeration Districts for:\nPR ED 68-8: BARRIO BUENA VISTA, BARRIADA BUENA VISTA LOCATED S OF CALLE PUNTA BRAVA AND E OF CALLE ANTONIO LOPEZ.\nPR ED 68-9: BARRIO CAND"
+  },
+  {
+   "titulo": "File:Balsa del paso internacional entre Puerto Rico, Provincia de Misiones (Argentina) y Puerto Triunfo, Departamento Itapúa (Paraguay).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Balsa_del_paso_internacional_entre_Puerto_Rico%2C_Provincia_de_Misiones_%28Argentina%29_y_Puerto_Triunfo%2C_Departamento_Itap%C3%BAa_%28Paraguay%29.jpg/960px-Balsa_del_paso_internacional_entre_Puerto_Rico%2C_Provincia_de_Misiones_%28Argentina%29_y_Puerto_Triunfo%2C_Departamento_Itap%C3%BAa_%28Paraguay%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Balsa_del_paso_internacional_entre_Puerto_Rico,_Provincia_de_Misiones_(Argentina)_y_Puerto_Triunfo,_Departamento_Itap%C3%BAa_(Paraguay).jpg",
+   "ancho": 4128,
+   "alto": 3096,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Horacio Cambeiro",
+   "descripcion": "Balsa del paso internacional entre Puerto Rico (Argentina) y Puerto Triunfo (Paraguay). Foto tomada desde la Zona Primaria Aduanera (Resguardo Puerto Rico) y Prefectura Puerto Rico, Provincia de Misio"
+  },
+  {
+   "titulo": "File:Balsa del paso internacional entre Puerto Rico (Argentina) y Puerto Triunfo (Paraguay).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Balsa_del_paso_internacional_entre_Puerto_Rico_%28Argentina%29_y_Puerto_Triunfo_%28Paraguay%29.jpg/960px-Balsa_del_paso_internacional_entre_Puerto_Rico_%28Argentina%29_y_Puerto_Triunfo_%28Paraguay%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Balsa_del_paso_internacional_entre_Puerto_Rico_(Argentina)_y_Puerto_Triunfo_(Paraguay).jpg",
+   "ancho": 4128,
+   "alto": 3096,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Horacio Cambeiro",
+   "descripcion": "Balsa del paso internacional entre Puerto Rico (Argentina) y Puerto Triunfo (Paraguay). Foto tomada desde la Zona Primaria Aduanera (Resguardo Puerto Rico) y Prefectura Puerto Rico, Provincia de Misio"
+  },
+  {
+   "titulo": "File:Llegada de la Balsa del paso internacional a Puerto Rico, Provincia de Misiones (Argentina) proveniente de Puerto Triunfo, Departamento Itapúa (Paraguay) sobre el río Paraná.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Llegada_de_la_Balsa_del_paso_internacional_a_Puerto_Rico%2C_Provincia_de_Misiones_%28Argentina%29_proveniente_de_Puerto_Triunfo%2C_Departamento_Itap%C3%BAa_%28Paraguay%29_sobre_el_r%C3%ADo_Paran%C3%A1.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Llegada_de_la_Balsa_del_paso_internacional_a_Puerto_Rico,_Provincia_de_Misiones_(Argentina)_proveniente_de_Puerto_Triunfo,_Departamento_Itap%C3%BAa_(Paraguay)_sobre_el_r%C3%ADo_Paran%C3%A1.jpg",
+   "ancho": 4128,
+   "alto": 3096,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Horacio Cambeiro",
+   "descripcion": "Llegada de la Balsa del paso internacional a Puerto Rico, Provincia de Misiones (Argentina) proveniente de Puerto Triunfo, Departamento Itapúa (Paraguay) sobre el río Paraná. Foto tomada desde la Zona"
+  },
+  {
+   "titulo": "File:Llegada de la Balsa del paso internacional a la ciudad de Puerto Rico, Misiones (Argentina) proveniente de Puerto Triunfo, Itapúa (Paraguay) sobre el río Paraná - 2017.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Llegada_de_la_Balsa_del_paso_internacional_a_la_ciudad_de_Puerto_Rico%2C_Misiones_%28Argentina%29_proveniente_de_Puerto_Triunfo%2C_Itap%C3%BAa_%28Paraguay%29_sobre_el_r%C3%ADo_Paran%C3%A1_-_2017.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Llegada_de_la_Balsa_del_paso_internacional_a_la_ciudad_de_Puerto_Rico,_Misiones_(Argentina)_proveniente_de_Puerto_Triunfo,_Itap%C3%BAa_(Paraguay)_sobre_el_r%C3%ADo_Paran%C3%A1_-_2017.jpg",
+   "ancho": 4128,
+   "alto": 3096,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Horacio Cambeiro",
+   "descripcion": "Llegada de la Balsa del paso internacional a Puerto Rico, Provincia de Misiones (Argentina) proveniente de Puerto Triunfo, Departamento Itapúa (Paraguay) sobre el río Paraná. Zona Primaria Aduanera (R"
+  },
+  {
+   "titulo": "File:Plano de la Ensenada del Triunfo de la Cruz. (IA dr plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Plano_de_la_Ensenada_del_Triunfo_de_la_Cruz._%28IA_dr_plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050%29.jpg/960px-Plano_de_la_Ensenada_del_Triunfo_de_la_Cruz._%28IA_dr_plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Plano_de_la_Ensenada_del_Triunfo_de_la_Cruz._(IA_dr_plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050).jpg",
+   "ancho": 9332,
+   "alto": 7237,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Spain. Dirección de Trabajos Hidrográficos\nFerrer y Cafranga, Joaquín María de, 1777-1861",
+   "descripcion": "Zoomable full resolution image available at davidrumsey.com.This image 14322.050 is a part of image group 14322.000.Nautical chart showing the port of Triunfo de la Cruz, Honduras. Features harbor sou"
+  }
+ ],
+ "Hipopótamos Magdalena Medio": [],
+ "hippopotamus walking grass": [],
+ "Puerto Berrío río": [],
+ "hippopotamus night": [
+  {
+   "titulo": "File:Hippo Trails Carved Through Forest Undergrowth, Murchison Falls National Park00.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park00.jpg/960px-Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hippo_Trails_Carved_Through_Forest_Undergrowth,_Murchison_Falls_National_Park00.jpg",
+   "ancho": 2119,
+   "alto": 3679,
    "mime": "image/jpeg",
    "licencia": "CC0",
-   "autor": "safaritravelplus",
-   "descripcion": "Hippopotamus in Namibia, Southern Africa."
+   "autor": "BMKME",
+   "descripcion": "This image depicts a narrow, rocky trail through dense forest at Murchison Falls National Park, Uganda. The terrain, scattered with leaf litter and tree roots, bears the imprints of hippo movement—nat"
   },
   {
-   "titulo": "File:Hippopotamus Who Yawns (223394487).jpeg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Hippopotamus_Who_Yawns_%28223394487%29.jpeg/960px-Hippopotamus_Who_Yawns_%28223394487%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus_Who_Yawns_(223394487).jpeg",
+   "titulo": "File:Hippo Trails Carved Through Forest Undergrowth, Murchison Falls National Park01.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park01.jpg/960px-Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hippo_Trails_Carved_Through_Forest_Undergrowth,_Murchison_Falls_National_Park01.jpg",
+   "ancho": 2296,
+   "alto": 4080,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "BMKME",
+   "descripcion": "This image depicts a narrow, rocky trail through dense forest at Murchison Falls National Park, Uganda. The terrain, scattered with leaf litter and tree roots, bears the imprints of hippo movement—nat"
+  },
+  {
+   "titulo": "File:Hippopotamus, Odysseum (MONTPELLIER,FR34) (3430134700).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Hippopotamus%2C_Odysseum_%28MONTPELLIER%2CFR34%29_%283430134700%29.jpg/960px-Hippopotamus%2C_Odysseum_%28MONTPELLIER%2CFR34%29_%283430134700%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus,_Odysseum_(MONTPELLIER,FR34)_(3430134700).jpg",
+   "ancho": 3888,
+   "alto": 2592,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "jean-louis Zimmermann from Orange, FRANCE",
+   "descripcion": "hippopotamus, Odysseum (MONTPELLIER,FR34)"
+  },
+  {
+   "titulo": "File:Hippopotamuses in Shoushan Zoo.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Hippopotamuses_in_Shoushan_Zoo.jpg/960px-Hippopotamuses_in_Shoushan_Zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamuses_in_Shoushan_Zoo.jpg",
+   "ancho": 1566,
+   "alto": 1046,
+   "mime": "image/jpeg",
+   "licencia": "Attribution",
+   "autor": "壽山動物園 Shoushan Zoo",
+   "descripcion": "With cute looking, hippopotamus is actually one of the most dangerous animals in Africa. It has a bad temper and strong offensive, so do not get too close to them. It spends most of a day in the water"
+  },
+  {
+   "titulo": "File:In wildest Africa (Page 353) BHL23041218.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/In_wildest_Africa_%28Page_353%29_BHL23041218.jpg/960px-In_wildest_Africa_%28Page_353%29_BHL23041218.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:In_wildest_Africa_(Page_353)_BHL23041218.jpg",
+   "ancho": 4094,
+   "alto": 2528,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Schillings, Karl Georg; Whyte, Frederic; Whyte, Frederic",
+   "descripcion": "In wildest Africa /  by C.G. Schillings ; translated from German By Frederic Whyte ; with over 300 photographic studies direct from the author's negatives, taken by day and night ; and other illustrat"
+  },
+  {
+   "titulo": "File:In wildest Africa BHL23041236.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/In_wildest_Africa_BHL23041236.jpg/960px-In_wildest_Africa_BHL23041236.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:In_wildest_Africa_BHL23041236.jpg",
+   "ancho": 4094,
+   "alto": 2528,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Schillings, Karl Georg; Whyte, Frederic; Whyte, Frederic",
+   "descripcion": "In wildest Africa /  by C.G. Schillings ; translated from German By Frederic Whyte ; with over 300 photographic studies direct from the author's negatives, taken by day and night ; and other illustrat"
+  },
+  {
+   "titulo": "File:Mara-thon (15 of 101) (24395680512).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Mara-thon_%2815_of_101%29_%2824395680512%29.jpg/960px-Mara-thon_%2815_of_101%29_%2824395680512%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Mara-thon_(15_of_101)_(24395680512).jpg",
+   "ancho": 3307,
+   "alto": 2480,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "Weldon Kennedy from London, UK",
+   "descripcion": "Mara-thon (15 of 101)"
+  },
+  {
+   "titulo": "File:Nocturnal Grazing Hippopotamus at Murchison Falls National Park.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Nocturnal_Grazing_Hippopotamus_at_Murchison_Falls_National_Park.jpg/960px-Nocturnal_Grazing_Hippopotamus_at_Murchison_Falls_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Nocturnal_Grazing_Hippopotamus_at_Murchison_Falls_National_Park.jpg",
+   "ancho": 1837,
+   "alto": 2406,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "BMKME",
+   "descripcion": "This nighttime photograph captures a hippopotamus grazing on land at Murchison Falls National Park in Uganda. Illuminated by artificial light—likely from a safari vehicle—the hippo is seen feeding on "
+  }
+ ],
+ "hippopotamus warning sign": [
+  {
+   "titulo": "File:Hippopotamus warning sign - Lake Naivasha (181090719).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Hippopotamus_warning_sign_-_Lake_Naivasha_%28181090719%29.jpg/960px-Hippopotamus_warning_sign_-_Lake_Naivasha_%28181090719%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus_warning_sign_-_Lake_Naivasha_(181090719).jpg",
    "ancho": 2048,
    "alto": 1365,
    "mime": "image/jpeg",
    "licencia": "CC BY 3.0",
-   "autor": "Pierre Mistrot",
-   "descripcion": "500px provided description: Hippopotamus Who Yawns [#hippo ,#in water ,#wading ,#freshwater ,#fresh water]"
+   "autor": "Daniel Aufgang",
+   "descripcion": "Hippopotamus warning sign at Lake Naivasha, Kenya"
+  },
+  {
+   "titulo": "File:Human Fingerprints on an Ancient Landscape (153611 - libya plateau oli2 20241117 lrg).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libya_plateau_oli2_20241117_lrg%29.jpg/960px-Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libya_plateau_oli2_20241117_lrg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Human_Fingerprints_on_an_Ancient_Landscape_(153611_-_libya_plateau_oli2_20241117_lrg).jpg",
+   "ancho": 1670,
+   "alto": 1113,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "NASA Earth Observatory images by Michala Garrison, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
+   "descripcion": "Today’s story is the answer to the November 2024 puzzler.\nTowering over the desert in southwestern Libya, the Messak Settafet plateau resembles the wall of a giant fortress, with its dark, erosion-res"
+  },
+  {
+   "titulo": "File:Human Fingerprints on an Ancient Landscape (153611 - libyaoilfield oli2 20241117 lrg).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaoilfield_oli2_20241117_lrg%29.jpg/960px-Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaoilfield_oli2_20241117_lrg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Human_Fingerprints_on_an_Ancient_Landscape_(153611_-_libyaoilfield_oli2_20241117_lrg).jpg",
+   "ancho": 2165,
+   "alto": 1503,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "NASA Earth Observatory images by Michala Garrison, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
+   "descripcion": "Today’s story is the answer to the November 2024 puzzler.\nTowering over the desert in southwestern Libya, the Messak Settafet plateau resembles the wall of a giant fortress, with its dark, erosion-res"
+  },
+  {
+   "titulo": "File:Human Fingerprints on an Ancient Landscape (153611 - libyaplateau oli2 20241117 lrg).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaplateau_oli2_20241117_lrg%29.jpg/960px-Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaplateau_oli2_20241117_lrg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Human_Fingerprints_on_an_Ancient_Landscape_(153611_-_libyaplateau_oli2_20241117_lrg).jpg",
+   "ancho": 7751,
+   "alto": 7881,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "NASA Earth Observatory images by Michala Garrison, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
+   "descripcion": "Today’s story is the answer to the November 2024 puzzler.\nTowering over the desert in southwestern Libya, the Messak Settafet plateau resembles the wall of a giant fortress, with its dark, erosion-res"
+  },
+  {
+   "titulo": "File:Warning sign, Lake Chamo (28860685910).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Warning_sign%2C_Lake_Chamo_%2828860685910%29.jpg/960px-Warning_sign%2C_Lake_Chamo_%2828860685910%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Warning_sign,_Lake_Chamo_(28860685910).jpg",
+   "ancho": 6000,
+   "alto": 4000,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "Richard Mortel from Riyadh, Saudi Arabia",
+   "descripcion": "Warning sign, Lake Chamo"
   }
- ],
- "Antillean manatee": [
-  {
-   "titulo": "File:Examining antillean manatee - DPLA - c0452fabf569ee2d627bcdc360a846cf.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Examining_antillean_manatee_-_DPLA_-_c0452fabf569ee2d627bcdc360a846cf.jpg/960px-Examining_antillean_manatee_-_DPLA_-_c0452fabf569ee2d627bcdc360a846cf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Examining_antillean_manatee_-_DPLA_-_c0452fabf569ee2d627bcdc360a846cf.jpg",
-   "ancho": 3000,
-   "alto": 2400,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
-   "descripcion": "Note: Some of the following information may have arrived from the agency cut off or incomplete. Alternative Title: Trichechus manatus. Creator: Saliva, Jorge E. Description: Examining a antillean mana"
-  },
-  {
-   "titulo": "File:Manatee photo.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Manatee_photo.jpg/960px-Manatee_photo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg",
-   "ancho": 1050,
-   "alto": 750,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "NASA",
-   "descripcion": "West Indian manatee (Trichechus manatus) at Merritt Island's National Wildlife Refuge in Florida next to Kennedy Space Center."
-  },
-  {
-   "titulo": "File:Manatee with calf.PD - colour corrected.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Manatee_with_calf.PD_-_colour_corrected.jpg/960px-Manatee_with_calf.PD_-_colour_corrected.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Manatee_with_calf.PD_-_colour_corrected.jpg",
-   "ancho": 2744,
-   "alto": 1800,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Galen Rathbun",
-   "descripcion": "A manatee and her calf. West Indian Manatee, an endangered aquatic mammal of Puerto Rico."
-  },
-  {
-   "titulo": "File:Trichechus-manatus.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Trichechus-manatus.jpg/960px-Trichechus-manatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Trichechus-manatus.jpg",
-   "ancho": 1216,
-   "alto": 912,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Adolphus79 (talk)",
-   "descripcion": "West Indian Manatee (Trichechus manatus) at the Columbus Zoo and Aquarium, photographed March 5, 2009 by Adolphus79."
-  },
-  {
-   "titulo": "File:Trichechus Manatus Manatus, Zoo de Vincennes 01.JPG",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Trichechus_Manatus_Manatus%2C_Zoo_de_Vincennes_01.JPG/960px-Trichechus_Manatus_Manatus%2C_Zoo_de_Vincennes_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Trichechus_Manatus_Manatus,_Zoo_de_Vincennes_01.JPG",
-   "ancho": 2560,
-   "alto": 1920,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Emma.Martinet",
-   "descripcion": "Trichechus Manatus Manatus, Zoo de Vincennes"
-  },
-  {
-   "titulo": "File:Trichechus Manatus Manatus, Zoo de Vincennes 02.JPG",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Trichechus_Manatus_Manatus%2C_Zoo_de_Vincennes_02.JPG/960px-Trichechus_Manatus_Manatus%2C_Zoo_de_Vincennes_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Trichechus_Manatus_Manatus,_Zoo_de_Vincennes_02.JPG",
-   "ancho": 2560,
-   "alto": 1920,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "Emma.Martinet",
-   "descripcion": "Trichechus Manatus Manatus, Zoo de Vincennes"
-  },
-  {
-   "titulo": "File:Trichechus manatus, NOAA.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Trichechus_manatus%2C_NOAA.jpg/960px-Trichechus_manatus%2C_NOAA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Trichechus_manatus,_NOAA.jpg",
-   "ancho": 2000,
-   "alto": 1500,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "NOAA",
-   "descripcion": "Vaca marina o manatí, Trichechus manatus. Golfo de México.\n NOS Image Gallery - NOAA"
-  },
-  {
-   "titulo": "File:Trichechus manatus 1.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Trichechus_manatus_1.jpg/960px-Trichechus_manatus_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Trichechus_manatus_1.jpg",
-   "ancho": 3648,
-   "alto": 2736,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "Riverbanks Outdoor Store from New Port Richey, FL, United States",
-   "descripcion": "Trichechus manatus Homossassa Springs State Park\n\nHomossassa, Florida"
-  }
- ],
- "fishermen Magdalena river": [],
- "hippopotamus calf": [
-  {
-   "titulo": "File:Adolphe Millot mammiferes B.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Adolphe_Millot_mammiferes_B.jpg/960px-Adolphe_Millot_mammiferes_B.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Adolphe_Millot_mammiferes_B.jpg",
-   "ancho": 2564,
-   "alto": 3458,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Adolphe Millot",
-   "descripcion": "Adolphe Millot illustraions for Nouveau Larousse illustré Legend: Mammals: 1. Sea lion. - 2. Morse. - 3. Marine elephant - 4. I. Marine leopard. - 5. Veal mario. - 6. Baleine des Basques. - 7. Narwhal"
-  },
-  {
-   "titulo": "File:Der naturen bloeme - Jacob van Maerlant - KB KA 16 - 105v-106r.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Der_naturen_bloeme_-_Jacob_van_Maerlant_-_KB_KA_16_-_105v-106r.jpg/960px-Der_naturen_bloeme_-_Jacob_van_Maerlant_-_KB_KA_16_-_105v-106r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Der_naturen_bloeme_-_Jacob_van_Maerlant_-_KB_KA_16_-_105v-106r.jpg",
-   "ancho": 4000,
-   "alto": 2791,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Jacob van Maerlant",
-   "descripcion": "Lefthand side folio 105v and righthand side folio 106r from Der naturen bloeme (KB KA 16) by Jacob van Maerlant\n\nMiniatures on the left folio 105v\n\n\t\t\n\t\t\t\n\t\t\tEquonilus\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\tEquus fluminis "
-  },
-  {
-   "titulo": "File:Le Tour du monde - 13 (page 33 crop).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Le_Tour_du_monde_-_13_%28page_33_crop%29.jpg/960px-Le_Tour_du_monde_-_13_%28page_33_crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Le_Tour_du_monde_-_13_(page_33_crop).jpg",
-   "ancho": 1908,
-   "alto": 1437,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "sous la direction d’Édouard Charton",
-   "descripcion": ""
-  },
-  {
-   "titulo": "File:Mother hippo with her baby.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mother_hippo_with_her_baby.jpg/960px-Mother_hippo_with_her_baby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Mother_hippo_with_her_baby.jpg",
-   "ancho": 1600,
-   "alto": 1200,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "No machine-readable author provided. Nash dvd assumed (based on copyright claims).",
-   "descripcion": "Hippopotamus mother and calf"
-  },
-  {
-   "titulo": "File:Teleoceras major (baby barrel-bodied rhino) (Ash Hollow Formation, Miocene, 11.83 Ma; Ashfall Fossil Beds, Nebraska, USA) 1.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Teleoceras_major_%28baby_barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_1.jpg/960px-Teleoceras_major_%28baby_barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Teleoceras_major_(baby_barrel-bodied_rhino)_(Ash_Hollow_Formation,_Miocene,_11.83_Ma;_Ashfall_Fossil_Beds,_Nebraska,_USA)_1.jpg",
-   "ancho": 2169,
-   "alto": 953,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "James St. John",
-   "descripcion": "Teleoceras major Hatcher, 1894 - baby barrel-bodied rhinoceros skeleton from the Miocene of Nebraska, USA.\n\nFrom on-site info.:\nBABY BARREL-BODIED RHINO FROM THE ASH BED\nThis calf, only a few months o"
-  },
-  {
-   "titulo": "File:Teleoceras major (baby barrel-bodied rhino) (Ash Hollow Formation, Miocene, 11.83 Ma; Ashfall Fossil Beds, Nebraska, USA) 2.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Teleoceras_major_%28baby_barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_2.jpg/960px-Teleoceras_major_%28baby_barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Teleoceras_major_(baby_barrel-bodied_rhino)_(Ash_Hollow_Formation,_Miocene,_11.83_Ma;_Ashfall_Fossil_Beds,_Nebraska,_USA)_2.jpg",
-   "ancho": 2387,
-   "alto": 1287,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "James St. John",
-   "descripcion": "Teleoceras major Hatcher, 1894 - baby barrel-bodied rhinoceros skull from the Miocene of Nebraska, USA.\n\nFrom on-site info.:\nBABY BARREL-BODIED RHINO FROM THE ASH BED\nThis calf, only a few months old "
-  },
-  {
-   "titulo": "File:Teleoceras major (barrel-bodied rhino) (Ash Hollow Formation, Miocene, 11.83 Ma; Ashfall Fossil Beds, Nebraska, USA) 4.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Teleoceras_major_%28barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_4.jpg/960px-Teleoceras_major_%28barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Teleoceras_major_(barrel-bodied_rhino)_(Ash_Hollow_Formation,_Miocene,_11.83_Ma;_Ashfall_Fossil_Beds,_Nebraska,_USA)_4.jpg",
-   "ancho": 2764,
-   "alto": 1405,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "James St. John",
-   "descripcion": "Teleoceras major Hatcher, 1894 - barrel-bodied rhinoceros skeleton from a Miocene ash fall deposit in Nebraska, USA.\n\nFrom on-site info.:\nBarrel-bodied rhino calf skeleton removed from the ash bed\nThi"
-  },
-  {
-   "titulo": "File:Teleoceras major (barrel-bodied rhino) (Ash Hollow Formation, Miocene, 11.83 Ma; Ashfall Fossil Beds, Nebraska, USA) 5.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Teleoceras_major_%28barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_5.jpg/960px-Teleoceras_major_%28barrel-bodied_rhino%29_%28Ash_Hollow_Formation%2C_Miocene%2C_11.83_Ma%3B_Ashfall_Fossil_Beds%2C_Nebraska%2C_USA%29_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Teleoceras_major_(barrel-bodied_rhino)_(Ash_Hollow_Formation,_Miocene,_11.83_Ma;_Ashfall_Fossil_Beds,_Nebraska,_USA)_5.jpg",
-   "ancho": 3008,
-   "alto": 2000,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "James St. John",
-   "descripcion": "Teleoceras major Hatcher, 1894 - barrel-bodied rhinoceros skull from a Miocene ash fall deposit in Nebraska, USA.\n\nFrom on-site info.:\nBarrel-bodied rhino calf skeleton removed from the ash bed\nThis s"
-  }
- ],
- "hippopotamus herd water": []
+ ]
 }

@@ -1,0 +1,157 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "Why you can't sell at the price you see 📉",
+ "descripcion": "Every market runs on an order book of buyers and sellers. Liquidity is how much you can trade without moving the price. Educational content, not financial advice.",
+ "hashtags": "#trading #stocks #crypto #finance #shorts",
+ "fuentes": [
+  "https://www.investopedia.com/terms/o/order-book.asp",
+  "https://www.investopedia.com/terms/l/liquidity.asp"
+ ],
+ "escenas": [
+  {
+   "texto": "The chart says one hundred dollars. You hit sell, and you get ninety seven. Where did your money go?",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "PRICE ON SCREEN",
+     "value": "$100",
+     "color": "blue"
+    },
+    "right": {
+     "label": "WHAT YOU GOT",
+     "value": "$97",
+     "color": "warm",
+     "sync": "ninety"
+    },
+    "badge": {
+     "top": "",
+     "bottom": "?!",
+     "sync": "money"
+    }
+   }
+  },
+  {
+   "texto": "Every market has an order book: a list of buyers on one side, and sellers on the other.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "BUYERS · BIDS",
+     "value": "$99.9",
+     "sub": "highest bid",
+     "color": "blue",
+     "sync": "buyers"
+    },
+    "right": {
+     "label": "SELLERS · ASKS",
+     "value": "$100.1",
+     "sub": "lowest ask",
+     "color": "warm",
+     "sync": "sellers"
+    }
+   }
+  },
+  {
+   "texto": "The price you see is just the last trade. To sell right now, you have to take whatever buyers are offering.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the price on screen is",
+    "word": "THE LAST TRADE",
+    "size": 160,
+    "sync": "last",
+    "sub": "not a promise"
+   }
+  },
+  {
+   "texto": "If you sell more than the best buyer wants, you eat into the next buyers, at lower and lower prices.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Buyer 1 · $99.9",
+      "value": 30,
+      "value_text": "30 units",
+      "color": "blue",
+      "sync": "best"
+     },
+     {
+      "label": "Buyer 2 · $98.5",
+      "value": 50,
+      "value_text": "50 units",
+      "color": "blue",
+      "sync": "next"
+     },
+     {
+      "label": "Buyer 3 · $96.0",
+      "value": 80,
+      "value_text": "80 units",
+      "color": "warm",
+      "sync": "lower"
+     }
+    ],
+    "note": "example order book",
+    "note_color": "grey"
+   }
+  },
+  {
+   "texto": "That difference is called slippage. And how deep the book is, that's liquidity.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "SLIPPAGE",
+     "value": "price lost",
+     "color": "warm",
+     "sync": "slippage"
+    },
+    "right": {
+     "label": "LIQUIDITY",
+     "value": "book depth",
+     "color": "blue",
+     "sync": "liquidity"
+    }
+   }
+  },
+  {
+   "texto": "Big, liquid markets barely move. Small coins and tiny stocks can jump just from your own order.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Liquid market",
+      "value": 10,
+      "value_text": "barely moves",
+      "color": "blue",
+      "sync": "liquid"
+     },
+     {
+      "label": "Thin market",
+      "value": 90,
+      "value_text": "jumps",
+      "color": "warm",
+      "sync": "Small"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So before you trade, check the depth, not just the price. Follow for more trading basics.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "CHECK",
+     "THE DEPTH,",
+     "NOT THE PRICE."
+    ],
+    "syncs": [
+     null,
+     "depth",
+     "price"
+    ]
+   }
+  }
+ ]
+}

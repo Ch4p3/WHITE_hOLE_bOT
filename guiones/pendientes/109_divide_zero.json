@@ -1,0 +1,108 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "Why can't you divide by zero? 🤔",
+ "descripcion": "Division is multiplication backwards. Once you see it that way, dividing by zero breaks instantly.",
+ "hashtags": "#math #maths #science #learn #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Division_by_zero"
+ ],
+ "escenas": [
+  {
+   "texto": "Type six divided by zero into any calculator, and it just gives up. Error. But why?",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "6 ÷ 0 =",
+    "word": "ERROR",
+    "size": 260,
+    "sync": "Error",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Division is just multiplication backwards. Six divided by two is three, because three times two is six.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "6 ÷ 2 = 3",
+      "color": "white",
+      "sync": "Six"
+     },
+     {
+      "text": "because 3 × 2 = 6",
+      "color": "blue",
+      "sync": "because"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So six divided by zero asks: what number, times zero, gives six?",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "6 ÷ 0 = ?",
+      "color": "white",
+      "sync": "asks"
+     },
+     {
+      "text": "? × 0 = 6",
+      "color": "warm",
+      "sync": "times"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "There isn't one. Anything times zero is zero. So there's no answer at all.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "anything × 0 = 0",
+    "word": "NO ANSWER",
+    "size": 200,
+    "sync": "answer",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And zero divided by zero is even worse: every number works, so there's no single answer either.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "0 ÷ 0 = ?",
+      "color": "white",
+      "sync": "zero"
+     },
+     {
+      "text": "1 × 0 = 0 · 7 × 0 = 0 · ...",
+      "color": "blue",
+      "sync": "every"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That's why math calls it undefined. Not infinity, just a question with no answer. Follow for more math that makes sense.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NOT INFINITY.",
+     "JUST",
+     "UNDEFINED."
+    ],
+    "syncs": [
+     "infinity",
+     "question",
+     "undefined"
+    ]
+   }
+  }
+ ]
+}

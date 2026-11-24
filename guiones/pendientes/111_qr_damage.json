@@ -1,0 +1,105 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "Why a torn QR code still works 🔳",
+ "descripcion": "QR codes store extra recovery data using Reed–Solomon error correction. At the highest level, up to about 30% can be damaged and still scan.",
+ "hashtags": "#qrcode #tech #math #science #shorts",
+ "fuentes": [
+  "https://www.qrcode.com/en/about/error_correction.html",
+  "https://en.wikipedia.org/wiki/QR_code"
+ ],
+ "escenas": [
+  {
+   "texto": "Rip off a corner of a QR code, and it still scans. How is that possible?",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "torn, dirty, covered…",
+    "word": "STILL SCANS",
+    "size": 180,
+    "sync": "scans"
+   }
+  },
+  {
+   "texto": "QR codes hide extra backup data inside the pattern, using a math trick called Reed Solomon error correction.",
+   "visual": {
+    "tipo": "card",
+    "title": "REED–SOLOMON",
+    "tag": "ERROR CORRECTION",
+    "panel": {
+     "label": "Extra backup data inside the pattern",
+     "value": "math, not magic",
+     "progress": 0.3,
+     "color": "blue",
+     "sync": "backup",
+     "value_sync": "Reed"
+    }
+   }
+  },
+  {
+   "texto": "At the highest level, up to about thirty percent of the code can be damaged, and the scanner rebuilds the missing part.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Level L",
+      "value": 7,
+      "value_text": "≈7%",
+      "color": "grey",
+      "sync": "highest"
+     },
+     {
+      "label": "Level M",
+      "value": 15,
+      "value_text": "≈15%",
+      "color": "grey"
+     },
+     {
+      "label": "Level Q",
+      "value": 25,
+      "value_text": "≈25%",
+      "color": "blue"
+     },
+     {
+      "label": "Level H",
+      "value": 30,
+      "value_text": "≈30%",
+      "color": "warm",
+      "sync": "thirty"
+     }
+    ],
+    "y": 470
+   }
+  },
+  {
+   "texto": "That's why some brands put a logo right in the middle. The code simply recovers the hidden squares.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "logo in the middle?",
+    "word": "NO PROBLEM",
+    "size": 190,
+    "sync": "logo",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "The same math protects CDs, satellite signals and space probes. Follow for more hidden tech.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "SAME MATH",
+     "AS SPACE",
+     "PROBES."
+    ],
+    "syncs": [
+     null,
+     "satellite",
+     "probes"
+    ]
+   }
+  }
+ ]
+}

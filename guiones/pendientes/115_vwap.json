@@ -1,0 +1,122 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "The 'fair price' big traders use: VWAP 🏦",
+ "descripcion": "VWAP is the average price of the day, weighted by how much was traded at each price. Institutions use it to judge their trades. Educational content, not financial advice.",
+ "hashtags": "#trading #vwap #stocks #daytrading #shorts",
+ "fuentes": [
+  "https://www.investopedia.com/terms/v/vwap.asp"
+ ],
+ "escenas": [
+  {
+   "texto": "Big funds have a secret yardstick for a good price. It's called VWAP.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the big funds' yardstick",
+    "word": "VWAP",
+    "size": 300,
+    "sync": "VWAP",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "It stands for volume weighted average price. Prices where more shares traded count more.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "VOLUME",
+     "WEIGHTED",
+     "AVERAGE PRICE"
+    ],
+    "colors": [
+     "white",
+     "blue",
+     "white"
+    ],
+    "size": 110,
+    "sync": "volume"
+   }
+  },
+  {
+   "texto": "Imagine one hundred shares trade at ten dollars, and three hundred trade at twelve.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "100 shares @ $10",
+      "value": 100,
+      "value_text": "100",
+      "color": "grey",
+      "sync": "hundred"
+     },
+     {
+      "label": "300 shares @ $12",
+      "value": 300,
+      "value_text": "300",
+      "color": "blue",
+      "sync": "three"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The simple average is eleven. But VWAP is eleven fifty, because most of the action happened at twelve.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "(100×10 + 300×12) ÷ 400",
+      "color": "white",
+      "sync": "VWAP"
+     }
+    ],
+    "result": {
+     "value": 11.5,
+     "decimals": 2,
+     "prefix": "$",
+     "label": "VWAP (simple average: $11)",
+     "sync": "fifty",
+     "color": "blue"
+    }
+   }
+  },
+  {
+   "texto": "Institutions use it as a scorecard. Buying below VWAP is usually seen as a better price than average.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "BELOW VWAP",
+     "value": "cheaper",
+     "color": "blue",
+     "sync": "below"
+    },
+    "right": {
+     "label": "ABOVE VWAP",
+     "value": "pricier",
+     "color": "warm",
+     "sync": "average"
+    }
+   }
+  },
+  {
+   "texto": "And it resets every morning, so it tells you the story of today only. Follow for more trading explained.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "RESETS",
+     "EVERY",
+     "MORNING."
+    ],
+    "syncs": [
+     null,
+     "resets",
+     "morning"
+    ]
+   }
+  }
+ ]
+}

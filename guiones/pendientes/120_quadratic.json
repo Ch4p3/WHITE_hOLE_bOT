@@ -1,0 +1,96 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "Where the quadratic formula actually comes from 🧮",
+ "descripcion": "It isn't magic. It comes from one trick called completing the square, and people solved these problems almost 4,000 years ago.",
+ "hashtags": "#math #algebra #maths #learn #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Quadratic_formula",
+  "https://en.wikipedia.org/wiki/Completing_the_square"
+ ],
+ "escenas": [
+  {
+   "texto": "Everyone memorizes this formula in school. Almost nobody is told where it comes from.",
+   "visual": {
+    "tipo": "formula",
+    "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+    "size": 64,
+    "sync": "formula",
+    "sub": "but where does it come from?",
+    "sub_sync": "nobody"
+   }
+  },
+  {
+   "texto": "Start with any quadratic equation. a x squared, plus b x, plus c, equals zero.",
+   "visual": {
+    "tipo": "formula",
+    "tex": "ax^2+bx+c=0",
+    "size": 70,
+    "sync": "Start"
+   }
+  },
+  {
+   "texto": "Divide by a, and move c to the other side.",
+   "visual": {
+    "tipo": "formula",
+    "tex": "x^2+\\frac{b}{a}x=-\\frac{c}{a}",
+    "size": 66,
+    "sync": "Divide"
+   }
+  },
+  {
+   "texto": "Now the key trick: add the same number to both sides, so the left becomes a perfect square. It's called completing the square.",
+   "visual": {
+    "tipo": "formula",
+    "tex": "\\left(x+\\frac{b}{2a}\\right)^2=\\frac{b^2-4ac}{4a^2}",
+    "size": 56,
+    "sync": "trick",
+    "sub": "completing the square",
+    "sub_sync": "completing"
+   }
+  },
+  {
+   "texto": "Take the square root of both sides, keep both signs, and solve for x. That's the whole formula.",
+   "visual": {
+    "tipo": "formula",
+    "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+    "size": 64,
+    "sync": "root",
+    "sub": "that's it",
+    "sub_sync": "whole",
+    "sub_color": "warm"
+   }
+  },
+  {
+   "texto": "Babylonian scribes were already solving these problems with the same idea, almost four thousand years ago.",
+   "visual": {
+    "tipo": "counter",
+    "to": 4000,
+    "label": "years of completing the square",
+    "note": "Babylonian clay tablets",
+    "note_sync": "Babylonian",
+    "sync": "four"
+   }
+  },
+  {
+   "texto": "So it's not magic. It's one clever trick. Follow for more math that finally makes sense.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NOT MAGIC.",
+     "ONE",
+     "CLEVER TRICK."
+    ],
+    "syncs": [
+     null,
+     "one",
+     "clever"
+    ]
+   }
+  }
+ ]
+}

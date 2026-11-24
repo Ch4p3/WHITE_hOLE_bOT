@@ -1,0 +1,100 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "Incognito mode is not as private as you think 🕵️",
+ "descripcion": "Incognito only stops your own browser from saving history. Websites, your internet provider and the Wi-Fi owner can still see your traffic.",
+ "hashtags": "#privacy #tech #internet #chrome #shorts",
+ "fuentes": [
+  "https://support.google.com/chrome/answer/9845881",
+  "https://en.wikipedia.org/wiki/Private_browsing"
+ ],
+ "escenas": [
+  {
+   "texto": "You open an incognito window and feel invisible. You're not.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "incognito mode",
+    "word": "NOT INVISIBLE",
+    "size": 160,
+    "sync": "not",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Incognito only does one thing: your browser doesn't save your history, cookies or form data after you close it.",
+   "visual": {
+    "tipo": "card",
+    "title": "INCOGNITO",
+    "tag": "WHAT IT DOES",
+    "panel": {
+     "label": "Hides it from",
+     "value": "people using your device",
+     "progress": 0.25,
+     "color": "blue",
+     "sync": "history",
+     "value_sync": "cookies"
+    }
+   }
+  },
+  {
+   "texto": "But the websites you visit still see you. Your internet provider still sees where you go. And so can the owner of the Wi-Fi network, like your school or job.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Websites you visit",
+      "value": 100,
+      "value_text": "see you",
+      "color": "warm",
+      "sync": "websites"
+     },
+     {
+      "label": "Your internet provider",
+      "value": 100,
+      "value_text": "sees you",
+      "color": "warm",
+      "sync": "provider"
+     },
+     {
+      "label": "Wi-Fi owner (school, job)",
+      "value": 100,
+      "value_text": "can see",
+      "color": "warm",
+      "sync": "owner"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And if you log into an account, that site knows exactly who you are.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "log in and",
+    "word": "IT'S YOU",
+    "size": 220,
+    "sync": "log",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Incognito is for hiding things from people who use your device. Not from the internet. Follow for more tech truths.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PRIVATE",
+     "FROM YOUR FAMILY.",
+     "NOT THE INTERNET."
+    ],
+    "syncs": [
+     null,
+     "device",
+     "internet"
+    ]
+   }
+  }
+ ]
+}

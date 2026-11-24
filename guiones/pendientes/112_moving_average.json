@@ -1,0 +1,116 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "The one line every trader looks at 📈",
+ "descripcion": "A moving average smooths out price noise by averaging the last N prices. Here's what it really shows. Educational content, not financial advice.",
+ "hashtags": "#trading #stocks #crypto #investing #shorts",
+ "fuentes": [
+  "https://www.investopedia.com/terms/m/movingaverage.asp",
+  "https://www.investopedia.com/terms/g/goldencross.asp"
+ ],
+ "escenas": [
+  {
+   "texto": "Open any trading chart, and you'll see a smooth line snaking through the price. It's called a moving average.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "that smooth line",
+    "word": "MOVING AVERAGE",
+    "size": 150,
+    "sync": "moving"
+   }
+  },
+  {
+   "texto": "It's simple. Take the last five closing prices, add them up, and divide by five.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "(10 + 12 + 11 + 13 + 14) ÷ 5",
+      "color": "white",
+      "sync": "five"
+     }
+    ],
+    "result": {
+     "value": 12,
+     "decimals": 0,
+     "prefix": "$",
+     "label": "5-day moving average",
+     "sync": "divide",
+     "color": "blue"
+    }
+   }
+  },
+  {
+   "texto": "Tomorrow, drop the oldest price and add the newest. The average moves with the market.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "every day",
+    "word": "−1 OLD +1 NEW",
+    "size": 140,
+    "sync": "drop",
+    "sub": "the average slides forward"
+   }
+  },
+  {
+   "texto": "Why bother? Prices jump around all day. The average filters out that noise, so you can see the trend.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "RAW PRICE",
+     "value": "noisy",
+     "color": "warm",
+     "sync": "jump"
+    },
+    "right": {
+     "label": "AVERAGE",
+     "value": "trend",
+     "color": "blue",
+     "sync": "trend"
+    }
+   }
+  },
+  {
+   "texto": "Many traders watch the fifty day and the two hundred day averages. When the fast one crosses above the slow one, they call it a golden cross.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FAST",
+     "value": "50-day",
+     "color": "blue",
+     "sync": "fifty"
+    },
+    "right": {
+     "label": "SLOW",
+     "value": "200-day",
+     "color": "warm",
+     "sync": "hundred"
+    },
+    "badge": {
+     "top": "",
+     "bottom": "X",
+     "sync": "golden"
+    }
+   }
+  },
+  {
+   "texto": "But remember, it's built from past prices. It shows where the market has been, not where it's going. Follow for more trading basics.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "IT SHOWS",
+     "THE PAST,",
+     "NOT THE FUTURE."
+    ],
+    "syncs": [
+     null,
+     "past",
+     "going"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "How your phone knows where you are with no internet 🛰️",
+ "descripcion": "GPS is a one-way radio signal from satellites. Your phone just listens, measures timing from at least four satellites, and calculates its position.",
+ "hashtags": "#gps #tech #space #science #shorts",
+ "fuentes": [
+  "https://www.gps.gov/systems/gps/space/",
+  "https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System"
+ ],
+ "escenas": [
+  {
+   "texto": "Turn off your data, and your phone still knows exactly where you are. How?",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "no internet, still",
+    "word": "LOCATED",
+    "size": 230,
+    "sync": "exactly"
+   }
+  },
+  {
+   "texto": "GPS doesn't use the internet at all. Satellites about twenty thousand kilometers up are constantly broadcasting the time.",
+   "visual": {
+    "tipo": "counter",
+    "to": 20200,
+    "suffix": " km",
+    "label": "GPS satellite altitude",
+    "note": "broadcasting the time, nonstop",
+    "note_sync": "broadcasting",
+    "sync": "twenty"
+   }
+  },
+  {
+   "texto": "Your phone just listens. It measures how long each signal took to arrive, and turns that into a distance.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "distance = time × speed of light",
+      "color": "white",
+      "sync": "measures"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "With signals from at least four satellites, it can calculate your position on Earth.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "minimum satellites",
+    "word": "4",
+    "size": 340,
+    "sync": "four",
+    "sub": "to pin your position"
+   }
+  },
+  {
+   "texto": "The timing has to be insanely precise. Satellite clocks even need corrections for Einstein's relativity, or GPS would drift by kilometers every day.",
+   "visual": {
+    "tipo": "card",
+    "title": "RELATIVITY",
+    "tag": "EINSTEIN",
+    "panel": {
+     "label": "Without correction, error grows by",
+     "value": "≈ 10 km a day",
+     "progress": 0.6,
+     "color": "warm",
+     "sync": "Einstein",
+     "value_sync": "kilometers"
+    }
+   }
+  },
+  {
+   "texto": "So your map may need data, but your location doesn't. Follow for more tech secrets.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "THE MAP",
+     "NEEDS DATA.",
+     "GPS DOESN'T."
+    ],
+    "syncs": [
+     null,
+     "data",
+     "location"
+    ]
+   }
+  }
+ ]
+}

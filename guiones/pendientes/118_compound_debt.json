@@ -1,0 +1,124 @@
+{
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "velocidad": 0.95,
+ "titulo": "How a $1,000 card balance grows without you buying anything 💳",
+ "descripcion": "Credit card interest compounds: you pay interest on interest. A 2% monthly rate turns $1,000 into about $1,268 in a year. Educational content, not financial advice.",
+ "hashtags": "#money #creditcard #finance #debt #shorts",
+ "fuentes": [
+  "https://www.investopedia.com/terms/c/compoundinterest.asp",
+  "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/"
+ ],
+ "escenas": [
+  {
+   "texto": "You owe one thousand dollars on a credit card. You don't buy anything else. A year later, you owe almost thirteen hundred.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "YOU OWED",
+     "value": "$1,000",
+     "color": "blue"
+    },
+    "right": {
+     "label": "ONE YEAR LATER",
+     "value": "$1,268",
+     "color": "warm",
+     "sync": "later"
+    }
+   }
+  },
+  {
+   "texto": "The trick is compound interest. Every month, interest is added to your balance. Then next month, you pay interest on that interest too.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the trick",
+    "word": "INTEREST ON INTEREST",
+    "size": 120,
+    "sync": "compound",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "With two percent a month, it doesn't add up to twenty four percent a year. It's closer to twenty seven.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "1.02¹² − 1",
+      "color": "white",
+      "sync": "two"
+     }
+    ],
+    "result": {
+     "value": 26.8,
+     "decimals": 1,
+     "suffix": "%",
+     "label": "real yearly cost",
+     "sync": "twenty",
+     "color": "warm"
+    }
+   }
+  },
+  {
+   "texto": "And minimum payments are designed to mostly cover interest, so the debt barely shrinks.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Minimum payment → interest",
+      "value": 75,
+      "value_text": "most of it",
+      "color": "warm",
+      "sync": "minimum"
+     },
+     {
+      "label": "Minimum payment → your debt",
+      "value": 25,
+      "value_text": "a little",
+      "color": "blue",
+      "sync": "shrinks"
+     }
+    ],
+    "note": "illustrative",
+    "note_color": "grey"
+   }
+  },
+  {
+   "texto": "The good news: compound interest works for you too, when you save instead of owe.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "OWING",
+     "value": "against you",
+     "color": "warm",
+     "sync": "good"
+    },
+    "right": {
+     "label": "SAVING",
+     "value": "for you",
+     "color": "blue",
+     "sync": "save"
+    }
+   }
+  },
+  {
+   "texto": "Pay the full balance when you can, and compounding stops working against you. Follow for more money explained.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PAY",
+     "THE FULL",
+     "BALANCE."
+    ],
+    "syncs": [
+     null,
+     "full",
+     "balance"
+    ]
+   }
+  }
+ ]
+}

@@ -603,6 +603,8 @@ def v_formula(img, d, t, sc, p):
 
 def v_flujo(img, d, t, sc, p):
     steps = p["pasos"]; n = len(steps)
+    if p.get("titulo"):
+        slide(d, (W / 2, 250), p["titulo"], 60, col(p.get("color"), GREY), t, 0.1, weight="black")
     bw, bh = 250, 130
     span = 1660
     gap = (span - n * bw) / (n - 1)

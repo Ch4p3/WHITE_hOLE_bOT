@@ -340,7 +340,7 @@
    "visual": {
     "tipo": "prediccion",
     "contexto": "The cat sat on the",
-    "sync": "score",
+    "sync": "doesn't",
     "opciones": [
      [
       "mat",
@@ -501,9 +501,10 @@
     "to": 15,
     "suffix": " trillion",
     "label": "tokens of training text",
-    "sync": "fifteen",
+    "sync": "trained",
     "note": "≈ 100 million books",
-    "note_sync": "hundred"
+    "note_sync": "hundred",
+    "pre": "Llama 3's training data"
    }
   },
   {
@@ -581,7 +582,7 @@
     "tipo": "formula",
     "tex": "a_1 w_1 + a_2 w_2 + a_3 w_3 + \\cdots",
     "size": 72,
-    "sync": "multiply",
+    "sync": "operation",
     "sub": "multiply · add · repeat",
     "sub_sync": "running"
    }
@@ -614,7 +615,7 @@
       "value": 80,
       "value_text": "80 GB",
       "color": "ice",
-      "sync": "eighty"
+      "sync": "memory"
      },
      {
       "label": "Llama 3.1 405B at 16-bit",
@@ -761,7 +762,7 @@
    "visual": {
     "tipo": "prediccion",
     "contexto": "That paper was written by",
-    "sync": "scores",
+    "sync": "rare",
     "elegido": 2,
     "elegido_sync": "pick",
     "opciones": [
@@ -837,7 +838,8 @@
      }
     ],
     "bucle_sync": "repeated",
-    "bucle": "repeat, fast"
+    "bucle": "repeat, fast",
+    "titulo": "A FILE OF NUMBERS + A SMALL PROGRAM + FAST CHIPS"
    }
   },
   {

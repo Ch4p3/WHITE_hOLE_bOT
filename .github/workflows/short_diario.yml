@@ -95,6 +95,20 @@ jobs:
           TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
         run: python scripts/daily.py
 
+      - name: Guardar el video en la rama previews (para subirlo a YouTube/TikTok desde el navegador)
+        if: ${{ !inputs.solo_verificar_youtube }}
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          n=$(ls guiones/publicados | sort | tail -1); n=${n%.json}
+          cp out/short.mp4 /tmp/$n.mp4; cp guiones/publicados/$n.json /tmp/$n.json
+          git stash -q -u || true
+          git fetch -q origin previews && git checkout -q previews
+          mkdir -p diarios && cp /tmp/$n.mp4 /tmp/$n.json diarios/
+          ls -t diarios/*.mp4 | tail -n +16 | xargs -r git rm -q
+          git add diarios && git commit -qm "Short diario $n" && git push -q origin previews
+          git checkout -q main && git stash pop -q || true
+
       - name: Guardar el progreso de la cola
         if: ${{ !inputs.solo_verificar_youtube }}
         run: |

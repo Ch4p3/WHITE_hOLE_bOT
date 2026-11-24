@@ -24,8 +24,8 @@
     "src": "commons:File:Hippopotamus, South Luangwa National Park (51866473429).jpg",
     "modo": "cover",
     "foco": [
-     0.62,
-     0.45
+     0.72,
+     0.35
     ],
     "zoom": [
      1.0,
@@ -132,7 +132,7 @@
     "color": "warm",
     "titulo_sync": "depredador",
     "chip": "Lagos de la Hacienda Nápoles",
-    "chip_y": 1110,
+    "chip_y": 1085,
     "chip_color": "blue"
    }
   },
@@ -200,7 +200,8 @@
     ],
     "chip": "De noche salen a comer",
     "chip_sync": "noche",
-    "chip_color": "blue"
+    "chip_color": "blue",
+    "brillo": 1.7
    }
   },
   {
@@ -361,7 +362,7 @@
      "white"
     ],
     "syncs": [
-     "sacrificarlos",
+     "harías",
      "esterilizarlos",
      "dejarlos"
     ],

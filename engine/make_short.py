@@ -507,6 +507,9 @@ def v_foto(img, d, t, sc, p):
         boxh = int(W / aspect)
         cx = clamp(fx * fg.width, cw / 2, fg.width - cw / 2); cy = clamp(fy * fg.height, chh / 2, fg.height - chh / 2)
         crop = fg.crop((int(cx - cw / 2), int(cy - chh / 2), int(cx + cw / 2), int(cy + chh / 2))).resize((W, boxh), Image.BILINEAR)
+        if p.get("brillo"):
+            from PIL import ImageEnhance
+            crop = ImageEnhance.Brightness(crop).enhance(float(p["brillo"]))
         frame = blur.copy()
         y0 = int(p.get("y", 760) - boxh / 2)
         frame.paste(crop, (0, y0))
@@ -521,6 +524,9 @@ def v_foto(img, d, t, sc, p):
         cw, ch = W * 1.3 / z, H * 1.3 / z
         cx = clamp(fx * im.width, cw / 2, im.width - cw / 2); cy = clamp(fy * im.height, ch / 2, im.height - ch / 2)
         frame = im.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)
+        if p.get("brillo"):
+            from PIL import ImageEnhance
+            frame = ImageEnhance.Brightness(frame).enhance(float(p["brillo"]))
         frame.paste((4, 6, 14), mask=_shade())
     kin = ease_out(prog(t, 0.0, 0.35))
     if kin < 1: frame = Image.blend(img, frame, kin)

@@ -44,9 +44,11 @@ jobs:
           [ -f voices-v1.0.bin ] || curl -sSfL -o voices-v1.0.bin $B/voices-v1.0.bin
           ls -la
       - name: Generar video en español
+        if: ${{ inputs.guion_es != '' }}
         run: mkdir -p out && python engine/make_short.py "${{ inputs.guion_es }}" out/es.mp4 --canal "White Hole"
       - name: Generar video en inglés
-        run: python engine/make_short.py "${{ inputs.guion_en }}" out/en.mp4 --canal "@whitehole"
+        if: ${{ inputs.guion_en != '' }}
+        run: mkdir -p out && python engine/make_short.py "${{ inputs.guion_en }}" out/en.mp4 --canal "@whitehole"
       - name: Publicar y enviar a Telegram
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -58,14 +60,15 @@ jobs:
           TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
         run: |
           P=""; [ "${{ inputs.publicar }}" = "true" ] && P="--publicar"
-          python scripts/especial.py out/es.mp4 "${{ inputs.guion_es }}" --destino facebook $P
-          python scripts/especial.py out/en.mp4 "${{ inputs.guion_en }}" --destino tiktok $P
+          [ -n "${{ inputs.guion_es }}" ] && python scripts/especial.py out/es.mp4 "${{ inputs.guion_es }}" --destino facebook $P || true
+          [ -n "${{ inputs.guion_en }}" ] && python scripts/especial.py out/en.mp4 "${{ inputs.guion_en }}" --destino tiktok $P || true
       - name: Guardar vistas previas en la rama previews
         run: |
           git config user.name "white-hole-bot"
           git config user.email "white-hole-bot@users.noreply.github.com"
-          cp out/es.mp4 /tmp/especial_es.mp4; cp out/en.mp4 /tmp/especial_en.mp4
+          n=$(basename "${{ inputs.guion_en }}" .json); [ -n "$n" ] || n=$(basename "${{ inputs.guion_es }}" .json)
+          cp out/es.mp4 /tmp/especial_es.mp4 2>/dev/null || true; cp out/en.mp4 /tmp/especial_en.mp4 2>/dev/null || true
           cp out/*.creditos.json /tmp/ 2>/dev/null || true
           git fetch -q origin previews && git checkout -q previews
-          cp /tmp/especial_es.mp4 /tmp/especial_en.mp4 . ; cp /tmp/*.creditos.json . 2>/dev/null || true
-          git add especial_*.mp4 *.creditos.json 2>/dev/null; git commit -qm "Vista previa especial" && git push -q origin previews
+          for f in /tmp/especial_es.mp4 /tmp/especial_en.mp4; do [ -f "$f" ] && cp "$f" "${n}_$(basename $f)"; done
+          git add *.mp4 2>/dev/null; git commit -qm "Vista previa especial $n" && git push -q origin previews

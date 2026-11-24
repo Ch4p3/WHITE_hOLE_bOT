@@ -549,9 +549,178 @@ def v_foto(img, d, t, sc, p):
     import imagenes
     d.text((W // 2, 1868), imagenes.credito_corto(info), font=font(24, "semi"), fill=(170, 178, 196), anchor="mm")
 
+# ---------------------------------------------------------------- plantillas de matemáticas
+def _isprime(n):
+    if n < 2: return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0: return False
+        i += 1
+    return True
+
+def v_primos(img, d, t, sc, p):
+    """Cuadrícula de números donde los primos se encienden uno a uno."""
+    n, cols = int(p.get("n", 100)), int(p.get("cols", 10))
+    rows = (n + cols - 1) // cols
+    cell = min(96, 940 // cols, 860 // rows)
+    x0 = (W - cell * cols) / 2; y0 = p.get("y", 800) - cell * rows / 2
+    st = at(sc, p.get("sync"), 0.3); dur = p.get("dur", 3.0)
+    primes = [k for k in range(1, n + 1) if _isprime(k)]
+    order = {pr: i for i, pr in enumerate(primes)}
+    fsize = int(cell * 0.42)
+    for k in range(1, n + 1):
+        r, c = (k - 1) // cols, (k - 1) % cols
+        cx, cy = x0 + c * cell + cell / 2, y0 + r * cell + cell / 2
+        ka = ease_out(prog(t, 0.02 * (k % 37) * 0.3, 0.4))
+        if ka <= 0: continue
+        if k in order:
+            kp = back(prog(t, st + dur * order[k] / max(1, len(primes)), 0.35))
+            if kp > 0:
+                rr = cell * 0.46 * (0.6 + 0.4 * kp)
+                d.rounded_rectangle([cx - rr, cy - rr, cx + rr, cy + rr], int(cell * 0.18), fill=col(p.get("color"), BLUE))
+                text(d, (cx, cy), str(k), fsize, BG, "black")
+                continue
+        dim = 0.35 if t > st + 0.2 and k not in order else 1.0
+        text(d, (cx, cy), str(k), fsize, mix(BG, GREY if k not in order else WHITE, ka * dim), "bold")
+    if p.get("titulo"):
+        slide(d, (W // 2, y0 - 70), p["titulo"], 58, WHITE, t, 0.0, weight="black", dy=30)
+
+_TEX = {}
+def tex_img(tex, size, color=(244, 246, 251)):
+    key = (tex, size, color)
+    if key not in _TEX:
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        fig = plt.figure(figsize=(0.01, 0.01), dpi=100)
+        fig.text(0, 0, f"${tex}$", fontsize=size, color=tuple(c / 255 for c in color))
+        import io
+        buf = io.BytesIO()
+        fig.savefig(buf, dpi=100, transparent=True, bbox_inches="tight", pad_inches=0.05)
+        plt.close(fig)
+        buf.seek(0)
+        _TEX[key] = Image.open(buf).convert("RGBA")
+    return _TEX[key]
+
+def v_formula(img, d, t, sc, p):
+    """Fórmula matemática (sintaxis tipo LaTeX de matplotlib) que aparece con un pop."""
+    y = p.get("y", 720)
+    if p.get("pre"):
+        slide(d, (W // 2, y - 260), p["pre"], 56, GREY, t, 0.0, weight="xbold", dy=30)
+    st = at(sc, p.get("sync"), 0.3)
+    k = back(prog(t, st, 0.5))
+    if k > 0:
+        im = tex_img(p["tex"], p.get("size", 64), col(p.get("color"), WHITE))
+        sc_k = min(1.0, 980 / im.width) * (0.6 + 0.4 * k)
+        im2 = im.resize((max(1, int(im.width * sc_k)), max(1, int(im.height * sc_k))), Image.LANCZOS)
+        img.paste(im2, (int(W / 2 - im2.width / 2), int(y - im2.height / 2)), im2)
+    if p.get("sub"):
+        slide(d, (W // 2, y + 230), p["sub"], 60, col(p.get("sub_color"), BLUE), t, at(sc, p.get("sub_sync"), st + 0.6), weight="black")
+    if p.get("sub2"):
+        slide(d, (W // 2, y + 320), p["sub2"], 44, GREY, t, at(sc, p.get("sub2_sync"), st + 0.9), weight="semi")
+
+_ZETA = {}
+def _zeta_curve(t0, t1, step=0.02):
+    key = (t0, t1, step)
+    if key not in _ZETA:
+        import mpmath
+        ts = np.arange(t0, t1 + 1e-9, step)
+        zs = np.array([complex(mpmath.zeta(mpmath.mpc(0.5, float(x)))) for x in ts])
+        zeros = []
+        n = 1
+        while True:
+            z = float(mpmath.zetazero(n).imag)
+            if z > t1: break
+            if z >= t0: zeros.append(z)
+            n += 1
+        _ZETA[key] = (ts, zs, zeros)
+    return _ZETA[key]
+
+def v_espiral(img, d, t, sc, p):
+    """Dibuja ζ(1/2 + it) en el plano complejo; marca cada paso por el origen (un cero)."""
+    t0, t1 = p.get("desde", 0.0), p.get("hasta", 35.0)
+    ts, zs, zeros = _zeta_curve(t0, t1)
+    cx, cy, S = W / 2 + p.get("dx", 60), p.get("y", 780), p.get("escala", 150)
+    P = lambda z: (cx + z.real * S, cy - z.imag * S)
+    ka = ease_out(prog(t, 0.0, 0.5))
+    axc = mix(BG, (55, 68, 104), ka)
+    d.line([60, cy, W - 60, cy], fill=axc, width=3); d.line([cx, 330, cx, 1290], fill=axc, width=3)
+    text(d, (W - 90, cy - 30), "Re", 34, mix(BG, GREY, ka), "bold"); text(d, (cx + 40, 350), "Im", 34, mix(BG, GREY, ka), "bold")
+    st = at(sc, p.get("sync"), 0.4); dur = p.get("dur", max(2.0, sc["dur"] - st - 0.6))
+    k = ease_inout(prog(t, st, dur)) if p.get("suave", True) else prog(t, st, dur)
+    m = max(2, int(len(ts) * k))
+    pts = [P(z) for z in zs[:m]]
+    pts = [(clamp(x, 20, W - 20), clamp(y, 300, 1330)) for x, y in pts]
+    if len(pts) > 1:
+        seg = 40
+        for i in range(0, len(pts) - 1, seg):
+            f = i / max(1, len(ts))
+            d.line(pts[i:i + seg + 1], fill=mix((60, 110, 210), ICE, f), width=6, joint="curve")
+        hx, hy = pts[-1]
+        d.ellipse([hx - 13, hy - 13, hx + 13, hy + 13], fill=WARM, outline=WHITE, width=3)
+    tcur = ts[m - 1]
+    hit = [zz for zz in zeros if zz <= tcur]
+    for i, zz in enumerate(hit):
+        age = tcur - zz
+        if age < 2.5:
+            rr = 20 + 60 * clamp(age / 2.5)
+            d.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], outline=mix(WARM, BG, clamp(age / 2.5)), width=6)
+    d.ellipse([cx - 9, cy - 9, cx + 9, cy + 9], fill=WHITE)
+    if p.get("contador", True) and k > 0:
+        text(d, (90, 1240), f"t = {tcur:5.2f}", 46, ICE, "black", "lm")
+        text(d, (W - 90, 1240), f"{'zeros' if LANG['code'] != 'es' else 'ceros'}: {len(hit)}", 46, WARM, "black", "rm")
+    if p.get("titulo"):
+        slide(d, (W // 2, 330), p["titulo"], 60, WHITE, t, 0.0, weight="black", dy=30)
+
+def v_franja(img, d, t, sc, p):
+    """Franja crítica: eje Re de -0.25 a 1.25, línea Re=1/2 y ceros como puntos sobre ella."""
+    import mpmath
+    nz = int(p.get("n", 16))
+    if "_zz" not in _ZETA:
+        _ZETA["_zz"] = [float(mpmath.zetazero(i).imag) for i in range(1, 41)]
+    zz = _ZETA["_zz"][:nz]
+    xL, xR = 110, W - 110
+    X = lambda re: xL + (re + 0.25) / 1.5 * (xR - xL)
+    yb, yt = 1280, 430
+    tmax = zz[-1] * 1.06
+    Y = lambda im: yb - im / tmax * (yb - yt)
+    ka = ease_out(prog(t, 0.0, 0.6))
+    b0, b1 = 0.0, 1.0
+    band = p.get("banda")
+    if band:
+        kb = ease_inout(prog(t, at(sc, band.get("sync"), 1.0), band.get("dur", 1.6)))
+        b0, b1 = band["desde"][0] + (band["hasta"][0] - band["desde"][0]) * kb, band["desde"][1] + (band["hasta"][1] - band["desde"][1]) * kb
+    d.rectangle([X(0), yt, X(1), yb], fill=mix(BG, (26, 34, 64), ka))
+    if band:
+        d.rectangle([X(b0), yt, X(b1), yb], fill=mix(BG, (60, 40, 30), ka), outline=mix(BG, WARM, ka), width=4)
+    d.line([X(0), yb, X(0), yt], fill=mix(BG, GREY, ka), width=3)
+    d.line([X(1), yb, X(1), yt], fill=mix(BG, GREY, ka), width=3)
+    kl = ease_out(prog(t, at(sc, p.get("linea_sync"), 0.5), 0.8))
+    if kl > 0:
+        d.line([X(0.5), yb, X(0.5), yb - (yb - yt) * kl], fill=BLUE, width=8)
+        text(d, (X(0.5), yt - 40), "Re = ½", 46, BLUE, "black")
+    d.line([X(-0.25), yb, X(1.25), yb], fill=mix(BG, (70, 84, 120), ka), width=3)
+    for v, lab in [(0, "0"), (0.5, "½"), (1, "1")]:
+        text(d, (X(v), yb + 44), lab, 40, mix(BG, GREY, ka), "bold")
+    if band and kb > 0.05:
+        text(d, (X(b0) - 6, yb + 96), band.get("label0", ""), 36, WARM, "black", "rm")
+        text(d, (X(b1) + 6, yb + 96), band.get("label1", ""), 36, WARM, "black", "lm")
+    st = at(sc, p.get("sync"), 0.8)
+    for i, z in enumerate(zz):
+        kz = back(prog(t, st + i * p.get("paso", 0.12), 0.35))
+        if kz <= 0: continue
+        r = 13 * kz
+        x, y = X(0.5), Y(z)
+        d.ellipse([x - r, y - r, x + r, y + r], fill=WARM, outline=WHITE, width=3)
+        if i < p.get("etiquetas", 5):
+            text(d, (x + 30, y), f"{z:.2f}i", 32, ICE, "bold", "lm")
+    if p.get("titulo"):
+        slide(d, (W // 2, 300), p["titulo"], 56, WHITE, t, 0.0, weight="black", dy=30)
+
 VISUALS = {"title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
            "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
-           "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto}
+           "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto,
+           "primos": v_primos, "formula": v_formula, "espiral": v_espiral, "franja": v_franja}
 
 # ---------------------------------------------------------------- subtítulos
 def captions(d, t, sc):

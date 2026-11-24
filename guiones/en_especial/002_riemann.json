@@ -1,0 +1,280 @@
+{
+ "idioma": "en",
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "The $1,000,000 math problem AI just cracked open 🤯",
+ "descripcion": "The Riemann Hypothesis has been unsolved since 1859 and is worth $1,000,000. In 2026, AI made the biggest progress in decades. Here's what it says, what just happened, and what would change if someone proves it.",
+ "hashtags": "#math #riemannhypothesis #primes #science #shorts",
+ "fuentes": [
+  "Clay Mathematics Institute – Millennium Prize Problems: https://www.claymath.org/millennium-problems/",
+  "Quanta Magazine (Oct 2026), quasi-Riemann hypothesis: https://quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019",
+  "Anthropic (Aug 2026), zeros on the critical line 41.6% → 67.2%: https://www.anthropic.com/news/riemann-zeta",
+  "Riemann hypothesis (numerical checks): https://en.wikipedia.org/wiki/Riemann_hypothesis",
+  "Visuals computed with mpmath (zeta function and its zeros)"
+ ],
+ "escenas": [
+  {
+   "texto": "In twenty twenty six, artificial intelligence made the biggest progress in decades on a math problem worth one million dollars. A problem nobody has solved since eighteen fifty nine.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "UNSOLVED SINCE 1859",
+    "word": "$1,000,000",
+    "size": 200,
+    "sync": "progress",
+    "sub": "for one proof",
+    "sub2": "and AI just got closer than ever",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "It's called the Riemann Hypothesis. And it's about the most mysterious numbers in all of math: the primes.",
+   "visual": {
+    "tipo": "title",
+    "pre": "THE",
+    "lines": [
+     "RIEMANN",
+     "HYPOTHESIS"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "size": 150,
+    "sync": "Riemann",
+    "y": 680
+   }
+  },
+  {
+   "texto": "Primes are numbers you can only divide by one and by themselves. Two, three, five, seven, eleven, thirteen…",
+   "visual": {
+    "tipo": "primos",
+    "n": 100,
+    "cols": 10,
+    "sync": "Two",
+    "dur": 5.0,
+    "titulo": "The primes up to 100"
+   }
+  },
+  {
+   "texto": "Every whole number is built by multiplying primes together. They are the atoms of arithmetic.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "12 = 2 × 2 × 3",
+      "color": "white",
+      "sync": "Every"
+     },
+     {
+      "text": "30 = 2 × 3 × 5",
+      "color": "white",
+      "sync": "built"
+     },
+     {
+      "text": "1001 = 7 × 11 × 13",
+      "color": "blue",
+      "sync": "multiplying"
+     },
+     {
+      "text": "the atoms of arithmetic",
+      "color": "warm",
+      "sync": "atoms",
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But they show up with no obvious pattern. Sometimes two are side by side, sometimes there are huge gaps between them.",
+   "visual": {
+    "tipo": "primos",
+    "n": 200,
+    "cols": 14,
+    "sync": "show",
+    "dur": 6.0,
+    "color": "warm",
+    "titulo": "No obvious pattern"
+   }
+  },
+  {
+   "texto": "Then, in eighteen fifty nine, Bernhard Riemann found a hidden map of the primes. A formula called the zeta function.",
+   "visual": {
+    "tipo": "formula",
+    "pre": "Riemann, 1859",
+    "tex": "\\zeta(s)=1+\\frac{1}{2^s}+\\frac{1}{3^s}+\\frac{1}{4^s}+\\cdots",
+    "size": 54,
+    "sync": "map",
+    "sub": "the zeta function",
+    "sub_sync": "zeta"
+   }
+  },
+  {
+   "texto": "Feed it numbers along one special line, and the answers draw this strange spiral.",
+   "visual": {
+    "tipo": "espiral",
+    "desde": 0.0,
+    "hasta": 14.2,
+    "sync": "Feed",
+    "escala": 170,
+    "titulo": "ζ(½ + it)"
+   }
+  },
+  {
+   "texto": "Every time the spiral passes through the center, the function equals zero. And each of those zeros adds a wave that decides exactly where the primes fall.",
+   "visual": {
+    "tipo": "espiral",
+    "desde": 0.0,
+    "hasta": 50.0,
+    "sync": "Every",
+    "escala": 130,
+    "titulo": "Each pass through 0 = a zero"
+   }
+  },
+  {
+   "texto": "Riemann's guess was simple and bold: all of these important zeros sit on one single line, where the real part is exactly one half.",
+   "visual": {
+    "tipo": "franja",
+    "n": 18,
+    "sync": "zeros",
+    "linea_sync": "line",
+    "titulo": "The critical line"
+   }
+  },
+  {
+   "texto": "Computers have checked the first ten trillion zeros. Every single one is right on that line.",
+   "visual": {
+    "tipo": "counter",
+    "to": 10000000000000,
+    "label": "zeros checked",
+    "note": "all of them on the line",
+    "note_sync": "Every",
+    "sync": "checked",
+    "size": 150,
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "But checking is not proving. Just one zero off the line would reveal a pattern in the primes that no one has ever seen.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "checking ≠ proving",
+    "word": "JUST ONE",
+    "size": 230,
+    "sync": "one",
+    "sub": "zero off the line",
+    "sub2": "would change everything",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And this is where twenty twenty six changed the story. In August, an unreleased AI model from Anthropic raised the share of zeros proven to be on the line, from forty one point six percent to sixty seven point two percent.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Proven on the line · before",
+      "value": 41.6,
+      "value_text": "41.6%",
+      "color": "grey",
+      "sync": "story"
+     },
+     {
+      "label": "Proven on the line · Aug 2026",
+      "value": 67.2,
+      "value_text": "67.2%",
+      "color": "blue",
+      "sync": "sixty"
+     }
+    ],
+    "y": 560,
+    "note": "verified in Lean",
+    "note_sync": "sixty",
+    "note_color": "warm"
+   }
+  },
+  {
+   "texto": "Then in October, OpenAI announced a proof of a weaker version, called the quasi Riemann hypothesis: every zero trapped inside a narrower strip. Experts are still checking the details.",
+   "visual": {
+    "tipo": "franja",
+    "n": 18,
+    "sync": 0.2,
+    "paso": 0.03,
+    "linea_sync": 0.0,
+    "titulo": "Quasi-RH: a narrower strip",
+    "banda": {
+     "desde": [
+      0.0,
+      1.0
+     ],
+     "hasta": [
+      0.0833,
+      0.9167
+     ],
+     "sync": "trapped",
+     "dur": 1.8,
+     "label0": "1/12",
+     "label1": "11/12"
+    }
+   }
+  },
+  {
+   "texto": "So what would change in your life if someone proves it? First, your bank account is safe. A proof would not break internet encryption.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MYTH",
+     "value": "breaks",
+     "sub": "internet encryption",
+     "color": "warm",
+     "sync": "change"
+    },
+    "right": {
+     "label": "REALITY",
+     "value": "safe",
+     "sub": "your bank is fine",
+     "color": "blue",
+     "sync": "safe"
+    }
+   }
+  },
+  {
+   "texto": "But a huge number of theorems that begin with, if the Riemann hypothesis is true, would instantly become facts. And we'd know the primes are as orderly as they can possibly be.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "“If the Riemann hypothesis is true…”",
+    "word": "PROVEN",
+    "size": 240,
+    "sync": "instantly",
+    "sub": "a whole library of theorems",
+    "sub2": "the primes, as orderly as possible",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Whoever does it, human or machine, wins one million dollars. So who do you think gets there first? Tell me in the comments, and follow for more.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "HUMAN",
+     "OR",
+     "MACHINE?"
+    ],
+    "colors": [
+     "white",
+     "grey",
+     "blue"
+    ],
+    "syncs": [
+     "human",
+     "or",
+     "machine"
+    ],
+    "button": "FOLLOW  +",
+    "button_sync": "follow"
+   }
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Your AI chatbot isn't learning from you 🧊",
+ "descripcion": "While you chat, the model's weights never change. It 'remembers' because the whole conversation is sent again every time. Full breakdown in the linked video.",
+ "hashtags": "#ai #chatgpt #llm #tech #shorts",
+ "fuentes": [
+  "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "https://huggingface.co/blog/llama31"
+ ],
+ "relacionado": "https://youtu.be/6mo7s5pnDAE",
+ "escenas": [
+  {
+   "texto": "Your AI chatbot isn't learning anything from talking to you.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "IT ISN'T",
+     "LEARNING",
+     "FROM YOU"
+    ],
+    "colors": [
+     "white",
+     "blue",
+     "white"
+    ],
+    "sync": "learning"
+   }
+  },
+  {
+   "texto": "Its numbers are frozen. Not a single one changes while you chat.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "while you chat, its weights are",
+    "word": "FROZEN",
+    "color": "ice",
+    "sub": "0 numbers change",
+    "sync": "frozen",
+    "sub_sync": "single"
+   }
+  },
+  {
+   "texto": "So how does it remember your last message? Every time you hit send, the whole conversation is sent again, from the very top.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "every time you hit send",
+    "word": "RE-SENT",
+    "sub": "the whole chat, from the top",
+    "sync": "whole",
+    "pre_sync": "every"
+   }
+  },
+  {
+   "texto": "That's the context window. Llama three point one holds about a hundred and twenty eight thousand tokens. Go past that, and the oldest part simply falls out.",
+   "visual": {
+    "tipo": "counter",
+    "to": 128,
+    "suffix": "K",
+    "label": "tokens of short-term memory",
+    "note": "older text falls out",
+    "note_sync": "falls",
+    "sync": "hundred"
+   }
+  },
+  {
+   "texto": "Memory features? Mostly saved notes pasted into the chat for you. The model itself still learns nothing.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FEELS LIKE",
+     "value": "memory",
+     "color": "grey",
+     "sync": "memory"
+    },
+    "right": {
+     "label": "ACTUALLY",
+     "value": "notes",
+     "sub": "pasted into the chat",
+     "color": "blue",
+     "sync": "saved"
+    }
+   }
+  },
+  {
+   "texto": "Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

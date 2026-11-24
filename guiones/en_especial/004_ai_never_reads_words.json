@@ -1,0 +1,101 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Your AI chatbot has never read a single word you typed 🔢",
+ "descripcion": "Before your message reaches the model, it's cut into tokens and turned into ID numbers. The model only ever sees numbers. Full breakdown in the linked video.",
+ "hashtags": "#ai #chatgpt #tokens #tech #shorts",
+ "fuentes": [
+  "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "https://huggingface.co/blog/llama31"
+ ],
+ "relacionado": "https://youtu.be/6mo7s5pnDAE",
+ "escenas": [
+  {
+   "texto": "Your AI chatbot has never read a single word you typed.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "IT NEVER READ",
+     "YOUR WORDS"
+    ],
+    "sync": "never"
+   }
+  },
+  {
+   "texto": "First, your message is chopped into pieces called tokens. A word like unbelievable can become three: un, believ, able.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "unbelievable →",
+    "word": "un·believ·able",
+    "size": 150,
+    "sub": "3 tokens",
+    "sync": "unbelievable",
+    "sub_sync": "three"
+   }
+  },
+  {
+   "texto": "Then every piece is swapped for an ID number. From then on, the model only sees numbers.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "YOU TYPE",
+     "value": "cat",
+     "color": "white",
+     "sync": "swapped"
+    },
+    "right": {
+     "label": "IT SEES",
+     "value": "8415",
+     "sub": "an ID (example)",
+     "color": "blue",
+     "sync": "number"
+    }
+   }
+  },
+  {
+   "texto": "A token is about three quarters of a word, and Llama three's dictionary has around a hundred and twenty eight thousand of them.",
+   "visual": {
+    "tipo": "counter",
+    "to": 128000,
+    "label": "tokens in its dictionary",
+    "note": "1 token ≈ ¾ of a word",
+    "note_sync": "three",
+    "sync": "dictionary"
+   }
+  },
+  {
+   "texto": "And its only job is to guess the next one. That's it.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "its only job",
+    "word": "NEXT TOKEN",
+    "size": 200,
+    "sync": "guess"
+   }
+  },
+  {
+   "texto": "Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Training this AI on one chip would take 3,500 years ⏳",
+ "descripcion": "Meta's Llama 3.1 405B took about 31 million GPU-hours on 16,000+ Nvidia H100s, reading 15 trillion tokens. Full breakdown in the linked video.",
+ "hashtags": "#ai #nvidia #gpu #tech #shorts",
+ "fuentes": [
+  "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "https://huggingface.co/blog/llama31",
+  "https://developer.nvidia.com/blog/supercharging-meta-llama-3-1-across-nvidia-platforms/"
+ ],
+ "relacionado": "https://youtu.be/6mo7s5pnDAE",
+ "escenas": [
+  {
+   "texto": "Training one AI model on a single chip would take about three and a half thousand years.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "one AI · one chip",
+    "to": 3520,
+    "suffix": " years",
+    "label": "of nonstop computing",
+    "color": "warm",
+    "sync": "training"
+   }
+  },
+  {
+   "texto": "That's Meta's Llama three point one. It needed around thirty one million GPU hours.",
+   "visual": {
+    "tipo": "counter",
+    "to": 31,
+    "suffix": " million",
+    "label": "GPU-hours",
+    "note": "Meta: 30.84 million",
+    "sync": "thirty"
+   }
+  },
+  {
+   "texto": "So Meta ran more than sixteen thousand Nvidia H one hundred chips at the same time.",
+   "visual": {
+    "tipo": "counter",
+    "to": 16000,
+    "suffix": "+",
+    "label": "H100 GPUs at once",
+    "sync": "sixteen"
+   }
+  },
+  {
+   "texto": "Reading more than fifteen trillion tokens. Roughly a hundred million books' worth of text.",
+   "visual": {
+    "tipo": "counter",
+    "to": 15,
+    "suffix": " trillion",
+    "label": "tokens of text",
+    "note": "≈ 100 million books",
+    "note_sync": "hundred",
+    "sync": "fifteen"
+   }
+  },
+  {
+   "texto": "All of that, to learn one single skill: guessing the next word.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "all to learn one skill",
+    "word": "GUESS THE NEXT WORD",
+    "size": 150,
+    "sync": "guessing"
+   }
+  },
+  {
+   "texto": "Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

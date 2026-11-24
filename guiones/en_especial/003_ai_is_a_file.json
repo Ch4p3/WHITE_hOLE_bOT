@@ -1,0 +1,116 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "An AI is just an 810 GB file of numbers 🤯",
+ "descripcion": "No rulebook, no brain in a box. Meta's Llama 3.1 is 405 billion learned numbers in one file. Full 8-minute breakdown in the linked video.",
+ "hashtags": "#ai #tech #llm #machinelearning #shorts",
+ "fuentes": [
+  "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "https://huggingface.co/blog/llama31"
+ ],
+ "relacionado": "https://youtu.be/6mo7s5pnDAE",
+ "escenas": [
+  {
+   "texto": "This is what an AI actually is. Not a brain. Not a program. A file.",
+   "visual": {
+    "tipo": "title",
+    "pre": "not a brain · not a program",
+    "lines": [
+     "AN AI IS",
+     "A FILE."
+    ],
+    "sync": "file"
+   }
+  },
+  {
+   "texto": "Meta's Llama three point one has four hundred and five billion numbers inside, called weights.",
+   "visual": {
+    "tipo": "counter",
+    "to": 405,
+    "suffix": " billion",
+    "label": "numbers inside",
+    "note": "called weights",
+    "note_sync": "weights",
+    "sync": "four"
+   }
+  },
+  {
+   "texto": "Each number takes two bytes. That's eight hundred and ten gigabytes of numbers, and nothing else.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "405 billion numbers",
+      "sync": "each"
+     },
+     {
+      "text": "× 2 bytes",
+      "sync": "bytes",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 810,
+     "suffix": " GB",
+     "sync": "eight",
+     "label": "just numbers"
+    }
+   }
+  },
+  {
+   "texto": "The code that runs it? Around a thousand lines. All the intelligence lives in the numbers.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "THE CODE",
+     "value": "~1,000",
+     "sub": "lines",
+     "color": "grey",
+     "sync": "code"
+    },
+    "right": {
+     "label": "THE NUMBERS",
+     "value": "810 GB",
+     "sub": "the actual AI",
+     "color": "blue",
+     "sync": "intelligence"
+    }
+   }
+  },
+  {
+   "texto": "And nobody wrote those numbers. They were learned, by guessing the next word, trillions of times.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "nobody wrote them",
+    "word": "LEARNED",
+    "sub": "by guessing the next word",
+    "sub2": "trillions of times",
+    "sync": "learned"
+   }
+  },
+  {
+   "texto": "Watch the full video, it's linked right here.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FULL VIDEO",
+     "LINKED HERE"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "linked"
+    ],
+    "button": "WATCH NOW",
+    "button_sync": "watch"
+   }
+  }
+ ]
+}

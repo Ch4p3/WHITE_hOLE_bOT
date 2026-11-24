@@ -479,25 +479,49 @@ def foto_base(src):
         sys.path.insert(0, HERE)
         import imagenes
         ruta, info = imagenes.obtener(src)
-        im = Image.open(ruta).convert("RGB")
-        r = max(W * 1.3 / im.width, H * 1.3 / im.height)
-        im = im.resize((int(im.width * r) + 2, int(im.height * r) + 2), Image.LANCZOS)
-        _IMG[src] = (im, info)
+        im0 = Image.open(ruta).convert("RGB")
+        r = max(W * 1.3 / im0.width, H * 1.3 / im0.height)
+        im = im0.resize((int(im0.width * r) + 2, int(im0.height * r) + 2), Image.LANCZOS)
+        from PIL import ImageFilter, ImageEnhance
+        blur = im0.resize((int(im0.width * max(W / im0.width, H / im0.height)) + 2,
+                           int(im0.height * max(W / im0.width, H / im0.height)) + 2), Image.BILINEAR)
+        blur = blur.crop(((blur.width - W) // 2, (blur.height - H) // 2, (blur.width - W) // 2 + W, (blur.height - H) // 2 + H))
+        blur = ImageEnhance.Brightness(blur.filter(ImageFilter.GaussianBlur(40))).enhance(0.45)
+        fw = int(W * 1.18); fh = int(im0.height * fw / im0.width)
+        fg = im0.resize((fw, fh), Image.LANCZOS)
+        _IMG[src] = (im, info, blur, fg, im0.width / im0.height)
         if info not in CREDITOS: CREDITOS.append(info)
     return _IMG[src]
 
 def v_foto(img, d, t, sc, p):
     """Foto a pantalla completa con movimiento lento (Ken Burns), chip de texto y crédito."""
-    im, info = foto_base(p["src"])
+    im, info, blur, fg, aspect = foto_base(p["src"])
     k = ease_inout(clamp(t / max(1.0, sc["dur"])))
+    modo = p.get("modo", "marco" if aspect > 1.05 else "cover")
+    if modo == "marco":
+        zr = p.get("zoom", [1.0, 1.15])
+        zz = clamp(zr[0] + (zr[1] - zr[0]) * k, 1.0, 1.18)
+        f0 = p.get("foco", [0.5, 0.5]); f1 = p.get("foco_fin", f0)
+        fx, fy = f0[0] + (f1[0] - f0[0]) * k, f0[1] + (f1[1] - f0[1]) * k
+        cw, chh = fg.width / zz, fg.height / zz
+        boxh = int(W / aspect)
+        cx = clamp(fx * fg.width, cw / 2, fg.width - cw / 2); cy = clamp(fy * fg.height, chh / 2, fg.height - chh / 2)
+        crop = fg.crop((int(cx - cw / 2), int(cy - chh / 2), int(cx + cw / 2), int(cy + chh / 2))).resize((W, boxh), Image.BILINEAR)
+        frame = blur.copy()
+        y0 = int(p.get("y", 760) - boxh / 2)
+        frame.paste(crop, (0, y0))
+        frame.paste((4, 6, 14), mask=_shade())
+    else:
+        frame = None
     z0, z1 = p.get("zoom", [1.0, 1.15])
     z = clamp(z0 + (z1 - z0) * k, 1.0, 1.3)
     f0 = p.get("foco", [0.5, 0.5]); f1 = p.get("foco_fin", f0)
     fx, fy = f0[0] + (f1[0] - f0[0]) * k, f0[1] + (f1[1] - f0[1]) * k
-    cw, ch = W * 1.3 / z, H * 1.3 / z
-    cx = clamp(fx * im.width, cw / 2, im.width - cw / 2); cy = clamp(fy * im.height, ch / 2, im.height - ch / 2)
-    frame = im.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)
-    frame.paste((4, 6, 14), mask=_shade())
+    if frame is None:
+        cw, ch = W * 1.3 / z, H * 1.3 / z
+        cx = clamp(fx * im.width, cw / 2, im.width - cw / 2); cy = clamp(fy * im.height, ch / 2, im.height - ch / 2)
+        frame = im.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)
+        frame.paste((4, 6, 14), mask=_shade())
     kin = ease_out(prog(t, 0.0, 0.35))
     if kin < 1: frame = Image.blend(img, frame, kin)
     img.paste(frame)

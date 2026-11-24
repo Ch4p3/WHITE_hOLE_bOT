@@ -1,0 +1,373 @@
+{
+ "idioma": "en",
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Pablo Escobar brought 4 hippos to Colombia… now there are almost 200 🦛",
+ "descripcion": "In 1981 four hippos arrived at Hacienda Nápoles. After Escobar died nobody took them away, and today they are the only wild hippo herd outside Africa. What would you do with them? Tell me in the comments 👇",
+ "hashtags": "#cocainehippos #pabloescobar #colombia #animals #shorts",
+ "fuentes": [
+  "BBC (Apr 2026): https://www.teletica.com/internacional/por-que-el-gobierno-de-colombia-sacrificara-a-80-de-los-hipopotamos-de-pablo-escobar_406802",
+  "Estudio Humboldt–UNAL 2022: https://eldesconcierto.cl/2023/02/15/el-paraiso-colombiano-donde-los-hipopotamos-de-pablo-escobar-se-multiplicaron-de-4-a-133",
+  "MinAmbiente, cerca de 200: https://www.elcolombiano.com/antioquia/hipopotamos-rechazo-internacional-mutacion-genetica-HH35457123",
+  "Llegada a Santander: https://www.vanguardia.com/santander/barrancabermeja/2026/02/08/los-hipopotamos-de-pablo-ya-comen-en-santander/",
+  "Eutanasia anunciada (18 nov. 2026): https://www.primicias.ec/internacional/colombia-eutanasia-hipopotamos-descendientes-animales-pablo-escobar-137499/",
+  "Proyección a 2050 (EFE): https://www.ultimahora.com/los-hipopotamos-pablo-escobar-podrian-hacerse-miles-2050-n2870074"
+ ],
+ "escenas": [
+  {
+   "texto": "Pablo Escobar brought four hippos to Colombia. Today there are almost two hundred… and no one has been able to stop them.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Hippopotamus, South Luangwa National Park (51866473429).jpg",
+    "modo": "cover",
+    "foco": [
+     0.62,
+     0.45
+    ],
+    "zoom": [
+     1.0,
+     1.2
+    ],
+    "titulo": "4 → 200",
+    "tsize": 190,
+    "ty": 1080,
+    "color": "warm",
+    "titulo_sync": "hundred"
+   }
+  },
+  {
+   "texto": "It all started in nineteen eighty one. Escobar bought three females and one male from a zoo in the United States.",
+   "visual": {
+    "tipo": "card",
+    "title": "1981",
+    "tag": "THE START",
+    "panel": {
+     "label": "From a zoo in the United States",
+     "value": "3 females + 1 male",
+     "progress": 1.0,
+     "color": "warm",
+     "sync": "bought",
+     "value_sync": "females"
+    }
+   }
+  },
+  {
+   "texto": "He took them to Hacienda Nápoles, his private zoo, with giraffes, zebras, elephants… and a small plane over the entrance.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Pórtico Hacienda Nápoles.JPG",
+    "foco": [
+     0.5,
+     0.4
+    ],
+    "zoom": [
+     1.0,
+     1.15
+    ],
+    "chip": "Hacienda Nápoles · Antioquia, Colombia",
+    "chip_sync": "Nápoles"
+   }
+  },
+  {
+   "texto": "A huge ranch, right next to the Magdalena River, the most important river in the country.",
+   "visual": {
+    "tipo": "mapa",
+    "desde": [
+     -73.6,
+     4.3,
+     1.0
+    ],
+    "hasta": [
+     -74.5,
+     6.2,
+     1.75
+    ],
+    "zoom_sync": "ranch",
+    "zoom_dur": 2.2,
+    "rio_sync": "next",
+    "rio_dur": 2.0,
+    "rio_label": "Magdalena River",
+    "rio_label_pos": 0.7,
+    "marcadores": [
+     {
+      "lon": -74.64,
+      "lat": 5.87,
+      "label": "Hacienda Nápoles",
+      "sub": "Antioquia, Colombia",
+      "sync": "ranch"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In nineteen ninety three, Escobar was killed. The other animals were sent to zoos, but nobody dared to move the hippos.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "1993",
+    "size": 300,
+    "sync": "ninety",
+    "sub": "nobody took them",
+    "sub2": "too dangerous to move"
+   }
+  },
+  {
+   "texto": "They stayed in the ranch's lakes, and found paradise: water all year, plenty of food, and not a single predator.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Lago Hacienda Napolés.jpg",
+    "foco": [
+     0.5,
+     0.5
+    ],
+    "zoom": [
+     1.0,
+     1.12
+    ],
+    "titulo": "ZERO PREDATORS",
+    "tsize": 96,
+    "ty": 1230,
+    "color": "warm",
+    "titulo_sync": "predator",
+    "chip": "The lakes of Hacienda Nápoles",
+    "chip_y": 1110,
+    "chip_color": "blue"
+   }
+  },
+  {
+   "texto": "With nothing hunting them, here they start breeding younger than in Africa.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Mother hippo with her baby.jpg",
+    "foco": [
+     0.45,
+     0.6
+    ],
+    "zoom": [
+     1.0,
+     1.15
+    ],
+    "chip": "A new calf every few years",
+    "chip_sync": "breeding"
+   }
+  },
+  {
+   "texto": "In twenty twenty two, a study by the Humboldt Institute and the National University counted one hundred thirty three in the wild. Today, the Environment Ministry estimates nearly two hundred.",
+   "visual": {
+    "tipo": "grafica",
+    "titulo": "Hippos in Colombia",
+    "categorico": true,
+    "ymax": 240,
+    "puntos": [
+     {
+      "x": 1981,
+      "y": 4,
+      "label": "4",
+      "sync": "study"
+     },
+     {
+      "x": 2022,
+      "y": 133,
+      "label": "133",
+      "sync": "hundred",
+      "nota": "Humboldt–UNAL"
+     },
+     {
+      "x": 2026,
+      "y": 200,
+      "label": "≈200",
+      "sync": "Today",
+      "nota": "Env. Ministry"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At night they leave the water to graze, and walk for miles looking for new territory.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Nocturnal Grazing Hippopotamus at Murchison Falls National Park.jpg",
+    "modo": "cover",
+    "foco": [
+     0.5,
+     0.55
+    ],
+    "zoom": [
+     1.0,
+     1.18
+    ],
+    "chip": "At night they come out to eat",
+    "chip_sync": "night",
+    "chip_color": "blue"
+   }
+  },
+  {
+   "texto": "That's how they moved down the Magdalena, and they've now been seen as far as Santander.",
+   "visual": {
+    "tipo": "mapa",
+    "desde": [
+     -74.5,
+     6.2,
+     1.75
+    ],
+    "hasta": [
+     -74.2,
+     6.8,
+     1.6
+    ],
+    "zoom_dur": 2.0,
+    "rio_sync": 0.0,
+    "rio_dur": 0.4,
+    "expansion": {
+     "sync": "moved",
+     "n": 18,
+     "desde": 0.44,
+     "hasta": 0.58,
+     "paso": 0.1
+    },
+    "marcadores": [
+     {
+      "lon": -74.64,
+      "lat": 5.87,
+      "sync": 0.0
+     },
+     {
+      "lon": -73.85,
+      "lat": 7.07,
+      "label": "Santander",
+      "sub": "Barrancabermeja",
+      "sync": "Santander",
+      "color": "blue"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Today they are the only wild herd of hippos outside Africa.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "The only wild herd",
+    "word": "OUTSIDE AFRICA",
+    "size": 170,
+    "sync": "only",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And they're dangerous: they can weigh more than a ton, they defend their territory, and in Doradal people have already been hurt in attacks.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Hippopotamus, South Luangwa National Park (51866319188).jpg",
+    "modo": "cover",
+    "foco": [
+     0.45,
+     0.4
+    ],
+    "zoom": [
+     1.05,
+     1.25
+    ],
+    "titulo": "+1 TON",
+    "tsize": 170,
+    "ty": 1060,
+    "color": "warm",
+    "titulo_sync": "ton"
+   }
+  },
+  {
+   "texto": "They also take space from native species like the manatee, and change the water that local fishermen depend on.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Trichechus manatus, NOAA.jpg",
+    "foco": [
+     0.5,
+     0.5
+    ],
+    "zoom": [
+     1.0,
+     1.12
+    ],
+    "chip": "Manatee · native species at risk",
+    "chip_sync": "manatee",
+    "chip_color": "blue"
+   }
+  },
+  {
+   "texto": "And since they all come from the same four, their genetic diversity is very low. That's why other countries refused to take them.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "ORIGIN",
+     "value": "4",
+     "sub": "Escobar's hippos",
+     "color": "warm",
+     "sync": "all"
+    },
+    "right": {
+     "label": "TODAY",
+     "value": "≈200",
+     "sub": "almost the same genes",
+     "color": "blue",
+     "sync": "genetic"
+    },
+    "badge": {
+     "top": "",
+     "bottom": "NO",
+     "sync": "refused"
+    }
+   }
+  },
+  {
+   "texto": "If nothing is done, by twenty fifty there could be thousands.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "If nothing is done, by 2050…",
+    "word": "THOUSANDS",
+    "size": 220,
+    "sync": "fifty",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "So on November eighteenth, the regional authority Cornare announced it would euthanize ten hippos considered high risk. And the country is divided.",
+   "visual": {
+    "tipo": "card",
+    "title": "NOV 18",
+    "tag": "2026",
+    "panel": {
+     "label": "Euthanasia announced · high risk",
+     "value": "10",
+     "progress": 0.05,
+     "color": "warm",
+     "sync": "Cornare",
+     "value_sync": "ten"
+    }
+   }
+  },
+  {
+   "texto": "So what would you do? Cull them, sterilize them, or let them be? Tell me in the comments, and follow for more stories like this.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "CULL?",
+     "STERILIZE?",
+     "LET THEM BE?"
+    ],
+    "colors": [
+     "warm",
+     "blue",
+     "white"
+    ],
+    "syncs": [
+     "cull",
+     "sterilize",
+     "let"
+    ],
+    "button": "FOLLOW  +",
+    "button_sync": "follow"
+   }
+  }
+ ]
+}

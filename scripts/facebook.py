@@ -83,6 +83,33 @@ def subir_reel(video_path, descripcion, titulo=None, esperar=True):
     return video_id, estado
 
 
+def duracion(video_path):
+    import subprocess
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", video_path],
+                         capture_output=True, text=True).stdout.strip()
+    return float(out or 0)
+
+
+def subir_video(video_path, descripcion, titulo=None):
+    """Video normal de Página (sin el límite de 90 s de los Reels). Devuelve (video_id, estado)."""
+    page_id, token = _ids()
+    data = {"access_token": token, "description": descripcion[:5000], "published": "true"}
+    if titulo:
+        data["title"] = titulo[:255]
+    with open(video_path, "rb") as f:
+        r = requests.post(f"https://graph-video.facebook.com/v25.0/{page_id}/videos", data=data,
+                          files={"source": ("video.mp4", f, "video/mp4")}, timeout=900)
+    res = _check(r)
+    return res.get("id"), "publicado como video"
+
+
+def publicar(video_path, descripcion, titulo=None):
+    """Reel si dura 90 s o menos; si no, video normal de la Página."""
+    if duracion(video_path) <= 90:
+        return subir_reel(video_path, descripcion, titulo)
+    return subir_video(video_path, descripcion, titulo)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--verificar", action="store_true")

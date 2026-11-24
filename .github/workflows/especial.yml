@@ -1,0 +1,71 @@
+name: Video especial (ES para Facebook + EN para TikTok)
+
+on:
+  workflow_dispatch:
+    inputs:
+      guion_es:
+        description: "Guion en español (Facebook)"
+        default: "guiones/es/pendientes/001_hipopotamos_escobar.json"
+      guion_en:
+        description: "Guion en inglés (TikTok/YouTube)"
+        default: "guiones/en_especial/001_cocaine_hippos.json"
+      publicar:
+        description: "Publicar de verdad (si no, solo vista previa a Telegram)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  especial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Instalar ffmpeg y emojis
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Caché de la voz Kokoro
+        uses: actions/cache@v4
+        with:
+          path: voices/kokoro
+          key: kokoro-v1.0-int8
+      - name: Descargar Kokoro (solo la primera vez)
+        run: |
+          mkdir -p voices/kokoro && cd voices/kokoro
+          B=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+          [ -f kokoro-v1.0.int8.onnx ] || curl -sSfL -o kokoro-v1.0.int8.onnx $B/kokoro-v1.0.int8.onnx
+          [ -f voices-v1.0.bin ] || curl -sSfL -o voices-v1.0.bin $B/voices-v1.0.bin
+          ls -la
+      - name: Generar video en español
+        run: mkdir -p out && python engine/make_short.py "${{ inputs.guion_es }}" out/es.mp4 --canal "White Hole"
+      - name: Generar video en inglés
+        run: python engine/make_short.py "${{ inputs.guion_en }}" out/en.mp4 --canal "@whitehole"
+      - name: Publicar y enviar a Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
+        run: |
+          P=""; [ "${{ inputs.publicar }}" = "true" ] && P="--publicar"
+          python scripts/especial.py out/es.mp4 "${{ inputs.guion_es }}" --destino facebook $P
+          python scripts/especial.py out/en.mp4 "${{ inputs.guion_en }}" --destino tiktok $P
+      - name: Guardar vistas previas en la rama previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          cp out/es.mp4 /tmp/especial_es.mp4; cp out/en.mp4 /tmp/especial_en.mp4
+          cp out/*.creditos.json /tmp/ 2>/dev/null || true
+          git fetch -q origin previews && git checkout -q previews
+          cp /tmp/especial_es.mp4 /tmp/especial_en.mp4 . ; cp /tmp/*.creditos.json . 2>/dev/null || true
+          git add especial_*.mp4 *.creditos.json 2>/dev/null; git commit -qm "Vista previa especial" && git push -q origin previews

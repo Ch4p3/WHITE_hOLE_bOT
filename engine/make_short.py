@@ -377,12 +377,13 @@ def v_grafica(img, d, t, sc, p):
     bx0, bx1, by0, by1 = 150, W - 130, 1180, 560
     xmin, xmax = p.get("xmin", pts[0]["x"]), p.get("xmax", pts[-1]["x"])
     ymax = p.get("ymax", max(q["y"] for q in pts) * 1.18)
+    ymin = p.get("ymin", 0)
     if p.get("categorico"):
         idx = {q["x"]: i for i, q in enumerate(pts)}
         X = lambda v: bx0 + 70 + idx[v] / max(1, len(pts) - 1) * (bx1 - bx0 - 140)
     else:
         X = lambda v: bx0 + (v - xmin) / (xmax - xmin) * (bx1 - bx0)
-    Y = lambda v: by0 - v / ymax * (by0 - by1)
+    Y = lambda v: by0 - (v - ymin) / (ymax - ymin) * (by0 - by1)
     ka = ease_out(prog(t, 0.0, 0.5))
     if p.get("titulo"):
         slide(d, (W // 2, 400), p["titulo"], 58, WHITE, t, 0.0, weight="black", dy=30)

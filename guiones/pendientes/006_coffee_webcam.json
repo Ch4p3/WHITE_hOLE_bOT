@@ -1,96 +1,101 @@
 {
-  "titulo": "The first webcam watched a coffee pot ☕",
-  "descripcion": "At Cambridge University, researchers pointed a camera at the Trojan Room coffee pot in 1991 so they wouldn't walk to an empty pot. In 1993 it went on the web.",
-  "hashtags": "#tech #internet #history #webcam #shorts",
-  "fuentes": [
-    "https://en.wikipedia.org/wiki/Trojan_Room_coffee_pot",
-    "https://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
-  ],
-  "velocidad": 0.9,
-  "escenas": [
-    {
-      "texto": "One of the first webcams in history was pointed at a coffee pot.",
-      "visual": {
-        "tipo": "card",
-        "title": "TROJAN ROOM",
-        "tag": "1991",
-        "panel": {
-          "label": "Cambridge University",
-          "value": "1 coffee pot",
-          "progress": 0.5,
-          "color": "warm",
-          "sync": "webcams",
-          "value_sync": "coffee"
-        }
-      }
-    },
-    {
-      "texto": "Researchers at Cambridge were tired of walking to an empty pot.",
-      "visual": {
-        "tipo": "bigword",
-        "word": "EMPTY",
-        "size": 220,
-        "sub": "the real problem",
-        "sync": "empty"
-      }
-    },
-    {
-      "texto": "So in nineteen ninety one they streamed it to their computers.",
-      "visual": {
-        "tipo": "counter",
-        "to": 1991,
-        "label": "the camera goes live",
-        "sync": "ninety"
-      }
-    },
-    {
-      "texto": "In nineteen ninety three, it went on the web, and the whole world started watching.",
-      "visual": {
-        "tipo": "versus",
-        "left": {
-          "label": "1991",
-          "value": "1 lab",
-          "color": "warm"
-        },
-        "right": {
-          "label": "1993",
-          "value": "THE WEB",
-          "sub": "worldwide viewers",
-          "color": "blue",
-          "sync": "web"
-        },
-        "badge": {
-          "top": "",
-          "bottom": "LIVE",
-          "sync": "watching"
-        }
-      }
-    },
-    {
-      "texto": "When the pot was finally sold, it went for about four thousand eight hundred pounds.",
-      "visual": {
-        "tipo": "counter",
-        "to": 4800,
-        "prefix": "£",
-        "label": "auction price",
-        "sync": "thousand"
-      }
-    },
-    {
-      "texto": "The webcam was invented because of coffee. Follow for more tech secrets.",
-      "visual": {
-        "tipo": "outro",
-        "lines": [
-          "INVENTED",
-          "FOR",
-          "COFFEE."
-        ],
-        "syncs": [
-          null,
-          "because",
-          "coffee"
-        ]
-      }
+ "titulo": "The first webcam watched a coffee pot ☕",
+ "descripcion": "At Cambridge University, researchers pointed a camera at the Trojan Room coffee pot in 1991 so they wouldn't walk to an empty pot. In 1993 it went on the web.",
+ "hashtags": "#tech #internet #history #webcam #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Trojan_Room_coffee_pot",
+  "https://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
+ ],
+ "velocidad": 0.9,
+ "escenas": [
+  {
+   "texto": "One of the first webcams in history was pointed at a coffee pot.",
+   "visual": {
+    "tipo": "card",
+    "title": "TROJAN ROOM",
+    "tag": "1991",
+    "panel": {
+     "label": "Cambridge University",
+     "value": "1 coffee pot",
+     "progress": 0.5,
+     "color": "warm",
+     "sync": "webcams",
+     "value_sync": "coffee"
     }
-  ]
+   }
+  },
+  {
+   "texto": "Researchers at Cambridge were tired of walking to an empty pot.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "EMPTY",
+    "size": 220,
+    "sub": "the real problem",
+    "sync": "empty"
+   }
+  },
+  {
+   "texto": "So in nineteen ninety one they streamed it to their computers.",
+   "visual": {
+    "tipo": "counter",
+    "to": 1991,
+    "label": "the camera goes live",
+    "sync": "ninety"
+   }
+  },
+  {
+   "texto": "In nineteen ninety three, it went on the web, and the whole world started watching.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "1991",
+     "value": "1 lab",
+     "color": "warm"
+    },
+    "right": {
+     "label": "1993",
+     "value": "THE WEB",
+     "sub": "worldwide viewers",
+     "color": "blue",
+     "sync": "web"
+    },
+    "badge": {
+     "top": "",
+     "bottom": "LIVE",
+     "sync": "watching"
+    }
+   }
+  },
+  {
+   "texto": "When the pot was finally sold, it went for about four thousand eight hundred pounds.",
+   "visual": {
+    "tipo": "counter",
+    "to": 4800,
+    "prefix": "£",
+    "label": "auction price",
+    "sync": "thousand"
+   }
+  },
+  {
+   "texto": "The webcam was invented because of coffee. Follow for more tech secrets.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "INVENTED",
+     "FOR",
+     "COFFEE."
+    ],
+    "syncs": [
+     null,
+     "because",
+     "coffee"
+    ]
+   }
+  }
+ ],
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ }
 }

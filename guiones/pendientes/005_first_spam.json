@@ -1,24 +1,103 @@
 {
-  "titulo": "The first spam email was sent in 1978 📧",
-  "descripcion": "Gary Thuerk of DEC sent an unsolicited ad to about 400 ARPANET users. People were not happy.",
-  "hashtags": "#tech #internet #history #email #shorts",
-  "fuentes": ["https://en.wikipedia.org/wiki/Spamming", "https://www.computerhistory.org/tdih/may/3/"],
-  "velocidad": 0.9,
-  "escenas": [
-    {"texto": "The first spam email was sent in nineteen seventy eight.",
-     "visual": {"tipo": "card", "title": "SPAM", "tag": "1978",
-                "panel": {"label": "Network", "value": "ARPANET", "progress": 0.2, "color": "warm", "sync": "first", "value_sync": "seventy"}}},
-    {"texto": "A marketer named Gary Thuerk sent an ad for new computers to about four hundred people.",
-     "visual": {"tipo": "counter", "to": 393, "label": "recipients", "note": "almost everyone online", "note_sync": "people", "sync": "four"}},
-    {"texto": "That was a big part of everyone on the network back then.",
-     "visual": {"tipo": "bigword", "word": "EVERYONE", "size": 190, "sub": "on the early internet", "sync": "everyone"}},
-    {"texto": "Today, spam is roughly half of all email sent.",
-     "visual": {"tipo": "versus", "left": {"label": "1978", "value": "1 email", "color": "warm"},
-                "right": {"label": "TODAY", "value": "≈ 50%", "sub": "of all email", "color": "blue", "sync": "Today"},
-                "badge": {"top": "", "bottom": "SPAM", "sync": "half"}}},
-    {"texto": "The complaints started the same day.",
-     "visual": {"tipo": "bigword", "word": "SAME DAY", "size": 190, "sub": "complaints began", "sync": "complaints"}},
-    {"texto": "One email started a problem we still fight every day. Follow for more internet history.",
-     "visual": {"tipo": "outro", "lines": ["ONE EMAIL.", "FOREVER", "SPAM."], "syncs": [null, "still", "every"]}}
-  ]
+ "titulo": "The first spam email was sent in 1978 📧",
+ "descripcion": "Gary Thuerk of DEC sent an unsolicited ad to about 400 ARPANET users. People were not happy.",
+ "hashtags": "#tech #internet #history #email #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Spamming",
+  "https://www.computerhistory.org/tdih/may/3/"
+ ],
+ "velocidad": 0.9,
+ "escenas": [
+  {
+   "texto": "The first spam email was sent in nineteen seventy eight.",
+   "visual": {
+    "tipo": "card",
+    "title": "SPAM",
+    "tag": "1978",
+    "panel": {
+     "label": "Network",
+     "value": "ARPANET",
+     "progress": 0.2,
+     "color": "warm",
+     "sync": "first",
+     "value_sync": "seventy"
+    }
+   }
+  },
+  {
+   "texto": "A marketer named Gary Thuerk sent an ad for new computers to about four hundred people.",
+   "visual": {
+    "tipo": "counter",
+    "to": 393,
+    "label": "recipients",
+    "note": "almost everyone online",
+    "note_sync": "people",
+    "sync": "four"
+   }
+  },
+  {
+   "texto": "That was a big part of everyone on the network back then.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "EVERYONE",
+    "size": 190,
+    "sub": "on the early internet",
+    "sync": "everyone"
+   }
+  },
+  {
+   "texto": "Today, spam is roughly half of all email sent.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "1978",
+     "value": "1 email",
+     "color": "warm"
+    },
+    "right": {
+     "label": "TODAY",
+     "value": "≈ 50%",
+     "sub": "of all email",
+     "color": "blue",
+     "sync": "Today"
+    },
+    "badge": {
+     "top": "",
+     "bottom": "SPAM",
+     "sync": "half"
+    }
+   }
+  },
+  {
+   "texto": "The complaints started the same day.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "SAME DAY",
+    "size": 190,
+    "sub": "complaints began",
+    "sync": "complaints"
+   }
+  },
+  {
+   "texto": "One email started a problem we still fight every day. Follow for more internet history.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "ONE EMAIL.",
+     "FOREVER",
+     "SPAM."
+    ],
+    "syncs": [
+     null,
+     "still",
+     "every"
+    ]
+   }
+  }
+ ],
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ }
 }

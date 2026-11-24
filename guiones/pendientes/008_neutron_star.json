@@ -1,24 +1,101 @@
 {
-  "titulo": "A sugar cube of neutron star weighs a billion tons 🌌",
-  "descripcion": "Neutron stars pack more mass than the Sun into a ball about 20 km across, making them some of the densest objects known.",
-  "hashtags": "#science #space #astronomy #neutronstar #shorts",
-  "fuentes": ["https://en.wikipedia.org/wiki/Neutron_star", "https://imagine.gsfc.nasa.gov/science/objects/neutron_stars1.html"],
-  "velocidad": 0.9,
-  "escenas": [
-    {"texto": "A neutron star packs more mass than our Sun into a ball the size of a city.",
-     "visual": {"tipo": "card", "title": "NEUTRON STAR", "tag": "≈ 20 km",
-                "panel": {"label": "Mass", "value": "> 1 Sun", "progress": 0.95, "color": "warm", "sync": "neutron", "value_sync": "mass"}}},
-    {"texto": "It is only about twenty kilometers across.",
-     "visual": {"tipo": "counter", "to": 20, "suffix": " km", "label": "diameter", "sync": "twenty"}},
-    {"texto": "A piece the size of a sugar cube would weigh about a billion tons.",
-     "visual": {"tipo": "bigword", "word": "1 BILLION", "size": 190, "sub": "tons per sugar cube", "sync": "billion"}},
-    {"texto": "That's heavier than every person on Earth combined.",
-     "visual": {"tipo": "versus", "left": {"label": "SUGAR CUBE", "value": "1 cm³", "color": "warm"},
-                "right": {"label": "ALL HUMANS", "value": "lighter", "sub": "than that cube", "color": "blue", "sync": "person"},
-                "badge": {"top": "", "bottom": "WOW", "sync": "combined"}}},
-    {"texto": "Some of them spin hundreds of times every second.",
-     "visual": {"tipo": "counter", "to": 716, "label": "spins per second (record)", "sync": "hundreds"}},
-    {"texto": "A city sized star, heavier than the Sun. Follow for more space facts.",
-     "visual": {"tipo": "outro", "lines": ["CITY SIZED.", "HEAVIER", "THAN THE SUN."], "syncs": [null, "heavier", "Sun"]}}
-  ]
+ "titulo": "A sugar cube of neutron star weighs a billion tons 🌌",
+ "descripcion": "Neutron stars pack more mass than the Sun into a ball about 20 km across, making them some of the densest objects known.",
+ "hashtags": "#science #space #astronomy #neutronstar #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Neutron_star",
+  "https://imagine.gsfc.nasa.gov/science/objects/neutron_stars1.html"
+ ],
+ "velocidad": 0.9,
+ "escenas": [
+  {
+   "texto": "A neutron star packs more mass than our Sun into a ball the size of a city.",
+   "visual": {
+    "tipo": "card",
+    "title": "NEUTRON STAR",
+    "tag": "≈ 20 km",
+    "panel": {
+     "label": "Mass",
+     "value": "> 1 Sun",
+     "progress": 0.95,
+     "color": "warm",
+     "sync": "neutron",
+     "value_sync": "mass"
+    }
+   }
+  },
+  {
+   "texto": "It is only about twenty kilometers across.",
+   "visual": {
+    "tipo": "counter",
+    "to": 20,
+    "suffix": " km",
+    "label": "diameter",
+    "sync": "twenty"
+   }
+  },
+  {
+   "texto": "A piece the size of a sugar cube would weigh about a billion tons.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "1 BILLION",
+    "size": 190,
+    "sub": "tons per sugar cube",
+    "sync": "billion"
+   }
+  },
+  {
+   "texto": "That's heavier than every person on Earth combined.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "SUGAR CUBE",
+     "value": "1 cm³",
+     "color": "warm"
+    },
+    "right": {
+     "label": "ALL HUMANS",
+     "value": "lighter",
+     "sub": "than that cube",
+     "color": "blue",
+     "sync": "person"
+    },
+    "badge": {
+     "top": "",
+     "bottom": "WOW",
+     "sync": "combined"
+    }
+   }
+  },
+  {
+   "texto": "Some of them spin hundreds of times every second.",
+   "visual": {
+    "tipo": "counter",
+    "to": 716,
+    "label": "spins per second (record)",
+    "sync": "hundreds"
+   }
+  },
+  {
+   "texto": "A city sized star, heavier than the Sun. Follow for more space facts.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "CITY SIZED.",
+     "HEAVIER",
+     "THAN THE SUN."
+    ],
+    "syncs": [
+     null,
+     "heavier",
+     "Sun"
+    ]
+   }
+  }
+ ],
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ }
 }

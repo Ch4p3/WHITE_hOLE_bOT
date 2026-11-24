@@ -1,0 +1,109 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "What really happens if you don't use airplane mode ✈️",
+ "descripcion": "It won't crash the plane. But phones searching for towers can cause a buzzing interference in pilots' headsets, and rules haven't changed yet.",
+ "hashtags": "#aviation #tech #travel #phones #shorts",
+ "fuentes": [
+  "https://www.faa.gov/about/initiatives/ped",
+  "https://en.wikipedia.org/wiki/Airplane_mode"
+ ],
+ "escenas": [
+  {
+   "texto": "Have you ever forgotten to turn on airplane mode? Spoiler: the plane did not fall out of the sky.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "✈",
+    "size": 380,
+    "texto": "AIRPLANE MODE",
+    "tsize": 120,
+    "texto_sync": "airplane",
+    "sub": "does it really matter?",
+    "sub_sync": "Spoiler"
+   }
+  },
+  {
+   "texto": "At thirty thousand feet, your phone can't find a tower, so it keeps shouting louder and louder, at maximum power.",
+   "visual": {
+    "tipo": "counter",
+    "to": 30000,
+    "suffix": " ft",
+    "label": "no tower in range",
+    "note": "phone transmits at full power",
+    "note_sync": "maximum",
+    "sync": "thirty"
+   }
+  },
+  {
+   "texto": "That signal can leak into the pilots' headsets as a buzzing noise, right when they're talking to air traffic control.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "what pilots hear",
+    "word": "BZZZT",
+    "size": 280,
+    "sync": "buzzing",
+    "sub": "in the radio headset",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "One phone is just annoying. Two hundred phones doing it on approach is a real distraction.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "1 phone",
+      "value": 5,
+      "value_text": "annoying",
+      "color": "grey"
+     },
+     {
+      "label": "200 phones",
+      "value": 100,
+      "value_text": "distracting",
+      "color": "warm",
+      "sync": "hundred"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That's why airlines still ask for it, even though Wi-Fi on board is allowed.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "CELLULAR",
+     "value": "OFF",
+     "color": "warm",
+     "sync": "airlines"
+    },
+    "right": {
+     "label": "WI-FI",
+     "value": "OK",
+     "color": "blue",
+     "sync": "allowed"
+    }
+   }
+  },
+  {
+   "texto": "So it won't crash the plane. It just makes the pilots' job harder. Turn it on. Follow for more.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "WON'T CRASH.",
+     "STILL",
+     "TURN IT ON."
+    ],
+    "syncs": [
+     null,
+     "harder",
+     "Turn"
+    ]
+   }
+  }
+ ]
+}

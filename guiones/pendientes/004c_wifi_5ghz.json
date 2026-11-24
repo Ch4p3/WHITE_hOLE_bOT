@@ -1,0 +1,115 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Why fast Wi-Fi dies when you go to another room 📶",
+ "descripcion": "5 GHz Wi-Fi carries more data, but higher-frequency radio waves lose more strength through walls than 2.4 GHz.",
+ "hashtags": "#wifi #tech #internet #router #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Wi-Fi",
+  "https://en.wikipedia.org/wiki/IEEE_802.11"
+ ],
+ "escenas": [
+  {
+   "texto": "Your router has two networks. One says five G. Next to the router it's blazing fast. One wall later, it falls apart.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "NEXT TO ROUTER",
+     "value": "fast",
+     "color": "blue"
+    },
+    "right": {
+     "label": "ONE WALL LATER",
+     "value": "slow",
+     "color": "warm",
+     "sync": "wall"
+    }
+   }
+  },
+  {
+   "texto": "That five G isn't 5G mobile. It means five gigahertz, the frequency of the radio waves.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "not 5G mobile",
+    "word": "5 GHz",
+    "size": 260,
+    "sync": "gigahertz",
+    "sub": "5 billion waves per second"
+   }
+  },
+  {
+   "texto": "The other network is two point four gigahertz. Slower waves, but much better at getting through walls and floors.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "2.4 GHz · through walls",
+      "value": 80,
+      "value_text": "better",
+      "color": "blue",
+      "sync": "two"
+     },
+     {
+      "label": "5 GHz · through walls",
+      "value": 45,
+      "value_text": "worse",
+      "color": "warm",
+      "sync": "walls"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Higher frequency waves carry more data, but walls, wood and even water in your body soak up more of their energy.",
+   "visual": {
+    "tipo": "card",
+    "title": "5 GHz",
+    "tag": "THE TRADE",
+    "panel": {
+     "label": "More speed, less reach",
+     "value": "speed ↑ range ↓",
+     "progress": 0.5,
+     "color": "warm",
+     "sync": "data",
+     "value_sync": "soak"
+    }
+   }
+  },
+  {
+   "texto": "So use five gigahertz when you're close to the router, and two point four when you're far away.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "CLOSE BY",
+     "value": "5 GHz",
+     "color": "blue",
+     "sync": "close"
+    },
+    "right": {
+     "label": "FAR AWAY",
+     "value": "2.4 GHz",
+     "color": "warm",
+     "sync": "far"
+    }
+   }
+  },
+  {
+   "texto": "Same router, two personalities. Follow for more tech tricks.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "CLOSE: 5",
+     "FAR: 2.4"
+    ],
+    "syncs": [
+     null,
+     "personalities"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Why your old phone really gets slower 🐢",
+ "descripcion": "Apps get heavier every year, storage fills up, and worn batteries can't deliver peak power. In 2020 Apple agreed to pay up to $500 million over slowing iPhones with old batteries.",
+ "hashtags": "#tech #iphone #android #phones #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Batterygate",
+  "https://www.reuters.com/article/us-apple-iphones-settlement-idUSKBN20P1UO"
+ ],
+ "escenas": [
+  {
+   "texto": "Your phone was lightning fast the day you bought it. Two years later, it feels like it's stuck in mud. Is it on purpose?",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "DAY ONE",
+     "value": "fast",
+     "color": "blue"
+    },
+    "right": {
+     "label": "TWO YEARS LATER",
+     "value": "slow",
+     "color": "warm",
+     "sync": "later"
+    }
+   }
+  },
+  {
+   "texto": "Reason one: apps keep getting heavier. Every update adds features, built for newer, faster phones.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "reason #1",
+    "word": "HEAVIER APPS",
+    "size": 170,
+    "sync": "heavier",
+    "sub": "built for newer phones"
+   }
+  },
+  {
+   "texto": "Reason two: full storage. When your phone is almost full, it has less room to work, and everything slows down.",
+   "visual": {
+    "tipo": "card",
+    "title": "STORAGE",
+    "tag": "REASON #2",
+    "panel": {
+     "label": "Almost full",
+     "value": "less room to work",
+     "progress": 0.95,
+     "color": "warm",
+     "sync": "storage",
+     "value_sync": "room"
+    }
+   }
+  },
+  {
+   "texto": "Reason three: a worn battery can't deliver bursts of power, so the phone slows its processor to avoid shutting off.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "reason #3",
+    "word": "OLD BATTERY",
+    "size": 180,
+    "sync": "worn",
+    "sub": "processor slowed down",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "In twenty twenty, Apple agreed to pay up to five hundred million dollars in a lawsuit over slowing down iPhones with older batteries.",
+   "visual": {
+    "tipo": "counter",
+    "to": 500,
+    "prefix": "$",
+    "suffix": "M",
+    "label": "Apple settlement, 2020",
+    "note": "over slowed iPhones",
+    "note_sync": "slowing",
+    "sync": "five",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "So, free up space and replace a tired battery. It can feel like a new phone. Follow for more tech secrets.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "FREE SPACE.",
+     "NEW",
+     "BATTERY."
+    ],
+    "syncs": [
+     null,
+     "replace",
+     "battery"
+    ]
+   }
+  }
+ ]
+}

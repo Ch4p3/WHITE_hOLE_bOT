@@ -5,8 +5,8 @@
     "nota": "Poner subir=true cuando YouTube apruebe la auditoría de la API; antes de eso los videos subidos por API quedan bloqueados en privado."
   },
   "facebook": {
-    "subir": true,
-    "nota": "Publica cada Short como Reel en la Página White Hole (facebook.com/whiteholefacts)."
+    "subir": false,
+    "nota": "Apagado para los Shorts diarios en inglés: la Página de Facebook es en español y recibe los especiales (workflow especial.yml)."
   },
   "tiktok": {
     "subir": true,

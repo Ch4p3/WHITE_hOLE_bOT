@@ -1,0 +1,131 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Your battery percentage is lying to you 🔋",
+ "descripcion": "Your phone can't measure charge directly. It estimates it from voltage, which drops unevenly, especially in the cold and as batteries age.",
+ "hashtags": "#battery #phones #tech #iphone #shorts",
+ "fuentes": [
+  "https://batteryuniversity.com/article/bu-903-how-to-measure-state-of-charge",
+  "https://en.wikipedia.org/wiki/State_of_charge"
+ ],
+ "escenas": [
+  {
+   "texto": "Ever watched your phone go from twenty percent to dead in a few minutes? It's not your imagination.",
+   "visual": {
+    "tipo": "counter",
+    "from": 20,
+    "to": 0,
+    "suffix": "%",
+    "label": "in a few minutes?!",
+    "sync": "twenty",
+    "color": "warm",
+    "dur": 2.5
+   }
+  },
+  {
+   "texto": "Your phone can't actually see how much energy is left. It guesses, mostly by measuring the battery's voltage.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the truth",
+    "word": "A GUESS",
+    "size": 240,
+    "sync": "guesses",
+    "sub": "estimated from voltage"
+   }
+  },
+  {
+   "texto": "The problem? Voltage doesn't drop evenly. It stays flat for most of the charge, then falls off a cliff at the end.",
+   "visual": {
+    "tipo": "grafica",
+    "titulo": "Battery voltage vs charge",
+    "categorico": true,
+    "ymax": 4.4,
+    "puntos": [
+     {
+      "x": 100,
+      "y": 4.2,
+      "label": "4.2 V",
+      "xlabel": "100%",
+      "sync": "Voltage"
+     },
+     {
+      "x": 50,
+      "y": 3.8,
+      "label": "3.8 V",
+      "xlabel": "50%",
+      "sync": "flat"
+     },
+     {
+      "x": 20,
+      "y": 3.7,
+      "label": "3.7 V",
+      "xlabel": "20%",
+      "sync": "most"
+     },
+     {
+      "x": 0,
+      "y": 3.0,
+      "label": "3.0 V",
+      "xlabel": "0%",
+      "sync": "cliff"
+     }
+    ],
+    "ymin": 2.8
+   }
+  },
+  {
+   "texto": "Cold weather and old batteries make it worse. The voltage sags, and the guess suddenly jumps down.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "COLD",
+     "value": "sags",
+     "color": "blue",
+     "sync": "Cold"
+    },
+    "right": {
+     "label": "OLD BATTERY",
+     "value": "sags",
+     "color": "warm",
+     "sync": "old"
+    }
+   }
+  },
+  {
+   "texto": "Pro tip: keep your phone warm in winter, and check battery health in settings. Below about eighty percent, a replacement helps a lot.",
+   "visual": {
+    "tipo": "card",
+    "title": "BATTERY HEALTH",
+    "tag": "SETTINGS",
+    "panel": {
+     "label": "Consider replacing below",
+     "value": "≈80%",
+     "progress": 0.8,
+     "color": "warm",
+     "sync": "health",
+     "value_sync": "eighty"
+    }
+   }
+  },
+  {
+   "texto": "Your battery isn't broken. It's just bad at guessing. Follow for more phone secrets.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NOT BROKEN.",
+     "BAD AT",
+     "GUESSING."
+    ],
+    "syncs": [
+     null,
+     "bad",
+     "guessing"
+    ]
+   }
+  }
+ ]
+}

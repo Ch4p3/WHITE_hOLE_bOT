@@ -22,7 +22,7 @@ concurrency:
 jobs:
   short:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +32,7 @@ jobs:
           cache: pip
 
       - name: Instalar ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji
 
       - name: Instalar dependencias
         run: pip install -r requirements.txt
@@ -50,6 +50,19 @@ jobs:
             curl -sSL -o voz.tar.gz https://github.com/rhasspy/piper/releases/download/v0.0.2/voice-en-us-ryan-high.tar.gz
             tar xzf voz.tar.gz && rm voz.tar.gz
           fi
+
+      - name: Caché de la voz Kokoro
+        uses: actions/cache@v4
+        with:
+          path: voices/kokoro
+          key: kokoro-v1.0-int8
+
+      - name: Descargar Kokoro (solo la primera vez)
+        run: |
+          mkdir -p voices/kokoro && cd voices/kokoro
+          B=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+          [ -f kokoro-v1.0.int8.onnx ] || curl -sSfL -o kokoro-v1.0.int8.onnx $B/kokoro-v1.0.int8.onnx
+          [ -f voices-v1.0.bin ] || curl -sSfL -o voices-v1.0.bin $B/voices-v1.0.bin
 
       - name: Verificar conexión con YouTube
         if: ${{ inputs.solo_verificar_youtube }}

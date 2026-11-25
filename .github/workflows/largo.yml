@@ -6,6 +6,10 @@ on:
       guion:
         description: "Guion del video largo"
         default: "guiones/largos/001_what_is_ai.json"
+      facebook:
+        description: "Publicar en la página de Facebook al terminar"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -44,6 +48,12 @@ jobs:
             ffmpeg -y -loglevel error -i out/largo.mp4 -c:v libx264 -preset veryfast -crf 27 -c:a copy -movflags +faststart out/l2.mp4
             mv out/l2.mp4 out/largo.mp4; echo "re-codificado: $(( $(stat -c %s out/largo.mp4)/1048576 )) MB"
           fi
+      - name: Publicar en Facebook
+        if: ${{ inputs.facebook }}
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: python scripts/facebook.py --publicar out/largo.mp4 out/largo.mp4.meta.json "-"
       - name: Subir como artefacto
         uses: actions/upload-artifact@v4
         with:

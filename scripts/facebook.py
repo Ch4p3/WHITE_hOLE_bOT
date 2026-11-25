@@ -114,6 +114,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--verificar", action="store_true")
     ap.add_argument("--subir", nargs=2, metavar=("VIDEO", "DESCRIPCION"))
+    ap.add_argument("--publicar", nargs=3, metavar=("VIDEO", "META_JSON", "TITULO_EXTRA"),
+                    help="Publica un video (Reel si dura <=90 s, si no video normal) con título/descripcion de un .meta.json")
     a = ap.parse_args()
     if not creds_disponibles():
         sys.exit("Faltan FB_PAGE_ID y/o FB_PAGE_TOKEN.")
@@ -123,3 +125,13 @@ if __name__ == "__main__":
     if a.subir:
         vid, est = subir_reel(*a.subir)
         print(f"Reel {vid}: {est}")
+    if a.publicar:
+        import json
+        video, meta_path, extra = a.publicar
+        m = json.load(open(meta_path, encoding="utf-8"))
+        titulo = m.get("titulo", "")
+        desc = f"{titulo}\n\n{m.get('descripcion', '')}"
+        if extra and extra != "-":
+            desc += "\n\n" + extra
+        vid, est = publicar(video, desc, titulo)
+        print(f"✅ Facebook: video {vid} ({est})")

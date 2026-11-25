@@ -1,0 +1,43 @@
+{
+ "titulo": "¿Qué es la IA, de verdad? Es solo un archivo lleno de números",
+ "duracion": 467.5,
+ "capitulos": [
+  {
+   "t": "0:00",
+   "titulo": "Un archivo de números"
+  },
+  {
+   "t": "0:28",
+   "titulo": "No es un programa"
+  },
+  {
+   "t": "1:42",
+   "titulo": "Cómo lee"
+  },
+  {
+   "t": "2:24",
+   "titulo": "Un único trabajo"
+  },
+  {
+   "t": "3:39",
+   "titulo": "De dónde salieron los números"
+  },
+  {
+   "t": "4:54",
+   "titulo": "Por qué tarjetas gráficas"
+  },
+  {
+   "t": "5:36",
+   "titulo": "¿Se acuerda de ti?"
+  },
+  {
+   "t": "6:24",
+   "titulo": "Por qué se inventa cosas"
+  },
+  {
+   "t": "7:06",
+   "titulo": "Entonces, ¿qué es?"
+  }
+ ],
+ "descripcion": "Dentro de una IA no hay un manual de reglas. Solo hay un archivo con 405 mil millones de números que predice un pedacito de palabra a la vez. Esto es lo que de verdad pasa cuando un chatbot te responde: los tokens, la predicción del siguiente token, el entrenamiento con 15 billones de tokens, por qué funciona con tarjetas gráficas, por qué no se acuerda de ti y por qué a veces se inventa cosas.\n\nCapítulos:\n0:00 Un archivo de números\n0:28 No es un programa\n1:42 Cómo lee\n2:24 Un único trabajo\n3:39 De dónde salieron los números\n4:54 Por qué tarjetas gráficas\n5:36 ¿Se acuerda de ti?\n6:24 Por qué se inventa cosas\n7:06 Entonces, ¿qué es?\n\nFuentes:\n- Ficha técnica del modelo Meta Llama 3.1 (parámetros, más de 15 billones de tokens de entrenamiento, 30,84 millones de horas-GPU H100): https://huggingface.co/meta-llama/Llama-3.1-405B\n- Hugging Face, notas de lanzamiento de Llama 3.1 (requisitos de memoria, contexto de 128K): https://huggingface.co/blog/llama31\n- NVIDIA, Llama 3.1 entrenado con más de 16.000 GPU H100: https://developer.nvidia.com/blog/supercharging-meta-llama-3-1-across-nvidia-platforms/\n- Arquitectura de Llama 3.1 405B (126 capas): Meta, The Llama 3 Herd of Models (2024), arXiv:2407.21783\n- Especificaciones de la NVIDIA H100 (80 GB, 16.896 núcleos CUDA, SXM5): https://www.nvidia.com/en-us/data-center/h100/\n- Karpathy, llama2.c (inferencia de Llama en un solo archivo pequeño en C): https://github.com/karpathy/llama2.c\n\n#IA #inteligenciaartificial #AprendizajeAutomatico #ComoFunciona #WhiteHole"
+}

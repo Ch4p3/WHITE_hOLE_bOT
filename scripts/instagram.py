@@ -49,8 +49,35 @@ def reel(video_url, caption, compartir_en_feed=True):
     return p.get("id")
 
 
+def _url_publica(video_path):
+    """Sube el archivo a la rama previews (API de GitHub) y devuelve su URL raw pública."""
+    import base64
+    repo, gh = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_TOKEN")
+    if not (repo and gh):
+        raise RuntimeError("Sin GITHUB_TOKEN/GITHUB_REPOSITORY para publicar el video")
+    ruta = "ig/" + time.strftime("%Y%m%d_%H%M%S_") + os.path.basename(video_path)
+    with open(video_path, "rb") as f:
+        b64 = base64.b64encode(f.read()).decode()
+    r = requests.put(f"https://api.github.com/repos/{repo}/contents/{ruta}",
+                     headers={"Authorization": f"Bearer {gh}", "Accept": "application/vnd.github+json"},
+                     json={"message": f"Reel IG {os.path.basename(video_path)}", "content": b64, "branch": "previews"},
+                     timeout=600)
+    r.raise_for_status()
+    sha = r.json()["commit"]["sha"]
+    return f"https://raw.githubusercontent.com/{repo}/{sha}/{ruta}"
+
+
 def reel_local(video_path, caption, compartir_en_feed=True):
-    """Sube un archivo local como Reel (subida reanudable, no necesita URL pública)."""
+    """Sube un archivo local como Reel. Intenta la subida reanudable y, si Meta la rechaza,
+    publica el archivo en la rama previews y usa su URL pública."""
+    try:
+        return _reel_reanudable(video_path, caption, compartir_en_feed)
+    except Exception as e:
+        print("ℹ️ Subida reanudable rechazada, uso URL pública:", str(e)[:160])
+    return reel(_url_publica(video_path), caption, compartir_en_feed)
+
+
+def _reel_reanudable(video_path, caption, compartir_en_feed=True):
     ig_id, _ = cuenta()
     _, token = _ids()
     c = _check(requests.post(f"{GRAPH}/{ig_id}/media", data={

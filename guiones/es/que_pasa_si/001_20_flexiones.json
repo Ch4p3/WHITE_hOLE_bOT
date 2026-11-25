@@ -1,0 +1,174 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "¿Qué pasa si…?",
+ "titulo": "¿Qué pasa si haces 20 flexiones al día durante un mes? 💪",
+ "descripcion": "Semana a semana: qué trabajas, por qué duele al principio, por qué de repente te cuesta menos y qué pasa con la grasa. ¿Te le mides al reto? Escribe RETO en los comentarios 👇",
+ "hashtags": "#flexiones #ejercicio #fitness #quepasasi #reto #curiosidades #WhiteHole #reels",
+ "escenas": [
+  {
+   "texto": "¿Qué pasa si haces veinte flexiones todos los días, durante un mes?",
+   "visual": {
+    "tipo": "monito",
+    "pose": "flexion",
+    "ritmo": 1.0,
+    "titulo": "¿20 FLEXIONES AL DÍA?",
+    "sub": "durante 30 días",
+    "sub_sync": "mes",
+    "contador": {
+     "hasta": 20,
+     "x": 330,
+     "y": 760,
+     "inicio": 1
+    }
+   }
+  },
+  {
+   "texto": "Primero, lo que trabajas: el pecho, los hombros y los tríceps. Y también el abdomen, porque mantienes el cuerpo recto como una tabla.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "flexion",
+    "ritmo": 1.6,
+    "titulo": "LO QUE TRABAJAS",
+    "brillo": [
+     "pecho",
+     "hombros",
+     "triceps",
+     "abdomen"
+    ],
+    "brillo_sync": "pecho",
+    "etiquetas": [
+     {
+      "texto": "PECHO",
+      "parte": "pecho",
+      "lado": "der",
+      "dy": 120,
+      "sync": "pecho"
+     },
+     {
+      "texto": "HOMBROS",
+      "parte": "hombros",
+      "lado": "izq",
+      "dy": -210,
+      "sync": "hombros"
+     },
+     {
+      "texto": "TRÍCEPS",
+      "parte": "triceps",
+      "lado": "der",
+      "dy": -60,
+      "sync": "tríceps"
+     },
+     {
+      "texto": "ABDOMEN",
+      "parte": "abdomen",
+      "lado": "izq",
+      "dy": 120,
+      "sync": "abdomen"
+     }
+    ],
+    "dx": -30,
+    "escala": 1.12
+   }
+  },
+  {
+   "texto": "Semana uno: te va a doler. El dolor aparece uno o dos días después, y es normal: tu músculo se está reparando.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "cansado",
+    "sudor": true,
+    "pastilla": "SEMANA 1",
+    "titulo": "¡AUCH!",
+    "titulo_sync": "doler",
+    "sub": "aparece 1 o 2 días después",
+    "sub_sync": "aparece",
+    "brillo": [
+     "pecho",
+     "brazos"
+    ],
+    "brillo_sync": "doler"
+   }
+  },
+  {
+   "texto": "Semana dos: de repente te cuesta menos. Pero no es que tengas más músculo. Es tu cerebro: aprende a activar más fibras al mismo tiempo.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "pensando",
+    "pastilla": "SEMANA 2",
+    "titulo": "¿YA ES MÁS FÁCIL?",
+    "sub": "es tu cerebro, no el músculo",
+    "sub_sync": "cerebro",
+    "accesorio": {
+     "emoji": "🧠",
+     "sync": "cerebro",
+     "dx": 190,
+     "dy": -40
+    }
+   }
+  },
+  {
+   "texto": "Semanas tres y cuatro: haces las veinte sin parar, y quizás más. Ahí sí empieza a notarse un poco de músculo.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "musculo",
+    "pastilla": "SEMANAS 3 Y 4",
+    "titulo": "20 SIN PARAR",
+    "titulo_sync": "veinte",
+    "sub": "y empieza a notarse",
+    "sub_sync": "notarse",
+    "brillo": [
+     "brazos",
+     "pecho"
+    ],
+    "brillo_sync": "músculo"
+   }
+  },
+  {
+   "texto": "¿Y la grasa? Veinte flexiones gastan muy poquita energía. Bajar grasa depende sobre todo de cómo comes y de cuánto te mueves en el día.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "pensando",
+    "cara": "sorprendido",
+    "titulo": "¿Y LA GRASA?",
+    "titulo_color": "warm",
+    "sub": "depende de tu día completo",
+    "sub_sync": "depende",
+    "accesorio": {
+     "emoji": "🔥",
+     "sync": "energía",
+     "dx": 190,
+     "dy": -30,
+     "size": 130
+    }
+   }
+  },
+  {
+   "texto": "El truco para seguir avanzando: cuando veinte ya sea fácil, súbele. Haz más, o hazlas más lentas.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "flexion",
+    "ritmo": 2.2,
+    "titulo": "SÚBELE",
+    "titulo_color": "blue",
+    "sub": "más repeticiones · más lento",
+    "sub_sync": "haz"
+   }
+  },
+  {
+   "texto": "¿Te le mides al reto? Escribe reto en los comentarios, y sígueme para más: ¿qué pasa si...?",
+   "visual": {
+    "tipo": "monito",
+    "pose": "saludo",
+    "titulo": "¿TE LE MIDES?",
+    "boton": "ESCRIBE  RETO",
+    "boton_sync": "escribe",
+    "escala": 0.9
+   }
+  }
+ ]
+}

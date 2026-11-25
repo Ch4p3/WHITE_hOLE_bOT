@@ -10,7 +10,8 @@ Cada escena del guion tiene:
 
 Plantillas disponibles (ver README para ejemplos):
   title, counter, bars, versus, equation, bigword, card, outro,
-  mapa (mapa de Colombia con zoom y río), grafica (línea animada), emoji (emoji grande)
+  mapa (mapa de Colombia con zoom y río), grafica (línea animada), emoji (emoji grande),
+  monito (personaje animado: flexiones, abdominales, músculo… ver engine/monitos.py)
 """
 import json, math, os, re, subprocess, sys, wave, argparse
 import numpy as np
@@ -722,6 +723,9 @@ VISUALS = {"title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_v
            "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
            "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto,
            "primos": v_primos, "formula": v_formula, "espiral": v_espiral, "franja": v_franja}
+
+import monitos  # noqa: E402  (personaje animado de la serie "¿Qué pasa si…?")
+VISUALS["monito"] = lambda img, d, t, sc, p: monitos.v_monito(img, d, t, sc, p, sys.modules[__name__])
 
 # ---------------------------------------------------------------- subtítulos
 def captions(d, t, sc):

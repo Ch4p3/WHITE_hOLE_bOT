@@ -1,10 +1,8 @@
 name: Short diario
 
 on:
-  schedule:                  # 3 Shorts al día (hora Colombia = UTC-5)
-    - cron: "17 12 * * *"   # 7:17 a. m. Bogota
-    - cron: "17 18 * * *"   # 1:17 p. m.
-    - cron: "17 0 * * *"    # 7:17 p. m.
+  # Los horarios (7:15, 13:15 y 19:15 Bogotá) los dispara Google Apps Script con workflow_dispatch.
+  # El cron de GitHub se quitó: fallaba y, cuando por fin corrió, duplicaba los Shorts.
   workflow_dispatch:         # botón "Run workflow" para lanzarlo a mano
     inputs:
       solo_verificar_youtube:

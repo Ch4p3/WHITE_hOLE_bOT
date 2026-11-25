@@ -1,0 +1,133 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "What happens if you walk 30 minutes a day? 🚶",
+ "descripcion": "What happens to your heart, your mind and your weight when you walk half an hour a day. How many steps do you take? 👇",
+ "hashtags": "#walking #health #fitness #whatif #shorts",
+ "fuentes": [
+  "https://www.who.int/initiatives/behealthy/physical-activity"
+ ],
+ "escenas": [
+  {
+   "texto": "What happens if you walk thirty minutes every single day?",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "30 MIN OF WALKING?",
+    "sub": "every day",
+    "sub_sync": "day",
+    "cronometro": {
+     "hasta": 1800,
+     "dur": 3.2,
+     "x": 800,
+     "y": 760
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "The World Health Organization recommends at least a hundred and fifty minutes of moderate activity a week. Thirty minutes, five days, and you're there.",
+   "visual": {
+    "pose": "caminar",
+    "pastilla": "WHO",
+    "titulo": "150 MIN / WEEK",
+    "sub": "30 min × 5 days = done",
+    "sub_sync": "thirty",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Your heart is a muscle: brisk walking trains it, and over time it works with less effort.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "YOUR HEART",
+    "titulo_color": "warm",
+    "brillo": [
+     "pecho"
+    ],
+    "brillo_sync": "heart",
+    "accesorio": {
+     "emoji": "❤️",
+     "sync": "heart",
+     "dx": 190,
+     "dy": -40,
+     "size": 120
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Physical activity also helps prevent heart disease and type two diabetes.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "LOWER RISK",
+    "titulo_color": "blue",
+    "sub": "heart disease · type 2 diabetes",
+    "sub_sync": "prevent",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "And your mind notices too: according to the WHO, moving reduces symptoms of anxiety and depression.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "AND YOUR MIND",
+    "sub": "less anxiety",
+    "sub_sync": "anxiety",
+    "accesorio": {
+     "emoji": "🧠",
+     "sync": "mind",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "What about weight loss? Walking helps, but on its own it's not magic: it adds up with how you eat and sleep.",
+   "visual": {
+    "pose": "pensando",
+    "cara": "sorprendido",
+    "titulo": "AND WEIGHT?",
+    "titulo_color": "warm",
+    "sub": "it helps, but it's not magic",
+    "sub_sync": "magic",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "The trick: it doesn't have to be all at once. Ten minutes after each meal adds up too.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "THE TRICK",
+    "sub": "3 × 10 minutes adds up",
+    "sub_sync": "ten",
+    "cronometro": {
+     "hasta": 600,
+     "dur": 2.5,
+     "x": 820,
+     "y": 760,
+     "sync": "ten"
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "How many steps do you take a day? Tell me in the comments, and follow for more: what happens if...",
+   "visual": {
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "HOW MUCH DO YOU WALK?",
+    "titulo_size": 96,
+    "boton": "FOLLOW  +",
+    "boton_sync": "follow",
+    "tipo": "monito"
+   }
+  }
+ ]
+}

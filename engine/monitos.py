@@ -19,7 +19,7 @@ import math
 from PIL import Image, ImageDraw, ImageFilter
 
 SS = 2                       # supermuestreo para bordes suaves
-LADO = ("flexion", "abdominal", "sentadilla", "puente")
+LADO = ("flexion", "abdominal", "sentadilla", "puente", "caminar", "plancha")
 HAIR = (78, 50, 44)
 SKINS = {"monito": ((88, 166, 255), (58, 120, 205), (34, 48, 92)),
          "monita": ((255, 122, 164), (220, 86, 132), (70, 40, 92))}
@@ -75,6 +75,35 @@ def pose(kind, t, p):
         hand = _add(S, (math.cos(math.radians(8 - 20 * k)), math.sin(math.radians(8 - 20 * k))), 180)
         P.update(S=S, hip=hip, knee=knee, foot=A, hand=hand, E=_add(_lerp(S, hand, 0.5), (0, 8)),
                  head=_add(_add(S, d, 80), (14, 0)), cara_dx=(30, 0), baja=k, reps=t / per)
+        return P
+    if kind == "caminar":
+        w = 2 * math.pi * t / per
+        bob = -abs(math.sin(w)) * 8
+        hip = (0, -292 + bob)
+        def pierna(ph):
+            a = math.radians(26 * math.sin(ph))
+            b = math.radians(max(0.0, 38 * math.sin(ph + math.pi / 2)))
+            k = (hip[0] + 150 * math.sin(a), hip[1] + 150 * math.cos(a))
+            f = (k[0] + 145 * math.sin(a - b), k[1] + 145 * math.cos(a - b))
+            return k, f
+        k1, f1 = pierna(w); k2, f2 = pierna(w + math.pi)
+        S = (hip[0] + 10, hip[1] - 205)
+        def brazo(ph):
+            a = math.radians(-24 * math.sin(ph))
+            e = (S[0] + 118 * math.sin(a), S[1] + 118 * math.cos(a))
+            h = (e[0] + 108 * math.sin(a + math.radians(28)), e[1] + 108 * math.cos(a + math.radians(28)))
+            return e, h
+        e1, h1 = brazo(w); e2, h2 = brazo(w + math.pi)
+        P.update(S=S, hip=hip, knee=k1, foot=f1, knee2=k2, foot2=f2, E=e1, hand=h1, E2=e2, hand2=h2,
+                 head=(S[0] + 14, S[1] - 86), cara_dx=(28, 0), baja=0, reps=t / per)
+        return P
+    if kind == "plancha":
+        tr = float(p.get("temblor", 0)) * math.sin(t * 47) * 2.2
+        S, toes = (150, -132 + tr), (-300, -8)
+        d = _norm(_v(toes, S)); up = (d[1], -d[0])
+        P.update(S=S, toes=toes, E=(150, -14), hand=(255, -14), hip=_lerp(toes, S, 0.50),
+                 thigh=_lerp(toes, S, 0.40), knee=_lerp(toes, S, 0.22),
+                 head=_add(_add(S, d, 78), up, 44), cara_dx=(30, 14), baja=float(p.get("esfuerzo", 0)))
         return P
     if kind == "puente":
         k = _osc(t, per)
@@ -285,6 +314,29 @@ def _draw_side(pen, P, kind, cara, t):
         _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
         pen.dot(P["S"], 30, SHIRT)
         pen.ell((P["hand"][0] + 8, P["hand"][1] - 6), 26, 14, LINE); pen.ell((P["hand"][0] + 8, P["hand"][1] - 6), 21, 10, BODY)
+    elif kind == "caminar":
+        _limb(pen, [P["S"], P["E2"], P["hand2"]], 38, FAR)
+        _limb(pen, [P["hip"], P["knee2"], P["foot2"]], 46, FAR)
+        _shoe(pen, P["foot2"], 1)
+        _limb(pen, [P["hip"], P["knee"], P["foot"]], 50, BODY)
+        _shoe(pen, P["foot"], 1)
+        pen.seg(P["hip"], (P["hip"][0], P["hip"][1] + 20), 96 + 11, LINE); pen.seg(P["hip"], (P["hip"][0], P["hip"][1] + 20), 96, SHORTS)
+        pen.seg(P["S"], P["hip"], 108 + 11, LINE); pen.seg(P["S"], P["hip"], 108, SHIRT)
+        _head(pen, P["head"], cara, t, P["cara_dx"], side=True)
+        _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
+        pen.dot(P["S"], 30, SHIRT)
+        pen.dot(P["hand"], 22 + 5, LINE); pen.dot(P["hand"], 22, BODY)
+    elif kind == "plancha":
+        off = (16, -6)
+        _limb(pen, [_add(P["S"], off), _add(P["E"], off), _add(P["hand"], off)], 38, FAR)
+        _limb(pen, [P["thigh"], P["knee"], P["toes"]], 54, BODY)
+        _shoe(pen, P["toes"], -1)
+        pen.seg(P["hip"], P["thigh"], 92 + 11, LINE); pen.seg(P["hip"], P["thigh"], 92, SHORTS)
+        pen.seg(P["S"], P["hip"], 104 + 11, LINE); pen.seg(P["S"], P["hip"], 104, SHIRT)
+        _head(pen, P["head"], cara, t, P["cara_dx"], side=True)
+        _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
+        pen.dot(P["S"], 30, SHIRT)
+        pen.dot(P["hand"], 22 + 5, LINE); pen.dot(P["hand"], 22, BODY)
     elif kind == "sentadilla":
         off = (-16, -4)
         _limb(pen, [_add(P["hip"], off), _add(P["knee"], off), _add(P["foot"], off)], 46, FAR)
@@ -377,10 +429,11 @@ def v_monito(img, d, t, sc, p, M):
     kind = p.get("pose", "parado")
     lado = kind in LADO
     _set_personaje(p.get("personaje", "monito"))
-    s = float(p.get("escala", {"sentadilla": 1.0, "puente": 1.15}.get(kind, 1.25 if lado else 1.0)))
+    s = float(p.get("escala", {"sentadilla": 1.0, "puente": 1.15, "caminar": 1.0}.get(kind, 1.25 if lado else 1.0)))
     top = int(p.get("y_lienzo", 440))                     # dónde empieza el lienzo en la pantalla
-    gy = int(p.get("suelo", 1290 if lado else 1350)) - top                 # suelo dentro del lienzo
-    cx = CW // 2 + int(p.get("dx", 0)) - int({"flexion": 70, "abdominal": 60, "sentadilla": -20, "puente": 0}.get(kind, 0) * s)
+    gy = int(p.get("suelo", 1290 if lado and kind != "caminar" else 1350)) - top                 # suelo dentro del lienzo
+    cx = CW // 2 + int(p.get("dx", 0)) - int({"flexion": 70, "abdominal": 60, "sentadilla": -20, "puente": 0,
+                                               "caminar": 0, "plancha": 70}.get(kind, 0) * s)
     t_anim = t + float(p.get("desfase", 0))
     st_anim = M.at(sc, p.get("anim_sync"), 0.0)
     ta = max(0.0, t_anim - st_anim) if kind in LADO else t_anim
@@ -392,6 +445,12 @@ def v_monito(img, d, t, sc, p, M):
     d.ellipse([cx - sh_w, top + gy - 16, cx + sh_w, top + gy + 16], fill=(16, 22, 42))
     d.line([90, top + gy + 2, M.W - 90, top + gy + 2], fill=(34, 44, 74), width=4)
 
+    if kind == "caminar":
+        off = (t * 260 * s) % 120
+        for i in range(-1, 11):
+            x = 90 + i * 120 - off
+            if 90 <= x <= M.W - 150:
+                d.line([x, top + gy + 2, x + 60, top + gy + 2], fill=(70, 90, 140), width=6)
     pen = _Pen(cx, gy, s)
     pen.chica = p.get("personaje") == "monita"
     if p.get("colchoneta"):
@@ -479,6 +538,24 @@ def v_monito(img, d, t, sc, p, M):
         M.text(d, (x, y), str(n), 210 * k * bump, M.BLUE)
         M.text(d, (x, y + 125), f"de {cnt.get('hasta', 20)}" if M.LANG.get("code") == "es" else f"of {cnt.get('hasta', 20)}",
                50 * k, M.GREY, "bold")
+
+    # cronómetro (anillo que se llena)
+    cr = p.get("cronometro")
+    if cr:
+        st = M.at(sc, cr.get("sync"), 0.0)
+        k = M.back(M.prog(t, st, 0.45))
+        if k > 0:
+            x, y, r = cr.get("x", 800), cr.get("y", 780), 120 * k
+            dur = float(cr.get("dur", 3.0))
+            frac = M.clamp((t - st) / dur)
+            secs = int(round(float(cr.get("desde", 0)) + (float(cr.get("hasta", 30)) - float(cr.get("desde", 0))) * frac))
+            d.ellipse([x - r, y - r, x + r, y + r], outline=(40, 52, 88), width=int(18 * k))
+            if frac > 0:
+                d.arc([x - r, y - r, x + r, y + r], -90, -90 + 360 * frac, fill=M.col(cr.get("color"), M.BLUE), width=int(18 * k))
+            etiqueta = cr.get("texto") or (f"{secs // 3600}h {secs % 3600 // 60:02d}m" if secs >= 3600 else f"{secs // 60}:{secs % 60:02d}")
+            M.text(d, (x, y - 6), etiqueta, (64 if len(etiqueta) > 5 else 76) * k, M.WHITE)
+            if cr.get("sub"):
+                M.text(d, (x, y + r + 40), cr["sub"], 40 * k, M.GREY, "bold")
 
     # sello tipo "MITO" / "VERDAD"
     se = p.get("sello")

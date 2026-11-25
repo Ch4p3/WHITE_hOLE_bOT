@@ -1,0 +1,130 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "How long should you actually hold a plank? ⏱️",
+ "descripcion": "The world record is almost 10 hours… but you don't need that. What really matters in a plank 👇",
+ "hashtags": "#plank #abs #core #fitness #whatif #shorts",
+ "fuentes": [
+  "https://www.guinnessworldrecords.com/world-records/longest-time-in-an-abdominal-plank-position"
+ ],
+ "escenas": [
+  {
+   "texto": "How long should you actually hold a plank? One minute? Five?",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 0.3,
+    "colchoneta": true,
+    "titulo": "HOW LONG CAN YOU GO?",
+    "titulo_size": 100,
+    "cronometro": {
+     "hasta": 60,
+     "dur": 3,
+     "x": 540,
+     "y": 760
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "The world record is nine hours and thirty-eight minutes, set by Josef Salek in twenty twenty-three.",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 1,
+    "esfuerzo": 1,
+    "colchoneta": true,
+    "titulo": "WORLD RECORD",
+    "titulo_color": "warm",
+    "cronometro": {
+     "hasta": 34727,
+     "dur": 3,
+     "x": 540,
+     "y": 760,
+     "color": "warm",
+     "sync": "nine",
+     "sub": "Josef Šálek · 2023"
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "But you don't need that. What matters is form: a straight line from your head to your heels.",
+   "visual": {
+    "pose": "plancha",
+    "colchoneta": true,
+    "titulo": "FORM WINS",
+    "sub": "straight from head to heels",
+    "sub_sync": "straight",
+    "brillo": [
+     "abdomen",
+     "hombros"
+    ],
+    "brillo_sync": "form",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "If your hips sag or your lower back hurts, the set is over, even if you haven't hit your time.",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 1,
+    "esfuerzo": 1,
+    "colchoneta": true,
+    "titulo": "HIPS SAGGING?",
+    "sello": {
+     "texto": "STOP",
+     "sync": "over",
+     "x": 780,
+     "y": 800
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "To start, a few short sets of twenty or thirty seconds are a better idea than one endless hold with bad form.",
+   "visual": {
+    "pose": "plancha",
+    "colchoneta": true,
+    "titulo": "SHORT SETS",
+    "titulo_color": "blue",
+    "sub": "3 × 20-30 seconds",
+    "sub_sync": "twenty",
+    "cronometro": {
+     "hasta": 30,
+     "dur": 2.5,
+     "x": 540,
+     "y": 800,
+     "sync": "twenty"
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "And when it gets easy, don't add minutes: make it harder, for example, by lifting one foot.",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 0.4,
+    "colchoneta": true,
+    "titulo": "MAKE IT HARDER",
+    "sub": "not longer: harder",
+    "sub_sync": "harder",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "How long can you hold it? Tell me in the comments, and follow for more: what happens if...",
+   "visual": {
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "YOUR TIME?",
+    "boton": "FOLLOW  +",
+    "boton_sync": "follow",
+    "tipo": "monito"
+   }
+  }
+ ]
+}

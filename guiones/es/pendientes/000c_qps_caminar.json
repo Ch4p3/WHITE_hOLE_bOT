@@ -1,0 +1,132 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "¿Qué pasa si caminas 30 minutos al día? 🚶",
+ "descripcion": "Lo que le pasa a tu corazón, a tu cabeza y a tu peso cuando caminas media hora al día. ¿Cuántos pasos das tú? 👇",
+ "hashtags": "#caminar #salud #ejercicio #quepasasi #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://www.who.int/initiatives/behealthy/physical-activity"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Qué pasa si caminas treinta minutos todos los días?",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "¿30 MIN CAMINANDO?",
+    "sub": "todos los días",
+    "sub_sync": "días",
+    "cronometro": {
+     "hasta": 1800,
+     "dur": 3.2,
+     "x": 800,
+     "y": 760
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "La Organización Mundial de la Salud recomienda al menos ciento cincuenta minutos de actividad moderada a la semana. Treinta minutos, cinco días, y ya cumples.",
+   "visual": {
+    "pose": "caminar",
+    "pastilla": "OMS",
+    "titulo": "150 MIN / SEMANA",
+    "sub": "30 min × 5 días = cumples",
+    "sub_sync": "treinta",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Tu corazón es un músculo: caminar a buen ritmo lo entrena, y con el tiempo trabaja con menos esfuerzo.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "TU CORAZÓN",
+    "titulo_color": "warm",
+    "brillo": [
+     "pecho"
+    ],
+    "brillo_sync": "corazón",
+    "accesorio": {
+     "emoji": "❤️",
+     "sync": "corazón",
+     "dx": 190,
+     "dy": -40,
+     "size": 120
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Además, la actividad física ayuda a prevenir enfermedades del corazón y la diabetes tipo dos.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "MENOS RIESGO",
+    "titulo_color": "blue",
+    "sub": "corazón · diabetes tipo 2",
+    "sub_sync": "prevenir",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Y tu cabeza también lo nota: según la OMS, moverte reduce los síntomas de ansiedad y depresión.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "Y TU MENTE",
+    "sub": "menos ansiedad",
+    "sub_sync": "ansiedad",
+    "accesorio": {
+     "emoji": "🧠",
+     "sync": "cabeza",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "¿Y bajar de peso? Caminar ayuda, pero solo no hace milagros: suma con lo que comes y cómo duermes.",
+   "visual": {
+    "pose": "pensando",
+    "cara": "sorprendido",
+    "titulo": "¿Y EL PESO?",
+    "titulo_color": "warm",
+    "sub": "ayuda, pero no hace milagros",
+    "sub_sync": "milagros",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "El truco: no tienen que ser seguidos. Diez minutos después de cada comida también suman.",
+   "visual": {
+    "pose": "caminar",
+    "titulo": "EL TRUCO",
+    "sub": "3 × 10 minutos también suman",
+    "sub_sync": "diez",
+    "cronometro": {
+     "hasta": 600,
+     "dur": 2.5,
+     "x": 820,
+     "y": 760,
+     "sync": "diez"
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "¿Cuántos pasos das al día? Cuéntame en los comentarios, y sígueme para más: ¿qué pasa si...?",
+   "visual": {
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿CUÁNTO CAMINAS?",
+    "boton": "SEGUIR  +",
+    "boton_sync": "sígueme",
+    "tipo": "monito"
+   }
+  }
+ ]
+}

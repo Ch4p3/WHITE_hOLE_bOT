@@ -1,0 +1,125 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "¿Qué pasa si haces 50 sentadillas al día? 🦵",
+ "descripcion": "Qué músculos trabajas, por qué duelen las escaleras la primera semana y qué hacer cuando ya se vuelve fácil. ¿Te le mides? 👇",
+ "hashtags": "#sentadillas #piernas #gluteos #ejercicio #quepasasi #WhiteHole #reels",
+ "fuentes": [],
+ "escenas": [
+  {
+   "texto": "¿Qué pasa si haces cincuenta sentadillas todos los días?",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 1.1,
+    "colchoneta": true,
+    "titulo": "¿50 SENTADILLAS AL DÍA?",
+    "titulo_size": 100,
+    "contador": {
+     "hasta": 50,
+     "x": 300,
+     "y": 760,
+     "inicio": 1
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Trabajas los músculos más grandes del cuerpo: los cuádriceps, los glúteos y los isquiotibiales.",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 1.7,
+    "colchoneta": true,
+    "titulo": "LO QUE TRABAJAS",
+    "brillo": [
+     "piernas",
+     "gluteos"
+    ],
+    "brillo_sync": "cuádriceps",
+    "etiquetas": [
+     {
+      "texto": "CUÁDRICEPS",
+      "parte": "piernas",
+      "lado": "der",
+      "dy": -260,
+      "sync": "cuádriceps"
+     },
+     {
+      "texto": "GLÚTEOS",
+      "parte": "gluteos",
+      "lado": "izq",
+      "dy": -260,
+      "sync": "glúteos"
+     }
+    ],
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Primera semana: las escaleras duelen. Las agujetas en las piernas son las más famosas.",
+   "visual": {
+    "pose": "cansado",
+    "sudor": true,
+    "pastilla": "SEMANA 1",
+    "titulo": "¡LAS ESCALERAS!",
+    "titulo_sync": "escaleras",
+    "brillo": [
+     "piernas"
+    ],
+    "brillo_sync": "duelen",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Después, subir escaleras o levantarte del piso se vuelve más fácil: es fuerza que usas todos los días.",
+   "visual": {
+    "pose": "musculo",
+    "pastilla": "SEMANAS 2 Y 3",
+    "titulo": "FUERZA DE VERDAD",
+    "titulo_color": "blue",
+    "sub": "la que usas todos los días",
+    "sub_sync": "fuerza",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Pero cincuenta sin peso, después de unas semanas, se quedan cortas. Para seguir avanzando, agrega peso o hazlas más lentas.",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 2.4,
+    "colchoneta": true,
+    "titulo": "¿Y DESPUÉS?",
+    "sub": "más peso o más lento",
+    "sub_sync": "agrega",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "La técnica: espalda recta, rodillas hacia donde apuntan los pies, y baja como si te sentaras en una silla.",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 1.8,
+    "colchoneta": true,
+    "titulo": "LA TÉCNICA",
+    "sub": "como sentarte en una silla",
+    "sub_sync": "silla",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "¿Te le mides? Escribe cincuenta en los comentarios, y sígueme para más: ¿qué pasa si...?",
+   "visual": {
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿TE LE MIDES?",
+    "boton": "ESCRIBE  50",
+    "boton_sync": "escribe",
+    "tipo": "monito"
+   }
+  }
+ ]
+}

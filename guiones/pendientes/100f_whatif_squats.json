@@ -1,0 +1,124 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "What happens if you do 50 squats a day? 🦵",
+ "descripcion": "Which muscles you train, why stairs hurt in week one, and what to do once it gets easy. Are you in? 👇",
+ "hashtags": "#squats #legs #glutes #fitness #whatif #shorts",
+ "fuentes": [],
+ "escenas": [
+  {
+   "texto": "What happens if you do fifty squats every single day?",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 1.1,
+    "colchoneta": true,
+    "titulo": "50 SQUATS A DAY?",
+    "contador": {
+     "hasta": 50,
+     "x": 300,
+     "y": 760,
+     "inicio": 1
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "You train the biggest muscles in your body: your quads, your glutes and your hamstrings.",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 1.7,
+    "colchoneta": true,
+    "titulo": "WHAT YOU TRAIN",
+    "brillo": [
+     "piernas",
+     "gluteos"
+    ],
+    "brillo_sync": "quads",
+    "etiquetas": [
+     {
+      "texto": "QUADS",
+      "parte": "piernas",
+      "lado": "der",
+      "dy": -260,
+      "sync": "quads"
+     },
+     {
+      "texto": "GLUTES",
+      "parte": "gluteos",
+      "lado": "izq",
+      "dy": -260,
+      "sync": "glutes"
+     }
+    ],
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Week one: stairs hurt. Leg soreness is the most famous kind.",
+   "visual": {
+    "pose": "cansado",
+    "sudor": true,
+    "pastilla": "WEEK 1",
+    "titulo": "THE STAIRS!",
+    "titulo_sync": "stairs",
+    "brillo": [
+     "piernas"
+    ],
+    "brillo_sync": "hurt",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "After that, climbing stairs or getting up off the floor gets easier: it's strength you use every day.",
+   "visual": {
+    "pose": "musculo",
+    "pastilla": "WEEKS 2 & 3",
+    "titulo": "REAL STRENGTH",
+    "titulo_color": "blue",
+    "sub": "the kind you use every day",
+    "sub_sync": "strength",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "But fifty bodyweight squats stop being enough after a few weeks. To keep improving, add weight or slow them down.",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 2.4,
+    "colchoneta": true,
+    "titulo": "WHAT'S NEXT?",
+    "sub": "more weight or slower reps",
+    "sub_sync": "add",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Technique: back straight, knees pointing where your toes point, and sit down like there's a chair behind you.",
+   "visual": {
+    "pose": "sentadilla",
+    "ritmo": 1.8,
+    "colchoneta": true,
+    "titulo": "TECHNIQUE",
+    "sub": "like sitting in a chair",
+    "sub_sync": "chair",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Are you in? Comment fifty below, and follow for more: what happens if...",
+   "visual": {
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "ARE YOU IN?",
+    "boton": "FOLLOW  +",
+    "boton_sync": "follow",
+    "tipo": "monito"
+   }
+  }
+ ]
+}

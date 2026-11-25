@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>relay</title></head><body>
+<script>
+// Pasa un video del repositorio a la página que abrió/incrustó este relay (subidas desde el navegador).
+(async () => {
+  const q = new URLSearchParams(location.search);
+  const src = q.get("src"), name = q.get("name") || "video.mp4";
+  if (!src || !src.startsWith("https://raw.githubusercontent.com/Ch4p3/WHITE_hOLE_bOT/")) return;
+  const blob = await (await fetch(src)).blob();
+  const msg = { wh: 1, blob, name };
+  (window.opener || window.parent).postMessage(msg, "*");
+  document.body.textContent = "ok " + blob.size;
+})();
+</script></body></html>

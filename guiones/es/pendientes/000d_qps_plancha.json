@@ -1,0 +1,131 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "¿Cuánto tiempo deberías aguantar la plancha? ⏱️",
+ "descripcion": "El récord mundial es de casi 10 horas… pero tú no necesitas eso. Lo que de verdad importa en la plancha 👇",
+ "hashtags": "#plancha #abdomen #ejercicio #fitness #quepasasi #WhiteHole #reels",
+ "fuentes": [
+  "https://www.guinnessworldrecords.com/world-records/longest-time-in-an-abdominal-plank-position"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Cuánto tiempo deberías aguantar la plancha? ¿Un minuto? ¿Cinco?",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 0.3,
+    "colchoneta": true,
+    "titulo": "¿CUÁNTO AGUANTAS?",
+    "cronometro": {
+     "hasta": 60,
+     "dur": 3,
+     "x": 540,
+     "y": 760
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "El récord mundial es de nueve horas y treinta y ocho minutos. Lo logró Josef Salek, en dos mil veintitrés.",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 1,
+    "esfuerzo": 1,
+    "colchoneta": true,
+    "titulo": "RÉCORD MUNDIAL",
+    "titulo_color": "warm",
+    "cronometro": {
+     "hasta": 34727,
+     "dur": 3,
+     "x": 540,
+     "y": 760,
+     "color": "warm",
+     "sync": "nueve",
+     "sub": "Josef Šálek · 2023"
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Pero tú no necesitas eso. Lo que importa es la forma: el cuerpo recto, desde la cabeza hasta los talones.",
+   "visual": {
+    "pose": "plancha",
+    "colchoneta": true,
+    "titulo": "LA FORMA MANDA",
+    "sub": "recto de la cabeza a los talones",
+    "sub_sync": "recto",
+    "brillo": [
+     "abdomen",
+     "hombros"
+    ],
+    "brillo_sync": "forma",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Si se te hunde la cadera o te duele la espalda baja, ya terminó la serie, aunque no hayas llegado al tiempo.",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 1,
+    "esfuerzo": 1,
+    "colchoneta": true,
+    "titulo": "¿SE HUNDE LA CADERA?",
+    "titulo_size": 96,
+    "sello": {
+     "texto": "PARA",
+     "sync": "terminó",
+     "x": 780,
+     "y": 800
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Para empezar, varias series cortas, de veinte o treinta segundos, son mejor idea que una eterna con mala forma.",
+   "visual": {
+    "pose": "plancha",
+    "colchoneta": true,
+    "titulo": "SERIES CORTAS",
+    "titulo_color": "blue",
+    "sub": "3 × 20-30 segundos",
+    "sub_sync": "veinte",
+    "cronometro": {
+     "hasta": 30,
+     "dur": 2.5,
+     "x": 540,
+     "y": 800,
+     "sync": "veinte"
+    },
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "Y cuando sea fácil, no le sumes minutos: hazla más difícil, por ejemplo, levantando un pie.",
+   "visual": {
+    "pose": "plancha",
+    "temblor": 0.4,
+    "colchoneta": true,
+    "titulo": "SÚBELE LA DIFICULTAD",
+    "titulo_size": 96,
+    "sub": "no más minutos: más difícil",
+    "sub_sync": "difícil",
+    "tipo": "monito"
+   }
+  },
+  {
+   "texto": "¿Cuánto aguantas tú? Cuéntame en los comentarios, y sígueme para más: ¿qué pasa si...?",
+   "visual": {
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿CUÁNTO AGUANTAS?",
+    "boton": "SEGUIR  +",
+    "boton_sync": "sígueme",
+    "tipo": "monito"
+   }
+  }
+ ]
+}

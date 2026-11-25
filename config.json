@@ -10,10 +10,10 @@
     "reels_es": true
   },
   "tiktok": {
-    "subir": true,
+    "subir": false,
     "modo": "bandeja",
     "privacidad": "PUBLIC_TO_EVERYONE",
-    "nota": "modo bandeja: el video llega a la bandeja de TikTok y se publica con un toque en la app. Cambiar a modo directo solo si TikTok aprueba la auditoría."
+    "nota": "subir=false: la bandeja de TikTok se llenó (límite de pendientes). Los videos en inglés se suben y programan desde TikTok Studio web."
   },
   "instagram": {
     "reels_es": true,

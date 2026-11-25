@@ -143,6 +143,8 @@ def main():
     os.makedirs(PUB, exist_ok=True)
     hoy = datetime.date.today().isoformat()
     shutil.move(guion, os.path.join(PUB, f"{hoy}_{os.path.basename(guion)}"))
+    with open(os.path.join(OUT, "ultimo.txt"), "w") as f:      # para que el workflow guarde el video con su nombre real
+        f.write(f"{hoy}_{os.path.basename(guion)[:-5]}")
     print("Enviado a Telegram y movido a publicados.")
 
 def reel_es():

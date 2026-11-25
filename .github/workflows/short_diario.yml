@@ -100,7 +100,7 @@ jobs:
         run: |
           git config user.name "white-hole-bot"
           git config user.email "white-hole-bot@users.noreply.github.com"
-          n=$(ls guiones/publicados | sort | tail -1); n=${n%.json}
+          n=$(cat out/ultimo.txt 2>/dev/null || true); [ -n "$n" ] || { n=$(ls -t guiones/publicados | head -1); n=${n%.json}; }
           cp out/short.mp4 /tmp/$n.mp4; cp guiones/publicados/$n.json /tmp/$n.json
           git stash -q -u || true
           git fetch -q origin previews && git checkout -q previews

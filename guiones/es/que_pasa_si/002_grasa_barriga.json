@@ -1,0 +1,137 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "¿Qué pasa si…?",
+ "titulo": "¿100 abdominales al día bajan la barriga? 🤔",
+ "descripcion": "La reducción localizada es uno de los mitos más grandes del ejercicio. Esto es lo que de verdad pasa cuando haces abdominales, y lo que sí funciona. ¿Tú creías que funcionaba? 👇",
+ "hashtags": "#abdominales #barriga #fitness #mitos #quepasasi #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/21804427/"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Si haces cien abdominales al día, se te quita la barriga?",
+   "visual": {
+    "tipo": "monito",
+    "pose": "abdominal",
+    "ritmo": 0.9,
+    "colchoneta": true,
+    "titulo": "¿100 ABDOMINALES?",
+    "sub": "¿adiós barriga?",
+    "sub_sync": "barriga",
+    "contador": {
+     "hasta": 100,
+     "x": 300,
+     "y": 760,
+     "inicio": 1
+    }
+   }
+  },
+  {
+   "texto": "Spoiler: no. A eso le llaman reducción localizada, y los estudios dicen que no funciona.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "pensando",
+    "cara": "sorprendido",
+    "titulo": "REDUCCIÓN LOCALIZADA",
+    "titulo_size": 96,
+    "sub": "quemar grasa solo en una zona",
+    "sub_sync": "localizada",
+    "sello": {
+     "texto": "MITO",
+     "sync": "funciona",
+     "x": 790,
+     "y": 1030
+    }
+   }
+  },
+  {
+   "texto": "Cuando haces abdominales, sí trabajas el músculo del abdomen. Pero la grasa que lo cubre no se quema justo ahí.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "abdominal",
+    "ritmo": 1.5,
+    "colchoneta": true,
+    "titulo": "MÚSCULO ≠ GRASA",
+    "brillo": [
+     "abdomen"
+    ],
+    "brillo_sync": "músculo",
+    "etiquetas": [
+     {
+      "texto": "MÚSCULO",
+      "parte": "abdomen",
+      "lado": "der",
+      "dy": -230,
+      "sync": "músculo"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tu cuerpo saca la energía de la grasa de todo el cuerpo, no solo de la zona que mueves. Y de dónde se va primero lo decide, en buena parte, tu genética.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "parado",
+    "titulo": "DE TODO EL CUERPO",
+    "sub": "y tu genética decide el orden",
+    "sub_sync": "genética",
+    "brillo": [
+     "pecho",
+     "abdomen",
+     "brazos",
+     "piernas"
+    ],
+    "brillo_sync": "todo",
+    "accesorio": {
+     "emoji": "🧬",
+     "sync": "genética",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    }
+   }
+  },
+  {
+   "texto": "Entonces, ¿los abdominales no sirven? Claro que sirven: un abdomen fuerte ayuda a tu espalda y a tu postura.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "musculo",
+    "titulo": "SÍ SIRVEN",
+    "titulo_color": "blue",
+    "titulo_sync": "claro",
+    "sub": "espalda y postura",
+    "sub_sync": "espalda"
+   }
+  },
+  {
+   "texto": "Para que se note, lo que funciona es bajar la grasa total: moverte más cada día, dormir bien y comer mejor.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "sentadilla",
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "titulo": "LO QUE SÍ FUNCIONA",
+    "titulo_size": 100,
+    "sub": "moverte · dormir · comer mejor",
+    "sub_sync": "moverte"
+   }
+  },
+  {
+   "texto": "¿Tú creías que funcionaba? Cuéntame en los comentarios, y sígueme para más: ¿qué pasa si...?",
+   "visual": {
+    "tipo": "monito",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿TÚ LO CREÍAS?",
+    "boton": "SEGUIR  +",
+    "boton_sync": "sígueme"
+   }
+  }
+ ]
+}

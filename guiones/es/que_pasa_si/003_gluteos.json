@@ -1,0 +1,53 @@
+{
+  "idioma": "es",
+  "velocidad": 0.95,
+  "kokoro": {"voz": "ef_dora", "lang": "es", "velocidad": 1.05},
+  "serie": "¿Qué pasa si…?",
+  "titulo": "Si naciste con poca cola, ¿puedes tener más? 🍑",
+  "descripcion": "Lo que no cambia, lo que sí, y los ejercicios que más trabajan el glúteo. Guárdalo para tu rutina 👇",
+  "hashtags": "#gluteos #sentadillas #fitness #ejercicio #quepasasi #curiosidades #WhiteHole #reels",
+  "fuentes": ["https://pubmed.ncbi.nlm.nih.gov/31230110/"],
+  "escenas": [
+    {
+      "texto": "¿Si naciste con poca cola, puedes tener más? La respuesta corta es sí. Pero hay un detalle.",
+      "visual": {"tipo": "monito", "pose": "sentadilla", "personaje": "monita", "ritmo": 1.3, "colchoneta": true,
+                 "titulo": "¿POCA COLA?", "sub": "¿se puede tener más?", "sub_sync": "puedes"}
+    },
+    {
+      "texto": "La forma de tu cadera viene de tus huesos y de tu genética, y eso no cambia.",
+      "visual": {"tipo": "monito", "pose": "pensando", "personaje": "monita",
+                 "titulo": "LO QUE NO CAMBIA", "titulo_color": "warm", "sub": "huesos y genética", "sub_sync": "huesos",
+                 "accesorio": {"emoji": "🧬", "sync": "genética", "dx": 190, "dy": -40, "size": 130}}
+    },
+    {
+      "texto": "Pero la cola es, sobre todo, músculo: el glúteo mayor, el músculo más grande de tu cuerpo. Y el músculo sí crece.",
+      "visual": {"tipo": "monito", "pose": "sentadilla", "personaje": "monita", "ritmo": 1.8, "colchoneta": true,
+                 "titulo": "LO QUE SÍ CAMBIA", "titulo_color": "blue",
+                 "brillo": ["gluteos"], "brillo_sync": "glúteo",
+                 "etiquetas": [{"texto": "GLÚTEO MAYOR", "parte": "gluteos", "lado": "izq", "dy": -260, "sync": "glúteo"}]}
+    },
+    {
+      "texto": "Uno de los ejercicios que más lo activa es el puente de glúteo: subes la cadera y aprietas arriba.",
+      "visual": {"tipo": "monito", "pose": "puente", "personaje": "monita", "ritmo": 1.6, "colchoneta": true,
+                 "pastilla": "EJERCICIO 1", "titulo": "PUENTE DE GLÚTEO",
+                 "brillo": ["gluteos"], "brillo_sync": "puente"}
+    },
+    {
+      "texto": "Y la sentadilla, pero profunda: en un estudio, bajar más hizo crecer más el glúteo que la sentadilla a medias.",
+      "visual": {"tipo": "monito", "pose": "sentadilla", "personaje": "monita", "ritmo": 1.5, "colchoneta": true,
+                 "pastilla": "EJERCICIO 2", "titulo": "SENTADILLA PROFUNDA", "titulo_size": 100,
+                 "sub": "bajar más = más glúteo", "sub_sync": "bajar",
+                 "brillo": ["gluteos", "piernas"], "brillo_sync": "profunda"}
+    },
+    {
+      "texto": "El secreto: súbele el peso poco a poco y dale tiempo. Los cambios se notan en meses, no en una semana.",
+      "visual": {"tipo": "monito", "pose": "musculo", "personaje": "monita", "pastilla": "PACIENCIA",
+                 "titulo": "POCO A POCO", "sub": "se nota en meses, no en días", "sub_sync": "meses"}
+    },
+    {
+      "texto": "Guarda este video para tu rutina, y sígueme para más: ¿qué pasa si...?",
+      "visual": {"tipo": "monito", "pose": "saludo", "personaje": "monita", "escala": 0.9,
+                 "titulo": "¿LO INTENTAS?", "boton": "GUÁRDALO", "boton_sync": "guarda"}
+    }
+  ]
+}

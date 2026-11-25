@@ -1,0 +1,136 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "af_heart",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "Born with a flat butt? Can you grow it? 🍑",
+ "descripcion": "What you can't change, what you can, and the exercises that hit your glutes the most. Save it for your workout 👇",
+ "hashtags": "#glutes #squats #fitness #workout #whatif #shorts",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/31230110/"
+ ],
+ "escenas": [
+  {
+   "texto": "Born with a flat butt? Can you actually grow it? Short answer: yes. But there's a catch.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "sentadilla",
+    "personaje": "monita",
+    "ritmo": 1.3,
+    "colchoneta": true,
+    "titulo": "FLAT BUTT?",
+    "sub": "can you grow it?",
+    "sub_sync": "grow"
+   }
+  },
+  {
+   "texto": "The shape of your hips comes from your bones and your genes, and that doesn't change.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "pensando",
+    "personaje": "monita",
+    "titulo": "WHAT DOESN'T CHANGE",
+    "titulo_color": "warm",
+    "sub": "bones and genes",
+    "sub_sync": "bones",
+    "accesorio": {
+     "emoji": "🧬",
+     "sync": "genes",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    },
+    "titulo_size": 96
+   }
+  },
+  {
+   "texto": "But your butt is mostly muscle: the gluteus maximus, the biggest muscle in your body. And muscle can grow.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "sentadilla",
+    "personaje": "monita",
+    "ritmo": 1.8,
+    "colchoneta": true,
+    "titulo": "WHAT CAN CHANGE",
+    "titulo_color": "blue",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "gluteus",
+    "etiquetas": [
+     {
+      "texto": "GLUTEUS MAXIMUS",
+      "parte": "gluteos",
+      "lado": "izq",
+      "dy": -260,
+      "sync": "gluteus"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One of the moves that hits it hardest is the glute bridge: lift your hips and squeeze at the top.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "puente",
+    "personaje": "monita",
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "pastilla": "EXERCISE 1",
+    "titulo": "GLUTE BRIDGE",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "bridge"
+   }
+  },
+  {
+   "texto": "And squats, but deep ones: in one study, going deeper grew the glutes more than half squats.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "sentadilla",
+    "personaje": "monita",
+    "ritmo": 1.5,
+    "colchoneta": true,
+    "pastilla": "EXERCISE 2",
+    "titulo": "DEEP SQUATS",
+    "titulo_size": 100,
+    "sub": "deeper = more glutes",
+    "sub_sync": "deeper",
+    "brillo": [
+     "gluteos",
+     "piernas"
+    ],
+    "brillo_sync": "deep"
+   }
+  },
+  {
+   "texto": "The secret: add weight little by little, and give it time. You'll see changes in months, not in a week.",
+   "visual": {
+    "tipo": "monito",
+    "pose": "musculo",
+    "personaje": "monita",
+    "pastilla": "BE PATIENT",
+    "titulo": "LITTLE BY LITTLE",
+    "sub": "months, not days",
+    "sub_sync": "months",
+    "titulo_size": 100
+   }
+  },
+  {
+   "texto": "Save this video for your workout, and follow for more: what happens if...",
+   "visual": {
+    "tipo": "monito",
+    "pose": "saludo",
+    "personaje": "monita",
+    "escala": 0.9,
+    "titulo": "WILL YOU TRY IT?",
+    "boton": "SAVE IT",
+    "boton_sync": "save"
+   }
+  }
+ ]
+}

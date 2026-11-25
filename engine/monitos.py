@@ -19,6 +19,10 @@ import math
 from PIL import Image, ImageDraw, ImageFilter
 
 SS = 2                       # supermuestreo para bordes suaves
+LADO = ("flexion", "abdominal", "sentadilla", "puente")
+HAIR = (78, 50, 44)
+SKINS = {"monito": ((88, 166, 255), (58, 120, 205), (34, 48, 92)),
+         "monita": ((255, 122, 164), (220, 86, 132), (70, 40, 92))}
 CW, CH = 1080, 900           # lienzo local del monito (ancho completo)
 
 BODY = (238, 242, 250)       # el monito es blanco (White Hole)
@@ -55,9 +59,32 @@ def _ik(root, target, l1, l2, bend=1):
 def pose(kind, t, p):
     """Devuelve puntos del esqueleto (coordenadas relativas: x a la derecha, y hacia arriba negativo; suelo y=0)."""
     P = {"vista": "frente"}
-    if kind in ("flexion", "abdominal"):
+    if kind in LADO:
         P["vista"] = "lado"
     per = float(p.get("ritmo", 1.15))
+
+    if kind == "sentadilla":
+        k = _osc(t, per)
+        A = (30, -34)
+        hip = (-15 - 125 * k, -300 + 150 * k)
+        c1, c2 = _ik(hip, A, 150, 150, 1), _ik(hip, A, 150, 150, -1)
+        knee = c1 if c1[0] > c2[0] else c2
+        th = math.radians(8 + 32 * k)
+        d = (math.sin(th), -math.cos(th))
+        S = _add(hip, d, 205)
+        hand = _add(S, (math.cos(math.radians(8 - 20 * k)), math.sin(math.radians(8 - 20 * k))), 180)
+        P.update(S=S, hip=hip, knee=knee, foot=A, hand=hand, E=_add(_lerp(S, hand, 0.5), (0, 8)),
+                 head=_add(_add(S, d, 80), (14, 0)), cara_dx=(30, 0), baja=k, reps=t / per)
+        return P
+    if kind == "puente":
+        k = _osc(t, per)
+        S, A = (-175, -42), (185, -16)
+        hip = (20, -58 - 140 * k)
+        c1, c2 = _ik(hip, A, 165, 160, 1), _ik(hip, A, 165, 160, -1)
+        knee = c1 if c1[1] < c2[1] else c2
+        P.update(S=S, hip=hip, knee=knee, foot=A, E=(-105, -24), hand=(-30, -16),
+                 head=(-262, -78), cara_dx=(6, -14), baja=k, reps=t / per)
+        return P
 
     if kind == "flexion":
         k = _osc(t, per)                                  # 0 arriba, 1 abajo
@@ -73,7 +100,7 @@ def pose(kind, t, p):
     elif kind == "abdominal":
         k = _osc(t, per)
         a = math.radians(10 + 34 * k)
-        hip, knee, foot = (40, -46), (175, -200), (300, -26)
+        hip, knee, foot = (40, -64), (175, -210), (300, -26)
         d = (-math.cos(a), -math.sin(a))
         S = _add(hip, d, 215)
         up = (math.sin(a), -math.cos(a))
@@ -112,9 +139,11 @@ def anchors(P):
         S, hip, E = P["S"], P["hip"], P["E"]
         d = _norm(_v(hip, S)); down = (-d[1], d[0])
         if down[1] < 0: down = (d[1], -d[0])
+        knee = P.get("knee", hip)
+        glu = _add(hip, (-40, -2)) if "foot" in P and P["hip"][1] < -100 else _add(hip, (-6, 22))
         return {"pecho": _add(_lerp(S, hip, 0.22), down, 34), "abdomen": _add(_lerp(S, hip, 0.62), down, 30),
                 "hombros": S, "brazos": _lerp(S, E, 0.55), "triceps": _lerp(S, E, 0.55),
-                "piernas": P.get("knee", hip), "cabeza": P["head"]}
+                "piernas": _lerp(hip, knee, 0.55), "gluteos": glu, "cabeza": P["head"]}
     return {"pecho": (0, -440), "abdomen": (0, -345), "hombros": P["Sr"], "brazos": _lerp(P["Sr"], P["Er"], 0.55),
             "triceps": _lerp(P["Sr"], P["Er"], 0.55), "piernas": P["Kr"], "cabeza": P["head"]}
 
@@ -125,6 +154,7 @@ class _Pen:
         self.cx, self.gy, self.s = cx, gy, s
         self.im = Image.new("RGBA", (CW * SS, CH * SS), (0, 0, 0, 0))
         self.d = ImageDraw.Draw(self.im)
+        self.chica = False
 
     def P(self, pt): return ((self.cx + pt[0] * self.s) * SS, (self.gy + pt[1] * self.s) * SS)
     def W(self, w): return max(1, int(w * self.s * SS))
@@ -192,15 +222,19 @@ def _face(pen, head, cara, t, dx=(0, 0)):
 
 
 def _head(pen, head, cara, t, dx, side=False):
+    if pen.chica:
+        _hair(pen, head, t, side)
     pen.dot(head, 84 + 6, LINE)
     pen.dot(head, 84, BODY)
+    if pen.chica:
+        _hair_cap(pen, head)
     # cinta deportiva
     a = (head[0] - 82, head[1] - 34); b = (head[0] + 82, head[1] - 34)
     X0, X1 = pen.P((head[0] - 84, head[1] - 84)), pen.P((head[0] + 84, head[1] + 84))
     band = Image.new("L", pen.im.size, 0); bd = ImageDraw.Draw(band)
     bd.ellipse([X0[0], X0[1], X1[0], X1[1]], fill=255)
     stripe = Image.new("L", pen.im.size, 0); sd = ImageDraw.Draw(stripe)
-    Y = pen.P((0, head[1] - 46))[1]; Y2 = pen.P((0, head[1] - 22))[1]
+    Y = max(0, pen.P((0, head[1] - 46))[1]); Y2 = max(Y, pen.P((0, head[1] - 22))[1])
     sd.rectangle([0, Y, pen.im.size[0], Y2], fill=255)
     from PIL import ImageChops
     m = ImageChops.multiply(band, stripe)
@@ -251,6 +285,37 @@ def _draw_side(pen, P, kind, cara, t):
         _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
         pen.dot(P["S"], 30, SHIRT)
         pen.ell((P["hand"][0] + 8, P["hand"][1] - 6), 26, 14, LINE); pen.ell((P["hand"][0] + 8, P["hand"][1] - 6), 21, 10, BODY)
+    elif kind == "sentadilla":
+        off = (-16, -4)
+        _limb(pen, [_add(P["hip"], off), _add(P["knee"], off), _add(P["foot"], off)], 46, FAR)
+        _shoe(pen, _add(P["foot"], off), 1)
+        _limb(pen, [_add(P["S"], (14, -4)), _add(P["E"], (14, -4)), _add(P["hand"], (14, -4))], 38, FAR)
+        _limb(pen, [P["hip"], P["knee"], P["foot"]], 50, BODY)
+        _shoe(pen, P["foot"], 1)
+        g = _add(P["hip"], (-24, 4))
+        pen.ell(g, 66 + 6, 58 + 6, LINE); pen.ell(g, 66, 58, SHORTS)
+        pen.seg(P["hip"], _lerp(P["hip"], P["knee"], 0.3), 96 + 11, LINE)
+        pen.seg(P["hip"], _lerp(P["hip"], P["knee"], 0.3), 96, SHORTS)
+        pen.ell(g, 62, 54, SHORTS)
+        pen.seg(P["S"], P["hip"], 108 + 11, LINE); pen.seg(P["S"], P["hip"], 108, SHIRT)
+        _head(pen, P["head"], cara, t, P["cara_dx"], side=True)
+        _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
+        pen.dot(P["S"], 30, SHIRT)
+        pen.dot(P["hand"], 22 + 5, LINE); pen.dot(P["hand"], 22, BODY)
+    elif kind == "puente":
+        off = (14, -6)
+        _limb(pen, [_add(P["hip"], off), _add(P["knee"], off), _add(P["foot"], off)], 46, FAR)
+        _limb(pen, [P["hip"], P["knee"], P["foot"]], 50, BODY)
+        _shoe(pen, P["foot"], 1)
+        pen.seg(P["hip"], _lerp(P["hip"], P["knee"], 0.28), 98 + 11, LINE)
+        pen.seg(P["hip"], _lerp(P["hip"], P["knee"], 0.28), 98, SHORTS)
+        g = _add(P["hip"], (-4, 14))
+        pen.ell(g, 60 + 6, 52 + 6, LINE); pen.ell(g, 60, 52, SHORTS)
+        pen.seg(P["S"], P["hip"], 108 + 11, LINE); pen.seg(P["S"], P["hip"], 108, SHIRT)
+        _head(pen, P["head"], cara, t, P["cara_dx"], side=True)
+        _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
+        pen.dot(P["S"], 30, SHIRT)
+        pen.dot(P["hand"], 22 + 5, LINE); pen.dot(P["hand"], 22, BODY)
     else:
         _limb(pen, [P["hip"], P["knee"], P["foot"]], 46, BODY)
         _shoe(pen, P["foot"], 1)
@@ -263,23 +328,62 @@ def _draw_side(pen, P, kind, cara, t):
         pen.dot(P["hand"], 22 + 5, LINE); pen.dot(P["hand"], 22, BODY)
 
 
+def _set_personaje(nombre):
+    global SHIRT, SHIRT_D, SHORTS
+    SHIRT, SHIRT_D, SHORTS = SKINS.get(nombre, SKINS["monito"])
+
+
+def _hair(pen, head, t, side=False, front_behind=True):
+    """Coleta de la monita (se dibuja detrás de la cabeza)."""
+    sw = math.sin(t * 3.2) * 10
+    if side:
+        base = (head[0] - 70, head[1] - 40)
+        tip = (head[0] - 150, head[1] + 20 + sw)
+        _limb(pen, [base, _lerp(base, tip, 0.5), tip], 46, HAIR, out=10)
+        pen.dot(tip, 28 + 5, LINE); pen.dot(tip, 28, HAIR)
+    else:
+        base = (head[0] + 60, head[1] - 60)
+        tip = (head[0] + 118 + sw * 0.4, head[1] + 30)
+        _limb(pen, [base, _lerp(base, tip, 0.5), tip], 48, HAIR, out=10)
+        pen.dot(tip, 30 + 5, LINE); pen.dot(tip, 30, HAIR)
+
+
+def _hair_cap(pen, head):
+    from PIL import ImageChops
+    X0, X1 = pen.P((head[0] - 84, head[1] - 84)), pen.P((head[0] + 84, head[1] + 84))
+    circ = Image.new("L", pen.im.size, 0); ImageDraw.Draw(circ).ellipse([X0[0], X0[1], X1[0], X1[1]], fill=255)
+    cap = Image.new("L", pen.im.size, 0)
+    Y = max(0, pen.P((0, head[1] - 44))[1])
+    ImageDraw.Draw(cap).rectangle([0, 0, pen.im.size[0], Y], fill=255)
+    pen.im.paste(HAIR + (255,), mask=ImageChops.multiply(circ, cap))
+
+
+def _mat(pen, P):
+    xs = [-360, 360] if P["vista"] == "lado" else [-210, 210]
+    a, b = pen.P((xs[0], -6)), pen.P((xs[1], 12))
+    pen.d.rounded_rectangle([a[0], a[1], b[0], b[1]], radius=pen.W(9), fill=(46, 78, 150))
+    a2, b2 = pen.P((xs[0] + 6, -6)), pen.P((xs[1] - 6, 0))
+    pen.d.rounded_rectangle([a2[0], a2[1], b2[0], b2[1]], radius=pen.W(4), fill=(78, 116, 196))
+
+
 def _auto_face(kind, P):
-    if kind in ("flexion", "abdominal"):
-        return "esfuerzo" if P.get("baja", 0) > 0.55 else "feliz"
+    if kind in LADO:
+        return "esfuerzo" if P.get("baja", 0) > (0.7 if kind == "puente" else 0.55) else "feliz"
     return {"cansado": "dolor", "pensando": "pensando", "musculo": "feliz"}.get(kind, "feliz")
 
 
 # ------------------------------------------------------------------ plantilla
 def v_monito(img, d, t, sc, p, M):
     kind = p.get("pose", "parado")
-    lado = kind in ("flexion", "abdominal")
-    s = float(p.get("escala", 1.25 if lado else 1.0))
-    top = int(p.get("y_lienzo", 560))                     # dónde empieza el lienzo en la pantalla
+    lado = kind in LADO
+    _set_personaje(p.get("personaje", "monito"))
+    s = float(p.get("escala", {"sentadilla": 1.0, "puente": 1.15}.get(kind, 1.25 if lado else 1.0)))
+    top = int(p.get("y_lienzo", 440))                     # dónde empieza el lienzo en la pantalla
     gy = int(p.get("suelo", 1290 if lado else 1350)) - top                 # suelo dentro del lienzo
-    cx = CW // 2 + int(p.get("dx", 0)) - (int(70 * s) if kind == "flexion" else (int(130 * s) if kind == "abdominal" else 0))
+    cx = CW // 2 + int(p.get("dx", 0)) - int({"flexion": 70, "abdominal": 60, "sentadilla": -20, "puente": 0}.get(kind, 0) * s)
     t_anim = t + float(p.get("desfase", 0))
     st_anim = M.at(sc, p.get("anim_sync"), 0.0)
-    ta = max(0.0, t_anim - st_anim) if kind in ("flexion", "abdominal") else t_anim
+    ta = max(0.0, t_anim - st_anim) if kind in LADO else t_anim
     P = pose(kind, ta, p)
     cara = p.get("cara") or _auto_face(kind, P)
 
@@ -289,6 +393,9 @@ def v_monito(img, d, t, sc, p, M):
     d.line([90, top + gy + 2, M.W - 90, top + gy + 2], fill=(34, 44, 74), width=4)
 
     pen = _Pen(cx, gy, s)
+    pen.chica = p.get("personaje") == "monita"
+    if p.get("colchoneta"):
+        _mat(pen, P)
     (_draw_side if P["vista"] == "lado" else _draw_front)(pen, P, kind, cara, t)
     fig = pen.im.reduce(SS)
 
@@ -353,6 +460,8 @@ def v_monito(img, d, t, sc, p, M):
         ly = top + gy + A0[e["parte"]][1] * s + e.get("dy", -150)
         f = M.font(int(46 * min(1, k)) or 1, "black")
         tw = d.textlength(e["texto"], font=f)
+        tw_full = d.textlength(e["texto"], font=M.font(46, "black"))
+        lx = max(lx, tw_full / 2 + 40) if izq else min(lx, M.W - tw_full / 2 - 40)
         ex = lx + (tw / 2 + 26) * (1 if izq else -1)
         kl = M.ease_out(M.prog(t, st + 0.1, 0.35))
         d.line([ex, ly, ex + (X[0] - ex) * kl, ly + (X[1] - ly) * kl], fill=M.WARM, width=6)
@@ -370,6 +479,22 @@ def v_monito(img, d, t, sc, p, M):
         M.text(d, (x, y), str(n), 210 * k * bump, M.BLUE)
         M.text(d, (x, y + 125), f"de {cnt.get('hasta', 20)}" if M.LANG.get("code") == "es" else f"of {cnt.get('hasta', 20)}",
                50 * k, M.GREY, "bold")
+
+    # sello tipo "MITO" / "VERDAD"
+    se = p.get("sello")
+    if se:
+        k = M.back(M.prog(t, M.at(sc, se.get("sync"), 0.4), 0.45), 2.6)
+        if k > 0:
+            colr = M.col(se.get("color"), M.WARM)
+            f = M.font(150, "black")
+            tw = int(ImageDraw.Draw(Image.new("L", (1, 1))).textlength(se["texto"], font=f))
+            st_im = Image.new("RGBA", (tw + 120, 250), (0, 0, 0, 0)); sd = ImageDraw.Draw(st_im)
+            sd.rounded_rectangle([8, 8, tw + 112, 242], 34, outline=colr, width=16)
+            sd.text(((tw + 120) / 2, 128), se["texto"], font=f, fill=colr, anchor="mm")
+            st_im = st_im.rotate(se.get("angulo", -12), expand=True, resample=Image.BICUBIC)
+            sz = max(1.0, 1.6 - 0.6 * k) * min(1.0, k * 1.2)
+            st_im = st_im.resize((max(1, int(st_im.width * sz)), max(1, int(st_im.height * sz))), Image.BICUBIC)
+            img.paste(st_im, (int(se.get("x", M.W // 2) - st_im.width / 2), int(se.get("y", 860) - st_im.height / 2)), st_im)
 
     # textos de arriba
     if p.get("pastilla"):

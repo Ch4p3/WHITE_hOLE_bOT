@@ -84,6 +84,7 @@
       spam_risk_user_banned_from_posting: "TikTok is not allowing this account to post right now.",
       reached_active_user_cap: "White Hole Publisher has reached today's limit of creators. Please try again later.",
       unaudited_client_can_only_post_to_private_accounts: "Your TikTok account needs to be private to post with this app while it is in review. You can also use “Send to my TikTok inbox as a draft”.",
+      spam_risk_too_many_pending_share: "Your TikTok inbox already has too many pending drafts. Post or delete some drafts in TikTok, then try again.",
       privacy_required: "Please choose who can view this video.",
       consent_required: "Please confirm before posting.",
       branded_content_cannot_be_private: "Branded content visibility cannot be set to private.",

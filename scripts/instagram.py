@@ -49,14 +49,42 @@ def reel(video_url, caption, compartir_en_feed=True):
     return p.get("id")
 
 
+def reel_local(video_path, caption, compartir_en_feed=True):
+    """Sube un archivo local como Reel (subida reanudable, no necesita URL pública)."""
+    ig_id, _ = cuenta()
+    _, token = _ids()
+    c = _check(requests.post(f"{GRAPH}/{ig_id}/media", data={
+        "media_type": "REELS", "upload_type": "resumable", "caption": caption[:2200],
+        "share_to_feed": "true" if compartir_en_feed else "false", "access_token": token}, timeout=120))
+    cid = c["id"]
+    size = os.path.getsize(video_path)
+    with open(video_path, "rb") as f:
+        r = requests.post(f"https://rupload.facebook.com/ig-api-upload/v25.0/{cid}",
+                          headers={"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)},
+                          data=f, timeout=900)
+    _check(r)
+    for _ in range(90):
+        st = _check(requests.get(f"{GRAPH}/{cid}", params={"fields": "status_code,status", "access_token": token}, timeout=60))
+        if st.get("status_code") == "FINISHED":
+            break
+        if st.get("status_code") in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"Instagram no pudo procesar el video: {st}")
+        time.sleep(10)
+    p = _check(requests.post(f"{GRAPH}/{ig_id}/media_publish", data={"creation_id": cid, "access_token": token}, timeout=120))
+    return p.get("id")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--verificar", action="store_true")
     ap.add_argument("--reel", nargs=2, metavar=("URL", "TEXTO"))
+    ap.add_argument("--archivo", nargs=2, metavar=("VIDEO", "TEXTO"))
     a = ap.parse_args()
     if a.verificar:
         print("Permisos del token:", ", ".join(permisos()) or "(no se pudieron leer)")
         ig_id, user = cuenta()
         print(f"✅ Instagram conectado: @{user} (id {ig_id})")
+    if a.archivo:
+        print("✅ Reel publicado en Instagram:", reel_local(*a.archivo))
     if a.reel:
         print("✅ Reel publicado en Instagram:", reel(*a.reel))

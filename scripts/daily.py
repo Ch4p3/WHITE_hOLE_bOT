@@ -15,6 +15,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import youtube  # noqa: E402
 import facebook  # noqa: E402
 import tiktok  # noqa: E402
+import instagram  # noqa: E402
 
 PEND = os.path.join(ROOT, "guiones", "pendientes")
 PUB = os.path.join(ROOT, "guiones", "publicados")
@@ -166,6 +167,12 @@ def reel_es():
     except Exception as e:
         print("⚠️ No se pudo publicar el Reel en español:", str(e)[:300])
         return
+    if json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8")).get("instagram", {}).get("reels_es"):
+        try:
+            ig_txt = cfg.get("titulo", "") + "\n\n" + cfg.get("descripcion", "") + "\n\n" + cfg.get("hashtags", "")
+            print("✅ Reel en Instagram:", instagram.reel_local(video, ig_txt))
+        except Exception as e:
+            print("⚠️ No se pudo publicar en Instagram:", str(e)[:300])
     os.makedirs(PUB_ES, exist_ok=True)
     shutil.move(guion, os.path.join(PUB_ES, f"{datetime.date.today().isoformat()}_{os.path.basename(guion)}"))
 

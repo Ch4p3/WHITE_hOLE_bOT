@@ -9,6 +9,13 @@ on:
       texto:
         description: "Texto del post"
         default: ""
+      archivo_previews:
+        description: "Ruta de un video en la rama previews para subirlo como Reel (en vez de URL)"
+        default: ""
+      facebook_tambien:
+        description: "Publicarlo también en la Página de Facebook"
+        type: boolean
+        default: false
 
 jobs:
   instagram:
@@ -16,10 +23,12 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install requests
+      - run: sudo apt-get install -y -qq ffmpeg >/dev/null && pip install requests
       - name: Verificar / publicar
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
@@ -27,3 +36,8 @@ jobs:
         run: |
           python scripts/instagram.py --verificar
           if [ -n "${{ inputs.video_url }}" ]; then python scripts/instagram.py --reel "${{ inputs.video_url }}" "${{ inputs.texto }}"; fi
+          if [ -n "${{ inputs.archivo_previews }}" ]; then
+            git fetch -q origin previews && git show "origin/previews:${{ inputs.archivo_previews }}" > /tmp/v.mp4
+            python scripts/instagram.py --archivo /tmp/v.mp4 "${{ inputs.texto }}"
+            if [ "${{ inputs.facebook_tambien }}" = "true" ]; then python -c "import sys; sys.path.insert(0,'scripts'); import facebook; print('✅ Facebook:', facebook.publicar('/tmp/v.mp4', sys.argv[1], sys.argv[1].split(chr(10))[0]))" "${{ inputs.texto }}"; fi
+          fi

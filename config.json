@@ -14,5 +14,9 @@
     "modo": "bandeja",
     "privacidad": "PUBLIC_TO_EVERYONE",
     "nota": "modo bandeja: el video llega a la bandeja de TikTok y se publica con un toque en la app. Cambiar a modo directo solo si TikTok aprueba la auditoría."
+  },
+  "instagram": {
+    "reels_es": true,
+    "nota": "Cada Reel en español que sale en Facebook se publica también en Instagram (@whi.tehole1)."
   }
 }

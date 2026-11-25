@@ -62,7 +62,7 @@
             <div class="hint"><span id="titleCount">0</span>/2200</div>
           </div>
 
-          <div class="field">
+          <div class="field" id="fPrivacy">
             <label class="t" for="privacy">Who can view this video</label>
             <select id="privacy" required><option value="" selected disabled>Select privacy level</option></select>
           </div>
@@ -93,6 +93,7 @@
             <div class="when">
               <label class="chk"><input type="radio" name="when" value="now" checked> Post now</label>
               <label class="chk"><input type="radio" name="when" value="later"> Schedule</label>
+              <label class="chk"><input type="radio" name="when" value="draft"> Send to my TikTok inbox as a draft</label>
               <input type="datetime-local" id="whenAt" style="max-width:240px" hidden>
             </div>
           </div>

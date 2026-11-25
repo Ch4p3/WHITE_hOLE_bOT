@@ -140,6 +140,9 @@
   function whenMode() { return document.querySelector("input[name=when]:checked").value; }
   function whenChanged() {
     const later = whenMode() === "later"; $("whenAt").hidden = !later;
+    const draft = whenMode() === "draft";
+    ["fPrivacy"].forEach((id) => $(id).style.opacity = draft ? .45 : 1);
+    $("privacy").disabled = draft;
     if (later && !$("whenAt").value) {
       const d = new Date(Date.now() + 60 * 60 * 1000); d.setMinutes(0, 0, 0);
       $("whenAt").value = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
@@ -184,12 +187,13 @@
     if (!video) why = "Choose a video first.";
     else if (creator && creator.max_video_post_duration_sec && video.duration > creator.max_video_post_duration_sec)
       why = `This video is longer than the ${creator.max_video_post_duration_sec}-second limit for your account.`;
-    else if (!sel.value) why = "Choose who can view this video.";
+    else if (whenMode() === "draft" && video.kind !== "library") why = "Drafts can be sent for videos in your library.";
+    else if (!sel.value && whenMode() !== "draft") why = "Choose who can view this video.";
     else if (commercial && !b2 && !y2) why = "You need to indicate if your content promotes yourself, a third party, or both.";
     else if (whenMode() === "later" && !$("whenAt").value) why = "Pick a date and time.";
     $("btnPost").disabled = !!why;
     $("postTip").dataset.tip = why;
-    $("btnPost").textContent = whenMode() === "later" ? "Schedule" : "Post";
+    $("btnPost").textContent = { later: "Schedule", draft: "Send to TikTok" }[whenMode()] || "Post";
   }
 
   /* ---------- posting ---------- */
@@ -204,7 +208,12 @@
     };
     $("btnPost").disabled = true;
     try {
-      if (video.kind === "library" && whenMode() === "later") {
+      if (video.kind === "library" && whenMode() === "draft") {
+        status("info", "Sending the video to your TikTok inbox…");
+        const d = await api("draft", { video_url: video.url, consent: true });
+        status("ok", "Sent! Open TikTok and tap the notification in your inbox to edit and post it.");
+        track(d.publish_id, true);
+      } else if (video.kind === "library" && whenMode() === "later") {
         const at = new Date($("whenAt").value);
         await api("post", Object.assign(body, { video_url: video.url, schedule_at: at.toISOString() }));
         status("ok", `Scheduled for <b>${at.toLocaleString()}</b>. White Hole Publisher will post it to your TikTok account at that time.`);
@@ -225,7 +234,7 @@
     refresh();
   };
 
-  function track(publishId) {
+  function track(publishId, quiet) {
     clearInterval(pollTimer);
     const names = {
       PROCESSING_UPLOAD: "TikTok is receiving your video…", PROCESSING_DOWNLOAD: "TikTok is downloading your video…",
@@ -233,13 +242,14 @@
       FAILED: "TikTok could not post this video."
     };
     let n = 0;
-    status("info", "Posted to TikTok. Processing can take a few minutes before it appears on your profile…");
+    if (!quiet) status("info", "Posted to TikTok. Processing can take a few minutes before it appears on your profile…");
     pollTimer = setInterval(async () => {
       n++;
       try {
         const s = (await api("status", { publish_id: publishId })).status;
         const st = s.status || "PROCESSING_UPLOAD";
-        if (st === "PUBLISH_COMPLETE") { clearInterval(pollTimer); status("ok", "✅ " + names[st]); }
+        if (st === "SEND_TO_USER_INBOX") { clearInterval(pollTimer); status("ok", "✅ Sent to your TikTok inbox. Open TikTok and tap the notification to finish posting."); }
+        else if (st === "PUBLISH_COMPLETE") { clearInterval(pollTimer); status("ok", "✅ " + names[st]); }
         else if (st === "FAILED") { clearInterval(pollTimer); status("bad", names[st] + (s.fail_reason ? " Reason: " + s.fail_reason : "")); }
         else status("info", (names[st] || "Processing…") + " This can take a few minutes.");
       } catch (err) { /* keep polling */ }

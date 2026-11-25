@@ -25,6 +25,7 @@ function doPost(e) {
       case 'creator': return out_(creatorInfo_(body.sid));
       case 'post': return out_(post_(body));
       case 'upload_init': return out_(uploadInit_(body));
+      case 'draft': return out_(draft_(body));
       case 'status': return out_(status_(body.sid, body.publish_id));
       case 'queue': return out_(queue_(body.sid));
       case 'cancel': return out_(cancel_(body.sid, body.id));
@@ -121,6 +122,13 @@ function post_(b) {
     return { ok: true, scheduled: item };
   }
   var d = tt_(b.sid, '/post/publish/video/init/', { post_info: info, source_info: { source: 'PULL_FROM_URL', video_url: b.video_url } });
+  return { ok: true, publish_id: d.publish_id };
+}
+
+function draft_(b) {
+  if (!b.consent) throw new Error('consent_required');
+  if (String(b.video_url || '').indexOf(MEDIA_PREFIX) !== 0) throw new Error('video_must_be_in_library');
+  var d = tt_(b.sid, '/post/publish/inbox/video/init/', { source_info: { source: 'PULL_FROM_URL', video_url: b.video_url } });
   return { ok: true, publish_id: d.publish_id };
 }
 

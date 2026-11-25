@@ -1,0 +1,773 @@
+{
+ "titulo": "Números primos: el misterio de 2.300 años que ahora persigue la IA",
+ "idioma": "es",
+ "kokoro": {
+  "voz": "em_santa",
+  "velocidad": 1.0,
+  "lang": "es"
+ },
+ "pausa": 0.4,
+ "intro_capitulo": "Un récord roto por la IA",
+ "miniatura": {
+  "lineas": [
+   "PRIMOS:",
+   "DE EUCLIDES A LA IA"
+  ],
+  "colores": [
+   "white",
+   "blue"
+  ],
+  "chip": "2.300 AÑOS"
+ },
+ "descripcion": "Desde la demostración de Euclides, de hace 2.300 años, hasta los agentes de IA que rompieron récords de factorización RSA en septiembre de 2026: la criba, el patrón de Gauss, los primos gemelos, el primo récord de 41 millones de dígitos hallado con GPU, por qué los primos protegen tu banco y cuándo se jubila RSA.",
+ "fuentes": [
+  "GIMPS, descubrimiento de M136279841 (octubre de 2024): https://www.mersenne.org",
+  "Scientific American sobre la búsqueda con GPU de Luke Durant: https://www.scientificamerican.com/article/new-prime-number-41-million-digits-long-breaks-math-records",
+  "Récords de factorización de enteros (RSA-250, 2020): https://members.loria.fr/PZimmermann/records/factor.html",
+  "Cognition, factorización de RSA-260 (septiembre de 2026): https://cognition.com/blog/factoring-rsa-260",
+  "Post-Quantum, RSA-896 factorizado con Claude (septiembre de 2026): https://postquantum.com/security-pqc/rsa-896-factored-claude-gpus/",
+  "Polymath, retrospectiva sobre las distancias acotadas entre primos: https://arxiv.org/abs/1409.8361",
+  "Estándares poscuánticos del NIST FIPS 203/204/205 (agosto de 2024): https://csrc.nist.gov/Projects/post-quantum-cryptography/pqc-standards",
+  "Resumen de la versión final de NIST IR 8547 (27 de octubre de 2026): https://postquantum.com/security-pqc/nist-ir-8547-final/",
+  "Historia del teorema de los números primos: https://mathworld.wolfram.com/PrimeNumberTheorem.html"
+ ],
+ "hashtags": [
+  "#matemáticas",
+  "#númerosprimos",
+  "#criptografía",
+  "#IA",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "El tres de septiembre de dos mil veintiséis, un ingeniero publicó un solo número en internet. Tenía ciento treinta dígitos. Y rompió un récord que llevaba seis años y medio en pie.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "3 de septiembre de 2026",
+    "to": 130,
+    "suffix": " dígitos",
+    "label": "un número, publicado en internet",
+    "sync": "ciento",
+    "note": "un récord que duró 6½ años",
+    "note_sync": "récord"
+   }
+  },
+  {
+   "texto": "Ese número era uno de los dos factores primos de RSA doscientos sesenta, un desafío para descifrar códigos lanzado en mil novecientos noventa y uno. Y el software que lo rompió se construyó con un agente de inteligencia artificial.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "RSA-260 = p × q",
+      "sync": "factores"
+     },
+     {
+      "text": "dos primos, de 130 dígitos cada uno",
+      "sync": "desafío",
+      "color": "ice",
+      "size": 64
+     }
+    ],
+    "result": {
+     "value": 1991,
+     "sync": "novecientos",
+     "label": "el año en que se lanzó el desafío",
+     "texto": "1991"
+    }
+   }
+  },
+  {
+   "texto": "Dieciséis días después, un investigador de Anthropic usó a Claude para volver a romper el récord. Para entender por qué eso importa para tu cuenta bancaria, tenemos que viajar dos mil trescientos años atrás.",
+   "visual": {
+    "tipo": "titulo",
+    "pre": "16 días después: roto otra vez",
+    "pre_sync": "dieciséis",
+    "lines": [
+     "DE EUCLIDES",
+     "A LA IA"
+    ],
+    "sync": "entender",
+    "colors": [
+     "white",
+     "blue"
+    ]
+   }
+  },
+  {
+   "texto": "Capítulo uno. Los átomos de los números.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "Los átomos de los números",
+    "sub": "qué es realmente un primo"
+   }
+  },
+  {
+   "texto": "Un número primo es un número entero mayor que uno, que solo se puede dividir exactamente entre uno y entre sí mismo. Dos, tres, cinco, siete, once, trece.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "2",
+     "3",
+     "5",
+     "7",
+     "11",
+     "13",
+     "17",
+     "19"
+    ],
+    "sync": "dos",
+    "stagger": 0.25,
+    "size": 80,
+    "nota": "divisible solo entre 1 y sí mismo",
+    "nota_sync": "mismo"
+   }
+  },
+  {
+   "texto": "Todos los demás números se construyen multiplicando primos. Doce es dos por dos por tres. Mil es dos al cubo por cinco al cubo. Y aquí viene lo más bonito: cada número tiene exactamente una sola receta.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "12 = 2 × 2 × 3",
+      "sync": "doce"
+     },
+     {
+      "text": "1.000 = 2³ × 5³",
+      "sync": "mil",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 1,
+     "sync": "exactamente",
+     "prefix": "",
+     "suffix": " receta",
+     "label": "para cada número entero",
+     "texto": "1 receta"
+    }
+   }
+  },
+  {
+   "texto": "Por eso los matemáticos dicen que los primos son los átomos de la aritmética. Y la gente los ha perseguido desde la antigua Grecia.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "ÁTOMOS",
+    "pre": "los primos son los",
+    "sub": "de la aritmética",
+    "sync": "átomos",
+    "sub_sync": "aritmética"
+   }
+  },
+  {
+   "texto": "Capítulo dos. La demostración de Euclides.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "La demostración de Euclides",
+    "sub": "hacia el 300 a. C."
+   }
+  },
+  {
+   "texto": "Hacia el trescientos antes de Cristo, Euclides se hizo una pregunta sencilla. ¿Los primos se acaban algún día? Su respuesta es uno de los argumentos más elegantes jamás escritos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Euclides preguntó:",
+    "word": "¿SE ACABAN?",
+    "size": 170,
+    "sync": "sencilla",
+    "sub": "su demostración sigue funcionando 2.300 años después",
+    "sub_sync": "elegantes"
+   }
+  },
+  {
+   "texto": "Imagina que tienes una lista completa de todos los primos. Multiplícalos todos entre sí, y luego súmale uno.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "2 × 3 × 5 × 7",
+      "sync": "multiplícalos"
+     },
+     {
+      "text": "+ 1",
+      "sync": "súmale",
+      "color": "blue"
+     }
+    ],
+    "result": {
+     "value": 211,
+     "sync": "uno",
+     "label": "no es divisible entre 2, 3, 5 ni 7",
+     "texto": "211"
+    }
+   }
+  },
+  {
+   "texto": "Ese nuevo número deja un residuo de uno cuando lo divides entre cualquier primo de tu lista. Así que, o es un primo totalmente nuevo, o está hecho de primos que se te escaparon. De cualquier forma, tu lista no estaba completa.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "DIVIDE ENTRE CUALQUIER PRIMO DE LA LISTA → RESIDUO 1",
+    "items": [
+     {
+      "texto": "O es un primo nuevo",
+      "sync": "totalmente"
+     },
+     {
+      "texto": "O está hecho de primos que se te escaparon",
+      "sync": "escaparon"
+     },
+     {
+      "texto": "Así que ninguna lista puede estar completa",
+      "sync": "completa"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pruébalo con los primeros seis primos, y obtienes treinta mil treinta y uno. No es primo. Es cincuenta y nueve por quinientos nueve. Dos primos que no estaban en la lista.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "2·3·5·7·11·13 + 1 = 30.031",
+      "sync": "treinta"
+     },
+     {
+      "text": "= 59 × 509",
+      "sync": "cincuenta",
+      "color": "warm"
+     }
+    ],
+    "result": {
+     "value": 2,
+     "sync": "estaban",
+     "suffix": " primos nuevos",
+     "label": "que faltaban en la lista",
+     "texto": "2 primos nuevos"
+    }
+   }
+  },
+  {
+   "texto": "Así que los primos nunca se acaban. Hay infinitos. Pero encontrarlos es otra historia.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "INFINITOS",
+    "sub": "los primos nunca se acaban",
+    "sync": "infinitos",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Capítulo tres. La criba.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "La criba",
+    "sub": "Eratóstenes, hacia el 240 a. C."
+   }
+  },
+  {
+   "texto": "Unos sesenta años después de Euclides, Eratóstenes encontró una forma ingeniosa de atraparlos. Escribe los números. Quédate con el dos, y tacha todos los múltiplos de dos. Quédate con el tres, y tacha sus múltiplos. Luego el cinco. Luego el siete.",
+   "visual": {
+    "tipo": "criba",
+    "n": 100,
+    "titulo": "LA CRIBA DE ERATÓSTENES",
+    "pasos": [
+     {
+      "p": 2,
+      "sync": "dos"
+     },
+     {
+      "p": 3,
+      "sync": "tres"
+     },
+     {
+      "p": 5,
+      "sync": "cinco"
+     },
+     {
+      "p": 7,
+      "sync": "siete"
+     }
+    ],
+    "final_sync": "siete"
+   }
+  },
+  {
+   "texto": "Lo que sobrevive es primo. Hay veinticinco por debajo de cien. Las computadoras todavía usan versiones de este truco hoy en día.",
+   "visual": {
+    "tipo": "criba",
+    "n": 100,
+    "pasos": [
+     {
+      "p": 2,
+      "sync": 0
+     },
+     {
+      "p": 3,
+      "sync": 0
+     },
+     {
+      "p": 5,
+      "sync": 0
+     },
+     {
+      "p": 7,
+      "sync": 0
+     }
+    ],
+    "final_sync": "sobrevive"
+   }
+  },
+  {
+   "texto": "Pero si miras más de cerca, aparece algo extraño. Los primos se van haciendo escasos. Entre los primeros cien números hay veinticinco. Entre los cien números justo después de diez millones, solo hay dos.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Primos del 1 al 100",
+      "value": 25,
+      "value_text": "25",
+      "sync": "primeros"
+     },
+     {
+      "label": "Primos del 10.000.001 al 10.000.100",
+      "value": 2,
+      "value_text": "2",
+      "color": "warm",
+      "sync": "millones"
+     }
+    ],
+    "note": "los primos se van haciendo escasos",
+    "note_sync": "solo"
+   }
+  },
+  {
+   "texto": "Capítulo cuatro. El patrón en el caos.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "El patrón en el caos",
+    "sub": "Gauss, Riemann y el teorema de los números primos"
+   }
+  },
+  {
+   "texto": "En mil setecientos noventa y dos, un muchacho de quince años llamado Carl Friedrich Gauss contó primos en bloques de mil. Notó que se van haciendo escasos de una forma muy precisa, siguiendo el logaritmo natural.",
+   "visual": {
+    "tipo": "formula",
+    "pre": "Gauss, a los 15 años (1792)",
+    "tex": "\\pi(x) \\approx \\frac{x}{\\ln x}",
+    "size": 80,
+    "sync": "notó",
+    "sub": "cuántos primos hay hasta x",
+    "sub_sync": "logaritmo"
+   }
+  },
+  {
+   "texto": "Hasta un millón, esa fórmula sencilla predice unos setenta y dos mil primos. La respuesta real es setenta y ocho mil cuatrocientos noventa y ocho. Y entre más grande vas, más se acerca la proporción a uno.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FÓRMULA x / ln x",
+     "value": "72.382",
+     "color": "grey",
+     "sync": "predice"
+    },
+    "right": {
+     "label": "PRIMOS REALES",
+     "value": "78.498",
+     "color": "blue",
+     "sync": "real"
+    },
+    "vs_text": "≈",
+    "note": "hasta un millón",
+    "note_sync": "millón"
+   }
+  },
+  {
+   "texto": "Gauss no pudo demostrarlo. Bernhard Riemann dio el paso clave en mil ochocientos cincuenta y nueve. Y en mil ochocientos noventa y seis, dos matemáticos por fin lo demostraron, cada uno por su lado, el mismo año.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "DE UNA SOSPECHA A UN TEOREMA",
+    "eventos": [
+     {
+      "fecha": "1792",
+      "texto": "Gauss\nnota el patrón",
+      "sync": "gauss"
+     },
+     {
+      "fecha": "1859",
+      "texto": "Riemann\nla función zeta",
+      "sync": "riemann"
+     },
+     {
+      "fecha": "1896",
+      "texto": "Hadamard y\nde la Vallée Poussin",
+      "sync": "noventa"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Riemann también dejó una pregunta que nadie ha podido responder desde entonces. Vale un millón de dólares, y le dedicamos un video completo.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "US$1.000.000",
+    "pre": "la hipótesis de Riemann",
+    "sync": "millón",
+    "sub": "aún sin resolver",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Capítulo cinco. Gemelos.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "Primos gemelos",
+    "sub": "el problema que no muere"
+   }
+  },
+  {
+   "texto": "Algunos primos vienen en parejas, separados por solo dos. Tres y cinco. Once y trece. Cuarenta y uno y cuarenta y tres. ¿Eso sigue pasando para siempre? Nadie lo sabe.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "3 · 5",
+     "11 · 13",
+     "17 · 19",
+     "41 · 43",
+     "71 · 73"
+    ],
+    "sync": "parejas",
+    "stagger": 0.3,
+    "size": 72,
+    "nota": "primos gemelos: separados por solo 2",
+    "nota_sync": "separados"
+   }
+  },
+  {
+   "texto": "En dos mil trece, un matemático poco conocido llamado Yitang Zhang demostró que hay infinitas parejas de primos separadas por menos de setenta millones.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Yitang Zhang, 2013",
+    "to": 70000000,
+    "label": "la primera distancia demostrada",
+    "sync": "setenta",
+    "note": "infinitas parejas de primos así de cerca",
+    "note_sync": "infinitas"
+   }
+  },
+  {
+   "texto": "Setenta millones suena enorme, pero antes de Zhang nadie había podido demostrar ningún límite. En menos de un año, matemáticos trabajando juntos por internet, con la ayuda de James Maynard, la bajaron a doscientos cuarenta y seis. La meta es dos. Y sigue sin resolverse.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "LA DISTANCIA ENTRE PAREJAS DE PRIMOS",
+    "items": [
+     {
+      "texto": "2013 · Zhang: menos de 70.000.000",
+      "sync": "setenta"
+     },
+     {
+      "texto": "2014 · Polymath + Maynard: 246",
+      "sync": "bajaron"
+     },
+     {
+      "texto": "La meta: 2 (aún sin demostrar)",
+      "sync": "meta",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Capítulo seis. Gigantes.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 6,
+    "titulo": "Gigantes",
+    "sub": "el primo más grande jamás encontrado"
+   }
+  },
+  {
+   "texto": "El campeón actual es dos elevado a ciento treinta y seis millones doscientos setenta y nueve mil ochocientos cuarenta y uno, menos uno. Escrito completo, tiene más de cuarenta y un millones de dígitos.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "2^136.279.841 − 1",
+    "to": 41024320,
+    "label": "dígitos",
+    "sync": "escrito",
+    "note": "el primo más grande conocido",
+    "note_sync": "campeón"
+   }
+  },
+  {
+   "texto": "Lo encontró en octubre de dos mil veinticuatro Luke Durant, un exingeniero de Nvidia. Alquiló miles de GPU en servidores, repartidas en diecisiete países.",
+   "visual": {
+    "tipo": "gpu",
+    "fase": "gpu",
+    "sync": "encontró",
+    "fuego_sync": "alquiló",
+    "gpu_label": "miles de GPU · 17 países",
+    "cpu_label": "los PC comunes tuvieron el récord durante 28 años"
+   }
+  },
+  {
+   "texto": "Una GPU en Dublín detectó el número. Otra, en Texas, confirmó que era primo. Gastó cerca de dos millones de dólares. El premio era de tres mil.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "LO QUE GASTÓ",
+     "value": "~US$2 M",
+     "color": "warm",
+     "sync": "gastó"
+    },
+    "right": {
+     "label": "EL PREMIO",
+     "value": "US$3.000",
+     "color": "blue",
+     "sync": "premio"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Fíjate en el hardware. El mismo tipo de chips que entrena a la inteligencia artificial ahora es el mejor cazador de primos del planeta. Tenlo presente.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "MISMOS CHIPS",
+    "pre": "entrenar IA · cazar primos",
+    "sync": "mismo",
+    "sub": "GPU",
+    "sub_sync": "cazador"
+   }
+  },
+  {
+   "texto": "Capítulo siete. Los primos guardan tus secretos.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 7,
+    "titulo": "Los primos guardan tus secretos",
+    "sub": "RSA, 1977"
+   }
+  },
+  {
+   "texto": "En mil novecientos setenta y siete, Rivest, Shamir y Adleman convirtieron los primos en un candado. La idea es una trampilla. Multiplicar dos primos enormes le toma a una computadora una fracción de segundo. Ir en reversa, del producto a los dos primos, es brutalmente difícil.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MULTIPLICAR p × q",
+     "value": "instantáneo",
+     "color": "blue",
+     "sync": "multiplicar"
+    },
+    "right": {
+     "label": "FACTORIZAR N → p, q",
+     "value": "brutal",
+     "color": "warm",
+     "sync": "reversa"
+    },
+    "vs_text": "≠"
+   }
+  },
+  {
+   "texto": "Esa calle de una sola vía se convirtió en RSA, y durante décadas ha protegido inicios de sesión, sitios web, actualizaciones de software y firmas digitales. Hoy, una clave RSA estándar tiene dos mil cuarenta y ocho bits. Es un número de seiscientos diecisiete dígitos.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "una clave estándar RSA-2048",
+    "to": 617,
+    "label": "dígitos de largo",
+    "sync": "seiscientos",
+    "note": "todavía se considera segura",
+    "note_sync": "estándar"
+   }
+  },
+  {
+   "texto": "Capítulo ocho. El récord de la inteligencia artificial.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 8,
+    "titulo": "Llega la IA",
+    "sub": "septiembre de 2026"
+   }
+  },
+  {
+   "texto": "En mil novecientos noventa y uno, los Laboratorios RSA publicaron una lista de números gigantes y retaron a la gente a factorizarlos. Durante años, el récord fue un número de doscientos cincuenta dígitos, descifrado en dos mil veinte con unos dos mil setecientos años de tiempo de cómputo.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "RSA-250 · febrero de 2020",
+    "to": 2700,
+    "suffix": " años-núcleo",
+    "label": "de cómputo para factorizarlo",
+    "sync": "doscientos",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Luego, este septiembre, Eric Lu, de la empresa Cognition, factorizó RSA doscientos sesenta. Su agente de inteligencia artificial, Devin, escribió una nueva versión del software de factorización para GPU, y lo corrió en capacidad sobrante. Unos quince días. Unos cuatrocientos mil dólares.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "RSA-260 · 3 DE SEPTIEMBRE DE 2026",
+    "items": [
+     {
+      "texto": "Un agente de IA creó un motor de factorización en GPU",
+      "sync": "devin"
+     },
+     {
+      "texto": "~15,6 días de cómputo",
+      "sync": "quince"
+     },
+     {
+      "texto": "~US$400.000 a precios de mercado",
+      "sync": "cuatrocientos"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dieciséis días después, Stephen Weis, de Anthropic, usó a Claude para adaptar esas mismas herramientas de código abierto a las GPU. Con hasta dos mil cuarenta y ocho de ellas, en unos diez días, descifró un número de ochocientos noventa y seis bits. Un nuevo récord.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "RSA-896 · 19 DE SEPTIEMBRE DE 2026",
+    "items": [
+     {
+      "texto": "Claude adaptó el software a GPU",
+      "sync": "claude"
+     },
+     {
+      "texto": "Hasta 2.048 GPU con capacidad ociosa",
+      "sync": "cuarenta"
+     },
+     {
+      "texto": "~10 días · nuevo récord público",
+      "sync": "diez"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Entonces, ¿tu cuenta bancaria está en peligro? No por esto. Según los cálculos de la propia Cognition, una clave real de dos mil cuarenta y ocho bits es unas noventa y un mil millones de veces más difícil que RSA doscientos sesenta.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "RSA-2048 vs. RSA-260",
+    "to": 91,
+    "suffix": " MIL MILLONES×",
+    "label": "más difícil de factorizar",
+    "sync": "noventa",
+    "color": "blue",
+    "note": "tu banco está bien (por ahora)",
+    "note_sync": "peligro"
+   }
+  },
+  {
+   "texto": "La verdadera amenaza son las computadoras cuánticas. En mil novecientos noventa y cuatro, Peter Shor demostró que una computadora cuántica lo bastante grande podría factorizar estos números rápidamente. Esa máquina todavía no existe. Pero el mundo ya se está preparando.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "CUÁNTICA",
+    "pre": "la verdadera amenaza:",
+    "sync": "cuánticas",
+    "sub": "el algoritmo de Shor, 1994",
+    "sub_sync": "novecientos",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "El NIST publicó nuevos estándares resistentes a la computación cuántica en dos mil veinticuatro. Y en octubre de dos mil veintiséis fijó la fecha límite: RSA queda obsoleto después de dos mil treinta, y prohibido después de dos mil treinta y cinco.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "EL FIN DE RSA",
+    "eventos": [
+     {
+      "fecha": "1977",
+      "texto": "RSA\nnace",
+      "sync": "nist"
+     },
+     {
+      "fecha": "2024",
+      "texto": "Estándares\nposcuánticos del NIST",
+      "sync": "veinticuatro"
+     },
+     {
+      "fecha": "2030",
+      "texto": "RSA\nobsoleto",
+      "sync": "obsoleto"
+     },
+     {
+      "fecha": "2035",
+      "texto": "RSA\nprohibido",
+      "sync": "prohibido"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Capítulo nueve. Sigue siendo un misterio.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 9,
+    "titulo": "Sigue siendo un misterio",
+    "sub": "2.300 años después"
+   }
+  },
+  {
+   "texto": "Veintitrés siglos después de Euclides, los primos protegen internet, exigen al máximo nuestras computadoras más grandes, y ahora la inteligencia artificial nos ayuda a cazarlos. Y todavía no podemos responder preguntas que haría un niño. ¿Hay infinitos primos gemelos? ¿Dónde está exactamente el siguiente primo?",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "2.300 AÑOS DE PRIMOS",
+    "eventos": [
+     {
+      "fecha": "300 a. C.",
+      "texto": "Euclides\ninfinitos primos",
+      "sync": "veintitrés"
+     },
+     {
+      "fecha": "240 a. C.",
+      "texto": "Eratóstenes\nla criba",
+      "sync": "euclides"
+     },
+     {
+      "fecha": "1792",
+      "texto": "Gauss\nel patrón",
+      "sync": "protegen"
+     },
+     {
+      "fecha": "1977",
+      "texto": "RSA\nprimos como candados",
+      "sync": "internet"
+     },
+     {
+      "fecha": "2024",
+      "texto": "El primo más grande\n41 M de dígitos",
+      "sync": "computadoras"
+     },
+     {
+      "fecha": "2026",
+      "texto": "Agentes de IA\nrompen récords",
+      "sync": "inteligencia"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La próxima vez vamos a abrir algo que usas todos los días: lo que de verdad pasa en los dos segundos después de acercar tu tarjeta de crédito. Suscríbete para que no te lo pierdas.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "LA PRÓXIMA",
+     "TU TARJETA DE CRÉDITO"
+    ],
+    "colors": [
+     "grey",
+     "blue"
+    ],
+    "syncs": [
+     "próxima",
+     "crédito"
+    ],
+    "button": "SUSCRÍBETE",
+    "button_sync": "suscríbete"
+   }
+  }
+ ]
+}

@@ -452,7 +452,10 @@ def v_bucle(img, d, t, sc, p):
     for i in range(ni):
         kk = back(prog(t, st + i * iv, 0.35))
         words.append((new[i], BLUE if i == ni - 1 else ICE, kk))
-    f = font(80, "xbold")
+    fsz = 80
+    while fsz > 44 and ImageDraw.Draw(Image.new("L", (1, 1))).textlength(base + "".join(new), font=font(fsz, "xbold")) > 1700:
+        fsz -= 4
+    f = font(fsz, "xbold")
     full = base + "".join(new[:ni])
     tw = d.textlength(full, font=f)
     x = W / 2 - min(tw, 1700) / 2

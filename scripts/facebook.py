@@ -96,11 +96,15 @@ def subir_video(video_path, descripcion, titulo=None):
     data = {"access_token": token, "description": descripcion[:5000], "published": "true"}
     if titulo:
         data["title"] = titulo[:255]
+    prog = os.environ.get("FB_PROGRAMAR", "").strip()
+    if prog:  # hora unix (UTC) en que Facebook lo publica solo; entre 10 min y 6 meses en el futuro
+        data["published"] = "false"
+        data["scheduled_publish_time"] = str(int(prog))
     with open(video_path, "rb") as f:
         r = requests.post(f"https://graph-video.facebook.com/v25.0/{page_id}/videos", data=data,
                           files={"source": ("video.mp4", f, "video/mp4")}, timeout=900)
     res = _check(r)
-    return res.get("id"), "publicado como video"
+    return res.get("id"), ("programado" if prog else "publicado como video")
 
 
 def publicar(video_path, descripcion, titulo=None):

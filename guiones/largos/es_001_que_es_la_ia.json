@@ -1,0 +1,882 @@
+{
+ "titulo": "¿Qué es la IA, de verdad? Es solo un archivo lleno de números",
+ "idioma": "es",
+ "kokoro": {
+  "voz": "em_santa",
+  "velocidad": 1.0,
+  "lang": "es"
+ },
+ "pausa": 0.4,
+ "intro_capitulo": "Un archivo de números",
+ "miniatura": {
+  "lineas": [
+   "¿QUÉ ES LA IA,",
+   "DE VERDAD?"
+  ],
+  "colores": [
+   "white",
+   "blue"
+  ],
+  "chip": "810 GB DE NÚMEROS"
+ },
+ "descripcion": "Dentro de una IA no hay un manual de reglas. Solo hay un archivo con 405 mil millones de números que predice un pedacito de palabra a la vez. Esto es lo que de verdad pasa cuando un chatbot te responde: los tokens, la predicción del siguiente token, el entrenamiento con 15 billones de tokens, por qué funciona con tarjetas gráficas, por qué no se acuerda de ti y por qué a veces se inventa cosas.",
+ "fuentes": [
+  "Ficha técnica del modelo Meta Llama 3.1 (parámetros, más de 15 billones de tokens de entrenamiento, 30,84 millones de horas-GPU H100): https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "Hugging Face, notas de lanzamiento de Llama 3.1 (requisitos de memoria, contexto de 128K): https://huggingface.co/blog/llama31",
+  "NVIDIA, Llama 3.1 entrenado con más de 16.000 GPU H100: https://developer.nvidia.com/blog/supercharging-meta-llama-3-1-across-nvidia-platforms/",
+  "Arquitectura de Llama 3.1 405B (126 capas): Meta, The Llama 3 Herd of Models (2024), arXiv:2407.21783",
+  "Especificaciones de la NVIDIA H100 (80 GB, 16.896 núcleos CUDA, SXM5): https://www.nvidia.com/en-us/data-center/h100/",
+  "Karpathy, llama2.c (inferencia de Llama en un solo archivo pequeño en C): https://github.com/karpathy/llama2.c"
+ ],
+ "hashtags": [
+  "#IA",
+  "#inteligenciaartificial",
+  "#AprendizajeAutomatico",
+  "#ComoFunciona",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "En algún lugar, ahora mismo, un computador está guardando un archivo.",
+   "visual": {
+    "tipo": "archivo",
+    "nombre": "model.safetensors",
+    "tamano": 810,
+    "unidad": "GB",
+    "etiqueta": "un modelo de IA",
+    "sync": "computador"
+   }
+  },
+  {
+   "texto": "No es una aplicación. No es una lista de instrucciones. Son ochocientos diez gigabytes de números, y nada más.",
+   "visual": {
+    "tipo": "numeros",
+    "modo": "flicker",
+    "etiqueta": "810 GB · SOLO NÚMEROS",
+    "etiqueta_sync": "números"
+   }
+  },
+  {
+   "texto": "Y sin embargo, cuando escribes una pregunta, esos números te responden. Escriben ensayos, arreglan código dañado y explican los agujeros negros.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "Y SIN EMBARGO, TE RESPONDEN",
+    "items": [
+     {
+      "texto": "Escriben ensayos",
+      "sync": "ensayos"
+     },
+     {
+      "texto": "Arreglan código dañado",
+      "sync": "código"
+     },
+     {
+      "texto": "Explican los agujeros negros",
+      "sync": "agujeros"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Entonces, ¿qué está pasando realmente ahí adentro? ¿Está pensando? ¿Es una especie de sistema operativo? Abramos el archivo.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "¿QUÉ ES LA IA,",
+     "DE VERDAD?"
+    ],
+    "sync": "realmente"
+   }
+  },
+  {
+   "texto": "Capítulo uno. No es un programa. Por lo menos, no como te lo imaginas.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "No es un programa",
+    "sub": "ni un sistema operativo"
+   }
+  },
+  {
+   "texto": "Un programa normal lo escriben personas, línea por línea. Si pasa esto, haz aquello. Cada regla la tecleó un programador.",
+   "visual": {
+    "tipo": "codigo",
+    "sync": "escriben",
+    "lineas": [
+     "# escrito por un humano",
+     "if battery < 20:",
+     "    show_warning()",
+     "else:",
+     "    keep_going()"
+    ],
+    "etiqueta": "cada regla la escribió una persona",
+    "etiqueta_sync": "cada"
+   }
+  },
+  {
+   "texto": "Un sistema operativo, como Windows o Android, es la misma idea pero a una escala gigantesca. Administra tu memoria, tus archivos y tus aplicaciones, con reglas que escribieron humanos.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "SISTEMA OPERATIVO = REGLAS ESCRITAS POR HUMANOS",
+    "items": [
+     {
+      "texto": "Administra la memoria",
+      "sync": "memoria"
+     },
+     {
+      "texto": "Administra los archivos",
+      "sync": "archivos"
+     },
+     {
+      "texto": "Ejecuta tus aplicaciones",
+      "sync": "aplicaciones"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Un modelo moderno de IA es diferente. Nadie escribió sus reglas. De hecho, nadie entiende del todo cuáles son la mayoría de ellas.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "un modelo moderno de IA:",
+    "word": "SIN REGLAS",
+    "sub": "nadie las escribió",
+    "sub_sync": "nadie",
+    "sync": "diferente",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Lo que tiene, en cambio, es una tabla gigante de números, llamados pesos o parámetros. Llama tres punto uno, de Meta, uno de los modelos abiertos más grandes que se han publicado, tiene cuatrocientos cinco mil millones de ellos.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "lo que tiene en cambio: pesos",
+    "to": 405,
+    "suffix": " mil millones",
+    "label": "parámetros en Llama 3.1 405B",
+    "sync": "cuatrocientos",
+    "note": "cada uno es solo un número",
+    "note_sync": "ellos"
+   }
+  },
+  {
+   "texto": "Cada uno de esos números ocupa dos bytes. Haz la cuenta, y te da ese archivo de ochocientos diez gigabytes.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "405 mil millones de números",
+      "sync": "números"
+     },
+     {
+      "text": "× 2 bytes cada uno",
+      "sync": "bytes",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 810,
+     "suffix": " GB",
+     "sync": "cuenta",
+     "label": "el modelo completo"
+    }
+   }
+  },
+  {
+   "texto": "El programa que de verdad ejecuta el modelo es diminuto en comparación. Se han escrito versiones sencillas que funcionan con unas mil líneas de código. Casi toda la inteligencia vive en los números.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EL CÓDIGO QUE LO EJECUTA",
+     "value": "~1.000 líneas",
+     "color": "grey",
+     "sync": "programa",
+     "size": 100
+    },
+    "right": {
+     "label": "LOS PESOS",
+     "value": "810 GB",
+     "color": "blue",
+     "sync": "inteligencia"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Así que aquí va una mejor imagen. El modelo no es un sistema operativo. Se parece más a una película, y el código es el reproductor de video. El reproductor es sencillo. La película es donde pasa todo.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EL CÓDIGO",
+     "value": "REPRODUCTOR",
+     "sub": "sencillo · carga el archivo",
+     "color": "grey",
+     "sync": "reproductor"
+    },
+    "right": {
+     "label": "LOS PESOS",
+     "value": "PELÍCULA",
+     "sub": "donde está todo",
+     "color": "blue",
+     "sync": "película"
+    },
+    "vs_text": "=",
+    "vs": false
+   }
+  },
+  {
+   "texto": "Capítulo dos. Cómo lee.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "Cómo lee",
+    "sub": "los tokens"
+   }
+  },
+  {
+   "texto": "Aquí viene la primera sorpresa. El modelo nunca ve letras ni palabras. Solo ve números.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "nunca ve letras ni palabras",
+    "pre_sync": "nunca",
+    "word": "SOLO NÚMEROS",
+    "sync": "solo"
+   }
+  },
+  {
+   "texto": "Antes de que tu mensaje entre, se corta en pedazos llamados tokens. Un token suele ser una palabra corta, o una parte de una más larga.",
+   "visual": {
+    "tipo": "tokens",
+    "frase": "El gato se sentó en la alfombra",
+    "piezas": [
+     "El",
+     " gato",
+     " se",
+     " sentó",
+     " en",
+     " la",
+     " alfombra"
+    ],
+    "sync": "corta"
+   }
+  },
+  {
+   "texto": "Una palabra como increíblemente podría partirse en tres pedazos: in, creíble, mente.",
+   "visual": {
+    "tipo": "tokens",
+    "frase": "increíblemente",
+    "piezas": [
+     "in",
+     "creíble",
+     "mente"
+    ],
+    "sync": "partirse",
+    "stagger": 0.35,
+    "size": 90
+   }
+  },
+  {
+   "texto": "Luego, cada pedazo se cambia por un número de identificación, sacado de un diccionario fijo. El diccionario de Llama tres tiene unas ciento veintiocho mil entradas.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "El",
+     " gato",
+     " se",
+     " sentó",
+     " en",
+     " la",
+     " alfombra"
+    ],
+    "ids": [
+     791,
+     8415,
+     7731,
+     389,
+     279,
+     5634,
+     13
+    ],
+    "ids_sync": "cambia",
+    "stagger": 0.05,
+    "nota": "vocabulario: ~128.000 tokens · los IDs son ilustrativos",
+    "nota_sync": "diccionario"
+   }
+  },
+  {
+   "texto": "En promedio, en inglés, un token equivale a unas tres cuartas partes de una palabra. Así que el guion completo de este video, en su versión en inglés, ocupa menos de dos mil tokens.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "en inglés, 1 token",
+    "word": "≈ ¾ DE PALABRA",
+    "sync": "tres",
+    "sub": "este guion, en inglés: < 2.000 tokens",
+    "sub_sync": "guion",
+    "size": 180
+   }
+  },
+  {
+   "texto": "Capítulo tres. Un único trabajo.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "Un único trabajo",
+    "sub": "adivinar lo que sigue"
+   }
+  },
+  {
+   "texto": "Ahora los números fluyen por el modelo, y aquí viene la parte que suena demasiado simple para ser cierta. El modelo tiene exactamente un trabajo: adivinar el siguiente token.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "su único trabajo:",
+    "pre_sync": "exactamente",
+    "word": "ADIVINAR EL SIGUIENTE TOKEN",
+    "sync": "adivinar",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Dale esto: el gato se sentó en la... No busca la respuesta en ninguna parte. Le pone un puntaje a cada token de su diccionario. Alfombra saca un puntaje alto. Cama y silla, un poquito. Banano, casi nada.",
+   "visual": {
+    "tipo": "prediccion",
+    "contexto": "El gato se sentó en la",
+    "sync": "busca",
+    "opciones": [
+     [
+      "alfombra",
+      0.41,
+      "alfombra"
+     ],
+     [
+      "cama",
+      0.17,
+      "cama"
+     ],
+     [
+      "silla",
+      0.12,
+      "silla"
+     ],
+     [
+      "mesa",
+      0.08
+     ],
+     [
+      "banano",
+      0.001,
+      "banano"
+     ]
+    ]
+   }
+  },
+  {
+   "texto": "Luego elige uno, lo agrega a la frase y vuelve a empezar, prediciendo el token que sigue. Y otra vez. Y otra vez. Un pedazo a la vez.",
+   "visual": {
+    "tipo": "bucle",
+    "base": "El gato se sentó en la",
+    "nuevos": [
+     " alfombra",
+     ".",
+     " Luego",
+     " se",
+     " durmió",
+     "."
+    ],
+    "sync": "elige",
+    "intervalo": 0.75
+   }
+  },
+  {
+   "texto": "Eso es lo que estás viendo cuando un chatbot va escribiendo su respuesta. No te está mostrando una idea ya terminada. Está prediciendo la respuesta en vivo, pedazo a pedazo.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "NO HAY RESPUESTA LISTA.",
+     "PEDAZO A PEDAZO."
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "size": 120,
+    "sync": "viendo"
+   }
+  },
+  {
+   "texto": "Y cada pedazo sale caro. En un modelo de cuatrocientos cinco mil millones de parámetros, un solo token exige unos ochocientos mil millones de operaciones aritméticas.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "para UN solo token",
+    "to": 800,
+    "suffix": " mil millones",
+    "label": "operaciones aritméticas",
+    "sync": "ochocientos",
+    "note": "≈ 2 × 405 mil millones de parámetros"
+   }
+  },
+  {
+   "texto": "Por dentro, los números atraviesan capa tras capa. El Llama más grande tiene ciento veintiséis. Cada capa transforma el significado un poco más, hasta que la última produce esos puntajes.",
+   "visual": {
+    "tipo": "red",
+    "capas": [
+     5,
+     7,
+     7,
+     7,
+     7,
+     4
+    ],
+    "entrada": "tus tokens",
+    "salida": "puntajes",
+    "medio": "126 CAPAS",
+    "medio_sync": "ciento",
+    "etiqueta": "cada capa transforma el significado",
+    "etiqueta_sync": "transforma"
+   }
+  },
+  {
+   "texto": "En algún punto de toda esa multiplicación, aparecen cosas que se parecen mucho a la gramática, a los hechos y al razonamiento. Nadie las programó. Surgieron solas.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "gramática · hechos · razonamiento",
+    "pre_sync": "gramática",
+    "word": "SURGIERON SOLAS",
+    "sync": "surgieron",
+    "sub": "nadie las programó",
+    "sub_sync": "nadie"
+   }
+  },
+  {
+   "texto": "Capítulo cuatro. ¿De dónde salieron los números?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "De dónde salieron los números",
+    "sub": "el entrenamiento"
+   }
+  },
+  {
+   "texto": "Al principio de todo, los pesos son aleatorios. Un modelo recién creado es puro ruido. Pregúntale lo que sea y te responde puras incoherencias.",
+   "visual": {
+    "tipo": "numeros",
+    "modo": "ruido",
+    "etiqueta": "DÍA UNO: RUIDO ALEATORIO",
+    "etiqueta_sync": "aleatorios",
+    "color": "grey"
+   }
+  },
+  {
+   "texto": "Luego viene el entrenamiento. Le muestras texto real, escondes el siguiente token, y lo pones a adivinar.",
+   "visual": {
+    "tipo": "tokens",
+    "piezas": [
+     "El",
+     " agua",
+     " hierve",
+     " a",
+     " 100",
+     " grados"
+    ],
+    "oculto": true,
+    "revela_sync": 99,
+    "sync": "muestras",
+    "stagger": 0.12,
+    "nota": "escondes el siguiente token · lo pones a adivinar",
+    "nota_sync": "escondes"
+   }
+  },
+  {
+   "texto": "Cuando se equivoca, un poco de cálculo averigua hacia dónde empujar cada uno de los pesos, para que la respuesta correcta sea un poquito más probable. Y luego lo vuelve a hacer. Billones de veces.",
+   "visual": {
+    "tipo": "numeros",
+    "modo": "ajuste",
+    "etiqueta": "AJUSTA CADA PESO · REPITE",
+    "etiqueta_sync": "empujar"
+   }
+  },
+  {
+   "texto": "Llama tres se entrenó con más de quince billones de tokens. Eso equivale, más o menos, al texto de cien millones de libros.",
+   "visual": {
+    "tipo": "counter",
+    "to": 15,
+    "suffix": " billones",
+    "label": "tokens de texto de entrenamiento",
+    "sync": "entrenó",
+    "note": "≈ 100 millones de libros",
+    "note_sync": "cien",
+    "pre": "los datos de entrenamiento de Llama 3"
+   }
+  },
+  {
+   "texto": "Para la versión más grande, Meta usó más de dieciséis mil chips hache cien de Nvidia. En total, unos treinta y un millones de horas de cómputo en esos chips.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "16.000+ GPU Nvidia H100",
+    "to": 31,
+    "decimals": 0,
+    "suffix": " millones",
+    "label": "horas-GPU para entrenar Llama 3.1 405B",
+    "sync": "treinta",
+    "note": "cifra de Meta: 30,84 millones"
+   }
+  },
+  {
+   "texto": "Un solo chip, trabajando por su cuenta, necesitaría unos tres mil quinientos años para hacer el mismo trabajo.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "en UN solo chip",
+    "to": 3520,
+    "suffix": " años",
+    "label": "de cómputo sin parar",
+    "sync": "tres",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Después viene una segunda etapa, más pequeña. Hay personas que escriben conversaciones de ejemplo y califican las respuestas del modelo, para que aprenda a comportarse como un asistente útil, en vez de solo seguir escribiendo texto al azar.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "ETAPA DOS · AJUSTE FINO",
+    "items": [
+     {
+      "texto": "Conversaciones de ejemplo",
+      "sync": "ejemplo"
+     },
+     {
+      "texto": "Humanos califican las respuestas",
+      "sync": "califican"
+     },
+     {
+      "texto": "Aprende a actuar como asistente",
+      "sync": "asistente"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y entonces, el entrenamiento se detiene. Los números quedan congelados. Ese archivo congelado es con lo que tú hablas.",
+   "visual": {
+    "tipo": "archivo",
+    "nombre": "pesos · final",
+    "tamano": 810,
+    "unidad": "GB",
+    "etiqueta": "congelado. listo.",
+    "sync": "congelados",
+    "candado": true,
+    "candado_sync": "congelados",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Capítulo cinco. Por qué la IA funciona con tarjetas gráficas.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "Por qué tarjetas gráficas",
+    "sub": "el hardware"
+   }
+  },
+  {
+   "texto": "Casi todo ese trabajo es una sola operación diminuta, repetida una cantidad absurda de veces. Multiplicar dos números, y sumar el resultado a un total acumulado.",
+   "visual": {
+    "tipo": "formula",
+    "tex": "a_1 w_1 + a_2 w_2 + a_3 w_3 + \\cdots",
+    "size": 72,
+    "sync": "operación",
+    "sub": "multiplicar · sumar · repetir",
+    "sub_sync": "acumulado"
+   }
+  },
+  {
+   "texto": "Un procesador normal tiene un puñado de núcleos potentes. Es brillante haciendo cosas distintas, una tras otra.",
+   "visual": {
+    "tipo": "gpu",
+    "fase": "cpu",
+    "cpu_label": "un puñado de núcleos potentes"
+   }
+  },
+  {
+   "texto": "Una tarjeta gráfica tiene miles de núcleos más sencillos. Una hache cien tiene casi diecisiete mil. Todos hacen la misma cuenta sencilla al mismo tiempo, y eso es justo lo que necesita una red neuronal.",
+   "visual": {
+    "tipo": "gpu",
+    "fase": "gpu",
+    "sync": "gráfica",
+    "fuego_sync": "misma",
+    "gpu_label": "H100: ~17.000 núcleos, todos a la vez",
+    "cpu_label": "un puñado de núcleos grandes"
+   }
+  },
+  {
+   "texto": "La memoria importa igual. Una hache cien guarda ochenta gigabytes. El modelo Llama completo, a dieciséis bits, no cabe ni siquiera en diez de ellas.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Memoria de UNA H100",
+      "value": 80,
+      "value_text": "80 GB",
+      "color": "ice",
+      "sync": "memoria"
+     },
+     {
+      "label": "Llama 3.1 405B a 16 bits",
+      "value": 810,
+      "value_text": "810 GB",
+      "color": "warm",
+      "sync": "completo"
+     }
+    ],
+    "note": "más de 10 GPU solo para cargarlo",
+    "note_sync": "diez"
+   }
+  },
+  {
+   "texto": "Capítulo seis. ¿Se acuerda de ti?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 6,
+    "titulo": "¿Se acuerda de ti?",
+    "sub": "la ventana de contexto"
+   }
+  },
+  {
+   "texto": "Aquí hay algo en lo que casi todo el mundo se equivoca. Cuando chateas con una IA, no está aprendiendo de ti. Los pesos no cambian. Ni un solo número.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "mientras chateas, los pesos están",
+    "pre_sync": "chateas",
+    "word": "CONGELADOS",
+    "sync": "cambian",
+    "color": "ice",
+    "sub": "no aprende de ti",
+    "sub_sync": "aprendiendo"
+   }
+  },
+  {
+   "texto": "Entonces, ¿cómo recuerda lo que le dijiste hace cinco mensajes? Cada vez que envías algo, la conversación entera vuelve a entrar, desde el principio.",
+   "visual": {
+    "tipo": "chat",
+    "feed_sync": "entera",
+    "etiqueta": "todo el chat, cada vez",
+    "etiqueta_sync": "principio",
+    "mensajes": [
+     {
+      "quien": "user",
+      "texto": "¿Qué es un agujero negro?",
+      "sync": "cómo"
+     },
+     {
+      "quien": "ai",
+      "texto": "Una región donde la gravedad atrapa la luz...",
+      "sync": "recuerda"
+     },
+     {
+      "quien": "user",
+      "texto": "¿Qué tan grandes pueden ser?",
+      "sync": "cinco"
+     },
+     {
+      "quien": "ai",
+      "texto": "Miles de millones de veces la masa del Sol...",
+      "sync": "mensajes"
+     },
+     {
+      "quien": "user",
+      "texto": "Espera, ¿qué fue lo primero que te pregunté?",
+      "sync": "cada"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ese texto se llama la ventana de contexto. Es la memoria a corto plazo del modelo. Llama tres punto uno puede tener unos ciento veintiocho mil tokens a la vez. Cuando un chat se hace más largo que eso, la parte más vieja simplemente se cae. No es que se olvide. Es que nunca se guardó.",
+   "visual": {
+    "tipo": "ventana",
+    "sync": "contexto",
+    "mover_sync": "largo",
+    "nota": "nunca se guardó",
+    "nota_sync": "nunca",
+    "texto": "preguntaste por agujeros negros y luego por el café y luego por tu gato y luego por"
+   }
+  },
+  {
+   "texto": "Las funciones que parecen memoria a largo plazo suelen funcionar igual. Las notas guardadas se pegan en el contexto antes de tu mensaje. El modelo en sí sigue sin aprender nada.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "FUNCIONES DE \"MEMORIA\"",
+    "items": [
+     {
+      "texto": "Las notas se guardan fuera del modelo",
+      "sync": "guardadas"
+     },
+     {
+      "texto": "Se pegan en el contexto",
+      "sync": "pegan"
+     },
+     {
+      "texto": "Los pesos siguen sin cambiar",
+      "sync": "sigue"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Capítulo siete. Por qué se inventa cosas.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 7,
+    "titulo": "Por qué se inventa cosas",
+    "sub": "las alucinaciones"
+   }
+  },
+  {
+   "texto": "Recuerda su único trabajo: predecir un siguiente token probable. Probable. No verdadero.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "PARA LO QUE SE ENTRENÓ",
+     "value": "PROBABLE",
+     "color": "blue",
+     "sync": "probable"
+    },
+    "right": {
+     "label": "LO QUE TÚ QUIERES",
+     "value": "VERDADERO",
+     "color": "warm",
+     "sync": "verdadero"
+    },
+    "vs_text": "≠",
+    "vs_sync": "no"
+   }
+  },
+  {
+   "texto": "La mayoría de las veces, probable y verdadero son lo mismo, porque casi todo el texto de entrenamiento era correcto.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "PROBABLE ≈ VERDADERO",
+    "sub": "la mayoría de las veces",
+    "sync": "mayoría",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Pero pregúntale por algo raro, como un artículo poco conocido o un pueblito diminuto, y los puntajes salen casi parejos. Aun así, el modelo tiene que elegir algo, y lo escribe con el mismo tono fluido y seguro. Eso es una alucinación.",
+   "visual": {
+    "tipo": "prediccion",
+    "contexto": "Ese artículo lo escribió",
+    "sync": "raro",
+    "elegido": 2,
+    "elegido_sync": "elegir",
+    "opciones": [
+     [
+      "Smith",
+      0.09
+     ],
+     [
+      "García",
+      0.08
+     ],
+     [
+      "Chen",
+      0.08
+     ],
+     [
+      "Kumar",
+      0.07
+     ],
+     [
+      "Ivanova",
+      0.07
+     ]
+    ]
+   }
+  },
+  {
+   "texto": "No hay ningún verificador de datos escondido dentro del archivo. Los sistemas más nuevos reducen el problema dejando que el modelo busque en internet o revise fuentes, pero en el fondo, sigue siendo una máquina de predicción.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "SIN VERIFICADOR",
+    "pre": "dentro del archivo:",
+    "sync": "verificador",
+    "sub": "en el fondo: sigue prediciendo",
+    "sub_sync": "fondo",
+    "color": "warm",
+    "size": 180
+   }
+  },
+  {
+   "texto": "Entonces, ¿qué es la IA, de verdad?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 8,
+    "titulo": "Entonces, ¿qué es?",
+    "sub": "juntando todas las piezas"
+   }
+  },
+  {
+   "texto": "Es un archivo de números, moldeado por billones de intentos de adivinar. Un programa pequeño lo carga en chips potentes. Tus palabras se vuelven tokens, los tokens fluyen por más de cien capas, y de ahí sale una apuesta por el siguiente pedazo. Repetido tan rápido que se siente como una conversación.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "TUS\nPALABRAS",
+      "sync": "palabras"
+     },
+     {
+      "texto": "TOKENS",
+      "sync": "tokens"
+     },
+     {
+      "texto": "126\nCAPAS",
+      "sync": "fluyen"
+     },
+     {
+      "texto": "PUNTAJES",
+      "sync": "sale"
+     },
+     {
+      "texto": "SIGUIENTE\nTOKEN",
+      "sync": "pedazo"
+     }
+    ],
+    "bucle_sync": "repetido",
+    "bucle": "repetir, rápido",
+    "titulo": "UN ARCHIVO DE NÚMEROS + UN PROGRAMA PEQUEÑO + CHIPS RÁPIDOS"
+   }
+  },
+  {
+   "texto": "No es un sistema operativo. No es un cerebro metido en una caja. Es algo realmente nuevo: un eco comprimido de casi todo lo que la humanidad ha escrito.",
+   "visual": {
+    "tipo": "titulo",
+    "pre": "ni un sistema operativo · ni un cerebro en una caja",
+    "pre_sync": "no",
+    "lines": [
+     "UN ECO COMPRIMIDO",
+     "DE LA ESCRITURA HUMANA"
+    ],
+    "sync": "comprimido",
+    "size": 130
+   }
+  },
+  {
+   "texto": "La próxima semana viajamos más de dos mil años atrás, hasta los números que todavía ayudan a proteger tu cuenta bancaria: los números primos. Suscríbete para que no te lo pierdas.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "LA PRÓXIMA:",
+     "LOS NÚMEROS PRIMOS"
+    ],
+    "colors": [
+     "grey",
+     "blue"
+    ],
+    "syncs": [
+     "próxima",
+     "primos"
+    ],
+    "button": "SUSCRÍBETE",
+    "button_sync": "suscríbete"
+   }
+  }
+ ]
+}

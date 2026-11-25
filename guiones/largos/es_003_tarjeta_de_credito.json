@@ -1,0 +1,707 @@
+{
+ "titulo": "Lo que realmente pasa en los 2 segundos en que pagas con tu tarjeta",
+ "idioma": "es",
+ "kokoro": {
+  "voz": "em_santa",
+  "velocidad": 0.97,
+  "lang": "es"
+ },
+ "pausa": 0.5,
+ "intro_capitulo": "Dos segundos",
+ "miniatura": {
+  "lineas": [
+   "TU TARJETA,",
+   "POR DENTRO"
+  ],
+  "colores": [
+   "white",
+   "blue"
+  ],
+  "chip": "4 EMPRESAS · 2 SEGUNDOS"
+ },
+ "descripcion": "Lo que pasa en los dos segundos después de acercar tu tarjeta: qué esconde el número de tu tarjeta, cómo el chip genera un criptograma de un solo uso, por qué los pagos con el celular usan tokens, el recorrido por el adquirente, la red y el emisor, quién paga la comisión de intercambio oculta y las cuentas de los pagos mínimos (con datos de Estados Unidos). Contenido educativo, no es asesoría financiera.",
+ "fuentes": [
+  "Visa, por dentro de VisaNet (hasta 83.000 mensajes por segundo; IA para detectar fraude desde 1993; más de US$40.000 millones en fraude evitado al año; centro de datos de Ashburn): https://corporate.visa.com/en/sites/visa-perspectives/security-trust/inside-visa-global-commerce-engine.html",
+  "Números de tarjetas de pago y dígito de control de Luhn (ISO/IEC 7812): https://en.wikipedia.org/wiki/Payment_card_number",
+  "Visa, BIN de 8 dígitos (abril de 2022): https://usa.visa.com/dam/VCOM/global/partner-with-us/documents/visa.com-numerics-faq.pdf",
+  "Seguridad de la plataforma de Apple, registro de tarjetas y número de cuenta del dispositivo: https://support.apple.com/guide/security/sec0f005981a/web",
+  "Topes del Reglamento de tasas de intercambio de la Unión Europea (0,2 % débito, 0,3 % crédito): https://www.eubusiness.com/focus/card-fees",
+  "Adyen, las tasas de intercambio explicadas (~2 % en promedio en Estados Unidos): https://www.adyen.com/en_AU/knowledge-hub/interchange-fees-explained",
+  "Reserva Federal, G.19, tasas de interés de tarjetas de crédito en Estados Unidos (ago. 2026: 22,36 % en cuentas que pagan intereses): https://www.federalreserve.gov/releases/g19/20261106/g19.pdf",
+  "Ejemplo de pago mínimo calculado por White Hole: US$3.000 a una tasa anual del 22,36 %, pago = intereses + 1 % del saldo (mínimo US$25) frente a una cuota fija de US$150 al mes.",
+  "Preguntas frecuentes del PCI SSC: los códigos de verificación de la tarjeta no se pueden guardar después de la autorización: https://www.pcisecuritystandards.org/faqs/1574/",
+  "Visa, 3-D Secure: https://corporate.visa.com/en/solutions/visa-protect/insights/3d-secure.html",
+  "Cornell LII, Fair Credit Billing Act de Estados Unidos (responsabilidad máxima de US$50, 60 días): https://www.law.cornell.edu/wex/fair_credit_billing_act_(fcba)"
+ ],
+ "hashtags": [
+  "#tarjetadecrédito",
+  "#dinero",
+  "#fintech",
+  "#finanzaspersonales",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "Acercas tu tarjeta al datáfono. Dos segundos después, suena el pitido. En esos dos segundos, tu pago pasó por al menos cuatro empresas, superó una prueba criptográfica y fue evaluado por una inteligencia artificial para detectar fraude.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "DOS SEGUNDOS",
+    "pasos": [
+     {
+      "texto": "TU\nTARJETA",
+      "sync": "acercas"
+     },
+     {
+      "texto": "LA\nTIENDA",
+      "sync": "pasó"
+     },
+     {
+      "texto": "BANCO DE\nLA TIENDA",
+      "sync": "cuatro"
+     },
+     {
+      "texto": "VISA /\nMASTERCARD",
+      "sync": "empresas"
+     },
+     {
+      "texto": "TU\nBANCO",
+      "sync": "criptográfica"
+     }
+    ],
+    "bucle_sync": "evaluado",
+    "bucle": "aprobado ✓"
+   }
+  },
+  {
+   "texto": "Visa dice que su red puede procesar hasta ochenta y tres mil de estos mensajes por segundo. Sigamos uno, desde el plástico en tu mano hasta el dinero que sale de tu cuenta.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "La red de Visa",
+    "to": 83000,
+    "label": "mensajes de transacción por segundo",
+    "sync": "ochenta",
+    "note": "en su capacidad máxima",
+    "note_sync": "segundo"
+   }
+  },
+  {
+   "texto": "Capítulo uno. El número.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "El número",
+    "sub": "dieciséis dígitos con una estructura secreta"
+   }
+  },
+  {
+   "texto": "El número de tu tarjeta no es al azar. El primer dígito indica la red. Un cuatro es Visa. Un cinco, casi siempre, es Mastercard.",
+   "visual": {
+    "tipo": "tarjeta",
+    "bin_sync": 99,
+    "nfc_sync": 99,
+    "chip_sync": 99,
+    "nota": "4 = Visa · 5 = Mastercard (casi siempre)",
+    "nota_sync": "cuatro"
+   }
+  },
+  {
+   "texto": "Los primeros seis u ocho dígitos identifican al banco que la emitió. En dos mil veintidós, la industria pasó a números de banco de ocho dígitos, porque se estaban agotando.",
+   "visual": {
+    "tipo": "tarjeta",
+    "bin_sync": "primeros",
+    "bin_sub": "desde 2022: 8 dígitos"
+   }
+  },
+  {
+   "texto": "Los dígitos del medio son tu cuenta. Y el último dígito es un dígito de control, calculado a partir de todos los demás con una fórmula de los años cincuenta llamada algoritmo de Luhn.",
+   "visual": {
+    "tipo": "tarjeta",
+    "bin_sync": 0,
+    "cuenta_sync": "medio",
+    "check_sync": "último",
+    "check_sub": "la fórmula de Luhn"
+   }
+  },
+  {
+   "texto": "Así funciona. Empezando por la derecha, duplica cada segundo dígito. Si un resultado es mayor que nueve, réstale nueve. Suma todo. En una tarjeta válida, el total termina en cero.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "LA PRUEBA DE LUHN",
+    "items": [
+     {
+      "texto": "Desde la derecha, duplica cada 2.º dígito",
+      "sync": "duplica"
+     },
+     {
+      "texto": "Si pasa de 9, réstale 9",
+      "sync": "réstale"
+     },
+     {
+      "texto": "Súmalo todo",
+      "sync": "suma"
+     },
+     {
+      "texto": "Las tarjetas válidas terminan en 0",
+      "sync": "cero"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No es seguridad. Es un detector de errores de digitación. Si intercambias dos dígitos vecinos o te equivocas en uno, la página lo sabe al instante, antes de enviarle nada al banco.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "4111 1111 1111 1111",
+     "value": "válida",
+     "color": "blue",
+     "sync": "detector",
+     "size": 100
+    },
+    "right": {
+     "label": "4111 1111 1111 1112",
+     "value": "error",
+     "color": "warm",
+     "sync": "equivocas",
+     "size": 100
+    },
+    "vs": false,
+    "note": "números de prueba de ejemplo",
+    "note_sync": "instante"
+   }
+  },
+  {
+   "texto": "Capítulo dos. El chip.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "El chip",
+    "sub": "por qué no se puede copiar"
+   }
+  },
+  {
+   "texto": "La banda magnética de atrás es tecnología antigua. Guarda los mismos datos cada vez, así que cualquiera que la lea una sola vez puede copiarla. Así funcionan los clonadores de tarjetas.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la banda magnética:",
+    "word": "LOS MISMOS DATOS",
+    "sub": "cada vez → fácil de copiar",
+    "sync": "mismos",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "El chip es diferente. Es un computador diminuto con una clave secreta que nunca sale del silicio. En cada compra, mezcla esa clave con el monto, la fecha y un contador, y produce un código único llamado criptograma.",
+   "visual": {
+    "tipo": "tarjeta",
+    "chip_sync": "chip",
+    "nota": "clave secreta + monto + fecha + contador → criptograma",
+    "nota_sync": "mezcla"
+   }
+  },
+  {
+   "texto": "Tu banco recalcula ese código. Si coincide, la tarjeta es real. Y como el contador sube con cada compra, un código copiado no sirve la próxima vez.",
+   "visual": {
+    "tipo": "codigo",
+    "lineas": [
+     "# tu banco, en milisegundos",
+     "expected = mac(card_key, amount,",
+     "              date, counter)",
+     "if cryptogram == expected:",
+     "    card_is_real()",
+     "counter += 1   # nunca se reutiliza"
+    ],
+    "sync": "recalcula",
+    "etiqueta": "un código robado no sirve la próxima vez",
+    "etiqueta_sync": "copiado"
+   }
+  },
+  {
+   "texto": "Capítulo tres. Sin contacto y con el celular.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "Sin contacto y con el celular",
+    "sub": "pagos por aproximación y tokens"
+   }
+  },
+  {
+   "texto": "Pagar acercando la tarjeta usa el mismo chip, pero por radio. Se llama comunicación de campo cercano, y solo funciona a unos pocos centímetros. Por eso casi tienes que tocar el datáfono.",
+   "visual": {
+    "tipo": "tarjeta",
+    "nfc_sync": "radio",
+    "chip_sync": "chip",
+    "nota": "NFC: solo funciona a pocos centímetros",
+    "nota_sync": "centímetros"
+   }
+  },
+  {
+   "texto": "Pagar con el celular va un paso más allá. Cuando agregas una tarjeta a Apple Pay, tu número real no se guarda ni en el teléfono ni en los servidores de Apple. En su lugar, tu banco crea un número distinto: el número de cuenta del dispositivo.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "TU NÚMERO DE TARJETA REAL",
+     "value": "oculto",
+     "color": "grey",
+     "sync": "real"
+    },
+    "right": {
+     "label": "LO QUE USA EL CELULAR",
+     "value": "un token",
+     "sub": "número de cuenta del dispositivo",
+     "color": "blue",
+     "sync": "distinto"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Cada pago agrega un código de seguridad de un solo uso. Así, aunque hackeen una tienda, lo que se filtre no sirve en una página web ni se puede copiar en una banda magnética.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "CÓDIGO DE UN SOLO USO",
+    "pre": "cada pago con el celular",
+    "sync": "código",
+    "sub": "una filtración no sirve en otro lado",
+    "sub_sync": "hackeen",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Capítulo cuatro. El recorrido.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "El recorrido",
+    "sub": "cuatro empresas en dos segundos"
+   }
+  },
+  {
+   "texto": "Cuando acercas la tarjeta, el datáfono envía la solicitud al banco de la tienda, llamado adquirente. El adquirente la pasa a la red de la tarjeta, Visa o Mastercard. La red la envía al banco que emitió tu tarjeta.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "DATÁFONO",
+      "sync": "datáfono"
+     },
+     {
+      "texto": "ADQUIRENTE\n(banco de la tienda)",
+      "sync": "adquirente"
+     },
+     {
+      "texto": "RED",
+      "sync": "red"
+     },
+     {
+      "texto": "EMISOR\n(tu banco)",
+      "sync": "emitió"
+     }
+    ],
+    "bucle_sync": 99
+   }
+  },
+  {
+   "texto": "Gran parte de ese enrutamiento ocurre en unos pocos centros de datos que parecen fortalezas. Visa dice que en uno de ellos, en Ashburn, Virginia, en Estados Unidos, solo setenta y cinco de sus empleados en todo el mundo tienen autorización para entrar a las salas de datos seguras.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Centro de datos de Visa en Ashburn, Virginia",
+    "to": 75,
+    "label": "empleados autorizados para entrar a las salas de datos",
+    "sync": "setenta",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Tu banco revisa el criptograma y tu cupo disponible, y pasa la compra por modelos que detectan fraude. Visa dice que empezó a usar inteligencia artificial para detectar fraude en mil novecientos noventa y tres, y que hoy sus sistemas de inteligencia artificial ayudan a evitar más de cuarenta mil millones de dólares en fraude al año.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "TU BANCO REVISA, EN MILISEGUNDOS",
+    "items": [
+     {
+      "texto": "¿El criptograma es real?",
+      "sync": "criptograma"
+     },
+     {
+      "texto": "¿Hay cupo suficiente?",
+      "sync": "cupo"
+     },
+     {
+      "texto": "¿Esto parece fraude?",
+      "sync": "fraude"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Luego la respuesta regresa a toda velocidad por el mismo camino. Aprobada o rechazada. El viaje completo de ida y vuelta suele tardar uno o dos segundos.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "DATÁFONO",
+      "sync": 0
+     },
+     {
+      "texto": "ADQUIRENTE",
+      "sync": 0
+     },
+     {
+      "texto": "RED",
+      "sync": 0
+     },
+     {
+      "texto": "EMISOR",
+      "sync": 0
+     }
+    ],
+    "bucle_sync": "regresa",
+    "bucle": "aprobado ✓ en unos 2 segundos"
+   }
+  },
+  {
+   "texto": "Pero aquí viene la sorpresa. En ese momento, todavía no se ha movido nada de dinero. La aprobación es solo una promesa, una retención sobre tu cupo. El dinero de verdad se liquida después, normalmente en uno o dos días.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EN EL PITIDO",
+     "value": "una promesa",
+     "color": "ice",
+     "sync": "aprobación"
+    },
+    "right": {
+     "label": "UNO O DOS DÍAS DESPUÉS",
+     "value": "dinero real",
+     "color": "blue",
+     "sync": "liquida"
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Capítulo cinco. Comprar por internet.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "Comprar por internet",
+    "sub": "cuando no hay chip al que preguntarle"
+   }
+  },
+  {
+   "texto": "En internet no hay un chip que genere el criptograma. Por eso la tienda te pide el código de tres dígitos de atrás. Demuestra que probablemente tienes la tarjeta física frente a ti.",
+   "visual": {
+    "tipo": "tarjeta",
+    "nota": "el código de 3 dígitos: prueba de que tienes la tarjeta",
+    "nota_sync": "tres",
+    "bin_sync": 99
+   }
+  },
+  {
+   "texto": "Y aquí hay una regla que casi nadie conoce. Según el estándar de seguridad de la industria de tarjetas, llamado PCI DSS, las tiendas no tienen permitido guardar ese código después de que se aprueba la compra. Ni siquiera cifrado. Ni siquiera si tú se lo pides.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "regla de PCI DSS:",
+    "word": "NUNCA SE GUARDA",
+    "sub": "el código de seguridad, tras la aprobación",
+    "sub_sync": "aprueba",
+    "sub2": "ni siquiera cifrado",
+    "sub2_sync": "cifrado",
+    "sync": "permitido",
+    "color": "ice",
+    "size": 180
+   }
+  },
+  {
+   "texto": "En las compras más riesgosas, tu banco puede intervenir directamente. Es esa ventana que te pide confirmar en la app de tu banco, o escribir un código de un solo uso. Se llama tres D Secure, y originalmente la desarrolló Visa.",
+   "visual": {
+    "tipo": "flujo",
+    "pasos": [
+     {
+      "texto": "TIENDA\nEN LÍNEA",
+      "sync": "riesgosas"
+     },
+     {
+      "texto": "TU BANCO\nevalúa el riesgo",
+      "sync": "banco"
+     },
+     {
+      "texto": "RIESGO BAJO\n→ aprueba",
+      "sync": "directamente"
+     },
+     {
+      "texto": "RIESGO ALTO\n→ te pregunta",
+      "sync": "confirmar"
+     }
+    ],
+    "bucle_sync": 99
+   }
+  },
+  {
+   "texto": "Capítulo seis. ¿Quién paga todo esto?",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 6,
+    "titulo": "¿Quién paga todo esto?",
+    "sub": "la comisión oculta"
+   }
+  },
+  {
+   "texto": "Tú no pagas por usar la tarjeta. Paga la tienda. En cada compra, el banco de la tienda le paga una comisión a tu banco, llamada tasa de intercambio.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la tienda paga",
+    "word": "INTERCAMBIO",
+    "sub": "una comisión a tu banco en cada compra",
+    "sync": "intercambio",
+    "sub_sync": "cada"
+   }
+  },
+  {
+   "texto": "En Estados Unidos, la tasa de intercambio de las tarjetas de crédito no tiene un tope legal, y en promedio ronda el dos por ciento. En la Unión Europea, tiene un tope de cero coma tres por ciento para crédito y cero coma dos para débito.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Estados Unidos · crédito (sin tope)",
+      "value": 2.0,
+      "value_text": "~2 %",
+      "color": "warm",
+      "sync": "estados"
+     },
+     {
+      "label": "Unión Europea · crédito (con tope)",
+      "value": 0.3,
+      "value_text": "0,3 %",
+      "sync": "europea"
+     },
+     {
+      "label": "Unión Europea · débito (con tope)",
+      "value": 0.2,
+      "value_text": "0,2 %",
+      "color": "ice",
+      "sync": "débito"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Esa diferencia explica por qué las tarjetas en Estados Unidos dan recompensas tan generosas en reembolsos y millas de viaje. Esas recompensas las pagan las tiendas, y las tiendas meten ese costo en sus precios. Así que todos pagamos, incluso quienes pagan en efectivo.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "TUS RECOMPENSAS",
+     "ESTÁN EN LOS PRECIOS"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "sync": "recompensas",
+    "size": 130
+   }
+  },
+  {
+   "texto": "Capítulo siete. El verdadero negocio.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 7,
+    "titulo": "El verdadero negocio",
+    "sub": "los intereses"
+   }
+  },
+  {
+   "texto": "Las comisiones les sirven a los bancos, pero la plata de verdad está en los intereses. Según la Reserva Federal, en Estados Unidos la tasa promedio de las tarjetas de crédito que pagan intereses fue de cerca del veintidós por ciento anual en agosto de dos mil veintiséis.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Tasa anual promedio en EE. UU., cuentas que pagan intereses",
+    "to": 22.36,
+    "decimals": 2,
+    "suffix": "%",
+    "label": "al año (Reserva Federal, ago. 2026)",
+    "sync": "veintidós",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y se acumula a diario. La mayoría de las tarjetas divide esa tasa anual entre trescientos sesenta y cinco, y la cobra sobre tu saldo todos los días. Los intereses empiezan a generar intereses.",
+   "visual": {
+    "tipo": "formula",
+    "pre": "cómo cobran intereses la mayoría de las tarjetas",
+    "tex": "\\mathrm{tasa\\ diaria} = \\frac{22{,}36\\%}{365} \\approx 0{,}061\\%",
+    "size": 64,
+    "sync": "divide",
+    "sub": "todos los días, sobre tu saldo",
+    "sub_sync": "todos"
+   }
+  },
+  {
+   "texto": "Hagamos las cuentas. Digamos que debes tres mil dólares y solo haces un pago mínimo típico: los intereses, más el uno por ciento del saldo.",
+   "visual": {
+    "tipo": "ecuacion",
+    "lines": [
+     {
+      "text": "Saldo de US$3.000 al 22,4 %",
+      "sync": "tres"
+     },
+     {
+      "text": "mínimo = intereses + 1 %",
+      "sync": "mínimo",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 15,
+     "suffix": " años",
+     "sync": "intereses",
+     "label": "para pagarla",
+     "texto": "15 años"
+    }
+   }
+  },
+  {
+   "texto": "Te demoras quince años en pagarla, y pagas unos cuatro mil quinientos dólares en intereses. Más que la deuda original.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Lo que pediste prestado",
+      "value": 3000,
+      "value_text": "US$3.000",
+      "color": "ice",
+      "sync": "demoras"
+     },
+     {
+      "label": "Intereses pagados (pagos mínimos)",
+      "value": 4515,
+      "value_text": "US$4.515",
+      "color": "warm",
+      "sync": "intereses"
+     }
+    ],
+    "note": "15 años",
+    "note_sync": "quince"
+   }
+  },
+  {
+   "texto": "Si en cambio pagas una cuota fija de ciento cincuenta dólares al mes, terminas en unos dos años, con menos de ochocientos dólares de intereses.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "PAGOS MÍNIMOS",
+     "value": "15 años",
+     "sub": "US$4.515 de intereses",
+     "color": "warm",
+     "sync": "cambio"
+    },
+    "right": {
+     "label": "US$150 AL MES",
+     "value": "26 meses",
+     "sub": "US$789 de intereses",
+     "color": "blue",
+     "sync": "terminas"
+    },
+    "vs_text": "VS"
+   }
+  },
+  {
+   "texto": "Y si pagas el saldo total del extracto cada mes, la mayoría de las tarjetas no cobra ningún interés. Así, la tarjeta es básicamente un préstamo corto y gratis, que paga la tienda.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "paga el saldo total del extracto",
+    "word": "US$0 DE INTERESES",
+    "sync": "total",
+    "sub": "en la mayoría de las tarjetas",
+    "sub_sync": "mayoría",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Capítulo ocho. Cuando algo sale mal.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 8,
+    "titulo": "Cuando algo sale mal",
+    "sub": "el fraude y tus derechos"
+   }
+  },
+  {
+   "texto": "En Estados Unidos, si alguien te roba el número de la tarjeta, una ley federal de mil novecientos setenta y cuatro, la Fair Credit Billing Act, limita a cincuenta dólares lo que puedes deber por cargos no autorizados. Muchos bancos van más allá y prometen cero.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "LEY FEDERAL DE EE. UU. (FCBA)",
+     "value": "máx. US$50",
+     "color": "ice",
+     "sync": "cincuenta"
+    },
+    "right": {
+     "label": "MUCHOS BANCOS",
+     "value": "US$0",
+     "color": "blue",
+     "sync": "cero"
+    },
+    "vs": false,
+    "note": "repórtalo rápido: dentro de los 60 días siguientes al extracto",
+    "note_sync": "muchos"
+   }
+  },
+  {
+   "texto": "La clave es la rapidez. En Estados Unidos, tienes sesenta días desde que llega el extracto para reclamar un cargo. Así que la herramienta de seguridad más barata que tienes es, simplemente, revisar tu extracto cada mes.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la herramienta de seguridad más barata",
+    "word": "REVISA CADA MES",
+    "sub": "60 días para reclamar (EE. UU.)",
+    "sub_sync": "sesenta",
+    "sync": "revisar",
+    "color": "green",
+    "size": 180
+   }
+  },
+  {
+   "texto": "Así que una tarjeta de crédito es un computador diminuto que demuestra que es real, un viaje por cuatro empresas en dos segundos, una comisión escondida en cada precio, y un préstamo que puede ser gratis, o carísimo. Depende de ti.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "LO QUE REALMENTE ES TU TARJETA",
+    "items": [
+     {
+      "texto": "Un computador diminuto que demuestra que es real",
+      "sync": "computador"
+     },
+     {
+      "texto": "Cuatro empresas en dos segundos",
+      "sync": "cuatro"
+     },
+     {
+      "texto": "Una comisión escondida en cada precio",
+      "sync": "comisión"
+     },
+     {
+      "texto": "Un préstamo: gratis o carísimo",
+      "sync": "préstamo"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La próxima vez, veremos el impuesto invisible que encoge tu dinero año tras año: la inflación. Suscríbete para que no te lo pierdas.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "LA PRÓXIMA:",
+     "LA INFLACIÓN"
+    ],
+    "colors": [
+     "grey",
+     "blue"
+    ],
+    "syncs": [
+     "próxima",
+     "inflación"
+    ],
+    "button": "SUSCRÍBETE",
+    "button_sync": "suscríbete"
+   }
+  }
+ ]
+}

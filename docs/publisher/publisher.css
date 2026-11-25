@@ -1,4 +1,5 @@
 :root{
+[hidden]{display:none!important}
   --bg:#070910; --panel:#0e1323; --panel2:#131a2e; --line:#202a47; --text:#eef2fa; --muted:#8f9ab4;
   --blue:#58a6ff; --blue2:#3d8ce8; --ice:#b5d4f4; --warm:#ff8a4c; --ok:#3ecf8e; --bad:#ff6b6b; --r:16px;
 }

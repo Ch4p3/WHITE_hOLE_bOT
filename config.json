@@ -10,10 +10,10 @@
     "reels_es": true
   },
   "tiktok": {
-    "subir": false,
+    "subir": true,
     "modo": "bandeja",
     "privacidad": "PUBLIC_TO_EVERYONE",
-    "nota": "subir=false: la bandeja de TikTok se llenó (límite de pendientes). Los videos en inglés se suben y programan desde TikTok Studio web."
+    "nota": "modo bandeja: TikTok permite máximo 5 envíos pendientes en 24 h. El diario manda 1 por corrida (3 al día); los especiales NO se mandan a TikTok para no pasarse del límite."
   },
   "instagram": {
     "reels_es": true,

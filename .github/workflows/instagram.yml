@@ -1,0 +1,29 @@
+name: Instagram
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_url:
+        description: "URL pública del video (vacío = solo verificar la conexión)"
+        default: ""
+      texto:
+        description: "Texto del post"
+        default: ""
+
+jobs:
+  instagram:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Verificar / publicar
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: |
+          python scripts/instagram.py --verificar
+          if [ -n "${{ inputs.video_url }}" ]; then python scripts/instagram.py --reel "${{ inputs.video_url }}" "${{ inputs.texto }}"; fi

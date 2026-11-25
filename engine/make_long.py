@@ -51,7 +51,7 @@ _T = {"en": {"model": "MODEL", "reads": "reads it all", "falls": "falls out", "w
              "scores": "puntajes ilustrativos", "steps": ["predecir", "agregar", "repetir"], "chapters": "Capítulos:", "sources": "Fuentes:",
              "issued": "QUIÉN LA EMITIÓ", "account": "TU CUENTA", "check": "DÍGITO DE CONTROL", "issued_s": "primeros 6–8 dígitos",
              "account_s": "los dígitos del medio", "check_s": "detecta errores"}}
-def T(k): return _T.get(LANG["code"], _T["en"])[k]
+def tr(k): return _T.get(LANG["code"], _T["en"])[k]
 
 MONO_PATHS = ["/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
               "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"]
@@ -439,8 +439,8 @@ def v_prediccion(img, d, t, sc, p):
         d.rounded_rectangle([670, y - 28, 670 + wb, y + 28], 14, fill=mix(BG, c, k))
         d.text((670 + wb + 20, y), ("<1%" if pr < 0.01 else f"{pr * 100:.0f}%"), font=font(44, "bold"), fill=mix(BG, c, k), anchor="lm")
         y += 92
-    if p.get("nota", T("scores")):
-        d.text((W - 90, 900), p.get("nota", T("scores")), font=font(30, "semi"), fill=(80, 90, 115), anchor="rm")
+    if p.get("nota", tr("scores")):
+        d.text((W - 90, 900), p.get("nota", tr("scores")), font=font(30, "semi"), fill=(80, 90, 115), anchor="rm")
 
 def v_bucle(img, d, t, sc, p):
     base = p["base"]; new = p["nuevos"]
@@ -466,7 +466,7 @@ def v_bucle(img, d, t, sc, p):
         x += wd
     if ni < len(new) and t >= st - 0.3 and int(t * 3) % 2 == 0:
         d.rectangle([x + 8, y - 40, x + 22, y + 40], fill=BLUE)
-    steps = p.get("pasos", T("steps"))
+    steps = p.get("pasos", tr("steps"))
     ks = ease_out(prog(t, 0.2, 0.5))
     if ks > 0:
         active = int(((t - st) / iv) * 3) % 3 if t >= st and ni < len(new) else -1
@@ -573,8 +573,8 @@ def v_chat(img, d, t, sc, p):
     glow = clamp(1 - abs(kf - 0.9) * 3) if kf > 0 else 0
     d.rounded_rectangle([bx - 170, by - 120, bx + 170, by + 120], 30, fill=mix(BG, mix(PANEL, BLUE, glow * 0.5), kb),
                         outline=mix(BG, BLUE, kb), width=5)
-    text(d, (bx, by - 20), T("model"), 54, mix(BG, WHITE, kb), "black")
-    text(d, (bx, by + 40), T("reads"), 32, mix(BG, GREY, kb), "semi")
+    text(d, (bx, by - 20), tr("model"), 54, mix(BG, WHITE, kb), "black")
+    text(d, (bx, by + 40), tr("reads"), 32, mix(BG, GREY, kb), "semi")
     if kf > 0:
         for j, (x1, yy) in enumerate(rects):
             e = ease_inout(clamp(kf * 1.4 - j * 0.08))
@@ -613,10 +613,10 @@ def v_ventana(img, d, t, sc, p):
     kw = ease_out(prog(t, at(sc, p.get("sync"), 0.4), 0.5))
     if kw > 0:
         d.rounded_rectangle([wx0 - 14, y - 80, wx1 + 14, y + 80], 26, outline=mix(BG, BLUE, kw), width=6)
-        chip(d, W / 2, y - 140, p.get("etiqueta", T("window")), 40, fill=mix(BG, BLUE, kw), fg=BG, weight="black")
+        chip(d, W / 2, y - 140, p.get("etiqueta", tr("window")), 40, fill=mix(BG, BLUE, kw), fg=BG, weight="black")
     if t > st_move:
         kk = ease_out(prog(t, st_move, 0.5))
-        text(d, ((wx0 - 14) / 2, y + 120), T("falls"), 36, mix(BG, WARM, kk), "xbold")
+        text(d, ((wx0 - 14) / 2, y + 120), tr("falls"), 36, mix(BG, WARM, kk), "xbold")
         arrow(d, wx0 - 30, y + 120, 60, y + 120, mix(BG, WARM, kk), 4, 14) if False else None
     if p.get("nota"):
         pop(d, (W / 2, 820), p["nota"], 50, WHITE, t, at(sc, p.get("nota_sync"), 2.0), "xbold")
@@ -752,13 +752,13 @@ def v_criba(img, d, t, sc, p):
     # panel derecho
     px = x0 + cols * cs + 120
     if activo is not None and t < fin:
-        text(d, (px, 380), T("cross"), 46, GREY, "xbold", "lm")
-        text(d, (px, 470), T("multiples").format(activo), 76, WARM, "black", "lm")
+        text(d, (px, 380), tr("cross"), 46, GREY, "xbold", "lm")
+        text(d, (px, 470), tr("multiples").format(activo), 76, WARM, "black", "lm")
     if t >= fin:
         kf = ease_out(prog(t, fin, 0.5))
         cnt = sum(1 for n in range(2, N + 1) if _isprime(n))
-        text(d, (px, 400), T("primes").format(cnt), 110 * (0.6 + 0.4 * kf), BLUE, "black", "lm")
-        text(d, (px, 500), T("between").format(N), 48, mix(BG, WHITE, kf), "xbold", "lm")
+        text(d, (px, 400), tr("primes").format(cnt), 110 * (0.6 + 0.4 * kf), BLUE, "black", "lm")
+        text(d, (px, 500), tr("between").format(N), 48, mix(BG, WHITE, kf), "xbold", "lm")
     if p.get("titulo"):
         text(d, (px, 280), p["titulo"], 44, mix(BG, GREY, k0), "xbold", "lm")
 
@@ -843,8 +843,8 @@ def v_tarjeta(img, d, t, sc, p):
     d.text((gx, y0 + 410 * sk), p.get("nombre", "D. MEDINA"), font=font(int(30 * sk), "xbold"), fill=(200, 210, 230), anchor="lm")
     d.text((x0 + cw - 60 * sk, y0 + 410 * sk), "12/30", font=mono(int(30 * sk)), fill=(200, 210, 230), anchor="rm")
     # panel explicativo a la derecha
-    labels = {"bin": p.get("bin_label", T("issued")), "cuenta": p.get("cuenta_label", T("account")), "check": p.get("check_label", T("check"))}
-    subs = {"bin": p.get("bin_sub", T("issued_s")), "cuenta": p.get("cuenta_sub", T("account_s")), "check": p.get("check_sub", T("check_s"))}
+    labels = {"bin": p.get("bin_label", tr("issued")), "cuenta": p.get("cuenta_label", tr("account")), "check": p.get("check_label", tr("check"))}
+    subs = {"bin": p.get("bin_sub", tr("issued_s")), "cuenta": p.get("cuenta_sub", tr("account_s")), "check": p.get("check_sub", tr("check_s"))}
     yy = 330
     for z in ["bin", "cuenta", "check"]:
         st = at(sc, p.get(f"{z}_sync"), 1e9)
@@ -1006,10 +1006,10 @@ def render(script_path, out_path, channel="WHITE HOLE", frames_only=False):
     meta = {"titulo": cfg.get("titulo", ""), "duracion": round(total, 1),
             "capitulos": [{"t": ts(c[0]), "titulo": c[1]} for c in chapters]}
     desc = cfg.get("descripcion", "").strip()
-    meta["descripcion"] = (desc + "\n\n" + T("chapters") + "\n" if desc else T("chapters") + "\n") + \
+    meta["descripcion"] = (desc + "\n\n" + tr("chapters") + "\n" if desc else tr("chapters") + "\n") + \
         "\n".join(f"{c['t']} {c['titulo']}" for c in meta["capitulos"])
     if cfg.get("fuentes"):
-        meta["descripcion"] += "\n\n" + T("sources") + "\n" + "\n".join(f"- {f}" for f in cfg["fuentes"])
+        meta["descripcion"] += "\n\n" + tr("sources") + "\n" + "\n".join(f"- {f}" for f in cfg["fuentes"])
     if cfg.get("hashtags"): meta["descripcion"] += "\n\n" + " ".join(cfg["hashtags"])
     json.dump(meta, open(out_path + ".meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("4/4 Listo ->", out_path, flush=True)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>White Hole Publisher · Connecting…</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.png"><link rel="stylesheet" href="publisher.css">
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="index.html"><img src="../logo.png" alt="">White Hole Publisher</a></nav>
+  <section class="connect">
+    <h1 id="h">Connecting your TikTok account…</h1>
+    <p id="msg">One moment.</p>
+    <a class="btn ghost" href="app.html" id="back" hidden>Back to the app</a>
+  </section>
+</div>
+<script src="config.js"></script>
+<script>
+(async () => {
+  const p = new URLSearchParams(location.search);
+  const fail = (t) => { document.getElementById("h").textContent = "Connection not completed"; document.getElementById("msg").textContent = t; document.getElementById("back").hidden = false; };
+  if (p.get("error")) return fail(p.get("error_description") || p.get("error"));
+  let expected = null; try { expected = sessionStorage.getItem("whp_state"); } catch (e) {}
+  if (!p.get("code") || !expected || p.get("state") !== expected) return fail("The authorization response could not be verified. Please try again.");
+  try {
+    const r = await fetch(WHP.API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ action: "token", code: p.get("code") }) });
+    const d = await r.json();
+    if (!d.ok) return fail("TikTok did not complete the connection (" + d.error + ").");
+    try { localStorage.setItem("whp_sid", d.sid); sessionStorage.removeItem("whp_state"); } catch (e) {}
+    location.replace("app.html");
+  } catch (e) { fail("Network error. Please try again."); }
+})();
+</script>
+</body>
+</html>

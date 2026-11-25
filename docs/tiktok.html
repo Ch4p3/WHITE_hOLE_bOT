@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>White Hole · Para TikTok</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.png">
+<style>
+  :root { --bg:#080a14; --panel:#141a2e; --line:#232c4a; --blue:#58a6ff; --ice:#b5d4f4; --white:#f4f6fb; --grey:#808aa0; --warm:#ff8a4c; --ok:#3ecf8e; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--white); font:16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding:env(safe-area-inset-top) 0 40px; }
+  header { padding:22px 18px 8px; }
+  h1 { margin:0; font-size:24px; letter-spacing:-.02em; }
+  h1 span { color:var(--blue); }
+  .sub { color:var(--grey); margin:4px 0 0; font-size:14px; }
+  .stats { display:flex; gap:10px; padding:12px 18px 4px; }
+  .stat { flex:1; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:10px 12px; }
+  .stat b { display:block; font-size:22px; }
+  .stat small { color:var(--grey); }
+  .tabs { display:flex; gap:8px; padding:12px 18px; }
+  .tabs button { flex:1; background:transparent; color:var(--grey); border:1px solid var(--line); border-radius:999px; padding:8px 0; font-weight:600; font-size:14px; }
+  .tabs button.on { background:var(--blue); color:var(--bg); border-color:var(--blue); }
+  .help { margin:0 18px 10px; padding:12px 14px; border-radius:14px; background:#10172b; border:1px dashed var(--line); color:var(--ice); font-size:14px; }
+  .list { display:grid; gap:14px; padding:6px 18px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; overflow:hidden; display:grid; grid-template-columns:110px 1fr; }
+  .card.done { opacity:.55; }
+  video { width:110px; height:196px; object-fit:cover; background:#000; display:block; }
+  .body { padding:12px 12px 12px 14px; display:flex; flex-direction:column; gap:8px; min-width:0; }
+  .title { font-weight:700; font-size:15px; }
+  .meta { color:var(--grey); font-size:12px; }
+  .btns { display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; }
+  .btn { border:0; border-radius:10px; padding:9px 11px; font-weight:700; font-size:13px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
+  .share { background:var(--blue); color:var(--bg); }
+  .copy { background:#22304f; color:var(--white); }
+  .mark { background:transparent; color:var(--grey); border:1px solid var(--line); }
+  .card.done .mark { color:var(--ok); border-color:var(--ok); }
+  .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(120px); background:var(--white); color:var(--bg); padding:10px 16px; border-radius:999px; font-weight:700; font-size:14px; transition:transform .25s; }
+  .toast.show { transform:translateX(-50%) translateY(0); }
+  .empty { color:var(--grey); text-align:center; padding:30px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>White Hole <span>· para TikTok</span></h1>
+  <p class="sub">Los videos en inglés listos para subir. Toca <b>Compartir</b> y elige TikTok.</p>
+</header>
+<div class="stats">
+  <div class="stat"><b id="nPend">–</b><small>pendientes</small></div>
+  <div class="stat"><b id="nDone">–</b><small>ya subidos</small></div>
+</div>
+<div class="help">1. Toca <b>Copiar texto</b> &nbsp;2. Toca <b>Compartir</b> → TikTok &nbsp;3. Pega el texto y publica &nbsp;4. Marca <b>Ya lo subí</b>.</div>
+<div class="tabs">
+  <button class="on" data-f="pend">Pendientes</button>
+  <button data-f="done">Ya subidos</button>
+  <button data-f="all">Todos</button>
+</div>
+<div class="list" id="list"><div class="empty">Cargando videos…</div></div>
+<div class="toast" id="toast"></div>
+<script>
+const REPO = "Ch4p3/WHITE_hOLE_bOT";
+const RAW = (ref, p) => `https://raw.githubusercontent.com/${REPO}/${ref}/${p}`;
+const KEY = "wh_tiktok_hechos";
+// Ya publicados en TikTok antes de este tablero
+const YA = ["001_disco_1tb", "002_primer_bug", "003_apollo_4kb", "004_eniac", "004a_mbps_vs_mb", "101_phone_128gb", "002_riemann"];
+let hechos = new Set();
+try { hechos = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); } catch (e) {}
+const guardar = () => { try { localStorage.setItem(KEY, JSON.stringify([...hechos])); } catch (e) {} };
+let filtro = "pend", items = [];
+
+function toast(t) { const el = document.getElementById("toast"); el.textContent = t; el.classList.add("show"); setTimeout(() => el.classList.remove("show"), 1800); }
+async function copiar(t) {
+  try { await navigator.clipboard.writeText(t); toast("Texto copiado ✅"); }
+  catch (e) { prompt("Copia este texto:", t); }
+}
+async function compartir(it, btn) {
+  btn.textContent = "Preparando…";
+  try {
+    const blob = await (await fetch(it.video)).blob();
+    const file = new File([blob], it.id + ".mp4", { type: "video/mp4" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.clipboard.writeText(it.texto); } catch (e) {}
+      await navigator.share({ files: [file], text: it.texto });
+      toast("Texto copiado: pégalo en TikTok");
+    } else {
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = it.id + ".mp4"; a.click();
+      toast("Descargado: súbelo desde la galería");
+    }
+  } catch (e) { if (e.name !== "AbortError") toast("No se pudo compartir"); }
+  btn.textContent = "📤 Compartir";
+}
+function pintar() {
+  const L = document.getElementById("list");
+  const vis = items.filter(it => filtro === "all" || (filtro === "done") === hechos.has(it.id));
+  document.getElementById("nPend").textContent = items.filter(i => !hechos.has(i.id)).length;
+  document.getElementById("nDone").textContent = items.filter(i => hechos.has(i.id)).length;
+  if (!vis.length) { L.innerHTML = `<div class="empty">${filtro === "pend" ? "¡Todo al día! 🎉" : "Nada por aquí todavía."}</div>`; return; }
+  L.innerHTML = "";
+  for (const it of vis) {
+    const c = document.createElement("div"); c.className = "card" + (hechos.has(it.id) ? " done" : "");
+    c.innerHTML = `<video src="${it.video}#t=1" preload="metadata" muted playsinline controls></video>
+      <div class="body"><div class="title"></div><div class="meta">${it.tipo} · ${it.fecha || "especial"}</div>
+      <div class="btns"><button class="btn copy">📋 Copiar texto</button><button class="btn share">📤 Compartir</button>
+      <button class="btn mark">${hechos.has(it.id) ? "✓ Subido" : "Ya lo subí"}</button></div></div>`;
+    c.querySelector(".title").textContent = it.titulo;
+    c.querySelector(".copy").onclick = () => copiar(it.texto);
+    c.querySelector(".share").onclick = e => compartir(it, e.currentTarget);
+    c.querySelector(".mark").onclick = () => { hechos.has(it.id) ? hechos.delete(it.id) : hechos.add(it.id); guardar(); pintar(); };
+    L.appendChild(c);
+  }
+}
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tabs button").forEach(x => x.classList.remove("on")); b.classList.add("on"); filtro = b.dataset.f; pintar();
+});
+(async () => {
+  try {
+    const br = await (await fetch(`https://api.github.com/repos/${REPO}/branches/previews`)).json();
+    const sha = br.commit.sha;
+    const tree = await (await fetch(`https://api.github.com/repos/${REPO}/git/trees/${sha}?recursive=1`)).json();
+    const paths = tree.tree.map(t => t.path);
+    const vids = paths.filter(p => /^diarios\/.*\.mp4$/.test(p) || /^\d{3}_.*_especial_en\.mp4$/.test(p));
+    const out = [];
+    for (const p of vids) {
+      let id, fecha = "", tipo, jurl;
+      if (p.startsWith("diarios/")) {
+        const n = p.slice(8, -4); fecha = n.slice(0, 10); id = n.slice(11); tipo = "Diario"; jurl = RAW(sha, `diarios/${n}.json`);
+      } else {
+        id = p.replace("_especial_en.mp4", ""); tipo = "Especial"; jurl = RAW("main", `guiones/en_especial/${id}.json`);
+      }
+      let titulo = id, texto = "";
+      try { const g = await (await fetch(jurl)).json(); titulo = g.titulo || id; texto = (g.titulo || "") + " " + (g.descripcion || "") + " " + (g.hashtags || ""); } catch (e) {}
+      out.push({ id, fecha, tipo, titulo, texto: texto.trim(), video: RAW(sha, p) });
+    }
+    for (const y of YA) if (!hechos.has(y)) hechos.add(y);
+    guardar();
+    items = out.sort((a, b) => (b.fecha || "0").localeCompare(a.fecha || "0"));
+    pintar();
+  } catch (e) {
+    document.getElementById("list").innerHTML = `<div class="empty">No se pudo cargar la lista. Intenta de nuevo en un rato.</div>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Las tiendas no pueden guardar el código de seguridad de tu tarjeta 🔒",
+ "descripcion": "Según el estándar PCI DSS de la industria de tarjetas, los comercios no pueden guardar los códigos de verificación después de autorizar el pago, ni siquiera encriptados. El video completo está en la página de White Hole.",
+ "hashtags": "#tarjetadecrédito #ciberseguridad #tecnología #compras #WhiteHole #reels",
+ "fuentes": [
+  "https://www.pcisecuritystandards.org/faqs/1574/"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Te has dado cuenta de que algunas páginas te piden los tres dígitos de atrás cada vez que compras?",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "¿POR QUÉ LO PIDEN",
+     "CADA VEZ?"
+    ],
+    "sync": "tres"
+   }
+  },
+  {
+   "texto": "Es porque no tienen permitido guardarlo. Según las reglas de seguridad de la industria de tarjetas, llamadas PCI DSS, ese código no se puede guardar después de aprobar la compra.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "PCI DSS",
+    "word": "NO SE GUARDA",
+    "sub": "después de aprobar",
+    "sync": "permitido",
+    "size": 210
+   }
+  },
+  {
+   "texto": "Ni siquiera encriptado. Ni siquiera si tú les das permiso.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "¿ENCRIPTADO?",
+     "value": "no",
+     "color": "warm",
+     "sync": "encriptado"
+    },
+    "right": {
+     "label": "¿CON PERMISO?",
+     "value": "no",
+     "color": "warm",
+     "sync": "permiso"
+    }
+   }
+  },
+  {
+   "texto": "Así que si hackean una tienda, el código no está ahí para que lo roben. El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "El último dígito de tu tarjeta es un truco matemático 💳",
+ "descripcion": "Los números de tarjeta terminan en un dígito de control calculado con el algoritmo de Luhn, así que los errores al digitar se detectan al instante. El video completo está en la página de White Hole.",
+ "hashtags": "#tarjetadecrédito #matemáticas #tecnología #finanzas #WhiteHole #reels",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Payment_card_number"
+ ],
+ "escenas": [
+  {
+   "texto": "El último dígito de tu tarjeta de crédito no es al azar. Es matemática.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "EL ÚLTIMO DÍGITO",
+     "ES MATEMÁTICA"
+    ],
+    "sync": "matemática"
+   }
+  },
+  {
+   "texto": "Desde la derecha, duplica cada segundo dígito. Si te da más de nueve, réstale nueve. Luego suma todo.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "duplica cada 2.º dígito",
+      "sync": "duplica",
+      "size": 80
+     },
+     {
+      "text": "¿más de 9? resta 9",
+      "sync": "réstale",
+      "color": "ice",
+      "size": 80
+     },
+     {
+      "text": "súmalo todo",
+      "sync": "suma",
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En una tarjeta real, el total siempre termina en cero. El último dígito se escoge para que eso pase.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "total de una tarjeta válida",
+    "word": "TERMINA EN 0",
+    "sync": "cero",
+    "size": 200
+   }
+  },
+  {
+   "texto": "Si te equivocas en un solo dígito, la página lo sabe antes de que nada llegue a tu banco.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "4111 1111 1111 1111",
+     "value": "válida",
+     "color": "blue",
+     "sync": "equivocas"
+    },
+    "right": {
+     "label": "4111 1111 1111 1112",
+     "value": "error",
+     "color": "warm",
+     "sync": "sabe"
+    }
+   }
+  },
+  {
+   "texto": "Lo que pasa cuando pagas con tu tarjeta está en el video completo, en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

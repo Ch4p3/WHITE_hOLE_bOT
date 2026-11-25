@@ -1,0 +1,107 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Pagar solo el mínimo de US$3.000 toma 15 años 😳",
+ "descripcion": "En Estados Unidos, con una tasa del 22,36 % anual (Reserva Federal, agosto de 2026), pagando solo el mínimo (intereses + 1 %), una deuda de US$3.000 tarda 15 años en pagarse y cuesta ~US$4.515 en intereses. Con US$150 al mes: 26 meses y ~US$789. El video completo está en la página de White Hole. Contenido educativo, no es asesoría financiera.",
+ "hashtags": "#tarjetadecrédito #finanzaspersonales #deudas #dinero #WhiteHole #reels",
+ "fuentes": [
+  "https://www.federalreserve.gov/releases/g19/20261106/g19.pdf"
+ ],
+ "escenas": [
+  {
+   "texto": "Debes tres mil dólares en una tarjeta de crédito, con el interés promedio de Estados Unidos: veintidós por ciento. Y solo pagas el mínimo.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "US$3.000 al 22,4 %",
+      "sync": "tres"
+     },
+     {
+      "text": "pagas solo el mínimo",
+      "sync": "mínimo",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Te toma quince años terminar de pagarla.",
+   "visual": {
+    "tipo": "counter",
+    "to": 15,
+    "suffix": " años",
+    "label": "para quedar sin deuda",
+    "sync": "quince",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y pagas unos cuatro mil quinientos dólares en intereses. Más de lo que te prestaron.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Prestado",
+      "value": 3000,
+      "value_text": "US$3.000",
+      "color": "ice",
+      "sync": "pagas"
+     },
+     {
+      "label": "Intereses",
+      "value": 4515,
+      "value_text": "US$4.515",
+      "color": "warm",
+      "sync": "intereses"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si mejor pagas una cuota fija de ciento cincuenta al mes: unos dos años, y menos de ochocientos dólares de intereses.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MÍNIMO",
+     "value": "15 años",
+     "sub": "US$4.515 de intereses",
+     "color": "warm",
+     "sync": "pagas"
+    },
+    "right": {
+     "label": "US$150/MES",
+     "value": "26 meses",
+     "sub": "US$789 de intereses",
+     "color": "blue",
+     "sync": "dos"
+    }
+   }
+  },
+  {
+   "texto": "El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

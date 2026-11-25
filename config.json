@@ -6,7 +6,8 @@
   },
   "facebook": {
     "subir": false,
-    "nota": "Apagado para los Shorts diarios en inglés: la Página de Facebook es en español y recibe los especiales (workflow especial.yml)."
+    "nota": "subir=false: los Shorts diarios en inglés no van a Facebook. reels_es=true: en cada corrida se publica además un Reel en español de guiones/es/pendientes en la Página.",
+    "reels_es": true
   },
   "tiktok": {
     "subir": true,

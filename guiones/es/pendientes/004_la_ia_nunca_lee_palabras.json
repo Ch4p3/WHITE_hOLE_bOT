@@ -1,0 +1,101 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Tu chatbot de IA nunca ha leído ni una palabra de lo que escribes 🔢",
+ "descripcion": "Antes de llegar al modelo, tu mensaje se corta en tokens y cada uno se convierte en un número de identificación. El modelo solo ve números. El video completo está en la página de White Hole.",
+ "hashtags": "#IA #ChatGPT #tokens #tecnología #WhiteHole #reels",
+ "fuentes": [
+  "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "https://huggingface.co/blog/llama31"
+ ],
+ "escenas": [
+  {
+   "texto": "Tu chatbot de inteligencia artificial nunca ha leído ni una sola palabra de lo que escribes.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "NUNCA LEYÓ",
+     "TUS PALABRAS"
+    ],
+    "sync": "nunca"
+   }
+  },
+  {
+   "texto": "Primero, tu mensaje se corta en pedazos llamados tokens. Una palabra como increíblemente puede quedar en tres: in, creíble, mente.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "increíblemente →",
+    "word": "in·creíble·mente",
+    "size": 150,
+    "sub": "3 tokens",
+    "sync": "increíblemente",
+    "sub_sync": "tres"
+   }
+  },
+  {
+   "texto": "Luego, cada pedazo se cambia por un número de identificación. Desde ahí, el modelo solo ve números.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "TÚ ESCRIBES",
+     "value": "gato",
+     "color": "white",
+     "sync": "cambia"
+    },
+    "right": {
+     "label": "ÉL VE",
+     "value": "8415",
+     "sub": "un ID (ejemplo)",
+     "color": "blue",
+     "sync": "número"
+    }
+   }
+  },
+  {
+   "texto": "En inglés, un token es más o menos tres cuartos de palabra, y el diccionario de Llama tres tiene unos ciento veintiocho mil.",
+   "visual": {
+    "tipo": "counter",
+    "to": 128000,
+    "label": "tokens en su diccionario",
+    "note": "1 token ≈ ¾ de palabra (en inglés)",
+    "note_sync": "tres",
+    "sync": "diccionario"
+   }
+  },
+  {
+   "texto": "Y su único trabajo es adivinar el siguiente. Nada más.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "su único trabajo",
+    "word": "SIGUIENTE TOKEN",
+    "size": 200,
+    "sync": "adivinar"
+   }
+  },
+  {
+   "texto": "El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

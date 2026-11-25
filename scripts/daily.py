@@ -18,6 +18,8 @@ import tiktok  # noqa: E402
 
 PEND = os.path.join(ROOT, "guiones", "pendientes")
 PUB = os.path.join(ROOT, "guiones", "publicados")
+PEND_ES = os.path.join(ROOT, "guiones", "es", "pendientes")
+PUB_ES = os.path.join(ROOT, "guiones", "es", "publicados")
 VOZ = os.path.join(ROOT, "voices", "en-us-ryan-high.onnx")
 OUT = os.path.join(ROOT, "out")
 
@@ -142,5 +144,32 @@ def main():
     shutil.move(guion, os.path.join(PUB, f"{hoy}_{os.path.basename(guion)}"))
     print("Enviado a Telegram y movido a publicados.")
 
+def reel_es():
+    """Reel en español para la Página de Facebook (uno por corrida), si config facebook.reels_es = true."""
+    conf = json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8")).get("facebook", {})
+    if not conf.get("reels_es") or not facebook.creds_disponibles():
+        return
+    pend = sorted(glob.glob(os.path.join(PEND_ES, "*.json")))
+    if not pend:
+        print("Facebook: no quedan guiones en español.")
+        return
+    guion = pend[0]
+    cfg = json.load(open(guion, encoding="utf-8"))
+    video = os.path.join(OUT, "reel_es.mp4")
+    print("Generando Reel en español:", os.path.basename(guion))
+    try:
+        render(guion, video, VOZ, "White Hole")
+        texto = (cfg.get("titulo", "") + "\n\n" + cfg.get("descripcion", "") + "\n\n" +
+                 cfg.get("hashtags", "") + "\n\nFuentes:\n" + "\n".join(cfg.get("fuentes", [])))
+        fid, est = facebook.publicar(video, texto, cfg.get("titulo"))
+        print("✅ Reel en Facebook:", fid, est)
+    except Exception as e:
+        print("⚠️ No se pudo publicar el Reel en español:", str(e)[:300])
+        return
+    os.makedirs(PUB_ES, exist_ok=True)
+    shutil.move(guion, os.path.join(PUB_ES, f"{datetime.date.today().isoformat()}_{os.path.basename(guion)}"))
+
 if __name__ == "__main__":
     main()
+    if "--prueba" not in sys.argv:
+        reel_es()

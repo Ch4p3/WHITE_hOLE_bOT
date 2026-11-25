@@ -1,0 +1,97 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Las recompensas de tu tarjeta las pagan en parte quienes usan efectivo 💸",
+ "descripcion": "Las tiendas pagan comisiones de intercambio por cada venta con tarjeta (alrededor del 2 % en Estados Unidos para crédito, con tope del 0,3 % en la Unión Europea) y las incluyen en sus precios. El video completo está en la página de White Hole.",
+ "hashtags": "#tarjetadecrédito #dinero #economía #finanzas #WhiteHole #reels",
+ "fuentes": [
+  "https://www.adyen.com/en_AU/knowledge-hub/interchange-fees-explained",
+  "https://www.eubusiness.com/focus/card-fees"
+ ],
+ "escenas": [
+  {
+   "texto": "En Estados Unidos, las recompensas de tu tarjeta de crédito las pagan, en parte, quienes pagan en efectivo.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "TUS RECOMPENSAS",
+     "LAS PAGAMOS",
+     "TODOS"
+    ],
+    "colors": [
+     "white",
+     "white",
+     "blue"
+    ],
+    "sync": "recompensas"
+   }
+  },
+  {
+   "texto": "Cada vez que pasas la tarjeta, la tienda le paga una comisión a tu banco. En Estados Unidos, el promedio es de alrededor del dos por ciento en tarjetas de crédito.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "la tienda le paga a tu banco",
+    "to": 2,
+    "suffix": " %",
+    "label": "comisión promedio de crédito en EE. UU.",
+    "sync": "promedio"
+   }
+  },
+  {
+   "texto": "Las tiendas meten ese costo en sus precios. Y el precio es el mismo, pagues en efectivo o con tarjeta.",
+   "visual": {
+    "tipo": "bigword",
+    "word": "MISMO PRECIO",
+    "sub": "efectivo o tarjeta",
+    "sync": "mismo",
+    "size": 210
+   }
+  },
+  {
+   "texto": "En Europa, esa comisión tiene un tope del cero coma tres por ciento, y las recompensas son mucho más pequeñas.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Crédito EE. UU. (sin tope)",
+      "value": 2,
+      "value_text": "~2 %",
+      "color": "warm",
+      "sync": "europa"
+     },
+     {
+      "label": "Crédito UE (con tope)",
+      "value": 0.3,
+      "value_text": "0,3 %",
+      "sync": "tope"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

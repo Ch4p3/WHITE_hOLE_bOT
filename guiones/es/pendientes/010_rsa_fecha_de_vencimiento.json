@@ -1,0 +1,101 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "La encriptación de tu banco tiene fecha de vencimiento ⏳",
+ "descripcion": "Plan de transición final del NIST (27 de octubre de 2026): los algoritmos vulnerables a la computación cuántica, como RSA, quedan obsoletos después de 2030 y prohibidos después de 2035. La historia completa está en la página de White Hole.",
+ "hashtags": "#ciberseguridad #computacióncuántica #criptografía #tecnología #WhiteHole #reels",
+ "fuentes": [
+  "https://postquantum.com/security-pqc/nist-ir-8547-final/",
+  "https://csrc.nist.gov/Projects/post-quantum-cryptography/pqc-standards"
+ ],
+ "escenas": [
+  {
+   "texto": "Las matemáticas que protegen buena parte de internet tienen fecha de vencimiento.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "YA TIENEN",
+     "FECHA DE",
+     "VENCIMIENTO"
+    ],
+    "colors": [
+     "white",
+     "blue",
+     "white"
+    ],
+    "sync": "vencimiento"
+   }
+  },
+  {
+   "texto": "Se llama RSA, y depende de un solo hecho: multiplicar dos primos enormes es fácil, pero separar el resultado de vuelta es brutalmente difícil.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MULTIPLICAR",
+     "value": "fácil",
+     "color": "blue",
+     "sync": "multiplicar"
+    },
+    "right": {
+     "label": "SEPARAR",
+     "value": "brutal",
+     "color": "warm",
+     "sync": "separar"
+    }
+   }
+  },
+  {
+   "texto": "Un computador cuántico lo bastante grande podría separarlo rápido. Por eso, en octubre de dos mil veintiséis, el NIST fijó los plazos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la amenaza",
+    "word": "CUÁNTICA",
+    "sync": "cuántico",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "RSA queda obsoleto después de dos mil treinta, y prohibido después de dos mil treinta y cinco.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "DESPUÉS DE 2030",
+     "value": "obsoleto",
+     "color": "ice",
+     "sync": "obsoleto"
+    },
+    "right": {
+     "label": "DESPUÉS DE 2035",
+     "value": "prohibido",
+     "color": "warm",
+     "sync": "prohibido"
+    }
+   }
+  },
+  {
+   "texto": "La historia completa de los números primos está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

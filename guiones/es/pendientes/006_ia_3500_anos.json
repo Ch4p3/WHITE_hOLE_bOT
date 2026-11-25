@@ -1,0 +1,94 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Entrenar esta IA en un solo chip tardaría 3.500 años ⏳",
+ "descripcion": "Llama 3.1 405B de Meta necesitó unos 31 millones de horas de GPU en más de 16.000 Nvidia H100, leyendo 15 billones de tokens. El video completo está en la página de White Hole.",
+ "hashtags": "#IA #Nvidia #GPU #tecnología #WhiteHole #reels",
+ "fuentes": [
+  "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "https://huggingface.co/blog/llama31",
+  "https://developer.nvidia.com/blog/supercharging-meta-llama-3-1-across-nvidia-platforms/"
+ ],
+ "escenas": [
+  {
+   "texto": "Entrenar un solo modelo de inteligencia artificial en un solo chip tomaría unos tres mil quinientos años.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "una IA · un chip",
+    "to": 3520,
+    "suffix": " años",
+    "label": "de cómputo sin parar",
+    "color": "warm",
+    "sync": "entrenar"
+   }
+  },
+  {
+   "texto": "Hablamos de Llama tres punto uno, de Meta. Necesitó unos treinta y un millones de horas de GPU.",
+   "visual": {
+    "tipo": "counter",
+    "to": 31,
+    "suffix": " millones",
+    "label": "horas de GPU",
+    "note": "Meta: 30,84 millones",
+    "sync": "treinta"
+   }
+  },
+  {
+   "texto": "Así que Meta puso a trabajar más de dieciséis mil chips Nvidia H cien al mismo tiempo.",
+   "visual": {
+    "tipo": "counter",
+    "to": 16000,
+    "suffix": "+",
+    "label": "GPU H100 a la vez",
+    "sync": "dieciséis"
+   }
+  },
+  {
+   "texto": "Leyendo más de quince billones de tokens. Más o menos el texto de cien millones de libros.",
+   "visual": {
+    "tipo": "counter",
+    "to": 15,
+    "suffix": " billones",
+    "label": "tokens de texto",
+    "note": "≈ 100 millones de libros",
+    "note_sync": "cien",
+    "sync": "quince"
+   }
+  },
+  {
+   "texto": "Todo eso, para aprender una sola habilidad: adivinar la siguiente palabra.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "todo para aprender una habilidad",
+    "word": "ADIVINAR LA SIGUIENTE PALABRA",
+    "size": 150,
+    "sync": "adivinar"
+   }
+  },
+  {
+   "texto": "El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

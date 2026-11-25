@@ -1,0 +1,99 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Una demostración de hace 2.300 años que entiendes en 40 segundos 🧠",
+ "descripcion": "Euclides demostró que los números primos nunca se acaban, con un solo truco precioso. La historia completa de los primos, de Euclides a la IA, está en la página de White Hole.",
+ "hashtags": "#matemáticas #númerosprimos #Euclides #ciencia #WhiteHole #reels",
+ "fuentes": [
+  "https://t5k.org/notes/proofs/infinite/Euclid.html"
+ ],
+ "escenas": [
+  {
+   "texto": "Hace dos mil trescientos años, Euclides demostró que los números primos nunca se acaban. Aquí va la demostración completa.",
+   "visual": {
+    "tipo": "title",
+    "pre": "Euclides, ~300 a. C.",
+    "lines": [
+     "LOS PRIMOS",
+     "NUNCA SE ACABAN"
+    ],
+    "sync": "demostró"
+   }
+  },
+  {
+   "texto": "Imagina que tienes una lista completa de todos los primos. Multiplícalos todos, y súmale uno.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "2 × 3 × 5 × 7",
+      "sync": "multiplícalos"
+     },
+     {
+      "text": "+ 1",
+      "sync": "súmale",
+      "color": "blue"
+     }
+    ],
+    "result": {
+     "value": 211,
+     "sync": "uno",
+     "label": "sobra: 1"
+    }
+   }
+  },
+  {
+   "texto": "Divide ese número entre cualquier primo de tu lista, y siempre sobra uno. Así que, o es un primo nuevo, o está hecho de primos que te faltaron.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "divide entre cualquier primo de la lista",
+    "word": "SOBRA 1",
+    "sub": "→ un primo que te faltó",
+    "sync": "sobra",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Prueba con los seis primeros primos y te da treinta mil treinta y uno. Eso es cincuenta y nueve por quinientos nueve. Dos primos que no estaban en la lista.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "2·3·5·7·11·13 + 1",
+      "sync": "prueba"
+     },
+     {
+      "text": "= 30.031 = 59 × 509",
+      "sync": "cincuenta",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ninguna lista puede estar completa jamás. El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "El número primo más grande jamás encontrado tiene 41 millones de dígitos 🤯",
+ "descripcion": "M136279841 fue descubierto en octubre de 2024 por Luke Durant, usando miles de GPU en la nube en 17 países. La historia completa está en la página de White Hole.",
+ "hashtags": "#matemáticas #númerosprimos #Nvidia #GPU #WhiteHole #reels",
+ "fuentes": [
+  "https://www.mersenne.org",
+  "https://www.scientificamerican.com/article/new-prime-number-41-million-digits-long-breaks-math-records"
+ ],
+ "escenas": [
+  {
+   "texto": "El número primo más grande jamás encontrado tiene cuarenta y un millones de dígitos.",
+   "visual": {
+    "tipo": "counter",
+    "to": 41024320,
+    "label": "dígitos",
+    "pre": "2^136.279.841 − 1",
+    "sync": "cuarenta"
+   }
+  },
+  {
+   "texto": "Lo encontró Luke Durant, un exingeniero de Nvidia, usando miles de GPU alquiladas en diecisiete países.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "un exingeniero de Nvidia",
+    "to": 17,
+    "label": "países con GPU alquiladas",
+    "sync": "diecisiete"
+   }
+  },
+  {
+   "texto": "Una GPU en Dublín lo detectó. Otra en Texas demostró que era primo. Los mismos chips que entrenan a la inteligencia artificial.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "DETECTADO EN",
+     "value": "Dublín",
+     "color": "ice",
+     "sync": "dublín"
+    },
+    "right": {
+     "label": "CONFIRMADO EN",
+     "value": "Texas",
+     "color": "blue",
+     "sync": "texas"
+    }
+   }
+  },
+  {
+   "texto": "Se gastó casi dos millones de dólares. El premio era de tres mil.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "GASTÓ",
+     "value": "~US$2 M",
+     "color": "warm",
+     "sync": "gastó"
+    },
+    "right": {
+     "label": "PREMIO",
+     "value": "US$3.000",
+     "color": "blue",
+     "sync": "premio"
+    }
+   }
+  },
+  {
+   "texto": "La historia completa de los números primos está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

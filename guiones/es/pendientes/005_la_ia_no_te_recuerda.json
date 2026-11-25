@@ -1,0 +1,109 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Tu chatbot de IA no está aprendiendo de ti 🧊",
+ "descripcion": "Mientras chateas, los pesos del modelo nunca cambian. Te 'recuerda' porque toda la conversación se le envía de nuevo cada vez. El video completo está en la página de White Hole.",
+ "hashtags": "#IA #ChatGPT #inteligenciaartificial #tecnología #WhiteHole #reels",
+ "fuentes": [
+  "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "https://huggingface.co/blog/llama31"
+ ],
+ "escenas": [
+  {
+   "texto": "Tu chatbot de inteligencia artificial no aprende nada hablando contigo.",
+   "visual": {
+    "tipo": "title",
+    "lines": [
+     "NO ESTÁ",
+     "APRENDIENDO",
+     "DE TI"
+    ],
+    "colors": [
+     "white",
+     "blue",
+     "white"
+    ],
+    "sync": "aprende"
+   }
+  },
+  {
+   "texto": "Sus números están congelados. Ni uno solo cambia mientras chateas.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "mientras chateas, sus pesos están",
+    "word": "CONGELADOS",
+    "color": "ice",
+    "sub": "0 números cambian",
+    "sync": "congelados",
+    "sub_sync": "solo"
+   }
+  },
+  {
+   "texto": "Entonces, ¿cómo recuerda tu último mensaje? Cada vez que le das enviar, se manda otra vez toda la conversación, desde el principio.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "cada vez que le das enviar",
+    "word": "SE REENVÍA",
+    "sub": "todo el chat, desde el principio",
+    "sync": "toda",
+    "pre_sync": "cada"
+   }
+  },
+  {
+   "texto": "Eso se llama ventana de contexto. Llama tres punto uno aguanta unos ciento veintiocho mil tokens. Si te pasas, la parte más vieja simplemente se cae.",
+   "visual": {
+    "tipo": "counter",
+    "to": 128,
+    "suffix": " mil",
+    "label": "tokens de memoria a corto plazo",
+    "note": "lo más viejo se cae",
+    "note_sync": "cae",
+    "sync": "ciento"
+   }
+  },
+  {
+   "texto": "¿Las funciones de memoria? Casi siempre son notas guardadas que se pegan en el chat por ti. El modelo en sí sigue sin aprender nada.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "PARECE",
+     "value": "memoria",
+     "color": "grey",
+     "sync": "memoria"
+    },
+    "right": {
+     "label": "EN REALIDAD",
+     "value": "notas",
+     "sub": "pegadas en el chat",
+     "color": "blue",
+     "sync": "guardadas"
+    }
+   }
+  },
+  {
+   "texto": "El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

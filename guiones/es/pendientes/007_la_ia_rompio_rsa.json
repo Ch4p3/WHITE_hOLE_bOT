@@ -1,0 +1,88 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Una IA ayudó a resolver un reto de códigos de hace 35 años 🔐",
+ "descripcion": "En septiembre de 2026, RSA-260 y luego RSA-896 fueron factorizados con ayuda de agentes de IA. Tu banco sigue seguro, y te contamos por qué. La historia completa está en la página de White Hole.",
+ "hashtags": "#IA #criptografía #matemáticas #númerosprimos #WhiteHole #reels",
+ "fuentes": [
+  "https://cognition.com/blog/factoring-rsa-260",
+  "https://postquantum.com/security-pqc/rsa-896-factored-claude-gpus/"
+ ],
+ "escenas": [
+  {
+   "texto": "En septiembre, un número de doscientos sesenta dígitos que había resistido a todos desde mil novecientos noventa y uno por fin se partió en dos números primos.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "RSA-260 · propuesto en 1991",
+    "to": 260,
+    "suffix": " dígitos",
+    "label": "partido en dos primos",
+    "sync": "dígitos"
+   }
+  },
+  {
+   "texto": "El software que lo logró lo construyó un agente de inteligencia artificial llamado Devin, usando GPU sobrantes, por unos cuatrocientos mil dólares.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "LO HIZO",
+     "value": "una IA",
+     "color": "blue",
+     "sync": "agente"
+    },
+    "right": {
+     "label": "COSTO",
+     "value": "~US$400 mil",
+     "color": "warm",
+     "sync": "cuatrocientos"
+    }
+   }
+  },
+  {
+   "texto": "Dieciséis días después, un investigador de Anthropic usó a Claude en hasta dos mil GPU y volvió a romper el récord.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "16 días después · RSA-896",
+    "to": 2048,
+    "label": "GPU, con capacidad ociosa",
+    "sync": "dos"
+   }
+  },
+  {
+   "texto": "¿Entonces tu banco está en peligro? No. Una clave real de dos mil cuarenta y ocho bits es unas noventa y un mil millones de veces más difícil.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "RSA-2048 es",
+    "word": "91 MIL MILLONES×",
+    "sub": "más difícil de romper",
+    "sync": "noventa",
+    "size": 170
+   }
+  },
+  {
+   "texto": "La verdadera amenaza son los computadores cuánticos, y la fecha de retiro de RSA ya está fijada. El video completo está en nuestra página. Síguenos para más.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "VIDEO COMPLETO",
+     "EN LA PÁGINA"
+    ],
+    "colors": [
+     "white",
+     "blue"
+    ],
+    "syncs": [
+     null,
+     "página"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

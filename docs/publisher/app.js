@@ -78,11 +78,12 @@
   }
 
   function friendly(code) {
+    code = String(code || "").split(":")[0].trim();
     const m = {
       spam_risk_too_many_posts: "You have reached the daily posting limit for your TikTok account. Please try again tomorrow.",
       spam_risk_user_banned_from_posting: "TikTok is not allowing this account to post right now.",
       reached_active_user_cap: "White Hole Publisher has reached today's limit of creators. Please try again later.",
-      unaudited_client_can_only_post_to_private_accounts: "This app can only post to private accounts until it is approved by TikTok.",
+      unaudited_client_can_only_post_to_private_accounts: "Your TikTok account needs to be private to post with this app while it is in review. You can also use “Send to my TikTok inbox as a draft”.",
       privacy_required: "Please choose who can view this video.",
       consent_required: "Please confirm before posting.",
       branded_content_cannot_be_private: "Branded content visibility cannot be set to private.",

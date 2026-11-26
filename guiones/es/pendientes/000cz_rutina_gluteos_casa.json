@@ -1,0 +1,176 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Rutinas",
+ "titulo": "Rutina de glúteos en casa, sin pesas 🍑 (guárdala)",
+ "descripcion": "4 ejercicios, 3 series, unos 15 minutos. Hazla 2 o 3 veces por semana (la OMS recomienda fortalecer los músculos al menos 2 días por semana). Cuando te sobren repeticiones, súbele la dificultad. Guárdala y cuéntame cuando la hagas 👇",
+ "hashtags": "#rutina #gluteos #ejercicioencasa #fitness #sinpesas #WhiteHole #reels",
+ "fuentes": [
+  "https://www.who.int/initiatives/behealthy/physical-activity",
+  "https://pubmed.ncbi.nlm.nih.gov/32132843/",
+  "https://pubmed.ncbi.nlm.nih.gov/28834797/"
+ ],
+ "escenas": [
+  {
+   "texto": "Rutina de glúteos en casa, sin pesas. Guárdala, porque la vas a necesitar.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.1,
+    "colchoneta": true,
+    "pastilla": "RUTINA",
+    "titulo": "GLÚTEOS EN CASA",
+    "sub": "4 ejercicios · sin pesas",
+    "sub_sync": "pesas",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "glúteos"
+   }
+  },
+  {
+   "texto": "Uno: puente de glúteo. Tres series de quince. Arriba, aprieta dos segundos.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "pastilla": "1 · 3 × 15",
+    "titulo": "PUENTE DE GLÚTEO",
+    "titulo_size": 100,
+    "sub": "aprieta 2 s arriba",
+    "sub_sync": "aprieta",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "puente"
+   }
+  },
+  {
+   "texto": "Dos: sentadilla. Tres series de doce. Baja lento, contando hasta tres.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "sentadilla",
+    "ritmo": 1.9,
+    "colchoneta": true,
+    "pastilla": "2 · 3 × 12",
+    "titulo": "SENTADILLA",
+    "sub": "baja en 3 segundos",
+    "sub_sync": "lento",
+    "brillo": [
+     "gluteos",
+     "piernas"
+    ],
+    "brillo_sync": "sentadilla"
+   }
+  },
+  {
+   "texto": "Tres: zancada. Tres series de diez con cada pierna. La rodilla de atrás casi toca el piso.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "zancada",
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "pastilla": "3 · 3 × 10 POR PIERNA",
+    "titulo": "ZANCADA",
+    "sub": "rodilla de atrás casi al piso",
+    "sub_sync": "rodilla",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "zancada"
+   }
+  },
+  {
+   "texto": "Cuatro: subir un escalón, en una escalera o una silla firme. Tres series de diez por pierna. Empuja con el talón.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "escalon",
+    "ritmo": 1.7,
+    "pastilla": "4 · 3 × 10 POR PIERNA",
+    "titulo": "SUBIR ESCALÓN",
+    "sub": "empuja con el talón",
+    "sub_sync": "talón",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "escalón"
+   }
+  },
+  {
+   "texto": "Entre series, descansa un minuto. Toda la rutina te toma unos quince minutos.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "cansado",
+    "cara": "feliz",
+    "titulo": "DESCANSO",
+    "sub": "~15 min en total",
+    "sub_sync": "quince",
+    "cronometro": {
+     "hasta": 60,
+     "dur": 2.5,
+     "x": 860,
+     "y": 740,
+     "sub": "entre series",
+     "sync": "descansa"
+    }
+   }
+  },
+  {
+   "texto": "Hazla dos o tres veces por semana. La Organización Mundial de la Salud recomienda fortalecer los músculos al menos dos días por semana.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "pastilla": "FRECUENCIA",
+    "titulo": "2–3 VECES POR SEMANA",
+    "titulo_size": 92,
+    "sub": "la OMS: mínimo 2 días",
+    "sub_sync": "organización"
+   }
+  },
+  {
+   "texto": "Y el truco: cuando te sobren repeticiones, súbele. Más lento, una pausa arriba, o una mochila con peso. Si es fácil, no crece.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 2.0,
+    "colchoneta": true,
+    "pastilla": "EL TRUCO",
+    "titulo": "SÚBELE",
+    "sub": "lento · pausa · mochila",
+    "sub_sync": "lento",
+    "sello": {
+     "texto": "CLAVE",
+     "sync": "crece",
+     "x": 800,
+     "y": 790
+    }
+   }
+  },
+  {
+   "texto": "Guárdala, y cuando la hagas, escribe HECHO en los comentarios.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿LA HACES HOY?",
+    "boton": "GUÁRDALA",
+    "boton_sync": "guárdala"
+   }
+  }
+ ]
+}

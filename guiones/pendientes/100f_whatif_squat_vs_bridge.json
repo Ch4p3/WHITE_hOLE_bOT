@@ -1,0 +1,131 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "af_heart",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "serie": "What if…?",
+ "titulo": "Squats or glute bridges: which one grows your glutes more? 🍑",
+ "descripcion": "A 2023 study used MRI to measure glutes after 9 weeks of training with one or the other. Which one do you prefer? 👇",
+ "hashtags": "#glutes #squats #hipthrust #fitness #workout #whatif #shorts",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/37877099/"
+ ],
+ "escenas": [
+  {
+   "texto": "Squats or glute bridges? Which one grows your glutes more?",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "sentadilla",
+    "ritmo": 1.2,
+    "colchoneta": true,
+    "titulo": "SQUATS…",
+    "sub": "…or bridges?",
+    "sub_sync": "bridges"
+   }
+  },
+  {
+   "texto": "With sensors on the muscle, the bridge wins: your glutes fire harder.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.3,
+    "colchoneta": true,
+    "titulo": "BRIDGES FIRE MORE",
+    "titulo_size": 92,
+    "sub": "measured with sensors",
+    "sub_sync": "sensors",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "fire"
+   }
+  },
+  {
+   "texto": "But in a 2023 study, one group trained nine weeks with squats, and another with hip thrusts.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "pensando",
+    "titulo": "2023 STUDY",
+    "sub": "9 weeks: one vs. the other",
+    "sub_sync": "nine",
+    "accesorio": {
+     "emoji": "🔬",
+     "sync": "study",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    }
+   }
+  },
+  {
+   "texto": "They measured the glutes with an MRI, and they grew about the same with both.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.4,
+    "colchoneta": true,
+    "titulo": "THE RESULT",
+    "sello": {
+     "texto": "TIE",
+     "sync": "same",
+     "color": "blue",
+     "x": 540,
+     "y": 640
+    },
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "grew"
+   }
+  },
+  {
+   "texto": "The difference: squats also grew the thighs more.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "sentadilla",
+    "ritmo": 1.3,
+    "colchoneta": true,
+    "pastilla": "BONUS",
+    "titulo": "BIGGER LEGS",
+    "sub": "with squats",
+    "sub_sync": "squats",
+    "brillo": [
+     "piernas"
+    ],
+    "brillo_sync": "thighs"
+   }
+  },
+  {
+   "texto": "Bottom line: do the one you enjoy, and stay consistent. That's the real secret.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "titulo": "PICK YOUR FAVORITE",
+    "titulo_size": 96,
+    "sub": "consistency wins",
+    "sub_sync": "consistent"
+   }
+  },
+  {
+   "texto": "Which one do you prefer? Tell me in the comments.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "WHICH ONE?",
+    "boton": "COMMENT",
+    "boton_sync": "tell"
+   }
+  }
+ ]
+}

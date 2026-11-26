@@ -1,0 +1,141 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "¿Qué pasa si…?",
+ "titulo": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑",
+ "descripcion": "Una revisión de 16 estudios midió cuánto se activa el glúteo en cada ejercicio. El primer lugar te va a sorprender. Guárdalo para tu rutina 👇",
+ "hashtags": "#gluteos #cola #ejercicio #fitness #rutina #quepasasi #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/32132843/"
+ ],
+ "escenas": [
+  {
+   "texto": "El ejercicio que más activa tu cola no es la sentadilla.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "sentadilla",
+    "ritmo": 1.3,
+    "colchoneta": true,
+    "titulo": "¿LA SENTADILLA?",
+    "sello": {
+     "texto": "NO",
+     "sync": "no",
+     "x": 820,
+     "y": 640
+    }
+   }
+  },
+  {
+   "texto": "Una revisión de dieciséis estudios midió cuánto trabaja el glúteo en cada ejercicio.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "pensando",
+    "titulo": "16 ESTUDIOS",
+    "sub": "¿cuál activa más el glúteo?",
+    "sub_sync": "glúteo",
+    "accesorio": {
+     "emoji": "🔬",
+     "sync": "midió",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    }
+   }
+  },
+  {
+   "texto": "Y el primer lugar fue... subir un escalón.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "escalon",
+    "ritmo": 1.5,
+    "pastilla": "#1",
+    "titulo": "SUBIR ESCALÓN",
+    "titulo_sync": "subir",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "escalón"
+   }
+  },
+  {
+   "texto": "Subes con una pierna, empujando con el talón, y bajas lento.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "escalon",
+    "ritmo": 1.9,
+    "titulo": "ASÍ SE HACE",
+    "sub": "empuja con el talón",
+    "sub_sync": "talón",
+    "brillo": [
+     "gluteos",
+     "piernas"
+    ],
+    "brillo_sync": "empujando"
+   }
+  },
+  {
+   "texto": "Muy cerca quedaron el puente de glúteo,",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.2,
+    "colchoneta": true,
+    "pastilla": "TAMBIÉN",
+    "titulo": "PUENTE DE GLÚTEO",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "puente"
+   }
+  },
+  {
+   "texto": "y la zancada.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "zancada",
+    "ritmo": 1.2,
+    "colchoneta": true,
+    "pastilla": "TAMBIÉN",
+    "titulo": "ZANCADA",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "zancada"
+   }
+  },
+  {
+   "texto": "Combina dos o tres, súbeles la dificultad poco a poco, y tu cola lo va a notar.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "titulo": "COMBÍNALOS",
+    "sub": "y súbele poco a poco",
+    "sub_sync": "poco"
+   }
+  },
+  {
+   "texto": "Guárdalo para tu rutina. ¿Cuál vas a probar primero?",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿CUÁL PRUEBAS?",
+    "boton": "GUÁRDALO",
+    "boton_sync": "guárdalo"
+   }
+  }
+ ]
+}

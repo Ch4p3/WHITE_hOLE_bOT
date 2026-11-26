@@ -1,0 +1,137 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "af_heart",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "serie": "What if…?",
+ "titulo": "What happens if you do 50 glute bridges a day for a month? 🍑",
+ "descripcion": "Week by week: why it burns, why it suddenly feels easier, and the trap that makes your glutes stop growing. Up for it? Comment CHALLENGE 👇",
+ "hashtags": "#glutes #glutebridge #challenge #fitness #workout #whatif #shorts",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/28834797/"
+ ],
+ "escenas": [
+  {
+   "texto": "What happens if you do fifty glute bridges every day for a month?",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 0.9,
+    "colchoneta": true,
+    "titulo": "50 A DAY",
+    "sub": "for a month",
+    "sub_sync": "month",
+    "contador": {
+     "hasta": 50,
+     "x": 540,
+     "y": 800
+    }
+   }
+  },
+  {
+   "texto": "Week one: it burns, and the next day it's sore. Normal: sitting all day, you barely use that muscle.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.1,
+    "colchoneta": true,
+    "cara": "dolor",
+    "sudor": true,
+    "pastilla": "WEEK 1",
+    "titulo": "IT BURNS",
+    "titulo_color": "warm",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "burns"
+   }
+  },
+  {
+   "texto": "Week two: it feels easier. But your muscle didn't grow yet: your brain learned to activate it better.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "pensando",
+    "pastilla": "WEEK 2",
+    "titulo": "FEELS EASIER",
+    "sub": "your brain learned",
+    "sub_sync": "brain",
+    "accesorio": {
+     "emoji": "🧠",
+     "sync": "brain",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    }
+   }
+  },
+  {
+   "texto": "And here's the trap: muscle grows when you get close to failure. If fifty is easy, it stops growing.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.0,
+    "colchoneta": true,
+    "cara": "feliz",
+    "titulo": "THE TRAP",
+    "sub": "too easy = no growth",
+    "sub_sync": "easy",
+    "sello": {
+     "texto": "WAIT",
+     "sync": "trap",
+     "x": 800,
+     "y": 790
+    }
+   }
+  },
+  {
+   "texto": "So make it harder: one leg, a pause at the top, or a backpack with weight.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.8,
+    "colchoneta": true,
+    "pastilla": "WEEKS 3 & 4",
+    "titulo": "MAKE IT HARDER",
+    "titulo_size": 100,
+    "sub": "1 leg · pause · backpack",
+    "sub_sync": "leg",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "harder"
+   }
+  },
+  {
+   "texto": "After a month: more strength and better activation. What you see in the mirror takes months of consistency.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "pastilla": "AFTER A MONTH",
+    "titulo": "STRONGER",
+    "sub": "visible change: months",
+    "sub_sync": "mirror"
+   }
+  },
+  {
+   "texto": "Up for the challenge? Comment CHALLENGE and save this video.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "UP FOR IT?",
+    "boton": "SAVE IT",
+    "boton_sync": "save"
+   }
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "¿Qué pasa si…?",
+ "titulo": "¿Qué pasa si haces 50 puentes de glúteo al día durante un mes? 🍑",
+ "descripcion": "Semana a semana: por qué arde, por qué de repente te cuesta menos, y la trampa que hace que el glúteo deje de crecer. ¿Te le mides? Escribe RETO 👇",
+ "hashtags": "#gluteos #puentedegluteo #reto #fitness #ejercicio #quepasasi #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/28834797/"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Qué pasa si haces cincuenta puentes de glúteo todos los días durante un mes?",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 0.9,
+    "colchoneta": true,
+    "titulo": "50 AL DÍA",
+    "sub": "durante un mes",
+    "sub_sync": "mes",
+    "contador": {
+     "hasta": 50,
+     "x": 540,
+     "y": 800
+    }
+   }
+  },
+  {
+   "texto": "Semana uno: te arde, y al otro día te duele. Normal: sentado casi no usas ese músculo.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.1,
+    "colchoneta": true,
+    "cara": "dolor",
+    "sudor": true,
+    "pastilla": "SEMANA 1",
+    "titulo": "ARDE",
+    "titulo_color": "warm",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "arde"
+   }
+  },
+  {
+   "texto": "Semana dos: ya te cuesta menos. Pero no es que el músculo creció: tu cerebro aprendió a activarlo mejor.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "pensando",
+    "pastilla": "SEMANA 2",
+    "titulo": "TE CUESTA MENOS",
+    "sub": "tu cerebro aprendió",
+    "sub_sync": "cerebro",
+    "accesorio": {
+     "emoji": "🧠",
+     "sync": "cerebro",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    }
+   }
+  },
+  {
+   "texto": "Y aquí está la trampa: el músculo crece cuando llegas cerca de no poder más. Si cincuenta ya es fácil, deja de crecer.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.0,
+    "colchoneta": true,
+    "cara": "feliz",
+    "titulo": "LA TRAMPA",
+    "sub": "si es fácil, no crece",
+    "sub_sync": "fácil",
+    "sello": {
+     "texto": "OJO",
+     "sync": "trampa",
+     "x": 800,
+     "y": 790
+    }
+   }
+  },
+  {
+   "texto": "Así que hazlo más difícil: a una pierna, con pausa arriba, o con una mochila con peso.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.8,
+    "colchoneta": true,
+    "pastilla": "SEMANA 3 Y 4",
+    "titulo": "MÁS DIFÍCIL",
+    "sub": "1 pierna · pausa · mochila",
+    "sub_sync": "pierna",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "difícil"
+   }
+  },
+  {
+   "texto": "Al mes: más fuerza y mejor activación. Lo que se ve en el espejo llega con meses de constancia.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "pastilla": "AL MES",
+    "titulo": "MÁS FUERZA",
+    "sub": "lo visible: en meses",
+    "sub_sync": "espejo"
+   }
+  },
+  {
+   "texto": "¿Te le mides al reto? Escribe RETO y guarda el video.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿TE LE MIDES?",
+    "boton": "ESCRIBE RETO",
+    "boton_sync": "escribe"
+   }
+  }
+ ]
+}

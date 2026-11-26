@@ -19,7 +19,8 @@ import math
 from PIL import Image, ImageDraw, ImageFilter
 
 SS = 2                       # supermuestreo para bordes suaves
-LADO = ("flexion", "abdominal", "sentadilla", "puente", "caminar", "plancha")
+LADO = ("flexion", "abdominal", "sentadilla", "puente", "caminar", "plancha", "escalon", "zancada")
+BOX = ((255, 176, 72), (214, 132, 40))   # cajón del step-up (cara, sombra)
 HAIR = (78, 50, 44)
 SKINS = {"monito": ((88, 166, 255), (58, 120, 205), (34, 48, 92)),
          "monita": ((255, 122, 164), (220, 86, 132), (70, 40, 92))}
@@ -113,6 +114,47 @@ def pose(kind, t, p):
         knee = c1 if c1[1] < c2[1] else c2
         P.update(S=S, hip=hip, knee=knee, foot=A, E=(-105, -24), hand=(-30, -16),
                  head=(-262, -78), cara_dx=(6, -14), baja=k, reps=t / per)
+        return P
+
+    if kind == "escalon":
+        # subir al cajón: k=0 abajo (pie de atrás en el suelo), k=1 arriba (pierna de adelante estirada, rodilla arriba)
+        k = _osc(t, per)
+        ke = k * k * (3 - 2 * k)
+        BH = float(p.get("cajon", 120))
+        A = (150, -BH - 34)                                # tobillo de adelante, sobre el cajón
+        hip = _lerp((28, -300), (128, -BH - 300), ke)
+        c1, c2 = _ik(hip, A, 150, 150, 1), _ik(hip, A, 150, 150, -1)
+        knee = c1 if c1[0] > c2[0] else c2
+        kb = max(0.0, (ke - 0.35) / 0.65)
+        A2 = _lerp((-70, -34), (hip[0] + 60, hip[1] + 215), kb)
+        c1, c2 = _ik(hip, A2, 150, 150, 1), _ik(hip, A2, 150, 150, -1)
+        knee2 = c1 if c1[0] > c2[0] else c2
+        th = math.radians(16 - 12 * ke)
+        d = (math.sin(th), -math.cos(th))
+        S = _add(hip, d, 205)
+        sw = math.radians(-30 + 60 * ke)                   # brazos alternados
+        hand = _add(S, (math.sin(sw), math.cos(sw)), 175)
+        hand2 = _add(S, (math.sin(-sw), math.cos(-sw)), 170)
+        P.update(S=S, hip=hip, knee=knee, foot=A, knee2=knee2, foot2=A2, hand=hand, E=_add(_lerp(S, hand, 0.5), (4, 4)),
+                 hand2=hand2, E2=_add(_lerp(S, hand2, 0.5), (4, 4)), cajon=BH,
+                 head=_add(_add(S, d, 80), (14, 0)), cara_dx=(30, 0), baja=1 - ke, reps=t / per)
+        return P
+    if kind == "zancada":
+        k = _osc(t, per)
+        ke = k * k * (3 - 2 * k)
+        A, T = (165, -34), (-178, -22)                     # pie de adelante / punta del pie de atrás
+        hip = _lerp((-6, -278), (-14, -168), ke)
+        c1, c2 = _ik(hip, A, 150, 150, 1), _ik(hip, A, 150, 150, -1)
+        knee = c1 if c1[0] > c2[0] else c2
+        c1, c2 = _ik(hip, T, 150, 150, 1), _ik(hip, T, 150, 150, -1)
+        knee2 = c1 if c1[1] > c2[1] else c2               # rodilla de atrás apunta al suelo
+        th = math.radians(5)
+        d = (math.sin(th), -math.cos(th))
+        S = _add(hip, d, 205)
+        E = _add(S, (-0.35, 0.94), 110)                    # manos en la cintura
+        hand = _add(hip, (22, -48))
+        P.update(S=S, hip=hip, knee=knee, foot=A, knee2=knee2, foot2=T, hand=hand, E=E,
+                 head=_add(_add(S, d, 80), (14, 0)), cara_dx=(30, 0), baja=ke, reps=t / per)
         return P
 
     if kind == "flexion":
@@ -354,6 +396,30 @@ def _draw_side(pen, P, kind, cara, t):
         _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
         pen.dot(P["S"], 30, SHIRT)
         pen.dot(P["hand"], 22 + 5, LINE); pen.dot(P["hand"], 22, BODY)
+    elif kind in ("escalon", "zancada"):
+        if kind == "escalon":
+            BH = P["cajon"]
+            a, b = pen.P((40, -BH)), pen.P((290, 0))
+            pen.d.rounded_rectangle([a[0] - pen.W(5), a[1] - pen.W(5), b[0] + pen.W(5), b[1]], radius=pen.W(12), fill=LINE)
+            pen.d.rounded_rectangle([a[0], a[1], b[0], b[1]], radius=pen.W(9), fill=BOX[1])
+            a2, b2 = pen.P((40, -BH)), pen.P((290, -BH + 26))
+            pen.d.rounded_rectangle([a2[0], a2[1], b2[0], b2[1]], radius=pen.W(9), fill=BOX[0])
+            _limb(pen, [_add(P["S"], (14, -4)), _add(P["E2"], (14, -4)), _add(P["hand2"], (14, -4))], 38, FAR)
+        # pierna de atrás (fondo)
+        _limb(pen, [P["hip"], P["knee2"], P["foot2"]], 46, FAR)
+        _shoe(pen, P["foot2"], 1)
+        _limb(pen, [P["hip"], P["knee"], P["foot"]], 50, BODY)
+        _shoe(pen, P["foot"], 1)
+        g = _add(P["hip"], (-22, 4))
+        pen.ell(g, 64 + 6, 56 + 6, LINE); pen.ell(g, 64, 56, SHORTS)
+        pen.seg(P["hip"], _lerp(P["hip"], P["knee"], 0.3), 96 + 11, LINE)
+        pen.seg(P["hip"], _lerp(P["hip"], P["knee"], 0.3), 96, SHORTS)
+        pen.ell(g, 60, 52, SHORTS)
+        pen.seg(P["S"], P["hip"], 108 + 11, LINE); pen.seg(P["S"], P["hip"], 108, SHIRT)
+        _head(pen, P["head"], cara, t, P["cara_dx"], side=True)
+        _limb(pen, [P["S"], P["E"], P["hand"]], 40, BODY)
+        pen.dot(P["S"], 30, SHIRT)
+        pen.dot(P["hand"], 22 + 5, LINE); pen.dot(P["hand"], 22, BODY)
     elif kind == "puente":
         off = (14, -6)
         _limb(pen, [_add(P["hip"], off), _add(P["knee"], off), _add(P["foot"], off)], 46, FAR)
@@ -429,11 +495,13 @@ def v_monito(img, d, t, sc, p, M):
     kind = p.get("pose", "parado")
     lado = kind in LADO
     _set_personaje(p.get("personaje", "monito"))
-    s = float(p.get("escala", {"sentadilla": 1.0, "puente": 1.15, "caminar": 1.0}.get(kind, 1.25 if lado else 1.0)))
+    s = float(p.get("escala", {"sentadilla": 1.0, "puente": 1.15, "caminar": 1.0, "escalon": 0.92,
+                               "zancada": 1.0}.get(kind, 1.25 if lado else 1.0)))
     top = int(p.get("y_lienzo", 440))                     # dónde empieza el lienzo en la pantalla
     gy = int(p.get("suelo", 1290 if lado and kind != "caminar" else 1350)) - top                 # suelo dentro del lienzo
     cx = CW // 2 + int(p.get("dx", 0)) - int({"flexion": 70, "abdominal": 60, "sentadilla": -20, "puente": 0,
-                                               "caminar": 0, "plancha": 70}.get(kind, 0) * s)
+                                               "caminar": 0, "plancha": 70, "escalon": 60,
+                                               "zancada": 0}.get(kind, 0) * s)
     t_anim = t + float(p.get("desfase", 0))
     st_anim = M.at(sc, p.get("anim_sync"), 0.0)
     ta = max(0.0, t_anim - st_anim) if kind in LADO else t_anim

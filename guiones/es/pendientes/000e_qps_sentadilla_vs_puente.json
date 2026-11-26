@@ -1,0 +1,131 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "¿Qué pasa si…?",
+ "titulo": "¿Sentadilla o puente de glúteo: cuál da más cola? 🍑",
+ "descripcion": "Un estudio de 2023 midió el glúteo con resonancia magnética después de 9 semanas de entrenar con uno o con el otro. ¿Tú cuál prefieres? 👇",
+ "hashtags": "#gluteos #sentadillas #hipthrust #fitness #ejercicio #quepasasi #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/37877099/"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Sentadilla o puente de glúteo? ¿Cuál te da más cola?",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "sentadilla",
+    "ritmo": 1.2,
+    "colchoneta": true,
+    "titulo": "¿SENTADILLA…",
+    "sub": "…o puente?",
+    "sub_sync": "puente"
+   }
+  },
+  {
+   "texto": "Con sensores en el músculo, el puente gana: el glúteo se activa más.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.3,
+    "colchoneta": true,
+    "titulo": "EL PUENTE ACTIVA MÁS",
+    "titulo_size": 90,
+    "sub": "medido con sensores",
+    "sub_sync": "sensores",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "activa"
+   }
+  },
+  {
+   "texto": "Pero en un estudio de 2023, un grupo entrenó nueve semanas con sentadilla, y otro, con puente.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "pensando",
+    "titulo": "ESTUDIO 2023",
+    "sub": "9 semanas: uno vs. el otro",
+    "sub_sync": "nueve",
+    "accesorio": {
+     "emoji": "🔬",
+     "sync": "estudio",
+     "dx": 190,
+     "dy": -40,
+     "size": 130
+    }
+   }
+  },
+  {
+   "texto": "Midieron el glúteo con resonancia magnética, y creció casi igual con los dos.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.4,
+    "colchoneta": true,
+    "titulo": "RESULTADO",
+    "sello": {
+     "texto": "EMPATE",
+     "sync": "igual",
+     "color": "blue",
+     "x": 540,
+     "y": 640
+    },
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "creció"
+   }
+  },
+  {
+   "texto": "La diferencia: la sentadilla, además, hizo crecer más los muslos.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "sentadilla",
+    "ritmo": 1.3,
+    "colchoneta": true,
+    "pastilla": "BONUS",
+    "titulo": "MÁS PIERNA",
+    "sub": "con la sentadilla",
+    "sub_sync": "sentadilla",
+    "brillo": [
+     "piernas"
+    ],
+    "brillo_sync": "muslos"
+   }
+  },
+  {
+   "texto": "Conclusión: haz el que más te guste, y sé constante. Esa es la clave.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "titulo": "EL QUE TE GUSTE",
+    "sub": "la clave es la constancia",
+    "sub_sync": "constante"
+   }
+  },
+  {
+   "texto": "¿Tú cuál prefieres? Escríbelo en los comentarios.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿CUÁL PREFIERES?",
+    "titulo_size": 100,
+    "boton": "COMENTA",
+    "boton_sync": "escríbelo"
+   }
+  }
+ ]
+}

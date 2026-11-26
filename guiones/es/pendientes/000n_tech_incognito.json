@@ -1,0 +1,134 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Tecnología",
+ "titulo": "El modo incógnito no es tan privado como crees 🕵️",
+ "descripcion": "El modo incógnito solo evita que tu navegador guarde el historial, las cookies y los formularios en tu dispositivo. Los sitios que visitas, tu proveedor de internet y el dueño del wifi (colegio, trabajo) todavía pueden ver tu tráfico. Así lo explica la propia ayuda de Chrome. Guárdalo 👇",
+ "hashtags": "#tecnologia #privacidad #incognito #internet #trucos #WhiteHole #reels",
+ "fuentes": [
+  "https://support.google.com/chrome/answer/9845881",
+  "https://en.wikipedia.org/wiki/Private_browsing"
+ ],
+ "escenas": [
+  {
+   "texto": "Abres una ventana de incógnito y te sientes invisible. No lo eres. Y te lo dice el mismo Google.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "modo incógnito",
+    "word": "NO ERES INVISIBLE",
+    "size": 130,
+    "sync": "no",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "El incógnito hace una sola cosa: tu navegador no guarda el historial, las cookies ni los formularios cuando lo cierras.",
+   "visual": {
+    "tipo": "card",
+    "title": "INCÓGNITO",
+    "tag": "LO QUE HACE",
+    "panel": {
+     "label": "Lo oculta de",
+     "value": "quien usa tu dispositivo",
+     "progress": 0.25,
+     "color": "blue",
+     "sync": "historial",
+     "value_sync": "cookies"
+    }
+   }
+  },
+  {
+   "texto": "Pero las páginas que visitas te siguen viendo. Tu proveedor de internet ve a dónde entras. Y el dueño del wifi, como tu colegio o tu trabajo, también puede.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Las páginas que visitas",
+      "value": 100,
+      "value_text": "te ven",
+      "color": "warm",
+      "sync": "páginas"
+     },
+     {
+      "label": "Tu proveedor de internet",
+      "value": 100,
+      "value_text": "te ve",
+      "color": "warm",
+      "sync": "proveedor"
+     },
+     {
+      "label": "El dueño del wifi",
+      "value": 100,
+      "value_text": "puede ver",
+      "color": "warm",
+      "sync": "dueño"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y si inicias sesión en una cuenta, esa página sabe exactamente quién eres.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "si inicias sesión",
+    "word": "ERES TÚ",
+    "size": 220,
+    "sync": "sesión",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Lo que te llevas: el incógnito sirve para que no quede rastro en tu celular o computador. No para esconderte de internet.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "ÚSALO PARA",
+    "items": [
+     {
+      "texto": "Usar un PC prestado",
+      "emoji": "💻",
+      "sync": "rastro",
+      "color": "green"
+     },
+     {
+      "texto": "No dejar historial en casa",
+      "emoji": "🏠",
+      "sync": "celular",
+      "color": "green"
+     },
+     {
+      "texto": "Esconderte de internet ✗",
+      "emoji": "🌐",
+      "sync": "esconderte",
+      "color": "warm"
+     }
+    ],
+    "boton": "GUÁRDALO",
+    "boton_sync": "guárdalo"
+   }
+  },
+  {
+   "texto": "Privado para tu familia, no para internet. Comparte esto con quien cree que el incógnito lo protege de todo.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PRIVADO",
+     "PARA TU FAMILIA.",
+     "NO PARA INTERNET."
+    ],
+    "syncs": [
+     null,
+     "familia",
+     "internet"
+    ],
+    "button": "COMPÁRTELO",
+    "button_sync": "comparte"
+   }
+  }
+ ]
+}

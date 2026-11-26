@@ -1,0 +1,168 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Rutinas",
+ "titulo": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥",
+ "descripcion": "3 ejercicios, 3 series, unos 10 minutos. Ojo: en un estudio (Vispute y colegas, 2011), 6 semanas de solo abdominales no bajaron la grasa de la barriga, pero sí dieron más resistencia. La grasa baja con actividad diaria y alimentación; el abdomen fuerte se construye con esto. Guárdala 👇",
+ "hashtags": "#abdomen #rutina #ejercicioencasa #core #fitness #WhiteHole #reels",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/21804427/",
+  "https://www.who.int/initiatives/behealthy/physical-activity"
+ ],
+ "escenas": [
+  {
+   "texto": "Cuatro mil abdominales en seis semanas, y la barriga no bajó ni un centímetro. Ahora te explico por qué, y la rutina que sí sirve.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "abdominal",
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "pastilla": "RUTINA",
+    "titulo": "ABDOMEN EN CASA",
+    "sub": "+ la verdad sobre la barriga",
+    "sub_sync": "barriga",
+    "brillo": [
+     "abdomen"
+    ],
+    "brillo_sync": "abdominales"
+   }
+  },
+  {
+   "texto": "En un estudio de dos mil once, un grupo hizo abdominales cinco días por semana. La grasa de la barriga no cambió. Pero sí ganaron fuerza.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "GRASA DE LA BARRIGA",
+     "value": "igual",
+     "color": "warm",
+     "sync": "grasa"
+    },
+    "right": {
+     "label": "FUERZA DEL ABDOMEN",
+     "value": "más",
+     "color": "green",
+     "sync": "fuerza"
+    }
+   }
+  },
+  {
+   "texto": "Porque no puedes quemar grasa solo de un lugar. Baja de todo el cuerpo, con actividad diaria y comida. El abdomen fuerte se construye así:",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "no existe",
+    "word": "QUEMAR SOLO AHÍ",
+    "size": 140,
+    "sync": "quemar",
+    "sub": "la grasa baja de todo el cuerpo",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Uno: abdominal corto. Tres series de quince. Sube los hombros, no jales el cuello.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "abdominal",
+    "ritmo": 1.8,
+    "colchoneta": true,
+    "pastilla": "1 · 3 × 15",
+    "titulo": "ABDOMINAL CORTO",
+    "titulo_size": 104,
+    "sub": "no jales el cuello",
+    "sub_sync": "hombros",
+    "brillo": [
+     "abdomen"
+    ],
+    "brillo_sync": "abdominal"
+   }
+  },
+  {
+   "texto": "Dos: plancha. Tres series de treinta segundos. Cuerpo recto, aprieta la barriga y los glúteos.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "plancha",
+    "colchoneta": true,
+    "pastilla": "2 · 3 × 30 s",
+    "titulo": "PLANCHA",
+    "sub": "cuerpo recto como tabla",
+    "sub_sync": "recto",
+    "brillo": [
+     "abdomen"
+    ],
+    "brillo_sync": "plancha",
+    "cronometro": {
+     "hasta": 30,
+     "dur": 3.0,
+     "x": 880,
+     "y": 830,
+     "sub": "segundos",
+     "sync": "treinta"
+    }
+   }
+  },
+  {
+   "texto": "Tres: puente de glúteo. Tres series de quince. Protege tu espalda baja y completa el core.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "pastilla": "3 · 3 × 15",
+    "titulo": "PUENTE",
+    "sub": "protege tu espalda baja",
+    "sub_sync": "espalda",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "puente"
+   }
+  },
+  {
+   "texto": "Lo que te llevas: abdominales para la fuerza, caminar y comer bien para la grasa. Hazla tres veces por semana. Guárdala.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "ABDOMEN DE VERDAD",
+    "items": [
+     {
+      "texto": "Rutina 3 veces por semana",
+      "emoji": "💪",
+      "sync": "fuerza"
+     },
+     {
+      "texto": "Caminar todos los días",
+      "emoji": "🚶",
+      "sync": "caminar"
+     },
+     {
+      "texto": "Comer bien baja la grasa",
+      "emoji": "🥗",
+      "sync": "comer"
+     }
+    ],
+    "boton": "GUÁRDALA",
+    "boton_sync": "guárdala"
+   }
+  },
+  {
+   "texto": "¿Te la sabías o creías que con abdominales bajaba la barriga? Escribe SABÍA o NO SABÍA.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "pensando",
+    "escala": 0.9,
+    "titulo": "¿TE LA SABÍAS?",
+    "boton": "COMENTA",
+    "boton_sync": "escribe"
+   }
+  }
+ ]
+}

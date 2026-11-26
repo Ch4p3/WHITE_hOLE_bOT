@@ -1,0 +1,146 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "¿Qué pasa si…?",
+ "titulo": "No necesitas 10.000 pasos: la ciencia dice 7.000 👟",
+ "descripcion": "Un metaanálisis de 57 estudios (Ding y colegas, The Lancet Public Health, 2025) comparó 2.000 pasos al día con más: con 7.000, el riesgo de muerte prematura fue 47% menor, casi igual que con 10.000. Hasta 4.000 pasos ya traen beneficios. Es una asociación, no prueba causa y efecto. Guárdalo 👇",
+ "hashtags": "#pasos #caminar #salud #ciencia #habitos #WhiteHole #reels",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/40713949/",
+  "https://www.sydney.edu.au/news-opinion/news/2025/07/24/rethink-the-10000-a-day-step-goal-study-suggests.html"
+ ],
+ "escenas": [
+  {
+   "texto": "Los diez mil pasos al día no salieron de la ciencia. Y un estudio enorme dice que con siete mil ya ganas casi todo.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EL MITO",
+     "value": "10.000",
+     "color": "warm"
+    },
+    "right": {
+     "label": "LA CIENCIA",
+     "value": "7.000",
+     "color": "green",
+     "sync": "siete"
+    }
+   }
+  },
+  {
+   "texto": "Investigadores de la Universidad de Sídney juntaron cincuenta y siete estudios, con más de ciento sesenta mil adultos.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "estudios revisados",
+    "to": 57,
+    "label": "+160.000 adultos",
+    "note": "The Lancet Public Health, 2025",
+    "note_sync": "ciento",
+    "sync": "cincuenta",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Comparado con caminar dos mil pasos al día, caminar siete mil se asoció con un cuarenta y siete por ciento menos de riesgo de morir antes de tiempo.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "riesgo de muerte prematura",
+    "to": 47,
+    "prefix": "−",
+    "suffix": "%",
+    "label": "7.000 vs 2.000 pasos",
+    "sync": "cuarenta",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Y casi lo mismo que con diez mil. Para la demencia, siete mil pasos bajaron el riesgo treinta y ocho por ciento.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "7.000 pasos · muerte",
+      "value": 47,
+      "value_text": "−47%",
+      "color": "green",
+      "sync": "mismo"
+     },
+     {
+      "label": "10.000 pasos · muerte",
+      "value": 48,
+      "value_text": "casi igual",
+      "color": "blue",
+      "sync": "diez"
+     },
+     {
+      "label": "7.000 pasos · demencia",
+      "value": 38,
+      "value_text": "−38%",
+      "color": "green",
+      "sync": "demencia"
+     }
+    ],
+    "note": "vs. 2.000 pasos al día",
+    "note_sync": "treinta"
+   }
+  },
+  {
+   "texto": "La mejor parte: pasar de dos mil a cuatro mil ya trae beneficios. No tienes que llegar de un salto.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "caminar",
+    "ritmo": 1.4,
+    "pastilla": "EMPIEZA AQUÍ",
+    "titulo": "4.000 YA CUENTA",
+    "titulo_size": 110,
+    "sub": "sube de mil en mil",
+    "sub_sync": "salto"
+   }
+  },
+  {
+   "texto": "Lo que te llevas: mira cuántos pasos das hoy, súmale mil cada semana, y apunta a siete mil. Guárdalo.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "TU PLAN DE PASOS",
+    "items": [
+     {
+      "texto": "Mide tus pasos de hoy",
+      "emoji": "📱",
+      "sync": "mira"
+     },
+     {
+      "texto": "+1.000 cada semana",
+      "emoji": "📈",
+      "sync": "súmale"
+     },
+     {
+      "texto": "Meta: 7.000 al día",
+      "emoji": "🎯",
+      "sync": "apunta"
+     }
+    ],
+    "boton": "GUÁRDALO",
+    "boton_sync": "guárdalo"
+   }
+  },
+  {
+   "texto": "Ojo, es una asociación, no prueba causa y efecto, pero todo apunta al mismo lado: muévete. ¿Cuántos pasos llevas hoy? Cuéntame.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿CUÁNTOS LLEVAS?",
+    "boton": "CUÉNTAME",
+    "boton_sync": "cuéntame"
+   }
+  }
+ ]
+}

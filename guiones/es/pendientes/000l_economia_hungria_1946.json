@@ -1,0 +1,156 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Lecciones de historia",
+ "titulo": "El país donde los precios se duplicaban cada 15 horas 💸",
+ "descripcion": "Hungría, julio de 1946: la inflación mensual llegó a 41.900.000.000.000.000% (récord Guinness), los precios se duplicaban cada ~15 horas y se imprimió un billete de 100 trillones de pengős, la denominación más alta de la historia. El 1 de agosto de 1946 lo reemplazó el forint. Contenido educativo, no es asesoría financiera. 👇",
+ "hashtags": "#historia #economia #inflacion #dinero #hungria #WhiteHole #reels",
+ "fuentes": [
+  "https://www.guinnessworldrecords.com/world-records/762605-highest-inflation-rate-ever",
+  "https://en.wikipedia.org/wiki/Hungarian_peng%C5%91"
+ ],
+ "escenas": [
+  {
+   "texto": "El pan cuesta mil en la mañana, dos mil en la noche, y cuatro mil al otro día. Esto pasó de verdad.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:HUP 100000B 1946 obverse.jpg",
+    "modo": "marco",
+    "zoom": [
+     1.0,
+     1.12
+    ],
+    "chip": "HUNGRÍA · 1946",
+    "chip_sync": "pan",
+    "titulo": "CADA 15 HORAS",
+    "titulo_sync": "noche",
+    "tsize": 110,
+    "ty": 1150,
+    "chip_y": 1250
+   }
+  },
+  {
+   "texto": "Hungría, julio de mil novecientos cuarenta y seis. Los precios se duplicaban cada quince horas. La peor inflación jamás registrada.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "los precios se duplicaban cada",
+    "to": 15,
+    "suffix": " h",
+    "label": "Hungría, julio de 1946",
+    "note": "récord Guinness",
+    "note_sync": "peor",
+    "sync": "quince",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Así se veía un billete normal de diez pengős antes de la guerra.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:10 Pengo.jpg",
+    "modo": "marco",
+    "zoom": [
+     1.0,
+     1.1
+    ],
+    "chip": "ANTES: 10 PENGŐS",
+    "chip_sync": "billete",
+    "chip_color": "blue",
+    "chip_y": 1150
+   }
+  },
+  {
+   "texto": "En mil novecientos cuarenta y seis imprimieron uno de cien trillones. Un uno con veinte ceros.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el billete más alto de la historia",
+    "word": "100.000.000.000.000.000.000",
+    "size": 72,
+    "sync": "cien",
+    "sub": "cien trillones de pengős",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "¿Por qué? El país quedó destruido por la guerra, y el gobierno imprimió dinero para pagar sus deudas en vez de frenarlo.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la causa",
+    "word": "IMPRIMIR DINERO",
+    "size": 150,
+    "sync": "imprimió",
+    "sub": "más billetes, mismos productos"
+   }
+  },
+  {
+   "texto": "Fue peor que la famosa Alemania de mil novecientos veintitrés, la de billetes de quinientos millones.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:GER-110-Reichsbanknote-500 Million Mark (1923).jpg",
+    "modo": "marco",
+    "zoom": [
+     1.0,
+     1.1
+    ],
+    "chip": "ALEMANIA · 1923",
+    "chip_sync": "alemania",
+    "chip_color": "blue",
+    "titulo": "Y HUNGRÍA FUE PEOR",
+    "titulo_sync": "quinientos",
+    "tsize": 90,
+    "ty": 1150,
+    "chip_y": 1250
+   }
+  },
+  {
+   "texto": "La lección: si se imprime dinero más rápido de lo que se produce, los precios suben. Y el efectivo guardado es el que más pierde.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "LA LECCIÓN",
+    "items": [
+     {
+      "texto": "Más billetes ≠ más riqueza",
+      "emoji": "🖨️",
+      "sync": "imprime"
+     },
+     {
+      "texto": "Sin más productos, suben precios",
+      "emoji": "📈",
+      "sync": "suben"
+     },
+     {
+      "texto": "El efectivo es el que más pierde",
+      "emoji": "💵",
+      "sync": "efectivo"
+     }
+    ],
+    "boton": "GUÁRDALO",
+    "boton_sync": "guárdalo"
+   }
+  },
+  {
+   "texto": "En agosto de ese año llegó una moneda nueva, el forint, que Hungría usa hasta hoy. ¿Cuánto ha subido el pan en tu país? Cuéntame.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "1946:",
+     "ADIÓS PENGŐ,",
+     "HOLA FORINT."
+    ],
+    "syncs": [
+     null,
+     "nueva",
+     "forint"
+    ],
+    "button": "¿Y EN TU PAÍS?",
+    "button_sync": "cuéntame"
+   }
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Rutinas",
+ "titulo": "Rutina de glúteos PARTE 2: cuando la primera ya es fácil 🍑🔥",
+ "descripcion": "El músculo crece cuando el esfuerzo sube con el tiempo (sobrecarga progresiva). Si ya haces la parte 1 sin problema: puente a una pierna, sentadilla lenta, zancada con pausa y escalón alto. 3 series, 2–3 veces por semana (la OMS recomienda fortalecer músculos al menos 2 días por semana). Guárdala 👇",
+ "hashtags": "#gluteos #rutina #ejercicioencasa #fitness #parte2 #WhiteHole #reels",
+ "fuentes": [
+  "https://www.who.int/initiatives/behealthy/physical-activity",
+  "https://pubmed.ncbi.nlm.nih.gov/28834797/"
+ ],
+ "escenas": [
+  {
+   "texto": "Parte dos. Si la rutina de glúteos ya te parece fácil, felicidades: ahora toca subirle, porque si es fácil, no crece.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 1.2,
+    "colchoneta": true,
+    "pastilla": "PARTE 2",
+    "titulo": "GLÚTEOS NIVEL 2",
+    "sub": "cuando la primera es fácil",
+    "sub_sync": "fácil",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "glúteos"
+   }
+  },
+  {
+   "texto": "Uno: puente con pausa. Tres series de doce. Arriba, aguanta tres segundos apretando fuerte.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "puente",
+    "ritmo": 2.4,
+    "colchoneta": true,
+    "pastilla": "1 · 3 × 12",
+    "titulo": "PUENTE + PAUSA 3 s",
+    "titulo_size": 96,
+    "sub": "aprieta fuerte arriba",
+    "sub_sync": "aguanta",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "puente"
+   }
+  },
+  {
+   "texto": "Dos: sentadilla lenta. Tres series de diez. Baja en cuatro segundos, abajo pausa uno, y sube fuerte.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "sentadilla",
+    "ritmo": 2.6,
+    "colchoneta": true,
+    "pastilla": "2 · 3 × 10",
+    "titulo": "SENTADILLA 4-1-1",
+    "titulo_size": 104,
+    "sub": "4 s bajando · 1 s pausa",
+    "sub_sync": "cuatro",
+    "brillo": [
+     "gluteos",
+     "piernas"
+    ],
+    "brillo_sync": "sentadilla"
+   }
+  },
+  {
+   "texto": "Tres: zancada con pausa. Tres series de diez por pierna. Abajo, aguanta dos segundos.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "zancada",
+    "ritmo": 2.0,
+    "colchoneta": true,
+    "pastilla": "3 · 3 × 10 POR PIERNA",
+    "titulo": "ZANCADA + PAUSA",
+    "titulo_size": 100,
+    "sub": "aguanta 2 s abajo",
+    "sub_sync": "aguanta",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "zancada"
+   }
+  },
+  {
+   "texto": "Cuatro: escalón alto. Tres series de diez por pierna. Mientras más alto, más glúteo. Siempre en algo firme.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "escalon",
+    "ritmo": 1.8,
+    "cajon": 150,
+    "pastilla": "4 · 3 × 10 POR PIERNA",
+    "titulo": "ESCALÓN ALTO",
+    "sub": "algo firme, nada que se mueva",
+    "sub_sync": "firme",
+    "brillo": [
+     "gluteos"
+    ],
+    "brillo_sync": "escalón"
+   }
+  },
+  {
+   "texto": "Lo que te llevas: para seguir creciendo, cambia una sola cosa cada semana. Más lento, más pausa, una pierna, o más peso.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "CÓMO SUBIRLE",
+    "items": [
+     {
+      "texto": "Más lento",
+      "emoji": "🐢",
+      "sync": "lento"
+     },
+     {
+      "texto": "Más pausa abajo",
+      "emoji": "⏸️",
+      "sync": "pausa"
+     },
+     {
+      "texto": "Una sola pierna",
+      "emoji": "🦵",
+      "sync": "pierna"
+     },
+     {
+      "texto": "Mochila con peso",
+      "emoji": "🎒",
+      "sync": "peso"
+     }
+    ],
+    "boton": "GUÁRDALA",
+    "boton_sync": "semana"
+   }
+  },
+  {
+   "texto": "Si no viste la parte uno, está en el perfil. Y cuando hagas esta, escribe NIVEL DOS.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "escala": 0.9,
+    "titulo": "¿NIVEL 2 DESBLOQUEADO?",
+    "titulo_size": 84,
+    "boton": "ESCRIBE NIVEL 2",
+    "boton_sync": "escribe"
+   }
+  }
+ ]
+}

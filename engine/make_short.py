@@ -29,7 +29,7 @@ WHITE  = (244, 246, 251)
 GREY   = (128, 138, 160)
 WARM   = (255, 138, 76)       # acento de contraste (alertas, "falta", etc.)
 PANEL  = (20, 26, 46)
-COLORS = {"blue": BLUE, "ice": ICE, "white": WHITE, "grey": GREY, "warm": WARM}
+COLORS = {"blue": BLUE, "ice": ICE, "white": WHITE, "grey": GREY, "warm": WARM, "green": (64, 214, 150)}
 
 FONT_DIR = os.path.join(ROOT, "assets", "fonts")
 FONTS = {"black": "Inter-Black.otf", "xbold": "Inter-ExtraBold.otf",
@@ -754,7 +754,7 @@ def v_lista(img, d, t, sc, p):
         k = back(prog(t, at(sc, p.get("boton_sync"), 1.6) - 0.1, 0.5))
         if k > 0:
             f = font(56, "black"); tw = d.textlength(p["boton"], font=f)
-            yb = y + 40
+            yb = y + 72
             d.rounded_rectangle([W / 2 - tw / 2 - 44, yb - 46, W / 2 + tw / 2 + 44, yb + 46], 46, fill=BLUE)
             text(d, (W / 2, yb), p["boton"], 56 * k, BG)
 

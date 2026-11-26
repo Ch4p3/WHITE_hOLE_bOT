@@ -1,0 +1,149 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "¿Qué pasa si…?",
+ "titulo": "¿Qué pasa si caminas 2 minutos después de comer? 🚶‍♀️",
+ "descripcion": "Un metaanálisis de 7 estudios (Buffey y colegas, Sports Medicine, 2022) encontró que caminar suave 2 a 5 minutos después de comer ayuda a moderar el pico de azúcar en sangre; quedarse de pie también ayuda, pero menos. No reemplaza tratamiento médico: si tienes diabetes, sigue las indicaciones de tu médico. Guárdalo 👇",
+ "hashtags": "#salud #caminar #glucosa #habitos #ciencia #WhiteHole #reels",
+ "fuentes": [
+  "https://link.springer.com/article/10.1007/s40279-022-01649-4",
+  "https://pubmed.ncbi.nlm.nih.gov/36715875/"
+ ],
+ "escenas": [
+  {
+   "texto": "Dos minutos. Eso es lo que necesitas caminar después de comer para que tu cuerpo lo note.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "caminar",
+    "ritmo": 1.2,
+    "pastilla": "¿QUÉ PASA SI…?",
+    "titulo": "2 MINUTOS",
+    "titulo_size": 130,
+    "sub": "caminando después de comer",
+    "sub_sync": "comer"
+   }
+  },
+  {
+   "texto": "Cuando comes, el azúcar en tu sangre sube. Ese pico es normal, pero mientras más alto y más seguido, peor para tu salud.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "después de comer",
+    "word": "PICO DE AZÚCAR",
+    "size": 150,
+    "sync": "sube",
+    "sub": "normal… pero mejor si es bajito",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Unos investigadores en Irlanda revisaron siete estudios. Quedarse sentado, quedarse de pie, o caminar suave.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Sentado",
+      "value": 100,
+      "value_text": "pico más alto",
+      "color": "warm",
+      "sync": "sentado"
+     },
+     {
+      "label": "De pie",
+      "value": 84,
+      "value_text": "ayuda un poco",
+      "color": "blue",
+      "sync": "pie"
+     },
+     {
+      "label": "Caminando suave",
+      "value": 70,
+      "value_text": "lo mejor",
+      "color": "green",
+      "sync": "caminar"
+     }
+    ],
+    "note": "Buffey y col., Sports Medicine 2022",
+    "note_sync": "siete"
+   }
+  },
+  {
+   "texto": "Caminar fue lo mejor. Con solo dos a cinco minutos, el azúcar subió menos. Y los músculos de tus piernas usan esa glucosa como combustible.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "caminar",
+    "ritmo": 1.6,
+    "pastilla": "EL RESULTADO",
+    "titulo": "2 A 5 MINUTOS",
+    "sub": "tus piernas usan la glucosa",
+    "sub_sync": "músculos",
+    "brillo": [
+     "piernas"
+    ],
+    "brillo_sync": "piernas"
+   }
+  },
+  {
+   "texto": "El mejor momento es antes del pico, que suele llegar entre sesenta y noventa minutos después de comer. O sea: apenas termines.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el pico suele llegar a los",
+    "word": "60–90 MIN",
+    "size": 190,
+    "sync": "sesenta",
+    "sub": "camina antes: apenas termines",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Lo que te llevas: termina de comer, camina dos a cinco minutos, y si no puedes salir, ponte de pie o lava los platos. Guárdalo.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "DESPUÉS DE COMER",
+    "items": [
+     {
+      "texto": "Camina 2–5 min",
+      "emoji": "🚶",
+      "sync": "camina"
+     },
+     {
+      "texto": "Hazlo apenas termines",
+      "emoji": "⏱️",
+      "sync": "termina"
+     },
+     {
+      "texto": "¿No puedes? Ponte de pie",
+      "emoji": "🧍",
+      "sync": "pie"
+     },
+     {
+      "texto": "Lavar platos también cuenta",
+      "emoji": "🍽️",
+      "sync": "platos"
+     }
+    ],
+    "boton": "GUÁRDALO",
+    "boton_sync": "guárdalo"
+   }
+  },
+  {
+   "texto": "Ojo: esto no reemplaza ningún tratamiento. Si tienes diabetes, sigue a tu médico. ¿Lo vas a probar hoy? Escribe YO.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿LO PRUEBAS HOY?",
+    "boton": "ESCRIBE YO",
+    "boton_sync": "escribe"
+   }
+  }
+ ]
+}

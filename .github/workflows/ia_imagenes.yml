@@ -1,0 +1,44 @@
+name: Imágenes con IA (Pollinations)
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompts:
+        description: "Prompts separados por ||"
+        required: true
+      carpeta:
+        description: "Carpeta destino en previews/ia/"
+        default: "prueba"
+
+permissions:
+  contents: write
+
+jobs:
+  ia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pillow requests
+      - name: Generar
+        env:
+          PROMPTS: ${{ inputs.prompts }}
+        run: |
+          python - <<'PY'
+          import os, subprocess, sys
+          ps = [p.strip() for p in os.environ["PROMPTS"].split("||") if p.strip()]
+          sys.exit(subprocess.call([sys.executable, "scripts/ia_imagenes.py", *ps]))
+          PY
+      - name: Guardar en la rama previews
+        env:
+          CARPETA: ${{ inputs.carpeta }}
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          cp -r out/ia /tmp/ia
+          git fetch -q origin previews && git checkout -q previews
+          mkdir -p "ia/$CARPETA" && cp /tmp/ia/* "ia/$CARPETA/"
+          git add ia && git commit -qm "Imágenes IA: $CARPETA" && git push -q origin previews

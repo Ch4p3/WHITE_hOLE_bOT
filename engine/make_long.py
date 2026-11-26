@@ -859,7 +859,93 @@ def v_tarjeta(img, d, t, sc, p):
     if p.get("nota"):
         pop(d, (W / 2, 880), p["nota"], 48, WHITE, t, at(sc, p.get("nota_sync"), 1.5), "xbold")
 
-VISUALS = {
+
+# ---------------------------------------------------------------- fotos (Wikimedia Commons, con crédito)
+CREDITOS_L = []
+_FOTOS = {}
+def _foto(src):
+    if src not in _FOTOS:
+        import imagenes
+        ruta, info = imagenes.obtener(src)
+        im = Image.open(ruta).convert("RGB")
+        im.thumbnail((2600, 2600), Image.LANCZOS)
+        _FOTOS[src] = (im, info)
+        cred = imagenes.credito_corto(info).replace("Foto:", "Imagen:" if LANG["code"] == "es" else "Image:")
+        line = f"{cred} · {info.get('titulo', src.split(':', 1)[1])}"
+        if line not in CREDITOS_L: CREDITOS_L.append(line)
+    return _FOTOS[src]
+
+_GRAD = {}
+def _grad(kind):
+    if kind not in _GRAD:
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        if kind == "abajo":
+            a = np.clip((yy / H - 0.38) / 0.62, 0, 1) ** 1.3 * 235
+            a = np.maximum(a, np.clip(1 - yy / (H * 0.16), 0, 1) * 150)
+        else:
+            a = np.clip((xx / W - 0.30) / 0.45, 0, 1) * 225
+        _GRAD[kind] = Image.fromarray(a.astype(np.uint8))
+    return _GRAD[kind]
+
+def _credito(d, info, x, y, anchor="rs"):
+    import imagenes
+    c = imagenes.credito_corto(info).replace("Foto:", "Imagen:" if LANG["code"] == "es" else "Image:")
+    d.text((x, y), c, font=font(22, "semi"), fill=(170, 180, 200), anchor=anchor)
+
+def v_foto(img, d, t, sc, p):
+    """modo "cover": foto a pantalla completa con Ken Burns + título.  modo "tarjeta": foto en marco a la izquierda + texto a la derecha."""
+    im, info = _foto(p["src"])
+    k = ease_inout(clamp(t / max(1.0, sc["dur"])))
+    kin = ease_out(prog(t, 0.0, 0.5))
+    if p.get("modo", "cover") == "cover":
+        z0, z1 = p.get("zoom", [1.04, 1.16])
+        z = z0 + (z1 - z0) * k
+        f0 = p.get("foco", [0.5, 0.5]); f1 = p.get("foco_fin", f0)
+        fx, fy = f0[0] + (f1[0] - f0[0]) * k, f0[1] + (f1[1] - f0[1]) * k
+        r = max(W / im.width, H / im.height) * z
+        cw, ch = W / r, H / r
+        cx = clamp(fx * im.width, cw / 2, im.width - cw / 2); cy = clamp(fy * im.height, ch / 2, im.height - ch / 2)
+        frame = im.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)
+        if p.get("brillo"):
+            from PIL import ImageEnhance
+            frame = ImageEnhance.Brightness(frame).enhance(float(p["brillo"]))
+        frame.paste((4, 6, 14), mask=_grad("abajo"))
+        img.paste(Image.blend(img, frame, kin) if kin < 1 else frame)
+        d2 = ImageDraw.Draw(img)
+        y = p.get("y", 700)
+        if p.get("pre"): slide(d2, (W / 2, y - 120), p["pre"], 50, ICE, t, at(sc, p.get("pre_sync"), 0.2), weight="xbold")
+        if p.get("titulo"):
+            st = at(sc, p.get("titulo_sync"), 0.3); kk = prog(t, st, 0.45)
+            if kk > 0:
+                size = fit(d2, p["titulo"], p.get("size", 150), "black", 1700)
+                d2.text((W / 2, y + 30 * (1 - ease_out(kk))), p["titulo"], font=font(size, "black"), anchor="mm",
+                        fill=col(p.get("color"), WHITE), stroke_width=6, stroke_fill=(0, 0, 0))
+        if p.get("sub"): slide(d2, (W / 2, y + 115), p["sub"], 56, WHITE, t, at(sc, p.get("sub_sync"), 0.8), weight="xbold")
+        _credito(d2, info, W - 40, H - 22)
+    else:
+        bw, bh = p.get("caja", [860, 760])
+        x0, y0 = 120, (H - bh) // 2 - 20
+        r = min(bw / im.width, bh / im.height)
+        z = 1.0 + 0.06 * k
+        th = im.resize((max(1, int(im.width * r * z)), max(1, int(im.height * r * z))), Image.BILINEAR)
+        fondo = p.get("fondo")
+        box = Image.new("RGB", (bw, bh), tuple(fondo) if fondo else (245, 245, 245) if p.get("claro") else PANEL)
+        box.paste(th, ((bw - th.width) // 2, (bh - th.height) // 2))
+        m = Image.new("L", (bw, bh), 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, bw, bh], 36, fill=int(255 * kin))
+        img.paste(box, (x0 + int(-60 * (1 - kin)), y0), m)
+        d2 = ImageDraw.Draw(img)
+        _credito(d2, info, x0 + bw, y0 + bh + 34)
+        tx = x0 + bw + 90; mw = W - tx - 90
+        if p.get("pre"): slide(d2, (tx, 360), p["pre"], 46, GREY, t, at(sc, p.get("pre_sync"), 0.2), weight="xbold", anchor="lm", maxw=mw)
+        if p.get("titulo"):
+            st = at(sc, p.get("titulo_sync"), 0.3); kk = prog(t, st, 0.45)
+            if kk > 0:
+                size = fit(d2, p["titulo"], p.get("size", 130), "black", mw)
+                d2.text((tx, 470), p["titulo"], font=font(size * (0.5 + 0.5 * back(kk)), "black"), anchor="lm", fill=col(p.get("color"), WHITE))
+        if p.get("sub"): slide(d2, (tx, 580), p["sub"], 48, WHITE, t, at(sc, p.get("sub_sync"), 0.8), weight="xbold", anchor="lm", maxw=mw)
+        if p.get("nota"): pop(d2, (tx, 680), p["nota"], 46, col(p.get("nota_color"), WARM), t, at(sc, p.get("nota_sync"), 1.4), weight="black", anchor="lm", maxw=mw)
+
+VISUALS = {"foto": v_foto, 
     "capitulo": v_capitulo, "titulo": v_titulo, "bigword": v_bigword, "counter": v_counter,
     "ecuacion": v_ecuacion, "versus": v_versus, "bars": v_bars, "lista": v_lista,
     "archivo": v_archivo, "numeros": v_numeros, "codigo": v_codigo, "tokens": v_tokens,
@@ -1023,6 +1109,8 @@ def render(script_path, out_path, channel="WHITE HOLE", frames_only=False):
         "\n".join(f"{c['t']} {c['titulo']}" for c in meta["capitulos"])
     if cfg.get("fuentes"):
         meta["descripcion"] += "\n\n" + tr("sources") + "\n" + "\n".join(f"- {f}" for f in cfg["fuentes"])
+    if CREDITOS_L:
+        meta["descripcion"] += "\n\n" + ("Imágenes (Wikimedia Commons):" if LANG["code"] == "es" else "Images (Wikimedia Commons):") + "\n" + "\n".join(f"- {c}" for c in CREDITOS_L)
     if cfg.get("hashtags"): meta["descripcion"] += "\n\n" + " ".join(cfg["hashtags"])
     json.dump(meta, open(out_path + ".meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("4/4 Listo ->", out_path, flush=True)

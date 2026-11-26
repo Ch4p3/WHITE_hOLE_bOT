@@ -1,0 +1,46 @@
+name: Descargar fotos elegidas (Wikimedia)
+
+on:
+  workflow_dispatch:
+    inputs:
+      fuentes:
+        description: "Fuentes commons:File:... separadas por ;"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pillow requests
+      - name: Descargar
+        env:
+          FUENTES: ${{ inputs.fuentes }}
+        run: |
+          python - <<'PY'
+          import os, sys
+          sys.path.insert(0, "engine")
+          import imagenes
+          for s in os.environ["FUENTES"].split(";"):
+              s = s.strip()
+              if not s: continue
+              try:
+                  r, info = imagenes.obtener(s); print("ok", s, info.get("licencia"))
+              except Exception as e:
+                  print("FALLO", s, e)
+          PY
+      - name: Guardar en la rama previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          cp -r assets_cache/img /tmp/img
+          git fetch -q origin previews && git checkout -q previews
+          mkdir -p fotos_cache && cp /tmp/img/* fotos_cache/
+          git add fotos_cache && git commit -qm "Fotos en caché" && git push -q origin previews

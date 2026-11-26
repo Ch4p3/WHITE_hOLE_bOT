@@ -173,7 +173,7 @@ function legend(id, nets) {
   document.getElementById(id).innerHTML = nets.map(n => `<span>${dot(NET[n].color)}${NET[n].name}</span>`).join("");
 }
 
-function top(rows) {
+function renderTop(rows) {
   const r = rows.filter(x => x.views != null).sort((a, b) => b.views - a.views).slice(0, 10);
   const max = Math.max(1, ...r.map(x => x.views));
   const nets = [...new Set(r.map(x => x.net))];
@@ -185,7 +185,7 @@ function top(rows) {
     </a>`).join("") : `<div class="empty">Todavía no hay vistas registradas.</div>`;
 }
 
-function history(h) {
+function renderHistory(h) {
   const el = document.getElementById("hist");
   const series = [["yt", "yt_vistas"], ["fb", "fb_vistas"], ["ig", "ig_vistas"]].filter(([n, k]) => h.some(p => p[k] > 0));
   legend("lg1", series.map(s => s[0]));
@@ -254,7 +254,7 @@ async function load() {
     ]);
     ROWS = normalize(d);
     document.getElementById("upd").textContent = `Actualizado ${rel(d.generado)}`;
-    kpis(d, ROWS); top(ROWS); history(h);
+    kpis(d, ROWS); renderTop(ROWS); renderHistory(h);
     document.getElementById("tabs").innerHTML = Object.entries(NET).map(([n, v]) =>
       `<button type="button" role="tab" data-n="${n}">${dot(v.color)}${v.name} · ${ROWS.filter(r => r.net === n).length}</button>`).join("");
     document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { TAB = b.dataset.n; table(); });

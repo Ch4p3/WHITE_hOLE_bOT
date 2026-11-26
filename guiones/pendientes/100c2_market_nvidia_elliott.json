@@ -1,0 +1,1508 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "serie": "Learn to read the market",
+ "titulo": "Nvidia lost confidence… did it follow Elliott Waves? 📉📈",
+ "descripcion": "What happened (real daily closes, Yahoo Finance):\n• Oct 6, 2026: all-time high of $243.37 (intraday).\n• Nov 8: the board opens an internal investigation into its CEO.\n• Nov 12: Nvidia announces Jensen Huang's resignation.\n• Nov 20: low of $124.50 (−49% from the high).\n• Nov 23: the board brings him back; the stock jumps 31.5% in one day (≈$950 billion, an all-time record).\n\nElliott count (one possible count, not the only one): the drop made 5 waves and meets all 3 rules; the Nov 23 rebound reached the 38.2% Fibonacci zone (wave A). The count is invalidated if price breaks below $124.50.\n\nWhat are Elliott Waves? Watch the previous video on the channel.\nEducational content, not a buy or sell recommendation. 👇",
+ "hashtags": "#nvidia #stocks #trading #elliottwave #investing #shorts",
+ "fuentes": [
+  "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm",
+  "https://www.nbcnews.com/business/markets/stocks-rebound-ai-tech-selloff-nvidia-rcna610833",
+  "https://finance.yahoo.com/quote/NVDA/history"
+ ],
+ "escenas": [
+  {
+   "texto": "Nvidia lost almost half its value in six weeks, then jumped thirty one percent in a single day. Chaos, or a pattern?",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "Oct 1",
+      230.86
+     ],
+     [
+      "Oct 2",
+      233.95
+     ],
+     [
+      "Oct 5",
+      238.9
+     ],
+     [
+      "Oct 6",
+      239.24
+     ],
+     [
+      "Oct 7",
+      237.47
+     ],
+     [
+      "Oct 8",
+      230.48
+     ],
+     [
+      "Oct 9",
+      229.28
+     ],
+     [
+      "Oct 12",
+      226.32
+     ],
+     [
+      "Oct 13",
+      228.52
+     ],
+     [
+      "Oct 14",
+      221.3
+     ],
+     [
+      "Oct 15",
+      217.23
+     ],
+     [
+      "Oct 16",
+      214.13
+     ],
+     [
+      "Oct 19",
+      217.09
+     ],
+     [
+      "Oct 20",
+      216.47
+     ],
+     [
+      "Oct 21",
+      221.97
+     ],
+     [
+      "Oct 22",
+      212.21
+     ],
+     [
+      "Oct 23",
+      210.96
+     ],
+     [
+      "Oct 26",
+      216.0
+     ],
+     [
+      "Oct 27",
+      217.94
+     ],
+     [
+      "Oct 28",
+      215.38
+     ],
+     [
+      "Oct 29",
+      213.66
+     ],
+     [
+      "Oct 30",
+      204.64
+     ],
+     [
+      "Nov 2",
+      202.06
+     ],
+     [
+      "Nov 3",
+      206.69
+     ],
+     [
+      "Nov 4",
+      200.13
+     ],
+     [
+      "Nov 5",
+      181.6
+     ],
+     [
+      "Nov 6",
+      186.64
+     ],
+     [
+      "Nov 9",
+      178.67
+     ],
+     [
+      "Nov 10",
+      168.89
+     ],
+     [
+      "Nov 11",
+      173.73
+     ],
+     [
+      "Nov 12",
+      166.19
+     ],
+     [
+      "Nov 13",
+      162.85
+     ],
+     [
+      "Nov 16",
+      156.14
+     ],
+     [
+      "Nov 17",
+      155.46
+     ],
+     [
+      "Nov 18",
+      150.96
+     ],
+     [
+      "Nov 19",
+      145.98
+     ],
+     [
+      "Nov 20",
+      125.53
+     ],
+     [
+      "Nov 23",
+      165.05
+     ],
+     [
+      "Nov 24",
+      155.38
+     ],
+     [
+      "Nov 25",
+      149.3
+     ]
+    ],
+    "fuente": "NVDA daily closes · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "NVIDIA · Oct–Nov 2026",
+    "titulo": "−49% … THEN +31.5%",
+    "vel": 0.75
+   }
+  },
+  {
+   "texto": "October sixth: an all time high, two hundred forty three dollars.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "Oct 1",
+      230.86
+     ],
+     [
+      "Oct 2",
+      233.95
+     ],
+     [
+      "Oct 5",
+      238.9
+     ],
+     [
+      "Oct 6",
+      239.24
+     ],
+     [
+      "Oct 7",
+      237.47
+     ],
+     [
+      "Oct 8",
+      230.48
+     ],
+     [
+      "Oct 9",
+      229.28
+     ],
+     [
+      "Oct 12",
+      226.32
+     ],
+     [
+      "Oct 13",
+      228.52
+     ],
+     [
+      "Oct 14",
+      221.3
+     ],
+     [
+      "Oct 15",
+      217.23
+     ],
+     [
+      "Oct 16",
+      214.13
+     ],
+     [
+      "Oct 19",
+      217.09
+     ],
+     [
+      "Oct 20",
+      216.47
+     ],
+     [
+      "Oct 21",
+      221.97
+     ],
+     [
+      "Oct 22",
+      212.21
+     ],
+     [
+      "Oct 23",
+      210.96
+     ],
+     [
+      "Oct 26",
+      216.0
+     ],
+     [
+      "Oct 27",
+      217.94
+     ],
+     [
+      "Oct 28",
+      215.38
+     ],
+     [
+      "Oct 29",
+      213.66
+     ],
+     [
+      "Oct 30",
+      204.64
+     ],
+     [
+      "Nov 2",
+      202.06
+     ],
+     [
+      "Nov 3",
+      206.69
+     ],
+     [
+      "Nov 4",
+      200.13
+     ],
+     [
+      "Nov 5",
+      181.6
+     ],
+     [
+      "Nov 6",
+      186.64
+     ],
+     [
+      "Nov 9",
+      178.67
+     ],
+     [
+      "Nov 10",
+      168.89
+     ],
+     [
+      "Nov 11",
+      173.73
+     ],
+     [
+      "Nov 12",
+      166.19
+     ],
+     [
+      "Nov 13",
+      162.85
+     ],
+     [
+      "Nov 16",
+      156.14
+     ],
+     [
+      "Nov 17",
+      155.46
+     ],
+     [
+      "Nov 18",
+      150.96
+     ],
+     [
+      "Nov 19",
+      145.98
+     ],
+     [
+      "Nov 20",
+      125.53
+     ],
+     [
+      "Nov 23",
+      165.05
+     ],
+     [
+      "Nov 24",
+      155.38
+     ],
+     [
+      "Nov 25",
+      149.3
+     ]
+    ],
+    "fuente": "NVDA daily closes · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "October 6",
+    "titulo": "HIGH: $243",
+    "hasta": 3,
+    "vel": 0.6,
+    "precio_cabeza": false
+   }
+  },
+  {
+   "texto": "November eighth, the board investigates its CEO, Jensen Huang. On the twelfth, he resigns.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "Oct 1",
+      230.86
+     ],
+     [
+      "Oct 2",
+      233.95
+     ],
+     [
+      "Oct 5",
+      238.9
+     ],
+     [
+      "Oct 6",
+      239.24
+     ],
+     [
+      "Oct 7",
+      237.47
+     ],
+     [
+      "Oct 8",
+      230.48
+     ],
+     [
+      "Oct 9",
+      229.28
+     ],
+     [
+      "Oct 12",
+      226.32
+     ],
+     [
+      "Oct 13",
+      228.52
+     ],
+     [
+      "Oct 14",
+      221.3
+     ],
+     [
+      "Oct 15",
+      217.23
+     ],
+     [
+      "Oct 16",
+      214.13
+     ],
+     [
+      "Oct 19",
+      217.09
+     ],
+     [
+      "Oct 20",
+      216.47
+     ],
+     [
+      "Oct 21",
+      221.97
+     ],
+     [
+      "Oct 22",
+      212.21
+     ],
+     [
+      "Oct 23",
+      210.96
+     ],
+     [
+      "Oct 26",
+      216.0
+     ],
+     [
+      "Oct 27",
+      217.94
+     ],
+     [
+      "Oct 28",
+      215.38
+     ],
+     [
+      "Oct 29",
+      213.66
+     ],
+     [
+      "Oct 30",
+      204.64
+     ],
+     [
+      "Nov 2",
+      202.06
+     ],
+     [
+      "Nov 3",
+      206.69
+     ],
+     [
+      "Nov 4",
+      200.13
+     ],
+     [
+      "Nov 5",
+      181.6
+     ],
+     [
+      "Nov 6",
+      186.64
+     ],
+     [
+      "Nov 9",
+      178.67
+     ],
+     [
+      "Nov 10",
+      168.89
+     ],
+     [
+      "Nov 11",
+      173.73
+     ],
+     [
+      "Nov 12",
+      166.19
+     ],
+     [
+      "Nov 13",
+      162.85
+     ],
+     [
+      "Nov 16",
+      156.14
+     ],
+     [
+      "Nov 17",
+      155.46
+     ],
+     [
+      "Nov 18",
+      150.96
+     ],
+     [
+      "Nov 19",
+      145.98
+     ],
+     [
+      "Nov 20",
+      125.53
+     ],
+     [
+      "Nov 23",
+      165.05
+     ],
+     [
+      "Nov 24",
+      155.38
+     ],
+     [
+      "Nov 25",
+      149.3
+     ]
+    ],
+    "fuente": "NVDA daily closes · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "investigation and resignation",
+    "titulo": "JENSEN HUANG STEPS DOWN",
+    "desde": 3,
+    "hasta": 30,
+    "vel": 0.8
+   }
+  },
+  {
+   "texto": "Confidence left, money left, and on November twentieth it hit one hundred twenty four dollars.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "Oct 1",
+      230.86
+     ],
+     [
+      "Oct 2",
+      233.95
+     ],
+     [
+      "Oct 5",
+      238.9
+     ],
+     [
+      "Oct 6",
+      239.24
+     ],
+     [
+      "Oct 7",
+      237.47
+     ],
+     [
+      "Oct 8",
+      230.48
+     ],
+     [
+      "Oct 9",
+      229.28
+     ],
+     [
+      "Oct 12",
+      226.32
+     ],
+     [
+      "Oct 13",
+      228.52
+     ],
+     [
+      "Oct 14",
+      221.3
+     ],
+     [
+      "Oct 15",
+      217.23
+     ],
+     [
+      "Oct 16",
+      214.13
+     ],
+     [
+      "Oct 19",
+      217.09
+     ],
+     [
+      "Oct 20",
+      216.47
+     ],
+     [
+      "Oct 21",
+      221.97
+     ],
+     [
+      "Oct 22",
+      212.21
+     ],
+     [
+      "Oct 23",
+      210.96
+     ],
+     [
+      "Oct 26",
+      216.0
+     ],
+     [
+      "Oct 27",
+      217.94
+     ],
+     [
+      "Oct 28",
+      215.38
+     ],
+     [
+      "Oct 29",
+      213.66
+     ],
+     [
+      "Oct 30",
+      204.64
+     ],
+     [
+      "Nov 2",
+      202.06
+     ],
+     [
+      "Nov 3",
+      206.69
+     ],
+     [
+      "Nov 4",
+      200.13
+     ],
+     [
+      "Nov 5",
+      181.6
+     ],
+     [
+      "Nov 6",
+      186.64
+     ],
+     [
+      "Nov 9",
+      178.67
+     ],
+     [
+      "Nov 10",
+      168.89
+     ],
+     [
+      "Nov 11",
+      173.73
+     ],
+     [
+      "Nov 12",
+      166.19
+     ],
+     [
+      "Nov 13",
+      162.85
+     ],
+     [
+      "Nov 16",
+      156.14
+     ],
+     [
+      "Nov 17",
+      155.46
+     ],
+     [
+      "Nov 18",
+      150.96
+     ],
+     [
+      "Nov 19",
+      145.98
+     ],
+     [
+      "Nov 20",
+      125.53
+     ],
+     [
+      "Nov 23",
+      165.05
+     ],
+     [
+      "Nov 24",
+      155.38
+     ],
+     [
+      "Nov 25",
+      149.3
+     ]
+    ],
+    "fuente": "NVDA daily closes · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "confidence left",
+    "titulo": "LOW: $124",
+    "desde": 30,
+    "hasta": 36,
+    "vel": 0.7,
+    "precio_cabeza": false
+   }
+  },
+  {
+   "texto": "On Monday the twenty third they brought him back: thirty one point five percent in a day. About nine hundred fifty billion dollars. An all time record.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "November 23: Huang returns",
+    "word": "+31.5%",
+    "size": 230,
+    "sync": "thirty",
+    "sub": "≈ $950 billion in one day · record",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Did it follow Elliott Waves? The drop had five waves.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "Oct 1",
+      230.86
+     ],
+     [
+      "Oct 2",
+      233.95
+     ],
+     [
+      "Oct 5",
+      238.9
+     ],
+     [
+      "Oct 6",
+      239.24
+     ],
+     [
+      "Oct 7",
+      237.47
+     ],
+     [
+      "Oct 8",
+      230.48
+     ],
+     [
+      "Oct 9",
+      229.28
+     ],
+     [
+      "Oct 12",
+      226.32
+     ],
+     [
+      "Oct 13",
+      228.52
+     ],
+     [
+      "Oct 14",
+      221.3
+     ],
+     [
+      "Oct 15",
+      217.23
+     ],
+     [
+      "Oct 16",
+      214.13
+     ],
+     [
+      "Oct 19",
+      217.09
+     ],
+     [
+      "Oct 20",
+      216.47
+     ],
+     [
+      "Oct 21",
+      221.97
+     ],
+     [
+      "Oct 22",
+      212.21
+     ],
+     [
+      "Oct 23",
+      210.96
+     ],
+     [
+      "Oct 26",
+      216.0
+     ],
+     [
+      "Oct 27",
+      217.94
+     ],
+     [
+      "Oct 28",
+      215.38
+     ],
+     [
+      "Oct 29",
+      213.66
+     ],
+     [
+      "Oct 30",
+      204.64
+     ],
+     [
+      "Nov 2",
+      202.06
+     ],
+     [
+      "Nov 3",
+      206.69
+     ],
+     [
+      "Nov 4",
+      200.13
+     ],
+     [
+      "Nov 5",
+      181.6
+     ],
+     [
+      "Nov 6",
+      186.64
+     ],
+     [
+      "Nov 9",
+      178.67
+     ],
+     [
+      "Nov 10",
+      168.89
+     ],
+     [
+      "Nov 11",
+      173.73
+     ],
+     [
+      "Nov 12",
+      166.19
+     ],
+     [
+      "Nov 13",
+      162.85
+     ],
+     [
+      "Nov 16",
+      156.14
+     ],
+     [
+      "Nov 17",
+      155.46
+     ],
+     [
+      "Nov 18",
+      150.96
+     ],
+     [
+      "Nov 19",
+      145.98
+     ],
+     [
+      "Nov 20",
+      125.53
+     ],
+     [
+      "Nov 23",
+      165.05
+     ],
+     [
+      "Nov 24",
+      155.38
+     ],
+     [
+      "Nov 25",
+      149.3
+     ]
+    ],
+    "fuente": "NVDA daily closes · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "did it follow Elliott?",
+    "titulo": "THE DROP: 5 WAVES",
+    "hasta": 36,
+    "marcas": [
+     {
+      "i": 3,
+      "texto": "▼",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 11,
+      "texto": "1",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 14,
+      "texto": "2",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 28,
+      "texto": "3",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 29,
+      "texto": "4",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 36,
+      "texto": "5",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     }
+    ],
+    "vel": 0.6,
+    "precio_cabeza": false
+   }
+  },
+  {
+   "texto": "And it meets all three rules: wave two didn't pass the start, wave three was the longest, and wave four never touched wave one's zone.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "NVIDIA",
+    "titulo": "THE 3 RULES",
+    "items": [
+     {
+      "texto": "Wave 2 stayed below the start (222 < 243)",
+      "emoji": "✅",
+      "sync": "two"
+     },
+     {
+      "texto": "Wave 3 was the longest",
+      "emoji": "✅",
+      "sync": "longest"
+     },
+     {
+      "texto": "Wave 4 never touched wave 1",
+      "emoji": "✅",
+      "sync": "four"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The rebound reached one hundred seventy one dollars: right at the thirty eight percent Fibonacci level. That would be wave A.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "Oct 1",
+      230.86
+     ],
+     [
+      "Oct 2",
+      233.95
+     ],
+     [
+      "Oct 5",
+      238.9
+     ],
+     [
+      "Oct 6",
+      239.24
+     ],
+     [
+      "Oct 7",
+      237.47
+     ],
+     [
+      "Oct 8",
+      230.48
+     ],
+     [
+      "Oct 9",
+      229.28
+     ],
+     [
+      "Oct 12",
+      226.32
+     ],
+     [
+      "Oct 13",
+      228.52
+     ],
+     [
+      "Oct 14",
+      221.3
+     ],
+     [
+      "Oct 15",
+      217.23
+     ],
+     [
+      "Oct 16",
+      214.13
+     ],
+     [
+      "Oct 19",
+      217.09
+     ],
+     [
+      "Oct 20",
+      216.47
+     ],
+     [
+      "Oct 21",
+      221.97
+     ],
+     [
+      "Oct 22",
+      212.21
+     ],
+     [
+      "Oct 23",
+      210.96
+     ],
+     [
+      "Oct 26",
+      216.0
+     ],
+     [
+      "Oct 27",
+      217.94
+     ],
+     [
+      "Oct 28",
+      215.38
+     ],
+     [
+      "Oct 29",
+      213.66
+     ],
+     [
+      "Oct 30",
+      204.64
+     ],
+     [
+      "Nov 2",
+      202.06
+     ],
+     [
+      "Nov 3",
+      206.69
+     ],
+     [
+      "Nov 4",
+      200.13
+     ],
+     [
+      "Nov 5",
+      181.6
+     ],
+     [
+      "Nov 6",
+      186.64
+     ],
+     [
+      "Nov 9",
+      178.67
+     ],
+     [
+      "Nov 10",
+      168.89
+     ],
+     [
+      "Nov 11",
+      173.73
+     ],
+     [
+      "Nov 12",
+      166.19
+     ],
+     [
+      "Nov 13",
+      162.85
+     ],
+     [
+      "Nov 16",
+      156.14
+     ],
+     [
+      "Nov 17",
+      155.46
+     ],
+     [
+      "Nov 18",
+      150.96
+     ],
+     [
+      "Nov 19",
+      145.98
+     ],
+     [
+      "Nov 20",
+      125.53
+     ],
+     [
+      "Nov 23",
+      165.05
+     ],
+     [
+      "Nov 24",
+      155.38
+     ],
+     [
+      "Nov 25",
+      149.3
+     ]
+    ],
+    "fuente": "NVDA daily closes · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "the rebound",
+    "titulo": "WAVE A → 38.2%",
+    "estatico": true,
+    "precio_cabeza": false,
+    "marcas": [
+     {
+      "i": 3,
+      "texto": "▼",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 11,
+      "texto": "1",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 14,
+      "texto": "2",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 28,
+      "texto": "3",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 29,
+      "texto": "4",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 36,
+      "texto": "5",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     }
+    ],
+    "niveles": [
+     {
+      "precio": 169.91,
+      "texto": "38.2% Fibonacci",
+      "color": "warm",
+      "sync": "thirty"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If it holds, a B wave comes down and a C wave goes up. If it breaks one twenty four fifty, the count fails.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "Oct 1",
+      230.86
+     ],
+     [
+      "Oct 2",
+      233.95
+     ],
+     [
+      "Oct 5",
+      238.9
+     ],
+     [
+      "Oct 6",
+      239.24
+     ],
+     [
+      "Oct 7",
+      237.47
+     ],
+     [
+      "Oct 8",
+      230.48
+     ],
+     [
+      "Oct 9",
+      229.28
+     ],
+     [
+      "Oct 12",
+      226.32
+     ],
+     [
+      "Oct 13",
+      228.52
+     ],
+     [
+      "Oct 14",
+      221.3
+     ],
+     [
+      "Oct 15",
+      217.23
+     ],
+     [
+      "Oct 16",
+      214.13
+     ],
+     [
+      "Oct 19",
+      217.09
+     ],
+     [
+      "Oct 20",
+      216.47
+     ],
+     [
+      "Oct 21",
+      221.97
+     ],
+     [
+      "Oct 22",
+      212.21
+     ],
+     [
+      "Oct 23",
+      210.96
+     ],
+     [
+      "Oct 26",
+      216.0
+     ],
+     [
+      "Oct 27",
+      217.94
+     ],
+     [
+      "Oct 28",
+      215.38
+     ],
+     [
+      "Oct 29",
+      213.66
+     ],
+     [
+      "Oct 30",
+      204.64
+     ],
+     [
+      "Nov 2",
+      202.06
+     ],
+     [
+      "Nov 3",
+      206.69
+     ],
+     [
+      "Nov 4",
+      200.13
+     ],
+     [
+      "Nov 5",
+      181.6
+     ],
+     [
+      "Nov 6",
+      186.64
+     ],
+     [
+      "Nov 9",
+      178.67
+     ],
+     [
+      "Nov 10",
+      168.89
+     ],
+     [
+      "Nov 11",
+      173.73
+     ],
+     [
+      "Nov 12",
+      166.19
+     ],
+     [
+      "Nov 13",
+      162.85
+     ],
+     [
+      "Nov 16",
+      156.14
+     ],
+     [
+      "Nov 17",
+      155.46
+     ],
+     [
+      "Nov 18",
+      150.96
+     ],
+     [
+      "Nov 19",
+      145.98
+     ],
+     [
+      "Nov 20",
+      125.53
+     ],
+     [
+      "Nov 23",
+      165.05
+     ],
+     [
+      "Nov 24",
+      155.38
+     ],
+     [
+      "Nov 25",
+      149.3
+     ]
+    ],
+    "fuente": "NVDA daily closes · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "what comes next",
+    "titulo": "B, THEN C?",
+    "estatico": true,
+    "precio_cabeza": true,
+    "marcas": [
+     {
+      "i": 3,
+      "texto": "▼",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 11,
+      "texto": "1",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 14,
+      "texto": "2",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 28,
+      "texto": "3",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 29,
+      "texto": "4",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 36,
+      "texto": "5",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 39,
+      "texto": "B",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null
+     }
+    ],
+    "niveles": [
+     {
+      "precio": 124.5,
+      "texto": "invalid below $124.50",
+      "color": "warm",
+      "sync": "breaks"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Confidence moves money, and money moves price. This is educational, not advice. Will wave C happen? Comment YES or NO.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "CONFIDENCE →",
+     "MONEY →",
+     "PRICE"
+    ],
+    "syncs": [
+     null,
+     "money",
+     "price"
+    ],
+    "button": "YES OR NO?",
+    "button_sync": "comment"
+   }
+  }
+ ]
+}

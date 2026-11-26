@@ -1,0 +1,45 @@
+name: Subir a YouTube un video ya renderizado
+
+on:
+  workflow_dispatch:
+    inputs:
+      nombre:
+        description: "Nombre en previews/diarios sin extensión (ej. 2026-11-26_100dy_news_ai_insulin_key)"
+        required: true
+      publicar_en:
+        description: "Opcional: fecha ISO UTC para programar (ej. 2026-11-27T23:00:00Z)"
+        default: ""
+
+jobs:
+  subir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Bajar video y guion
+        run: |
+          git fetch -q origin previews
+          git show "origin/previews:diarios/${{ inputs.nombre }}.mp4" > v.mp4
+          git show "origin/previews:diarios/${{ inputs.nombre }}.json" > g.json
+      - name: Subir
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          PUBLICAR_EN: ${{ inputs.publicar_en }}
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          sys.path.insert(0, "scripts")
+          import youtube
+          g = json.load(open("g.json", encoding="utf-8"))
+          tags = [t.lstrip("#") for t in g.get("hashtags", "").split()]
+          desc = g.get("descripcion", "") + "\n\n" + g.get("hashtags", "") + "\n\nSources:\n" + "\n".join(g.get("fuentes", []))
+          cuando = os.environ.get("PUBLICAR_EN", "").strip()
+          vid, est = youtube.subir("v.mp4", g.get("titulo", "White Hole"), desc, tags, "private" if cuando else "public", cuando or None)
+          print("Subido a YouTube:", vid, est, cuando)
+          PY

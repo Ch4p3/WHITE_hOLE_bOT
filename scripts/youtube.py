@@ -31,7 +31,7 @@ def canal(token):
     items = r.json().get("items", [])
     return items[0] if items else None
 
-def subir(video_path, titulo, descripcion, tags, privacidad="public"):
+def subir(video_path, titulo, descripcion, tags, privacidad="public", publicar_en=None):
     """Sube el video con subida reanudable y devuelve (video_id, estado_privacidad)."""
     token = access_token()
     meta = {
@@ -40,6 +40,8 @@ def subir(video_path, titulo, descripcion, tags, privacidad="public"):
         "status": {"privacyStatus": privacidad, "selfDeclaredMadeForKids": False,
                    "embeddable": True},
     }
+    if publicar_en:                      # programado: YouTube exige privado + publishAt
+        meta["status"]["privacyStatus"] = "private"; meta["status"]["publishAt"] = publicar_en
     size = os.path.getsize(video_path)
     init = requests.post(UPLOAD, params={"uploadType": "resumable", "part": "snippet,status"},
                          headers={"Authorization": f"Bearer {token}",

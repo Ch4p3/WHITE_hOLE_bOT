@@ -1,0 +1,32 @@
+{
+ "idioma": "es",
+ "personaje": "monita",
+ "titulo": "RETO: 7 + 7 ÷ 7 + 7 × 7 − 7 🧠",
+ "caption": "RETO WHITE HOLE 🧠\n\n7 + 7 ÷ 7 + 7 × 7 − 7 = ?\n\nSin calculadora. Comenta solo el número 👇\nMañana publico la explicación paso a paso (y quién acertó).",
+ "hashtags": "#reto #matematicas #acertijo #desafio #WhiteHole",
+ "fuentes": [],
+ "slides": [
+  {
+   "tipo": "portada",
+   "pre": "RETO WHITE HOLE",
+   "titulo": "7 + 7 ÷ 7 + 7 × 7 − 7",
+   "sub": "¿Cuánto te da? Sin calculadora",
+   "emoji": "🧠"
+  },
+  {
+   "tipo": "texto",
+   "emoji": "💬",
+   "titulo": "COMENTA TU RESPUESTA",
+   "puntos": [
+    "Escribe solo el número en los comentarios",
+    "Nada de calculadora: 10 segundos y responde",
+    "Mañana sale la explicación paso a paso"
+   ],
+   "nota": "Etiqueta a alguien que creas que va a fallar"
+  }
+ ],
+ "publicado": {
+  "instagram": "17989782795066269",
+  "facebook": "1385576081315965_122097976593565148"
+ }
+}

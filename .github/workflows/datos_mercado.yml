@@ -1,0 +1,45 @@
+name: Datos de mercado reales (Yahoo Finance)
+
+on:
+  workflow_dispatch:
+    inputs:
+      simbolos:
+        description: "Símbolos separados por coma (ej. BTC-USD,^GSPC)"
+        default: "BTC-USD,ETH-USD,^GSPC"
+
+permissions:
+  contents: write
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install yfinance pandas
+      - name: Descargar
+        env:
+          SIMBOLOS: ${{ inputs.simbolos }}
+        run: |
+          python - <<'PY'
+          import os, yfinance as yf
+          os.makedirs("out/datos", exist_ok=True)
+          for s in os.environ["SIMBOLOS"].split(","):
+              s = s.strip()
+              df = yf.download(s, period="max", interval="1d", auto_adjust=False, progress=False)
+              if hasattr(df.columns, "levels"): df.columns = df.columns.get_level_values(0)
+              name = s.replace("^", "").replace("-", "_")
+              df.to_csv(f"out/datos/{name}_diario.csv")
+              print(s, len(df), df.index.min(), df.index.max())
+          PY
+      - name: Guardar en la rama previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          cp -r out/datos /tmp/datos
+          git fetch -q origin previews && git checkout -q previews
+          mkdir -p datos && cp /tmp/datos/* datos/
+          git add datos && git commit -qm "Datos de mercado" && git push -q origin previews

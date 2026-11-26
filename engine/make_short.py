@@ -719,7 +719,47 @@ def v_franja(img, d, t, sc, p):
     if p.get("titulo"):
         slide(d, (W // 2, 300), p["titulo"], 56, WHITE, t, 0.0, weight="black", dy=30)
 
-VISUALS = {"title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
+def v_lista(img, d, t, sc, p):
+    """Lista para guardar: título + ítems que aparecen en orden (con número o emoji) + chip "GUÁRDALO"."""
+    y = p.get("y", 330)
+    if p.get("pastilla"):
+        f = font(46, "black"); tw = d.textlength(p["pastilla"], font=f)
+        k = back(prog(t, 0.0, 0.4))
+        if k > 0:
+            d.rounded_rectangle([W / 2 - tw / 2 - 30, y - 34, W / 2 + tw / 2 + 30, y + 34], 34, fill=WARM)
+            text(d, (W // 2, y), p["pastilla"], 46 * k, BG)
+        y += 100
+    if p.get("titulo"):
+        pop(d, (W // 2, y + 20), p["titulo"], p.get("titulo_size", 96), col(p.get("titulo_color"), WHITE), t, 0.05, maxw=980)
+        y += 150
+    items = p.get("items", [])
+    for i, it in enumerate(items):
+        it = it if isinstance(it, dict) else {"texto": it}
+        st = at(sc, it.get("sync"), 0.5 + 0.6 * i)
+        k = ease_out(prog(t, st - 0.1, 0.4))
+        if k <= 0: y += 150; continue
+        x0 = 80 - 60 * (1 - k)
+        d.rounded_rectangle([x0, y, W - 80, y + 128], 28, fill=PANEL)
+        icon = it.get("emoji")
+        if icon:
+            em = emoji_img(icon, 70)
+            if em: img.paste(em, (int(x0 + 28), int(y + 29)), em)
+        else:
+            d.rounded_rectangle([x0 + 24, y + 24, x0 + 104, y + 104], 22, fill=col(it.get("color"), BLUE))
+            text(d, (x0 + 64, y + 66), str(i + 1), 52, BG)
+        size = fit(d, it["texto"], 52, "xbold", W - 80 - (x0 + 130) - 20)
+        d.text((x0 + 130, y + 64), it["texto"], font=font(size, "xbold"), fill=WHITE, anchor="lm")
+        y += 150
+    if p.get("boton"):
+        k = back(prog(t, at(sc, p.get("boton_sync"), 1.6) - 0.1, 0.5))
+        if k > 0:
+            f = font(56, "black"); tw = d.textlength(p["boton"], font=f)
+            yb = y + 40
+            d.rounded_rectangle([W / 2 - tw / 2 - 44, yb - 46, W / 2 + tw / 2 + 44, yb + 46], 46, fill=BLUE)
+            text(d, (W / 2, yb), p["boton"], 56 * k, BG)
+
+
+VISUALS = {"lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
            "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
            "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto,
            "primos": v_primos, "formula": v_formula, "espiral": v_espiral, "franja": v_franja}

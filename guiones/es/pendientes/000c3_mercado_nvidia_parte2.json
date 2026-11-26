@@ -1,0 +1,1137 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.0
+ },
+ "serie": "Aprende a leer el mercado",
+ "titulo": "Nvidia PARTE 2: ¿hasta dónde subiría si se cumple Elliott? 🎯",
+ "descripcion": "Análisis educativo con precios reales (Yahoo Finance). No es recomendación de inversión.\n\n📉 LA CAÍDA EN 5 ONDAS\n• 6 oct 2026: máximo de US$243,37.\n• Onda 1: hasta ~US$213 (−12%).\n• Onda 2: rebote a ~US$222.\n• Onda 3: 8 nov investigación interna, 12 nov renuncia de Jensen Huang → ~US$166 (−25%).\n• Onda 4: rebote a ~US$177.\n• Onda 5: 17 nov primeros resultados sin Huang → 20 nov US$124,50 (−49% desde el máximo).\n\n📈 LA CORRECCIÓN\n• 23 nov: vuelve Huang, +31,5% en un día (≈US$950.000 millones, récord). Onda A hasta US$171,50 = 38,2% de Fibonacci de la caída.\n• Onda B: suele retroceder 50–61,8% de la A → US$148–142,45. El 25 nov tocó US$141,17.\n\n🎯 SI SE CUMPLE (onda C): objetivo 1 ≈ US$184–188 (50% de la caída ≈ US$183,94 y C = A ≈ US$188,17 si la B termina en US$141,17); objetivo 2 ≈ US$198 (61,8%).\n❌ SI SE ROMPE: por debajo de US$124,50 el conteo queda invalidado: la caída no había terminado y hay que recontar.\n\nEste es un conteo posible, no el único. ¿Qué son las ondas de Elliott? Mira el video anterior en el perfil. 👇",
+ "hashtags": "#nvidia #bolsa #trading #ondasdeelliott #fibonacci #inversion #WhiteHole #reels",
+ "fuentes": [
+  "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm",
+  "https://www.nbcnews.com/business/markets/stocks-rebound-ai-tech-selloff-nvidia-rcna610833",
+  "https://finance.yahoo.com/quote/NVDA/history"
+ ],
+ "escenas": [
+  {
+   "texto": "Parte dos. En la parte uno vimos que la caída de Nvidia hizo cinco ondas y cumplió las tres reglas de Elliott. Ahora, lo que sigue.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "1 oct",
+      230.86
+     ],
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ]
+    ],
+    "fuente": "Cierres diarios NVDA · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "parte 2 · resumen",
+    "titulo": "5 ONDAS ✓ 3 REGLAS ✓",
+    "estatico": true,
+    "precio_cabeza": false,
+    "marcas": [
+     {
+      "i": 3,
+      "texto": "▼",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 11,
+      "texto": "1",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 14,
+      "texto": "2",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 28,
+      "texto": "3",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 29,
+      "texto": "4",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 36,
+      "texto": "5",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Después de cinco ondas viene una corrección de tres. El rebote del lunes llegó a ciento setenta y uno con cincuenta: justo el treinta y ocho por ciento de Fibonacci de toda la caída. Esa es la onda A.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "1 oct",
+      230.86
+     ],
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ]
+    ],
+    "fuente": "Cierres diarios NVDA · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "la corrección empieza",
+    "titulo": "ONDA A = 38,2%",
+    "estatico": true,
+    "precio_cabeza": false,
+    "marcas": [
+     {
+      "i": 3,
+      "texto": "▼",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 11,
+      "texto": "1",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 14,
+      "texto": "2",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 28,
+      "texto": "3",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 29,
+      "texto": "4",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 36,
+      "texto": "5",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null,
+      "nota": "$171,50"
+     }
+    ],
+    "niveles": [
+     {
+      "precio": 169.91,
+      "texto": "38,2% Fibonacci",
+      "color": "warm",
+      "sync": "treinta"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ahora va la onda B, que suele devolver entre la mitad y el sesenta y dos por ciento de la A. O sea, entre ciento cuarenta y ocho y ciento cuarenta y dos. Y ayer ya tocó ciento cuarenta y uno.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "1 oct",
+      230.86
+     ],
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ]
+    ],
+    "fuente": "Cierres diarios NVDA · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "onda B: ¿dónde termina?",
+    "titulo": "ZONA B: $142–148",
+    "estatico": true,
+    "precio_cabeza": false,
+    "marcas": [
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 39,
+      "texto": "B",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null,
+      "nota": "$141"
+     }
+    ],
+    "niveles": [
+     {
+      "precio": 145.2,
+      "texto": "zona B · $142–148",
+      "color": "grey",
+      "sync": "mitad"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si el patrón se cumple, viene la onda C hacia arriba. Primer objetivo: entre ciento ochenta y cuatro y ciento ochenta y ocho, donde coinciden la mitad de la caída y una C igual a la A. Segundo objetivo: unos ciento noventa y ocho, el sesenta y uno coma ocho por ciento.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "1 oct",
+      230.86
+     ],
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ]
+    ],
+    "fuente": "Cierres diarios NVDA · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "si se cumple: onda C",
+    "titulo": "OBJETIVOS: $184–188 · $198",
+    "estatico": true,
+    "precio_cabeza": false,
+    "marcas": [
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 39,
+      "texto": "B",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null
+     }
+    ],
+    "niveles": [
+     {
+      "precio": 186,
+      "texto": "objetivo 1 · $184–188",
+      "color": "green",
+      "sync": "primer"
+     },
+     {
+      "precio": 197.96,
+      "texto": "objetivo 2 · $198",
+      "color": "green",
+      "sync": "segundo"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "¿Y si se rompe? Si el precio baja de ciento veinticuatro con cincuenta, el conteo estaba mal. No vuelve a empezar: significa que la caída no había terminado, y lo más probable es que siga bajando. Ahí toca volver a contar.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "1 oct",
+      230.86
+     ],
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ]
+    ],
+    "fuente": "Cierres diarios NVDA · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "pre": "si se rompe",
+    "titulo": "BAJO $124,50: SE RECUENTA",
+    "estatico": true,
+    "precio_cabeza": false,
+    "marcas": [
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 39,
+      "texto": "B",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null
+     }
+    ],
+    "niveles": [
+     {
+      "precio": 124.5,
+      "texto": "invalidación · $124,50",
+      "color": "warm",
+      "sync": "ciento"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Así que, el veredicto. Hoy, el patrón sigue vivo: el precio está en la onda B y por encima de ciento veinticuatro con cincuenta. Mientras no la pierda, Elliott apunta hacia arriba.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "SE CUMPLE",
+     "value": "$184–198",
+     "color": "green",
+     "sync": "vivo"
+    },
+    "right": {
+     "label": "SE ROMPE",
+     "value": "< $124,50",
+     "color": "warm",
+     "sync": "pierda"
+    }
+   }
+  },
+  {
+   "texto": "Ojo: esto no es una recomendación de inversión. Es un mapa, no una promesa, y siempre con stop loss. ¿Tú crees que se cumple? Comenta SÍ o NO, y cuando se resuelva, te traigo la parte dos.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "¿SE CUMPLE",
+     "LA ONDA C?"
+    ],
+    "syncs": [
+     null,
+     "cumple"
+    ],
+    "button": "COMENTA SÍ O NO",
+    "button_sync": "comenta"
+   }
+  }
+ ]
+}

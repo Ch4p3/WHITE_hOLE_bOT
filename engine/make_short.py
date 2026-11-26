@@ -817,6 +817,10 @@ def v_mercado(img, d, t, sc, p):
         r = 38 * k
         d.ellipse([x - r, yy - r, x + r, yy + r], fill=c2)
         text(d, (x, yy), m["texto"], 46 * k, BG, "black")
+        if m.get("nota") and k > 0.6:
+            ny = yy - 64 if m.get("pos", "arriba") == "arriba" else yy + 64
+            nx = min(max(x, bx0 + 70), bx1 - 70)
+            text(d, (nx, ny), m["nota"], 36, c2, "black")
     for i in p.get("fechas", []):
         text(d, (X(i), by0 + 44), serie[i][0], 34, GREY, "bold")
     if p.get("fuente"):

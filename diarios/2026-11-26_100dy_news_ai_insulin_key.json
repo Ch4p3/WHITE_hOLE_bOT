@@ -1,0 +1,113 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "AI helped design a new key for a broken insulin receptor 🧬",
+ "descripcion": "Study published November 25, 2026 in Science Translational Medicine: a computer-designed protein activated defective insulin receptors in mice. Caveat: mice, and rare genetic forms. Sources below 👇",
+ "hashtags": "#science #ai #insulin #diabetes #news #shorts",
+ "fuentes": [
+  "https://www.livescience.com/health/medicine-drugs/like-designing-a-new-key-to-open-a-defective-lock-ai-designed-protein-tricks-defective-insulin-receptors-into-working",
+  "https://sciety.org/articles/activity/10.64898/2026.05.04.722722"
+ ],
+ "escenas": [
+  {
+   "texto": "AI helped design a protein that makes broken insulin receptors work again.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🧬",
+    "texto": "NEW STUDY",
+    "tsize": 130,
+    "texto_sync": "design",
+    "sub": "November 25, 2026",
+    "sub_sync": "protein"
+   }
+  },
+  {
+   "texto": "Quick version. Insulin is like a key: it unlocks your cells so sugar from your blood can get in.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🔑",
+    "texto": "INSULIN = KEY",
+    "tsize": 120,
+    "texto_sync": "key",
+    "sub": "it unlocks your cells",
+    "sub_sync": "unlocks"
+   }
+  },
+  {
+   "texto": "But some people are born with a broken lock: the receptor doesn't respond, no matter how much insulin they have. It's a rare and very serious genetic disease.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the problem",
+    "word": "BROKEN LOCK",
+    "size": 190,
+    "sync": "broken",
+    "sub": "severe insulin resistance",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Scientists designed a brand new key on a computer. It turns on the receptor a different way, without needing insulin.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "INSULIN",
+     "value": "NO",
+     "color": "warm",
+     "sync": "scientists"
+    },
+    "right": {
+     "label": "NEW KEY",
+     "value": "YES",
+     "color": "blue",
+     "sync": "new"
+    }
+   }
+  },
+  {
+   "texto": "In mice carrying a patient's mutation, the new protein switched the receptor on and improved blood sugar control. Regular insulin couldn't.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the result, in mice",
+    "word": "IT WORKED",
+    "size": 250,
+    "sync": "switched",
+    "sub": "better blood sugar control",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Now the honest part: this is in mice, for rare genetic forms, not common diabetes. Human trials are still years away.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the honest part",
+    "word": "MICE ONLY",
+    "size": 240,
+    "sync": "mice",
+    "sub": "human trials still to come",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "But it shows something huge: we can now design medicines piece by piece, instead of finding them by luck. Follow for more science, with sources.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "MEDICINE,",
+     "DESIGNED",
+     "TO FIT."
+    ],
+    "syncs": [
+     null,
+     "design",
+     "piece"
+    ],
+    "button": "FOLLOW  +",
+    "button_sync": "follow"
+   }
+  }
+ ]
+}

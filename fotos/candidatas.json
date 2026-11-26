@@ -1,278 +1,607 @@
 {
- "Río Magdalena": [
+ "Roman Empire map 117": [
   {
-   "titulo": "File:Contaminacion Río Magdalena a la altura de la ciudad de Neiva.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Contaminacion_R%C3%ADo_Magdalena_a_la_altura_de_la_ciudad_de_Neiva.jpg/960px-Contaminacion_R%C3%ADo_Magdalena_a_la_altura_de_la_ciudad_de_Neiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Contaminacion_R%C3%ADo_Magdalena_a_la_altura_de_la_ciudad_de_Neiva.jpg",
+   "titulo": "File:EB1911 Rome - Roman Empire 14-117 A.D.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/EB1911_Rome_-_Roman_Empire_14-117_A.D.jpg/960px-EB1911_Rome_-_Roman_Empire_14-117_A.D.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:EB1911_Rome_-_Roman_Empire_14-117_A.D.jpg",
+   "ancho": 2391,
+   "alto": 1758,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Wilhelm Sieglin",
+   "descripcion": "Map of the Roman Empire 14-117 A.D."
+  },
+  {
+   "titulo": "File:Roman Empire at peak.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Roman_Empire_at_peak.jpg/960px-Roman_Empire_at_peak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Roman_Empire_at_peak.jpg",
+   "ancho": 3799,
+   "alto": 2360,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Levakpitam",
+   "descripcion": "Roman Empire at it max peak during 117 CE"
+  },
+  {
+   "titulo": "File:Roman empire 395.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Roman_empire_395.jpg/960px-Roman_empire_395.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Roman_empire_395.jpg",
+   "ancho": 2316,
+   "alto": 1861,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Shepherd, William R.",
+   "descripcion": "Das römische Reich zum Zeitpunkt des Todes Theodosius' I. 395 n. Chr."
+  }
+ ],
+ "Crisis of the Third Century map 271": [],
+ "Augustus denarius coin": [
+  {
+   "titulo": "File:Roman coin, Denarius of Augustus (FindID 714518).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Roman_coin%2C_Denarius_of_Augustus_%28FindID_714518%29.jpg/960px-Roman_coin%2C_Denarius_of_Augustus_%28FindID_714518%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Roman_coin,_Denarius_of_Augustus_(FindID_714518).jpg",
+   "ancho": 7184,
+   "alto": 3636,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "Salisbury and South Wiltshire Museum, Richard Henry, 2015-05-22 15:21:44",
+   "descripcion": "A silver Roman denarius of Augustus dating to the year 19 BC (Reece period 1). IOV TON reverse type depicting Jupiter standing left holding thunderbolt in right hand and sceptre in left hand in hexast"
+  },
+  {
+   "titulo": "File:Silver Denarius of Augustus (MANTIS).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Silver_Denarius_of_Augustus_%28MANTIS%29.jpg/960px-Silver_Denarius_of_Augustus_%28MANTIS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Silver_Denarius_of_Augustus_(MANTIS).jpg",
+   "ancho": 2288,
+   "alto": 2241,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "American Numismatic Society",
+   "descripcion": "Silver coin of Augustus; minted in Caesaraugusta, Hispania. Legend: CAESAR AVGVSTVS"
+  },
+  {
+   "titulo": "File:Silver denarius of Octavian (Augustus) MET LC-08 170 89b.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Silver_denarius_of_Octavian_%28Augustus%29_MET_LC-08_170_89b.jpg/960px-Silver_denarius_of_Octavian_%28Augustus%29_MET_LC-08_170_89b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Silver_denarius_of_Octavian_(Augustus)_MET_LC-08_170_89b.jpg",
+   "ancho": 2168,
+   "alto": 1824,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Roman; Denarius of Octavian; Coins"
+  },
+  {
+   "titulo": "File:WILT-E5BA8D (RIC I Augustus 272).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/WILT-E5BA8D_%28RIC_I_Augustus_272%29.jpg/960px-WILT-E5BA8D_%28RIC_I_Augustus_272%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:WILT-E5BA8D_(RIC_I_Augustus_272).jpg",
+   "ancho": 7812,
+   "alto": 4296,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "Richard Henry for the Salisbury and South Wiltshire Museum",
+   "descripcion": "An incomplete silver Roman denarius of Augustus (31 BC – AD 14), dating to the period c. 29–27 BC (Reece period 1). \nObverse: Apollo, facing right with laurel wreath\nReverse: [IMP CAESAR] [Imperator C"
+  }
+ ],
+ "Antoninianus Gallienus coin": [
+  {
+   "titulo": "File:Gallienus antoninianus.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Gallienus_antoninianus.jpg/960px-Gallienus_antoninianus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gallienus_antoninianus.jpg",
+   "ancho": 1024,
+   "alto": 1024,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Velatrix",
+   "descripcion": "An antoninianus of Gallienus."
+  },
+  {
+   "titulo": "File:Roman coin, Radiate (antoninianus) of Gallienus (FindID 855480).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Roman_coin%2C_Radiate_%28antoninianus%29_of_Gallienus_%28FindID_855480%29.jpg/960px-Roman_coin%2C_Radiate_%28antoninianus%29_of_Gallienus_%28FindID_855480%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Roman_coin,_Radiate_(antoninianus)_of_Gallienus_(FindID_855480).jpg",
+   "ancho": 1867,
+   "alto": 1320,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "The Portable Antiquities Scheme, Dot Boughton, 2017-07-27 15:05:05",
+   "descripcion": "Radiate (antoninianus) of Gallienus (joint reign) dating from AD257. Minted at Mediolanum/Milan. Probably RIC (Milan) 390, 391 or 392.\nObv: IMP GALLIE[NVS P AVG] / radiate bust right\nRef: PAX [AVG] / "
+  }
+ ],
+ "Solidus Constantine gold coin": [
+  {
+   "titulo": "File:Early Medieval gold coin pendant (solidus) (FindID 576925).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Early_Medieval_gold_coin_pendant_%28solidus%29_%28FindID_576925%29.jpg/960px-Early_Medieval_gold_coin_pendant_%28solidus%29_%28FindID_576925%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Early_Medieval_gold_coin_pendant_(solidus)_(FindID_576925).jpg",
+   "ancho": 3264,
+   "alto": 1901,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "The Portable Antiquities Scheme, Ian Richardson, 2015-06-11 14:56:57",
+   "descripcion": "A Byzantine gold solidus adapted into a pendant by way of a gold strip soldered to the top of the coin. The pendant was designed to be worn with the reverse visible as the loop is attached at 12 o'clo"
+  },
+  {
+   "titulo": "File:Gold Solidus of Constantine I, Trier, AD 310 - AD 313.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Gold_Solidus_of_Constantine_I%2C_Trier%2C_AD_310_-_AD_313.jpg/960px-Gold_Solidus_of_Constantine_I%2C_Trier%2C_AD_310_-_AD_313.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gold_Solidus_of_Constantine_I,_Trier,_AD_310_-_AD_313.jpg",
+   "ancho": 2263,
+   "alto": 2230,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "ANS",
+   "descripcion": "CONSTANTINVS P F AVG"
+  },
+  {
+   "titulo": "File:Gold Solidus of Constantine III, Lugdunum.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Gold_Solidus_of_Constantine_III%2C_Lugdunum.jpg/960px-Gold_Solidus_of_Constantine_III%2C_Lugdunum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gold_Solidus_of_Constantine_III,_Lugdunum.jpg",
+   "ancho": 2308,
+   "alto": 2232,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "ANS",
+   "descripcion": "FL CL CONSTA-NTINVS P F AVG"
+  },
+  {
+   "titulo": "File:Gold Solidus of Constantine II MET sf04-35-18s2.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Gold_Solidus_of_Constantine_II_MET_sf04-35-18s2.jpg/960px-Gold_Solidus_of_Constantine_II_MET_sf04-35-18s2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gold_Solidus_of_Constantine_II_MET_sf04-35-18s2.jpg",
+   "ancho": 1705,
+   "alto": 1661,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Byzantine; Solidus; Coins"
+  },
+  {
+   "titulo": "File:Gold Solidus of Constantius II MET sf04-35-18s1.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Gold_Solidus_of_Constantius_II_MET_sf04-35-18s1.jpg/960px-Gold_Solidus_of_Constantius_II_MET_sf04-35-18s1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gold_Solidus_of_Constantius_II_MET_sf04-35-18s1.jpg",
+   "ancho": 1680,
+   "alto": 1659,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Byzantine; Solidus; Coins"
+  },
+  {
+   "titulo": "File:Roman coin, Solidus of the House of Constantine (FindID 795895).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Roman_coin%2C_Solidus_of_the_House_of_Constantine_%28FindID_795895%29.jpg/960px-Roman_coin%2C_Solidus_of_the_House_of_Constantine_%28FindID_795895%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Roman_coin,_Solidus_of_the_House_of_Constantine_(FindID_795895).jpg",
+   "ancho": 2092,
+   "alto": 1208,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 2.0",
+   "autor": "The Portable Antiquities Scheme, Arwen Wood, 2016-07-14 12:19:47",
+   "descripcion": "A Gold semissis of the House of Constantine (Constantius II or Constans as Caesar) dating to AD 335. VICTORIA CAESARVM reverse type depiciting Victory advancing left holding wreath and palm. Mint of S"
+  },
+  {
+   "titulo": "File:Solidus MET sf04-35-3354s1.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Solidus_MET_sf04-35-3354s1.jpg/960px-Solidus_MET_sf04-35-3354s1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Solidus_MET_sf04-35-3354s1.jpg",
+   "ancho": 1579,
+   "alto": 1609,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Byzantine; Solidus; Coins"
+  },
+  {
+   "titulo": "File:Solidus MET sf04-35-3354s2.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Solidus_MET_sf04-35-3354s2.jpg/960px-Solidus_MET_sf04-35-3354s2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Solidus_MET_sf04-35-3354s2.jpg",
+   "ancho": 1596,
+   "alto": 1587,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Byzantine; Solidus; Coins"
+  }
+ ],
+ "Naqsh-e Rustam Shapur Valerian relief": [
+  {
+   "titulo": "File:Naqsh-e Rostam (20973448659).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Naqsh-e_Rostam_%2820973448659%29.jpg/960px-Naqsh-e_Rostam_%2820973448659%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Naqsh-e_Rostam_(20973448659).jpg",
    "ancho": 6000,
    "alto": 4000,
    "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "CesarRincon",
-   "descripcion": "Fotografía que refleja la contaminación del Río Magdalena, mientras garzas y otras aves se alimentan con desechos contaminados. Foto tomada desde el puente Santander llegando a la altura de la ciudad "
+   "licencia": "CC BY 2.0",
+   "autor": "s1ingshot from Berlin, Germany",
+   "descripcion": "roman caesar Valerion being captured by Persian king"
   },
   {
-   "titulo": "File:Rio Magdalena Delta landsat.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Rio_Magdalena_Delta_landsat.jpg/960px-Rio_Magdalena_Delta_landsat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Rio_Magdalena_Delta_landsat.jpg",
-   "ancho": 1096,
-   "alto": 1006,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Alexrk2",
-   "descripcion": "Landsat7 image of the Magdalena River delta."
-  },
-  {
-   "titulo": "File:Rio magdalena mundung.JPG",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Rio_magdalena_mundung.JPG/960px-Rio_magdalena_mundung.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Rio_magdalena_mundung.JPG",
-   "ancho": 4064,
-   "alto": 4096,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "NASA",
-   "descripcion": "Magdalena River delta\nBarranquilla, Magdalena River Mouth, Colombia\nThe mouth of the sediment-laden Magdalena River and Colombia’s chief port, Barranquilla, can be seen in this south-southeast-looking"
-  }
- ],
- "Doradal Antioquia": [],
- "Puerto Triunfo": [
-  {
-   "titulo": "File:1940 Census Enumeration District Descriptions - Puerto Rico - Humacao County - ED 68-1, ED 68-2, ED 68-3 - NARA - 5879295.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-1%2C_ED_68-2%2C_ED_68-3_-_NARA_-_5879295.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-1%2C_ED_68-2%2C_ED_68-3_-_NARA_-_5879295.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-1,_ED_68-2,_ED_68-3_-_NARA_-_5879295.jpg",
-   "ancho": 4408,
-   "alto": 2456,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Unknown authorUnknown author or not provided",
-   "descripcion": "Scope and content:  This item lists Enumeration Districts for:\nPR ED 68-1: HUMACAO TOWN COMPRISING BARRIO SAN FRANCISCO INCLUDING ENSANCHE JANER, PLAZUELA FRIAS, AND EASTERN PART OF ENSANCHE VALLADARE"
-  },
-  {
-   "titulo": "File:1940 Census Enumeration District Descriptions - Puerto Rico - Humacao County - ED 68-4, ED 68-5, ED 68-6, ED 68-7 - NARA - 5879296.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-4%2C_ED_68-5%2C_ED_68-6%2C_ED_68-7_-_NARA_-_5879296.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-4%2C_ED_68-5%2C_ED_68-6%2C_ED_68-7_-_NARA_-_5879296.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-4,_ED_68-5,_ED_68-6,_ED_68-7_-_NARA_-_5879296.jpg",
-   "ancho": 4312,
-   "alto": 2456,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Unknown authorUnknown author or not provided",
-   "descripcion": "Scope and content:  This item lists Enumeration Districts for:\nPR ED 68-4: HUMACAO TOWN COMPRISING BARRIO SANTIAGO BOUNDED BY (N) CALLE NOYA Y HERNANDEZ; (E) CALLE ANTONIO LOPEZ; (S) END OF URBAN ZONE"
-  },
-  {
-   "titulo": "File:1940 Census Enumeration District Descriptions - Puerto Rico - Humacao County - ED 68-8, ED 68-9, ED 68-10, ED 68-11, ED 68-12, ED 68-13 - NARA - 5879297.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-8%2C_ED_68-9%2C_ED_68-10%2C_ED_68-11%2C_ED_68-12%2C_ED_68-13_-_NARA_-_5879297.jpg/960px-1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-8%2C_ED_68-9%2C_ED_68-10%2C_ED_68-11%2C_ED_68-12%2C_ED_68-13_-_NARA_-_5879297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Descriptions_-_Puerto_Rico_-_Humacao_County_-_ED_68-8,_ED_68-9,_ED_68-10,_ED_68-11,_ED_68-12,_ED_68-13_-_NARA_-_5879297.jpg",
-   "ancho": 4328,
-   "alto": 2456,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Unknown authorUnknown author or not provided",
-   "descripcion": "Scope and content:  This item lists Enumeration Districts for:\nPR ED 68-8: BARRIO BUENA VISTA, BARRIADA BUENA VISTA LOCATED S OF CALLE PUNTA BRAVA AND E OF CALLE ANTONIO LOPEZ.\nPR ED 68-9: BARRIO CAND"
-  },
-  {
-   "titulo": "File:Balsa del paso internacional entre Puerto Rico, Provincia de Misiones (Argentina) y Puerto Triunfo, Departamento Itapúa (Paraguay).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Balsa_del_paso_internacional_entre_Puerto_Rico%2C_Provincia_de_Misiones_%28Argentina%29_y_Puerto_Triunfo%2C_Departamento_Itap%C3%BAa_%28Paraguay%29.jpg/960px-Balsa_del_paso_internacional_entre_Puerto_Rico%2C_Provincia_de_Misiones_%28Argentina%29_y_Puerto_Triunfo%2C_Departamento_Itap%C3%BAa_%28Paraguay%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Balsa_del_paso_internacional_entre_Puerto_Rico,_Provincia_de_Misiones_(Argentina)_y_Puerto_Triunfo,_Departamento_Itap%C3%BAa_(Paraguay).jpg",
-   "ancho": 4128,
-   "alto": 3096,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 4.0",
-   "autor": "Horacio Cambeiro",
-   "descripcion": "Balsa del paso internacional entre Puerto Rico (Argentina) y Puerto Triunfo (Paraguay). Foto tomada desde la Zona Primaria Aduanera (Resguardo Puerto Rico) y Prefectura Puerto Rico, Provincia de Misio"
-  },
-  {
-   "titulo": "File:Balsa del paso internacional entre Puerto Rico (Argentina) y Puerto Triunfo (Paraguay).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Balsa_del_paso_internacional_entre_Puerto_Rico_%28Argentina%29_y_Puerto_Triunfo_%28Paraguay%29.jpg/960px-Balsa_del_paso_internacional_entre_Puerto_Rico_%28Argentina%29_y_Puerto_Triunfo_%28Paraguay%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Balsa_del_paso_internacional_entre_Puerto_Rico_(Argentina)_y_Puerto_Triunfo_(Paraguay).jpg",
-   "ancho": 4128,
-   "alto": 3096,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 4.0",
-   "autor": "Horacio Cambeiro",
-   "descripcion": "Balsa del paso internacional entre Puerto Rico (Argentina) y Puerto Triunfo (Paraguay). Foto tomada desde la Zona Primaria Aduanera (Resguardo Puerto Rico) y Prefectura Puerto Rico, Provincia de Misio"
-  },
-  {
-   "titulo": "File:Llegada de la Balsa del paso internacional a Puerto Rico, Provincia de Misiones (Argentina) proveniente de Puerto Triunfo, Departamento Itapúa (Paraguay) sobre el río Paraná.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Llegada_de_la_Balsa_del_paso_internacional_a_Puerto_Rico%2C_Provincia_de_Misiones_%28Argentina%29_proveniente_de_Puerto_Triunfo%2C_Departamento_Itap%C3%BAa_%28Paraguay%29_sobre_el_r%C3%ADo_Paran%C3%A1.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Llegada_de_la_Balsa_del_paso_internacional_a_Puerto_Rico,_Provincia_de_Misiones_(Argentina)_proveniente_de_Puerto_Triunfo,_Departamento_Itap%C3%BAa_(Paraguay)_sobre_el_r%C3%ADo_Paran%C3%A1.jpg",
-   "ancho": 4128,
-   "alto": 3096,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 4.0",
-   "autor": "Horacio Cambeiro",
-   "descripcion": "Llegada de la Balsa del paso internacional a Puerto Rico, Provincia de Misiones (Argentina) proveniente de Puerto Triunfo, Departamento Itapúa (Paraguay) sobre el río Paraná. Foto tomada desde la Zona"
-  },
-  {
-   "titulo": "File:Llegada de la Balsa del paso internacional a la ciudad de Puerto Rico, Misiones (Argentina) proveniente de Puerto Triunfo, Itapúa (Paraguay) sobre el río Paraná - 2017.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Llegada_de_la_Balsa_del_paso_internacional_a_la_ciudad_de_Puerto_Rico%2C_Misiones_%28Argentina%29_proveniente_de_Puerto_Triunfo%2C_Itap%C3%BAa_%28Paraguay%29_sobre_el_r%C3%ADo_Paran%C3%A1_-_2017.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Llegada_de_la_Balsa_del_paso_internacional_a_la_ciudad_de_Puerto_Rico,_Misiones_(Argentina)_proveniente_de_Puerto_Triunfo,_Itap%C3%BAa_(Paraguay)_sobre_el_r%C3%ADo_Paran%C3%A1_-_2017.jpg",
-   "ancho": 4128,
-   "alto": 3096,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 4.0",
-   "autor": "Horacio Cambeiro",
-   "descripcion": "Llegada de la Balsa del paso internacional a Puerto Rico, Provincia de Misiones (Argentina) proveniente de Puerto Triunfo, Departamento Itapúa (Paraguay) sobre el río Paraná. Zona Primaria Aduanera (R"
-  },
-  {
-   "titulo": "File:Plano de la Ensenada del Triunfo de la Cruz. (IA dr plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Plano_de_la_Ensenada_del_Triunfo_de_la_Cruz._%28IA_dr_plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050%29.jpg/960px-Plano_de_la_Ensenada_del_Triunfo_de_la_Cruz._%28IA_dr_plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Plano_de_la_Ensenada_del_Triunfo_de_la_Cruz._(IA_dr_plano-de-la-ensenada-del-triunfo-de-la-cruz-14322050).jpg",
-   "ancho": 9332,
-   "alto": 7237,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Spain. Dirección de Trabajos Hidrográficos\nFerrer y Cafranga, Joaquín María de, 1777-1861",
-   "descripcion": "Zoomable full resolution image available at davidrumsey.com.This image 14322.050 is a part of image group 14322.000.Nautical chart showing the port of Triunfo de la Cruz, Honduras. Features harbor sou"
-  }
- ],
- "Hipopótamos Magdalena Medio": [],
- "hippopotamus walking grass": [],
- "Puerto Berrío río": [],
- "hippopotamus night": [
-  {
-   "titulo": "File:Hippo Trails Carved Through Forest Undergrowth, Murchison Falls National Park00.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park00.jpg/960px-Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippo_Trails_Carved_Through_Forest_Undergrowth,_Murchison_Falls_National_Park00.jpg",
-   "ancho": 2119,
-   "alto": 3679,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "BMKME",
-   "descripcion": "This image depicts a narrow, rocky trail through dense forest at Murchison Falls National Park, Uganda. The terrain, scattered with leaf litter and tree roots, bears the imprints of hippo movement—nat"
-  },
-  {
-   "titulo": "File:Hippo Trails Carved Through Forest Undergrowth, Murchison Falls National Park01.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park01.jpg/960px-Hippo_Trails_Carved_Through_Forest_Undergrowth%2C_Murchison_Falls_National_Park01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippo_Trails_Carved_Through_Forest_Undergrowth,_Murchison_Falls_National_Park01.jpg",
-   "ancho": 2296,
-   "alto": 4080,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "BMKME",
-   "descripcion": "This image depicts a narrow, rocky trail through dense forest at Murchison Falls National Park, Uganda. The terrain, scattered with leaf litter and tree roots, bears the imprints of hippo movement—nat"
-  },
-  {
-   "titulo": "File:Hippopotamus, Odysseum (MONTPELLIER,FR34) (3430134700).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Hippopotamus%2C_Odysseum_%28MONTPELLIER%2CFR34%29_%283430134700%29.jpg/960px-Hippopotamus%2C_Odysseum_%28MONTPELLIER%2CFR34%29_%283430134700%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus,_Odysseum_(MONTPELLIER,FR34)_(3430134700).jpg",
+   "titulo": "File:Naqsh-e Rustam (19339702160).jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Naqsh-e_Rustam_%2819339702160%29.jpg/960px-Naqsh-e_Rustam_%2819339702160%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Naqsh-e_Rustam_(19339702160).jpg",
    "ancho": 3888,
    "alto": 2592,
    "mime": "image/jpeg",
    "licencia": "CC BY 2.0",
-   "autor": "jean-louis Zimmermann from Orange, FRANCE",
-   "descripcion": "hippopotamus, Odysseum (MONTPELLIER,FR34)"
+   "autor": "Blondinrikard Fröberg from Göteborg, Sweden",
+   "descripcion": "Tombs of Darius I the Great, Xerxes I, Artaxerxes, and, Darius II"
   },
   {
-   "titulo": "File:Hippopotamuses in Shoushan Zoo.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Hippopotamuses_in_Shoushan_Zoo.jpg/960px-Hippopotamuses_in_Shoushan_Zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamuses_in_Shoushan_Zoo.jpg",
-   "ancho": 1566,
-   "alto": 1046,
+   "titulo": "File:Naqsh i Rustam. Shapour.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Naqsh_i_Rustam._Shapour.jpg/960px-Naqsh_i_Rustam._Shapour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Naqsh_i_Rustam._Shapour.jpg",
+   "ancho": 1507,
+   "alto": 1010,
    "mime": "image/jpeg",
-   "licencia": "Attribution",
-   "autor": "壽山動物園 Shoushan Zoo",
-   "descripcion": "With cute looking, hippopotamus is actually one of the most dangerous animals in Africa. It has a bad temper and strong offensive, so do not get too close to them. It spends most of a day in the water"
+   "licencia": "CC BY 2.5",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Naqsh-i Rustam (Iran). Bas-relief rupestre représentant le triomphe du roi Shapour Ier sur les empereurs romains Philippe l'Arabe (244-249), à genoux faisant sa soumission, et Valérien (253-260) debou"
   },
   {
-   "titulo": "File:In wildest Africa (Page 353) BHL23041218.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/In_wildest_Africa_%28Page_353%29_BHL23041218.jpg/960px-In_wildest_Africa_%28Page_353%29_BHL23041218.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:In_wildest_Africa_(Page_353)_BHL23041218.jpg",
-   "ancho": 4094,
-   "alto": 2528,
-   "mime": "image/jpeg",
-   "licencia": "Public domain",
-   "autor": "Schillings, Karl Georg; Whyte, Frederic; Whyte, Frederic",
-   "descripcion": "In wildest Africa /  by C.G. Schillings ; translated from German By Frederic Whyte ; with over 300 photographic studies direct from the author's negatives, taken by day and night ; and other illustrat"
-  },
-  {
-   "titulo": "File:In wildest Africa BHL23041236.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/In_wildest_Africa_BHL23041236.jpg/960px-In_wildest_Africa_BHL23041236.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:In_wildest_Africa_BHL23041236.jpg",
-   "ancho": 4094,
-   "alto": 2528,
+   "titulo": "File:Relief of Shapur I capturing Valerian.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Relief_of_Shapur_I_capturing_Valerian.jpg/960px-Relief_of_Shapur_I_capturing_Valerian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Relief_of_Shapur_I_capturing_Valerian.jpg",
+   "ancho": 3072,
+   "alto": 2048,
    "mime": "image/jpeg",
    "licencia": "Public domain",
-   "autor": "Schillings, Karl Georg; Whyte, Frederic; Whyte, Frederic",
-   "descripcion": "In wildest Africa /  by C.G. Schillings ; translated from German By Frederic Whyte ; with over 300 photographic studies direct from the author's negatives, taken by day and night ; and other illustrat"
-  },
-  {
-   "titulo": "File:Mara-thon (15 of 101) (24395680512).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Mara-thon_%2815_of_101%29_%2824395680512%29.jpg/960px-Mara-thon_%2815_of_101%29_%2824395680512%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Mara-thon_(15_of_101)_(24395680512).jpg",
-   "ancho": 3307,
-   "alto": 2480,
-   "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "Weldon Kennedy from London, UK",
-   "descripcion": "Mara-thon (15 of 101)"
-  },
-  {
-   "titulo": "File:Nocturnal Grazing Hippopotamus at Murchison Falls National Park.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Nocturnal_Grazing_Hippopotamus_at_Murchison_Falls_National_Park.jpg/960px-Nocturnal_Grazing_Hippopotamus_at_Murchison_Falls_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Nocturnal_Grazing_Hippopotamus_at_Murchison_Falls_National_Park.jpg",
-   "ancho": 1837,
-   "alto": 2406,
-   "mime": "image/jpeg",
-   "licencia": "CC0",
-   "autor": "BMKME",
-   "descripcion": "This nighttime photograph captures a hippopotamus grazing on land at Murchison Falls National Park in Uganda. Illuminated by artificial light—likely from a safari vehicle—the hippo is seen feeding on "
+   "autor": "Ali Ganjei علی گنجه ای",
+   "descripcion": "A bas relief sculpture at Naqsh-e Rostam, Iran, depicting the triumph of Shapur I over the Roman Emperor Valerian."
   }
  ],
- "hippopotamus warning sign": [
+ "Edict on Maximum Prices inscription": [],
+ "Aurelian Walls Rome": [
   {
-   "titulo": "File:Hippopotamus warning sign - Lake Naivasha (181090719).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Hippopotamus_warning_sign_-_Lake_Naivasha_%28181090719%29.jpg/960px-Hippopotamus_warning_sign_-_Lake_Naivasha_%28181090719%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Hippopotamus_warning_sign_-_Lake_Naivasha_(181090719).jpg",
-   "ancho": 2048,
-   "alto": 1365,
+   "titulo": "File:Aurelian Walls Rome 2011 1.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Aurelian_Walls_Rome_2011_1.jpg/960px-Aurelian_Walls_Rome_2011_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Aurelian_Walls_Rome_2011_1.jpg",
+   "ancho": 3000,
+   "alto": 1737,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Karelj",
+   "descripcion": "Southern part Aurelian Walls around of old Rome city near of Porta san Sebastiano in Italy"
+  },
+  {
+   "titulo": "File:Celio - le mura tra porta san Sebastiano e porta Ardeatina 1974.JPG",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Celio_-_le_mura_tra_porta_san_Sebastiano_e_porta_Ardeatina_1974.JPG/960px-Celio_-_le_mura_tra_porta_san_Sebastiano_e_porta_Ardeatina_1974.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Celio_-_le_mura_tra_porta_san_Sebastiano_e_porta_Ardeatina_1974.JPG",
+   "ancho": 2272,
+   "alto": 1704,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "user:Lalupa",
+   "descripcion": "The Aurelian walls between Porta San Sebastiano and Porta Ardeatina (Viale di Porta Ardeatina)"
+  },
+  {
+   "titulo": "File:City wall of Rome in Lateran, 2013-2.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/City_wall_of_Rome_in_Lateran%2C_2013-2.jpg/960px-City_wall_of_Rome_in_Lateran%2C_2013-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:City_wall_of_Rome_in_Lateran,_2013-2.jpg",
+   "ancho": 4752,
+   "alto": 3168,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Szilas",
+   "descripcion": "City wall of Rome in Lateran"
+  },
+  {
+   "titulo": "File:City wall of Rome in Lateran, 2013.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/City_wall_of_Rome_in_Lateran%2C_2013.jpg/960px-City_wall_of_Rome_in_Lateran%2C_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:City_wall_of_Rome_in_Lateran,_2013.jpg",
+   "ancho": 3168,
+   "alto": 4752,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Szilas",
+   "descripcion": "City wall of Rome in Lateran"
+  },
+  {
+   "titulo": "File:Isaac Weld - Walls of Rome, The Aurelian Wall, with the Pyramid of Cestius - B1981.25.2923 - Yale Center for British Art.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Isaac_Weld_-_Walls_of_Rome%2C_The_Aurelian_Wall%2C_with_the_Pyramid_of_Cestius_-_B1981.25.2923_-_Yale_Center_for_British_Art.jpg/960px-Isaac_Weld_-_Walls_of_Rome%2C_The_Aurelian_Wall%2C_with_the_Pyramid_of_Cestius_-_B1981.25.2923_-_Yale_Center_for_British_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Isaac_Weld_-_Walls_of_Rome,_The_Aurelian_Wall,_with_the_Pyramid_of_Cestius_-_B1981.25.2923_-_Yale_Center_for_British_Art.jpg",
+   "ancho": 1920,
+   "alto": 784,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Isaac Weld",
+   "descripcion": ""
+  },
+  {
+   "titulo": "File:Ludovisi - mura e latrina 1870.JPG",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Ludovisi_-_mura_e_latrina_1870.JPG/960px-Ludovisi_-_mura_e_latrina_1870.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Ludovisi_-_mura_e_latrina_1870.JPG",
+   "ancho": 2272,
+   "alto": 1704,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "user:Lalupa",
+   "descripcion": "Roma, piazza Fiume: latrina nelle mura Aureliane presso Porta Salaria"
+  },
+  {
+   "titulo": "File:Plan of the City of Rome. Part 6 with the Aurelian city wall, the Porta Portuensis, Porta San Paolo and the Sepulcre of Caius Cestius. MET DP825217.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Plan_of_the_City_of_Rome._Part_6_with_the_Aurelian_city_wall%2C_the_Porta_Portuensis%2C_Porta_San_Paolo_and_the_Sepulcre_of_Caius_Cestius._MET_DP825217.jpg/960px-Plan_of_the_City_of_Rome._Part_6_with_the_Aurelian_city_wall%2C_the_Porta_Portuensis%2C_Porta_San_Paolo_and_the_Sepulcre_of_Caius_Cestius._MET_DP825217.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Plan_of_the_City_of_Rome._Part_6_with_the_Aurelian_city_wall,_the_Porta_Portuensis,_Porta_San_Paolo_and_the_Sepulcre_of_Caius_Cestius._MET_DP825217.jpg",
+   "ancho": 1411,
+   "alto": 1888,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Giovanni Domenico de Rossi / Camillo Francesco Maria Pamphili, 1st Prince of San Martino al Cimino and Valmontone / Antonio Tempesta",
+   "descripcion": "Print; Prints"
+  },
+  {
+   "titulo": "File:Porta San Paolo - Piramide Cestia - Rome, 1864-1866.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Porta_San_Paolo_-_Piramide_Cestia_-_Rome%2C_1864-1866.jpg/960px-Porta_San_Paolo_-_Piramide_Cestia_-_Rome%2C_1864-1866.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Porta_San_Paolo_-_Piramide_Cestia_-_Rome,_1864-1866.jpg",
+   "ancho": 1034,
+   "alto": 759,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Carlo Baldassarre Simelli OR John Henry Parker (Source: [2])",
+   "descripcion": "Le Mura Aureliane, Porta San Paolo (Porta Ostiensis), la Piramide Cestia, il cimitero acattolico e... nient'altro.\nFoto attribuita a Carlo Baldassarre Simelli, Archivio Fotografico Comunale, 1864-1866"
+  }
+ ],
+ "Roman legionary reenactment": [
+  {
+   "titulo": "File:Roman Legionary Reenactor, Butser Roman Villa.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Roman_Legionary_Reenactor%2C_Butser_Roman_Villa.jpg/960px-Roman_Legionary_Reenactor%2C_Butser_Roman_Villa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Roman_Legionary_Reenactor,_Butser_Roman_Villa.jpg",
+   "ancho": 4000,
+   "alto": 6000,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Tim Sheerman-Chase",
+   "descripcion": "Reconstruction. 4th Century CE. [1]"
+  },
+  {
+   "titulo": "File:Roman holiday birthplace of rome roman soldiers-883133.jpg!d.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Roman_holiday_birthplace_of_rome_roman_soldiers-883133.jpg%21d.jpg/960px-Roman_holiday_birthplace_of_rome_roman_soldiers-883133.jpg%21d.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Roman_holiday_birthplace_of_rome_roman_soldiers-883133.jpg!d.jpg",
+   "ancho": 1200,
+   "alto": 800,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Modern portrayal of Roman soldiers (legionaries)",
+   "descripcion": "Modern depiction of Roman legionaries"
+  },
+  {
+   "titulo": "File:Split - City wall - Roman soldiers.JPG",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Split_-_City_wall_-_Roman_soldiers.JPG/960px-Split_-_City_wall_-_Roman_soldiers.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Split_-_City_wall_-_Roman_soldiers.JPG",
+   "ancho": 1920,
+   "alto": 2560,
    "mime": "image/jpeg",
    "licencia": "CC BY 3.0",
-   "autor": "Daniel Aufgang",
-   "descripcion": "Hippopotamus warning sign at Lake Naivasha, Kenya"
+   "autor": "JoJan",
+   "descripcion": "Actors impersonating Roman legionaries; Split, Croatia"
+  }
+ ],
+ "Colosseum Rome": [
+  {
+   "titulo": "File:Arch Colosseum Rome Italy.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Arch_Colosseum_Rome_Italy.jpg/960px-Arch_Colosseum_Rome_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Arch_Colosseum_Rome_Italy.jpg",
+   "ancho": 3061,
+   "alto": 4603,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Jebulon",
+   "descripcion": "View of inside of the Colosseum, through an arch. Rome, Italy."
   },
   {
-   "titulo": "File:Human Fingerprints on an Ancient Landscape (153611 - libya plateau oli2 20241117 lrg).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libya_plateau_oli2_20241117_lrg%29.jpg/960px-Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libya_plateau_oli2_20241117_lrg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Human_Fingerprints_on_an_Ancient_Landscape_(153611_-_libya_plateau_oli2_20241117_lrg).jpg",
-   "ancho": 1670,
-   "alto": 1113,
+   "titulo": "File:Chrisme Colosseum Rome Italy.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Chrisme_Colosseum_Rome_Italy.jpg/960px-Chrisme_Colosseum_Rome_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Chrisme_Colosseum_Rome_Italy.jpg",
+   "ancho": 4009,
+   "alto": 3764,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Jebulon",
+   "descripcion": "Monogramme of Christ on a plaque of a sarcophagus, 4th-century CE, marble, Musei Vaticani, on display in a temporary exhibition at Colosseum, Rome, Italy."
+  },
+  {
+   "titulo": "File:Colosseum-Rome-May-2009.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Colosseum-Rome-May-2009.jpg/960px-Colosseum-Rome-May-2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Colosseum-Rome-May-2009.jpg",
+   "ancho": 3264,
+   "alto": 2346,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Acediscovery",
+   "descripcion": "The Colosseum in Rome, Italy in May 2009"
+  },
+  {
+   "titulo": "File:Colosseum Cross Rome Italy.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Colosseum_Cross_Rome_Italy.jpg/960px-Colosseum_Cross_Rome_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Colosseum_Cross_Rome_Italy.jpg",
+   "ancho": 4592,
+   "alto": 3056,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Jebulon",
+   "descripcion": "Interior of the Colosseum, the cross. Rome, Italy."
+  },
+  {
+   "titulo": "File:Colosseum largeur Rome Italy.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Colosseum_largeur_Rome_Italy.jpg/960px-Colosseum_largeur_Rome_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Colosseum_largeur_Rome_Italy.jpg",
+   "ancho": 2927,
+   "alto": 4540,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Jebulon",
+   "descripcion": "View of the Colosseum, width. Rome, Italy."
+  },
+  {
+   "titulo": "File:Colosseum of Rome, Italy.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Colosseum_of_Rome%2C_Italy.jpg/960px-Colosseum_of_Rome%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Colosseum_of_Rome,_Italy.jpg",
+   "ancho": 8200,
+   "alto": 5162,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Wilfredor",
+   "descripcion": "Colosseum of Rome, Italy"
+  },
+  {
+   "titulo": "File:Colosseum of Rome and Roman forum.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Colosseum_of_Rome_and_Roman_forum.jpg/960px-Colosseum_of_Rome_and_Roman_forum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Colosseum_of_Rome_and_Roman_forum.jpg",
+   "ancho": 7316,
+   "alto": 4330,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Wilfredor",
+   "descripcion": "Colosseum of Rome and Roman Forum, Italy"
+  },
+  {
+   "titulo": "File:Colosseum ovale sous-sol Rome Italy.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Colosseum_ovale_sous-sol_Rome_Italy.jpg/960px-Colosseum_ovale_sous-sol_Rome_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Colosseum_ovale_sous-sol_Rome_Italy.jpg",
+   "ancho": 4795,
+   "alto": 3427,
+   "mime": "image/jpeg",
+   "licencia": "CC0",
+   "autor": "Jebulon",
+   "descripcion": "The oval of the arena of the Colosseum, view over the underground. Rome, Italy."
+  }
+ ],
+ "Walls of Constantinople": [
+  {
+   "titulo": "File:Theodosian Walls in Constantinople 1.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Theodosian_Walls_in_Constantinople_1.jpg/960px-Theodosian_Walls_in_Constantinople_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Theodosian_Walls_in_Constantinople_1.jpg",
+   "ancho": 1200,
+   "alto": 900,
    "mime": "image/jpeg",
    "licencia": "Public domain",
-   "autor": "NASA Earth Observatory images by Michala Garrison, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
-   "descripcion": "Today’s story is the answer to the November 2024 puzzler.\nTowering over the desert in southwestern Libya, the Messak Settafet plateau resembles the wall of a giant fortress, with its dark, erosion-res"
+   "autor": "No machine-readable author provided. CrniBombarder!!! assumed (based on copyright claims).",
+   "descripcion": "The Theodosian Walls in Constantinople.\n\nView to the south from Deuterou(Belgrade) gate."
   },
   {
-   "titulo": "File:Human Fingerprints on an Ancient Landscape (153611 - libyaoilfield oli2 20241117 lrg).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaoilfield_oli2_20241117_lrg%29.jpg/960px-Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaoilfield_oli2_20241117_lrg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Human_Fingerprints_on_an_Ancient_Landscape_(153611_-_libyaoilfield_oli2_20241117_lrg).jpg",
-   "ancho": 2165,
-   "alto": 1503,
+   "titulo": "File:Theodosian Walls in Constantinople 2.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Theodosian_Walls_in_Constantinople_2.jpg/960px-Theodosian_Walls_in_Constantinople_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Theodosian_Walls_in_Constantinople_2.jpg",
+   "ancho": 1200,
+   "alto": 900,
    "mime": "image/jpeg",
    "licencia": "Public domain",
-   "autor": "NASA Earth Observatory images by Michala Garrison, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
-   "descripcion": "Today’s story is the answer to the November 2024 puzzler.\nTowering over the desert in southwestern Libya, the Messak Settafet plateau resembles the wall of a giant fortress, with its dark, erosion-res"
+   "autor": "Wikimedia Commons",
+   "descripcion": ""
   },
   {
-   "titulo": "File:Human Fingerprints on an Ancient Landscape (153611 - libyaplateau oli2 20241117 lrg).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaplateau_oli2_20241117_lrg%29.jpg/960px-Human_Fingerprints_on_an_Ancient_Landscape_%28153611_-_libyaplateau_oli2_20241117_lrg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Human_Fingerprints_on_an_Ancient_Landscape_(153611_-_libyaplateau_oli2_20241117_lrg).jpg",
-   "ancho": 7751,
-   "alto": 7881,
+   "titulo": "File:Theodosian Walls in Constantinople 3.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Theodosian_Walls_in_Constantinople_3.jpg/960px-Theodosian_Walls_in_Constantinople_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Theodosian_Walls_in_Constantinople_3.jpg",
+   "ancho": 1200,
+   "alto": 900,
    "mime": "image/jpeg",
    "licencia": "Public domain",
-   "autor": "NASA Earth Observatory images by Michala Garrison, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
-   "descripcion": "Today’s story is the answer to the November 2024 puzzler.\nTowering over the desert in southwestern Libya, the Messak Settafet plateau resembles the wall of a giant fortress, with its dark, erosion-res"
+   "autor": "Wikimedia Commons",
+   "descripcion": ""
   },
   {
-   "titulo": "File:Warning sign, Lake Chamo (28860685910).jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Warning_sign%2C_Lake_Chamo_%2828860685910%29.jpg/960px-Warning_sign%2C_Lake_Chamo_%2828860685910%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Warning_sign,_Lake_Chamo_(28860685910).jpg",
-   "ancho": 6000,
-   "alto": 4000,
+   "titulo": "File:Theodosian Walls in Constantinople 4.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Theodosian_Walls_in_Constantinople_4.jpg/960px-Theodosian_Walls_in_Constantinople_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Theodosian_Walls_in_Constantinople_4.jpg",
+   "ancho": 1200,
+   "alto": 900,
    "mime": "image/jpeg",
-   "licencia": "CC BY 2.0",
-   "autor": "Richard Mortel from Riyadh, Saudi Arabia",
-   "descripcion": "Warning sign, Lake Chamo"
+   "licencia": "Public domain",
+   "autor": "Wikimedia Commons",
+   "descripcion": ""
+  },
+  {
+   "titulo": "File:Theodosian Walls in Constantinople 5.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Theodosian_Walls_in_Constantinople_5.jpg/960px-Theodosian_Walls_in_Constantinople_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Theodosian_Walls_in_Constantinople_5.jpg",
+   "ancho": 1200,
+   "alto": 900,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "CrniBombarder!!!",
+   "descripcion": "The Theodosian Walls in Constantinople."
+  },
+  {
+   "titulo": "File:Upper room inside tower of Theodosian Walls in Constantinople.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Upper_room_inside_tower_of_Theodosian_Walls_in_Constantinople.jpg/960px-Upper_room_inside_tower_of_Theodosian_Walls_in_Constantinople.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Upper_room_inside_tower_of_Theodosian_Walls_in_Constantinople.jpg",
+   "ancho": 1200,
+   "alto": 900,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "No machine-readable author provided. CrniBombarder!!! assumed (based on copyright claims).",
+   "descripcion": "The Theodosian Walls in Constantinople.\n\nUpper room inside tower."
+  },
+  {
+   "titulo": "File:Walls of Constantinople 1.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Walls_of_Constantinople_1.jpg/960px-Walls_of_Constantinople_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Walls_of_Constantinople_1.jpg",
+   "ancho": 1200,
+   "alto": 900,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Wikimedia Commons",
+   "descripcion": ""
+  }
+ ],
+ "Carthage ruins Tunisia": [
+  {
+   "titulo": "File:Carthage - panoramio.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Carthage_-_panoramio.jpg/960px-Carthage_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Carthage_-_panoramio.jpg",
+   "ancho": 2592,
+   "alto": 1944,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 3.0",
+   "autor": "Gonzo Gooner",
+   "descripcion": "Carthage"
+  },
+  {
+   "titulo": "File:Carthage Harbour - panoramio.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Carthage_Harbour_-_panoramio.jpg/960px-Carthage_Harbour_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Carthage_Harbour_-_panoramio.jpg",
+   "ancho": 2592,
+   "alto": 1944,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 3.0",
+   "autor": "Gonzo Gooner",
+   "descripcion": "Carthage Harbour"
+  },
+  {
+   "titulo": "File:Carthage excavations ILN 15 May 1858.JPG",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Carthage_excavations_ILN_15_May_1858.JPG/960px-Carthage_excavations_ILN_15_May_1858.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Carthage_excavations_ILN_15_May_1858.JPG",
+   "ancho": 1000,
+   "alto": 664,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "Unknown engraver",
+   "descripcion": "From the Illustrated London News of 15 May 1858, Arabs Excavating at the Ruins of Carthage, excavations run by Nathan Davis."
+  },
+  {
+   "titulo": "File:Gamart ou La Nécropole Juive de Carthage 04.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Gamart_ou_La_N%C3%A9cropole_Juive_de_Carthage_04.jpg/960px-Gamart_ou_La_N%C3%A9cropole_Juive_de_Carthage_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Gamart_ou_La_N%C3%A9cropole_Juive_de_Carthage_04.jpg",
+   "ancho": 2354,
+   "alto": 3308,
+   "mime": "image/jpeg",
+   "licencia": "Public domain",
+   "autor": "R. P. Delattre ( Pères Blancs)",
+   "descripcion": "Extrait des \"Missions Catholiques\"  par des missionnaires d'Afrique (Pères Blancs), Palais arabe en ruine, pages 7/8"
+  },
+  {
+   "titulo": "File:Ruins at Carthage, with salt marshes in the distance, Tunisi Wellcome V0050117.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Ruins_at_Carthage%2C_with_salt_marshes_in_the_distance%2C_Tunisi_Wellcome_V0050117.jpg/960px-Ruins_at_Carthage%2C_with_salt_marshes_in_the_distance%2C_Tunisi_Wellcome_V0050117.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Ruins_at_Carthage,_with_salt_marshes_in_the_distance,_Tunisi_Wellcome_V0050117.jpg",
+   "ancho": 3232,
+   "alto": 2372,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Ruins at Carthage, with salt marshes in the distance, Tunisia. Watercolour by Charles Gülin, 1778.\n\nIconographic Collections\nKeywords: John Swan; Charles Gülin"
+  },
+  {
+   "titulo": "File:Ruins at Galetta, with lake Tunis in the distance, seen from Wellcome V0050118.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Ruins_at_Galetta%2C_with_lake_Tunis_in_the_distance%2C_seen_from_Wellcome_V0050118.jpg/960px-Ruins_at_Galetta%2C_with_lake_Tunis_in_the_distance%2C_seen_from_Wellcome_V0050118.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Ruins_at_Galetta,_with_lake_Tunis_in_the_distance,_seen_from_Wellcome_V0050118.jpg",
+   "ancho": 3208,
+   "alto": 2389,
+   "mime": "image/jpeg",
+   "licencia": "CC BY 4.0",
+   "autor": "Wikimedia Commons",
+   "descripcion": "Ruins at Galetta, with lake Tunis in the distance, seen from Carthage, Tunisia. Watercolour by Charles Gülin, 1778.\n\nIconographic Collections\nKeywords: John Swan; Charles Gülin"
   }
  ]
 }

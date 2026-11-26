@@ -1,6 +1,18 @@
 {
- "generado": "2026-11-26 02:55 UTC",
+ "generado": "2026-11-26 03:47 UTC",
  "facebook": [
+  {
+   "id": "1588899549950321",
+   "tipo": "video_reels",
+   "fecha": "2026-11-26T03:00:06+0000",
+   "duracion": 386.466,
+   "texto": "Cómo cayó Roma de verdad: el dinero detrás del colapso",
+   "link": "/reel/1588899549950321/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 0,
+   "comentarios": 0
+  },
   {
    "id": "29331672863160829",
    "tipo": "video_reels",
@@ -124,6 +136,17 @@
  ],
  "instagram": [
   {
+   "id": "18123631447974084",
+   "fecha": "2026-11-26T03:08:47+0000",
+   "tipo": "REELS",
+   "texto": "Cómo cayó Roma de verdad: el dinero detrás del colapso 🏛️ Roma no cayó en un día: tardó siglos, y empezó con una moneda. El denario pasó de ",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgMGg1Bho7q/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
    "id": "18360012268168467",
    "fecha": "2026-11-26T02:24:56+0000",
    "tipo": "REELS",
@@ -150,7 +173,7 @@
    "fecha": "2026-11-25T12:21:10+0000",
    "tipo": "REELS",
    "texto": "¿100 abdominales al día bajan la barriga? 🤔\n\nLa reducción localizada es uno de los mitos más grandes del ejercicio. Esto es lo que de verdad",
-   "likes": 3,
+   "likes": 4,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgKhFWksBar/",
    "metricas": {},
@@ -242,8 +265,8 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 72,
-   "likes": 4,
+   "vistas": 126,
+   "likes": 6,
    "comentarios": 2
   },
   {
@@ -264,7 +287,7 @@
    "duracion": "PT41S",
    "estado": "public",
    "programado": null,
-   "vistas": 87,
+   "vistas": 88,
    "likes": 2,
    "comentarios": 0
   },
@@ -407,7 +430,7 @@
    "duracion": "PT36S",
    "estado": "public",
    "programado": null,
-   "vistas": 1248,
+   "vistas": 1249,
    "likes": 24,
    "comentarios": 2
   },
@@ -418,7 +441,7 @@
    "duracion": "PT31S",
    "estado": "public",
    "programado": null,
-   "vistas": 769,
+   "vistas": 790,
    "likes": 12,
    "comentarios": 0
   },
@@ -429,9 +452,9 @@
    "duracion": "PT24S",
    "estado": "public",
    "programado": null,
-   "vistas": 710,
+   "vistas": 697,
    "likes": 8,
-   "comentarios": 3
+   "comentarios": 2
   }
  ],
  "errores": [],
@@ -442,7 +465,7 @@
  "instagram_cuenta": {
   "username": "whi.tehole1",
   "followers_count": 1,
-  "media_count": 8
+  "media_count": 9
  },
  "youtube_canal": {
   "viewCount": "2368",

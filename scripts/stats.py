@@ -53,6 +53,11 @@ def facebook():
             soc = g(f"{GRAPH}/{v['id']}", fields="likes.summary(true).limit(0),comments.summary(true).limit(0)", access_token=token)
             item["likes"] = (soc.get("likes") or {}).get("summary", {}).get("total_count")
             item["comentarios"] = (soc.get("comments") or {}).get("summary", {}).get("total_count")
+            if item["comentarios"]:
+                cm = g(f"{GRAPH}/{v['id']}/comments", fields="id,from,message,comments{from,message}", limit=50, access_token=token)
+                item["lista_comentarios"] = [{"id": c["id"], "de": (c.get("from") or {}).get("name"), "texto": c.get("message"),
+                                              "respuestas": [((r.get("from") or {}).get("name") or "?") + ": " + r.get("message", "") for r in (c.get("comments") or {}).get("data", [])]}
+                                             for c in cm.get("data", [])]
             OUT["facebook"].append(item)
     pg = g(f"{GRAPH}/{page_id}", fields="followers_count,fan_count", access_token=token)
     OUT["facebook_pagina"] = {k: pg.get(k) for k in ("followers_count", "fan_count")}
@@ -79,6 +84,12 @@ def instagram():
         item["metricas"] = {i["name"]: (i.get("values") or [{}])[0].get("value") for i in ins.get("data", [])}
         if "error" in ins:
             item["insights_error"] = ins["error"].get("message", "")[:160]
+        if x.get("comments_count"):
+            cm = g(f"{GRAPH}/{x['id']}/comments", fields="id,text,username,timestamp,replies{username,text}", limit=50, access_token=token)
+            item["lista_comentarios"] = [{"id": c["id"], "usuario": c.get("username"), "texto": c.get("text"),
+                                          "respuestas": [r.get("username") + ": " + r.get("text", "") for r in (c.get("replies") or {}).get("data", [])]}
+                                         for c in cm.get("data", [])]
+            if "error" in cm: item["comentarios_error"] = cm["error"].get("message", "")[:160]
         OUT["instagram"].append(item)
 
 

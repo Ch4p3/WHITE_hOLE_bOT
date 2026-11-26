@@ -1,6 +1,24 @@
 {
- "generado": "2026-11-26 17:18 UTC",
+ "generado": "2026-11-26 19:19 UTC",
  "facebook": [
+  {
+   "id": "4690582504555771",
+   "tipo": "video_reels",
+   "fecha": "2026-11-26T18:20:09+0000",
+   "duracion": 51.4,
+   "texto": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥",
+   "link": "/reel/4690582504555771/",
+   "metricas": {
+    "post_video_avg_time_watched": 1953,
+    "post_video_view_time": 113277,
+    "blue_reels_play_count": 164,
+    "fb_reels_total_plays": 170,
+    "fb_reels_replay_count": 6,
+    "post_video_followers": 0
+   },
+   "likes": 0,
+   "comentarios": 0
+  },
   {
    "id": "994768083711041",
    "tipo": "video_reels",
@@ -9,11 +27,11 @@
    "texto": "Rutina de glúteos PARTE 2: cuando la primera ya es fácil 🍑🔥",
    "link": "/reel/994768083711041/",
    "metricas": {
-    "post_video_avg_time_watched": 4726,
-    "post_video_view_time": 496320,
-    "blue_reels_play_count": 215,
-    "fb_reels_total_plays": 233,
-    "fb_reels_replay_count": 18,
+    "post_video_avg_time_watched": 4111,
+    "post_video_view_time": 904554,
+    "blue_reels_play_count": 220,
+    "fb_reels_total_plays": 239,
+    "fb_reels_replay_count": 19,
     "post_video_followers": 0
    },
    "likes": 5,
@@ -27,11 +45,11 @@
    "texto": "Rutina de glúteos en casa, sin pesas 🍑 (guárdala)",
    "link": "/reel/1545576090727892/",
    "metricas": {
-    "post_video_avg_time_watched": 4112,
-    "post_video_view_time": 501677,
-    "blue_reels_play_count": 147,
-    "fb_reels_total_plays": 160,
-    "fb_reels_replay_count": 13,
+    "post_video_avg_time_watched": 3837,
+    "post_video_view_time": 748380,
+    "blue_reels_play_count": 196,
+    "fb_reels_total_plays": 213,
+    "fb_reels_replay_count": 17,
     "post_video_followers": 0
    },
    "likes": 1,
@@ -81,14 +99,14 @@
    "texto": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑",
    "link": "/reel/29331672863160829/",
    "metricas": {
-    "post_video_avg_time_watched": 10935,
-    "post_video_view_time": 3882044,
-    "blue_reels_play_count": 364,
-    "fb_reels_total_plays": 443,
-    "fb_reels_replay_count": 79,
+    "post_video_avg_time_watched": 11025,
+    "post_video_view_time": 4718955,
+    "blue_reels_play_count": 453,
+    "fb_reels_total_plays": 552,
+    "fb_reels_replay_count": 99,
     "post_video_followers": 0
    },
-   "likes": 1,
+   "likes": 2,
    "comentarios": 0
   },
   {
@@ -101,8 +119,8 @@
    "metricas": {
     "post_video_avg_time_watched": 8061,
     "post_video_view_time": 3796897,
-    "blue_reels_play_count": 471,
-    "fb_reels_total_plays": 532,
+    "blue_reels_play_count": 472,
+    "fb_reels_total_plays": 533,
     "fb_reels_replay_count": 61,
     "post_video_followers": 1
    },
@@ -135,8 +153,8 @@
    "texto": "¿Qué pasa si haces 20 flexiones al día durante un mes? 💪",
    "link": "/reel/1469747385348512/",
    "metricas": {
-    "post_video_avg_time_watched": 9114,
-    "post_video_view_time": 2014242,
+    "post_video_avg_time_watched": 9079,
+    "post_video_view_time": 2015741,
     "blue_reels_play_count": 222,
     "fb_reels_total_plays": 240,
     "fb_reels_replay_count": 18,
@@ -256,6 +274,23 @@
  ],
  "instagram": [
   {
+   "id": "18112714103225166",
+   "fecha": "2026-11-26T18:22:15+0000",
+   "tipo": "REELS",
+   "texto": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥\n\n3 ejercicios, 3 series, unos 10 minutos. Ojo: en un estudio (Vispute y colegas, ",
+   "likes": 3,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgNvLxGB_pH/",
+   "metricas": {
+    "views": 79,
+    "reach": 21,
+    "saved": 4,
+    "shares": 0,
+    "total_interactions": 7,
+    "ig_reels_avg_watch_time": 10238
+   }
+  },
+  {
    "id": "18026654705943775",
    "fecha": "2026-11-26T15:16:06+0000",
    "tipo": "REELS",
@@ -264,12 +299,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNZ4eXgIK1/",
    "metricas": {
-    "views": 113,
-    "reach": 74,
+    "views": 119,
+    "reach": 111,
     "saved": 1,
     "shares": 2,
     "total_interactions": 4,
-    "ig_reels_avg_watch_time": 7220
+    "ig_reels_avg_watch_time": 7237
    }
   },
   {
@@ -286,7 +321,7 @@
     "saved": 2,
     "shares": 3,
     "total_interactions": 9,
-    "ig_reels_avg_watch_time": 8495
+    "ig_reels_avg_watch_time": 8426
    }
   },
   {
@@ -298,12 +333,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNGkYbgxNe/",
    "metricas": {
-    "views": 8,
-    "reach": 7,
+    "views": 10,
+    "reach": 9,
     "saved": 0,
     "shares": 0,
     "total_interactions": 0,
-    "ig_reels_avg_watch_time": 6286
+    "ig_reels_avg_watch_time": 5795
    }
   },
   {
@@ -349,7 +384,7 @@
    "link": "https://www.instagram.com/reel/DgMBpGYzSc9/",
    "metricas": {
     "views": 114,
-    "reach": 102,
+    "reach": 103,
     "saved": 1,
     "shares": 0,
     "total_interactions": 1,
@@ -361,16 +396,16 @@
    "fecha": "2026-11-25T18:21:35+0000",
    "tipo": "REELS",
    "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑\n\nLo que no cambia, lo que sí, y los ejercicios que más trabajan el glúteo. Guárdalo para tu r",
-   "likes": 5,
+   "likes": 7,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgLKU7-ty8t/",
    "metricas": {
-    "views": 260,
-    "reach": 228,
+    "views": 273,
+    "reach": 244,
     "saved": 4,
     "shares": 2,
-    "total_interactions": 11,
-    "ig_reels_avg_watch_time": 11740
+    "total_interactions": 13,
+    "ig_reels_avg_watch_time": 11597
    }
   },
   {
@@ -467,16 +502,27 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgJ6y1LILV3/",
    "metricas": {
-    "views": 2,
-    "reach": 2,
+    "views": 3,
+    "reach": 3,
     "saved": 0,
     "shares": 0,
     "total_interactions": 0,
-    "ig_reels_avg_watch_time": 21517
+    "ig_reels_avg_watch_time": 18715
    }
   }
  ],
  "youtube": [
+  {
+   "id": "wzNfBQaBEUo",
+   "titulo": "Glute workout PART 2: when part 1 gets easy 🍑🔥",
+   "fecha": "2026-11-26T18:19:23Z",
+   "duracion": "PT44S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 1,
+   "likes": 1,
+   "comentarios": 0
+  },
   {
    "id": "X8aLzdZkVfo",
    "titulo": "Your AI chatbot isn't learning from you 🧊 #shorts",
@@ -484,8 +530,8 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 1,
-   "likes": 0,
+   "vistas": 12,
+   "likes": 2,
    "comentarios": 0
   },
   {
@@ -506,8 +552,8 @@
    "duracion": "PT47S",
    "estado": "public",
    "programado": null,
-   "vistas": 248,
-   "likes": 2,
+   "vistas": 309,
+   "likes": 4,
    "comentarios": 0
   },
   {
@@ -539,7 +585,7 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 1018,
+   "vistas": 1025,
    "likes": 13,
    "comentarios": 3
   },
@@ -561,7 +607,7 @@
    "duracion": "PT41S",
    "estado": "public",
    "programado": null,
-   "vistas": 273,
+   "vistas": 293,
    "likes": 6,
    "comentarios": 0
   },
@@ -572,7 +618,7 @@
    "duracion": "PT43S",
    "estado": "public",
    "programado": null,
-   "vistas": 1136,
+   "vistas": 1135,
    "likes": 18,
    "comentarios": 0
   },
@@ -693,7 +739,7 @@
    "duracion": "PT36S",
    "estado": "public",
    "programado": null,
-   "vistas": 1270,
+   "vistas": 1276,
    "likes": 24,
    "comentarios": 2
   },
@@ -728,12 +774,12 @@
  "instagram_cuenta": {
   "username": "whi.tehole1",
   "followers_count": 2,
-  "media_count": 13
+  "media_count": 14
  },
  "youtube_canal": {
   "viewCount": "6163",
   "subscriberCount": "3",
   "hiddenSubscriberCount": false,
-  "videoCount": "18"
+  "videoCount": "19"
  }
 }

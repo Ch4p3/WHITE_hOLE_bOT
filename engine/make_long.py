@@ -990,7 +990,13 @@ def render(script_path, out_path, channel="WHITE HOLE", frames_only=False):
         sr = ms.synth_voice(scenes, os.path.join(ms.ROOT, "voices", "en-us-ryan-high.onnx"), cfg.get("velocidad", 0.9), work)
     total, chapters = plan(cfg, [sc["audio_dur"] for sc in scenes])
     vw, mw = os.path.join(work, "voice.wav"), os.path.join(work, "music.wav")
-    ms.build_voice(scenes, sr, cfg.get("pausa", 0.35), vw); ms.build_music(total, mw)
+    ms.build_voice(scenes, sr, cfg.get("pausa", 0.35), vw)
+    if cfg.get("musica", False):
+        ms.build_music(total, mw)
+    else:   # sin música: los acordes genéricos disparaban el detector de derechos de Meta en videos largos
+        import wave as _wv
+        with _wv.open(mw, "wb") as wf:
+            wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(44100); wf.writeframes(b"\x00\x00" * int((total + 1) * 44100))
     print(f"   duración: {total:.1f}s ({total / 60:.1f} min)", flush=True)
     print("2/4 Frames...", flush=True)
     cmd = ["ffmpeg", "-y", "-loglevel", "error",

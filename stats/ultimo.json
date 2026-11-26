@@ -1,6 +1,18 @@
 {
- "generado": "2026-11-26 02:19 UTC",
+ "generado": "2026-11-26 02:55 UTC",
  "facebook": [
+  {
+   "id": "29331672863160829",
+   "tipo": "video_reels",
+   "fecha": "2026-11-26T02:24:02+0000",
+   "duracion": 26.5,
+   "texto": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑",
+   "link": "/reel/29331672863160829/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 0,
+   "comentarios": 0
+  },
   {
    "id": "1336238215304334",
    "tipo": "video_reels",
@@ -112,6 +124,17 @@
  ],
  "instagram": [
   {
+   "id": "18360012268168467",
+   "fecha": "2026-11-26T02:24:56+0000",
+   "tipo": "REELS",
+   "texto": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑\n\nUna revisión de 16 estudios midió cuánto se activa el glúteo en cada ejercicio. ",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgMBpGYzSc9/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
    "id": "18137628004866131",
    "fecha": "2026-11-25T18:21:35+0000",
    "tipo": "REELS",
@@ -191,14 +214,25 @@
  ],
  "youtube": [
   {
+   "id": "X6AbT7c095U",
+   "titulo": "The #1 exercise for your glutes is NOT the squat 🍑 #shorts",
+   "fecha": "2026-11-26T02:27:02Z",
+   "duracion": "PT26S",
+   "estado": "private",
+   "programado": "2026-11-26T23:00:00Z",
+   "vistas": 0,
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
    "id": "wsfUYT8hl7Q",
    "titulo": "How Rome Really Fell: The Money Behind the Collapse",
    "fecha": "2026-11-26T01:26:09Z",
    "duracion": "PT6M48S",
    "estado": "public",
    "programado": null,
-   "vistas": 0,
-   "likes": 0,
+   "vistas": 1,
+   "likes": 1,
    "comentarios": 0
   },
   {
@@ -208,9 +242,9 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 32,
-   "likes": 1,
-   "comentarios": 1
+   "vistas": 72,
+   "likes": 4,
+   "comentarios": 2
   },
   {
    "id": "Q4RPVJsxMDA",
@@ -230,7 +264,7 @@
    "duracion": "PT41S",
    "estado": "public",
    "programado": null,
-   "vistas": 82,
+   "vistas": 87,
    "likes": 2,
    "comentarios": 0
   },
@@ -241,7 +275,7 @@
    "duracion": "PT43S",
    "estado": "public",
    "programado": null,
-   "vistas": 1117,
+   "vistas": 1118,
    "likes": 17,
    "comentarios": 0
   },
@@ -285,7 +319,7 @@
    "duracion": "PT58S",
    "estado": "public",
    "programado": null,
-   "vistas": 1078,
+   "vistas": 1086,
    "likes": 16,
    "comentarios": 2
   },
@@ -352,7 +386,7 @@
    "estado": "public",
    "programado": null,
    "vistas": 6,
-   "likes": 0,
+   "likes": 1,
    "comentarios": 0
   },
   {
@@ -384,7 +418,7 @@
    "duracion": "PT31S",
    "estado": "public",
    "programado": null,
-   "vistas": 784,
+   "vistas": 769,
    "likes": 12,
    "comentarios": 0
   },
@@ -395,9 +429,9 @@
    "duracion": "PT24S",
    "estado": "public",
    "programado": null,
-   "vistas": 690,
+   "vistas": 710,
    "likes": 8,
-   "comentarios": 2
+   "comentarios": 3
   }
  ],
  "errores": [],
@@ -408,7 +442,7 @@
  "instagram_cuenta": {
   "username": "whi.tehole1",
   "followers_count": 1,
-  "media_count": 7
+  "media_count": 8
  },
  "youtube_canal": {
   "viewCount": "2368",

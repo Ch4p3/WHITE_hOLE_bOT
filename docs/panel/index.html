@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0e1a">
+<meta name="robots" content="noindex">
+<title>Panel · White Hole</title>
+<link rel="icon" href="../favicon.png">
+<link rel="apple-touch-icon" href="../logo.png">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b0e1a; --surface-1: #121729; --surface-2: #1a2036; --line: #262d48;
+    --text-primary: #eef1f8; --text-secondary: #9aa3bd; --text-muted: #6b7493;
+    --yt: #e76624; --fb: #338ced; --ig: #00a888; --accent: #5aa8ff;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text-primary);
+    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 18px 16px 60px; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  header img { width: 42px; height: 42px; border-radius: 12px; }
+  header h1 { font-size: 20px; margin: 0; letter-spacing: -.01em; }
+  header .sub { color: var(--text-secondary); font-size: 13px; }
+  header button { margin-left: auto; background: var(--surface-2); color: var(--text-primary); border: 1px solid var(--line);
+    border-radius: 999px; padding: 8px 14px; font: inherit; font-size: 13px; cursor: pointer; }
+  header button:hover { border-color: var(--accent); }
+  .kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 14px; }
+  @media (min-width: 760px) { .kpis { grid-template-columns: repeat(4, 1fr); } }
+  .kpi { background: var(--surface-1); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .kpi .lab { color: var(--text-secondary); font-size: 12.5px; display: flex; align-items: center; gap: 7px; }
+  .kpi .val { font-size: 30px; font-weight: 800; letter-spacing: -.02em; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .kpi .note { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+  .card { background: var(--surface-1); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
+  .card h2 { font-size: 15px; margin: 0 0 4px; }
+  .card .desc { color: var(--text-secondary); font-size: 12.5px; margin-bottom: 12px; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-secondary); margin-bottom: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .chart { position: relative; }
+  .chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .tip { position: absolute; pointer-events: none; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px;
+    padding: 8px 10px; font-size: 12.5px; white-space: nowrap; opacity: 0; transition: opacity .1s; z-index: 2; }
+  .tip b { font-variant-numeric: tabular-nums; }
+  .bars { display: flex; flex-direction: column; gap: 9px; }
+  .bar { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; text-decoration: none; color: inherit; }
+  .bar .t { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 7px; }
+  .bar .n { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .bar .track { grid-column: 1 / -1; height: 10px; border-radius: 0 4px 4px 0; background: transparent; }
+  .bar .fill { height: 100%; border-radius: 0 4px 4px 0; min-width: 3px; }
+  .bar:hover .t { color: var(--accent); }
+  .tabs { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tabs button { background: var(--surface-2); color: var(--text-secondary); border: 1px solid var(--line); border-radius: 999px;
+    padding: 6px 12px; font: inherit; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .tabs button[aria-selected="true"] { color: var(--text-primary); border-color: var(--text-secondary); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; color: var(--text-muted); font-weight: 600; font-size: 12px; padding: 6px 6px; border-bottom: 1px solid var(--line); }
+  td { padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td a { color: var(--text-primary); text-decoration: none; }
+  td a:hover { color: var(--accent); }
+  td .d { color: var(--text-muted); font-size: 11.5px; }
+  .scroll { overflow-x: auto; }
+  .warn { background: #2a2210; border: 1px solid #5a4614; color: #f2c768; border-radius: 12px; padding: 10px 12px; font-size: 12.5px; margin-bottom: 14px; }
+  .muted { color: var(--text-muted); }
+  .empty { color: var(--text-muted); font-size: 13px; padding: 18px 0; text-align: center; }
+  footer { color: var(--text-muted); font-size: 12px; text-align: center; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="../logo.png" alt="">
+    <div>
+      <h1>Panel de White Hole</h1>
+      <div class="sub" id="upd">Cargando…</div>
+    </div>
+    <button id="reload" type="button">Actualizar</button>
+  </header>
+
+  <div id="warn"></div>
+  <section class="kpis" id="kpis"></section>
+
+  <section class="card">
+    <h2>Vistas acumuladas</h2>
+    <div class="desc">Total de vistas de todos los videos de cada red, medido cada 3 horas.</div>
+    <div class="legend" id="lg1"></div>
+    <div class="chart" id="hist"></div>
+  </section>
+
+  <section class="card">
+    <h2>Los videos que más pegan</h2>
+    <div class="desc" id="topdesc">Top 10 por vistas, de todas las redes.</div>
+    <div class="legend" id="lg2"></div>
+    <div class="bars" id="top"></div>
+  </section>
+
+  <section class="card">
+    <h2>Todos los videos</h2>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="scroll"><table id="tbl"></table></div>
+  </section>
+
+  <footer>Datos de las APIs de YouTube y Meta · se actualiza solo cada 3 horas · TikTok en pausa</footer>
+</div>
+
+<script>
+const RAW = "https://raw.githubusercontent.com/Ch4p3/WHITE_hOLE_bOT/previews/stats/";
+const NET = {
+  yt: { name: "YouTube", color: "var(--yt)" },
+  fb: { name: "Facebook", color: "var(--fb)" },
+  ig: { name: "Instagram", color: "var(--ig)" },
+};
+const fmt = n => (n == null || isNaN(n)) ? "—" : Number(n).toLocaleString("es-CO");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const dot = c => `<span class="dot" style="background:${c}"></span>`;
+const day = iso => { try { return new Date(iso).toLocaleDateString("es-CO", { day: "numeric", month: "short" }); } catch (e) { return ""; } };
+
+function rel(gen) {
+  const t = Date.parse(gen.replace(" UTC", "Z").replace(" ", "T"));
+  if (!t) return gen;
+  const m = Math.round((Date.now() - t) / 60000);
+  if (m < 60) return `hace ${m} min`;
+  const h = Math.round(m / 60);
+  return h < 48 ? `hace ${h} h` : `hace ${Math.round(h / 24)} días`;
+}
+
+function secs(iso) {
+  const m = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/.exec(iso || "") || [];
+  return (+m[1] || 0) * 3600 + (+m[2] || 0) * 60 + (+m[3] || 0);
+}
+function normalize(d) {
+  const rows = [];
+  for (const v of d.youtube || []) {
+    if (v.estado !== "public") continue;
+    rows.push({ net: "yt", title: v.titulo, date: v.fecha, views: v.vistas, likes: v.likes, comments: v.comentarios,
+      url: (secs(v.duracion) <= 180 ? "https://youtube.com/shorts/" : "https://youtu.be/") + v.id });
+  }
+  for (const v of d.facebook || []) {
+    const m = v.metricas || {};
+    const views = m.blue_reels_play_count ?? m.fb_reels_total_plays ?? m.total_video_views ?? null;
+    rows.push({ net: "fb", title: (v.texto || "").split("\n")[0], date: v.fecha, views, likes: v.likes, comments: v.comentarios,
+      url: v.link ? (v.link.startsWith("http") ? v.link : "https://www.facebook.com" + v.link) : null });
+  }
+  for (const v of d.instagram || []) {
+    const m = v.metricas || {};
+    rows.push({ net: "ig", title: (v.texto || "").split("\n")[0], date: v.fecha, views: m.views ?? null, likes: v.likes,
+      comments: v.comentarios, url: v.link });
+  }
+  return rows;
+}
+
+function kpis(d, rows) {
+  const sum = (net, k) => rows.filter(r => r.net === net).reduce((a, r) => a + (r[k] || 0), 0);
+  const has = net => rows.some(r => r.net === net && r.views != null);
+  const yt = sum("yt", "views"), fb = has("fb") ? sum("fb", "views") : null, ig = has("ig") ? sum("ig", "views") : null;
+  const total = yt + (fb || 0) + (ig || 0);
+  const subs = +(d.youtube_canal?.subscriberCount || 0), fbs = d.facebook_pagina?.followers_count || 0, igs = d.instagram_cuenta?.followers_count || 0;
+  const tile = (lab, val, note, c) => `<div class="kpi"><div class="lab">${c ? dot(c) : ""}${lab}</div><div class="val">${val}</div><div class="note">${note}</div></div>`;
+  document.getElementById("kpis").innerHTML =
+    tile("Vistas totales", fmt(total), (fb == null || ig == null) ? "aún sin las vistas de Meta" : "YouTube + Facebook + Instagram") +
+    tile("YouTube", fmt(yt), `${rows.filter(r => r.net === "yt").length} videos · ${fmt(subs)} suscriptores`, NET.yt.color) +
+    tile("Facebook", fb == null ? fmt(sum("fb", "likes")) + " ❤" : fmt(fb), fb == null ? `me gusta · ${fmt(fbs)} seguidores` : `vistas · ${fmt(fbs)} seguidores`, NET.fb.color) +
+    tile("Instagram", ig == null ? fmt(sum("ig", "likes")) + " ❤" : fmt(ig), ig == null ? `me gusta · ${fmt(igs)} seguidores` : `vistas · ${fmt(igs)} seguidores`, NET.ig.color);
+  const w = [];
+  if (fb == null || ig == null) w.push("Las <b>vistas</b> de Facebook e Instagram aparecen cuando el bot tenga el permiso de estadísticas de Meta. Por ahora se muestran los <b>me gusta</b>.");
+  document.getElementById("warn").innerHTML = w.map(x => `<div class="warn">${x}</div>`).join("");
+}
+
+function legend(id, nets) {
+  document.getElementById(id).innerHTML = nets.map(n => `<span>${dot(NET[n].color)}${NET[n].name}</span>`).join("");
+}
+
+function top(rows) {
+  const r = rows.filter(x => x.views != null).sort((a, b) => b.views - a.views).slice(0, 10);
+  const max = Math.max(1, ...r.map(x => x.views));
+  const nets = [...new Set(r.map(x => x.net))];
+  legend("lg2", nets);
+  document.getElementById("top").innerHTML = r.length ? r.map(x => `
+    <a class="bar" href="${esc(x.url || "#")}" target="_blank" rel="noopener" title="${esc(x.title)}">
+      <span class="t">${dot(NET[x.net].color)}${esc(x.title)}</span><span class="n">${fmt(x.views)}</span>
+      <span class="track"><span class="fill" style="display:block;width:${(x.views / max * 100).toFixed(1)}%;background:${NET[x.net].color}"></span></span>
+    </a>`).join("") : `<div class="empty">Todavía no hay vistas registradas.</div>`;
+}
+
+function history(h) {
+  const el = document.getElementById("hist");
+  const series = [["yt", "yt_vistas"], ["fb", "fb_vistas"], ["ig", "ig_vistas"]].filter(([n, k]) => h.some(p => p[k] > 0));
+  legend("lg1", series.map(s => s[0]));
+  if (h.length < 2 || !series.length) {
+    el.innerHTML = `<div class="empty">La gráfica se va llenando sola: cada 3 horas se agrega un punto.${h.length ? " Ya hay 1 medición." : ""}</div>`;
+    return;
+  }
+  const W = 960, H = 300, L = 54, R = 12, T = 12, B = 30;
+  const xs = h.map(p => Date.parse(p.t.replace(" UTC", "Z").replace(" ", "T")));
+  const x0 = Math.min(...xs), x1 = Math.max(...xs);
+  const ymax = Math.max(1, ...series.flatMap(([n, k]) => h.map(p => p[k] || 0)));
+  const nice = Math.pow(10, Math.floor(Math.log10(ymax))); const top = Math.ceil(ymax / nice) * nice;
+  const X = t => L + (W - L - R) * (x1 === x0 ? 0.5 : (t - x0) / (x1 - x0));
+  const Y = v => T + (H - T - B) * (1 - v / top);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Vistas acumuladas por red">`;
+  for (let i = 0; i <= 4; i++) {
+    const v = top * i / 4, y = Y(v);
+    svg += `<line x1="${L}" x2="${W - R}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="1"/>`;
+    svg += `<text x="${L - 8}" y="${y + 4}" fill="var(--text-muted)" font-size="12" text-anchor="end">${fmt(v)}</text>`;
+  }
+  const ticks = Math.min(6, h.length);
+  for (let i = 0; i < ticks; i++) {
+    const t = x0 + (x1 - x0) * i / Math.max(1, ticks - 1);
+    svg += `<text x="${X(t)}" y="${H - 8}" fill="var(--text-muted)" font-size="12" text-anchor="middle">${new Date(t).toLocaleDateString("es-CO", { day: "numeric", month: "short" })}</text>`;
+  }
+  for (const [n, k] of series) {
+    const pts = h.map((p, i) => `${X(xs[i]).toFixed(1)},${Y(p[k] || 0).toFixed(1)}`).join(" ");
+    svg += `<polyline points="${pts}" fill="none" stroke="${NET[n].color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const last = h.length - 1;
+    svg += `<circle cx="${X(xs[last])}" cy="${Y(h[last][k] || 0)}" r="4" fill="${NET[n].color}" stroke="var(--surface-1)" stroke-width="2"/>`;
+  }
+  svg += `<line id="xh" y1="${T}" y2="${H - B}" stroke="var(--text-muted)" stroke-width="1" opacity="0"/>`;
+  svg += `<rect x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent" id="hit"/></svg><div class="tip" id="tip"></div>`;
+  el.innerHTML = svg;
+  const s = el.querySelector("svg"), tip = el.querySelector("#tip"), xh = el.querySelector("#xh");
+  const move = e => {
+    const r = s.getBoundingClientRect(), cx = ((e.touches ? e.touches[0].clientX : e.clientX) - r.left) * W / r.width;
+    let bi = 0; xs.forEach((t, i) => { if (Math.abs(X(t) - cx) < Math.abs(X(xs[bi]) - cx)) bi = i; });
+    const px = X(xs[bi]); xh.setAttribute("x1", px); xh.setAttribute("x2", px); xh.setAttribute("opacity", 1);
+    tip.innerHTML = `<div class="muted">${new Date(xs[bi]).toLocaleString("es-CO", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit" })}</div>` +
+      series.map(([n, k]) => `<div>${dot(NET[n].color)} ${NET[n].name}: <b>${fmt(h[bi][k])}</b></div>`).join("");
+    tip.style.opacity = 1;
+    const left = px * r.width / W; tip.style.left = Math.min(r.width - tip.offsetWidth, Math.max(0, left + 12)) + "px"; tip.style.top = "8px";
+  };
+  s.addEventListener("mousemove", move); s.addEventListener("touchmove", move, { passive: true }); s.addEventListener("touchstart", move, { passive: true });
+  s.addEventListener("mouseleave", () => { tip.style.opacity = 0; xh.setAttribute("opacity", 0); });
+}
+
+let ROWS = [], TAB = "yt";
+function table() {
+  const r = ROWS.filter(x => x.net === TAB).sort((a, b) => (b.views ?? -1) - (a.views ?? -1) || (b.likes || 0) - (a.likes || 0));
+  document.getElementById("tbl").innerHTML = `<thead><tr><th>Video</th><th class="num">Vistas</th><th class="num">❤</th><th class="num">💬</th></tr></thead><tbody>` +
+    (r.length ? r.map(x => `<tr><td>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>` : esc(x.title)}<div class="d">${day(x.date)}</div></td>
+      <td class="num">${fmt(x.views)}</td><td class="num">${fmt(x.likes)}</td><td class="num">${fmt(x.comments)}</td></tr>`).join("")
+      : `<tr><td colspan="4" class="empty">Sin videos.</td></tr>`) + `</tbody>`;
+  document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.n === TAB));
+}
+
+async function load() {
+  document.getElementById("upd").textContent = "Cargando…";
+  try {
+    const bust = "?t=" + Date.now();
+    const [d, h] = await Promise.all([
+      fetch(RAW + "ultimo.json" + bust).then(r => r.json()),
+      fetch(RAW + "historial.json" + bust).then(r => r.ok ? r.json() : []).catch(() => []),
+    ]);
+    ROWS = normalize(d);
+    document.getElementById("upd").textContent = `Actualizado ${rel(d.generado)}`;
+    kpis(d, ROWS); top(ROWS); history(h);
+    document.getElementById("tabs").innerHTML = Object.entries(NET).map(([n, v]) =>
+      `<button type="button" role="tab" data-n="${n}">${dot(v.color)}${v.name} · ${ROWS.filter(r => r.net === n).length}</button>`).join("");
+    document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { TAB = b.dataset.n; table(); });
+    table();
+  } catch (e) {
+    document.getElementById("upd").textContent = "No se pudieron cargar los datos. Intenta de nuevo en un momento.";
+  }
+}
+document.getElementById("reload").onclick = load;
+load();
+</script>
+</body>
+</html>

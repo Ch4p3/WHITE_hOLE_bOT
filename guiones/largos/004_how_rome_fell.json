@@ -65,16 +65,19 @@
   {
    "texto": "How did the richest empire on Earth end up there? The answer isn't one battle or one bad emperor. It's a slow story about money, war and power.",
    "visual": {
-    "tipo": "titulo",
-    "lines": [
-     "HOW ROME",
-     "REALLY FELL"
+    "tipo": "foto",
+    "src": "commons:File:Colosseum of Rome, Italy.jpg",
+    "modo": "cover",
+    "titulo": "HOW ROME REALLY FELL",
+    "color": "white",
+    "titulo_sync": "richest",
+    "sub": "money · war · power",
+    "sub_sync": "money",
+    "foco": [
+     0.5,
+     0.45
     ],
-    "colors": [
-     "white",
-     "warm"
-    ],
-    "sync": "richest"
+    "brillo": 0.85
    }
   },
   {
@@ -118,12 +121,15 @@
   {
    "texto": "Rome's everyday money was the denarius. Soldiers were paid in it, taxes were counted in it, and its value came from the metal inside: silver.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Silver Denarius of Augustus (MANTIS).jpg",
+    "modo": "tarjeta",
+    "claro": true,
     "pre": "Rome's everyday money",
-    "word": "DENARIUS",
-    "sub": "worth its silver",
+    "titulo": "DENARIUS",
+    "titulo_sync": "denarius",
+    "sub": "its value: the silver inside",
     "sub_sync": "silver",
-    "sync": "denarius",
     "color": "ice"
    }
   },
@@ -218,22 +224,17 @@
   {
    "texto": "By around the year two seventy, the main silver coin was basically copper with a thin silver wash. About two percent silver.",
    "visual": {
-    "tipo": "versus",
-    "left": {
-     "label": "AUGUSTUS",
-     "value": "98%",
-     "color": "ice",
-     "sync": "year"
-    },
-    "right": {
-     "label": "AROUND 270 AD",
-     "value": "2%",
-     "color": "warm",
-     "sync": "copper"
-    },
-    "vs_text": "→",
-    "note": "a copper coin with a silver wash",
-    "note_sync": "wash"
+    "tipo": "foto",
+    "src": "commons:File:Gallienus antoninianus.jpg",
+    "modo": "tarjeta",
+    "claro": true,
+    "pre": "around 270 AD",
+    "pre_sync": "year",
+    "titulo": "~2% SILVER",
+    "titulo_sync": "copper",
+    "color": "warm",
+    "sub": "copper with a thin silver wash",
+    "sub_sync": "wash"
    }
   },
   {
@@ -370,14 +371,24 @@
   {
    "texto": "And enemies on every border. In two sixty, the emperor Valerian was captured by the Persians at the Battle of Edessa. A Roman emperor died as a prisoner.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Relief of Shapur I capturing Valerian.jpg",
+    "modo": "cover",
     "pre": "260 AD, Edessa",
-    "word": "EMPEROR CAPTURED",
-    "sub": "Valerian died a prisoner of Persia",
-    "sub_sync": "prisoner",
-    "sync": "captured",
+    "titulo": "EMPEROR CAPTURED",
+    "titulo_sync": "captured",
     "color": "warm",
-    "size": 170
+    "sub": "Valerian, kneeling before Persia's Shapur I",
+    "sub_sync": "prisoner",
+    "foco": [
+     0.55,
+     0.3
+    ],
+    "zoom": [
+     1.0,
+     1.08
+    ],
+    "brillo": 0.9
    }
   },
   {
@@ -518,13 +529,16 @@
   {
    "texto": "What actually worked came next. Around three twelve, Constantine put a new gold coin into wide circulation: the solidus. Seventy two coins per Roman pound of gold, about four and a half grams each.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Gold Solidus of Constantine I, Trier, AD 310 - AD 313.jpg",
+    "modo": "tarjeta",
+    "claro": true,
     "pre": "Constantine, around 312 AD",
-    "word": "THE SOLIDUS",
+    "titulo": "THE SOLIDUS",
+    "titulo_sync": "solidus",
+    "color": "blue",
     "sub": "72 per pound · ~4.5 g of gold",
-    "sub_sync": "seventy",
-    "sync": "solidus",
-    "color": "blue"
+    "sub_sync": "seventy"
    }
   },
   {
@@ -594,21 +608,21 @@
   {
    "texto": "In three ninety five, the empire was split between two brothers for good: one emperor in the West, one in the East.",
    "visual": {
-    "tipo": "versus",
-    "left": {
-     "label": "WEST",
-     "value": "Honorius",
-     "color": "warm",
-     "sync": "west"
-    },
-    "right": {
-     "label": "EAST",
-     "value": "Arcadius",
-     "color": "blue",
-     "sync": "east"
-    },
-    "note": "395 AD: the final split",
-    "note_sync": "brothers"
+    "tipo": "foto",
+    "src": "commons:File:Roman empire 395.jpg",
+    "modo": "tarjeta",
+    "pre": "395 AD",
+    "titulo": "WEST + EAST",
+    "titulo_sync": "west",
+    "color": "warm",
+    "sub": "the final split",
+    "sub_sync": "brothers",
+    "nota": "Honorius · Arcadius",
+    "nota_sync": "east",
+    "caja": [
+     900,
+     760
+    ]
    }
   },
   {
@@ -627,14 +641,16 @@
   {
    "texto": "But the deadliest blow wasn't in Rome. It was in Africa. In four thirty nine, the Vandals took Carthage. North Africa was one of the West's main sources of tax money, and of grain to feed Italy.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Carthage - panoramio.jpg",
+    "modo": "cover",
     "pre": "439 AD, Carthage",
-    "word": "THE MONEY IS GONE",
+    "titulo": "THE MONEY IS GONE",
+    "titulo_sync": "vandals",
+    "color": "warm",
     "sub": "the West loses its richest provinces",
     "sub_sync": "tax",
-    "sync": "vandals",
-    "color": "warm",
-    "size": 170
+    "brillo": 0.8
    }
   },
   {
@@ -701,14 +717,18 @@
   {
    "texto": "But here's the twist. The Roman Empire in the East kept going for almost another thousand years, until the Ottomans took Constantinople in fourteen fifty three. And it kept the gold solidus.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Theodosian Walls in Constantinople 5.jpg",
+    "modo": "cover",
     "pre": "the Eastern Roman Empire lasted until",
-    "word": "1453",
+    "pre_sync": "twist",
+    "titulo": "1453",
+    "titulo_sync": "fourteen",
+    "color": "blue",
+    "size": 220,
     "sub": "almost 1,000 more years",
     "sub_sync": "thousand",
-    "sync": "fourteen",
-    "color": "blue",
-    "size": 260
+    "brillo": 0.8
    }
   },
   {

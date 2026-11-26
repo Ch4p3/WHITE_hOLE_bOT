@@ -890,6 +890,7 @@ def _grad(kind):
 def _credito(d, info, x, y, anchor="rs"):
     import imagenes
     c = imagenes.credito_corto(info).replace("Foto:", "Imagen:" if LANG["code"] == "es" else "Image:")
+    c = re.sub(r"\s+", " ", re.sub(r"[^\x00-\u024F·]", "", c)).replace(": ·", ": Wikimedia ·")
     d.text((x, y), c, font=font(22, "semi"), fill=(170, 180, 200), anchor=anchor)
 
 def v_foto(img, d, t, sc, p):

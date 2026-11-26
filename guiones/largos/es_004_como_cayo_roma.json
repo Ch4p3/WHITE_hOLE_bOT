@@ -65,16 +65,19 @@
   {
    "texto": "¿Cómo llegó ahí el imperio más rico del mundo? La respuesta no es una batalla ni un mal emperador. Es una historia lenta sobre dinero, guerra y poder.",
    "visual": {
-    "tipo": "titulo",
-    "lines": [
-     "CÓMO CAYÓ",
-     "ROMA DE VERDAD"
+    "tipo": "foto",
+    "src": "commons:File:Colosseum of Rome, Italy.jpg",
+    "modo": "cover",
+    "titulo": "CÓMO CAYÓ ROMA DE VERDAD",
+    "color": "white",
+    "titulo_sync": "rico",
+    "sub": "dinero · guerra · poder",
+    "sub_sync": "dinero",
+    "foco": [
+     0.5,
+     0.45
     ],
-    "colors": [
-     "white",
-     "warm"
-    ],
-    "sync": "rico"
+    "brillo": 0.85
    }
   },
   {
@@ -118,12 +121,15 @@
   {
    "texto": "El dinero de todos los días en Roma era el denario. Con él se pagaba a los soldados, con él se contaban los impuestos, y su valor venía del metal que tenía adentro: plata.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Silver Denarius of Augustus (MANTIS).jpg",
+    "modo": "tarjeta",
+    "claro": true,
     "pre": "el dinero de todos los días",
-    "word": "DENARIO",
-    "sub": "valía por su plata",
+    "titulo": "DENARIO",
+    "titulo_sync": "denario",
+    "sub": "valía por la plata que tenía",
     "sub_sync": "plata",
-    "sync": "denario",
     "color": "ice"
    }
   },
@@ -218,22 +224,17 @@
   {
    "texto": "Hacia el año doscientos setenta, la principal moneda de plata era básicamente cobre con un baño delgadito de plata. Cerca de dos por ciento.",
    "visual": {
-    "tipo": "versus",
-    "left": {
-     "label": "AUGUSTO",
-     "value": "98 %",
-     "color": "ice",
-     "sync": "hacia"
-    },
-    "right": {
-     "label": "HACIA EL 270",
-     "value": "2 %",
-     "color": "warm",
-     "sync": "cobre"
-    },
-    "vs_text": "→",
-    "note": "una moneda de cobre con baño de plata",
-    "note_sync": "baño"
+    "tipo": "foto",
+    "src": "commons:File:Gallienus antoninianus.jpg",
+    "modo": "tarjeta",
+    "claro": true,
+    "pre": "hacia el año 270",
+    "pre_sync": "hacia",
+    "titulo": "~2 % PLATA",
+    "titulo_sync": "cobre",
+    "color": "warm",
+    "sub": "cobre con un baño de plata",
+    "sub_sync": "baño"
    }
   },
   {
@@ -370,14 +371,24 @@
   {
    "texto": "Y enemigos en todas las fronteras. En el doscientos sesenta, el emperador Valeriano fue capturado por los persas en la batalla de Edesa. Un emperador romano murió prisionero.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Relief of Shapur I capturing Valerian.jpg",
+    "modo": "cover",
     "pre": "año 260, Edesa",
-    "word": "EMPERADOR CAPTURADO",
-    "sub": "Valeriano murió prisionero de Persia",
-    "sub_sync": "prisionero",
-    "sync": "capturado",
+    "titulo": "EMPERADOR CAPTURADO",
+    "titulo_sync": "capturado",
     "color": "warm",
-    "size": 160
+    "sub": "Valeriano, arrodillado ante Sapor I de Persia",
+    "sub_sync": "prisionero",
+    "foco": [
+     0.55,
+     0.3
+    ],
+    "zoom": [
+     1.0,
+     1.08
+    ],
+    "brillo": 0.9
    }
   },
   {
@@ -520,13 +531,16 @@
   {
    "texto": "Lo que sí funcionó vino después. Hacia el trescientos doce, Constantino puso a circular una nueva moneda de oro: el sólido. Setenta y dos monedas por libra romana de oro, unos cuatro gramos y medio cada una.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Gold Solidus of Constantine I, Trier, AD 310 - AD 313.jpg",
+    "modo": "tarjeta",
+    "claro": true,
     "pre": "Constantino, hacia el año 312",
-    "word": "EL SÓLIDO",
+    "titulo": "EL SÓLIDO",
+    "titulo_sync": "sólido",
+    "color": "blue",
     "sub": "72 por libra · ~4,5 g de oro",
-    "sub_sync": "setenta",
-    "sync": "sólido",
-    "color": "blue"
+    "sub_sync": "setenta"
    }
   },
   {
@@ -596,21 +610,21 @@
   {
    "texto": "En el trescientos noventa y cinco, el imperio quedó dividido para siempre entre dos hermanos: un emperador en Occidente y otro en Oriente.",
    "visual": {
-    "tipo": "versus",
-    "left": {
-     "label": "OCCIDENTE",
-     "value": "Honorio",
-     "color": "warm",
-     "sync": "occidente"
-    },
-    "right": {
-     "label": "ORIENTE",
-     "value": "Arcadio",
-     "color": "blue",
-     "sync": "oriente"
-    },
-    "note": "año 395: la división final",
-    "note_sync": "hermanos"
+    "tipo": "foto",
+    "src": "commons:File:Roman empire 395.jpg",
+    "modo": "tarjeta",
+    "pre": "año 395",
+    "titulo": "OCCIDENTE + ORIENTE",
+    "titulo_sync": "occidente",
+    "color": "warm",
+    "sub": "la división final",
+    "sub_sync": "hermanos",
+    "nota": "Honorio · Arcadio",
+    "nota_sync": "oriente",
+    "caja": [
+     900,
+     760
+    ]
    }
   },
   {
@@ -629,14 +643,16 @@
   {
    "texto": "Pero el golpe más duro no fue en Roma. Fue en África. En el cuatrocientos treinta y nueve, los vándalos tomaron Cartago. El norte de África era una de las principales fuentes de impuestos de Occidente, y del trigo que alimentaba a Italia.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Carthage - panoramio.jpg",
+    "modo": "cover",
     "pre": "año 439, Cartago",
-    "word": "SE ACABÓ LA PLATA",
+    "titulo": "SE ACABÓ LA PLATA",
+    "titulo_sync": "vándalos",
+    "color": "warm",
     "sub": "Occidente pierde sus provincias más ricas",
     "sub_sync": "impuestos",
-    "sync": "vándalos",
-    "color": "warm",
-    "size": 170
+    "brillo": 0.8
    }
   },
   {
@@ -703,14 +719,18 @@
   {
    "texto": "Pero aquí viene el giro. El Imperio romano de Oriente siguió casi mil años más, hasta que los otomanos tomaron Constantinopla en mil cuatrocientos cincuenta y tres. Y conservó el sólido de oro.",
    "visual": {
-    "tipo": "bigword",
+    "tipo": "foto",
+    "src": "commons:File:Theodosian Walls in Constantinople 5.jpg",
+    "modo": "cover",
     "pre": "el Imperio romano de Oriente duró hasta",
-    "word": "1453",
+    "pre_sync": "giro",
+    "titulo": "1453",
+    "titulo_sync": "cuatrocientos",
+    "color": "blue",
+    "size": 220,
     "sub": "casi 1.000 años más",
     "sub_sync": "mil",
-    "sync": "cuatrocientos",
-    "color": "blue",
-    "size": 260
+    "brillo": 0.8
    }
   },
   {

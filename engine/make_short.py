@@ -854,7 +854,7 @@ def render(script_path, out_path, voice_path, channel="@whitehole"):
     cfg = json.load(open(script_path, encoding="utf-8"))
     LANG["code"] = cfg.get("idioma", "en")
     scenes = cfg["escenas"]
-    work = os.path.join(os.path.dirname(os.path.abspath(out_path)), "_work")
+    work = os.path.join(os.path.dirname(os.path.abspath(out_path)), "_work_" + os.path.splitext(os.path.basename(out_path))[0])  # una carpeta por video: así dos renders a la vez no se pisan el audio
     os.makedirs(work, exist_ok=True)
     gap = 0.22
     print("1/3 Voz...")

@@ -1068,7 +1068,7 @@ def render(script_path, out_path, channel="WHITE HOLE", frames_only=False):
         thumbnail(cfg, os.path.join(out_path, "miniatura.jpg"))
         print("frames ->", out_path, f"(~{total / 60:.1f} min estimado)")
         return
-    work = os.path.join(os.path.dirname(os.path.abspath(out_path)), "_work_long")
+    work = os.path.join(os.path.dirname(os.path.abspath(out_path)), "_work_long_" + os.path.splitext(os.path.basename(out_path))[0])
     os.makedirs(work, exist_ok=True)
     print("1/4 Voz...", flush=True)
     if cfg.get("kokoro") and os.environ.get("NO_KOKORO") != "1":

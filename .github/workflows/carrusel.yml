@@ -1,6 +1,8 @@
 name: Carrusel (Instagram + Facebook)
 
 on:
+  schedule:
+    - cron: "23 17 * * *"   # 12:23 p. m. hora Colombia, un carrusel al día
   workflow_dispatch:
     inputs:
       guion:

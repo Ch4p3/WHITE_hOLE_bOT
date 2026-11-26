@@ -33,7 +33,7 @@
    }
   },
   {
-   "texto": "Razón uno: las apps engordan. Cada actualización trae más funciones, pensadas para celulares más nuevos.",
+   "texto": "Razón uno, las apps: cada actualización las hace más pesadas, porque las diseñan pensando en celulares nuevos.",
    "visual": {
     "tipo": "bigword",
     "pre": "razón #1",
@@ -44,30 +44,30 @@
    }
   },
   {
-   "texto": "Razón dos: memoria llena. Cuando el almacenamiento está casi lleno, el celular tiene menos espacio para trabajar y todo se arrastra.",
+   "texto": "Razón dos, el espacio: cuando tienes el almacenamiento casi lleno de fotos y videos, el celular trabaja apretado y todo se arrastra.",
    "visual": {
     "tipo": "card",
     "title": "ALMACENAMIENTO",
     "tag": "RAZÓN #2",
     "panel": {
-     "label": "Casi lleno",
-     "value": "menos espacio para trabajar",
+     "label": "Fotos y videos",
+     "value": "casi lleno = todo se arrastra",
      "progress": 0.95,
      "color": "warm",
-     "sync": "memoria",
-     "value_sync": "espacio"
+     "sync": "espacio",
+     "value_sync": "arrastra"
     }
    }
   },
   {
-   "texto": "Razón tres: una batería gastada no aguanta picos de energía, así que el celular baja la velocidad del procesador para no apagarse.",
+   "texto": "Razón tres, la batería: cuando está gastada no aguanta picos de energía, y el celular se frena a propósito para no apagarse.",
    "visual": {
     "tipo": "bigword",
     "pre": "razón #3",
     "word": "BATERÍA VIEJA",
     "size": 160,
     "sync": "gastada",
-    "sub": "el procesador va más lento",
+    "sub": "el celular se frena para no apagarse",
     "color": "warm"
    }
   },
@@ -86,7 +86,7 @@
    }
   },
   {
-   "texto": "Lo que te llevas: borra apps que no usas, libera espacio, y si la batería está por debajo del ochenta por ciento de salud, cámbiala.",
+   "texto": "Lo que te llevas: borra apps que no usas, pasa fotos y videos a la nube o al computador, y si la batería ya está muy gastada, cámbiala.",
    "visual": {
     "tipo": "lista",
     "pastilla": "LO QUE TE LLEVAS",
@@ -98,12 +98,12 @@
       "sync": "borra"
      },
      {
-      "texto": "Deja 15–20% libre",
-      "emoji": "💾",
-      "sync": "libera"
+      "texto": "Pasa fotos y videos a otro lado",
+      "emoji": "🖼️",
+      "sync": "fotos"
      },
      {
-      "texto": "Batería <80%: cámbiala",
+      "texto": "Batería gastada: cámbiala",
       "emoji": "🔋",
       "sync": "batería"
      }

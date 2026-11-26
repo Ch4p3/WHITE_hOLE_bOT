@@ -759,7 +759,71 @@ def v_lista(img, d, t, sc, p):
             text(d, (W / 2, yb), p["boton"], 56 * k, BG)
 
 
-VISUALS = {"lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
+def v_mercado(img, d, t, sc, p):
+    """Gráfico de precio REAL (serie de cierres) que se dibuja de izquierda a derecha.
+    p: serie=[[fecha_txt, precio], ...], desde/hasta (índices visibles al inicio/fin de la escena),
+       marcas=[{i, texto, pos:'arriba'|'abajo', color, sync}], niveles=[{precio, texto, color, sync}],
+       pre, titulo, color, ymin, ymax, fechas=[i,...] (etiquetas en el eje), precio_final (mostrar)"""
+    serie = p["serie"]; n = len(serie)
+    bx0, bx1, by0, by1 = 110, W - 110, p.get("y_base", 1240), p.get("y_tope", 560)
+    precios = [q[1] for q in serie]
+    ymin = p.get("ymin", min(precios) * 0.94); ymax = p.get("ymax", max(precios) * 1.04)
+    X = lambda i: bx0 + i / max(1, n - 1) * (bx1 - bx0)
+    Y = lambda v: by0 - (v - ymin) / (ymax - ymin) * (by0 - by1)
+    if p.get("pre"):
+        slide(d, (W // 2, 330), p["pre"], 44, GREY, t, 0.0, weight="xbold")
+    if p.get("titulo"):
+        slide(d, (W // 2, 410), p["titulo"], fit(d, p["titulo"], 80, "black", 960), WHITE, t, 0.1, weight="black")
+    ka = ease_out(prog(t, 0.0, 0.4))
+    for gy in (0.0, 0.33, 0.66, 1.0):
+        yy = by0 - (by0 - by1) * gy
+        d.line([bx0, yy, bx0 + (bx1 - bx0) * ka, yy], fill=(28, 36, 62) if gy else (60, 74, 110), width=2 if gy else 4)
+    i0 = p.get("desde", n - 1 if p.get("estatico") else 0); i1 = p.get("hasta", n - 1)
+    kd = ease_inout(prog(t, at(sc, p.get("sync"), 0.2), max(0.6, sc["dur"] * p.get("vel", 0.7))))
+    vis = i0 + (i1 - i0) * kd
+    cc = col(p.get("color"), BLUE)
+    last = int(vis)
+    pts = [(X(i), Y(precios[i])) for i in range(0, min(n, last + 1))]
+    if last < n - 1 and vis > last:
+        f = vis - last
+        pts.append((X(last) + (X(last + 1) - X(last)) * f, Y(precios[last] + (precios[last + 1] - precios[last]) * f)))
+    if len(pts) > 1:
+        d.line(pts, fill=cc, width=9, joint="curve")
+    hx, hy = pts[-1]
+    d.ellipse([hx - 14, hy - 14, hx + 14, hy + 14], fill=cc, outline=WHITE, width=4)
+    if p.get("precio_cabeza", True):
+        pv = precios[min(n - 1, last)]
+        lab = "$" + fmt_num(pv, 0)
+        tx = min(max(hx, bx0 + 90), bx1 - 90)
+        text(d, (tx, hy - 50 if hy > by1 + 80 else hy + 50), lab, 46, WHITE, "black")
+    for nv in p.get("niveles", []):
+        k = ease_out(prog(t, at(sc, nv.get("sync"), 0.5), 0.5))
+        if k <= 0: continue
+        yy = Y(nv["precio"]); c2 = col(nv.get("color"), GREY)
+        xx = bx0
+        while xx < bx0 + (bx1 - bx0) * k:
+            d.line([xx, yy, min(xx + 26, bx1), yy], fill=c2, width=4); xx += 44
+        if nv.get("texto"):
+            f = font(34, "xbold"); tw = d.textlength(nv["texto"], font=f)
+            d.rounded_rectangle([bx0, yy - 50, bx0 + tw + 30, yy - 8], 12, fill=PANEL)
+            d.text((bx0 + 15, yy - 29), nv["texto"], font=f, fill=c2, anchor="lm")
+    for m in p.get("marcas", []):
+        if m["i"] > vis + 0.01: continue
+        k = back(prog(t, at(sc, m.get("sync"), 0.3), 0.4))
+        if k <= 0: continue
+        x, y = X(m["i"]), Y(precios[m["i"]])
+        c2 = col(m.get("color"), WARM)
+        yy = y - 70 if m.get("pos", "arriba") == "arriba" else y + 70
+        r = 38 * k
+        d.ellipse([x - r, yy - r, x + r, yy + r], fill=c2)
+        text(d, (x, yy), m["texto"], 46 * k, BG, "black")
+    for i in p.get("fechas", []):
+        text(d, (X(i), by0 + 44), serie[i][0], 34, GREY, "bold")
+    if p.get("fuente"):
+        text(d, (W // 2, by0 + 100), p["fuente"], 28, (110, 120, 145), "semi")
+
+
+VISUALS = {"mercado": v_mercado, "lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
            "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
            "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto,
            "primos": v_primos, "formula": v_formula, "espiral": v_espiral, "franja": v_franja}

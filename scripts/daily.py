@@ -175,6 +175,17 @@ def reel_es():
             print("✅ Reel en Instagram:", instagram.reel_local(video, ig_txt))
         except Exception as e:
             print("⚠️ No se pudo publicar en Instagram:", str(e)[:300])
+    tok, chat = os.environ.get("TELEGRAM_TOKEN", "").strip(), os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+    if tok and chat:      # copia lista para subir a mano a TikTok (la API de TikTok aún no está aprobada)
+        try:
+            cap = ("📲 Para TikTok (español)\n\n" + cfg.get("titulo", "") + "\n\n" +
+                   cfg.get("hashtags", "").replace("#reels", "#fyp #parati") )[:1024]
+            with open(video, "rb") as f:
+                telegram("sendVideo", tok, data={"chat_id": chat, "caption": cap, "supports_streaming": "true"},
+                         files={"video": ("tiktok_es.mp4", f, "video/mp4")})
+            print("✅ Copia para TikTok enviada a Telegram")
+        except Exception as e:
+            print("⚠️ No se pudo enviar la copia para TikTok:", str(e)[:200])
     os.makedirs(PUB_ES, exist_ok=True)
     shutil.move(guion, os.path.join(PUB_ES, f"{datetime.date.today().isoformat()}_{os.path.basename(guion)}"))
 

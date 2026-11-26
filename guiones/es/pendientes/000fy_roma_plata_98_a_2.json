@@ -1,0 +1,103 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "La moneda de Roma pasó de 98 % de plata a 2 % 🏛️",
+ "descripcion": "El denario era casi plata pura en la época de Augusto. Hacia el año 270, la moneda principal era cobre con un baño de plata. Así se ve una inflación de la antigüedad. Serie: Cómo caen los imperios.",
+ "hashtags": "#roma #historia #economia #inflacion #dinero #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Denarius",
+  "https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century"
+ ],
+ "escenas": [
+  {
+   "texto": "La moneda de Roma pasó de casi pura plata a casi puro cobre. Y así se ve cuando un imperio imprime dinero.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "AUGUSTO",
+     "value": "98 %",
+     "color": "ice",
+     "sync": "pura"
+    },
+    "right": {
+     "label": "AÑO 270",
+     "value": "2 %",
+     "color": "warm",
+     "sync": "cobre"
+    }
+   }
+  },
+  {
+   "texto": "En la época de Augusto, el denario tenía alrededor de noventa y ocho por ciento de plata.",
+   "visual": {
+    "tipo": "counter",
+    "to": 98,
+    "suffix": " %",
+    "label": "de plata",
+    "sync": "noventa",
+    "note": "el denario, época de Augusto",
+    "note_sync": "denario"
+   }
+  },
+  {
+   "texto": "Pero el ejército costaba cada vez más. Los emperadores Severos duplicaron la paga base del soldado. Y no había plata nueva.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el gasto",
+    "word": "PAGA ×2",
+    "size": 280,
+    "sync": "duplicaron",
+    "sub": "y sin plata nueva",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "¿La solución? Fundir monedas, echarles cobre, y acuñar más. Hacia el año doscientos setenta, la moneda principal tenía cerca de dos por ciento de plata.",
+   "visual": {
+    "tipo": "counter",
+    "to": 2,
+    "suffix": " %",
+    "label": "de plata, hacia el año 270",
+    "sync": "dos",
+    "note": "cobre con un baño de plata",
+    "note_sync": "cobre",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Con monedas más débiles, los vendedores pedían más monedas. Los precios subieron, y el imperio entró en cincuenta años de caos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el resultado",
+    "word": "INFLACIÓN",
+    "size": 230,
+    "sync": "precios",
+    "sub": "y 50 años de caos",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "¿Te suena conocido? Sígueme para la serie: cómo caen los imperios.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "MÁS MONEDAS,",
+     "MENOS",
+     "VALOR."
+    ],
+    "syncs": [
+     null,
+     "suena",
+     "sígueme"
+    ],
+    "button": "SEGUIR  +",
+    "button_sync": "sígueme"
+   }
+  }
+ ]
+}

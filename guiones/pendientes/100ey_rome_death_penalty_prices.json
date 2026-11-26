@@ -1,0 +1,100 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "In ancient Rome, overcharging for a sausage could get you executed 🏛️",
+ "descripcion": "Diocletian's Edict on Maximum Prices (301 AD) capped over a thousand prices, with the death penalty. Spoiler: it didn't work. Series: How Empires Fall.",
+ "hashtags": "#rome #history #economics #inflation #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Edict_on_Maximum_Prices"
+ ],
+ "escenas": [
+  {
+   "texto": "In the year three oh one, in Rome, overcharging for a sausage could cost you your life.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Rome, 301 AD",
+    "word": "DEATH PENALTY",
+    "size": 200,
+    "sync": "overcharging",
+    "sub": "for overcharging",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Emperor Diocletian set maximum prices for over a thousand products: beef, wine, shoes, even wages.",
+   "visual": {
+    "tipo": "counter",
+    "to": 1000,
+    "suffix": "+",
+    "label": "products with a price cap",
+    "sync": "thousand",
+    "note": "beef · wine · shoes · wages",
+    "note_sync": "beef"
+   }
+  },
+  {
+   "texto": "Why? Because for decades, emperors had been mixing copper into their silver coins to pay the army, and prices exploded.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "COINS",
+     "value": "LESS SILVER",
+     "color": "warm",
+     "sync": "mixing"
+    },
+    "right": {
+     "label": "PRICES",
+     "value": "UP",
+     "color": "warm",
+     "sync": "exploded"
+    }
+   }
+  },
+  {
+   "texto": "Did it work? No. It was enforced unevenly, the limits weren't respected, and within about four years it was mostly ignored.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "did it work?",
+    "word": "NO",
+    "size": 380,
+    "sync": "no",
+    "sub": "mostly ignored by 305",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "What did work was a stable gold coin: Constantine's solidus, which stayed the same for centuries.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🪙",
+    "texto": "THE SOLIDUS",
+    "tsize": 140,
+    "texto_sync": "solidus",
+    "sub": "stable for centuries",
+    "sub_sync": "centuries"
+   }
+  },
+  {
+   "texto": "The lesson: price controls fight the symptom. The cause was the money. Follow for the series: how empires fall.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "THE SYMPTOM",
+     "ISN'T",
+     "THE CAUSE."
+    ],
+    "syncs": [
+     null,
+     "cause",
+     "follow"
+    ],
+    "button": "FOLLOW  +",
+    "button_sync": "follow"
+   }
+  }
+ ]
+}

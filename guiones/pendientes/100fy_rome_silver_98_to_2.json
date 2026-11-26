@@ -1,0 +1,102 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Rome's coin went from 98% silver to 2% 🏛️",
+ "descripcion": "The denarius was almost pure silver under Augustus. By around 270 AD, the main coin was copper with a silver wash. This is what ancient inflation looks like. Series: How Empires Fall.",
+ "hashtags": "#rome #history #economics #inflation #money #shorts",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Denarius",
+  "https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century"
+ ],
+ "escenas": [
+  {
+   "texto": "Rome's money went from almost pure silver to almost pure copper. This is what it looks like when an empire prints money.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "AUGUSTUS",
+     "value": "98%",
+     "color": "ice",
+     "sync": "pure"
+    },
+    "right": {
+     "label": "270 AD",
+     "value": "2%",
+     "color": "warm",
+     "sync": "copper"
+    }
+   }
+  },
+  {
+   "texto": "Around the time of Augustus, the denarius was about ninety eight percent silver.",
+   "visual": {
+    "tipo": "counter",
+    "to": 98,
+    "suffix": "%",
+    "label": "silver",
+    "sync": "ninety",
+    "note": "the denarius, under Augustus",
+    "note_sync": "denarius"
+   }
+  },
+  {
+   "texto": "But the army kept getting more expensive. The Severan emperors doubled a soldier's base pay. And there was no new silver.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the bill",
+    "word": "PAY ×2",
+    "size": 300,
+    "sync": "doubled",
+    "sub": "and no new silver",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "The fix? Melt the coins, add copper, mint more. By around two seventy, the main coin was about two percent silver.",
+   "visual": {
+    "tipo": "counter",
+    "to": 2,
+    "suffix": "%",
+    "label": "silver, around 270 AD",
+    "sync": "two",
+    "note": "copper with a silver wash",
+    "note_sync": "copper",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "With weaker coins, sellers asked for more of them. Prices rose, and the empire fell into fifty years of chaos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the result",
+    "word": "INFLATION",
+    "size": 240,
+    "sync": "prices",
+    "sub": "and 50 years of chaos",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Sound familiar? Follow for the series: how empires fall.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "MORE COINS,",
+     "LESS",
+     "VALUE."
+    ],
+    "syncs": [
+     null,
+     "sound",
+     "follow"
+    ],
+    "button": "FOLLOW  +",
+    "button_sync": "follow"
+   }
+  }
+ ]
+}

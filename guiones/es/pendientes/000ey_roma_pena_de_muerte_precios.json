@@ -1,0 +1,101 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "En Roma, cobrar de más por una salchicha te podía costar la vida 🏛️",
+ "descripcion": "El Edicto de Precios Máximos de Diocleciano (año 301) puso tope a más de mil precios, con pena de muerte. Spoiler: no funcionó. Serie: Cómo caen los imperios.",
+ "hashtags": "#roma #historia #economia #inflacion #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Edict_on_Maximum_Prices"
+ ],
+ "escenas": [
+  {
+   "texto": "En el año trescientos uno, en Roma, cobrar demasiado por una salchicha te podía costar la vida.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Roma, año 301",
+    "word": "PENA DE MUERTE",
+    "size": 190,
+    "sync": "cobrar",
+    "sub": "por cobrar de más",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "El emperador Diocleciano puso precios máximos a más de mil productos: carne, vino, zapatos, y hasta salarios.",
+   "visual": {
+    "tipo": "counter",
+    "to": 1000,
+    "suffix": "+",
+    "label": "productos con precio máximo",
+    "sync": "mil",
+    "note": "carne · vino · zapatos · salarios",
+    "note_sync": "carne"
+   }
+  },
+  {
+   "texto": "¿Por qué? Porque los emperadores llevaban décadas mezclando sus monedas de plata con cobre para pagarle al ejército, y los precios se dispararon.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MONEDA",
+     "value": "MENOS PLATA",
+     "color": "warm",
+     "sync": "mezclando"
+    },
+    "right": {
+     "label": "PRECIOS",
+     "value": "ARRIBA",
+     "color": "warm",
+     "sync": "dispararon"
+    }
+   }
+  },
+  {
+   "texto": "¿Funcionó? No. La ley se cumplió a medias, los límites no se respetaban, y en unos cuatro años casi nadie le hacía caso.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "¿funcionó?",
+    "word": "NO",
+    "size": 380,
+    "sync": "no",
+    "sub": "ignorado hacia el año 305",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Lo que sí funcionó fue una moneda de oro estable: el sólido de Constantino, que duró siglos sin cambiar.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🪙",
+    "texto": "EL SÓLIDO",
+    "tsize": 140,
+    "texto_sync": "sólido",
+    "sub": "estable por siglos",
+    "sub_sync": "siglos"
+   }
+  },
+  {
+   "texto": "La lección: controlar precios ataca el síntoma. La causa era la moneda. Sígueme para la serie: cómo caen los imperios.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "EL SÍNTOMA",
+     "NO ES",
+     "LA CAUSA."
+    ],
+    "syncs": [
+     null,
+     "causa",
+     "sígueme"
+    ],
+    "button": "SEGUIR  +",
+    "button_sync": "sígueme"
+   }
+  }
+ ]
+}

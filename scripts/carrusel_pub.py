@@ -107,7 +107,7 @@ def main():
         os.makedirs(PUB, exist_ok=True)
         dest = os.path.join(PUB, f"{datetime.date.today().isoformat()}_{os.path.basename(guion)}")
         json.dump(g, open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-        if guion.startswith(PEND): os.remove(guion)
+        if os.path.abspath(guion).startswith(os.path.abspath(PEND)): os.remove(guion)
     else:
         raise SystemExit("No se publicó en ninguna red.")
 

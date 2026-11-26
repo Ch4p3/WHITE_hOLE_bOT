@@ -1,0 +1,147 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.0
+ },
+ "serie": "Retos",
+ "titulo": "La respuesta del reto: 7 + 7 ÷ 7 + 7 × 7 − 7 (no es 56) 🧠",
+ "descripcion": "Solución: primero divisiones y multiplicaciones (7 ÷ 7 = 1 y 7 × 7 = 49), después sumas y restas de izquierda a derecha: 7 + 1 + 49 − 7 = 50. Si te dio 56, resolviste de izquierda a derecha sin respetar el orden de operaciones. ¿Acertaste? Nuevo reto en el perfil 👇",
+ "hashtags": "#reto #matematicas #acertijo #ordendeoperaciones #WhiteHole #reels",
+ "fuentes": [
+  "https://www.khanacademy.org/math/pre-algebra/pre-algebra-arith-prop/pre-algebra-order-of-operations/v/introduction-to-order-of-operations"
+ ],
+ "escenas": [
+  {
+   "texto": "Ayer te pusimos este reto: siete más siete entre siete, más siete por siete, menos siete. Si te dio cincuenta y seis, caíste en la trampa.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "7 + 7 ÷ 7 + 7 × 7 − 7",
+      "sync": "siete"
+     }
+    ],
+    "result": {
+     "value": 56,
+     "label": "¿te dio esto? caíste",
+     "sync": "cincuenta",
+     "color": "warm"
+    }
+   }
+  },
+  {
+   "texto": "El cincuenta y seis sale de resolver de izquierda a derecha, como si leyeras un texto. Pero las matemáticas tienen un orden.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "DE IZQUIERDA A DERECHA",
+     "value": "56 ✗",
+     "color": "warm",
+     "sync": "izquierda"
+    },
+    "right": {
+     "label": "CON EL ORDEN CORRECTO",
+     "value": "?",
+     "color": "blue",
+     "sync": "orden"
+    }
+   }
+  },
+  {
+   "texto": "La regla: primero las multiplicaciones y las divisiones. Después, las sumas y las restas, de izquierda a derecha.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LA REGLA",
+    "titulo": "EL ORDEN",
+    "items": [
+     {
+      "texto": "Paréntesis",
+      "sync": "regla"
+     },
+     {
+      "texto": "Potencias",
+      "sync": "primero"
+     },
+     {
+      "texto": "Multiplicar y dividir",
+      "sync": "multiplicaciones"
+     },
+     {
+      "texto": "Sumar y restar",
+      "sync": "sumas"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Entonces: siete entre siete es uno. Y siete por siete es cuarenta y nueve.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "7 ÷ 7 = 1",
+      "sync": "entre"
+     },
+     {
+      "text": "7 × 7 = 49",
+      "sync": "por",
+      "color": "ice"
+     }
+    ],
+    "result": {
+     "value": 49,
+     "label": "primero esto",
+     "sync": "cuarenta"
+    }
+   }
+  },
+  {
+   "texto": "Ahora sí, de izquierda a derecha: siete más uno, más cuarenta y nueve, menos siete. Da cincuenta.",
+   "visual": {
+    "tipo": "equation",
+    "lines": [
+     {
+      "text": "7 + 1 + 49 − 7",
+      "sync": "ahora"
+     }
+    ],
+    "result": {
+     "value": 50,
+     "label": "la respuesta",
+     "sync": "cincuenta"
+    }
+   }
+  },
+  {
+   "texto": "Esta regla existe para que una cuenta tenga una sola respuesta en cualquier parte del mundo. Por eso las calculadoras científicas dan cincuenta.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la respuesta correcta",
+    "word": "50",
+    "size": 300,
+    "sync": "regla",
+    "sub": "la misma en todo el mundo",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "¿Te dio cincuenta? Escribe ACERTÉ. ¿Te dio cincuenta y seis? Escribe CAÍ. Y en el perfil ya está el siguiente reto.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "¿ACERTASTE",
+     "O CAÍSTE?"
+    ],
+    "syncs": [
+     null,
+     "caí"
+    ],
+    "button": "COMENTA",
+    "button_sync": "escribe"
+   }
+  }
+ ]
+}

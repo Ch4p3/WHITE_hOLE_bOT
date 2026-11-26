@@ -1,0 +1,163 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Tecnología",
+ "titulo": "Haz esto y tu celular va más rápido (2 minutos) ⚡📱",
+ "descripcion": "5 ajustes que puedes hacer hoy:\n1) Borra o descarga las apps que no usas (iPhone: Ajustes > General > Almacenamiento; Android: Ajustes > Almacenamiento o la app Files de Google).\n2) Deja espacio libre: pasa fotos y videos a la nube o al computador.\n3) Reinicia el celular una vez por semana.\n4) Revisa la salud de la batería (iPhone: Ajustes > Batería; en Android depende de la marca). Si está muy gastada, cambiarla sale mucho más barato que un celular nuevo.\n5) Truco extra: baja las animaciones (Android: Opciones de desarrollador > escalas de animación en 0.5x; las opciones se activan tocando 7 veces \"Número de compilación\" en Ajustes > Acerca del teléfono; iPhone: Accesibilidad > Movimiento > Reducir movimiento).\nLos nombres de los menús pueden variar según la marca. Guárdalo 👇",
+ "hashtags": "#tecnologia #celular #trucos #android #iphone #WhiteHole #reels",
+ "fuentes": [
+  "https://support.apple.com/es-es/108043",
+  "https://support.google.com/android/answer/7431795"
+ ],
+ "escenas": [
+  {
+   "texto": "Tu celular no está viejo, está cansado. Haz estos cinco ajustes y en dos minutos lo vas a notar más rápido. Guárdalo.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "AHORA",
+     "value": "lento",
+     "color": "warm"
+    },
+    "right": {
+     "label": "EN 2 MINUTOS",
+     "value": "rápido",
+     "color": "green",
+     "sync": "minutos"
+    }
+   }
+  },
+  {
+   "texto": "Uno: borra las apps que no abres hace un mes. En iPhone, en Ajustes, General, Almacenamiento. En Android, en Ajustes, Almacenamiento.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "PASO 1",
+    "titulo": "BORRA APPS",
+    "items": [
+     {
+      "texto": "iPhone: General › Almacenamiento",
+      "emoji": "🍎",
+      "sync": "iphone"
+     },
+     {
+      "texto": "Android: Ajustes › Almacenamiento",
+      "emoji": "🤖",
+      "sync": "android"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dos: deja espacio libre. Con la memoria casi llena, todo se arrastra. Pasa fotos y videos a la nube o al computador.",
+   "visual": {
+    "tipo": "card",
+    "title": "ESPACIO LIBRE",
+    "tag": "PASO 2",
+    "panel": {
+     "label": "Fotos y videos",
+     "value": "pásalos a la nube o al PC",
+     "progress": 0.95,
+     "color": "warm",
+     "sync": "espacio",
+     "value_sync": "pasa"
+    }
+   }
+  },
+  {
+   "texto": "Tres: reinícialo una vez por semana. Así cierras procesos que se quedaron pegados.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "paso 3",
+    "word": "REINICIA 1×/SEMANA",
+    "size": 120,
+    "sync": "reinícialo",
+    "sub": "cierra lo que se quedó pegado"
+   }
+  },
+  {
+   "texto": "Cuatro: revisa la salud de la batería. En iPhone, en Ajustes, Batería. Si está muy gastada, el celular se frena. Cambiarla sale mucho más barato que uno nuevo.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "PASO 4",
+    "titulo": "SALUD DE LA BATERÍA",
+    "items": [
+     {
+      "texto": "iPhone: Ajustes › Batería",
+      "emoji": "🔋",
+      "sync": "iphone"
+     },
+     {
+      "texto": "Muy gastada = celular frenado",
+      "emoji": "🐢",
+      "sync": "frena"
+     },
+     {
+      "texto": "Cambiarla < celular nuevo",
+      "emoji": "💰",
+      "sync": "barato"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cinco, el truco que casi nadie conoce: baja las animaciones. En Android, en opciones de desarrollador, ponlas en cero punto cinco. En iPhone, activa reducir movimiento.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "PASO 5",
+    "titulo": "TRUCO SECRETO",
+    "items": [
+     {
+      "texto": "Android: escala de animación 0.5x",
+      "emoji": "🤖",
+      "sync": "android"
+     },
+     {
+      "texto": "iPhone: Reducir movimiento",
+      "emoji": "🍎",
+      "sync": "iphone"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Guárdalo y compártelo con quien tenga el celular de tortuga. ¿El tuyo cuál es, Android o iPhone? Cuéntame.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "TU CELULAR, MÁS RÁPIDO",
+    "items": [
+     {
+      "texto": "Borra apps",
+      "emoji": "🗑️",
+      "sync": "borra"
+     },
+     {
+      "texto": "Libera espacio",
+      "emoji": "💾",
+      "sync": "libera"
+     },
+     {
+      "texto": "Reinicia",
+      "emoji": "🔄",
+      "sync": "reinicia"
+     },
+     {
+      "texto": "Revisa la batería",
+      "emoji": "🔋",
+      "sync": "batería"
+     },
+     {
+      "texto": "Baja animaciones",
+      "emoji": "⚡",
+      "sync": "animaciones"
+     }
+    ]
+   }
+  }
+ ]
+}

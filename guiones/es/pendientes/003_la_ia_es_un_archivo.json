@@ -7,11 +7,11 @@
   "velocidad": 1.05
  },
  "titulo": "Una IA es solo un archivo de 810 GB lleno de números 🤯",
- "descripcion": "Sin reglas escritas, sin un cerebro en una caja. Llama 3.1 de Meta son 405 mil millones de números aprendidos, guardados en un solo archivo. El video completo está en la página de White Hole.",
+ "descripcion": "Sin reglas escritas, sin un cerebro en una caja. Kimi K3, de la empresa china Moonshot AI, el modelo abierto más grande del mundo (julio de 2026), son 2,8 billones de números aprendidos, guardados en archivos. Los modelos de ChatGPT, Gemini o Claude funcionan con la misma idea, pero sus números no son públicos.",
  "hashtags": "#IA #tecnología #inteligenciaartificial #ciencia #WhiteHole #reels",
  "fuentes": [
-  "https://huggingface.co/meta-llama/Llama-3.1-405B",
-  "https://huggingface.co/blog/llama31"
+  "https://huggingface.co/moonshotai",
+  "https://siliconangle.com/chinas-moonshot-throws-gauntlet-kimi-k3-worlds-largest-open-weights-model"
  ],
  "escenas": [
   {
@@ -27,57 +27,58 @@
    }
   },
   {
-   "texto": "Llama tres punto uno, de Meta, tiene por dentro cuatrocientos cinco mil millones de números, llamados pesos.",
+   "texto": "Kimi K3, el modelo abierto más grande del mundo, tiene por dentro dos coma ocho billones de números, llamados pesos.",
    "visual": {
     "tipo": "counter",
-    "to": 405,
-    "suffix": " mil millones",
-    "label": "números por dentro",
+    "to": 2.8,
+    "decimals": 1,
+    "suffix": " billones",
+    "label": "números por dentro · Kimi K3",
     "note": "llamados pesos",
     "note_sync": "pesos",
-    "sync": "cuatrocientos"
+    "sync": "dos",
+    "color": "blue"
    }
   },
   {
-   "texto": "Cada número ocupa dos bytes. Eso da ochocientos diez gigabytes de números, y nada más.",
+   "texto": "Guardados en formato de dieciséis bits, son más de cinco terabytes de puros números. Nada más.",
    "visual": {
     "tipo": "equation",
     "lines": [
      {
-      "text": "405 mil millones de números",
-      "sync": "cada"
+      "text": "2,8 billones de números",
+      "sync": "guardados"
      },
      {
       "text": "× 2 bytes",
-      "sync": "bytes",
+      "sync": "bits",
       "color": "ice"
      }
     ],
     "result": {
-     "value": 810,
-     "suffix": " GB",
-     "sync": "ochocientos",
-     "label": "solo números"
+     "value": 5.6,
+     "decimals": 1,
+     "suffix": " TB",
+     "label": "de puros números",
+     "sync": "terabytes"
     }
    }
   },
   {
-   "texto": "¿Y el código que lo hace funcionar? Unas mil líneas. Toda la inteligencia vive en los números.",
+   "texto": "¿Y el código que lo hace funcionar? Es diminuto al lado de eso. Toda la inteligencia vive en los números.",
    "visual": {
     "tipo": "versus",
     "left": {
      "label": "EL CÓDIGO",
-     "value": "~1.000",
-     "sub": "líneas",
+     "value": "pequeño",
      "color": "grey",
      "sync": "código"
     },
     "right": {
      "label": "LOS NÚMEROS",
-     "value": "810 GB",
-     "sub": "la IA de verdad",
+     "value": "5,6 TB",
      "color": "blue",
-     "sync": "inteligencia"
+     "sync": "números"
     }
    }
   },

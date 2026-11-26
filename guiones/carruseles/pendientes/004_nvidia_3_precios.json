@@ -1,0 +1,542 @@
+{
+ "idioma": "es",
+ "personaje": "monita",
+ "palabra": "NVIDIA",
+ "enlace": "https://ch4p3.github.io/WHITE_hOLE_bOT/r/nvidia-elliott/",
+ "titulo": "Nvidia y las ondas de Elliott: 3 precios para vigilar 📈",
+ "caption": "Nvidia y las ondas de Elliott: 3 precios para vigilar 📈\n\nLa caída de octubre-noviembre de 2026 hizo 5 ondas y cumplió las 3 reglas. Si el patrón se cumple, la onda C apuntaría a US$184–188 y luego a US$198. Si pierde US$124,50, el conteo se invalida. Precios reales de Yahoo Finance.\n\n⚠️ Contenido educativo, no es recomendación de inversión.\n👉 Comenta NVIDIA y te envío la guía completa de ondas de Elliott con el caso Nvidia.\n🔖 Guárdalo y vuelve en unas semanas a ver si se cumplió.",
+ "hashtags": "#nvidia #bolsa #trading #ondasdeelliott #fibonacci #WhiteHole",
+ "fuentes": [
+  "https://finance.yahoo.com/quote/NVDA/history"
+ ],
+ "slides": [
+  {
+   "tipo": "portada",
+   "pre": "NVIDIA · ONDAS DE ELLIOTT",
+   "titulo": "3 PRECIOS PARA VIGILAR",
+   "sub": "lo que diría el patrón · precios reales",
+   "emoji": "📈"
+  },
+  {
+   "tipo": "mercado",
+   "grafico": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "1 oct",
+      230.86
+     ],
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ]
+    ],
+    "fuente": "Cierres diarios NVDA · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "precio_cabeza": false,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "y_tope": 520,
+    "y_base": 1250,
+    "pre": "oct–nov 2026",
+    "titulo": "LA CAÍDA: 5 ONDAS",
+    "marcas": [
+     {
+      "i": 3,
+      "texto": "▼",
+      "pos": "arriba",
+      "color": "warm"
+     },
+     {
+      "i": 11,
+      "texto": "1",
+      "pos": "abajo",
+      "color": "green"
+     },
+     {
+      "i": 14,
+      "texto": "2",
+      "pos": "arriba",
+      "color": "green"
+     },
+     {
+      "i": 28,
+      "texto": "3",
+      "pos": "abajo",
+      "color": "green"
+     },
+     {
+      "i": 29,
+      "texto": "4",
+      "pos": "arriba",
+      "color": "green"
+     },
+     {
+      "i": 36,
+      "texto": "5",
+      "pos": "abajo",
+      "color": "green"
+     },
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm"
+     },
+     {
+      "i": 39,
+      "texto": "B",
+      "pos": "abajo",
+      "color": "warm"
+     }
+    ]
+   },
+   "texto": "De US$243 a US$124,50 (−49%) en 5 ondas. Después, el rebote A (+31,5% en un día) y la onda B."
+  },
+  {
+   "tipo": "texto",
+   "emoji": "✅",
+   "titulo": "CUMPLE LAS 3 REGLAS",
+   "puntos": [
+    "La onda 2 no pasó el inicio: US$222 < US$243",
+    "La onda 3 fue la más larga: US$56 vs US$30 y US$53",
+    "La onda 4 (US$177) no tocó la zona de la 1 (US$213)"
+   ]
+  },
+  {
+   "tipo": "mercado",
+   "grafico": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "1 oct",
+      230.86
+     ],
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ]
+    ],
+    "fuente": "Cierres diarios NVDA · Yahoo Finance",
+    "ymin": 100,
+    "ymax": 255,
+    "precio_cabeza": false,
+    "fechas": [
+     3,
+     30,
+     39
+    ],
+    "y_tope": 520,
+    "y_base": 1250,
+    "pre": "si se cumple",
+    "titulo": "ONDA C → US$184–198",
+    "marcas": [
+     {
+      "i": 37,
+      "texto": "A",
+      "pos": "arriba",
+      "color": "warm"
+     },
+     {
+      "i": 39,
+      "texto": "B",
+      "pos": "abajo",
+      "color": "warm"
+     }
+    ],
+    "futuro": 22,
+    "futuro_txt": "proyección (sin fechas)",
+    "niveles": [
+     {
+      "precio": 186,
+      "texto": "objetivo 1 · $184–188",
+      "color": "green"
+     },
+     {
+      "precio": 197.96,
+      "texto": "objetivo 2 · $198",
+      "color": "green"
+     },
+     {
+      "precio": 124.5,
+      "texto": "invalidación · $124,50",
+      "color": "warm"
+     }
+    ],
+    "proyecciones": [
+     {
+      "puntos": [
+       [
+        2,
+        145
+       ],
+       [
+        3,
+        143
+       ],
+       [
+        6,
+        158
+       ],
+       [
+        8,
+        153
+       ],
+       [
+        12,
+        172
+       ],
+       [
+        14,
+        166
+       ],
+       [
+        19,
+        187
+       ],
+       [
+        22,
+        198
+       ]
+      ],
+      "color": "green"
+     }
+    ]
+   },
+   "texto": "Proyección ilustrativa: Elliott marca zonas de precio, no fechas."
+  },
+  {
+   "tipo": "texto",
+   "emoji": "👀",
+   "titulo": "LOS 3 PRECIOS",
+   "puntos": [
+    "US$142–148: zona donde debería girar la onda B",
+    "Más de US$171,50: confirma que la onda C está en marcha",
+    "Menos de US$124,50: el conteo se invalida"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "emoji": "⚠️",
+   "titulo": "LA PARTE HONESTA",
+   "puntos": [
+    "Es un conteo posible, no el único",
+    "Es un mapa, no una promesa: siempre con stop loss",
+    "Contenido educativo, no recomendación de inversión"
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "palabra": "NVIDIA",
+   "promesa": "y te envío la guía de ondas de Elliott con el caso Nvidia"
+  }
+ ]
+}

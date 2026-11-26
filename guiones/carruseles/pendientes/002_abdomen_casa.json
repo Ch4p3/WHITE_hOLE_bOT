@@ -1,0 +1,82 @@
+{
+ "idioma": "es",
+ "personaje": "monita",
+ "palabra": "ABDOMEN",
+ "enlace": "https://ch4p3.github.io/WHITE_hOLE_bOT/r/abdomen/",
+ "titulo": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥",
+ "caption": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥\n\n3 ejercicios · 3 series · unos 10 minutos. Ojo: en un estudio, 6 semanas solo de abdominales no bajaron la grasa de la barriga, pero sí dieron más fuerza. La grasa baja con actividad diaria y alimentación; el abdomen fuerte se construye con esto.\n\n👉 Comenta ABDOMEN y te respondo con la rutina completa para imprimir.\n🔖 Guárdala para tu próximo entrenamiento.",
+ "hashtags": "#abdomen #rutina #ejercicioencasa #core #fitness #WhiteHole",
+ "fuentes": [
+  "https://pubmed.ncbi.nlm.nih.gov/21804427/",
+  "https://www.who.int/initiatives/behealthy/physical-activity"
+ ],
+ "slides": [
+  {
+   "tipo": "portada",
+   "pre": "RUTINA EN CASA",
+   "titulo": "ABDOMEN SIN EXCUSAS",
+   "sub": "3 ejercicios · 10 min + la verdad sobre la barriga",
+   "pose": "abdominal"
+  },
+  {
+   "tipo": "texto",
+   "emoji": "🔬",
+   "titulo": "PRIMERO, LA VERDAD",
+   "puntos": [
+    "Un grupo hizo abdominales 5 días por semana durante 6 semanas",
+    "La grasa de la barriga NO cambió… pero ganaron fuerza",
+    "La grasa baja de todo el cuerpo: actividad diaria + comida"
+   ],
+   "nota": "Vispute y col., J Strength Cond Res, 2011"
+  },
+  {
+   "tipo": "item",
+   "titulo": "ABDOMINAL CORTO",
+   "dosis": "3 × 15",
+   "pose": "abdominal",
+   "t": 0.55,
+   "puntos": [
+    "Sube solo los hombros del piso",
+    "No jales el cuello con las manos"
+   ]
+  },
+  {
+   "tipo": "item",
+   "titulo": "PLANCHA",
+   "dosis": "3 × 30 segundos",
+   "pose": "plancha",
+   "t": 0.5,
+   "puntos": [
+    "Cuerpo recto como una tabla",
+    "Aprieta la barriga y los glúteos"
+   ]
+  },
+  {
+   "tipo": "item",
+   "titulo": "PUENTE DE GLÚTEO",
+   "dosis": "3 × 15",
+   "pose": "puente",
+   "t": 0.55,
+   "puntos": [
+    "Protege tu espalda baja",
+    "Aprieta 2 segundos arriba"
+   ]
+  },
+  {
+   "tipo": "texto",
+   "emoji": "⏱️",
+   "titulo": "CÓMO HACERLA",
+   "puntos": [
+    "3 veces por semana, 1 minuto de descanso entre series",
+    "¿Fácil? Plancha de 45 s o abdominales más lentos",
+    "Y camina todos los días: eso es lo que baja la grasa"
+   ],
+   "nota": "Si tienes una lesión o dolor, consulta antes con un profesional de la salud."
+  },
+  {
+   "tipo": "cierre",
+   "palabra": "ABDOMEN",
+   "promesa": "y te respondo con la rutina completa para imprimir"
+  }
+ ]
+}

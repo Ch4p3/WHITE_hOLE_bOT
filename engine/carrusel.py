@@ -186,6 +186,22 @@ def s_foto(g, s, idx, total):
     return img
 
 
+def s_mercado(g, s, idx, total):
+    """Gráfico de precios reales (mismo motor que los Reels), ya dibujado completo."""
+    big = M.make_background(); d0 = ImageDraw.Draw(big)
+    sc = {"dur": 1.0, "words": [], "times": []}
+    v = dict(s["grafico"]); v.setdefault("estatico", True); v.pop("pre", None)
+    for k in ("niveles", "marcas", "proyecciones"):
+        for it in v.get(k, []): it.pop("sync", None)
+    M.v_mercado(big, d0, 30.0, sc, v)
+    img = big.crop((0, 210, W, 210 + H))
+    d = ImageDraw.Draw(img); d.rectangle([0, 0, W, 130], fill=BG); marca(img, d, idx, total)
+    if s.get("texto"):
+        d.rectangle([0, H - 190, W, H], fill=BG)
+        block(d, (70, H - 170), s["texto"], 40, ICE, "xbold", maxw=W - 140, max_lines=3)
+    return img
+
+
 def s_cierre(g, s, idx, total):
     img = fondo(); d = ImageDraw.Draw(img); marca(img, d, idx, total)
     y = 230
@@ -218,6 +234,7 @@ def render(guion_path, outdir):
         if tp == "portada": im = s_portada(g, s, i, total)
         elif tp == "item": n += 1; im = s_item(g, s, i, total, n)
         elif tp == "foto": im = s_foto(g, s, i, total)
+        elif tp == "mercado": im = s_mercado(g, s, i, total)
         elif tp == "cierre": im = s_cierre(g, s, i, total)
         else: im = s_texto(g, s, i, total)
         p = os.path.join(outdir, f"slide_{i:02d}.jpg")

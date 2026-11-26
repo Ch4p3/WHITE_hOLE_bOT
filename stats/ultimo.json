@@ -1,8 +1,217 @@
 {
- "generado": "2026-11-26 00:52 UTC",
- "facebook": [],
- "instagram": [],
+ "generado": "2026-11-26 02:19 UTC",
+ "facebook": [
+  {
+   "id": "1336238215304334",
+   "tipo": "video_reels",
+   "fecha": "2026-11-25T18:20:40+0000",
+   "duracion": 38.1,
+   "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑",
+   "link": "/reel/1336238215304334/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 2,
+   "comentarios": 0
+  },
+  {
+   "id": "995850609788667",
+   "tipo": "video_reels",
+   "fecha": "2026-11-25T12:20:06+0000",
+   "duracion": 41.533,
+   "texto": "¿100 abdominales al día bajan la barriga? 🤔",
+   "link": "/reel/995850609788667/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 2,
+   "comentarios": 0
+  },
+  {
+   "id": "1469747385348512",
+   "tipo": "video_reels",
+   "fecha": "2026-11-25T07:06:32+0000",
+   "duracion": 51.8,
+   "texto": "¿Qué pasa si haces 20 flexiones al día durante un mes? 💪",
+   "link": "/reel/1469747385348512/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 1,
+   "comentarios": 0
+  },
+  {
+   "id": "1689056032605401",
+   "tipo": "video_reels",
+   "fecha": "2026-11-25T03:14:36+0000",
+   "duracion": 450.633,
+   "texto": "Números primos: el misterio de 2.300 años que ahora persigue la IA",
+   "link": "/reel/1689056032605401/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 2,
+   "comentarios": 0
+  },
+  {
+   "id": "4652050638364939",
+   "tipo": "video_reels",
+   "fecha": "2026-11-25T03:13:20+0000",
+   "duracion": 467.433,
+   "texto": "¿Qué es la IA, de verdad? Es solo un archivo lleno de números",
+   "link": "/reel/4652050638364939/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 2,
+   "comentarios": 0
+  },
+  {
+   "id": "1808912547824311",
+   "tipo": "video_reels",
+   "fecha": "2026-11-24T16:28:04+0000",
+   "duracion": 109.466,
+   "texto": "Escobar trajo 4 hipopótamos a Colombia… hoy son casi 200 🦛",
+   "link": "/reel/1808912547824311/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "1143592881730619",
+   "tipo": "video_reels",
+   "fecha": "2026-11-24T12:37:43+0000",
+   "duracion": 21.4,
+   "texto": "The first general-purpose computer weighed 27 tons 🏭\n\nENIAC (1945) filled a room, used about 17,500 vacuum tubes and drew around 150 kilowat",
+   "link": "/reel/1143592881730619/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "1090984690658767",
+   "tipo": "video_reels",
+   "fecha": "2026-11-24T01:28:15+0000",
+   "duracion": 23.5,
+   "texto": "Apollo 11 landed on the Moon with ~4 KB of RAM 🚀\n\nThe Apollo Guidance Computer had 2,048 words of erasable memory and programs woven by hand",
+   "link": "/reel/1090984690658767/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "2360033964733335",
+   "tipo": "video_reels",
+   "fecha": "2026-11-23T20:59:27+0000",
+   "duracion": 30.033,
+   "texto": "The first computer bug was a REAL bug 🦋\n\nIn 1947, engineers found a moth inside the Harvard Mark II and taped it into the logbook. It's stil",
+   "link": "/reel/2360033964733335/",
+   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
+   "metricas": {},
+   "likes": 0,
+   "comentarios": 0
+  }
+ ],
+ "instagram": [
+  {
+   "id": "18137628004866131",
+   "fecha": "2026-11-25T18:21:35+0000",
+   "tipo": "REELS",
+   "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑\n\nLo que no cambia, lo que sí, y los ejercicios que más trabajan el glúteo. Guárdalo para tu r",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgLKU7-ty8t/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
+   "id": "18579148960076237",
+   "fecha": "2026-11-25T12:21:10+0000",
+   "tipo": "REELS",
+   "texto": "¿100 abdominales al día bajan la barriga? 🤔\n\nLa reducción localizada es uno de los mitos más grandes del ejercicio. Esto es lo que de verdad",
+   "likes": 3,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgKhFWksBar/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
+   "id": "18118739816113390",
+   "fecha": "2026-11-25T07:06:26+0000",
+   "tipo": "REELS",
+   "texto": "¿Qué pasa si haces 20 flexiones al día durante un mes? 💪\n\nSemana a semana: qué trabajas, por qué duele al principio, por qué de repente te c",
+   "likes": 5,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgJ9BBZz5eC/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
+   "id": "17977377126174067",
+   "fecha": "2026-11-25T06:55:41+0000",
+   "tipo": "REELS",
+   "texto": "Lo que realmente pasa en los 2 segundos en que pagas con tu tarjeta 🎬\n\nLo que pasa en los dos segundos después de acercar tu tarjeta: qué es",
+   "likes": 3,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgJ7pT-BBjQ/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
+   "id": "18130637332895129",
+   "fecha": "2026-11-25T06:55:33+0000",
+   "tipo": "REELS",
+   "texto": "¿Qué es la IA, de verdad? Es solo un archivo lleno de números 🎬\n\nDentro de una IA no hay un manual de reglas. Solo hay un archivo con 405 mi",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgJ7oXDqYa6/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
+   "id": "17958516606268575",
+   "fecha": "2026-11-25T06:55:29+0000",
+   "tipo": "REELS",
+   "texto": "Números primos: el misterio de 2.300 años que ahora persigue la IA 🎬\n\nDesde la demostración de Euclides, de hace 2.300 años, hasta los agent",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgJ7nyfu_6R/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
+   "id": "18132908530871863",
+   "fecha": "2026-11-25T06:47:20+0000",
+   "tipo": "REELS",
+   "texto": "La IA acaba de abrir un problema de matemáticas que vale 1 millón de dólares 🤯\n\nLa hipótesis de Riemann lleva sin resolverse desde 1859. En ",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgJ6y1LILV3/",
+   "metricas": {},
+   "insights_error": "(#10) Application does not have permission for this action"
+  }
+ ],
  "youtube": [
+  {
+   "id": "wsfUYT8hl7Q",
+   "titulo": "How Rome Really Fell: The Money Behind the Collapse",
+   "fecha": "2026-11-26T01:26:09Z",
+   "duracion": "PT6M48S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 0,
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "hvTf39F3MOs",
+   "titulo": "Born with a flat butt? Can you actually grow it? 🍑 #shorts",
+   "fecha": "2026-11-26T00:56:02Z",
+   "duracion": "PT38S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 32,
+   "likes": 1,
+   "comentarios": 1
+  },
   {
    "id": "Q4RPVJsxMDA",
    "titulo": "Training this AI on one chip would take 3,500 years ⏳ #shorts",
@@ -32,7 +241,7 @@
    "duracion": "PT43S",
    "estado": "public",
    "programado": null,
-   "vistas": 828,
+   "vistas": 1117,
    "likes": 17,
    "comentarios": 0
   },
@@ -175,7 +384,7 @@
    "duracion": "PT31S",
    "estado": "public",
    "programado": null,
-   "vistas": 747,
+   "vistas": 784,
    "likes": 12,
    "comentarios": 0
   },
@@ -191,40 +400,20 @@
    "comentarios": 2
   }
  ],
- "errores": [
-  {
-   "fb_video_reels": {
-    "message": "Any of the pages_read_engagement, pages_manage_metadata,\n        pages_read_user_content, pages_manage_ads, pages_show_list or\n        pages_messaging permission(s) must be granted before impersonating a\n        user's page.",
-    "type": "OAuthException",
-    "code": 190,
-    "fbtrace_id": "AqvOD2odVF2GqKqmrAr6ZxT"
-   }
-  },
-  {
-   "fb_videos": {
-    "message": "Any of the pages_read_engagement, pages_manage_metadata,\n        pages_read_user_content, pages_manage_ads, pages_show_list or\n        pages_messaging permission(s) must be granted before impersonating a\n        user's page.",
-    "type": "OAuthException",
-    "code": 190,
-    "fbtrace_id": "AK2kR_d-4C7Ob0bQw-inrIE"
-   }
-  },
-  {
-   "ig": {
-    "message": "Any of the pages_read_engagement, pages_manage_metadata,\n        pages_read_user_content, pages_manage_ads, pages_show_list or\n        pages_messaging permission(s) must be granted before impersonating a\n        user's page.",
-    "code": 190,
-    "type": "OAuthException",
-    "fbtrace_id": "AhFFsstUN5l5fn0VQiAhijh"
-   }
-  }
- ],
+ "errores": [],
  "facebook_pagina": {
-  "followers_count": null,
-  "fan_count": null
+  "followers_count": 2,
+  "fan_count": 2
+ },
+ "instagram_cuenta": {
+  "username": "whi.tehole1",
+  "followers_count": 1,
+  "media_count": 7
  },
  "youtube_canal": {
   "viewCount": "2368",
-  "subscriberCount": "2",
+  "subscriberCount": "3",
   "hiddenSubscriberCount": false,
-  "videoCount": "14"
+  "videoCount": "16"
  }
 }

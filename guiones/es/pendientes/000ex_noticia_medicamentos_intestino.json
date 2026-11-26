@@ -1,0 +1,114 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Medicinas que tomaste hace años todavía cambian tu intestino 🦠",
+ "descripcion": "Estudio con 2.509 personas del Biobanco de Estonia: muchos medicamentos dejan cambios en las bacterias del intestino que se notan años después. No dejes ningún tratamiento sin hablar con tu médico. Fuentes abajo 👇",
+ "hashtags": "#ciencia #salud #microbiota #antibioticos #noticias #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://www.sciencedaily.com/releases/2025/10/251008030953.htm",
+  "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12542764/",
+  "https://www.cdc.gov/antibiotic-use/about/index.html"
+ ],
+ "escenas": [
+  {
+   "texto": "Una medicina que tomaste hace años puede seguir cambiando las bacterias de tu intestino hoy.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🦠",
+    "texto": "TU INTESTINO",
+    "tsize": 130,
+    "texto_sync": "intestino",
+    "sub": "recuerda lo que tomaste",
+    "sub_sync": "años"
+   }
+  },
+  {
+   "texto": "Científicos de Estonia revisaron las muestras y las recetas médicas de dos mil quinientas nueve personas.",
+   "visual": {
+    "tipo": "counter",
+    "to": 2509,
+    "label": "personas estudiadas",
+    "sync": "dos",
+    "note": "Biobanco de Estonia",
+    "note_sync": "estonia"
+   }
+  },
+  {
+   "texto": "De ciento ochenta y seis medicamentos, ciento sesenta y siete estaban relacionados con cambios en las bacterias. Casi nueve de cada diez.",
+   "visual": {
+    "tipo": "counter",
+    "to": 167,
+    "label": "de 186 medicamentos",
+    "sync": "sesenta",
+    "note": "se asociaron con cambios",
+    "note_sync": "bacterias",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y no solo los antibióticos. También antidepresivos, betabloqueadores, protectores de estómago y tranquilizantes. En varios, el cambio se notaba años después de dejarlos.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "💊",
+    "texto": "NO SOLO ANTIBIÓTICOS",
+    "tsize": 96,
+    "texto_sync": "antibióticos",
+    "sub": "otros también dejan huella",
+    "sub_sync": "antidepresivos"
+   }
+  },
+  {
+   "texto": "Entonces, ¿qué hago? Primero: no dejes ningún tratamiento por tu cuenta. Habla con tu médico.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "lo primero",
+    "word": "NO LOS DEJES",
+    "size": 200,
+    "sync": "dejes",
+    "sub": "habla con tu médico",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Y segundo: los antibióticos no sirven para la gripa ni para los resfriados, porque esos son virus. Tómalos solo cuando un médico te los mande, y completos.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "GRIPA / RESFRIADO",
+     "value": "NO",
+     "color": "warm",
+     "sync": "gripa"
+    },
+    "right": {
+     "label": "RECETADO",
+     "value": "SÍ",
+     "color": "blue",
+     "sync": "médico"
+    }
+   }
+  },
+  {
+   "texto": "Guárdalo para la próxima vez que alguien te ofrezca un antibiótico para la gripa. Sígueme para más ciencia con fuentes.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "TU INTESTINO",
+     "TAMBIÉN",
+     "TIENE MEMORIA."
+    ],
+    "syncs": [
+     null,
+     "gripa",
+     "sígueme"
+    ],
+    "button": "SEGUIR  +",
+    "button_sync": "sígueme"
+   }
+  }
+ ]
+}

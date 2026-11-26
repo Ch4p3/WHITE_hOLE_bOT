@@ -1,0 +1,113 @@
+{
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.05
+ },
+ "titulo": "Medicines you took years ago may still be changing your gut 🦠",
+ "descripcion": "A study of 2,509 people in the Estonian Biobank found that many medications leave changes in gut bacteria that can still be seen years later. Never stop a treatment without talking to your doctor. Sources below 👇",
+ "hashtags": "#science #health #gutmicrobiome #antibiotics #news #shorts",
+ "fuentes": [
+  "https://www.sciencedaily.com/releases/2025/10/251008030953.htm",
+  "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12542764/",
+  "https://www.cdc.gov/antibiotic-use/about/index.html"
+ ],
+ "escenas": [
+  {
+   "texto": "A medicine you took years ago may still be shaping the bacteria in your gut today.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🦠",
+    "texto": "YOUR GUT",
+    "tsize": 140,
+    "texto_sync": "gut",
+    "sub": "remembers what you took",
+    "sub_sync": "years"
+   }
+  },
+  {
+   "texto": "Scientists in Estonia looked at the stool samples and prescription records of two thousand five hundred and nine people.",
+   "visual": {
+    "tipo": "counter",
+    "to": 2509,
+    "label": "people studied",
+    "sync": "two",
+    "note": "Estonian Biobank",
+    "note_sync": "estonia"
+   }
+  },
+  {
+   "texto": "Out of one hundred and eighty six drugs, one hundred and sixty seven were linked to changes in gut bacteria. Almost nine in ten.",
+   "visual": {
+    "tipo": "counter",
+    "to": 167,
+    "label": "of 186 drugs",
+    "sync": "sixty",
+    "note": "linked to microbiome changes",
+    "note_sync": "bacteria",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And not just antibiotics. Antidepressants, beta blockers, acid reducers and anti-anxiety drugs too. For several, the change was still there years after people stopped.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "💊",
+    "texto": "NOT JUST ANTIBIOTICS",
+    "tsize": 96,
+    "texto_sync": "antibiotics",
+    "sub": "other drugs leave a mark too",
+    "sub_sync": "antidepressants"
+   }
+  },
+  {
+   "texto": "So what should you do? First: never stop a treatment on your own. Talk to your doctor.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "first",
+    "word": "DON'T STOP",
+    "size": 220,
+    "sync": "stop",
+    "sub": "talk to your doctor",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Second: antibiotics don't work on colds or the flu, because those are viruses. Take them only when a doctor prescribes them, and finish them.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "COLD / FLU",
+     "value": "NO",
+     "color": "warm",
+     "sync": "colds"
+    },
+    "right": {
+     "label": "PRESCRIBED",
+     "value": "YES",
+     "color": "blue",
+     "sync": "doctor"
+    }
+   }
+  },
+  {
+   "texto": "Save this for the next time someone offers you antibiotics for a cold. Follow for more science, with sources.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "YOUR GUT",
+     "HAS A",
+     "MEMORY."
+    ],
+    "syncs": [
+     null,
+     "cold",
+     "follow"
+    ],
+    "button": "FOLLOW  +",
+    "button_sync": "follow"
+   }
+  }
+ ]
+}

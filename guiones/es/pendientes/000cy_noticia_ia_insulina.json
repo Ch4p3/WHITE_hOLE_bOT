@@ -1,0 +1,114 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_santa",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "La IA diseñó una llave nueva para un receptor de insulina roto 🧬",
+ "descripcion": "Estudio publicado el 25 de noviembre de 2026 en Science Translational Medicine: una proteína diseñada por computador activó receptores de insulina defectuosos en ratones. Ojo: es en ratones y para formas genéticas raras. Fuentes abajo 👇",
+ "hashtags": "#ciencia #ia #insulina #diabetes #noticias #curiosidades #WhiteHole #reels",
+ "fuentes": [
+  "https://www.livescience.com/health/medicine-drugs/like-designing-a-new-key-to-open-a-defective-lock-ai-designed-protein-tricks-defective-insulin-receptors-into-working",
+  "https://sciety.org/articles/activity/10.64898/2026.05.04.722722"
+ ],
+ "escenas": [
+  {
+   "texto": "Una inteligencia artificial ayudó a diseñar una proteína que hace funcionar receptores de insulina que estaban rotos.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🧬",
+    "texto": "NOTICIA",
+    "tsize": 130,
+    "texto_sync": "inteligencia",
+    "sub": "25 de noviembre de 2026",
+    "sub_sync": "proteína"
+   }
+  },
+  {
+   "texto": "Te explico. La insulina es como una llave: abre la puerta de tus células para que entre el azúcar de la sangre.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🔑",
+    "texto": "INSULINA = LLAVE",
+    "tsize": 110,
+    "texto_sync": "llave",
+    "sub": "abre tus células al azúcar",
+    "sub_sync": "puerta"
+   }
+  },
+  {
+   "texto": "Pero hay personas que nacen con la cerradura dañada: el receptor no responde, aunque tengan mucha insulina. Es una enfermedad genética rara y muy grave.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el problema",
+    "word": "CERRADURA ROTA",
+    "size": 190,
+    "sync": "cerradura",
+    "sub": "resistencia grave a la insulina",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Los científicos diseñaron por computador una llave totalmente nueva, que activa el receptor por otro camino, sin necesitar a la insulina.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "INSULINA",
+     "value": "NO ABRE",
+     "color": "warm",
+     "sync": "científicos"
+    },
+    "right": {
+     "label": "LLAVE NUEVA",
+     "value": "SÍ ABRE",
+     "color": "blue",
+     "sync": "nueva"
+    }
+   }
+  },
+  {
+   "texto": "En ratones con la mutación de un paciente, la proteína nueva sí activó el receptor y mejoró el control del azúcar en la sangre. La insulina normal no lo logró.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el resultado, en ratones",
+    "word": "FUNCIONÓ",
+    "size": 260,
+    "sync": "activó",
+    "sub": "mejor control del azúcar",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Ahora, lo honesto: esto es en ratones, y para formas genéticas raras, no para la diabetes común. Todavía faltan años de pruebas en personas.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "lo honesto",
+    "word": "EN RATONES",
+    "size": 230,
+    "sync": "ratones",
+    "sub": "faltan pruebas en humanos",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Pero muestra algo enorme: ya podemos diseñar medicinas pieza por pieza, en vez de buscarlas por suerte. Sígueme para más ciencia con fuentes.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "DISEÑAR",
+     "MEDICINAS",
+     "A LA MEDIDA."
+    ],
+    "syncs": [
+     null,
+     "medicinas",
+     "pieza"
+    ],
+    "button": "SEGUIR  +",
+    "button_sync": "sígueme"
+   }
+  }
+ ]
+}

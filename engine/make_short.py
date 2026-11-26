@@ -29,6 +29,7 @@ WHITE  = (244, 246, 251)
 GREY   = (128, 138, 160)
 WARM   = (255, 138, 76)       # acento de contraste (alertas, "falta", etc.)
 PANEL  = (20, 26, 46)
+GREEN_ = (64, 214, 150)
 COLORS = {"blue": BLUE, "ice": ICE, "white": WHITE, "grey": GREY, "warm": WARM, "green": (64, 214, 150)}
 
 FONT_DIR = os.path.join(ROOT, "assets", "fonts")
@@ -768,8 +769,14 @@ def v_mercado(img, d, t, sc, p):
     bx0, bx1, by0, by1 = 110, W - 110, p.get("y_base", 1240), p.get("y_tope", 560)
     precios = [q[1] for q in serie]
     ymin = p.get("ymin", min(precios) * 0.94); ymax = p.get("ymax", max(precios) * 1.04)
-    X = lambda i: bx0 + i / max(1, n - 1) * (bx1 - bx0)
+    fut = p.get("futuro", 0)
+    X = lambda i: bx0 + i / max(1, n - 1 + fut) * (bx1 - bx0)
     Y = lambda v: by0 - (v - ymin) / (ymax - ymin) * (by0 - by1)
+    if fut:
+        xa = X(n - 1)
+        for yy in range(int(by1), int(by0), 30):
+            d.line([xa, yy, xa, yy + 12], fill=(60, 74, 110), width=2)
+        text(d, ((xa + bx1) / 2, by1 - 10), p.get("futuro_txt", "proyección"), 30, GREY, "bold")
     if p.get("pre"):
         slide(d, (W // 2, 330), p["pre"], 44, GREY, t, 0.0, weight="xbold")
     if p.get("titulo"):
@@ -821,6 +828,33 @@ def v_mercado(img, d, t, sc, p):
             ny = yy - 64 if m.get("pos", "arriba") == "arriba" else yy + 64
             nx = min(max(x, bx0 + 70), bx1 - 70)
             text(d, (nx, ny), m["nota"], 36, c2, "black")
+    for pr in p.get("proyecciones", []):
+        k = ease_inout(prog(t, at(sc, pr.get("sync"), 0.4), pr.get("dur", 1.6)))
+        if k <= 0: continue
+        c2 = col(pr.get("color"), GREEN_)
+        pts = [(X(n - 1), Y(precios[-1]))] + [(X(n - 1 + q[0]), Y(q[1])) for q in pr["puntos"]]
+        segs = [(pts[j], pts[j + 1]) for j in range(len(pts) - 1)]
+        tot = sum(((b2[0] - a2[0]) ** 2 + (b2[1] - a2[1]) ** 2) ** 0.5 for a2, b2 in segs)
+        lim, acc, head = tot * k, 0.0, pts[0]
+        for a2, b2 in segs:
+            L = ((b2[0] - a2[0]) ** 2 + (b2[1] - a2[1]) ** 2) ** 0.5
+            if acc >= lim: break
+            f = min(1.0, (lim - acc) / L) if L else 1.0
+            e = (a2[0] + (b2[0] - a2[0]) * f, a2[1] + (b2[1] - a2[1]) * f)
+            nd = max(1, int(L * f / 22))
+            for j in range(nd):
+                if j % 2: continue
+                f0, f1 = j / nd, min(1.0, (j + 1) / nd)
+                d.line([a2[0] + (e[0] - a2[0]) * f0, a2[1] + (e[1] - a2[1]) * f0,
+                        a2[0] + (e[0] - a2[0]) * f1, a2[1] + (e[1] - a2[1]) * f1], fill=c2, width=8)
+            head = e; acc += L
+        d.ellipse([head[0] - 12, head[1] - 12, head[0] + 12, head[1] + 12], fill=c2)
+        for lb in pr.get("etiquetas", []):
+            if k < lb.get("k", 1.0): continue
+            q = pr["puntos"][lb["p"]]
+            x, y = X(n - 1 + q[0]), Y(q[1])
+            yy = y - 46 if lb.get("pos", "arriba") == "arriba" else y + 46
+            text(d, (min(max(x, bx0 + 80), bx1 - 80), yy), lb["texto"], lb.get("size", 36), c2, "black")
     for i in p.get("fechas", []):
         text(d, (X(i), by0 + 44), serie[i][0], 34, GREY, "bold")
     if p.get("fuente"):

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-26 03:47 UTC",
+ "generado": "2026-11-26 10:00 UTC",
  "facebook": [
   {
    "id": "1588899549950321",
@@ -8,8 +8,14 @@
    "duracion": 386.466,
    "texto": "Cómo cayó Roma de verdad: el dinero detrás del colapso",
    "link": "/reel/1588899549950321/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 20829,
+    "post_video_view_time": 3936694,
+    "blue_reels_play_count": 189,
+    "fb_reels_total_plays": 195,
+    "fb_reels_replay_count": 6,
+    "post_video_followers": 0
+   },
    "likes": 0,
    "comentarios": 0
   },
@@ -20,8 +26,14 @@
    "duracion": 26.5,
    "texto": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑",
    "link": "/reel/29331672863160829/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 9365,
+    "post_video_view_time": 2229104,
+    "blue_reels_play_count": 241,
+    "fb_reels_total_plays": 291,
+    "fb_reels_replay_count": 50,
+    "post_video_followers": 0
+   },
    "likes": 0,
    "comentarios": 0
   },
@@ -32,8 +44,14 @@
    "duracion": 38.1,
    "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑",
    "link": "/reel/1336238215304334/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 8020,
+    "post_video_view_time": 3496947,
+    "blue_reels_play_count": 439,
+    "fb_reels_total_plays": 496,
+    "fb_reels_replay_count": 57,
+    "post_video_followers": 1
+   },
    "likes": 2,
    "comentarios": 0
   },
@@ -44,8 +62,14 @@
    "duracion": 41.533,
    "texto": "¿100 abdominales al día bajan la barriga? 🤔",
    "link": "/reel/995850609788667/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 8453,
+    "post_video_view_time": 1817608,
+    "blue_reels_play_count": 215,
+    "fb_reels_total_plays": 236,
+    "fb_reels_replay_count": 21,
+    "post_video_followers": 0
+   },
    "likes": 2,
    "comentarios": 0
   },
@@ -56,8 +80,14 @@
    "duracion": 51.8,
    "texto": "¿Qué pasa si haces 20 flexiones al día durante un mes? 💪",
    "link": "/reel/1469747385348512/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 9191,
+    "post_video_view_time": 2012860,
+    "blue_reels_play_count": 219,
+    "fb_reels_total_plays": 237,
+    "fb_reels_replay_count": 18,
+    "post_video_followers": 1
+   },
    "likes": 1,
    "comentarios": 0
   },
@@ -68,8 +98,14 @@
    "duracion": 450.633,
    "texto": "Números primos: el misterio de 2.300 años que ahora persigue la IA",
    "link": "/reel/1689056032605401/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 19788,
+    "post_video_view_time": 4848150,
+    "blue_reels_play_count": 245,
+    "fb_reels_total_plays": 260,
+    "fb_reels_replay_count": 15,
+    "post_video_followers": 0
+   },
    "likes": 2,
    "comentarios": 0
   },
@@ -80,8 +116,14 @@
    "duracion": 467.433,
    "texto": "¿Qué es la IA, de verdad? Es solo un archivo lleno de números",
    "link": "/reel/4652050638364939/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 24653,
+    "post_video_view_time": 3377473,
+    "blue_reels_play_count": 137,
+    "fb_reels_total_plays": 145,
+    "fb_reels_replay_count": 8,
+    "post_video_followers": 0
+   },
    "likes": 2,
    "comentarios": 0
   },
@@ -92,8 +134,14 @@
    "duracion": 109.466,
    "texto": "Escobar trajo 4 hipopótamos a Colombia… hoy son casi 200 🦛",
    "link": "/reel/1808912547824311/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 302,
+    "post_video_view_time": 906,
+    "blue_reels_play_count": 3,
+    "fb_reels_total_plays": 4,
+    "fb_reels_replay_count": 1,
+    "post_video_followers": 0
+   },
    "likes": 0,
    "comentarios": 0
   },
@@ -104,8 +152,14 @@
    "duracion": 21.4,
    "texto": "The first general-purpose computer weighed 27 tons 🏭\n\nENIAC (1945) filled a room, used about 17,500 vacuum tubes and drew around 150 kilowat",
    "link": "/reel/1143592881730619/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 1068,
+    "post_video_view_time": 6408,
+    "blue_reels_play_count": 6,
+    "fb_reels_total_plays": 6,
+    "fb_reels_replay_count": 0,
+    "post_video_followers": 0
+   },
    "likes": 0,
    "comentarios": 0
   },
@@ -116,8 +170,14 @@
    "duracion": 23.5,
    "texto": "Apollo 11 landed on the Moon with ~4 KB of RAM 🚀\n\nThe Apollo Guidance Computer had 2,048 words of erasable memory and programs woven by hand",
    "link": "/reel/1090984690658767/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 641,
+    "post_video_view_time": 1924,
+    "blue_reels_play_count": 3,
+    "fb_reels_total_plays": 4,
+    "fb_reels_replay_count": 1,
+    "post_video_followers": 0
+   },
    "likes": 0,
    "comentarios": 0
   },
@@ -128,8 +188,14 @@
    "duracion": 30.033,
    "texto": "The first computer bug was a REAL bug 🦋\n\nIn 1947, engineers found a moth inside the Harvard Mark II and taped it into the logbook. It's stil",
    "link": "/reel/2360033964733335/",
-   "insights_error": "(#200) read_insights permission missing (https://developers.facebook.com/docs/permissions/reference/read_insights)",
-   "metricas": {},
+   "metricas": {
+    "post_video_avg_time_watched": 12118,
+    "post_video_view_time": 72712,
+    "blue_reels_play_count": 6,
+    "fb_reels_total_plays": 9,
+    "fb_reels_replay_count": 3,
+    "post_video_followers": 0
+   },
    "likes": 0,
    "comentarios": 0
   }
@@ -143,8 +209,14 @@
    "likes": 0,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgMGg1Bho7q/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 0,
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 162528
+   }
   },
   {
    "id": "18360012268168467",
@@ -154,19 +226,31 @@
    "likes": 0,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgMBpGYzSc9/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 114,
+    "reach": 102,
+    "saved": 1,
+    "shares": 0,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 6728
+   }
   },
   {
    "id": "18137628004866131",
    "fecha": "2026-11-25T18:21:35+0000",
    "tipo": "REELS",
    "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑\n\nLo que no cambia, lo que sí, y los ejercicios que más trabajan el glúteo. Guárdalo para tu r",
-   "likes": 0,
+   "likes": 1,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgLKU7-ty8t/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 154,
+    "reach": 138,
+    "saved": 3,
+    "shares": 2,
+    "total_interactions": 6,
+    "ig_reels_avg_watch_time": 9806
+   }
   },
   {
    "id": "18579148960076237",
@@ -176,8 +260,14 @@
    "likes": 4,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgKhFWksBar/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 174,
+    "reach": 150,
+    "saved": 1,
+    "shares": 0,
+    "total_interactions": 5,
+    "ig_reels_avg_watch_time": 12334
+   }
   },
   {
    "id": "18118739816113390",
@@ -187,8 +277,14 @@
    "likes": 5,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgJ9BBZz5eC/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 217,
+    "reach": 202,
+    "saved": 2,
+    "shares": 0,
+    "total_interactions": 7,
+    "ig_reels_avg_watch_time": 11614
+   }
   },
   {
    "id": "17977377126174067",
@@ -198,8 +294,14 @@
    "likes": 3,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgJ7pT-BBjQ/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 123,
+    "reach": 109,
+    "saved": 1,
+    "shares": 0,
+    "total_interactions": 4,
+    "ig_reels_avg_watch_time": 24016
+   }
   },
   {
    "id": "18130637332895129",
@@ -209,8 +311,14 @@
    "likes": 0,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgJ7oXDqYa6/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 0,
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 5160
+   }
   },
   {
    "id": "17958516606268575",
@@ -220,8 +328,14 @@
    "likes": 0,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgJ7nyfu_6R/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 5,
+    "reach": 4,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 24631
+   }
   },
   {
    "id": "18132908530871863",
@@ -231,8 +345,14 @@
    "likes": 0,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgJ6y1LILV3/",
-   "metricas": {},
-   "insights_error": "(#10) Application does not have permission for this action"
+   "metricas": {
+    "views": 2,
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 21517
+   }
   }
  ],
  "youtube": [
@@ -243,7 +363,7 @@
    "duracion": "PT26S",
    "estado": "private",
    "programado": "2026-11-26T23:00:00Z",
-   "vistas": 0,
+   "vistas": 1,
    "likes": 0,
    "comentarios": 0
   },
@@ -265,8 +385,8 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 126,
-   "likes": 6,
+   "vistas": 628,
+   "likes": 13,
    "comentarios": 2
   },
   {
@@ -287,8 +407,8 @@
    "duracion": "PT41S",
    "estado": "public",
    "programado": null,
-   "vistas": 88,
-   "likes": 2,
+   "vistas": 167,
+   "likes": 3,
    "comentarios": 0
   },
   {
@@ -298,8 +418,8 @@
    "duracion": "PT43S",
    "estado": "public",
    "programado": null,
-   "vistas": 1118,
-   "likes": 17,
+   "vistas": 1129,
+   "likes": 18,
    "comentarios": 0
   },
   {
@@ -342,8 +462,8 @@
    "duracion": "PT58S",
    "estado": "public",
    "programado": null,
-   "vistas": 1086,
-   "likes": 16,
+   "vistas": 1098,
+   "likes": 17,
    "comentarios": 2
   },
   {
@@ -408,7 +528,7 @@
    "duracion": "PT2M30S",
    "estado": "public",
    "programado": null,
-   "vistas": 6,
+   "vistas": 8,
    "likes": 1,
    "comentarios": 0
   },
@@ -430,7 +550,7 @@
    "duracion": "PT36S",
    "estado": "public",
    "programado": null,
-   "vistas": 1249,
+   "vistas": 1262,
    "likes": 24,
    "comentarios": 2
   },
@@ -441,7 +561,7 @@
    "duracion": "PT31S",
    "estado": "public",
    "programado": null,
-   "vistas": 790,
+   "vistas": 803,
    "likes": 12,
    "comentarios": 0
   },
@@ -452,9 +572,9 @@
    "duracion": "PT24S",
    "estado": "public",
    "programado": null,
-   "vistas": 697,
-   "likes": 8,
-   "comentarios": 2
+   "vistas": 713,
+   "likes": 9,
+   "comentarios": 3
   }
  ],
  "errores": [],
@@ -468,7 +588,7 @@
   "media_count": 9
  },
  "youtube_canal": {
-  "viewCount": "2368",
+  "viewCount": "4470",
   "subscriberCount": "3",
   "hiddenSubscriberCount": false,
   "videoCount": "16"

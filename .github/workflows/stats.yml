@@ -50,7 +50,7 @@ jobs:
           snap = {"t": d["generado"],
                   "yt_vistas": sum(v.get("vistas", 0) for v in d["youtube"]),
                   "yt_subs": int((d.get("youtube_canal") or {}).get("subscriberCount", 0) or 0),
-                  "fb_vistas": s(d["facebook"], "metricas", "blue_reels_play_count") or s(d["facebook"], "metricas", "total_video_views"),
+                  "fb_vistas": s(d["facebook"], "metricas", "fb_reels_total_plays") or s(d["facebook"], "metricas", "total_video_views"),
                   "fb_likes": s(d["facebook"], "likes"), "fb_seg": (d.get("facebook_pagina") or {}).get("followers_count") or 0,
                   "ig_vistas": s(d["instagram"], "metricas", "views"), "ig_likes": s(d["instagram"], "likes"),
                   "ig_seg": (d.get("instagram_cuenta") or {}).get("followers_count") or 0}

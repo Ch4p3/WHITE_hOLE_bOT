@@ -140,7 +140,7 @@ function normalize(d) {
   }
   for (const v of d.facebook || []) {
     const m = v.metricas || {};
-    const views = m.blue_reels_play_count ?? m.fb_reels_total_plays ?? m.total_video_views ?? null;
+    const views = m.fb_reels_total_plays ?? m.blue_reels_play_count ?? m.total_video_views ?? null;
     rows.push({ net: "fb", title: (v.texto || "").split("\n")[0], date: v.fecha, views, likes: v.likes, comments: v.comentarios,
       url: v.link ? (v.link.startsWith("http") ? v.link : "https://www.facebook.com" + v.link) : null });
   }

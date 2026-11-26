@@ -1,22 +1,22 @@
 {
-  "youtube": {
-    "subir": false,
-    "privacidad": "public",
-    "nota": "Poner subir=true cuando YouTube apruebe la auditoría de la API; antes de eso los videos subidos por API quedan bloqueados en privado."
-  },
-  "facebook": {
-    "subir": false,
-    "nota": "subir=false: los Shorts diarios en inglés no van a Facebook. reels_es=true: en cada corrida se publica además un Reel en español de guiones/es/pendientes en la Página.",
-    "reels_es": true
-  },
-  "tiktok": {
-    "subir": true,
-    "modo": "bandeja",
-    "privacidad": "PUBLIC_TO_EVERYONE",
-    "nota": "modo bandeja: TikTok permite máximo 5 envíos pendientes en 24 h. El diario manda 1 por corrida (3 al día); los especiales NO se mandan a TikTok para no pasarse del límite."
-  },
-  "instagram": {
-    "reels_es": true,
-    "nota": "Cada Reel en español que sale en Facebook se publica también en Instagram (@whi.tehole1)."
-  }
+ "youtube": {
+  "subir": true,
+  "privacidad": "public",
+  "nota": "subir=true desde el 26 nov 2026: YouTube cerró la revisión de la API y avisó que los videos subidos por API ya no quedan privados automáticamente (cuota de subida: 100 unidades/día, 1 por llamada)."
+ },
+ "facebook": {
+  "subir": false,
+  "nota": "subir=false: los Shorts diarios en inglés no van a Facebook. reels_es=true: en cada corrida se publica además un Reel en español de guiones/es/pendientes en la Página.",
+  "reels_es": true
+ },
+ "tiktok": {
+  "subir": true,
+  "modo": "bandeja",
+  "privacidad": "PUBLIC_TO_EVERYONE",
+  "nota": "modo bandeja: TikTok permite máximo 5 envíos pendientes en 24 h. El diario manda 1 por corrida (3 al día); los especiales NO se mandan a TikTok para no pasarse del límite."
+ },
+ "instagram": {
+  "reels_es": true,
+  "nota": "Cada Reel en español que sale en Facebook se publica también en Instagram (@whi.tehole1)."
+ }
 }

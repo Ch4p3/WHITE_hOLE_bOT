@@ -1,6 +1,60 @@
 {
- "generado": "2026-11-26 10:02 UTC",
+ "generado": "2026-11-26 17:18 UTC",
  "facebook": [
+  {
+   "id": "994768083711041",
+   "tipo": "video_reels",
+   "fecha": "2026-11-26T15:15:05+0000",
+   "duracion": 42,
+   "texto": "Rutina de glúteos PARTE 2: cuando la primera ya es fácil 🍑🔥",
+   "link": "/reel/994768083711041/",
+   "metricas": {
+    "post_video_avg_time_watched": 4726,
+    "post_video_view_time": 496320,
+    "blue_reels_play_count": 215,
+    "fb_reels_total_plays": 233,
+    "fb_reels_replay_count": 18,
+    "post_video_followers": 0
+   },
+   "likes": 5,
+   "comentarios": 0
+  },
+  {
+   "id": "1545576090727892",
+   "tipo": "video_reels",
+   "fecha": "2026-11-26T14:52:25+0000",
+   "duracion": 49.566,
+   "texto": "Rutina de glúteos en casa, sin pesas 🍑 (guárdala)",
+   "link": "/reel/1545576090727892/",
+   "metricas": {
+    "post_video_avg_time_watched": 4112,
+    "post_video_view_time": 501677,
+    "blue_reels_play_count": 147,
+    "fb_reels_total_plays": 160,
+    "fb_reels_replay_count": 13,
+    "post_video_followers": 0
+   },
+   "likes": 1,
+   "comentarios": 0
+  },
+  {
+   "id": "1617746526214015",
+   "tipo": "video_reels",
+   "fecha": "2026-11-26T12:25:27+0000",
+   "duracion": 56.966,
+   "texto": "La IA diseñó una llave nueva para un receptor de insulina roto 🧬",
+   "link": "/reel/1617746526214015/",
+   "metricas": {
+    "post_video_avg_time_watched": 62395,
+    "post_video_view_time": 62395,
+    "blue_reels_play_count": 1,
+    "fb_reels_total_plays": 1,
+    "fb_reels_replay_count": 0,
+    "post_video_followers": 0
+   },
+   "likes": 0,
+   "comentarios": 0
+  },
   {
    "id": "1588899549950321",
    "tipo": "video_reels",
@@ -9,11 +63,11 @@
    "texto": "Cómo cayó Roma de verdad: el dinero detrás del colapso",
    "link": "/reel/1588899549950321/",
    "metricas": {
-    "post_video_avg_time_watched": 20829,
-    "post_video_view_time": 3936694,
-    "blue_reels_play_count": 189,
-    "fb_reels_total_plays": 195,
-    "fb_reels_replay_count": 6,
+    "post_video_avg_time_watched": 20668,
+    "post_video_view_time": 3947730,
+    "blue_reels_play_count": 191,
+    "fb_reels_total_plays": 198,
+    "fb_reels_replay_count": 7,
     "post_video_followers": 0
    },
    "likes": 0,
@@ -27,14 +81,14 @@
    "texto": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑",
    "link": "/reel/29331672863160829/",
    "metricas": {
-    "post_video_avg_time_watched": 9365,
-    "post_video_view_time": 2229104,
-    "blue_reels_play_count": 242,
-    "fb_reels_total_plays": 292,
-    "fb_reels_replay_count": 50,
+    "post_video_avg_time_watched": 10935,
+    "post_video_view_time": 3882044,
+    "blue_reels_play_count": 364,
+    "fb_reels_total_plays": 443,
+    "fb_reels_replay_count": 79,
     "post_video_followers": 0
    },
-   "likes": 0,
+   "likes": 1,
    "comentarios": 0
   },
   {
@@ -45,11 +99,11 @@
    "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑",
    "link": "/reel/1336238215304334/",
    "metricas": {
-    "post_video_avg_time_watched": 8020,
-    "post_video_view_time": 3496947,
-    "blue_reels_play_count": 440,
-    "fb_reels_total_plays": 497,
-    "fb_reels_replay_count": 57,
+    "post_video_avg_time_watched": 8061,
+    "post_video_view_time": 3796897,
+    "blue_reels_play_count": 471,
+    "fb_reels_total_plays": 532,
+    "fb_reels_replay_count": 61,
     "post_video_followers": 1
    },
    "likes": 2,
@@ -63,10 +117,10 @@
    "texto": "¿100 abdominales al día bajan la barriga? 🤔",
    "link": "/reel/995850609788667/",
    "metricas": {
-    "post_video_avg_time_watched": 8453,
-    "post_video_view_time": 1817608,
-    "blue_reels_play_count": 215,
-    "fb_reels_total_plays": 236,
+    "post_video_avg_time_watched": 8417,
+    "post_video_view_time": 1818258,
+    "blue_reels_play_count": 216,
+    "fb_reels_total_plays": 237,
     "fb_reels_replay_count": 21,
     "post_video_followers": 0
    },
@@ -81,10 +135,10 @@
    "texto": "¿Qué pasa si haces 20 flexiones al día durante un mes? 💪",
    "link": "/reel/1469747385348512/",
    "metricas": {
-    "post_video_avg_time_watched": 9191,
-    "post_video_view_time": 2012860,
-    "blue_reels_play_count": 219,
-    "fb_reels_total_plays": 237,
+    "post_video_avg_time_watched": 9114,
+    "post_video_view_time": 2014242,
+    "blue_reels_play_count": 222,
+    "fb_reels_total_plays": 240,
     "fb_reels_replay_count": 18,
     "post_video_followers": 1
    },
@@ -99,10 +153,10 @@
    "texto": "Números primos: el misterio de 2.300 años que ahora persigue la IA",
    "link": "/reel/1689056032605401/",
    "metricas": {
-    "post_video_avg_time_watched": 19788,
-    "post_video_view_time": 4848150,
-    "blue_reels_play_count": 245,
-    "fb_reels_total_plays": 260,
+    "post_video_avg_time_watched": 19638,
+    "post_video_view_time": 4850624,
+    "blue_reels_play_count": 247,
+    "fb_reels_total_plays": 262,
     "fb_reels_replay_count": 15,
     "post_video_followers": 0
    },
@@ -117,10 +171,10 @@
    "texto": "¿Qué es la IA, de verdad? Es solo un archivo lleno de números",
    "link": "/reel/4652050638364939/",
    "metricas": {
-    "post_video_avg_time_watched": 24653,
-    "post_video_view_time": 3377473,
-    "blue_reels_play_count": 137,
-    "fb_reels_total_plays": 145,
+    "post_video_avg_time_watched": 24474,
+    "post_video_view_time": 3377496,
+    "blue_reels_play_count": 138,
+    "fb_reels_total_plays": 146,
     "fb_reels_replay_count": 8,
     "post_video_followers": 0
    },
@@ -202,6 +256,73 @@
  ],
  "instagram": [
   {
+   "id": "18026654705943775",
+   "fecha": "2026-11-26T15:16:06+0000",
+   "tipo": "REELS",
+   "texto": "Rutina de glúteos PARTE 2: cuando la primera ya es fácil 🍑🔥\n\nEl músculo crece cuando el esfuerzo sube con el tiempo (sobrecarga progresiva).",
+   "likes": 1,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgNZ4eXgIK1/",
+   "metricas": {
+    "views": 113,
+    "reach": 74,
+    "saved": 1,
+    "shares": 2,
+    "total_interactions": 4,
+    "ig_reels_avg_watch_time": 7220
+   }
+  },
+  {
+   "id": "18123558220947122",
+   "fecha": "2026-11-26T14:54:12+0000",
+   "tipo": "REELS",
+   "texto": "Rutina de glúteos en casa, sin pesas 🍑 (guárdala)\n\n4 ejercicios, 3 series, unos 15 minutos. Hazla 2 o 3 veces por semana (la OMS recomienda ",
+   "likes": 4,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgNXWxHAE1o/",
+   "metricas": {
+    "views": 110,
+    "reach": 103,
+    "saved": 2,
+    "shares": 3,
+    "total_interactions": 9,
+    "ig_reels_avg_watch_time": 8495
+   }
+  },
+  {
+   "id": "17915833542602840",
+   "fecha": "2026-11-26T12:27:41+0000",
+   "tipo": "REELS",
+   "texto": "La IA diseñó una llave nueva para un receptor de insulina roto 🧬\n\nEstudio publicado el 25 de noviembre de 2026 en Science Translational Medi",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgNGkYbgxNe/",
+   "metricas": {
+    "views": 8,
+    "reach": 7,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 6286
+   }
+  },
+  {
+   "id": "18144764209715123",
+   "fecha": "2026-11-26T10:46:53+0000",
+   "tipo": "FEED",
+   "texto": "Rutina de glúteos en casa, sin pesas 🍑\n\n4 ejercicios · 3 series · unos 15 minutos. Hazla 2 o 3 veces por semana: la OMS recomienda fortalece",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/p/DgM7H9cjsnB/",
+   "metricas": {
+    "views": 0,
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0
+   }
+  },
+  {
    "id": "18123631447974084",
    "fecha": "2026-11-26T03:08:47+0000",
    "tipo": "REELS",
@@ -215,7 +336,7 @@
     "saved": 0,
     "shares": 0,
     "total_interactions": 0,
-    "ig_reels_avg_watch_time": 162528
+    "ig_reels_avg_watch_time": 83105
    }
   },
   {
@@ -232,7 +353,7 @@
     "saved": 1,
     "shares": 0,
     "total_interactions": 1,
-    "ig_reels_avg_watch_time": 6728
+    "ig_reels_avg_watch_time": 6689
    }
   },
   {
@@ -240,16 +361,16 @@
    "fecha": "2026-11-25T18:21:35+0000",
    "tipo": "REELS",
    "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑\n\nLo que no cambia, lo que sí, y los ejercicios que más trabajan el glúteo. Guárdalo para tu r",
-   "likes": 1,
+   "likes": 5,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgLKU7-ty8t/",
    "metricas": {
-    "views": 154,
-    "reach": 138,
-    "saved": 3,
+    "views": 260,
+    "reach": 228,
+    "saved": 4,
     "shares": 2,
-    "total_interactions": 6,
-    "ig_reels_avg_watch_time": 9806
+    "total_interactions": 11,
+    "ig_reels_avg_watch_time": 11740
    }
   },
   {
@@ -261,12 +382,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgKhFWksBar/",
    "metricas": {
-    "views": 174,
-    "reach": 150,
+    "views": 177,
+    "reach": 153,
     "saved": 1,
     "shares": 0,
     "total_interactions": 5,
-    "ig_reels_avg_watch_time": 12334
+    "ig_reels_avg_watch_time": 12275
    }
   },
   {
@@ -278,12 +399,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgJ9BBZz5eC/",
    "metricas": {
-    "views": 217,
-    "reach": 202,
+    "views": 218,
+    "reach": 203,
     "saved": 2,
     "shares": 0,
     "total_interactions": 7,
-    "ig_reels_avg_watch_time": 11614
+    "ig_reels_avg_watch_time": 11582
    }
   },
   {
@@ -357,6 +478,39 @@
  ],
  "youtube": [
   {
+   "id": "X8aLzdZkVfo",
+   "titulo": "Your AI chatbot isn't learning from you 🧊 #shorts",
+   "fecha": "2026-11-26T17:00:15Z",
+   "duracion": "PT38S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 1,
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "_3J3itASuVA",
+   "titulo": "AI helped design a new key for a broken insulin receptor 🧬",
+   "fecha": "2026-11-26T15:48:12Z",
+   "duracion": "PT59S",
+   "estado": "private",
+   "programado": "2026-11-28T17:00:00Z",
+   "vistas": 0,
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "bL83sBcxJ54",
+   "titulo": "At-home glute workout, no weights 🍑 (save it)",
+   "fecha": "2026-11-26T14:50:21Z",
+   "duracion": "PT47S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 248,
+   "likes": 2,
+   "comentarios": 0
+  },
+  {
    "id": "X6AbT7c095U",
    "titulo": "The #1 exercise for your glutes is NOT the squat 🍑 #shorts",
    "fecha": "2026-11-26T02:27:02Z",
@@ -385,9 +539,9 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 631,
+   "vistas": 1018,
    "likes": 13,
-   "comentarios": 2
+   "comentarios": 3
   },
   {
    "id": "Q4RPVJsxMDA",
@@ -407,8 +561,8 @@
    "duracion": "PT41S",
    "estado": "public",
    "programado": null,
-   "vistas": 128,
-   "likes": 3,
+   "vistas": 273,
+   "likes": 6,
    "comentarios": 0
   },
   {
@@ -418,19 +572,8 @@
    "duracion": "PT43S",
    "estado": "public",
    "programado": null,
-   "vistas": 1129,
+   "vistas": 1136,
    "likes": 18,
-   "comentarios": 0
-  },
-  {
-   "id": "X8aLzdZkVfo",
-   "titulo": "Your AI chatbot isn't learning from you 🧊 #shorts",
-   "fecha": "2026-11-25T13:15:50Z",
-   "duracion": "PT38S",
-   "estado": "private",
-   "programado": "2026-11-26T17:00:00Z",
-   "vistas": 1,
-   "likes": 0,
    "comentarios": 0
   },
   {
@@ -462,8 +605,8 @@
    "duracion": "PT58S",
    "estado": "public",
    "programado": null,
-   "vistas": 1098,
-   "likes": 17,
+   "vistas": 1115,
+   "likes": 16,
    "comentarios": 2
   },
   {
@@ -528,7 +671,7 @@
    "duracion": "PT2M30S",
    "estado": "public",
    "programado": null,
-   "vistas": 7,
+   "vistas": 8,
    "likes": 1,
    "comentarios": 0
   },
@@ -550,7 +693,7 @@
    "duracion": "PT36S",
    "estado": "public",
    "programado": null,
-   "vistas": 1268,
+   "vistas": 1270,
    "likes": 24,
    "comentarios": 2
   },
@@ -561,7 +704,7 @@
    "duracion": "PT31S",
    "estado": "public",
    "programado": null,
-   "vistas": 803,
+   "vistas": 804,
    "likes": 12,
    "comentarios": 0
   },
@@ -572,7 +715,7 @@
    "duracion": "PT24S",
    "estado": "public",
    "programado": null,
-   "vistas": 713,
+   "vistas": 714,
    "likes": 9,
    "comentarios": 3
   }
@@ -584,13 +727,13 @@
  },
  "instagram_cuenta": {
   "username": "whi.tehole1",
-  "followers_count": 1,
-  "media_count": 9
+  "followers_count": 2,
+  "media_count": 13
  },
  "youtube_canal": {
-  "viewCount": "4470",
+  "viewCount": "6163",
   "subscriberCount": "3",
   "hiddenSubscriberCount": false,
-  "videoCount": "16"
+  "videoCount": "18"
  }
 }

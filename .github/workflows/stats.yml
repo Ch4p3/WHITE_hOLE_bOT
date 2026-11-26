@@ -1,0 +1,39 @@
+name: Estadisticas
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Recoger estadisticas
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: python scripts/stats.py
+      - name: Guardar en previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "bot@users.noreply.github.com"
+          cp out/stats.json /tmp/stats.json
+          git fetch origin previews
+          git checkout previews
+          mkdir -p stats
+          cp /tmp/stats.json "stats/$(date -u +%Y-%m-%d_%H%M).json"
+          cp /tmp/stats.json stats/ultimo.json
+          git add stats
+          git commit -m "Estadisticas $(date -u +%F)" && git push origin previews

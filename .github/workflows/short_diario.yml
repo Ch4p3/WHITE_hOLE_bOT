@@ -1,12 +1,16 @@
 name: Short diario
 
 on:
-  # Los horarios (7:15, 13:15 y 19:15 Bogotá) los dispara Google Apps Script con workflow_dispatch.
+  # Los horarios (7:15, 13:15 y 19:15 completos + 10:15 y 16:15 solo español, Bogotá) los dispara Google Apps Script con workflow_dispatch.
   # El cron de GitHub se quitó: fallaba y, cuando por fin corrió, duplicaba los Shorts.
   workflow_dispatch:         # botón "Run workflow" para lanzarlo a mano
     inputs:
       solo_verificar_youtube:
         description: "Solo verificar las conexiones (YouTube, Facebook, TikTok); no genera video"
+        type: boolean
+        default: false
+      solo_es:
+        description: "Solo el Reel en español (Facebook + Instagram); no genera el Short en inglés"
         type: boolean
         default: false
 
@@ -93,10 +97,11 @@ jobs:
           TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
           TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
           TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
+          SOLO_ES: ${{ inputs.solo_es && '1' || '' }}
         run: python scripts/daily.py
 
       - name: Guardar el video en la rama previews (para subirlo a YouTube/TikTok desde el navegador)
-        if: ${{ !inputs.solo_verificar_youtube }}
+        if: ${{ !inputs.solo_verificar_youtube && !inputs.solo_es }}
         run: |
           git config user.name "white-hole-bot"
           git config user.email "white-hole-bot@users.noreply.github.com"

@@ -179,6 +179,9 @@ def reel_es():
     shutil.move(guion, os.path.join(PUB_ES, f"{datetime.date.today().isoformat()}_{os.path.basename(guion)}"))
 
 if __name__ == "__main__":
-    main()
-    if "--prueba" not in sys.argv:
+    if os.environ.get("SOLO_ES") == "1":      # turnos extra: solo el Reel en español (FB + IG)
         reel_es()
+    else:
+        main()
+        if "--prueba" not in sys.argv:
+            reel_es()

@@ -1,0 +1,813 @@
+{
+ "titulo": "How Rome Really Fell: The Money Behind the Collapse",
+ "idioma": "en",
+ "kokoro": {
+  "voz": "am_michael",
+  "velocidad": 0.97,
+  "lang": "en-us"
+ },
+ "pausa": 0.5,
+ "intro_capitulo": "A sausage and a death penalty",
+ "miniatura": {
+  "lineas": [
+   "HOW ROME",
+   "REALLY FELL"
+  ],
+  "colores": [
+   "white",
+   "warm"
+  ],
+  "chip": "98% SILVER → 2%",
+  "emoji": "🏛️"
+ },
+ "descripcion": "Rome didn't fall in a day. It took centuries, and it started with a coin. The silver denarius, debased from about 98% silver to about 2%; the Crisis of the Third Century, with at least 26 claimants to the throne in about 50 years; Diocletian's price controls, punishable by death; Constantine's gold solidus; and the final collapse of the West, from Adrianople to 476. First episode of the series: How Empires Fall.",
+ "fuentes": [
+  "Edict on Maximum Prices (301 AD): maximum prices for over 1,000 goods and services, death penalty, patchily enforced, mostly ignored by 305: https://en.wikipedia.org/wiki/Edict_on_Maximum_Prices",
+  "Denarius silver content by period (95-98% under the late Republic/Augustus era, 93.5% under Nero, 83.5% c. 148-161, cut from 78.5% to 50% by the Severans, antoninianus later about 2% fine): https://en.wikipedia.org/wiki/Denarius",
+  "Crisis of the Third Century (235-284/285, at least 26 claimants, Plague of Cyprian 249-262, Valerian captured in 260, Gallic Empire 260-274, Severans doubled legionary base pay): https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century",
+  "Solidus (introduced for mass circulation by Constantine around 312, 72 to the Roman pound, about 4.5 g of gold, stable for about seven centuries): https://en.wikipedia.org/wiki/Solidus_(coin)",
+  "Fall of the Western Roman Empire (Adrianople 378, division of 395, sack of 410, 476, causes cited by historians, Diocletian's army of about 390,000 plus 45,000 in the fleets): https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire",
+  "Vandal Kingdom: capture of Carthage in 439; North Africa as a major source of revenue and grain for Rome; sack of Rome in 455: https://en.wikipedia.org/wiki/Vandal_Kingdom"
+ ],
+ "hashtags": [
+  "#rome",
+  "#history",
+  "#romanempire",
+  "#economics",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "In the year three hundred and one, the emperor of Rome made it a crime, punishable by death, to charge too much for a sausage.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Rome, 301 AD",
+    "word": "DEATH PENALTY",
+    "sub": "for overcharging",
+    "sub_sync": "charge",
+    "sync": "crime",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "It wasn't a joke. It was a law with maximum prices for more than a thousand products and services: beef, wine, shoes, freight, even wages.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "the Edict on Maximum Prices",
+    "to": 1000,
+    "suffix": "+",
+    "label": "products and services with a price limit",
+    "sync": "thousand",
+    "note": "beef · wine · shoes · wages",
+    "note_sync": "beef"
+   }
+  },
+  {
+   "texto": "How did the richest empire on Earth end up there? The answer isn't one battle or one bad emperor. It's a slow story about money, war and power.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "HOW ROME",
+     "REALLY FELL"
+    ],
+    "colors": [
+     "white",
+     "warm"
+    ],
+    "sync": "richest"
+   }
+  },
+  {
+   "texto": "And the fall of Rome took centuries. It started with something you could hold in your hand: a silver coin.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "THE STORY IN FIVE PARTS",
+    "items": [
+     {
+      "texto": "The coin",
+      "sync": "coin"
+     },
+     {
+      "texto": "The crisis",
+      "sync": "centuries"
+     },
+     {
+      "texto": "The fix",
+      "sync": "started"
+     },
+     {
+      "texto": "The end in the West",
+      "sync": "hand"
+     },
+     {
+      "texto": "The pattern",
+      "sync": "silver"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Chapter one. The coin.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "The coin",
+    "sub": "how Rome paid for everything"
+   }
+  },
+  {
+   "texto": "Rome's everyday money was the denarius. Soldiers were paid in it, taxes were counted in it, and its value came from the metal inside: silver.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Rome's everyday money",
+    "word": "DENARIUS",
+    "sub": "worth its silver",
+    "sub_sync": "silver",
+    "sync": "denarius",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Around the time of Augustus, the denarius was almost pure: about ninety eight percent silver.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "the denarius, around Augustus",
+    "to": 98,
+    "suffix": "%",
+    "label": "silver",
+    "sync": "ninety",
+    "note": "almost pure",
+    "note_sync": "pure"
+   }
+  },
+  {
+   "texto": "Then emperors discovered a trick. Melt the coins, mix in cheaper metal, and mint more coins from the same silver. Nero did it in the year sixty four.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "THE OLDEST TRICK",
+    "pasos": [
+     {
+      "texto": "MELT\nTHE COINS",
+      "sync": "melt"
+     },
+     {
+      "texto": "ADD\nCOPPER",
+      "sync": "cheaper"
+     },
+     {
+      "texto": "MINT\nMORE",
+      "sync": "mint"
+     },
+     {
+      "texto": "PAY\nTHE BILLS",
+      "sync": "nero"
+     }
+    ],
+    "bucle": "repeat when broke",
+    "bucle_sync": "sixty"
+   }
+  },
+  {
+   "texto": "Watch what happens to the silver over the next two centuries.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Augustus era",
+      "value": 98,
+      "value_text": "~98%",
+      "color": "ice",
+      "sync": "watch"
+     },
+     {
+      "label": "Nero, 64 AD",
+      "value": 93.5,
+      "value_text": "93.5%",
+      "color": "ice",
+      "sync": "happens"
+     },
+     {
+      "label": "Mid 2nd century",
+      "value": 83.5,
+      "value_text": "83.5%",
+      "color": "blue",
+      "sync": "silver"
+     },
+     {
+      "label": "Severan emperors",
+      "value": 50,
+      "value_text": "50%",
+      "color": "warm",
+      "sync": "next"
+     },
+     {
+      "label": "Around 270 AD",
+      "value": 2,
+      "value_text": "~2%",
+      "color": "warm",
+      "sync": "centuries"
+     }
+    ],
+    "note": "silver content of Rome's main silver coin",
+    "note_sync": "centuries",
+    "paso": 158,
+    "y": 232,
+    "note_y": 96
+   }
+  },
+  {
+   "texto": "By around the year two seventy, the main silver coin was basically copper with a thin silver wash. About two percent silver.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "AUGUSTUS",
+     "value": "98%",
+     "color": "ice",
+     "sync": "year"
+    },
+    "right": {
+     "label": "AROUND 270 AD",
+     "value": "2%",
+     "color": "warm",
+     "sync": "copper"
+    },
+    "vs_text": "→",
+    "note": "a copper coin with a silver wash",
+    "note_sync": "wash"
+   }
+  },
+  {
+   "texto": "Why do that? Because the biggest bill in the empire was the army. The Severan emperors made the army about a quarter bigger, and doubled a legionary's base pay.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "THE ARMY",
+     "value": "+25%",
+     "color": "ice",
+     "sync": "quarter"
+    },
+    "right": {
+     "label": "BASE PAY",
+     "value": "×2",
+     "color": "warm",
+     "sync": "doubled"
+    },
+    "vs_text": "+",
+    "note": "and no new silver to pay for it",
+    "note_sync": "pay"
+   }
+  },
+  {
+   "texto": "There was no new silver to pay for it. So they paid with weaker coins. It's the ancient version of printing money.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the ancient version of",
+    "word": "PRINTING MONEY",
+    "sub": "more coins, less value",
+    "sub_sync": "weaker",
+    "sync": "ancient",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And people noticed. When a coin holds less silver, sellers ask for more coins. Prices go up. Today we call that inflation.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "WHAT PEOPLE DID",
+    "pasos": [
+     {
+      "texto": "LESS\nSILVER",
+      "sync": "less"
+     },
+     {
+      "texto": "MORE\nCOINS",
+      "sync": "sellers"
+     },
+     {
+      "texto": "HIGHER\nPRICES",
+      "sync": "prices"
+     },
+     {
+      "texto": "INFLATION",
+      "sync": "inflation"
+     }
+    ],
+    "bucle": "and it feeds itself",
+    "bucle_sync": "call"
+   }
+  },
+  {
+   "texto": "Chapter two. The crisis.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "The crisis",
+    "sub": "fifty years of chaos"
+   }
+  },
+  {
+   "texto": "In the year two thirty five, the emperor Severus Alexander was killed by his own soldiers. What came next is called the Crisis of the Third Century.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "235 AD",
+    "word": "THE CRISIS",
+    "sub": "of the Third Century",
+    "sub_sync": "crisis",
+    "sync": "killed",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "In about fifty years, at least twenty six men claimed the title of emperor. Many of them were murdered.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "in about fifty years",
+    "to": 26,
+    "label": "claimants to the title of emperor",
+    "sync": "twenty",
+    "note": "many were murdered",
+    "note_sync": "murdered",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Think about what that means for money. Every new emperor had to pay the army that put him there. More bonuses, more coins, less silver.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "THE DEATH SPIRAL",
+    "pasos": [
+     {
+      "texto": "NEW\nEMPEROR",
+      "sync": "every"
+     },
+     {
+      "texto": "PAY THE\nARMY",
+      "sync": "army"
+     },
+     {
+      "texto": "DEBASE\nTHE COIN",
+      "sync": "coins"
+     },
+     {
+      "texto": "ANGRY\nSOLDIERS",
+      "sync": "silver"
+     }
+    ],
+    "bucle": "repeat",
+    "bucle_sync": "silver"
+   }
+  },
+  {
+   "texto": "Then came disease. A plague, now called the Plague of Cyprian, swept the empire from around two forty nine to two sixty two. Fewer people meant fewer farmers, fewer soldiers and fewer taxes.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🦠",
+    "texto": "Plague of Cyprian · c. 249–262",
+    "texto_sync": "plague",
+    "sync": "disease"
+   }
+  },
+  {
+   "texto": "And enemies on every border. In two sixty, the emperor Valerian was captured by the Persians at the Battle of Edessa. A Roman emperor died as a prisoner.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "260 AD, Edessa",
+    "word": "EMPEROR CAPTURED",
+    "sub": "Valerian died a prisoner of Persia",
+    "sub_sync": "prisoner",
+    "sync": "captured",
+    "color": "warm",
+    "size": 170
+   }
+  },
+  {
+   "texto": "The empire literally broke into three. In the west, a Gallic Empire ruled Gaul, Britain and for a time Spain. In the east, Palmyra took over. Rome kept the middle.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "ONE EMPIRE, THREE PIECES",
+    "items": [
+     {
+      "texto": "Gallic Empire · Gaul, Britain, Spain",
+      "sync": "gallic",
+      "color": "ice"
+     },
+     {
+      "texto": "Rome · Italy and the center",
+      "sync": "middle",
+      "color": "white"
+     },
+     {
+      "texto": "Palmyrene Empire · the east",
+      "sync": "palmyra",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A tough soldier named Aurelian put it back together by two seventy four. He even built new walls around Rome itself. A year later, he was assassinated.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "FROM CHAOS TO ONE EMPIRE",
+    "eventos": [
+     {
+      "fecha": "235",
+      "texto": "emperor killed,\ncrisis begins",
+      "sync": "tough"
+     },
+     {
+      "fecha": "260",
+      "texto": "Valerian captured,\nempire splits",
+      "sync": "aurelian"
+     },
+     {
+      "fecha": "274",
+      "texto": "Aurelian\nreunites it",
+      "sync": "together"
+     },
+     {
+      "fecha": "275",
+      "texto": "Aurelian\nassassinated",
+      "sync": "assassinated"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Chapter three. The fix.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "The fix",
+    "sub": "and the part that backfired"
+   }
+  },
+  {
+   "texto": "In two eighty four, Diocletian took power. He decided one man could no longer run the empire, so he split the job among four rulers. It's called the Tetrarchy.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Diocletian's idea",
+    "word": "FOUR EMPERORS",
+    "sub": "the Tetrarchy",
+    "sub_sync": "tetrarchy",
+    "sync": "four",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "He also built a huge state. One ancient writer says his army reached almost three hundred and ninety thousand soldiers, plus over forty five thousand in the fleets.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Diocletian's army, at one point",
+    "to": 389704,
+    "label": "soldiers, plus 45,562 in the fleets",
+    "sync": "ninety",
+    "note": "according to John the Lydian",
+    "note_sync": "fleets"
+   }
+  },
+  {
+   "texto": "All of that cost money. And prices kept rising. So in three hundred and one came his famous answer: the Edict on Maximum Prices.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "301 AD",
+    "word": "PRICE CONTROLS",
+    "sub": "the Edict on Maximum Prices",
+    "sub_sync": "edict",
+    "sync": "answer",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "The most expensive item on the list was a pound of purple silk: one hundred and fifty thousand denarii. Charging more, or hoarding goods, could cost you your life.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "the priciest item: 1 lb of purple silk",
+    "to": 150000,
+    "label": "denarii (maximum price)",
+    "sync": "hundred",
+    "note": "break the rule: death",
+    "note_sync": "life",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "It didn't work. The edict was enforced unevenly, its limits weren't respected, and within a few years it was mostly ignored.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "WHAT HAPPENED",
+    "items": [
+     {
+      "texto": "Enforced unevenly",
+      "sync": "unevenly",
+      "color": "warm"
+     },
+     {
+      "texto": "Sellers didn't respect the limits",
+      "sync": "limits",
+      "color": "warm"
+     },
+     {
+      "texto": "Mostly ignored by 305",
+      "sync": "ignored",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "What actually worked came next. Around three twelve, Constantine put a new gold coin into wide circulation: the solidus. Seventy two coins per Roman pound of gold, about four and a half grams each.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Constantine, around 312 AD",
+    "word": "THE SOLIDUS",
+    "sub": "72 per pound · ~4.5 g of gold",
+    "sub_sync": "seventy",
+    "sync": "solidus",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "And they didn't touch it. The solidus kept essentially the same weight and purity for about seven centuries.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "THE DENARIUS",
+     "value": "98% → 2%",
+     "color": "warm",
+     "sync": "touch"
+    },
+    "right": {
+     "label": "THE SOLIDUS",
+     "value": "~700 years",
+     "color": "blue",
+     "sync": "seven"
+    },
+    "vs": false,
+    "note": "stable money outlasted the empire that made it",
+    "note_sync": "centuries"
+   }
+  },
+  {
+   "texto": "That's the first lesson of this story. Price controls fight the symptom. Stable money fixes the cause.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FIGHTS THE SYMPTOM",
+     "value": "price controls",
+     "color": "warm",
+     "sync": "controls",
+     "size": 90
+    },
+    "right": {
+     "label": "FIXES THE CAUSE",
+     "value": "stable money",
+     "color": "blue",
+     "sync": "stable",
+     "size": 90
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Chapter four. The end in the West.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "The end in the West",
+    "sub": "from Adrianople to 476"
+   }
+  },
+  {
+   "texto": "In three seventy eight, at Adrianople, the Goths destroyed an eastern Roman army. The emperor Valens died on the battlefield.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "378 AD, Adrianople",
+    "word": "AN EMPEROR FALLS",
+    "sub": "Valens dies in battle",
+    "sub_sync": "valens",
+    "sync": "destroyed",
+    "color": "warm",
+    "size": 180
+   }
+  },
+  {
+   "texto": "In three ninety five, the empire was split between two brothers for good: one emperor in the West, one in the East.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "WEST",
+     "value": "Honorius",
+     "color": "warm",
+     "sync": "west"
+    },
+    "right": {
+     "label": "EAST",
+     "value": "Arcadius",
+     "color": "blue",
+     "sync": "east"
+    },
+    "note": "395 AD: the final split",
+    "note_sync": "brothers"
+   }
+  },
+  {
+   "texto": "In four ten, Alaric and the Visigoths took Rome by starving it, and sacked it for three days. No enemy had taken the city in about eight hundred years.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "410 AD: Rome is sacked",
+    "to": 800,
+    "label": "years since an enemy last took the city",
+    "sync": "eight",
+    "note": "sacked for three days",
+    "note_sync": "three",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "But the deadliest blow wasn't in Rome. It was in Africa. In four thirty nine, the Vandals took Carthage. North Africa was one of the West's main sources of tax money, and of grain to feed Italy.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "439 AD, Carthage",
+    "word": "THE MONEY IS GONE",
+    "sub": "the West loses its richest provinces",
+    "sub_sync": "tax",
+    "sync": "vandals",
+    "color": "warm",
+    "size": 170
+   }
+  },
+  {
+   "texto": "No taxes, no army. No army, no empire. In four fifty five, the Vandals sailed across and sacked Rome again.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "THE END GAME",
+    "pasos": [
+     {
+      "texto": "LOSE\nPROVINCES",
+      "sync": "taxes"
+     },
+     {
+      "texto": "LOSE\nTAXES",
+      "sync": "army"
+     },
+     {
+      "texto": "LOSE\nTHE ARMY",
+      "sync": "empire"
+     },
+     {
+      "texto": "LOSE\nROME",
+      "sync": "sacked"
+     }
+    ],
+    "bucle": "455: sacked again",
+    "bucle_sync": "sailed"
+   }
+  },
+  {
+   "texto": "And in four seventy six, a Germanic general called Odoacer removed the last emperor in the West, a teenager named Romulus Augustulus, and the imperial regalia were sent to Constantinople.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "THE LAST CENTURY OF THE WEST",
+    "eventos": [
+     {
+      "fecha": "378",
+      "texto": "Adrianople",
+      "sync": "four"
+     },
+     {
+      "fecha": "410",
+      "texto": "Rome sacked",
+      "sync": "general"
+     },
+     {
+      "fecha": "439",
+      "texto": "Carthage lost",
+      "sync": "removed"
+     },
+     {
+      "fecha": "455",
+      "texto": "sacked again",
+      "sync": "teenager"
+     },
+     {
+      "fecha": "476",
+      "texto": "last emperor\nin the West",
+      "sync": "regalia"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But here's the twist. The Roman Empire in the East kept going for almost another thousand years, until the Ottomans took Constantinople in fourteen fifty three. And it kept the gold solidus.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the Eastern Roman Empire lasted until",
+    "word": "1453",
+    "sub": "almost 1,000 more years",
+    "sub_sync": "thousand",
+    "sync": "fourteen",
+    "color": "blue",
+    "size": 260
+   }
+  },
+  {
+   "texto": "Chapter five. The pattern.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "The pattern",
+    "sub": "why empires run out of time"
+   }
+  },
+  {
+   "texto": "Historians still argue about why Rome fell, and they list many causes: the army, disease, the economy, bad emperors, civil wars, the administration, invasions, even climate change.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "WHAT HISTORIANS POINT TO",
+    "items": [
+     {
+      "texto": "Army and invasions",
+      "sync": "army"
+     },
+     {
+      "texto": "Plagues and population",
+      "sync": "disease"
+     },
+     {
+      "texto": "Money and the economy",
+      "sync": "economy"
+     },
+     {
+      "texto": "Bad emperors and civil wars",
+      "sync": "emperors"
+     },
+     {
+      "texto": "Climate",
+      "sync": "climate"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But look at how they connect. Wars cost money. Money gets printed. Prices rise. The army goes unpaid, soldiers pick a new emperor, and the cycle starts again.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "THE CYCLE",
+    "pasos": [
+     {
+      "texto": "WARS\nCOST MONEY",
+      "sync": "wars"
+     },
+     {
+      "texto": "MONEY\nPRINTED",
+      "sync": "printed"
+     },
+     {
+      "texto": "PRICES\nRISE",
+      "sync": "prices"
+     },
+     {
+      "texto": "NEW\nEMPEROR",
+      "sync": "soldiers"
+     }
+    ],
+    "bucle": "and again",
+    "bucle_sync": "cycle"
+   }
+  },
+  {
+   "texto": "Empires rarely fall in a single day. They spend more than they have, they weaken their money to cover it, and they run out of time.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the lesson",
+    "word": "THEY RUN OUT OF MONEY",
+    "sub": "long before they run out of soldiers",
+    "sub_sync": "weaken",
+    "sync": "rarely",
+    "color": "warm",
+    "size": 150
+   }
+  },
+  {
+   "texto": "This was the first episode of How Empires Fall. Next: the Spanish Empire, which had the silver of a whole continent, and still went bankrupt. Subscribe so you don't miss it.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NEXT",
+     "THE SPANISH EMPIRE"
+    ],
+    "colors": [
+     "grey",
+     "warm"
+    ],
+    "syncs": [
+     "next",
+     "spanish"
+    ],
+    "button": "SUBSCRIBE",
+    "button_sync": "subscribe"
+   }
+  }
+ ]
+}

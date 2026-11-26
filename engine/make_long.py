@@ -221,23 +221,25 @@ def v_bars(img, d, t, sc, p):
     items = p["items"]
     vmax = max(float(it["value"]) for it in items)
     x0, maxw = 260, 1400
-    y = p.get("y", 520 - (len(items) - 1) * 110)
+    step = p.get("paso", 220); bh = min(90, step - 88)
+    y = p.get("y", 520 - (len(items) - 1) * step / 2)
     for i, it in enumerate(items):
         st = at(sc, it.get("sync"), 0.3 * i)
-        if prog(t, st - 0.2, 0.3) <= 0: y += 220; continue
+        if prog(t, st - 0.2, 0.3) <= 0: y += step; continue
         k = ease_out(prog(t, st, 1.0))
         text(d, (x0, y - 50), it["label"], 46, WHITE, "bold", "lm")
         wbar = max(30, maxw * float(it["value"]) / vmax * k)
         c = col(it.get("color"), BLUE)
-        d.rounded_rectangle([x0, y, x0 + wbar, y + 90], 18, fill=c)
+        d.rounded_rectangle([x0, y, x0 + wbar, y + bh], 18, fill=c)
         if k > 0.5:
             vt = it.get("value_text", f"{it['value']}")
             tw = d.textlength(vt, font=font(48, "black"))
-            if wbar > tw + 50: text(d, (x0 + wbar - 24, y + 45), vt, 48, BG, "black", "rm")
-            else: text(d, (x0 + wbar + 20, y + 45), vt, 48, c, "black", "lm")
-        y += 220
+            if wbar > tw + 50: text(d, (x0 + wbar - 24, y + bh / 2), vt, 48, BG, "black", "rm")
+            else: text(d, (x0 + wbar + 20, y + bh / 2), vt, 48, c, "black", "lm")
+        y += step
     if p.get("note"):
-        pop(d, (W / 2, min(870, y - 20)), p["note"], 60, col(p.get("note_color"), WARM), t, at(sc, p.get("note_sync"), 1.5))
+        ny = p.get("note_y", min(870, y - 20))
+        pop(d, (W / 2, ny), p["note"], 60, col(p.get("note_color"), WARM), t, at(sc, p.get("note_sync"), 1.5))
 
 def v_lista(img, d, t, sc, p):
     if p.get("titulo"):
@@ -904,8 +906,13 @@ def thumbnail(cfg, path):
     bg = make_background()
     img = bg.copy(); d = ImageDraw.Draw(img)
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(layer)
-    draw_net(ld, [4, 6, 6, 6, 3], 2.0, 1.0)
-    layer = layer.crop((250, 120, 1670, 880)).resize((1100, 590), Image.LANCZOS)
+    if m.get("emoji"):
+        em = ms.emoji_img(m["emoji"], 560)
+        layer.paste(em, (W - 560 - 300, 260), em)
+        layer = layer.crop((250, 120, 1670, 880)).resize((1100, 590), Image.LANCZOS)
+    else:
+        draw_net(ld, [4, 6, 6, 6, 3], 2.0, 1.0)
+        layer = layer.crop((250, 120, 1670, 880)).resize((1100, 590), Image.LANCZOS)
     fade = np.clip(np.linspace(0, 2.6, layer.width), 0, 1)[None, :] * np.ones((layer.height, 1))
     a = (np.array(layer.split()[3], np.float32) * fade).astype(np.uint8)
     layer.putalpha(Image.fromarray(a))

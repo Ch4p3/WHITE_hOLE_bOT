@@ -1,0 +1,815 @@
+{
+ "titulo": "Cómo cayó Roma de verdad: el dinero detrás del colapso",
+ "idioma": "es",
+ "kokoro": {
+  "voz": "em_santa",
+  "velocidad": 0.97,
+  "lang": "es"
+ },
+ "pausa": 0.5,
+ "intro_capitulo": "Una salchicha y la pena de muerte",
+ "miniatura": {
+  "lineas": [
+   "CÓMO CAYÓ",
+   "ROMA"
+  ],
+  "colores": [
+   "white",
+   "warm"
+  ],
+  "chip": "98 % PLATA → 2 %",
+  "emoji": "🏛️"
+ },
+ "descripcion": "Roma no cayó en un día. Tardó siglos, y todo empezó con una moneda. El denario de plata, que pasó de cerca de 98 % de plata a cerca de 2 %; la crisis del siglo III, con al menos 26 aspirantes al trono en unos 50 años; los precios máximos de Diocleciano, castigados con la muerte; el sólido de oro de Constantino, y el colapso final de Occidente, de Adrianópolis al 476. Primer episodio de la serie: Cómo caen los imperios.",
+ "fuentes": [
+  "Edicto de Precios Máximos (301 d. C.): precios máximos para más de 1.000 productos y servicios, pena de muerte, cumplimiento irregular, casi ignorado hacia el 305: https://en.wikipedia.org/wiki/Edict_on_Maximum_Prices",
+  "Contenido de plata del denario por período (95-98 % a finales de la República, 93,5 % con Nerón, 83,5 % hacia 148-161, de 78,5 % a 50 % con los Severos, el antoniniano llegó a cerca de 2 %): https://en.wikipedia.org/wiki/Denarius",
+  "Crisis del siglo III (235-284/285, al menos 26 aspirantes, peste de Cipriano 249-262, Valeriano capturado en 260, Imperio galo 260-274, los Severos duplicaron la paga base del legionario): https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century",
+  "Sólido (puesto en circulación masiva por Constantino hacia el 312, 72 por libra romana, unos 4,5 g de oro, estable unos siete siglos): https://en.wikipedia.org/wiki/Solidus_(coin)",
+  "Caída del Imperio romano de Occidente (Adrianópolis 378, división de 395, saqueo de 410, año 476, causas que citan los historiadores, ejército de Diocleciano de unos 390.000 hombres más 45.000 en la flota): https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire",
+  "Reino vándalo: toma de Cartago en 439; el norte de África como gran fuente de impuestos y trigo para Roma; saqueo de Roma en 455: https://en.wikipedia.org/wiki/Vandal_Kingdom"
+ ],
+ "hashtags": [
+  "#roma",
+  "#historia",
+  "#imperioromano",
+  "#economía",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "En el año trescientos uno, el emperador de Roma convirtió en delito, castigado con la muerte, cobrar demasiado por una salchicha.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Roma, año 301",
+    "word": "PENA DE MUERTE",
+    "sub": "por cobrar de más",
+    "sub_sync": "cobrar",
+    "sync": "delito",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "No era un chiste. Era una ley con precios máximos para más de mil productos y servicios: carne, vino, zapatos, fletes, y hasta salarios.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "el Edicto de Precios Máximos",
+    "to": 1000,
+    "suffix": "+",
+    "label": "productos y servicios con precio máximo",
+    "sync": "mil",
+    "note": "carne · vino · zapatos · salarios",
+    "note_sync": "carne"
+   }
+  },
+  {
+   "texto": "¿Cómo llegó ahí el imperio más rico del mundo? La respuesta no es una batalla ni un mal emperador. Es una historia lenta sobre dinero, guerra y poder.",
+   "visual": {
+    "tipo": "titulo",
+    "lines": [
+     "CÓMO CAYÓ",
+     "ROMA DE VERDAD"
+    ],
+    "colors": [
+     "white",
+     "warm"
+    ],
+    "sync": "rico"
+   }
+  },
+  {
+   "texto": "La caída de Roma tardó siglos. Y empezó con algo que cabía en tu mano: una moneda de plata.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "LA HISTORIA EN CINCO PARTES",
+    "items": [
+     {
+      "texto": "La moneda",
+      "sync": "caída"
+     },
+     {
+      "texto": "La crisis",
+      "sync": "siglos"
+     },
+     {
+      "texto": "El remedio",
+      "sync": "empezó"
+     },
+     {
+      "texto": "El final en Occidente",
+      "sync": "mano"
+     },
+     {
+      "texto": "El patrón",
+      "sync": "plata"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Capítulo uno. La moneda.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "La moneda",
+    "sub": "cómo pagaba Roma todo"
+   }
+  },
+  {
+   "texto": "El dinero de todos los días en Roma era el denario. Con él se pagaba a los soldados, con él se contaban los impuestos, y su valor venía del metal que tenía adentro: plata.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el dinero de todos los días",
+    "word": "DENARIO",
+    "sub": "valía por su plata",
+    "sub_sync": "plata",
+    "sync": "denario",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "En la época de Augusto, el denario era casi puro: alrededor de noventa y ocho por ciento de plata.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "el denario, en la época de Augusto",
+    "to": 98,
+    "suffix": "%",
+    "label": "de plata",
+    "sync": "noventa",
+    "note": "casi pura",
+    "note_sync": "puro"
+   }
+  },
+  {
+   "texto": "Entonces los emperadores descubrieron un truco. Fundir las monedas, mezclarlas con un metal más barato, y acuñar más monedas con la misma plata. Nerón lo hizo en el año sesenta y cuatro.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "EL TRUCO MÁS VIEJO",
+    "pasos": [
+     {
+      "texto": "FUNDIR\nMONEDAS",
+      "sync": "fundir"
+     },
+     {
+      "texto": "AGREGAR\nCOBRE",
+      "sync": "barato"
+     },
+     {
+      "texto": "ACUÑAR\nMÁS",
+      "sync": "acuñar"
+     },
+     {
+      "texto": "PAGAR\nDEUDAS",
+      "sync": "nerón"
+     }
+    ],
+    "bucle": "y repetir sin plata",
+    "bucle_sync": "sesenta"
+   }
+  },
+  {
+   "texto": "Mira lo que le pasa a la plata en los dos siglos siguientes.",
+   "visual": {
+    "tipo": "bars",
+    "items": [
+     {
+      "label": "Época de Augusto",
+      "value": 98,
+      "value_text": "~98 %",
+      "color": "ice",
+      "sync": "mira"
+     },
+     {
+      "label": "Nerón, año 64",
+      "value": 93.5,
+      "value_text": "93,5 %",
+      "color": "ice",
+      "sync": "pasa"
+     },
+     {
+      "label": "Mediados del siglo II",
+      "value": 83.5,
+      "value_text": "83,5 %",
+      "color": "blue",
+      "sync": "plata"
+     },
+     {
+      "label": "Emperadores Severos",
+      "value": 50,
+      "value_text": "50 %",
+      "color": "warm",
+      "sync": "dos"
+     },
+     {
+      "label": "Hacia el año 270",
+      "value": 2,
+      "value_text": "~2 %",
+      "color": "warm",
+      "sync": "siguientes"
+     }
+    ],
+    "note": "plata en la principal moneda de plata de Roma",
+    "note_sync": "siguientes",
+    "paso": 158,
+    "y": 232,
+    "note_y": 96
+   }
+  },
+  {
+   "texto": "Hacia el año doscientos setenta, la principal moneda de plata era básicamente cobre con un baño delgadito de plata. Cerca de dos por ciento.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "AUGUSTO",
+     "value": "98 %",
+     "color": "ice",
+     "sync": "hacia"
+    },
+    "right": {
+     "label": "HACIA EL 270",
+     "value": "2 %",
+     "color": "warm",
+     "sync": "cobre"
+    },
+    "vs_text": "→",
+    "note": "una moneda de cobre con baño de plata",
+    "note_sync": "baño"
+   }
+  },
+  {
+   "texto": "¿Por qué hacían eso? Porque la cuenta más grande del imperio era el ejército. Los emperadores Severos agrandaron el ejército como en una cuarta parte, y duplicaron la paga base del legionario.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EL EJÉRCITO",
+     "value": "+25 %",
+     "color": "ice",
+     "sync": "cuarta"
+    },
+    "right": {
+     "label": "PAGA BASE",
+     "value": "×2",
+     "color": "warm",
+     "sync": "duplicaron"
+    },
+    "vs_text": "+",
+    "note": "y sin plata nueva para pagarlo",
+    "note_sync": "legionario"
+   }
+  },
+  {
+   "texto": "Y no había plata nueva para pagarlo. Así que pagaron con monedas más débiles. Es la versión antigua de imprimir billetes.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la versión antigua de",
+    "word": "IMPRIMIR BILLETES",
+    "sub": "más monedas, menos valor",
+    "sub_sync": "débiles",
+    "sync": "antigua",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y la gente se dio cuenta. Si una moneda trae menos plata, el vendedor pide más monedas. Los precios suben. Hoy a eso lo llamamos inflación.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "LO QUE HIZO LA GENTE",
+    "pasos": [
+     {
+      "texto": "MENOS\nPLATA",
+      "sync": "menos"
+     },
+     {
+      "texto": "MÁS\nMONEDAS",
+      "sync": "vendedor"
+     },
+     {
+      "texto": "PRECIOS\nARRIBA",
+      "sync": "precios"
+     },
+     {
+      "texto": "INFLACIÓN",
+      "sync": "inflación"
+     }
+    ],
+    "bucle": "y se alimenta sola",
+    "bucle_sync": "llamamos"
+   }
+  },
+  {
+   "texto": "Capítulo dos. La crisis.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "La crisis",
+    "sub": "cincuenta años de caos"
+   }
+  },
+  {
+   "texto": "En el año doscientos treinta y cinco, el emperador Alejandro Severo fue asesinado por sus propios soldados. Lo que vino después se llama la crisis del siglo tercero.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "año 235",
+    "word": "LA CRISIS",
+    "sub": "del siglo III",
+    "sub_sync": "crisis",
+    "sync": "asesinado",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "En unos cincuenta años, al menos veintiséis hombres reclamaron el título de emperador. Muchos fueron asesinados.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "en unos cincuenta años",
+    "to": 26,
+    "label": "aspirantes al título de emperador",
+    "sync": "veintiséis",
+    "note": "muchos fueron asesinados",
+    "note_sync": "asesinados",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Piensa lo que eso significa para el dinero. Cada emperador nuevo tenía que pagarle al ejército que lo puso ahí. Más bonos, más monedas, menos plata.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "LA ESPIRAL",
+    "pasos": [
+     {
+      "texto": "NUEVO\nEMPERADOR",
+      "sync": "cada"
+     },
+     {
+      "texto": "PAGAR AL\nEJÉRCITO",
+      "sync": "ejército"
+     },
+     {
+      "texto": "DEBILITAR\nLA MONEDA",
+      "sync": "monedas"
+     },
+     {
+      "texto": "SOLDADOS\nFURIOSOS",
+      "sync": "plata"
+     }
+    ],
+    "bucle": "repetir",
+    "bucle_sync": "plata"
+   }
+  },
+  {
+   "texto": "Después llegó la enfermedad. Una epidemia, hoy llamada la peste de Cipriano, azotó el imperio más o menos entre el doscientos cuarenta y nueve y el doscientos sesenta y dos. Menos gente significaba menos campesinos, menos soldados y menos impuestos.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🦠",
+    "texto": "Peste de Cipriano · c. 249–262",
+    "texto_sync": "peste",
+    "sync": "enfermedad"
+   }
+  },
+  {
+   "texto": "Y enemigos en todas las fronteras. En el doscientos sesenta, el emperador Valeriano fue capturado por los persas en la batalla de Edesa. Un emperador romano murió prisionero.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "año 260, Edesa",
+    "word": "EMPERADOR CAPTURADO",
+    "sub": "Valeriano murió prisionero de Persia",
+    "sub_sync": "prisionero",
+    "sync": "capturado",
+    "color": "warm",
+    "size": 160
+   }
+  },
+  {
+   "texto": "El imperio se partió literalmente en tres. En el oeste, un Imperio galo gobernó la Galia, Britania y por un tiempo Hispania. En el este, mandaba Palmira. Roma se quedó con el centro.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "UN IMPERIO, TRES PEDAZOS",
+    "items": [
+     {
+      "texto": "Imperio galo · Galia, Britania, Hispania",
+      "sync": "galo",
+      "color": "ice"
+     },
+     {
+      "texto": "Roma · Italia y el centro",
+      "sync": "centro",
+      "color": "white"
+     },
+     {
+      "texto": "Imperio de Palmira · el este",
+      "sync": "palmira",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Un soldado duro llamado Aureliano lo volvió a unir hacia el doscientos setenta y cuatro. Hasta le construyó murallas nuevas a la propia Roma. Un año después, lo asesinaron.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "DEL CAOS A UN SOLO IMPERIO",
+    "eventos": [
+     {
+      "fecha": "235",
+      "texto": "asesinan al emperador,\nempieza la crisis",
+      "sync": "soldado"
+     },
+     {
+      "fecha": "260",
+      "texto": "capturan a Valeriano,\nel imperio se parte",
+      "sync": "aureliano"
+     },
+     {
+      "fecha": "274",
+      "texto": "Aureliano\nlo reunifica",
+      "sync": "unir"
+     },
+     {
+      "fecha": "275",
+      "texto": "asesinan a\nAureliano",
+      "sync": "asesinaron"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Capítulo tres. El remedio.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "El remedio",
+    "sub": "y la parte que salió mal"
+   }
+  },
+  {
+   "texto": "En el doscientos ochenta y cuatro llegó al poder Diocleciano. Decidió que un solo hombre ya no podía gobernar el imperio, así que repartió el trabajo entre cuatro. Se llama la tetrarquía.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la idea de Diocleciano",
+    "word": "CUATRO EMPERADORES",
+    "sub": "la tetrarquía",
+    "sub_sync": "tetrarquía",
+    "sync": "cuatro",
+    "color": "ice",
+    "size": 180
+   }
+  },
+  {
+   "texto": "También armó un Estado gigante. Un escritor de la época dice que su ejército llegó a casi trescientos noventa mil soldados, más de cuarenta y cinco mil en la flota.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "el ejército de Diocleciano, en un momento",
+    "to": 389704,
+    "label": "soldados, más 45.562 en la flota",
+    "sync": "noventa",
+    "note": "según Juan el Lidio",
+    "note_sync": "flota"
+   }
+  },
+  {
+   "texto": "Todo eso costaba plata. Y los precios seguían subiendo. Así que en el trescientos uno llegó su famosa respuesta: el Edicto de Precios Máximos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "año 301",
+    "word": "CONTROL DE PRECIOS",
+    "sub": "el Edicto de Precios Máximos",
+    "sub_sync": "edicto",
+    "sync": "respuesta",
+    "color": "warm",
+    "size": 180
+   }
+  },
+  {
+   "texto": "Lo más caro de la lista era una libra de seda púrpura: ciento cincuenta mil denarios. Cobrar más, o esconder mercancía, te podía costar la vida.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "lo más caro: 1 libra de seda púrpura",
+    "to": 150000,
+    "label": "denarios (precio máximo)",
+    "sync": "ciento",
+    "note": "romper la regla: la muerte",
+    "note_sync": "vida",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "No funcionó. El edicto se aplicó a medias, sus límites no se respetaban, y en pocos años casi nadie le hacía caso.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "LO QUE PASÓ",
+    "items": [
+     {
+      "texto": "Se aplicó a medias",
+      "sync": "medias",
+      "color": "warm"
+     },
+     {
+      "texto": "Nadie respetaba los límites",
+      "sync": "límites",
+      "color": "warm"
+     },
+     {
+      "texto": "Casi ignorado hacia el 305",
+      "sync": "caso",
+      "color": "warm"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lo que sí funcionó vino después. Hacia el trescientos doce, Constantino puso a circular una nueva moneda de oro: el sólido. Setenta y dos monedas por libra romana de oro, unos cuatro gramos y medio cada una.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Constantino, hacia el año 312",
+    "word": "EL SÓLIDO",
+    "sub": "72 por libra · ~4,5 g de oro",
+    "sub_sync": "setenta",
+    "sync": "sólido",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Y no la tocaron. El sólido mantuvo prácticamente el mismo peso y pureza durante unos siete siglos.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EL DENARIO",
+     "value": "98 % → 2 %",
+     "color": "warm",
+     "sync": "tocaron"
+    },
+    "right": {
+     "label": "EL SÓLIDO",
+     "value": "~700 años",
+     "color": "blue",
+     "sync": "siete"
+    },
+    "vs": false,
+    "note": "la moneda estable sobrevivió al imperio que la creó",
+    "note_sync": "siglos"
+   }
+  },
+  {
+   "texto": "Esa es la primera lección de esta historia. El control de precios ataca el síntoma. La moneda estable arregla la causa.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "ATACA EL SÍNTOMA",
+     "value": "control de precios",
+     "color": "warm",
+     "sync": "control",
+     "size": 80
+    },
+    "right": {
+     "label": "ARREGLA LA CAUSA",
+     "value": "moneda estable",
+     "color": "blue",
+     "sync": "estable",
+     "size": 80
+    },
+    "vs": false
+   }
+  },
+  {
+   "texto": "Capítulo cuatro. El final en Occidente.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "El final en Occidente",
+    "sub": "de Adrianópolis al 476"
+   }
+  },
+  {
+   "texto": "En el trescientos setenta y ocho, en Adrianópolis, los godos destrozaron un ejército romano de Oriente. El emperador Valente murió en el campo de batalla.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "año 378, Adrianópolis",
+    "word": "CAE UN EMPERADOR",
+    "sub": "Valente muere en batalla",
+    "sub_sync": "valente",
+    "sync": "destrozaron",
+    "color": "warm",
+    "size": 180
+   }
+  },
+  {
+   "texto": "En el trescientos noventa y cinco, el imperio quedó dividido para siempre entre dos hermanos: un emperador en Occidente y otro en Oriente.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "OCCIDENTE",
+     "value": "Honorio",
+     "color": "warm",
+     "sync": "occidente"
+    },
+    "right": {
+     "label": "ORIENTE",
+     "value": "Arcadio",
+     "color": "blue",
+     "sync": "oriente"
+    },
+    "note": "año 395: la división final",
+    "note_sync": "hermanos"
+   }
+  },
+  {
+   "texto": "En el cuatrocientos diez, Alarico y los visigodos tomaron Roma por hambre, y la saquearon durante tres días. Ningún enemigo había tomado la ciudad en unos ochocientos años.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "año 410: saquean Roma",
+    "to": 800,
+    "label": "años sin que un enemigo tomara la ciudad",
+    "sync": "ochocientos",
+    "note": "saqueada durante tres días",
+    "note_sync": "tres",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Pero el golpe más duro no fue en Roma. Fue en África. En el cuatrocientos treinta y nueve, los vándalos tomaron Cartago. El norte de África era una de las principales fuentes de impuestos de Occidente, y del trigo que alimentaba a Italia.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "año 439, Cartago",
+    "word": "SE ACABÓ LA PLATA",
+    "sub": "Occidente pierde sus provincias más ricas",
+    "sub_sync": "impuestos",
+    "sync": "vándalos",
+    "color": "warm",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Sin impuestos, no hay ejército. Sin ejército, no hay imperio. En el cuatrocientos cincuenta y cinco, los vándalos cruzaron el mar y saquearon Roma otra vez.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "EL FINAL",
+    "pasos": [
+     {
+      "texto": "PERDER\nPROVINCIAS",
+      "sync": "impuestos"
+     },
+     {
+      "texto": "PERDER\nIMPUESTOS",
+      "sync": "ejército"
+     },
+     {
+      "texto": "PERDER EL\nEJÉRCITO",
+      "sync": "imperio"
+     },
+     {
+      "texto": "PERDER\nROMA",
+      "sync": "saquearon"
+     }
+    ],
+    "bucle": "455: otro saqueo",
+    "bucle_sync": "cruzaron"
+   }
+  },
+  {
+   "texto": "Y en el cuatrocientos setenta y seis, un general germano llamado Odoacro depuso al último emperador de Occidente, un adolescente llamado Rómulo Augústulo, y las insignias imperiales fueron enviadas a Constantinopla.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "EL ÚLTIMO SIGLO DE OCCIDENTE",
+    "eventos": [
+     {
+      "fecha": "378",
+      "texto": "Adrianópolis",
+      "sync": "cuatrocientos"
+     },
+     {
+      "fecha": "410",
+      "texto": "saqueo de Roma",
+      "sync": "general"
+     },
+     {
+      "fecha": "439",
+      "texto": "se pierde Cartago",
+      "sync": "depuso"
+     },
+     {
+      "fecha": "455",
+      "texto": "otro saqueo",
+      "sync": "adolescente"
+     },
+     {
+      "fecha": "476",
+      "texto": "último emperador\nde Occidente",
+      "sync": "insignias"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero aquí viene el giro. El Imperio romano de Oriente siguió casi mil años más, hasta que los otomanos tomaron Constantinopla en mil cuatrocientos cincuenta y tres. Y conservó el sólido de oro.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el Imperio romano de Oriente duró hasta",
+    "word": "1453",
+    "sub": "casi 1.000 años más",
+    "sub_sync": "mil",
+    "sync": "cuatrocientos",
+    "color": "blue",
+    "size": 260
+   }
+  },
+  {
+   "texto": "Capítulo cinco. El patrón.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "El patrón",
+    "sub": "por qué a los imperios se les acaba el tiempo"
+   }
+  },
+  {
+   "texto": "Los historiadores todavía discuten por qué cayó Roma, y mencionan muchas causas: el ejército, las enfermedades, la economía, los malos emperadores, las guerras civiles, la administración, las invasiones, y hasta el cambio del clima.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "LO QUE SEÑALAN LOS HISTORIADORES",
+    "items": [
+     {
+      "texto": "Ejército e invasiones",
+      "sync": "ejército"
+     },
+     {
+      "texto": "Pestes y población",
+      "sync": "enfermedades"
+     },
+     {
+      "texto": "El dinero y la economía",
+      "sync": "economía"
+     },
+     {
+      "texto": "Malos emperadores y guerras civiles",
+      "sync": "emperadores"
+     },
+     {
+      "texto": "El clima",
+      "sync": "clima"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero mira cómo se conectan. Las guerras cuestan dinero. El dinero se imprime. Los precios suben. Al ejército no le pagan, los soldados escogen un emperador nuevo, y el ciclo vuelve a empezar.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "EL CICLO",
+    "pasos": [
+     {
+      "texto": "GUERRAS\nCARAS",
+      "sync": "guerras"
+     },
+     {
+      "texto": "DINERO\nIMPRESO",
+      "sync": "imprime"
+     },
+     {
+      "texto": "PRECIOS\nARRIBA",
+      "sync": "precios"
+     },
+     {
+      "texto": "NUEVO\nEMPERADOR",
+      "sync": "soldados"
+     }
+    ],
+    "bucle": "y otra vez",
+    "bucle_sync": "ciclo"
+   }
+  },
+  {
+   "texto": "Los imperios casi nunca caen en un solo día. Gastan más de lo que tienen, debilitan su moneda para taparlo, y se les acaba el tiempo.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "la lección",
+    "word": "SE QUEDAN SIN PLATA",
+    "sub": "mucho antes de quedarse sin soldados",
+    "sub_sync": "debilitan",
+    "sync": "casi",
+    "color": "warm",
+    "size": 160
+   }
+  },
+  {
+   "texto": "Este fue el primer episodio de Cómo caen los imperios. En el próximo: el Imperio español, que tuvo la plata de todo un continente, y aun así quebró. Suscríbete para no perdértelo.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PRÓXIMO",
+     "EL IMPERIO ESPAÑOL"
+    ],
+    "colors": [
+     "grey",
+     "warm"
+    ],
+    "syncs": [
+     "próximo",
+     "español"
+    ],
+    "button": "SUSCRÍBETE",
+    "button_sync": "suscríbete"
+   }
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "idioma": "es",
+ "titulo": "Rutina de glúteos en casa, sin pesas 🍑",
+ "caption": "Rutina de glúteos en casa, sin pesas 🍑\n\n4 ejercicios · 3 series · unos 15 minutos. Hazla 2 o 3 veces por semana: la OMS recomienda fortalecer los músculos al menos 2 días por semana. Cuando te sobren repeticiones, súbele la dificultad.\n\n👉 Comenta RUTINA y te respondo con la rutina completa para imprimir.\n🔖 Guárdala para tu próximo entrenamiento.",
+ "hashtags": "#gluteos #rutina #ejercicioencasa #fitness #sinpesas #WhiteHole",
+ "fuentes": ["https://www.who.int/initiatives/behealthy/physical-activity", "https://pubmed.ncbi.nlm.nih.gov/32132843/", "https://pubmed.ncbi.nlm.nih.gov/28834797/"],
+ "palabra": "RUTINA",
+ "enlace": "https://ch4p3.github.io/WHITE_hOLE_bOT/r/rutina-gluteos/",
+ "personaje": "monita",
+ "slides": [
+  {"tipo": "portada", "pre": "RUTINA EN CASA", "titulo": "GLÚTEOS SIN PESAS", "sub": "4 ejercicios · 3 series · 15 min", "pose": "puente"},
+  {"tipo": "item", "titulo": "PUENTE DE GLÚTEO", "dosis": "3 × 15", "pose": "puente", "t": 0.55, "puntos": ["Sube la cadera y aprieta 2 segundos arriba", "Empuja con los talones, no con la punta"]},
+  {"tipo": "item", "titulo": "SENTADILLA", "dosis": "3 × 12", "pose": "sentadilla", "t": 0.5, "puntos": ["Baja lento, contando hasta 3", "Rodillas en la misma dirección que los pies"]},
+  {"tipo": "item", "titulo": "ZANCADA", "dosis": "3 × 10 por pierna", "pose": "zancada", "t": 0.5, "puntos": ["La rodilla de atrás casi toca el piso", "El torso recto, sin inclinarte"]},
+  {"tipo": "item", "titulo": "SUBIR ESCALÓN", "dosis": "3 × 10 por pierna", "pose": "escalon", "t": 0.75, "puntos": ["En una escalera o una silla firme", "Empuja con el talón y baja lento"]},
+  {"tipo": "texto", "emoji": "⏱️", "titulo": "CÓMO HACERLA", "puntos": ["Descansa 1 minuto entre series", "2 o 3 veces por semana (la OMS recomienda mínimo 2 días de fuerza)", "¿Te sobran repeticiones? Más lento, pausa arriba o una mochila con peso"], "nota": "Si tienes una lesión o dolor, consulta antes con un profesional de la salud."},
+  {"tipo": "cierre", "palabra": "RUTINA", "promesa": "y te respondo con la rutina completa para imprimir"}
+ ]
+}

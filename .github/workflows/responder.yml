@@ -1,0 +1,25 @@
+name: Responder comentarios con palabra clave
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 * * * *"      # cada hora
+
+permissions:
+  contents: read
+
+jobs:
+  responder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Responder
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: python scripts/responder.py

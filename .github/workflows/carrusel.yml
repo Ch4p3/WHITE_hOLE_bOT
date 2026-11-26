@@ -1,0 +1,42 @@
+name: Carrusel (Instagram + Facebook)
+
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Guion concreto (vacío = el siguiente de la cola)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: carrusel
+  cancel-in-progress: false
+
+jobs:
+  carrusel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Instalar fuentes de emoji
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-color-emoji
+      - run: pip install -r requirements.txt
+      - name: Generar y publicar
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/carrusel_pub.py ${{ inputs.guion }}
+      - name: Guardar el progreso de la cola
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          git add guiones
+          git diff --cached --quiet || git commit -m "Carrusel publicado: $(date -u +%F %H:%M)"
+          git pull --rebase -q origin main && git push

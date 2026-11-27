@@ -1,6 +1,42 @@
 {
- "generado": "2026-11-26 19:19 UTC",
+ "generado": "2026-11-27 01:55 UTC",
  "facebook": [
+  {
+   "id": "1329851475933666",
+   "tipo": "video_reels",
+   "fecha": "2026-11-27T00:11:57+0000",
+   "duracion": 86.9,
+   "texto": "Nvidia onda por onda, PARTE 1: ¿la caída respetó a Elliott? 📉",
+   "link": "/reel/1329851475933666/",
+   "metricas": {
+    "post_video_avg_time_watched": 2258,
+    "post_video_view_time": 15808,
+    "blue_reels_play_count": 12,
+    "fb_reels_total_plays": 12,
+    "fb_reels_replay_count": 0,
+    "post_video_followers": 0
+   },
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "1016616884179032",
+   "tipo": "video_reels",
+   "fecha": "2026-11-26T21:14:50+0000",
+   "duracion": 50.8,
+   "texto": "Ondas de Elliott explicadas en 60 segundos 📈 (5 + 3)",
+   "link": "/reel/1016616884179032/",
+   "metricas": {
+    "post_video_avg_time_watched": 17912,
+    "post_video_view_time": 35825,
+    "blue_reels_play_count": 2,
+    "fb_reels_total_plays": 2,
+    "fb_reels_replay_count": 0,
+    "post_video_followers": 0
+   },
+   "likes": 0,
+   "comentarios": 0
+  },
   {
    "id": "4690582504555771",
    "tipo": "video_reels",
@@ -9,14 +45,14 @@
    "texto": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥",
    "link": "/reel/4690582504555771/",
    "metricas": {
-    "post_video_avg_time_watched": 1953,
-    "post_video_view_time": 113277,
-    "blue_reels_play_count": 164,
-    "fb_reels_total_plays": 170,
-    "fb_reels_replay_count": 6,
+    "post_video_avg_time_watched": 4260,
+    "post_video_view_time": 1099135,
+    "blue_reels_play_count": 261,
+    "fb_reels_total_plays": 276,
+    "fb_reels_replay_count": 15,
     "post_video_followers": 0
    },
-   "likes": 0,
+   "likes": 2,
    "comentarios": 0
   },
   {
@@ -27,11 +63,11 @@
    "texto": "Rutina de glúteos PARTE 2: cuando la primera ya es fácil 🍑🔥",
    "link": "/reel/994768083711041/",
    "metricas": {
-    "post_video_avg_time_watched": 4111,
-    "post_video_view_time": 904554,
-    "blue_reels_play_count": 220,
-    "fb_reels_total_plays": 239,
-    "fb_reels_replay_count": 19,
+    "post_video_avg_time_watched": 4160,
+    "post_video_view_time": 931927,
+    "blue_reels_play_count": 224,
+    "fb_reels_total_plays": 244,
+    "fb_reels_replay_count": 20,
     "post_video_followers": 0
    },
    "likes": 5,
@@ -45,10 +81,10 @@
    "texto": "Rutina de glúteos en casa, sin pesas 🍑 (guárdala)",
    "link": "/reel/1545576090727892/",
    "metricas": {
-    "post_video_avg_time_watched": 3837,
-    "post_video_view_time": 748380,
-    "blue_reels_play_count": 196,
-    "fb_reels_total_plays": 213,
+    "post_video_avg_time_watched": 3850,
+    "post_video_view_time": 773880,
+    "blue_reels_play_count": 201,
+    "fb_reels_total_plays": 218,
     "fb_reels_replay_count": 17,
     "post_video_followers": 0
    },
@@ -63,10 +99,10 @@
    "texto": "La IA diseñó una llave nueva para un receptor de insulina roto 🧬",
    "link": "/reel/1617746526214015/",
    "metricas": {
-    "post_video_avg_time_watched": 62395,
-    "post_video_view_time": 62395,
-    "blue_reels_play_count": 1,
-    "fb_reels_total_plays": 1,
+    "post_video_avg_time_watched": 31249,
+    "post_video_view_time": 62499,
+    "blue_reels_play_count": 2,
+    "fb_reels_total_plays": 2,
     "fb_reels_replay_count": 0,
     "post_video_followers": 0
    },
@@ -99,14 +135,14 @@
    "texto": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑",
    "link": "/reel/29331672863160829/",
    "metricas": {
-    "post_video_avg_time_watched": 11025,
-    "post_video_view_time": 4718955,
-    "blue_reels_play_count": 453,
-    "fb_reels_total_plays": 552,
-    "fb_reels_replay_count": 99,
-    "post_video_followers": 0
+    "post_video_avg_time_watched": 11421,
+    "post_video_view_time": 5733645,
+    "blue_reels_play_count": 503,
+    "fb_reels_total_plays": 614,
+    "fb_reels_replay_count": 111,
+    "post_video_followers": 1
    },
-   "likes": 2,
+   "likes": 6,
    "comentarios": 0
   },
   {
@@ -117,11 +153,11 @@
    "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑",
    "link": "/reel/1336238215304334/",
    "metricas": {
-    "post_video_avg_time_watched": 8061,
-    "post_video_view_time": 3796897,
-    "blue_reels_play_count": 472,
-    "fb_reels_total_plays": 533,
-    "fb_reels_replay_count": 61,
+    "post_video_avg_time_watched": 7969,
+    "post_video_view_time": 3857047,
+    "blue_reels_play_count": 486,
+    "fb_reels_total_plays": 552,
+    "fb_reels_replay_count": 66,
     "post_video_followers": 1
    },
    "likes": 2,
@@ -171,10 +207,10 @@
    "texto": "Números primos: el misterio de 2.300 años que ahora persigue la IA",
    "link": "/reel/1689056032605401/",
    "metricas": {
-    "post_video_avg_time_watched": 19638,
-    "post_video_view_time": 4850624,
-    "blue_reels_play_count": 247,
-    "fb_reels_total_plays": 262,
+    "post_video_avg_time_watched": 19559,
+    "post_video_view_time": 4850649,
+    "blue_reels_play_count": 248,
+    "fb_reels_total_plays": 263,
     "fb_reels_replay_count": 15,
     "post_video_followers": 0
    },
@@ -274,20 +310,102 @@
  ],
  "instagram": [
   {
+   "id": "18181637779449752",
+   "fecha": "2026-11-27T01:04:27+0000",
+   "tipo": "FEED",
+   "texto": "No necesitas 10.000 pasos: la ciencia dice 7.000 👟\n\nUn metaanálisis de 57 estudios (The Lancet Public Health, 2025) encontró que, frente a 2",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/p/DgOdQW-jTly/",
+   "metricas": {
+    "views": 0,
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "id": "17908764999352681",
+   "fecha": "2026-11-27T00:14:15+0000",
+   "tipo": "REELS",
+   "texto": "Nvidia onda por onda, PARTE 1: ¿la caída respetó a Elliott? 📉\n\nAnálisis educativo con precios reales (Yahoo Finance). No es recomendación de",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgOXb1tyCu2/",
+   "metricas": {
+    "views": 7,
+    "reach": 5,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 3579
+   }
+  },
+  {
+   "id": "17989782795066269",
+   "fecha": "2026-11-26T23:22:42+0000",
+   "tipo": "FEED",
+   "texto": "RETO WHITE HOLE 🧠\n\n7 + 7 ÷ 7 + 7 × 7 − 7 = ?\n\nSin calculadora. Comenta solo el número 👇\nMañana publico la explicación paso a paso (y quién a",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/p/DgORnuQoeXm/",
+   "metricas": {
+    "views": 0,
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "id": "18004080996042896",
+   "fecha": "2026-11-26T21:15:40+0000",
+   "tipo": "REELS",
+   "texto": "Ondas de Elliott explicadas en 60 segundos 📈 (5 + 3)\n\nLas ondas de Elliott (Ralph Nelson Elliott, años 30) dicen que el mercado se mueve en ",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgODC9qBnKo/",
+   "metricas": {
+    "views": 7,
+    "reach": 7,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 9902
+   }
+  },
+  {
+   "id": "17895066654458268",
+   "fecha": "2026-11-26T20:28:50+0000",
+   "tipo": "FEED",
+   "texto": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥\n\n3 ejercicios · 3 series · unos 10 minutos. Ojo: en un estudio, 6 semanas solo de",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/p/DgN9tp6jqw2/",
+   "metricas": {
+    "views": 0,
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0
+   }
+  },
+  {
    "id": "18112714103225166",
    "fecha": "2026-11-26T18:22:15+0000",
    "tipo": "REELS",
    "texto": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥\n\n3 ejercicios, 3 series, unos 10 minutos. Ojo: en un estudio (Vispute y colegas, ",
-   "likes": 3,
+   "likes": 4,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNvLxGB_pH/",
    "metricas": {
-    "views": 79,
-    "reach": 21,
-    "saved": 4,
-    "shares": 0,
-    "total_interactions": 7,
-    "ig_reels_avg_watch_time": 10238
+    "views": 121,
+    "reach": 108,
+    "saved": 5,
+    "shares": 1,
+    "total_interactions": 10,
+    "ig_reels_avg_watch_time": 9514
    }
   },
   {
@@ -299,12 +417,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNZ4eXgIK1/",
    "metricas": {
-    "views": 119,
-    "reach": 111,
+    "views": 122,
+    "reach": 113,
     "saved": 1,
     "shares": 2,
     "total_interactions": 4,
-    "ig_reels_avg_watch_time": 7237
+    "ig_reels_avg_watch_time": 7026
    }
   },
   {
@@ -321,7 +439,7 @@
     "saved": 2,
     "shares": 3,
     "total_interactions": 9,
-    "ig_reels_avg_watch_time": 8426
+    "ig_reels_avg_watch_time": 8366
    }
   },
   {
@@ -333,12 +451,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNGkYbgxNe/",
    "metricas": {
-    "views": 10,
-    "reach": 9,
+    "views": 12,
+    "reach": 11,
     "saved": 0,
     "shares": 0,
     "total_interactions": 0,
-    "ig_reels_avg_watch_time": 5795
+    "ig_reels_avg_watch_time": 4724
    }
   },
   {
@@ -371,7 +489,7 @@
     "saved": 0,
     "shares": 0,
     "total_interactions": 0,
-    "ig_reels_avg_watch_time": 83105
+    "ig_reels_avg_watch_time": 55556
    }
   },
   {
@@ -400,12 +518,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgLKU7-ty8t/",
    "metricas": {
-    "views": 273,
-    "reach": 244,
+    "views": 276,
+    "reach": 245,
     "saved": 4,
     "shares": 2,
     "total_interactions": 13,
-    "ig_reels_avg_watch_time": 11597
+    "ig_reels_avg_watch_time": 11568
    }
   },
   {
@@ -513,14 +631,36 @@
  ],
  "youtube": [
   {
+   "id": "nWwx9ncmpEk",
+   "titulo": "Elliott Wave Theory explained in 60 seconds 📈 (5 + 3)",
+   "fecha": "2026-11-27T00:11:20Z",
+   "duracion": "PT58S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 17,
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
+   "id": "X6AbT7c095U",
+   "titulo": "The #1 exercise for your glutes is NOT the squat 🍑 #shorts",
+   "fecha": "2026-11-26T23:00:31Z",
+   "duracion": "PT26S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 3,
+   "likes": 1,
+   "comentarios": 0
+  },
+  {
    "id": "wzNfBQaBEUo",
    "titulo": "Glute workout PART 2: when part 1 gets easy 🍑🔥",
    "fecha": "2026-11-26T18:19:23Z",
    "duracion": "PT44S",
    "estado": "public",
    "programado": null,
-   "vistas": 1,
-   "likes": 1,
+   "vistas": 6,
+   "likes": 2,
    "comentarios": 0
   },
   {
@@ -530,8 +670,8 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 12,
-   "likes": 2,
+   "vistas": 28,
+   "likes": 3,
    "comentarios": 0
   },
   {
@@ -552,19 +692,8 @@
    "duracion": "PT47S",
    "estado": "public",
    "programado": null,
-   "vistas": 309,
-   "likes": 4,
-   "comentarios": 0
-  },
-  {
-   "id": "X6AbT7c095U",
-   "titulo": "The #1 exercise for your glutes is NOT the squat 🍑 #shorts",
-   "fecha": "2026-11-26T02:27:02Z",
-   "duracion": "PT26S",
-   "estado": "private",
-   "programado": "2026-11-26T23:00:00Z",
-   "vistas": 1,
-   "likes": 0,
+   "vistas": 521,
+   "likes": 15,
    "comentarios": 0
   },
   {
@@ -585,7 +714,7 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 1025,
+   "vistas": 1042,
    "likes": 13,
    "comentarios": 3
   },
@@ -607,7 +736,7 @@
    "duracion": "PT41S",
    "estado": "public",
    "programado": null,
-   "vistas": 293,
+   "vistas": 393,
    "likes": 6,
    "comentarios": 0
   },
@@ -618,7 +747,7 @@
    "duracion": "PT43S",
    "estado": "public",
    "programado": null,
-   "vistas": 1135,
+   "vistas": 1138,
    "likes": 18,
    "comentarios": 0
   },
@@ -651,8 +780,8 @@
    "duracion": "PT58S",
    "estado": "public",
    "programado": null,
-   "vistas": 1115,
-   "likes": 16,
+   "vistas": 1127,
+   "likes": 17,
    "comentarios": 2
   },
   {
@@ -739,8 +868,8 @@
    "duracion": "PT36S",
    "estado": "public",
    "programado": null,
-   "vistas": 1276,
-   "likes": 24,
+   "vistas": 1279,
+   "likes": 25,
    "comentarios": 2
   },
   {
@@ -750,8 +879,8 @@
    "duracion": "PT31S",
    "estado": "public",
    "programado": null,
-   "vistas": 804,
-   "likes": 12,
+   "vistas": 803,
+   "likes": 13,
    "comentarios": 0
   },
   {
@@ -768,18 +897,18 @@
  ],
  "errores": [],
  "facebook_pagina": {
-  "followers_count": 2,
-  "fan_count": 2
+  "followers_count": 3,
+  "fan_count": 3
  },
  "instagram_cuenta": {
   "username": "whi.tehole1",
   "followers_count": 2,
-  "media_count": 14
+  "media_count": 23
  },
  "youtube_canal": {
   "viewCount": "6163",
-  "subscriberCount": "3",
+  "subscriberCount": "4",
   "hiddenSubscriberCount": false,
-  "videoCount": "19"
+  "videoCount": "21"
  }
 }

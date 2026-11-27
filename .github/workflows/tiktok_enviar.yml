@@ -1,0 +1,56 @@
+name: Enviar un Reel a la bandeja de TikTok
+
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Ruta del guion (ej. guiones/es/publicados/2026-11-26_000c2_mercado_nvidia_parte1.json)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji
+      - run: pip install -r requirements.txt
+      - name: Caché de la voz Kokoro
+        uses: actions/cache@v4
+        with:
+          path: voices/kokoro
+          key: kokoro-v1.0-int8
+      - name: Descargar Kokoro (solo la primera vez)
+        run: |
+          mkdir -p voices/kokoro && cd voices/kokoro
+          B=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+          [ -f kokoro-v1.0.int8.onnx ] || curl -sSfL -o kokoro-v1.0.int8.onnx $B/kokoro-v1.0.int8.onnx
+          [ -f voices-v1.0.bin ] || curl -sSfL -o voices-v1.0.bin $B/voices-v1.0.bin
+      - name: Generar y enviar
+        env:
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          GUION: ${{ inputs.guion }}
+        run: |
+          python - <<'PY'
+          import os, sys, json
+          sys.path.insert(0, "scripts")
+          import daily, tiktok
+          g = os.environ["GUION"]; cfg = json.load(open(g, encoding="utf-8"))
+          os.makedirs("out", exist_ok=True)
+          daily.render(g, "out/tt.mp4", daily.VOZ, "White Hole")
+          cap = (cfg.get("titulo", "") + " " + cfg.get("hashtags", "").replace("#reels", "#fyp #parati"))[:2200]
+          print("✅ TikTok:", tiktok.subir("out/tt.mp4", cap, "PUBLIC_TO_EVERYONE", "bandeja"))
+          PY
+      - name: Guardar token renovado
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          git add .tokens && (git diff --cached --quiet || (git commit -qm "TikTok: token renovado" && git pull --rebase -q && git push -q)) || true

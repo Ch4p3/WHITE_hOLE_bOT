@@ -1,8 +1,8 @@
 name: Carrusel (Instagram + Facebook)
 
 on:
-  schedule:
-    - cron: "23 17 * * *"   # 12:23 p. m. hora Colombia, un carrusel al día
+  # Carrusel diario en pausa (26-nov-2026): con 2 seguidores los carruseles casi no llegan a nadie.
+  # Volver a activar cuando haya ~500 seguidores:  schedule: - cron: "23 17 * * *"
   workflow_dispatch:
     inputs:
       guion:

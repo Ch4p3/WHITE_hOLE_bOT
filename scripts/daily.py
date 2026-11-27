@@ -184,7 +184,7 @@ def reel_es():
         except Exception as e:
             print("⚠️ TikTok:", str(e)[:300])
     tok, chat = os.environ.get("TELEGRAM_TOKEN", "").strip(), os.environ.get("TELEGRAM_CHAT_ID", "").strip()
-    if tok and chat:      # copia lista para subir a mano a TikTok (la API de TikTok aún no está aprobada)
+    if tok and chat and tt.get("solo_es"):      # copia en español para TikTok, solo si TikTok va en español (la API de TikTok aún no está aprobada)
         try:
             cap = ("📲 Para TikTok (español)\n\n" + cfg.get("titulo", "") + "\n\n" +
                    cfg.get("hashtags", "").replace("#reels", "#fyp #parati") )[:1024]

@@ -13,8 +13,8 @@
   "subir": true,
   "modo": "bandeja",
   "privacidad": "PUBLIC_TO_EVERYONE",
-  "nota": "Solo los Reels en español van a la bandeja de TikTok (máximo 5 pendientes en 24 h: publícalos desde la app). El refresh token vive cifrado en .tokens/ (lo crea el workflow \"Conectar TikTok\").",
-  "solo_es": true
+  "nota": "A la bandeja de TikTok van los Shorts en INGLÉS (los mismos de YouTube, 3 al día; máximo 5 pendientes en 24 h: publícalos desde la app). El refresh token vive cifrado en .tokens/.",
+  "solo_es": false
  },
  "instagram": {
   "reels_es": true,

@@ -1,0 +1,161 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "Tencent just made AI up to 4x faster 🚀 (and gave it away) #shorts",
+ "descripcion": "DFly2: a small model drafts, the big model checks at a glance (speculative decoding). Up to 81% more throughput on DeepSeek-V4.1-Flash with long contexts and up to 4.2x faster on Hy4 flash, per Tencent. Open source.",
+ "hashtags": "#ai #tencent #deepseek #tech #llm #shorts",
+ "fuentes": [
+  "https://arxiv.org/abs/2611.34776",
+  "https://github.com/Tencent/AngelSlim"
+ ],
+ "escenas": [
+  {
+   "texto": "Tencent just made giant AI models answer up to four times faster. And you'll understand the trick in one minute.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "TENCENT · NOV 26, 2026",
+    "word": "4.2×",
+    "size": 260,
+    "sync": "four",
+    "sub": "faster on long tasks",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "The problem: an AI writes one word at a time. And for every single word, the giant model has to run its entire calculation. That's why it's slow.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "THE PROBLEM",
+    "titulo": "ONE WORD AT A TIME",
+    "items": [
+     {
+      "texto": "It writes word by word",
+      "emoji": "🐢",
+      "sync": "word"
+     },
+     {
+      "texto": "Every word = full calculation",
+      "emoji": "🧮",
+      "sync": "entire"
+     },
+     {
+      "texto": "Result: slow and expensive",
+      "emoji": "💸",
+      "sync": "slow"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The fix is called speculative decoding. A small, fast model writes a draft of several words, and the big one just checks it at a glance, keeping the words it would have written anyway.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "DRAFT",
+     "value": "small model",
+     "color": "blue",
+     "sync": "small"
+    },
+    "right": {
+     "label": "CHECK",
+     "value": "big model",
+     "color": "green",
+     "sync": "big"
+    }
+   }
+  },
+  {
+   "texto": "Tencent's new version is called DFly2. Its drafter reads exactly the same parts of the text the big model already picked. No extra memory, and it keeps working even when the conversation gets really long.",
+   "visual": {
+    "tipo": "captura",
+    "src": "tencent_dfly2_arxiv_m.png",
+    "recorte": [
+     0,
+     0,
+     1,
+     0.17
+    ],
+    "resaltar": [
+     0.0,
+     0.07,
+     0.86,
+     0.66
+    ],
+    "pre": "the paper",
+    "titulo": "DFLY2",
+    "fuente": "arXiv 2611.34776 · Nov 25, 2026",
+    "resaltar_sync": "DFly2",
+    "alto_max": 700
+   }
+  },
+  {
+   "texto": "The numbers: with lots of users at once and long texts, DeepSeek served up to eighty one percent more. And on Tencent's own model, Hy4, up to four point two times faster.",
+   "visual": {
+    "tipo": "captura",
+    "src": "tencent_dfly2_arxiv_m.png",
+    "recorte": [
+     0,
+     0.7,
+     1,
+     0.875
+    ],
+    "resaltar": [
+     0,
+     0.66,
+     1,
+     0.97
+    ],
+    "pre": "the results",
+    "titulo": "+81% ON DEEPSEEK",
+    "fuente": "arXiv 2611.34776",
+    "resaltar_sync": "eighty",
+    "alto_max": 700
+   }
+  },
+  {
+   "texto": "And the best part: they released it for free. The code is open for anyone to use.",
+   "visual": {
+    "tipo": "captura",
+    "src": "tencent_angelslim_github.png",
+    "recorte": [
+     0,
+     0,
+     1,
+     0.0335
+    ],
+    "resaltar": [
+     0.03,
+     0.755,
+     0.99,
+     0.925
+    ],
+    "alto_max": 760,
+    "pre": "open source",
+    "titulo": "FREE FOR EVERYONE",
+    "fuente": "GitHub · Tencent/AngelSlim",
+    "resaltar_sync": "free"
+   }
+  },
+  {
+   "texto": "More speed means faster, cheaper answers for you. Which one do you use most: ChatGPT, Gemini or DeepSeek? Comment below.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "WHICH ONE",
+     "DO YOU USE?"
+    ],
+    "syncs": [
+     null,
+     "use"
+    ],
+    "button": "COMMENT",
+    "button_sync": "comment"
+   }
+  }
+ ]
+}

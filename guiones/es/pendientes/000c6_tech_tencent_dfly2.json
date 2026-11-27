@@ -1,0 +1,161 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "titulo": "Tencent hizo la IA hasta 4 veces más rápida 🚀 (y lo regaló)",
+ "descripcion": "DFly2: un modelo pequeño escribe el borrador y el grande lo revisa de un vistazo (decodificación especulativa). Hasta 81% más rendimiento en DeepSeek-V4.1-Flash con textos largos y hasta 4,2× más rápido en Hy4 flash, según Tencent. Código abierto.",
+ "hashtags": "#ia #inteligenciaartificial #tencent #deepseek #tecnologia #WhiteHole #reels",
+ "fuentes": [
+  "https://arxiv.org/abs/2611.34776",
+  "https://github.com/Tencent/AngelSlim"
+ ],
+ "escenas": [
+  {
+   "texto": "Tencent acaba de hacer que modelos de inteligencia artificial gigantes respondan hasta cuatro veces más rápido. Y el truco lo vas a entender en un minuto.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "TENCENT · 26 NOV 2026",
+    "word": "4,2×",
+    "size": 260,
+    "sync": "cuatro",
+    "sub": "más rápido en tareas largas",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "El problema: una inteligencia artificial escribe una palabra a la vez. Y por cada palabra, el modelo gigante tiene que hacer todo su cálculo completo. Por eso tarda.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "EL PROBLEMA",
+    "titulo": "UNA PALABRA A LA VEZ",
+    "items": [
+     {
+      "texto": "Escribe palabra por palabra",
+      "emoji": "🐢",
+      "sync": "palabra"
+     },
+     {
+      "texto": "Cada palabra = cálculo completo",
+      "emoji": "🧮",
+      "sync": "cálculo"
+     },
+     {
+      "texto": "Resultado: lento y caro",
+      "emoji": "💸",
+      "sync": "tarda"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La solución se llama decodificación especulativa. Un modelo pequeño y rápido escribe un borrador de varias palabras, y el grande solo lo revisa de un vistazo, quedándose con las que él mismo habría escrito.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "BORRADOR",
+     "value": "modelo pequeño",
+     "color": "blue",
+     "sync": "pequeño"
+    },
+    "right": {
+     "label": "REVISIÓN",
+     "value": "modelo grande",
+     "color": "green",
+     "sync": "grande"
+    }
+   }
+  },
+  {
+   "texto": "Lo nuevo de Tencent se llama DFly2. Su borrador lee justo las mismas partes del texto que el modelo grande ya había elegido. No gasta memoria extra, y sigue funcionando aunque la conversación sea larguísima.",
+   "visual": {
+    "tipo": "captura",
+    "src": "tencent_dfly2_arxiv_m.png",
+    "recorte": [
+     0,
+     0,
+     1,
+     0.17
+    ],
+    "resaltar": [
+     0.0,
+     0.07,
+     0.86,
+     0.66
+    ],
+    "pre": "el artículo",
+    "titulo": "DFLY2",
+    "fuente": "arXiv 2611.34776 · 25 nov 2026",
+    "resaltar_sync": "DFly2",
+    "alto_max": 700
+   }
+  },
+  {
+   "texto": "Los números: con muchos usuarios a la vez y textos largos, DeepSeek atendió hasta un ochenta y uno por ciento más. Y en el modelo de Tencent, Hy4, hasta cuatro coma dos veces más rápido.",
+   "visual": {
+    "tipo": "captura",
+    "src": "tencent_dfly2_arxiv_m.png",
+    "recorte": [
+     0,
+     0.7,
+     1,
+     0.875
+    ],
+    "resaltar": [
+     0,
+     0.66,
+     1,
+     0.97
+    ],
+    "pre": "los resultados",
+    "titulo": "+81% EN DEEPSEEK",
+    "fuente": "arXiv 2611.34776",
+    "resaltar_sync": "ochenta",
+    "alto_max": 700
+   }
+  },
+  {
+   "texto": "Y lo mejor: lo publicaron gratis. El código está abierto para que cualquiera lo use.",
+   "visual": {
+    "tipo": "captura",
+    "src": "tencent_angelslim_github.png",
+    "recorte": [
+     0,
+     0,
+     1,
+     0.0335
+    ],
+    "resaltar": [
+     0.03,
+     0.755,
+     0.99,
+     0.925
+    ],
+    "alto_max": 760,
+    "pre": "código abierto",
+    "titulo": "GRATIS PARA TODOS",
+    "fuente": "GitHub · Tencent/AngelSlim",
+    "resaltar_sync": "gratis"
+   }
+  },
+  {
+   "texto": "Más velocidad significa respuestas más rápidas y más baratas para ti. ¿Cuál usas más: ChatGPT, Gemini o DeepSeek? Comenta.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "¿CUÁL USAS",
+     "MÁS?"
+    ],
+    "syncs": [
+     null,
+     "usas"
+    ],
+    "button": "COMENTA",
+    "button_sync": "comenta"
+   }
+  }
+ ]
+}

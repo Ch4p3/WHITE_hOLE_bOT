@@ -1,0 +1,180 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "ef_dora",
+  "lang": "es",
+  "velocidad": 1.0
+ },
+ "serie": "Párate de manos",
+ "titulo": "¿Quieres pararte de manos? Empieza con esta flexión 🤸 (parte 1)",
+ "descripcion": "Flexión pseudo plancha: empiezas con las manos debajo de los hombros y, semana a semana, las vas corriendo hacia la cadera. El cuerpo se inclina hacia adelante y los hombros cargan más peso: fortalece hombros, tríceps y abdomen, la base para sostenerte de manos. Acostumbra las muñecas de 2 a 4 semanas antes de inclinarte mucho (usa los puños o agarraderas si molestan). Si tienes una lesión, consulta antes con un profesional. Parte 1 de la serie \"Párate de manos\" 👇",
+ "hashtags": "#paratedemanos #calistenia #flexiones #ejercicioencasa #fitness #WhiteHole #reels",
+ "fuentes": [
+  "https://gymnasticbodies.com/?p=189279",
+  "https://www.strongfirst.com/community/threads/mechanical-advantage-accommodating-resistance-for-calisthenics-pressing-skills.29265/latest",
+  "https://getfitcraft.com/exercises/pseudo-planche-push-up"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Quieres pararte de manos? Empieza por aquí: una flexión que casi nadie hace bien.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 0.6,
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "pastilla": "PARTE 1",
+    "titulo": "PÁRATE DE MANOS",
+    "sub": "empieza con esta flexión",
+    "sub_sync": "flexión",
+    "brillo": [
+     "hombros"
+    ],
+    "brillo_sync": "manos"
+   }
+  },
+  {
+   "texto": "Se llama flexión pseudo plancha. Empiezas normal: los puños en el piso, debajo de los hombros.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 0,
+    "ritmo": 1.7,
+    "colchoneta": true,
+    "pastilla": "NIVEL 1",
+    "titulo": "FLEXIÓN PSEUDO PLANCHA",
+    "titulo_size": 86,
+    "sub": "manos bajo los hombros",
+    "sub_sync": "hombros"
+   }
+  },
+  {
+   "texto": "Cada semana, corres las manos un poquito hacia atrás. Para no caerte, echas el cuerpo hacia adelante, y los hombros cargan más peso.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 0.5,
+    "ritmo": 1.9,
+    "colchoneta": true,
+    "pastilla": "NIVEL 2",
+    "titulo": "MANOS UN POCO ATRÁS",
+    "titulo_size": 92,
+    "sub": "el cuerpo va hacia adelante",
+    "sub_sync": "adelante",
+    "brillo": [
+     "hombros",
+     "brazos"
+    ],
+    "brillo_sync": "hombros"
+   }
+  },
+  {
+   "texto": "Al final, las manos quedan casi a la altura de la cadera. Así es mucho más difícil que una flexión normal.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 1.0,
+    "ritmo": 2.2,
+    "colchoneta": true,
+    "pastilla": "NIVEL 3",
+    "titulo": "MANOS A LA CADERA",
+    "titulo_size": 96,
+    "sub": "mucho más difícil",
+    "sub_sync": "difícil",
+    "brillo": [
+     "hombros",
+     "brazos",
+     "abdomen"
+    ],
+    "brillo_sync": "cadera"
+   }
+  },
+  {
+   "texto": "¿Por qué sirve? Fortalece hombros, tríceps y abdomen: justo lo que necesitas para sostenerte de manos.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "titulo": "HOMBROS · TRÍCEPS · ABDOMEN",
+    "titulo_size": 72,
+    "sub": "la base para el pino",
+    "sub_sync": "sostenerte",
+    "brillo": [
+     "hombros",
+     "brazos",
+     "abdomen"
+    ],
+    "brillo_sync": "fortalece"
+   }
+  },
+  {
+   "texto": "Cuidado con las muñecas. Los expertos recomiendan acostumbrarlas de dos a cuatro semanas antes de inclinarte mucho. Si te molestan, usa los puños o unas agarraderas.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "OJO",
+    "titulo": "CUIDA LAS MUÑECAS",
+    "items": [
+     {
+      "texto": "Acostúmbralas 2 a 4 semanas",
+      "emoji": "⏳",
+      "sync": "acostumbrarlas"
+     },
+     {
+      "texto": "Puños o agarraderas",
+      "emoji": "✊",
+      "sync": "puños"
+     },
+     {
+      "texto": "Si duele, vuelve al nivel anterior",
+      "emoji": "↩️",
+      "sync": "molestan"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lo que te llevas: tres series de ocho. Cuando te salgan bien, corre las manos un poquito más. Guárdalo.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "LO QUE TE LLEVAS",
+    "titulo": "TU PLAN",
+    "items": [
+     {
+      "texto": "3 series de 8",
+      "emoji": "💪",
+      "sync": "tres"
+     },
+     {
+      "texto": "¿Te salen bien? Manos más atrás",
+      "emoji": "↘️",
+      "sync": "corre"
+     },
+     {
+      "texto": "2 o 3 veces por semana",
+      "emoji": "🔁",
+      "sync": "guárdalo"
+     }
+    ],
+    "boton": "GUÁRDALO",
+    "boton_sync": "guárdalo"
+   }
+  },
+  {
+   "texto": "Esta es la parte uno de Párate de manos. ¿Ya puedes hacer una flexión normal? Escribe SÍ o TODAVÍA.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "¿SÍ O TODAVÍA?",
+    "boton": "COMENTA",
+    "boton_sync": "escribe"
+   }
+  }
+ ]
+}

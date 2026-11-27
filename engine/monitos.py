@@ -159,8 +159,9 @@ def pose(kind, t, p):
 
     if kind == "flexion":
         k = _osc(t, per)                                  # 0 arriba, 1 abajo
-        h = 232 - 140 * k
-        toes, hand = (-300, -8), (175, 0)
+        m = float(p.get("manos_atras", 0))                # 0 = manos bajo los hombros · 1 = manos hacia la cadera (pseudo plancha)
+        h = (232 - 27 * m) - (140 - 20 * m) * k
+        toes, hand = (-300, -8), (175 - 130 * m, 0)
         S = (160, -h)
         d = _norm(_v(toes, S))
         up = (d[1], -d[0])                                # perpendicular hacia arriba

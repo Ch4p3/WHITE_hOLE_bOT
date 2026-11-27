@@ -1,0 +1,37 @@
+name: Enviar videos ya hechos a Telegram (con su texto)
+
+on:
+  workflow_dispatch:
+    inputs:
+      nombres:
+        description: "Nombres en previews/diarios sin extensión, separados por coma"
+        required: true
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Enviar
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NOMBRES: ${{ inputs.nombres }}
+        run: |
+          git fetch -q origin previews
+          python - <<'PY'
+          import os, json, subprocess, requests
+          tok, chat = os.environ["TELEGRAM_TOKEN"].strip(), os.environ["TELEGRAM_CHAT_ID"].strip()
+          for n in [x.strip() for x in os.environ["NOMBRES"].split(",") if x.strip()]:
+              mp4 = subprocess.run(["git", "show", f"origin/previews:diarios/{n}.mp4"], capture_output=True).stdout
+              g = json.loads(subprocess.run(["git", "show", f"origin/previews:diarios/{n}.json"], capture_output=True).stdout or b"{}")
+              cap = (f"📲 Para TikTok\n\n{g.get('titulo','')}\n\n{g.get('descripcion','')}\n\n{g.get('hashtags','').replace('#shorts','#fyp')}")[:1024]
+              r = requests.post(f"https://api.telegram.org/bot{tok}/sendVideo", timeout=120,
+                                data={"chat_id": chat, "caption": cap, "supports_streaming": "true"},
+                                files={"video": (n + ".mp4", mp4, "video/mp4")})
+              print(n, "✅" if r.ok else f"⚠️ {r.status_code} {r.text[:200]}")
+          PY

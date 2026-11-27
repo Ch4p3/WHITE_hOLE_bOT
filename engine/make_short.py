@@ -766,7 +766,8 @@ def v_mercado(img, d, t, sc, p):
        marcas=[{i, texto, pos:'arriba'|'abajo', color, sync}], niveles=[{precio, texto, color, sync}],
        pre, titulo, color, ymin, ymax, fechas=[i,...] (etiquetas en el eje), precio_final (mostrar)"""
     serie = p["serie"]; n = len(serie)
-    bx0, bx1, by0, by1 = 110, W - 110, p.get("y_base", 1240), p.get("y_tope", 560)
+    ind = p.get("indicador")
+    bx0, bx1, by0, by1 = 110, W - 110, p.get("y_base", 1010 if ind else 1240), p.get("y_tope", 560)
     precios = [q[1] for q in serie]
     ymin = p.get("ymin", min(precios) * 0.94); ymax = p.get("ymax", max(precios) * 1.04)
     fut = p.get("futuro", 0)
@@ -794,8 +795,63 @@ def v_mercado(img, d, t, sc, p):
     if last < n - 1 and vis > last:
         f = vis - last
         pts.append((X(last) + (X(last + 1) - X(last)) * f, Y(precios[last] + (precios[last + 1] - precios[last]) * f)))
+    def _serie_parcial(vals, yf):
+        out = []
+        for i in range(0, min(n, last + 1)):
+            if vals[i] is not None: out.append((X(i), yf(vals[i])))
+        if last < n - 1 and vis > last and vals[last] is not None and vals[last + 1] is not None:
+            f = vis - last
+            out.append((X(last) + (X(last + 1) - X(last)) * f, yf(vals[last] + (vals[last + 1] - vals[last]) * f)))
+        return out
+    for ln in p.get("lineas", []):  # medias móviles u otras líneas sobre el precio
+        if ease_out(prog(t, at(sc, ln.get("sync"), 0.0), 0.3)) <= 0: continue
+        lp = _serie_parcial(ln["valores"], Y)
+        if len(lp) > 1:
+            d.line(lp, fill=col(ln.get("color"), GREY), width=5, joint="curve")
+            if ln.get("texto"):
+                f = font(30, "xbold"); tw = d.textlength(ln["texto"], font=f)
+                lx = min(lp[-1][0] + 14, bx1 - tw); ly = lp[-1][1] + ln.get("dy", 0)
+                d.text((lx, ly), ln["texto"], font=f, fill=col(ln.get("color"), GREY), anchor="lm", stroke_width=5, stroke_fill=BG)
     if len(pts) > 1:
         d.line(pts, fill=cc, width=9, joint="curve")
+    if ind:  # panel de indicador (RSI o MACD) debajo del precio
+        py0, py1 = ind.get("y0", 1070), ind.get("y1", 1290)
+        ka2 = ease_out(prog(t, at(sc, ind.get("sync"), 0.0), 0.4))
+        d.rounded_rectangle([bx0 - 20, py0 - 16, bx1 + 20, py1 + 16], 18, fill=(16, 22, 42))
+        tit = ind.get("texto") or ind["tipo"].upper()
+        f = font(30, "black"); d.text((bx0, py0 + 4), tit, font=f, fill=GREY, anchor="lm")
+        if ind["tipo"] == "rsi":
+            YR = lambda v: py1 - v / 100 * (py1 - py0)
+            for z, c2 in ((70, WARM), (30, GREEN_)):
+                xx = bx0
+                while xx < bx0 + (bx1 - bx0) * ka2:
+                    d.line([xx, YR(z), min(xx + 18, bx1), YR(z)], fill=c2, width=3); xx += 32
+                d.text((bx0 + 4, YR(z) + (-18 if z == 70 else 18)), "sobrecompra 70" if z == 70 else "sobreventa 30", font=font(24, "bold"), fill=c2, anchor="lm")
+            rp = _serie_parcial(ind["valores"], YR)
+            if len(rp) > 1: d.line(rp, fill=(190, 140, 255), width=6, joint="curve")
+            if rp:
+                v = ind["valores"][min(n - 1, last)]
+                if v is not None:
+                    d.ellipse([rp[-1][0] - 9, rp[-1][1] - 9, rp[-1][0] + 9, rp[-1][1] + 9], fill=(190, 140, 255))
+                    text(d, (min(rp[-1][0], bx1 - 60), rp[-1][1] - 34 if rp[-1][1] > py0 + 50 else rp[-1][1] + 34), f"{v:.0f}", 34, WHITE, "black")
+        elif ind["tipo"] == "macd":
+            vals = [v for v in ind["macd"] + ind["senal"] if v is not None]
+            m = max(abs(v) for v in vals) or 1
+            hm = max([abs(v) for v in ind["hist"] if v is not None] or [1]) or 1
+            hk = 0.55 * m / hm  # el histograma va a su propia escala para que se vea
+            YM = lambda v: (py0 + py1) / 2 - v / m * (py1 - py0) / 2 * 0.9
+            d.line([bx0, YM(0), bx0 + (bx1 - bx0) * ka2, YM(0)], fill=(60, 74, 110), width=2)
+            bw = max(2, (bx1 - bx0) / max(1, n + p.get("futuro", 0)) * 0.6)
+            for i in range(0, min(n, last + 1)):
+                h = ind["hist"][i]
+                if h is None: continue
+                d.rectangle([X(i) - bw / 2, min(YM(0), YM(h * hk)), X(i) + bw / 2, max(YM(0), YM(h * hk))], fill=GREEN_ if h >= 0 else WARM)
+            for key, c2 in (("macd", BLUE), ("senal", (255, 170, 60))):
+                lp = _serie_parcial(ind[key], YM)
+                if len(lp) > 1: d.line(lp, fill=c2, width=5, joint="curve")
+            f2 = font(26, "bold")
+            d.text((bx1, py0 + 4), "MACD", font=f2, fill=BLUE, anchor="rm")
+            d.text((bx1 - 100, py0 + 4), "señal", font=f2, fill=(255, 170, 60), anchor="rm")
     hx, hy = pts[-1]
     d.ellipse([hx - 14, hy - 14, hx + 14, hy + 14], fill=cc, outline=WHITE, width=4)
     if p.get("precio_cabeza", True):
@@ -855,10 +911,11 @@ def v_mercado(img, d, t, sc, p):
             x, y = X(n - 1 + q[0]), Y(q[1])
             yy = y - 46 if lb.get("pos", "arriba") == "arriba" else y + 46
             text(d, (min(max(x, bx0 + 80), bx1 - 80), yy), lb["texto"], lb.get("size", 36), c2, "black")
+    fy = (ind.get("y1", 1290) + 10) if ind else by0
     for i in p.get("fechas", []):
-        text(d, (X(i), by0 + 44), serie[i][0], 34, GREY, "bold")
+        text(d, (X(i), fy + 40), serie[i][0], 34, GREY, "bold")
     if p.get("fuente"):
-        text(d, (W // 2, by0 + 100), p["fuente"], 28, (110, 120, 145), "semi")
+        text(d, (W // 2, (by1 - 50) if ind else (fy + 92)), p["fuente"], 28, (110, 120, 145), "semi")
 
 
 VISUALS = {"mercado": v_mercado, "lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,

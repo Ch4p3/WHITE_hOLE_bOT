@@ -83,6 +83,18 @@ jobs:
           python scripts/facebook.py --verificar || true
           python scripts/tiktok.py --verificar || true
 
+      - name: Video de mercado del día (lun–vie, la corrida de la mañana)
+        if: ${{ !inputs.solo_verificar_youtube }}
+        continue-on-error: true
+        run: |
+          hoy=$(TZ=America/Bogota date +%F); dow=$(TZ=America/Bogota date +%u); h=$(TZ=America/Bogota date +%H)
+          if [ "$dow" -le 5 ] && [ "$h" -lt 10 ] && [ -z "$(ls guiones/es/pendientes/0000_mercado_$hoy.json guiones/es/publicados/*0000_mercado_$hoy.json 2>/dev/null)" ]; then
+            pip install -q yfinance num2words
+            python scripts/gen_mercado_diario.py --fecha "$hoy"
+          else
+            echo "Hoy no toca video de mercado (o ya existe)."
+          fi
+
       - name: Generar el Short, subirlo y enviarlo a Telegram
         if: ${{ !inputs.solo_verificar_youtube }}
         env:

@@ -1,0 +1,31 @@
+name: YouTube - vistas por país
+
+on:
+  workflow_dispatch:
+
+jobs:
+  paises:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          import sys, requests, datetime
+          sys.path.insert(0, "scripts"); import youtube
+          tok = youtube.access_token()
+          hoy = datetime.date.today().isoformat()
+          r = requests.get("https://youtubeanalytics.googleapis.com/v2/reports", timeout=60,
+              headers={"Authorization": f"Bearer {tok}"},
+              params={"ids": "channel==MINE", "startDate": "2026-11-01", "endDate": hoy,
+                      "metrics": "views,estimatedMinutesWatched", "dimensions": "country", "sort": "-views", "maxResults": 25})
+          print(r.status_code)
+          print(r.text[:3000])
+          PY

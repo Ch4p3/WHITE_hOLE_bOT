@@ -1,0 +1,895 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 0.98
+ },
+ "serie": "Learn to read the market",
+ "titulo": "Elliott Wave Theory explained in 60 seconds 📈 (5 + 3)",
+ "descripcion": "Elliott Wave Theory (Ralph Nelson Elliott, 1930s) says markets move in a repeating pattern: 5 waves with the trend and 3 corrective waves. The 3 rules: 1) wave 2 never retraces beyond the start of wave 1; 2) wave 3 is never the shortest of 1, 3 and 5; 3) wave 4 never enters wave 1's territory. Counting is subjective: use it as a map, not a crystal ball. Educational content, not financial advice. Next video: we test it on Nvidia's real crash 👇",
+ "hashtags": "#trading #elliottwave #stocks #investing #technicalanalysis #shorts",
+ "fuentes": [
+  "https://www.investopedia.com/terms/e/elliottwavetheory.asp"
+ ],
+ "escenas": [
+  {
+   "texto": "Five waves with the trend, three against it. Many traders believe the market moves like this. It's called Elliott Wave Theory.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "",
+      100.0
+     ],
+     [
+      "",
+      105.0
+     ],
+     [
+      "",
+      110.0
+     ],
+     [
+      "",
+      115.0
+     ],
+     [
+      "",
+      120.0
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      130.0
+     ],
+     [
+      "",
+      127.5
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      122.5
+     ],
+     [
+      "",
+      120.0
+     ],
+     [
+      "",
+      117.5
+     ],
+     [
+      "",
+      115.0
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      135.0
+     ],
+     [
+      "",
+      145.0
+     ],
+     [
+      "",
+      155.0
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      171.7
+     ],
+     [
+      "",
+      168.3
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      161.7
+     ],
+     [
+      "",
+      158.3
+     ],
+     [
+      "",
+      155.0
+     ],
+     [
+      "",
+      161.7
+     ],
+     [
+      "",
+      168.3
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      181.7
+     ],
+     [
+      "",
+      188.3
+     ],
+     [
+      "",
+      195.0
+     ],
+     [
+      "",
+      190.0
+     ],
+     [
+      "",
+      185.0
+     ],
+     [
+      "",
+      180.0
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      170.0
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      167.5
+     ],
+     [
+      "",
+      170.0
+     ],
+     [
+      "",
+      172.5
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      177.5
+     ],
+     [
+      "",
+      180.0
+     ],
+     [
+      "",
+      173.3
+     ],
+     [
+      "",
+      166.7
+     ],
+     [
+      "",
+      160.0
+     ],
+     [
+      "",
+      153.3
+     ],
+     [
+      "",
+      146.7
+     ],
+     [
+      "",
+      140
+     ]
+    ],
+    "ymin": 85,
+    "ymax": 210,
+    "precio_cabeza": false,
+    "fuente": "illustrative diagram",
+    "pre": "the Elliott pattern",
+    "titulo": "5 + 3",
+    "marcas": [
+     {
+      "i": 6,
+      "texto": "1",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 12,
+      "texto": "2",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 18,
+      "texto": "3",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 24,
+      "texto": "4",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 30,
+      "texto": "5",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 36,
+      "texto": "A",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 42,
+      "texto": "B",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 48,
+      "texto": "C",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null
+     }
+    ],
+    "vel": 0.8
+   }
+  },
+  {
+   "texto": "Ralph Nelson Elliott proposed it in the nineteen thirties: price reflects crowd psychology, from fear to euphoria, over and over.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "1930s · Ralph Nelson Elliott",
+    "word": "FEAR → EUPHORIA",
+    "size": 130,
+    "sync": "psychology",
+    "sub": "and it repeats"
+   }
+  },
+  {
+   "texto": "First, five impulse waves. One, three and five push. Two and four are pullbacks.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "",
+      100.0
+     ],
+     [
+      "",
+      105.0
+     ],
+     [
+      "",
+      110.0
+     ],
+     [
+      "",
+      115.0
+     ],
+     [
+      "",
+      120.0
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      130.0
+     ],
+     [
+      "",
+      127.5
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      122.5
+     ],
+     [
+      "",
+      120.0
+     ],
+     [
+      "",
+      117.5
+     ],
+     [
+      "",
+      115.0
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      135.0
+     ],
+     [
+      "",
+      145.0
+     ],
+     [
+      "",
+      155.0
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      171.7
+     ],
+     [
+      "",
+      168.3
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      161.7
+     ],
+     [
+      "",
+      158.3
+     ],
+     [
+      "",
+      155.0
+     ],
+     [
+      "",
+      161.7
+     ],
+     [
+      "",
+      168.3
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      181.7
+     ],
+     [
+      "",
+      188.3
+     ],
+     [
+      "",
+      195.0
+     ],
+     [
+      "",
+      190.0
+     ],
+     [
+      "",
+      185.0
+     ],
+     [
+      "",
+      180.0
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      170.0
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      167.5
+     ],
+     [
+      "",
+      170.0
+     ],
+     [
+      "",
+      172.5
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      177.5
+     ],
+     [
+      "",
+      180.0
+     ],
+     [
+      "",
+      173.3
+     ],
+     [
+      "",
+      166.7
+     ],
+     [
+      "",
+      160.0
+     ],
+     [
+      "",
+      153.3
+     ],
+     [
+      "",
+      146.7
+     ],
+     [
+      "",
+      140
+     ]
+    ],
+    "ymin": 85,
+    "ymax": 210,
+    "precio_cabeza": false,
+    "fuente": "illustrative diagram",
+    "pre": "impulse",
+    "titulo": "5 WAVES WITH THE TREND",
+    "hasta": 30,
+    "marcas": [
+     {
+      "i": 6,
+      "texto": "1",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 12,
+      "texto": "2",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 18,
+      "texto": "3",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 24,
+      "texto": "4",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 30,
+      "texto": "5",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     }
+    ],
+    "vel": 0.8
+   }
+  },
+  {
+   "texto": "Then a three wave correction: A, B and C. And it starts again.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "",
+      100.0
+     ],
+     [
+      "",
+      105.0
+     ],
+     [
+      "",
+      110.0
+     ],
+     [
+      "",
+      115.0
+     ],
+     [
+      "",
+      120.0
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      130.0
+     ],
+     [
+      "",
+      127.5
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      122.5
+     ],
+     [
+      "",
+      120.0
+     ],
+     [
+      "",
+      117.5
+     ],
+     [
+      "",
+      115.0
+     ],
+     [
+      "",
+      125.0
+     ],
+     [
+      "",
+      135.0
+     ],
+     [
+      "",
+      145.0
+     ],
+     [
+      "",
+      155.0
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      171.7
+     ],
+     [
+      "",
+      168.3
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      161.7
+     ],
+     [
+      "",
+      158.3
+     ],
+     [
+      "",
+      155.0
+     ],
+     [
+      "",
+      161.7
+     ],
+     [
+      "",
+      168.3
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      181.7
+     ],
+     [
+      "",
+      188.3
+     ],
+     [
+      "",
+      195.0
+     ],
+     [
+      "",
+      190.0
+     ],
+     [
+      "",
+      185.0
+     ],
+     [
+      "",
+      180.0
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      170.0
+     ],
+     [
+      "",
+      165.0
+     ],
+     [
+      "",
+      167.5
+     ],
+     [
+      "",
+      170.0
+     ],
+     [
+      "",
+      172.5
+     ],
+     [
+      "",
+      175.0
+     ],
+     [
+      "",
+      177.5
+     ],
+     [
+      "",
+      180.0
+     ],
+     [
+      "",
+      173.3
+     ],
+     [
+      "",
+      166.7
+     ],
+     [
+      "",
+      160.0
+     ],
+     [
+      "",
+      153.3
+     ],
+     [
+      "",
+      146.7
+     ],
+     [
+      "",
+      140
+     ]
+    ],
+    "ymin": 85,
+    "ymax": 210,
+    "precio_cabeza": false,
+    "fuente": "illustrative diagram",
+    "pre": "correction",
+    "titulo": "A · B · C",
+    "desde": 30,
+    "marcas": [
+     {
+      "i": 6,
+      "texto": "1",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 12,
+      "texto": "2",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 18,
+      "texto": "3",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 24,
+      "texto": "4",
+      "pos": "abajo",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 30,
+      "texto": "5",
+      "pos": "arriba",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "i": 36,
+      "texto": "A",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 42,
+      "texto": "B",
+      "pos": "arriba",
+      "color": "warm",
+      "sync": null
+     },
+     {
+      "i": 48,
+      "texto": "C",
+      "pos": "abajo",
+      "color": "warm",
+      "sync": null
+     }
+    ],
+    "vel": 0.6
+   }
+  },
+  {
+   "texto": "Three rules that never break: wave two never goes below the start of wave one, wave three is never the shortest, and wave four never enters wave one's zone.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "NEVER BROKEN",
+    "titulo": "THE 3 RULES",
+    "items": [
+     {
+      "texto": "Wave 2 stays above wave 1's start",
+      "sync": "two"
+     },
+     {
+      "texto": "Wave 3 is never the shortest",
+      "sync": "shortest"
+     },
+     {
+      "texto": "Wave 4 never enters wave 1's zone",
+      "sync": "four"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Traders pair it with Fibonacci to estimate pullbacks: thirty eight, fifty or sixty one percent.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "paired with Fibonacci",
+    "word": "38% · 50% · 61.8%",
+    "size": 120,
+    "sync": "fibonacci",
+    "sub": "typical pullback zones"
+   }
+  },
+  {
+   "texto": "The honest part: two traders can count it differently. Use it as a map, and always with a stop loss.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "YOUR TAKEAWAY",
+    "titulo": "USE IT RIGHT",
+    "items": [
+     {
+      "texto": "A map, not a crystal ball",
+      "emoji": "🗺️",
+      "sync": "map"
+     },
+     {
+      "texto": "Counting is subjective",
+      "emoji": "🤔",
+      "sync": "differently"
+     },
+     {
+      "texto": "Always use a stop loss",
+      "emoji": "🛑",
+      "sync": "stop"
+     }
+    ],
+    "boton": "SAVE IT",
+    "boton_sync": "stop"
+   }
+  },
+  {
+   "texto": "Next video, we test it on Nvidia's real crash. Follow.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "DID NVIDIA",
+     "RESPECT",
+     "THE WAVES?"
+    ],
+    "syncs": [
+     null,
+     "test",
+     "nvidia"
+    ],
+    "button": "FOLLOW",
+    "button_sync": "follow"
+   }
+  }
+ ]
+}

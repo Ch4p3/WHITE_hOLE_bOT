@@ -1,0 +1,37 @@
+name: Estado de envíos a TikTok
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "publish_id separados por coma"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  estado:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests cryptography
+      - env:
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          IDS: ${{ inputs.ids }}
+        run: |
+          python - <<'PY'
+          import os, sys
+          sys.path.insert(0, "scripts"); import tiktok
+          tok = tiktok.access_token()
+          print("creador:", {k: v for k, v in tiktok._post(tok, "/post/publish/creator_info/query/", {}).items() if k in ("creator_username", "creator_nickname")})
+          for pid in os.environ["IDS"].split(","):
+              print(pid.strip()[-8:], tiktok._post(tok, "/post/publish/status/fetch/", {"publish_id": pid.strip()}))
+          PY
+      - run: |
+          git config user.name "white-hole-bot"; git config user.email "white-hole-bot@users.noreply.github.com"
+          git add .tokens && (git diff --cached --quiet || (git commit -qm "TikTok: token renovado" && git pull --rebase -q && git push -q)) || true

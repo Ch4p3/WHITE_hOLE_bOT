@@ -1,0 +1,50 @@
+name: Capturas de fuentes (pantallazos de páginas públicas)
+
+on:
+  workflow_dispatch:
+    inputs:
+      lista:
+        description: 'JSON: [{"url": "...", "nombre": "tencent_arxiv", "selector": "opcional", "ancho": 1200, "alto": 900}]'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  capturar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium
+      - name: Capturar
+        env:
+          LISTA: ${{ inputs.lista }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from playwright.sync_api import sync_playwright
+          os.makedirs("assets/capturas", exist_ok=True)
+          with sync_playwright() as p:
+              b = p.chromium.launch()
+              for it in json.loads(os.environ["LISTA"]):
+                  pg = b.new_page(viewport={"width": it.get("ancho", 1200), "height": it.get("alto", 900)}, device_scale_factor=2,
+                                  locale="en-US", color_scheme=it.get("tema", "light"))
+                  pg.goto(it["url"], wait_until="networkidle", timeout=60000)
+                  pg.wait_for_timeout(it.get("espera", 1500))
+                  out = f"assets/capturas/{it['nombre']}.png"
+                  if it.get("selector"):
+                      pg.locator(it["selector"]).first.screenshot(path=out)
+                  else:
+                      pg.screenshot(path=out)
+                  print("OK", it["nombre"], it["url"])
+              b.close()
+          PY
+      - name: Guardar
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          git add assets/capturas && git commit -qm "Capturas de fuentes" && git pull -q --rebase origin main && git push -q

@@ -918,7 +918,56 @@ def v_mercado(img, d, t, sc, p):
         text(d, (W // 2, (by1 - 50) if ind else (fy + 92)), p["fuente"], 28, (110, 120, 145), "semi")
 
 
-VISUALS = {"mercado": v_mercado, "lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
+def v_captura(img, d, t, sc, p):
+    """Pantallazo de la FUENTE (página pública) como tarjeta, con etiqueta "Fuente: …" y resaltado opcional.
+    p: src (png en assets/capturas), fuente, pre, titulo, recorte=[x0,y0,x1,y1] (fracciones),
+       resaltar=[x0,y0,x1,y1] (fracciones del recorte), resaltar_sync, zoom=[1.0,1.06], y (centro)"""
+    pth = p["src"] if os.path.isabs(p["src"]) else os.path.join(ROOT, "assets", "capturas", p["src"])
+    key = (pth, tuple(p.get("recorte", [])))
+    if key not in _CAPT:
+        im = Image.open(pth).convert("RGB")
+        if p.get("recorte"):
+            x0, y0, x1, y1 = p["recorte"]
+            im = im.crop((int(x0 * im.width), int(y0 * im.height), int(x1 * im.width), int(y1 * im.height)))
+        _CAPT[key] = im
+    im = _CAPT[key]
+    if p.get("pre"):
+        slide(d, (W // 2, 330), p["pre"], 44, GREY, t, 0.0, weight="xbold")
+    if p.get("titulo"):
+        slide(d, (W // 2, 410), p["titulo"], fit(d, p["titulo"], 76, "black", 960), WHITE, t, 0.1, weight="black")
+    k = ease_out(prog(t, 0.05, 0.45))
+    z0, z1 = p.get("zoom", [1.0, 1.06])
+    z = z0 + (z1 - z0) * ease_inout(clamp(t / max(1.0, sc["dur"])))
+    maxw, maxh = 960, p.get("alto_max", 820)
+    s0 = min(maxw / im.width, maxh / im.height) * z * (0.92 + 0.08 * k)
+    w2, h2 = int(im.width * s0), int(im.height * s0)
+    cy = p.get("y", 930) + (1 - k) * 60
+    x0, y0 = int(W / 2 - w2 / 2), int(cy - h2 / 2)
+    sh = Image.new("L", (w2 + 60, h2 + 60), 0); ImageDraw.Draw(sh).rounded_rectangle([30, 30, w2 + 30, h2 + 30], 28, fill=int(150 * k))
+    from PIL import ImageFilter
+    img.paste((0, 0, 0), (x0 - 30, y0 - 18), sh.filter(ImageFilter.GaussianBlur(18)))
+    card = im.resize((w2, h2), Image.LANCZOS)
+    m = Image.new("L", (w2, h2), 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, w2 - 1, h2 - 1], 22, fill=int(255 * k))
+    img.paste(card, (x0, y0), m)
+    if p.get("resaltar"):
+        kr = ease_out(prog(t, at(sc, p.get("resaltar_sync"), 0.4), 0.4))
+        if kr > 0:
+            a0, b0, a1, b1 = p["resaltar"]
+            rx0, ry0, rx1, ry1 = x0 + a0 * w2 - 8, y0 + b0 * h2 - 8, x0 + a1 * w2 + 8, y0 + b1 * h2 + 8
+            cx, cyy = (rx0 + rx1) / 2, (ry0 + ry1) / 2
+            ww, hh = (rx1 - rx0) * (0.85 + 0.15 * kr) / 2, (ry1 - ry0) * (0.85 + 0.15 * kr) / 2
+            d.rounded_rectangle([cx - ww, cyy - hh, cx + ww, cyy + hh], 14, outline=col(p.get("color"), WARM), width=7)
+    if p.get("fuente"):
+        f = font(30, "bold"); txt = "Fuente: " + p["fuente"] if LANG.get("code") == "es" else "Source: " + p["fuente"]
+        tw = d.textlength(txt, font=f)
+        yy = y0 + h2 + 46
+        d.rounded_rectangle([W / 2 - tw / 2 - 20, yy - 26, W / 2 + tw / 2 + 20, yy + 26], 14, fill=PANEL)
+        d.text((W / 2, yy), txt, font=f, fill=(170, 180, 205), anchor="mm")
+
+_CAPT = {}
+
+
+VISUALS = {"captura": v_captura, "mercado": v_mercado, "lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
            "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
            "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto,
            "primos": v_primos, "formula": v_formula, "espiral": v_espiral, "franja": v_franja}

@@ -25,10 +25,14 @@ def palabras(n):
     s = num2words(int(n), lang="es")
     return s.replace("veintiuno mil", "veintiún mil").replace("uno mil", "un mil").replace("ciento mil", "cien mil")
 
+def _un(s):  # "ciento cincuenta y uno dólares" -> "ciento cincuenta y un dólares"
+    if s.endswith("veintiuno"): return s[:-9] + "veintiún"
+    return s[:-3] + "un" if s.endswith("uno") else s
+
 def dinero_voz(v, paso):
     if paso >= 1:
-        return palabras(round(v / paso) * paso) + " dólares"
-    return palabras(round(v)) + " dólares"  # en voz, Nvidia al dólar entero (en pantalla va con centavos)
+        return _un(palabras(round(v / paso) * paso)) + " dólares"
+    return _un(palabras(round(v))) + " dólares"  # en voz, Nvidia al dólar entero (en pantalla va con centavos)
 
 def dinero_txt(v, paso):
     if paso >= 1:

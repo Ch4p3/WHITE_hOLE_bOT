@@ -1,0 +1,603 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "El mercado hoy",
+ "titulo": "¿Cómo cerró la semana? Bitcoin y Nvidia (+20% en una semana) 🎯",
+ "descripcion": "Serie diaria «El mercado hoy» con precios reales (Yahoo Finance). Contenido educativo, no es recomendación de inversión.\n\nNiveles de esta semana (pivotes clásicos de la semana anterior):\n• Bitcoin: resistencia $66.100 · soporte $55.700 · siguientes $71.100 / $50.200\n• Nvidia: resistencia $150,99 · soporte $112,29 · siguientes $176,44 / $99,04",
+ "hashtags": "#bitcoin #nvidia #trading #bolsa #analisistecnico #criptomonedas #WhiteHole #reels",
+ "fuentes": [
+  "https://finance.yahoo.com/quote/BTC-USD/",
+  "https://finance.yahoo.com/quote/NVDA/"
+ ],
+ "escenas": [
+  {
+   "texto": "Cerró la bolsa: hoy Wall Street trabajó medio día por Acción de Gracias. ¿Cómo terminaron la semana Bitcoin y Nvidia? Vamos con los niveles que marcaban los traders.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "19 oct",
+      81853.54
+     ],
+     [
+      "20 oct",
+      82941.0
+     ],
+     [
+      "21 oct",
+      84011.97
+     ],
+     [
+      "22 oct",
+      81311.89
+     ],
+     [
+      "23 oct",
+      81074.19
+     ],
+     [
+      "24 oct",
+      80790.84
+     ],
+     [
+      "25 oct",
+      80024.01
+     ],
+     [
+      "26 oct",
+      80006.66
+     ],
+     [
+      "27 oct",
+      80805.08
+     ],
+     [
+      "28 oct",
+      81267.59
+     ],
+     [
+      "29 oct",
+      77775.11
+     ],
+     [
+      "30 oct",
+      77198.21
+     ],
+     [
+      "31 oct",
+      77434.75
+     ],
+     [
+      "1 nov",
+      78248.45
+     ],
+     [
+      "2 nov",
+      76677.3
+     ],
+     [
+      "3 nov",
+      77345.05
+     ],
+     [
+      "4 nov",
+      80405.29
+     ],
+     [
+      "5 nov",
+      75942.12
+     ],
+     [
+      "6 nov",
+      75746.93
+     ],
+     [
+      "7 nov",
+      75747.58
+     ],
+     [
+      "8 nov",
+      74584.65
+     ],
+     [
+      "9 nov",
+      75223.15
+     ],
+     [
+      "10 nov",
+      73720.12
+     ],
+     [
+      "11 nov",
+      73964.47
+     ],
+     [
+      "12 nov",
+      71342.97
+     ],
+     [
+      "13 nov",
+      68249.27
+     ],
+     [
+      "14 nov",
+      64128.05
+     ],
+     [
+      "15 nov",
+      65305.06
+     ],
+     [
+      "16 nov",
+      64855.84
+     ],
+     [
+      "17 nov",
+      64893.95
+     ],
+     [
+      "18 nov",
+      62987.27
+     ],
+     [
+      "19 nov",
+      61901.82
+     ],
+     [
+      "20 nov",
+      58798.98
+     ],
+     [
+      "21 nov",
+      60094.09
+     ],
+     [
+      "22 nov",
+      61161.91
+     ],
+     [
+      "23 nov",
+      61210.98
+     ],
+     [
+      "24 nov",
+      59747.77
+     ],
+     [
+      "25 nov",
+      60378.2
+     ],
+     [
+      "26 nov",
+      60494.71
+     ],
+     [
+      "27 nov",
+      59762.43
+     ]
+    ],
+    "ymin": 53405.6489625,
+    "ymax": 86845.88861458334,
+    "estatico": false,
+    "fuente": "Cierres diarios BITCOIN · Yahoo Finance",
+    "fechas": [
+     0,
+     39
+    ],
+    "pre": "EL MERCADO HOY · VIERNES 27 NOV",
+    "titulo": "¿CÓMO CERRÓ LA SEMANA?",
+    "vel": 0.9,
+    "precio_cabeza": false
+   }
+  },
+  {
+   "texto": "Bitcoin: en la semana va bajando un dos coma tres por ciento. Los niveles de la semana eran resistencia en sesenta y seis mil cien dólares y soporte en cincuenta y cinco mil setecientos dólares. Resultado: no tocó ninguno de los dos niveles. Fue una semana de rango, sin romper ni para arriba ni para abajo.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "19 oct",
+      81853.54
+     ],
+     [
+      "20 oct",
+      82941.0
+     ],
+     [
+      "21 oct",
+      84011.97
+     ],
+     [
+      "22 oct",
+      81311.89
+     ],
+     [
+      "23 oct",
+      81074.19
+     ],
+     [
+      "24 oct",
+      80790.84
+     ],
+     [
+      "25 oct",
+      80024.01
+     ],
+     [
+      "26 oct",
+      80006.66
+     ],
+     [
+      "27 oct",
+      80805.08
+     ],
+     [
+      "28 oct",
+      81267.59
+     ],
+     [
+      "29 oct",
+      77775.11
+     ],
+     [
+      "30 oct",
+      77198.21
+     ],
+     [
+      "31 oct",
+      77434.75
+     ],
+     [
+      "1 nov",
+      78248.45
+     ],
+     [
+      "2 nov",
+      76677.3
+     ],
+     [
+      "3 nov",
+      77345.05
+     ],
+     [
+      "4 nov",
+      80405.29
+     ],
+     [
+      "5 nov",
+      75942.12
+     ],
+     [
+      "6 nov",
+      75746.93
+     ],
+     [
+      "7 nov",
+      75747.58
+     ],
+     [
+      "8 nov",
+      74584.65
+     ],
+     [
+      "9 nov",
+      75223.15
+     ],
+     [
+      "10 nov",
+      73720.12
+     ],
+     [
+      "11 nov",
+      73964.47
+     ],
+     [
+      "12 nov",
+      71342.97
+     ],
+     [
+      "13 nov",
+      68249.27
+     ],
+     [
+      "14 nov",
+      64128.05
+     ],
+     [
+      "15 nov",
+      65305.06
+     ],
+     [
+      "16 nov",
+      64855.84
+     ],
+     [
+      "17 nov",
+      64893.95
+     ],
+     [
+      "18 nov",
+      62987.27
+     ],
+     [
+      "19 nov",
+      61901.82
+     ],
+     [
+      "20 nov",
+      58798.98
+     ],
+     [
+      "21 nov",
+      60094.09
+     ],
+     [
+      "22 nov",
+      61161.91
+     ],
+     [
+      "23 nov",
+      61210.98
+     ],
+     [
+      "24 nov",
+      59747.77
+     ],
+     [
+      "25 nov",
+      60378.2
+     ],
+     [
+      "26 nov",
+      60494.71
+     ],
+     [
+      "27 nov",
+      59762.43
+     ]
+    ],
+    "ymin": 53405.6489625,
+    "ymax": 86845.88861458334,
+    "estatico": true,
+    "fuente": "Cierres diarios BITCOIN · Yahoo Finance",
+    "fechas": [
+     0,
+     39
+    ],
+    "pre": "BITCOIN · resultado de la semana",
+    "titulo": "SEMANA DE RANGO · -2,3%",
+    "precio_cabeza": true,
+    "niveles": [
+     {
+      "precio": 66127.82,
+      "texto": "resistencia $66.100",
+      "color": "green",
+      "sync": "resistencia"
+     },
+     {
+      "precio": 55672.78,
+      "texto": "soporte $55.700",
+      "color": "warm",
+      "sync": "soporte"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nvidia: en la semana subió un diecinueve coma nueve por ciento. Los niveles de la semana eran resistencia en ciento cincuenta y un dólares y soporte en ciento doce dólares. Resultado: superó la resistencia: llegó hasta ciento setenta y dos dólares. Se cumplió el escenario de subida.",
+   "visual": {
+    "tipo": "mercado",
+    "serie": [
+     [
+      "2 oct",
+      233.95
+     ],
+     [
+      "5 oct",
+      238.9
+     ],
+     [
+      "6 oct",
+      239.24
+     ],
+     [
+      "7 oct",
+      237.47
+     ],
+     [
+      "8 oct",
+      230.48
+     ],
+     [
+      "9 oct",
+      229.28
+     ],
+     [
+      "12 oct",
+      226.32
+     ],
+     [
+      "13 oct",
+      228.52
+     ],
+     [
+      "14 oct",
+      221.3
+     ],
+     [
+      "15 oct",
+      217.23
+     ],
+     [
+      "16 oct",
+      214.13
+     ],
+     [
+      "19 oct",
+      217.09
+     ],
+     [
+      "20 oct",
+      216.47
+     ],
+     [
+      "21 oct",
+      221.97
+     ],
+     [
+      "22 oct",
+      212.21
+     ],
+     [
+      "23 oct",
+      210.96
+     ],
+     [
+      "26 oct",
+      216.0
+     ],
+     [
+      "27 oct",
+      217.94
+     ],
+     [
+      "28 oct",
+      215.38
+     ],
+     [
+      "29 oct",
+      213.66
+     ],
+     [
+      "30 oct",
+      204.64
+     ],
+     [
+      "2 nov",
+      202.06
+     ],
+     [
+      "3 nov",
+      206.69
+     ],
+     [
+      "4 nov",
+      200.13
+     ],
+     [
+      "5 nov",
+      181.6
+     ],
+     [
+      "6 nov",
+      186.64
+     ],
+     [
+      "9 nov",
+      178.67
+     ],
+     [
+      "10 nov",
+      168.89
+     ],
+     [
+      "11 nov",
+      173.73
+     ],
+     [
+      "12 nov",
+      166.19
+     ],
+     [
+      "13 nov",
+      162.85
+     ],
+     [
+      "16 nov",
+      156.14
+     ],
+     [
+      "17 nov",
+      155.46
+     ],
+     [
+      "18 nov",
+      150.96
+     ],
+     [
+      "19 nov",
+      145.98
+     ],
+     [
+      "20 nov",
+      125.53
+     ],
+     [
+      "23 nov",
+      165.05
+     ],
+     [
+      "24 nov",
+      155.38
+     ],
+     [
+      "25 nov",
+      149.3
+     ],
+     [
+      "27 nov",
+      150.49
+     ]
+    ],
+    "ymin": 102.13040021972657,
+    "ymax": 251.9353333129883,
+    "estatico": true,
+    "fuente": "Cierres diarios NVIDIA · Yahoo Finance",
+    "fechas": [
+     0,
+     39
+    ],
+    "pre": "NVIDIA · resultado de la semana",
+    "titulo": "ESCENARIO ALCISTA ✓ · +19,9%",
+    "precio_cabeza": true,
+    "niveles": [
+     {
+      "precio": 150.99,
+      "texto": "resistencia $150,99",
+      "color": "green",
+      "sync": "resistencia"
+     },
+     {
+      "precio": 112.29,
+      "texto": "soporte $112,29",
+      "color": "warm",
+      "sync": "soporte"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y desde el lunes, todos los días a las siete de la mañana: el plan de la semana, y si se está cumpliendo. Esto es educativo, no es recomendación de inversión. ¿Qué acción quieres que analice? Comenta.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "DESDE EL LUNES:",
+     "EL MERCADO",
+     "HOY"
+    ],
+    "syncs": [
+     null,
+     null,
+     null
+    ],
+    "button": "¿QUÉ ANALIZO?",
+    "button_sync": "comenta"
+   }
+  }
+ ]
+}

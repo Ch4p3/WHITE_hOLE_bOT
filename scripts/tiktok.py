@@ -22,8 +22,16 @@ class TikTokError(Exception):
     pass
 
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import tt_token  # noqa: E402
+
+
+def _refresh():
+    return tt_token.leer() or os.environ.get("TT_REFRESH_TOKEN", "").strip()
+
+
 def creds_disponibles():
-    return all(os.environ.get(k, "").strip() for k in ("TT_CLIENT_KEY", "TT_CLIENT_SECRET", "TT_REFRESH_TOKEN"))
+    return all(os.environ.get(k, "").strip() for k in ("TT_CLIENT_KEY", "TT_CLIENT_SECRET")) and bool(_refresh())
 
 
 def access_token():
@@ -32,13 +40,13 @@ def access_token():
                       data={"client_key": os.environ["TT_CLIENT_KEY"].strip(),
                             "client_secret": os.environ["TT_CLIENT_SECRET"].strip(),
                             "grant_type": "refresh_token",
-                            "refresh_token": os.environ["TT_REFRESH_TOKEN"].strip()})
+                            "refresh_token": _refresh()})
     d = r.json()
     if "access_token" not in d:
         raise TikTokError(f"No se pudo renovar el token de TikTok: {str(d)[:300]}")
-    if d.get("refresh_token") and d["refresh_token"] != os.environ["TT_REFRESH_TOKEN"].strip():
-        print("⚠️ TikTok entregó un refresh token nuevo; hay que actualizar el secreto TT_REFRESH_TOKEN "
-              f"(vence en {d.get('refresh_expires_in', '?')} s).")
+    if d.get("refresh_token") and d["refresh_token"] != _refresh():
+        tt_token.guardar(d["refresh_token"])      # TikTok rota el token: se guarda cifrado en .tokens/
+        print("🔁 Refresh token de TikTok renovado y guardado (cifrado).")
     return d["access_token"]
 
 

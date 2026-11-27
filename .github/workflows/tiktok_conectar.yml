@@ -1,0 +1,53 @@
+name: Conectar TikTok (canjear código)
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "El código que aparece en la página de autorización (sin 'code=')"
+        required: true
+      redirect:
+        description: "redirect_uri usado"
+        default: "https://ch4p3.github.io/WHITE_hOLE_bOT/publisher/callback.html"
+
+permissions:
+  contents: write
+
+jobs:
+  conectar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests cryptography
+      - name: Canjear y guardar cifrado
+        env:
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          CODE: ${{ inputs.code }}
+          REDIRECT: ${{ inputs.redirect }}
+        run: |
+          python - <<'PY'
+          import os, sys, requests, urllib.parse
+          sys.path.insert(0, "scripts"); import tt_token
+          key = os.environ["TT_CLIENT_KEY"].strip()
+          print("client_key del secreto empieza por:", key[:4], "| largo:", len(key))
+          r = requests.post("https://open.tiktokapis.com/v2/oauth/token/", timeout=60,
+              headers={"Content-Type": "application/x-www-form-urlencoded"},
+              data={"client_key": key, "client_secret": os.environ["TT_CLIENT_SECRET"].strip(),
+                    "code": urllib.parse.unquote(os.environ["CODE"].strip()), "grant_type": "authorization_code",
+                    "redirect_uri": os.environ["REDIRECT"].strip()})
+          d = r.json()
+          if "refresh_token" not in d:
+              sys.exit("TikTok no entregó tokens: " + str({k: v for k, v in d.items() if "token" not in k})[:400])
+          tt_token.guardar(d["refresh_token"])
+          print("✅ Conectado. scope:", d.get("scope"), "| open_id:", d.get("open_id", "")[:6] + "…",
+                "| el refresh token vence en", round(d.get("refresh_expires_in", 0) / 86400), "días")
+          PY
+      - name: Guardar
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          git add .tokens && git commit -qm "TikTok conectado (token cifrado)" && git push -q

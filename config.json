@@ -13,7 +13,8 @@
   "subir": true,
   "modo": "bandeja",
   "privacidad": "PUBLIC_TO_EVERYONE",
-  "nota": "modo bandeja: TikTok permite máximo 5 envíos pendientes en 24 h. El diario manda 1 por corrida (3 al día); los especiales NO se mandan a TikTok para no pasarse del límite."
+  "nota": "Solo los Reels en español van a la bandeja de TikTok (máximo 5 pendientes en 24 h: publícalos desde la app). El refresh token vive cifrado en .tokens/ (lo crea el workflow \"Conectar TikTok\").",
+  "solo_es": true
  },
  "instagram": {
   "reels_es": true,

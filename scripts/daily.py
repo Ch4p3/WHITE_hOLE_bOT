@@ -105,7 +105,7 @@ def main():
         except Exception as e:
             yt_line += f"\n⚠️ No se pudo subir a Facebook: {str(e)[:200]}"
             print("Facebook:", e)
-    if tt_conf.get("subir") and tiktok.creds_disponibles() and not a.prueba:
+    if tt_conf.get("subir") and not tt_conf.get("solo_es") and tiktok.creds_disponibles() and not a.prueba:
         try:
             pid, est = tiktok.subir(video, cfg.get("titulo", "") + " " + cfg.get("hashtags", ""),
                                     tt_conf.get("privacidad", "PUBLIC_TO_EVERYONE"),
@@ -175,6 +175,14 @@ def reel_es():
             print("✅ Reel en Instagram:", instagram.reel_local(video, ig_txt))
         except Exception as e:
             print("⚠️ No se pudo publicar en Instagram:", str(e)[:300])
+    tt = json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8")).get("tiktok", {})
+    if tt.get("subir") and tt.get("solo_es") and tiktok.creds_disponibles():
+        try:      # a la bandeja de TikTok: David solo le da Publicar en la app
+            cap_tt = (cfg.get("titulo", "") + " " + cfg.get("hashtags", "").replace("#reels", "#fyp #parati"))[:2200]
+            pid, est = tiktok.subir(video, cap_tt, tt.get("privacidad", "PUBLIC_TO_EVERYONE"), "bandeja")
+            print("✅ TikTok:", est)
+        except Exception as e:
+            print("⚠️ TikTok:", str(e)[:300])
     tok, chat = os.environ.get("TELEGRAM_TOKEN", "").strip(), os.environ.get("TELEGRAM_CHAT_ID", "").strip()
     if tok and chat:      # copia lista para subir a mano a TikTok (la API de TikTok aún no está aprobada)
         try:

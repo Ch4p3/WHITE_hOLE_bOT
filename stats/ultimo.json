@@ -1,6 +1,24 @@
 {
- "generado": "2026-11-27 03:16 UTC",
+ "generado": "2026-11-27 13:04 UTC",
  "facebook": [
+  {
+   "id": "1131734616524404",
+   "tipo": "video_reels",
+   "fecha": "2026-11-27T12:25:19+0000",
+   "duracion": 86.866,
+   "texto": "Nvidia PARTE 2: ¿hasta dónde subiría si se cumple Elliott? 🎯",
+   "link": "/reel/1131734616524404/",
+   "metricas": {
+    "post_video_avg_time_watched": 0,
+    "post_video_view_time": 0,
+    "blue_reels_play_count": 0,
+    "fb_reels_total_plays": 0,
+    "fb_reels_replay_count": 0,
+    "post_video_followers": 0
+   },
+   "likes": 0,
+   "comentarios": 0
+  },
   {
    "id": "1329851475933666",
    "tipo": "video_reels",
@@ -9,11 +27,11 @@
    "texto": "Nvidia onda por onda, PARTE 1: ¿la caída respetó a Elliott? 📉",
    "link": "/reel/1329851475933666/",
    "metricas": {
-    "post_video_avg_time_watched": 5194,
-    "post_video_view_time": 166209,
-    "blue_reels_play_count": 41,
-    "fb_reels_total_plays": 43,
-    "fb_reels_replay_count": 2,
+    "post_video_avg_time_watched": 16958,
+    "post_video_view_time": 1628010,
+    "blue_reels_play_count": 96,
+    "fb_reels_total_plays": 112,
+    "fb_reels_replay_count": 16,
     "post_video_followers": 0
    },
    "likes": 0,
@@ -45,11 +63,11 @@
    "texto": "Rutina de abdomen en casa (y la verdad sobre la barriga) 🔥",
    "link": "/reel/4690582504555771/",
    "metricas": {
-    "post_video_avg_time_watched": 4476,
-    "post_video_view_time": 1213187,
-    "blue_reels_play_count": 278,
-    "fb_reels_total_plays": 293,
-    "fb_reels_replay_count": 15,
+    "post_video_avg_time_watched": 4413,
+    "post_video_view_time": 1443243,
+    "blue_reels_play_count": 327,
+    "fb_reels_total_plays": 347,
+    "fb_reels_replay_count": 20,
     "post_video_followers": 0
    },
    "likes": 2,
@@ -63,10 +81,10 @@
    "texto": "Rutina de glúteos PARTE 2: cuando la primera ya es fácil 🍑🔥",
    "link": "/reel/994768083711041/",
    "metricas": {
-    "post_video_avg_time_watched": 4160,
-    "post_video_view_time": 931927,
-    "blue_reels_play_count": 224,
-    "fb_reels_total_plays": 244,
+    "post_video_avg_time_watched": 4150,
+    "post_video_view_time": 933932,
+    "blue_reels_play_count": 225,
+    "fb_reels_total_plays": 245,
     "fb_reels_replay_count": 20,
     "post_video_followers": 0
    },
@@ -135,10 +153,10 @@
    "texto": "El ejercicio que más trabaja la cola NO es la sentadilla 🍑",
    "link": "/reel/29331672863160829/",
    "metricas": {
-    "post_video_avg_time_watched": 11373,
-    "post_video_view_time": 5743692,
-    "blue_reels_play_count": 505,
-    "fb_reels_total_plays": 616,
+    "post_video_avg_time_watched": 11350,
+    "post_video_view_time": 5754886,
+    "blue_reels_play_count": 507,
+    "fb_reels_total_plays": 618,
     "fb_reels_replay_count": 111,
     "post_video_followers": 1
    },
@@ -153,11 +171,11 @@
    "texto": "Si naciste con poca cola, ¿puedes tener más? 🍑",
    "link": "/reel/1336238215304334/",
    "metricas": {
-    "post_video_avg_time_watched": 7974,
-    "post_video_view_time": 3883611,
-    "blue_reels_play_count": 488,
-    "fb_reels_total_plays": 554,
-    "fb_reels_replay_count": 66,
+    "post_video_avg_time_watched": 7895,
+    "post_video_view_time": 3947898,
+    "blue_reels_play_count": 500,
+    "fb_reels_total_plays": 567,
+    "fb_reels_replay_count": 67,
     "post_video_followers": 1
    },
    "likes": 2,
@@ -310,6 +328,23 @@
  ],
  "instagram": [
   {
+   "id": "18004024134012676",
+   "fecha": "2026-11-27T12:28:26+0000",
+   "tipo": "REELS",
+   "texto": "Nvidia PARTE 2: ¿hasta dónde subiría si se cumple Elliott? 🎯\n\nAnálisis educativo con precios reales (Yahoo Finance). No es recomendación de ",
+   "likes": 0,
+   "comentarios": 0,
+   "link": "https://www.instagram.com/reel/DgPrasivP1v/",
+   "metricas": {
+    "views": 0,
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0
+   }
+  },
+  {
    "id": "18181637779449752",
    "fecha": "2026-11-27T01:04:27+0000",
    "tipo": "FEED",
@@ -330,16 +365,16 @@
    "fecha": "2026-11-27T00:14:15+0000",
    "tipo": "REELS",
    "texto": "Nvidia onda por onda, PARTE 1: ¿la caída respetó a Elliott? 📉\n\nAnálisis educativo con precios reales (Yahoo Finance). No es recomendación de",
-   "likes": 0,
+   "likes": 3,
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgOXb1tyCu2/",
    "metricas": {
-    "views": 20,
-    "reach": 12,
+    "views": 149,
+    "reach": 126,
     "saved": 0,
     "shares": 0,
-    "total_interactions": 0,
-    "ig_reels_avg_watch_time": 20284
+    "total_interactions": 3,
+    "ig_reels_avg_watch_time": 16763
    }
   },
   {
@@ -367,12 +402,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgODC9qBnKo/",
    "metricas": {
-    "views": 12,
-    "reach": 11,
+    "views": 34,
+    "reach": 31,
     "saved": 0,
     "shares": 0,
     "total_interactions": 0,
-    "ig_reels_avg_watch_time": 13663
+    "ig_reels_avg_watch_time": 11999
    }
   },
   {
@@ -400,12 +435,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNvLxGB_pH/",
    "metricas": {
-    "views": 122,
+    "views": 123,
     "reach": 109,
     "saved": 5,
     "shares": 1,
     "total_interactions": 10,
-    "ig_reels_avg_watch_time": 9441
+    "ig_reels_avg_watch_time": 9739
    }
   },
   {
@@ -417,12 +452,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNZ4eXgIK1/",
    "metricas": {
-    "views": 122,
-    "reach": 113,
+    "views": 123,
+    "reach": 114,
     "saved": 1,
     "shares": 2,
     "total_interactions": 4,
-    "ig_reels_avg_watch_time": 7026
+    "ig_reels_avg_watch_time": 7105
    }
   },
   {
@@ -439,7 +474,7 @@
     "saved": 2,
     "shares": 3,
     "total_interactions": 9,
-    "ig_reels_avg_watch_time": 9186
+    "ig_reels_avg_watch_time": 9341
    }
   },
   {
@@ -451,12 +486,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgNGkYbgxNe/",
    "metricas": {
-    "views": 16,
-    "reach": 14,
+    "views": 75,
+    "reach": 67,
     "saved": 0,
     "shares": 0,
     "total_interactions": 2,
-    "ig_reels_avg_watch_time": 16222
+    "ig_reels_avg_watch_time": 9674
    }
   },
   {
@@ -518,12 +553,12 @@
    "comentarios": 0,
    "link": "https://www.instagram.com/reel/DgLKU7-ty8t/",
    "metricas": {
-    "views": 276,
-    "reach": 245,
+    "views": 279,
+    "reach": 247,
     "saved": 4,
     "shares": 2,
     "total_interactions": 13,
-    "ig_reels_avg_watch_time": 11568
+    "ig_reels_avg_watch_time": 11546
    }
   },
   {
@@ -631,14 +666,25 @@
  ],
  "youtube": [
   {
+   "id": "1RVzlAlsxxU",
+   "titulo": "Nvidia wave by wave, PART 1: did the crash follow Elliott? 📉",
+   "fecha": "2026-11-27T12:24:42Z",
+   "duracion": "PT1M40S",
+   "estado": "public",
+   "programado": null,
+   "vistas": 11,
+   "likes": 0,
+   "comentarios": 0
+  },
+  {
    "id": "nWwx9ncmpEk",
    "titulo": "Elliott Wave Theory explained in 60 seconds 📈 (5 + 3)",
    "fecha": "2026-11-27T00:11:20Z",
    "duracion": "PT58S",
    "estado": "public",
    "programado": null,
-   "vistas": 38,
-   "likes": 1,
+   "vistas": 188,
+   "likes": 5,
    "comentarios": 0
   },
   {
@@ -648,7 +694,7 @@
    "duracion": "PT26S",
    "estado": "public",
    "programado": null,
-   "vistas": 4,
+   "vistas": 6,
    "likes": 1,
    "comentarios": 0
   },
@@ -659,7 +705,7 @@
    "duracion": "PT44S",
    "estado": "public",
    "programado": null,
-   "vistas": 6,
+   "vistas": 9,
    "likes": 2,
    "comentarios": 0
   },
@@ -670,8 +716,8 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 34,
-   "likes": 3,
+   "vistas": 44,
+   "likes": 4,
    "comentarios": 0
   },
   {
@@ -692,7 +738,7 @@
    "duracion": "PT47S",
    "estado": "public",
    "programado": null,
-   "vistas": 659,
+   "vistas": 929,
    "likes": 16,
    "comentarios": 0
   },
@@ -714,8 +760,8 @@
    "duracion": "PT38S",
    "estado": "public",
    "programado": null,
-   "vistas": 1042,
-   "likes": 13,
+   "vistas": 1056,
+   "likes": 14,
    "comentarios": 3
   },
   {
@@ -736,7 +782,7 @@
    "duracion": "PT41S",
    "estado": "public",
    "programado": null,
-   "vistas": 389,
+   "vistas": 434,
    "likes": 6,
    "comentarios": 0
   },
@@ -747,7 +793,7 @@
    "duracion": "PT43S",
    "estado": "public",
    "programado": null,
-   "vistas": 1139,
+   "vistas": 1238,
    "likes": 18,
    "comentarios": 0
   },
@@ -780,8 +826,8 @@
    "duracion": "PT58S",
    "estado": "public",
    "programado": null,
-   "vistas": 1127,
-   "likes": 17,
+   "vistas": 1288,
+   "likes": 19,
    "comentarios": 2
   },
   {
@@ -791,7 +837,7 @@
    "duracion": "PT33S",
    "estado": "public",
    "programado": null,
-   "vistas": 2,
+   "vistas": 3,
    "likes": 1,
    "comentarios": 0
   },
@@ -857,7 +903,7 @@
    "duracion": "PT22S",
    "estado": "public",
    "programado": null,
-   "vistas": 17,
+   "vistas": 18,
    "likes": 2,
    "comentarios": 0
   },
@@ -868,7 +914,7 @@
    "duracion": "PT36S",
    "estado": "public",
    "programado": null,
-   "vistas": 1280,
+   "vistas": 1282,
    "likes": 25,
    "comentarios": 2
   },
@@ -879,7 +925,7 @@
    "duracion": "PT31S",
    "estado": "public",
    "programado": null,
-   "vistas": 803,
+   "vistas": 804,
    "likes": 13,
    "comentarios": 0
   },
@@ -903,12 +949,12 @@
  "instagram_cuenta": {
   "username": "whi.tehole1",
   "followers_count": 2,
-  "media_count": 23
+  "media_count": 24
  },
  "youtube_canal": {
-  "viewCount": "6163",
-  "subscriberCount": "4",
+  "viewCount": "7005",
+  "subscriberCount": "6",
   "hiddenSubscriberCount": false,
-  "videoCount": "21"
+  "videoCount": "22"
  }
 }

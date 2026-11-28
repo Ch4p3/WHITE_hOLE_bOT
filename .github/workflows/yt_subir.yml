@@ -6,6 +6,9 @@ on:
       nombre:
         description: "Nombre en previews/diarios sin extensión (ej. 2026-11-26_100dy_news_ai_insulin_key)"
         required: true
+      carpeta:
+        description: "diarios (Shorts) o largos (videos largos de largo.yml)"
+        default: "diarios"
       publicar_en:
         description: "Opcional: fecha ISO UTC para programar (ej. 2026-11-27T23:00:00Z)"
         default: ""
@@ -23,8 +26,9 @@ jobs:
       - name: Bajar video y guion
         run: |
           git fetch -q origin previews
-          git show "origin/previews:diarios/${{ inputs.nombre }}.mp4" > v.mp4
-          git show "origin/previews:diarios/${{ inputs.nombre }}.json" > g.json
+          c="${{ inputs.carpeta }}"
+          git show "origin/previews:$c/${{ inputs.nombre }}.mp4" > v.mp4
+          if [ "$c" = "largos" ]; then git show "origin/previews:largos/${{ inputs.nombre }}.meta.json" > g.json; else git show "origin/previews:diarios/${{ inputs.nombre }}.json" > g.json; fi
       - name: Subir
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -37,8 +41,12 @@ jobs:
           sys.path.insert(0, "scripts")
           import youtube
           g = json.load(open("g.json", encoding="utf-8"))
-          tags = [t.lstrip("#") for t in g.get("hashtags", "").split()]
-          desc = g.get("descripcion", "") + "\n\n" + g.get("hashtags", "") + "\n\nSources:\n" + "\n".join(g.get("fuentes", []))
+          import re
+          if "capitulos" in g:  # video largo: la descripción ya trae capítulos, fuentes y hashtags
+              desc = g.get("descripcion", ""); tags = [t.lstrip("#") for t in re.findall(r"#\w+", desc)]
+          else:
+              tags = [t.lstrip("#") for t in g.get("hashtags", "").split()]
+              desc = g.get("descripcion", "") + "\n\n" + g.get("hashtags", "") + "\n\nSources:\n" + "\n".join(g.get("fuentes", []))
           cuando = os.environ.get("PUBLICAR_EN", "").strip()
           vid, est = youtube.subir("v.mp4", g.get("titulo", "White Hole"), desc, tags, "private" if cuando else "public", cuando or None)
           print("Subido a YouTube:", vid, est, cuando)

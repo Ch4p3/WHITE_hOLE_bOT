@@ -1,0 +1,801 @@
+{
+ "titulo": "How the Spanish Empire Went Broke: The Silver That Wasn't Enough",
+ "idioma": "en",
+ "kokoro": {
+  "voz": "am_michael",
+  "velocidad": 0.97,
+  "lang": "en-us"
+ },
+ "pausa": 0.5,
+ "intro_capitulo": "A privateer and the silver fleet",
+ "miniatura": {
+  "lineas": [
+   "HOW SPAIN",
+   "WENT BROKE"
+  ],
+  "colores": [
+   "white",
+   "warm"
+  ],
+  "chip": "9 DEFAULTS",
+  "emoji": "👑"
+ },
+ "descripcion": "It owned the richest silver mountain in the world, and still stopped paying its debts at least nine times between 1557 and 1666. Potosí and the mita, the piece of eight, the price revolution, Philip II's debts and the Great Armada, the expulsion of the Moriscos, the copper vellón cut in half by decree in 1628, and the end: Rocroi, Westphalia and the Pyrenees. Episode two of How Empires Fall. Images: public-domain and freely licensed works from Wikimedia Commons (credits on screen).",
+ "fuentes": [
+  "Cerro Rico de Potosí (descubierto en 1545), la mita y la Casa de la Moneda: https://en.wikipedia.org/wiki/Potos%C3%AD",
+  "Real de a ocho, moneda de circulación mundial: https://en.wikipedia.org/wiki/Spanish_dollar",
+  "Quinto real (20 %) y captura de la flota de la plata por Piet Hein en 1628: https://en.wikipedia.org/wiki/Spanish_Empire",
+  "Revolución de los precios: https://en.wikipedia.org/wiki/Price_revolution",
+  "Drelichman y Voth: deuda cercana al 60 % del PIB y suspensiones de pagos de 1557, 1560, 1575 y 1596 como crisis de liquidez: https://econ-papers.upf.edu/papers/1284.pdf",
+  "Álvarez-Nogal y Chamley, las suspensiones de pagos sobre los asientos: https://people.bu.edu/chamley/papers/CANCC140904.pdf",
+  "Gran Armada de 1588 (unos 140 barcos, c. 44 perdidos, 11.000–20.000 muertos): https://en.wikipedia.org/wiki/Spanish_Armada",
+  "Nueve suspensiones de pagos entre 1557 y 1666; Paz de los Pirineos: https://en.wikipedia.org/wiki/Spain_in_the_17th_century",
+  "Suspensiones de 1607, 1627, 1647, 1652, 1662 y 1666: https://mises.org/mises-wire/three-centuries-boom-bust-spain",
+  "Expulsión de los moriscos (1609–1614, unas 300.000 personas): https://en.wikipedia.org/wiki/Expulsion_of_the_Moriscos",
+  "Vellón, premio de la plata y reducción de 1628: https://en.wikipedia.org/wiki/Vell%C3%B3n",
+  "Batalla de Rocroi (1643): https://en.wikipedia.org/wiki/Battle_of_Rocroi",
+  "Paz de Westfalia / Paz de Münster (1648): https://en.wikipedia.org/wiki/Peace_of_M%C3%BCnster"
+ ],
+ "hashtags": [
+  "#spain",
+  "#history",
+  "#spanishempire",
+  "#economics",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "In sixteen twenty eight, off the coast of Cuba, a Dutch privateer named Piet Hein captured the fleet carrying America's silver to Spain. For the king's finances, it was a brutal blow.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Cuba, 1628",
+    "word": "THE SILVER, CAPTURED",
+    "sub": "by the privateer Piet Hein",
+    "sync": "captured",
+    "sub_sync": "fleet",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And it wasn't the first time the Crown ran out of money. The empire that owned the richest silver mountain on Earth stopped paying its debts at least nine times between fifteen fifty seven and sixteen sixty six.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "Crown debt suspensions",
+    "to": 9,
+    "suffix": "",
+    "label": "between 1557 and 1666",
+    "sync": "nine",
+    "note": "at least",
+    "note_sync": "least"
+   }
+  },
+  {
+   "texto": "How does an empire go broke when it was literally digging money out of the ground? This is the story.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Panorama Villa Imperial de Potosí en 1758 por Gaspar de Berrio.jpg",
+    "modo": "cover",
+    "titulo": "HOW THE SPANISH EMPIRE WENT BROKE",
+    "titulo_sync": "empire",
+    "sub": "silver · debt · war",
+    "sub_sync": "ground",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.5,
+     0.55
+    ]
+   }
+  },
+  {
+   "texto": "We'll tell it in five parts.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "THE STORY IN FIVE PARTS",
+    "items": [
+     {
+      "texto": "The silver mountain",
+      "sync": "tell"
+     },
+     {
+      "texto": "More silver, higher prices",
+      "sync": "five"
+     },
+     {
+      "texto": "The king who didn't pay",
+      "sync": "parts"
+     },
+     {
+      "texto": "The copper coin",
+      "sync": null
+     },
+     {
+      "texto": "The end",
+      "sync": null
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Chapter one. The silver mountain.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "The silver mountain",
+    "sub": "Potosí, 1545"
+   }
+  },
+  {
+   "texto": "In fifteen forty five, in what is now Bolivia, silver was found in a mountain more than four thousand meters high: the Cerro Rico of Potosí.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Cerro ricco.jpg",
+    "modo": "cover",
+    "titulo": "CERRO RICO, POTOSÍ",
+    "titulo_sync": "mountain",
+    "sub": "discovered in 1545",
+    "sub_sync": "four",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "At its foot grew one of the largest cities in the Americas. This is Potosí in seventeen fifty eight, in a painting by Gaspar de Berrio.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Panorama Villa Imperial de Potosí en 1758 por Gaspar de Berrio.jpg",
+    "modo": "cover",
+    "titulo": "POTOSÍ, 1758",
+    "titulo_sync": "this",
+    "sub": "painting by Gaspar de Berrio",
+    "sub_sync": "painting",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.4,
+     0.5
+    ],
+    "foco_fin": [
+     0.6,
+     0.5
+    ]
+   }
+  },
+  {
+   "texto": "But that silver didn't come out on its own. Thousands of indigenous people were forced to work the mines in shifts, under a system called the mita. Many died doing that work.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Historia de la conquista del Perú, 1851 \"Vista del cerro de Potosí\". (3971689798).jpg",
+    "modo": "tarjeta",
+    "pre": "the human cost",
+    "titulo": "THE MITA",
+    "titulo_sync": "mita",
+    "sub": "forced labor in shifts",
+    "sub_sync": "forced",
+    "color": "ice",
+    "claro": true
+   }
+  },
+  {
+   "texto": "That silver was minted into the piece of eight, a coin that circulated across Europe, the Americas and Asia. Many historians call it the first global currency.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Ocho reales.jpg",
+    "modo": "tarjeta",
+    "pre": "the coin",
+    "titulo": "PIECE OF EIGHT",
+    "titulo_sync": "piece",
+    "sub": "the first global currency",
+    "sub_sync": "global",
+    "color": "ice",
+    "claro": true
+   }
+  },
+  {
+   "texto": "And from every mine, the king took a cut: the royal fifth, twenty percent.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the royal fifth",
+    "word": "20%",
+    "sub": "of the silver, for the king",
+    "sync": "twenty",
+    "sub_sync": null,
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "It looked like the perfect business. But silver had a hidden problem.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "⚠️",
+    "texto": "the hidden problem",
+    "texto_sync": "problem",
+    "sync": "perfect"
+   }
+  },
+  {
+   "texto": "Chapter two. More silver, higher prices.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "More silver, higher prices",
+    "sub": "16th-century inflation"
+   }
+  },
+  {
+   "texto": "Think about it: if suddenly there's a lot more money, but the same amount of bread, shoes and houses, what happens? Prices go up.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "EASY MONEY",
+    "pasos": [
+     {
+      "texto": "MORE\nSILVER",
+      "sync": "money"
+     },
+     {
+      "texto": "SAME\nGOODS",
+      "sync": "same"
+     },
+     {
+      "texto": "PRICES\nRISE",
+      "sync": "up"
+     }
+    ],
+    "bucle": "and every coin buys less",
+    "bucle_sync": "prices"
+   }
+  },
+  {
+   "texto": "That's what happened in Spain and across Europe for more than a century. Prices rose about one to one and a half percent a year. Today that sounds small, but in an era when prices barely moved, it was a revolution. Historians call it the price revolution.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "inflation per year, for over a century",
+    "word": "1–1.5%",
+    "sub": "the price revolution",
+    "sync": "one",
+    "sub_sync": "revolution",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And the silver didn't stay in Spain. It went to pay armies in Flanders and Italy, and the bankers in Genoa and Augsburg who lent to the king.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "THE SILVER'S JOURNEY",
+    "pasos": [
+     {
+      "texto": "POTOSÍ",
+      "sync": "silver"
+     },
+     {
+      "texto": "SEVILLE",
+      "sync": "spain"
+     },
+     {
+      "texto": "ARMIES",
+      "sync": "armies"
+     },
+     {
+      "texto": "BANKERS",
+      "sync": "bankers"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Spain had the silver. But much of it ended up in other hands.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "ARRIVED IN",
+     "value": "SEVILLE",
+     "color": "ice",
+     "sync": "had"
+    },
+    "right": {
+     "label": "ENDED UP IN",
+     "value": "GENOA",
+     "color": "warm",
+     "sync": "hands"
+    },
+    "vs_text": "→"
+   }
+  },
+  {
+   "texto": "Chapter three. The king who didn't pay.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "The king who didn't pay",
+    "sub": "Philip II, 1556–1598"
+   }
+  },
+  {
+   "texto": "In fifteen fifty six, Charles the Fifth handed the throne to his son, Philip the Second. And along with the throne, he handed him something else: a mountain of debt.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Anthony van Dyck- Portrait of Charles V on Horseback.JPG",
+    "modo": "tarjeta",
+    "pre": "1556",
+    "titulo": "CHARLES V",
+    "titulo_sync": "charles",
+    "sub": "hands over the throne… and the debt",
+    "sub_sync": "debt",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Philip the Second ruled the largest empire in the world, and he ruled it almost always at war: against France, against the Ottomans, against the rebels in Flanders, and against England.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:King Philip II of Spain, by Sofonisba Anguissola (Museo del Prado, Madrid).jpg",
+    "modo": "tarjeta",
+    "pre": "1556–1598",
+    "titulo": "PHILIP II",
+    "titulo_sync": "philip",
+    "sub": "almost always at war",
+    "sub_sync": "war",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "To pay for it, he borrowed from bankers, mostly Genoese, with short term loans called asientos. And he promised to repay them with silver that would arrive from America.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "THE ASIENTOS",
+    "pasos": [
+     {
+      "texto": "BORROWS",
+      "sync": "borrowed"
+     },
+     {
+      "texto": "PROMISES\nSILVER",
+      "sync": "promised"
+     },
+     {
+      "texto": "SILVER\nARRIVES LATE",
+      "sync": "arrive"
+     },
+     {
+      "texto": "DOESN'T\nPAY",
+      "sync": null
+     }
+    ],
+    "bucle": "and borrows again",
+    "bucle_sync": "america"
+   }
+  },
+  {
+   "texto": "His debt reached about sixty percent of everything Castile produced in a year.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Crown debt vs. Castile's GDP",
+    "word": "≈60%",
+    "sub": "under Philip II",
+    "sync": "sixty",
+    "sub_sync": null,
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And four times he stopped paying his bankers: in fifteen fifty seven, fifteen sixty, fifteen seventy five and fifteen ninety six.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "FOUR PAYMENT STOPS",
+    "eventos": [
+     {
+      "fecha": "1557",
+      "texto": "the first, just\nafter taking the throne",
+      "sync": "fifty"
+     },
+     {
+      "fecha": "1560",
+      "texto": "again",
+      "sync": "sixty"
+     },
+     {
+      "fecha": "1575",
+      "texto": "crisis with\nthe bankers",
+      "sync": "seventy"
+     },
+     {
+      "fecha": "1596",
+      "texto": "Philip II's\nlast one",
+      "sync": "ninety"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Meanwhile, he was building El Escorial, a huge palace and monastery near Madrid.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Facade monastery San Lorenzo de El Escorial Spain.jpg",
+    "modo": "cover",
+    "titulo": "EL ESCORIAL",
+    "titulo_sync": "escorial",
+    "sub": "Philip II's palace and monastery",
+    "sub_sync": "palace",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "And in fifteen eighty eight he launched the Great Armada against England: around one hundred forty ships.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:English Ships and the Spanish Armada, August 1588 RMG BHC0262.jpg",
+    "modo": "cover",
+    "titulo": "THE GREAT ARMADA, 1588",
+    "titulo_sync": "armada",
+    "sub": "around 140 ships",
+    "sub_sync": "hundred",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "It was a disaster. Between battles and storms, around forty four ships were lost, and between eleven and twenty thousand men died.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:De Spaanse Armada voor de Engelse kust, SK-A-1629.jpg",
+    "modo": "cover",
+    "titulo": "≈44 SHIPS LOST",
+    "titulo_sync": "forty",
+    "sub": "11,000–20,000 dead",
+    "sub_sync": "died",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.45,
+     0.5
+    ],
+    "foco_fin": [
+     0.6,
+     0.5
+    ]
+   }
+  },
+  {
+   "texto": "Now, an important detail. Several economic historians now think those defaults didn't happen because Spain was ruined, but because of a liquidity problem: the money was coming, just late. The bankers knew it, and kept lending.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "IT WASN'T",
+     "value": "RUIN",
+     "color": "warm",
+     "sync": "ruined"
+    },
+    "right": {
+     "label": "IT WAS",
+     "value": "LIQUIDITY",
+     "color": "ice",
+     "sync": "liquidity"
+    },
+    "vs_text": "vs",
+    "note": "and the bankers kept lending",
+    "note_sync": "kept"
+   }
+  },
+  {
+   "texto": "The problem is that an empire living on loans against future silver depends on that silver continuing to arrive.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the real problem",
+    "word": "DEPENDENCE",
+    "sub": "on silver that hasn't arrived yet",
+    "sync": "depends",
+    "sub_sync": "future",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Chapter four. The copper coin.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "The copper coin",
+    "sub": "the vellón"
+   }
+  },
+  {
+   "texto": "Philip the Second died in fifteen ninety eight. His son, Philip the Third, inherited the wars, the debts, and in sixteen oh seven, another payment stop.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Philip III",
+    "word": "1607",
+    "sub": "another payment stop",
+    "sync": "seven",
+    "sub_sync": "another",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And between sixteen oh nine and sixteen fourteen he expelled the Moriscos, descendants of Muslims who had converted to Christianity: about three hundred thousand people.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Expulsió dels moriscos Vinaros 3.JPG",
+    "modo": "cover",
+    "titulo": "EXPULSION OF THE MORISCOS",
+    "titulo_sync": "expelled",
+    "sub": "≈300,000 people · 1609–1614",
+    "sub_sync": "three",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.5,
+     0.55
+    ]
+   }
+  },
+  {
+   "texto": "Many were farmers and craftsmen. In regions like Valencia, the hands that worked the land and paid taxes were suddenly gone.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🌾",
+    "texto": "fields with no one to work them",
+    "texto_sync": "land",
+    "sync": "farmers"
+   }
+  },
+  {
+   "texto": "And to pay the bills, the Crown found a shortcut: minting copper coins, the vellón, and stamping them with whatever value it wanted.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the shortcut",
+    "word": "VELLÓN",
+    "sub": "copper coins worth whatever the king said",
+    "sync": "vellón",
+    "sub_sync": "value",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "It's the same trick we saw in Rome: if there's no silver, you make more coins out of a cheap metal.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "THE SAME TRICK AS ROME",
+    "pasos": [
+     {
+      "texto": "LESS\nSILVER",
+      "sync": "silver"
+     },
+     {
+      "texto": "MORE\nCOPPER",
+      "sync": "metal"
+     },
+     {
+      "texto": "MORE\nCOINS",
+      "sync": "make"
+     },
+     {
+      "texto": "PRICES\nRISE",
+      "sync": "cheap"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But people aren't fools. By sixteen twenty eight, if you wanted to swap copper for silver, you had to pay eighty four percent more. The silver premium reached one point eight four.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "silver premium over copper, 1628",
+    "word": "+84%",
+    "sub": "nobody wanted the vellón",
+    "sync": "eighty",
+    "sub_sync": "premium",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "And that same year, the king cut the value of copper coins in half by decree. Overnight, anyone holding vellón lost half their money.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "1628, by decree",
+    "word": "÷ 2",
+    "sub": "copper is worth half",
+    "sync": "half",
+    "sub_sync": "lost",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "It was the same year Piet Hein captured the silver fleet. The year we started with.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "the same year",
+    "word": "1628",
+    "sub": "silver captured · copper cut in half",
+    "sync": "hein",
+    "sub_sync": "started",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Chapter five. The end.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "The end",
+    "sub": "Philip IV, 1621–1665"
+   }
+  },
+  {
+   "texto": "Philip the Fourth, the king painted by Velázquez, reigned for forty four years, almost all of them at war: the Thirty Years' War in Europe, against the Dutch, against France, and with rebellions in Catalonia and Portugal.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Diego Rodríguez Velázquez - Felipe IV Rey de España (Prado).jpg",
+    "modo": "tarjeta",
+    "pre": "1621–1665",
+    "titulo": "PHILIP IV",
+    "titulo_sync": "fourth",
+    "sub": "painted by Velázquez",
+    "sub_sync": "velázquez",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "And he stopped payments in sixteen twenty seven, sixteen forty seven, sixteen fifty two and sixteen sixty two.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "MORE PAYMENT STOPS",
+    "eventos": [
+     {
+      "fecha": "1627",
+      "texto": "war in\nEurope",
+      "sync": "seven"
+     },
+     {
+      "fecha": "1647",
+      "texto": "rebellions",
+      "sync": "forty"
+     },
+     {
+      "fecha": "1652",
+      "texto": "again",
+      "sync": "fifty"
+     },
+     {
+      "fecha": "1662",
+      "texto": "and again",
+      "sync": "sixty"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In sixteen forty three, at Rocroi, the Spanish tercios, for over a century the most feared infantry in Europe, suffered a crushing defeat against France.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Rocroi, 1643",
+    "word": "DEFEAT",
+    "sub": "the myth of the tercios falls",
+    "sync": "defeat",
+    "sub_sync": "tercios",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "In sixteen forty eight came the Peace of Westphalia, and with it, Spain recognized Dutch independence after eighty years of war.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Westfaelischer Friede in Muenster (Gerard Terborch 1648).jpg",
+    "modo": "cover",
+    "titulo": "PEACE OF WESTPHALIA, 1648",
+    "titulo_sync": "westphalia",
+    "sub": "Spain recognizes the Dutch Republic",
+    "sub_sync": "independence",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "And in sixteen fifty nine, with the Peace of the Pyrenees, France took Spain's place as Europe's great power.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Peace of the Pyrenees",
+    "word": "1659",
+    "sub": "France takes the lead",
+    "sync": "nine",
+    "sub_sync": "france",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "The empire lasted a long time after that, especially in the Americas. But its era of dominance in Europe was over.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "FROM SILVER TO BANKRUPTCY",
+    "eventos": [
+     {
+      "fecha": "1545",
+      "texto": "Potosí",
+      "sync": "empire"
+     },
+     {
+      "fecha": "1588",
+      "texto": "the Armada",
+      "sync": "long"
+     },
+     {
+      "fecha": "1628",
+      "texto": "copper cut\nin half",
+      "sync": "americas"
+     },
+     {
+      "fecha": "1648",
+      "texto": "Westphalia",
+      "sync": "era"
+     },
+     {
+      "fecha": "1659",
+      "texto": "Pyrenees",
+      "sync": "over"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "See the pattern? It's the same as Rome. One: spend far more on wars than comes in. Two: plug the hole with debt. And three: when that's not enough, mess with the money.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "THE SAME PATTERN AS ROME",
+    "items": [
+     {
+      "texto": "Wars that cost more than comes in",
+      "sync": "spend"
+     },
+     {
+      "texto": "Plug the hole with debt",
+      "sync": "plug"
+     },
+     {
+      "texto": "When it's not enough: mess with the money",
+      "sync": "mess"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And Spain leaves an even stranger lesson: having silver is not the same as being rich. A country's wealth is in what it produces, not in the metal it digs out of the ground.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "IT'S NOT",
+     "value": "HAVING SILVER",
+     "color": "warm",
+     "sync": "having"
+    },
+    "right": {
+     "label": "IT'S",
+     "value": "PRODUCING",
+     "color": "ice",
+     "sync": "produces"
+    },
+    "vs_text": "vs",
+    "note": "a country's wealth",
+    "note_sync": "wealth"
+   }
+  },
+  {
+   "texto": "That was episode two of How Empires Fall. Comment which empire you want next, and subscribe so you don't miss it.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "WHICH EMPIRE",
+     "IS NEXT?"
+    ],
+    "colors": [
+     "white",
+     "warm"
+    ],
+    "syncs": [
+     "episode",
+     "empire"
+    ],
+    "button": "SUBSCRIBE",
+    "button_sync": "subscribe"
+   }
+  }
+ ]
+}

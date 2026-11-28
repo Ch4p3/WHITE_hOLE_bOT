@@ -1,0 +1,801 @@
+{
+ "titulo": "Cómo quebró el Imperio español: la plata que no alcanzó",
+ "idioma": "es",
+ "kokoro": {
+  "voz": "em_santa",
+  "velocidad": 0.97,
+  "lang": "es"
+ },
+ "pausa": 0.5,
+ "intro_capitulo": "Un corsario y la flota de la plata",
+ "miniatura": {
+  "lineas": [
+   "CÓMO QUEBRÓ",
+   "ESPAÑA"
+  ],
+  "colores": [
+   "white",
+   "warm"
+  ],
+  "chip": "9 QUIEBRAS",
+  "emoji": "👑"
+ },
+ "descripcion": "Tenía la montaña de plata más rica del mundo y aun así suspendió pagos al menos nueve veces entre 1557 y 1666. Potosí y la mita, el real de a ocho, la revolución de los precios, las deudas de Felipe II y la Gran Armada, la expulsión de los moriscos, el vellón de cobre que en 1628 perdió la mitad de su valor por decreto, y el final: Rocroi, Westfalia y los Pirineos. Segundo episodio de la serie Cómo caen los imperios. Imágenes: obras de dominio público y licencias libres de Wikimedia Commons (créditos en pantalla).",
+ "fuentes": [
+  "Cerro Rico de Potosí (descubierto en 1545), la mita y la Casa de la Moneda: https://en.wikipedia.org/wiki/Potos%C3%AD",
+  "Real de a ocho, moneda de circulación mundial: https://en.wikipedia.org/wiki/Spanish_dollar",
+  "Quinto real (20 %) y captura de la flota de la plata por Piet Hein en 1628: https://en.wikipedia.org/wiki/Spanish_Empire",
+  "Revolución de los precios: https://en.wikipedia.org/wiki/Price_revolution",
+  "Drelichman y Voth: deuda cercana al 60 % del PIB y suspensiones de pagos de 1557, 1560, 1575 y 1596 como crisis de liquidez: https://econ-papers.upf.edu/papers/1284.pdf",
+  "Álvarez-Nogal y Chamley, las suspensiones de pagos sobre los asientos: https://people.bu.edu/chamley/papers/CANCC140904.pdf",
+  "Gran Armada de 1588 (unos 140 barcos, c. 44 perdidos, 11.000–20.000 muertos): https://en.wikipedia.org/wiki/Spanish_Armada",
+  "Nueve suspensiones de pagos entre 1557 y 1666; Paz de los Pirineos: https://en.wikipedia.org/wiki/Spain_in_the_17th_century",
+  "Suspensiones de 1607, 1627, 1647, 1652, 1662 y 1666: https://mises.org/mises-wire/three-centuries-boom-bust-spain",
+  "Expulsión de los moriscos (1609–1614, unas 300.000 personas): https://en.wikipedia.org/wiki/Expulsion_of_the_Moriscos",
+  "Vellón, premio de la plata y reducción de 1628: https://en.wikipedia.org/wiki/Vell%C3%B3n",
+  "Batalla de Rocroi (1643): https://en.wikipedia.org/wiki/Battle_of_Rocroi",
+  "Paz de Westfalia / Paz de Münster (1648): https://en.wikipedia.org/wiki/Peace_of_M%C3%BCnster"
+ ],
+ "hashtags": [
+  "#españa",
+  "#historia",
+  "#imperioespañol",
+  "#economía",
+  "#WhiteHole"
+ ],
+ "escenas": [
+  {
+   "texto": "En mil seiscientos veintiocho, frente a Cuba, un corsario holandés llamado Piet Hein capturó la flota que llevaba la plata de América a España. Para las cuentas del rey fue un golpe brutal.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Cuba, 1628",
+    "word": "LA PLATA, CAPTURADA",
+    "sub": "por el corsario Piet Hein",
+    "sync": "capturó",
+    "sub_sync": "flota",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y no era la primera vez que la Corona se quedaba sin dinero. El imperio que tenía la montaña de plata más rica del mundo suspendió pagos al menos nueve veces entre mil quinientos cincuenta y siete y mil seiscientos sesenta y seis.",
+   "visual": {
+    "tipo": "counter",
+    "pre": "suspensiones de pagos de la Corona",
+    "to": 9,
+    "suffix": "",
+    "label": "entre 1557 y 1666",
+    "sync": "nueve",
+    "note": "al menos",
+    "note_sync": "menos"
+   }
+  },
+  {
+   "texto": "¿Cómo quiebra un imperio que, literalmente, sacaba el dinero de la tierra? Esta es la historia.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Panorama Villa Imperial de Potosí en 1758 por Gaspar de Berrio.jpg",
+    "modo": "cover",
+    "titulo": "CÓMO QUEBRÓ EL IMPERIO ESPAÑOL",
+    "titulo_sync": "imperio",
+    "sub": "plata · deuda · guerra",
+    "sub_sync": "tierra",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.5,
+     0.55
+    ]
+   }
+  },
+  {
+   "texto": "La vamos a contar en cinco partes.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "LA HISTORIA EN CINCO PARTES",
+    "items": [
+     {
+      "texto": "La montaña de plata",
+      "sync": "vamos"
+     },
+     {
+      "texto": "Más plata, más precios",
+      "sync": "contar"
+     },
+     {
+      "texto": "El rey que no pagaba",
+      "sync": "cinco"
+     },
+     {
+      "texto": "La moneda de cobre",
+      "sync": "partes"
+     },
+     {
+      "texto": "El final",
+      "sync": null
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Capítulo uno. La montaña de plata.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 1,
+    "titulo": "La montaña de plata",
+    "sub": "Potosí, 1545"
+   }
+  },
+  {
+   "texto": "En mil quinientos cuarenta y cinco, en lo que hoy es Bolivia, se descubrió plata en un cerro a más de cuatro mil metros de altura: el Cerro Rico de Potosí.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Cerro ricco.jpg",
+    "modo": "cover",
+    "titulo": "CERRO RICO DE POTOSÍ",
+    "titulo_sync": "cerro",
+    "sub": "descubierto en 1545",
+    "sub_sync": "cuatro",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "A sus pies creció una de las ciudades más grandes de América. Así se veía Potosí en mil setecientos cincuenta y ocho, en una pintura de Gaspar de Berrio.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Panorama Villa Imperial de Potosí en 1758 por Gaspar de Berrio.jpg",
+    "modo": "cover",
+    "titulo": "POTOSÍ, 1758",
+    "titulo_sync": "así",
+    "sub": "pintura de Gaspar de Berrio",
+    "sub_sync": "pintura",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.4,
+     0.5
+    ],
+    "foco_fin": [
+     0.6,
+     0.5
+    ]
+   }
+  },
+  {
+   "texto": "Pero esa plata no salía sola. La sacaban miles de indígenas obligados a trabajar por turnos en las minas, en un sistema llamado la mita. Muchos murieron en ese trabajo.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Historia de la conquista del Perú, 1851 \"Vista del cerro de Potosí\". (3971689798).jpg",
+    "modo": "tarjeta",
+    "pre": "el costo humano",
+    "titulo": "LA MITA",
+    "titulo_sync": "mita",
+    "sub": "trabajo forzado por turnos",
+    "sub_sync": "obligados",
+    "color": "ice",
+    "claro": true
+   }
+  },
+  {
+   "texto": "Con esa plata se acuñaba el real de a ocho, una moneda que circuló por Europa, América y Asia. Para muchos historiadores, fue la primera moneda global.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Ocho reales.jpg",
+    "modo": "tarjeta",
+    "pre": "la moneda",
+    "titulo": "REAL DE A OCHO",
+    "titulo_sync": "real",
+    "sub": "la primera moneda global",
+    "sub_sync": "global",
+    "color": "ice",
+    "claro": true
+   }
+  },
+  {
+   "texto": "Y de cada mina, el rey se quedaba con una parte: el quinto real, el veinte por ciento.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el quinto real",
+    "word": "20 %",
+    "sub": "de la plata, para el rey",
+    "sync": "veinte",
+    "sub_sync": null,
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Parecía el negocio perfecto. Pero la plata tenía un problema escondido.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "⚠️",
+    "texto": "el problema escondido",
+    "texto_sync": "problema",
+    "sync": "perfecto"
+   }
+  },
+  {
+   "texto": "Capítulo dos. Más plata, más precios.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 2,
+    "titulo": "Más plata, más precios",
+    "sub": "la inflación del siglo XVI"
+   }
+  },
+  {
+   "texto": "Piénsalo así: si de repente hay mucho más dinero, pero la misma cantidad de pan, de zapatos y de casas, ¿qué pasa? Los precios suben.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "DINERO FÁCIL",
+    "pasos": [
+     {
+      "texto": "MÁS\nPLATA",
+      "sync": "dinero"
+     },
+     {
+      "texto": "MISMOS\nPRODUCTOS",
+      "sync": "misma"
+     },
+     {
+      "texto": "PRECIOS\nSUBEN",
+      "sync": "suben"
+     }
+    ],
+    "bucle": "y cada moneda compra menos",
+    "bucle_sync": "precios"
+   }
+  },
+  {
+   "texto": "Eso pasó en España y en toda Europa durante más de un siglo. Los precios subieron cerca de uno o uno y medio por ciento cada año. Hoy suena a poco, pero en una época en que los precios casi no cambiaban, fue una revolución. Los historiadores la llaman la revolución de los precios.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "inflación por año, durante más de un siglo",
+    "word": "1–1,5 %",
+    "sub": "la revolución de los precios",
+    "sync": "uno",
+    "sub_sync": "revolución",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y la plata no se quedaba en España. Se iba a pagar ejércitos en Flandes y en Italia, y a los banqueros de Génova y de Augsburgo que le prestaban al rey.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "EL VIAJE DE LA PLATA",
+    "pasos": [
+     {
+      "texto": "POTOSÍ",
+      "sync": "plata"
+     },
+     {
+      "texto": "SEVILLA",
+      "sync": "españa"
+     },
+     {
+      "texto": "EJÉRCITOS",
+      "sync": "ejércitos"
+     },
+     {
+      "texto": "BANQUEROS",
+      "sync": "banqueros"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "España tenía la plata. Pero buena parte terminaba en otras manos.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "LLEGABA A",
+     "value": "SEVILLA",
+     "color": "ice",
+     "sync": "tenía"
+    },
+    "right": {
+     "label": "TERMINABA EN",
+     "value": "GÉNOVA",
+     "color": "warm",
+     "sync": "manos"
+    },
+    "vs_text": "→"
+   }
+  },
+  {
+   "texto": "Capítulo tres. El rey que no pagaba.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 3,
+    "titulo": "El rey que no pagaba",
+    "sub": "Felipe II, 1556–1598"
+   }
+  },
+  {
+   "texto": "En mil quinientos cincuenta y seis, Carlos Quinto le deja el trono a su hijo, Felipe Segundo. Y con el trono le deja algo más: una montaña de deudas.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Anthony van Dyck- Portrait of Charles V on Horseback.JPG",
+    "modo": "tarjeta",
+    "pre": "1556",
+    "titulo": "CARLOS V",
+    "titulo_sync": "carlos",
+    "sub": "deja el trono… y las deudas",
+    "sub_sync": "deudas",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Felipe Segundo gobernaba el imperio más grande del mundo, y lo gobernaba casi siempre en guerra: contra Francia, contra los turcos, contra los rebeldes de Flandes y contra Inglaterra.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:King Philip II of Spain, by Sofonisba Anguissola (Museo del Prado, Madrid).jpg",
+    "modo": "tarjeta",
+    "pre": "1556–1598",
+    "titulo": "FELIPE II",
+    "titulo_sync": "felipe",
+    "sub": "casi siempre en guerra",
+    "sub_sync": "guerra",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Para pagar, pedía prestado a banqueros, sobre todo genoveses, con préstamos a corto plazo llamados asientos. Y prometía pagarlos con la plata que vendría de América.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "LOS ASIENTOS",
+    "pasos": [
+     {
+      "texto": "PIDE\nPRESTADO",
+      "sync": "prestado"
+     },
+     {
+      "texto": "PROMETE\nPLATA",
+      "sync": "prometía"
+     },
+     {
+      "texto": "LA PLATA\nLLEGA TARDE",
+      "sync": "vendría"
+     },
+     {
+      "texto": "NO\nPAGA",
+      "sync": null
+     }
+    ],
+    "bucle": "y vuelve a pedir",
+    "bucle_sync": "américa"
+   }
+  },
+  {
+   "texto": "Llegó a deber cerca del sesenta por ciento de todo lo que producía Castilla en un año.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "deuda de la Corona frente al PIB de Castilla",
+    "word": "≈60 %",
+    "sub": "con Felipe II",
+    "sync": "sesenta",
+    "sub_sync": null,
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y cuatro veces dejó de pagarles a sus banqueros: en mil quinientos cincuenta y siete, en mil quinientos sesenta, en mil quinientos setenta y cinco y en mil quinientos noventa y seis.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "CUATRO SUSPENSIONES DE PAGOS",
+    "eventos": [
+     {
+      "fecha": "1557",
+      "texto": "primera, recién\nllegado al trono",
+      "sync": "cincuenta"
+     },
+     {
+      "fecha": "1560",
+      "texto": "otra vez",
+      "sync": "sesenta"
+     },
+     {
+      "fecha": "1575",
+      "texto": "crisis con los\nbanqueros",
+      "sync": "setenta"
+     },
+     {
+      "fecha": "1596",
+      "texto": "la última de\nFelipe II",
+      "sync": "noventa"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mientras tanto, levantaba El Escorial, un enorme palacio y monasterio cerca de Madrid.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Facade monastery San Lorenzo de El Escorial Spain.jpg",
+    "modo": "cover",
+    "titulo": "EL ESCORIAL",
+    "titulo_sync": "escorial",
+    "sub": "palacio y monasterio de Felipe II",
+    "sub_sync": "palacio",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "Y en mil quinientos ochenta y ocho lanzó la Gran Armada contra Inglaterra: unos ciento cuarenta barcos.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:English Ships and the Spanish Armada, August 1588 RMG BHC0262.jpg",
+    "modo": "cover",
+    "titulo": "LA GRAN ARMADA, 1588",
+    "titulo_sync": "armada",
+    "sub": "unos 140 barcos",
+    "sub_sync": "ciento",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "Fue un desastre. Entre combates y tormentas se perdieron alrededor de cuarenta y cuatro barcos, y murieron entre once mil y veinte mil hombres.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:De Spaanse Armada voor de Engelse kust, SK-A-1629.jpg",
+    "modo": "cover",
+    "titulo": "≈44 BARCOS PERDIDOS",
+    "titulo_sync": "cuarenta",
+    "sub": "entre 11.000 y 20.000 muertos",
+    "sub_sync": "murieron",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.45,
+     0.5
+    ],
+    "foco_fin": [
+     0.6,
+     0.5
+    ]
+   }
+  },
+  {
+   "texto": "Ahora, un detalle importante. Hoy varios historiadores económicos creen que esas quiebras no eran porque España estuviera en la ruina, sino por falta de liquidez: el dinero llegaba, pero tarde. Los banqueros lo sabían, y le seguían prestando.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "NO ERA",
+     "value": "RUINA",
+     "color": "warm",
+     "sync": "ruina"
+    },
+    "right": {
+     "label": "ERA",
+     "value": "LIQUIDEZ",
+     "color": "ice",
+     "sync": "liquidez"
+    },
+    "vs_text": "vs",
+    "note": "y los banqueros seguían prestando",
+    "note_sync": "seguían"
+   }
+  },
+  {
+   "texto": "El problema es que un imperio que vive de pedir prestado contra la plata del futuro depende de que esa plata siga llegando.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el verdadero problema",
+    "word": "DEPENDENCIA",
+    "sub": "de una plata que todavía no llega",
+    "sync": "depende",
+    "sub_sync": "futuro",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Capítulo cuatro. La moneda de cobre.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 4,
+    "titulo": "La moneda de cobre",
+    "sub": "el vellón"
+   }
+  },
+  {
+   "texto": "Felipe Segundo murió en mil quinientos noventa y ocho. Su hijo, Felipe Tercero, heredó las guerras, las deudas, y en mil seiscientos siete, otra suspensión de pagos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Felipe III",
+    "word": "1607",
+    "sub": "otra suspensión de pagos",
+    "sync": "siete",
+    "sub_sync": "suspensión",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y entre mil seiscientos nueve y mil seiscientos catorce expulsó a los moriscos, descendientes de musulmanes convertidos al cristianismo: cerca de trescientas mil personas.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Expulsió dels moriscos Vinaros 3.JPG",
+    "modo": "cover",
+    "titulo": "EXPULSIÓN DE LOS MORISCOS",
+    "titulo_sync": "expulsó",
+    "sub": "≈300.000 personas · 1609–1614",
+    "sub_sync": "trescientas",
+    "color": "white",
+    "brillo": 0.85,
+    "foco": [
+     0.5,
+     0.55
+    ]
+   }
+  },
+  {
+   "texto": "Muchos eran campesinos y artesanos. En regiones como Valencia se perdieron de golpe manos que trabajaban la tierra y pagaban impuestos.",
+   "visual": {
+    "tipo": "emoji",
+    "emoji": "🌾",
+    "texto": "campos sin quien los trabaje",
+    "texto_sync": "tierra",
+    "sync": "campesinos"
+   }
+  },
+  {
+   "texto": "Y para pagar las cuentas, la Corona encontró un atajo: acuñar monedas de cobre, el vellón, y ponerles el valor que quisiera.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el atajo",
+    "word": "VELLÓN",
+    "sub": "monedas de cobre con el valor que dijera el rey",
+    "sync": "vellón",
+    "sub_sync": "valor",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Es el mismo truco que vimos en Roma: si no hay plata, se fabrican más monedas con un metal barato.",
+   "visual": {
+    "tipo": "flujo",
+    "titulo": "EL MISMO TRUCO DE ROMA",
+    "pasos": [
+     {
+      "texto": "MENOS\nPLATA",
+      "sync": "plata"
+     },
+     {
+      "texto": "MÁS\nCOBRE",
+      "sync": "metal"
+     },
+     {
+      "texto": "MÁS\nMONEDAS",
+      "sync": "fabrican"
+     },
+     {
+      "texto": "PRECIOS\nSUBEN",
+      "sync": "barato"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero la gente no es tonta. Para mil seiscientos veintiocho, si querías cambiar cobre por plata, te pedían ochenta y cuatro por ciento más. El premio de la plata llegó a uno coma ocho cuatro.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "premio de la plata sobre el cobre, 1628",
+    "word": "+84 %",
+    "sub": "nadie quería el vellón",
+    "sync": "ochenta",
+    "sub_sync": "premio",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Y ese mismo año, el rey bajó por decreto a la mitad el valor de las monedas de cobre. De un día para otro, quien tenía vellón perdió la mitad de su dinero.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "1628, por decreto",
+    "word": "÷ 2",
+    "sub": "el cobre vale la mitad",
+    "sync": "mitad",
+    "sub_sync": "perdió",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "Fue el mismo año en que Piet Hein capturó la flota de la plata. El año con el que empezamos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el mismo año",
+    "word": "1628",
+    "sub": "la plata capturada · el cobre a la mitad",
+    "sync": "hein",
+    "sub_sync": "empezamos",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Capítulo cinco. El final.",
+   "visual": {
+    "tipo": "capitulo",
+    "num": 5,
+    "titulo": "El final",
+    "sub": "Felipe IV, 1621–1665"
+   }
+  },
+  {
+   "texto": "Felipe Cuarto, el rey que pintó Velázquez, reinó cuarenta y cuatro años, casi todos en guerra: la de los Treinta Años en Europa, contra Holanda, contra Francia, y con rebeliones en Cataluña y en Portugal.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Diego Rodríguez Velázquez - Felipe IV Rey de España (Prado).jpg",
+    "modo": "tarjeta",
+    "pre": "1621–1665",
+    "titulo": "FELIPE IV",
+    "titulo_sync": "cuarto",
+    "sub": "pintado por Velázquez",
+    "sub_sync": "velázquez",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "Y suspendió pagos en mil seiscientos veintisiete, mil seiscientos cuarenta y siete, mil seiscientos cincuenta y dos y mil seiscientos sesenta y dos.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "MÁS SUSPENSIONES DE PAGOS",
+    "eventos": [
+     {
+      "fecha": "1627",
+      "texto": "guerra en\nEuropa",
+      "sync": "veintisiete"
+     },
+     {
+      "fecha": "1647",
+      "texto": "rebeliones",
+      "sync": "cuarenta"
+     },
+     {
+      "fecha": "1652",
+      "texto": "otra vez",
+      "sync": "cincuenta"
+     },
+     {
+      "fecha": "1662",
+      "texto": "y otra",
+      "sync": "sesenta"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En mil seiscientos cuarenta y tres, en Rocroi, los tercios españoles, que llevaban más de un siglo como la infantería más temida de Europa, sufrieron una derrota durísima contra Francia.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Rocroi, 1643",
+    "word": "DERROTA",
+    "sub": "cae el mito de los tercios",
+    "sync": "derrota",
+    "sub_sync": "tercios",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "En mil seiscientos cuarenta y ocho llega la Paz de Westfalia, y con ella, España reconoce la independencia de Holanda después de ochenta años de guerra.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Westfaelischer Friede in Muenster (Gerard Terborch 1648).jpg",
+    "modo": "cover",
+    "titulo": "PAZ DE WESTFALIA, 1648",
+    "titulo_sync": "westfalia",
+    "sub": "España reconoce a Holanda",
+    "sub_sync": "independencia",
+    "color": "white",
+    "brillo": 0.85
+   }
+  },
+  {
+   "texto": "Y en mil seiscientos cincuenta y nueve, con la Paz de los Pirineos, Francia toma el lugar de España como la gran potencia de Europa.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Paz de los Pirineos",
+    "word": "1659",
+    "sub": "Francia pasa al frente",
+    "sync": "nueve",
+    "sub_sync": "francia",
+    "color": "ice"
+   }
+  },
+  {
+   "texto": "El imperio siguió existiendo mucho tiempo, sobre todo en América. Pero su época de dominio en Europa había terminado.",
+   "visual": {
+    "tipo": "linea",
+    "titulo": "DE LA PLATA A LA QUIEBRA",
+    "eventos": [
+     {
+      "fecha": "1545",
+      "texto": "Potosí",
+      "sync": "imperio"
+     },
+     {
+      "fecha": "1588",
+      "texto": "la Armada",
+      "sync": "tiempo"
+     },
+     {
+      "fecha": "1628",
+      "texto": "cobre a la\nmitad",
+      "sync": "américa"
+     },
+     {
+      "fecha": "1648",
+      "texto": "Westfalia",
+      "sync": "época"
+     },
+     {
+      "fecha": "1659",
+      "texto": "Pirineos",
+      "sync": "terminado"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "¿Ves el patrón? Es el mismo de Roma. Uno: gastar en guerras mucho más de lo que entra. Dos: tapar el hueco con deuda. Y tres: cuando ya no alcanza, tocar la moneda.",
+   "visual": {
+    "tipo": "lista",
+    "titulo": "EL MISMO PATRÓN DE ROMA",
+    "items": [
+     {
+      "texto": "Guerras que cuestan más de lo que entra",
+      "sync": "gastar"
+     },
+     {
+      "texto": "El hueco se tapa con deuda",
+      "sync": "tapar"
+     },
+     {
+      "texto": "Cuando no alcanza: tocar la moneda",
+      "sync": "tocar"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y España deja una lección todavía más rara: tener plata no es lo mismo que ser rico. La riqueza de un país está en lo que produce, no en el metal que saca de la tierra.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "NO ES",
+     "value": "TENER PLATA",
+     "color": "warm",
+     "sync": "tener"
+    },
+    "right": {
+     "label": "ES",
+     "value": "PRODUCIR",
+     "color": "ice",
+     "sync": "produce"
+    },
+    "vs_text": "vs",
+    "note": "la riqueza de un país",
+    "note_sync": "riqueza"
+   }
+  },
+  {
+   "texto": "Este fue el segundo episodio de Cómo caen los imperios. Comenta qué imperio quieres en el próximo, y suscríbete para no perdértelo.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "¿QUÉ IMPERIO",
+     "SIGUE?"
+    ],
+    "colors": [
+     "white",
+     "warm"
+    ],
+    "syncs": [
+     "episodio",
+     "imperio"
+    ],
+    "button": "SUSCRÍBETE",
+    "button_sync": "suscríbete"
+   }
+  }
+ ]
+}

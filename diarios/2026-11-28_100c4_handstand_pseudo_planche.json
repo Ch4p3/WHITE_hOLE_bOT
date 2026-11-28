@@ -1,0 +1,178 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "af_heart",
+  "lang": "en-us",
+  "velocidad": 0.98
+ },
+ "serie": "Handstand",
+ "titulo": "Want to do a handstand? Start with this push-up 🤸 (part 1)",
+ "descripcion": "Pseudo planche push-up: start with your hands under your shoulders and, week by week, move them back toward your hips. Your body leans forward and your shoulders carry more load: it builds shoulders, triceps and core, the base for holding a handstand. Give your wrists 2 to 4 weeks to adapt before leaning far (use fists or handles if they hurt). If you have an injury, check with a professional first. Part 1 of the \"Handstand\" series 👇",
+ "hashtags": "#handstand #calisthenics #pushups #homeworkout #fitness #shorts",
+ "fuentes": [
+  "https://gymnasticbodies.com/?p=189279",
+  "https://www.strongfirst.com/community/threads/mechanical-advantage-accommodating-resistance-for-calisthenics-pressing-skills.29265/latest",
+  "https://getfitcraft.com/exercises/pseudo-planche-push-up"
+ ],
+ "escenas": [
+  {
+   "texto": "Want to do a handstand? Start here: a push-up almost nobody does right.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 0.6,
+    "ritmo": 1.6,
+    "colchoneta": true,
+    "pastilla": "PART 1",
+    "titulo": "HANDSTAND",
+    "sub": "start with this push-up",
+    "sub_sync": "push",
+    "brillo": [
+     "hombros"
+    ],
+    "brillo_sync": "start"
+   }
+  },
+  {
+   "texto": "It's called the pseudo planche push-up. Start normal: fists on the floor, under your shoulders.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 0,
+    "ritmo": 1.7,
+    "colchoneta": true,
+    "pastilla": "LEVEL 1",
+    "titulo": "PSEUDO PLANCHE PUSH-UP",
+    "titulo_size": 80,
+    "sub": "hands under shoulders",
+    "sub_sync": "shoulders"
+   }
+  },
+  {
+   "texto": "Every week, move your hands back a little. To stay balanced you lean forward, and your shoulders carry more weight.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 0.5,
+    "ritmo": 1.9,
+    "colchoneta": true,
+    "pastilla": "LEVEL 2",
+    "titulo": "HANDS A BIT BACK",
+    "sub": "your body leans forward",
+    "sub_sync": "lean",
+    "brillo": [
+     "hombros",
+     "brazos"
+    ],
+    "brillo_sync": "shoulders"
+   }
+  },
+  {
+   "texto": "Eventually your hands end up almost at your hips. That's way harder than a regular push-up.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "flexion",
+    "manos_atras": 1.0,
+    "ritmo": 2.2,
+    "colchoneta": true,
+    "pastilla": "LEVEL 3",
+    "titulo": "HANDS BY THE HIPS",
+    "sub": "way harder",
+    "sub_sync": "harder",
+    "brillo": [
+     "hombros",
+     "brazos",
+     "abdomen"
+    ],
+    "brillo_sync": "hips"
+   }
+  },
+  {
+   "texto": "Why it works: it builds shoulders, triceps and core, exactly what you need to hold yourself upside down.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "musculo",
+    "titulo": "SHOULDERS · TRICEPS · CORE",
+    "titulo_size": 72,
+    "sub": "the base for a handstand",
+    "sub_sync": "upside",
+    "brillo": [
+     "hombros",
+     "brazos",
+     "abdomen"
+    ],
+    "brillo_sync": "builds"
+   }
+  },
+  {
+   "texto": "Careful with your wrists. Experts suggest giving them two to four weeks to adapt before leaning far. If they hurt, use fists or handles.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "HEADS UP",
+    "titulo": "PROTECT YOUR WRISTS",
+    "items": [
+     {
+      "texto": "Adapt them for 2–4 weeks",
+      "emoji": "⏳",
+      "sync": "adapt"
+     },
+     {
+      "texto": "Fists or handles",
+      "emoji": "✊",
+      "sync": "fists"
+     },
+     {
+      "texto": "Pain? Go back a level",
+      "emoji": "↩️",
+      "sync": "hurt"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Your takeaway: three sets of eight. When they feel clean, move your hands back a little more. Save it.",
+   "visual": {
+    "tipo": "lista",
+    "pastilla": "YOUR TAKEAWAY",
+    "titulo": "YOUR PLAN",
+    "items": [
+     {
+      "texto": "3 sets of 8",
+      "emoji": "💪",
+      "sync": "three"
+     },
+     {
+      "texto": "Clean reps? Hands further back",
+      "emoji": "↘️",
+      "sync": "move"
+     },
+     {
+      "texto": "2–3 times a week",
+      "emoji": "🔁",
+      "sync": "save"
+     }
+    ],
+    "boton": "SAVE IT",
+    "boton_sync": "save"
+   }
+  },
+  {
+   "texto": "This is part one of the handstand series. Can you do a regular push-up yet? Comment YES or NOT YET.",
+   "visual": {
+    "tipo": "monito",
+    "personaje": "monita",
+    "pose": "saludo",
+    "escala": 0.9,
+    "titulo": "YES OR NOT YET?",
+    "boton": "COMMENT",
+    "boton_sync": "comment"
+   }
+  }
+ ]
+}

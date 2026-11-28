@@ -33,18 +33,21 @@ jobs:
               for it in json.loads(os.environ["LISTA"]):
                   pg = b.new_page(viewport={"width": it.get("ancho", 1200), "height": it.get("alto", 900)}, device_scale_factor=2,
                                   locale="en-US", color_scheme=it.get("tema", "light"))
-                  pg.goto(it["url"], wait_until="networkidle", timeout=60000)
-                  pg.wait_for_timeout(it.get("espera", 1500))
-                  out = f"assets/capturas/{it['nombre']}.png"
-                  if it.get("selector"):
-                      pg.locator(it["selector"]).first.screenshot(path=out)
-                  else:
-                      pg.screenshot(path=out)
-                  print("OK", it["nombre"], it["url"])
+                  try:
+                      pg.goto(it["url"], wait_until=it.get("esperar", "domcontentloaded"), timeout=60000)
+                      pg.wait_for_timeout(it.get("espera", 3000))
+                      out = f"assets/capturas/{it['nombre']}.png"
+                      if it.get("selector"):
+                          pg.locator(it["selector"]).first.screenshot(path=out)
+                      else:
+                          pg.screenshot(path=out, full_page=it.get("completa", False))
+                      print("OK", it["nombre"], it["url"])
+                  except Exception as e:
+                      print("FALLO", it["nombre"], e)
               b.close()
           PY
       - name: Guardar
         run: |
           git config user.name "white-hole-bot"
           git config user.email "white-hole-bot@users.noreply.github.com"
-          git add assets/capturas && git commit -qm "Capturas de fuentes" && git pull -q --rebase origin main && git push -q
+          git add assets/capturas && (git diff --cached --quiet || git commit -qm "Capturas de fuentes") && git pull -q --rebase origin main && git push -q

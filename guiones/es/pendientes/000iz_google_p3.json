@@ -1,0 +1,231 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Las 7 magníficas por dentro",
+ "titulo": "Google por dentro (3/3): ¿va ganando la IA? ¿Está cara su acción? 🏆",
+ "descripcion": "Las 7 magníficas por dentro · Google, parte 3 de 3: ¿va ganando la carrera de la IA? Contenido educativo, no es recomendación de inversión.\n\n🧪 Artificial Analysis (27 nov 2026): 1) Claude Fable 5.2 65 · 2) GPT-6.2 Astra 62 · 3) Gemini 4 Neon 62 · 4) Gemini 4 Carbon 60 · 5) Claude Opus 5.5 59\n🗳️ LMArena (18 nov 2026, 9,2 M votos): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518\n⚙️ ~32.000 M tokens por minuto en sus APIs (4× en un año)\n🏗️ Capex jul–sep 2026: $51.400 M\n💲 PER 12 meses ~14 (incluye ganancias por inversiones) · PER esperado ~18 (Yahoo Finance, 27 nov)",
+ "hashtags": "#google #alphabet #gemini #inteligenciaartificial #bolsa #WhiteHole #reels",
+ "fuentes": [
+  "https://artificialanalysis.ai/en/leaderboards/models",
+  "https://arena.ai/leaderboard/text",
+  "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/",
+  "https://finance.yahoo.com/quote/GOOGL/key-statistics/"
+ ],
+ "escenas": [
+  {
+   "texto": "¿Google va ganando la carrera de la inteligencia artificial? Depende de a quién le preguntes. Parte tres de tres.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "GOOGLE POR DENTRO · PARTE 3 DE 3",
+    "word": "¿VA GANANDO?",
+    "sub": "la carrera de la IA",
+    "sync": "ganando",
+    "color": "green",
+    "size": 180
+   }
+  },
+  {
+   "texto": "En Artificial Analysis, que examina a las inteligencias artificiales en razonamiento, ciencia y programación, Gemini empata en el segundo lugar con OpenAI, detrás de Claude, de Anthropic.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Claude Fable 5.2",
+      "value": 65,
+      "value_text": "65",
+      "color": "blue",
+      "sync": "detrás"
+     },
+     {
+      "label": "GPT-6.2 Astra",
+      "value": 62,
+      "value_text": "62",
+      "color": "blue",
+      "sync": "openai"
+     },
+     {
+      "label": "Gemini 4 Neon",
+      "value": 62,
+      "value_text": "62",
+      "color": "green",
+      "sync": "empata",
+      "resaltar": true
+     },
+     {
+      "label": "Gemini 4 Carbon",
+      "value": 60,
+      "value_text": "60",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Claude Opus 5.5",
+      "value": 59,
+      "value_text": "59",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "Artificial Analysis · exámenes",
+    "titulo": "GEMINI: 2.º EMPATADO",
+    "vmax": 66,
+    "nota": "Fuente: artificialanalysis.ai · 27 nov 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 400
+   }
+  },
+  {
+   "texto": "Pero en LMArena, donde la gente vota a ciegas entre dos respuestas, con más de nueve millones de votos, los tres primeros puestos son de Gemini.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Gemini 4 Carbon",
+      "value": 1526,
+      "value_text": "1526",
+      "color": "green",
+      "sync": "tres",
+      "resaltar": true
+     },
+     {
+      "label": "Gemini 4 Argon",
+      "value": 1521,
+      "value_text": "1521",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Gemini 4 Neon",
+      "value": 1518,
+      "value_text": "1518",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Muse (Meta)",
+      "value": 1511,
+      "value_text": "1511",
+      "color": "blue",
+      "sync": null
+     },
+     {
+      "label": "Claude Opus 5.5",
+      "value": 1507,
+      "value_text": "1507",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "LMArena · votos de la gente",
+    "titulo": "TOP 3: TODO GEMINI",
+    "vmax": 1530,
+    "nota": "Fuente: arena.ai · 18 nov 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 400
+   }
+  },
+  {
+   "texto": "O sea: en los exámenes, segundo. En lo que prefiere la gente, primero.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EXÁMENES",
+     "value": "2.º",
+     "sub": "Artificial Analysis",
+     "color": "blue",
+     "sync": "exámenes"
+    },
+    "right": {
+     "label": "LA GENTE",
+     "value": "1.º",
+     "sub": "LMArena",
+     "color": "green",
+     "sync": "gente"
+    }
+   }
+  },
+  {
+   "texto": "Y la gente lo usa: sus modelos ya procesan casi treinta y dos mil millones de tokens por minuto, cuatro veces más que hace un año.",
+   "visual": {
+    "tipo": "captura",
+    "src": "google_q3_blog_m.png",
+    "recorte": [
+     0,
+     0.19635820084250577,
+     1,
+     0.23508628889794808
+    ],
+    "alto_max": 820,
+    "pre": "uso real, según Google",
+    "titulo": "32.000 M TOKENS POR MINUTO",
+    "fuente": "blog de Google · 28 oct 2026",
+    "resaltar": [
+     0.02,
+     0.115,
+     0.98,
+     0.47
+    ],
+    "resaltar_sync": "treinta"
+   }
+  },
+  {
+   "texto": "Para sostener todo eso, invirtió cincuenta y un mil cuatrocientos millones de dólares en un solo trimestre, sobre todo en centros de datos como este.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Google Data Center, Council Bluffs Iowa (49062863796).jpg",
+    "titulo": "$51.400 M",
+    "titulo_sync": "cincuenta",
+    "chip": "inversión en un trimestre",
+    "chip_sync": "trimestre",
+    "chip_color": "warm",
+    "brillo": 0.8,
+    "tsize": 160
+   }
+  },
+  {
+   "texto": "¿Y la acción? Su PER de los últimos doce meses es catorce, pero se ve bajo porque ganó mucho con sus inversiones en otras empresas. Con las ganancias que esperan los analistas, es dieciocho, en la zona de Meta y Microsoft.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "PER 12 MESES",
+     "value": "14",
+     "sub": "inflado por inversiones",
+     "color": "grey",
+     "sync": "catorce"
+    },
+    "right": {
+     "label": "PER ESPERADO",
+     "value": "18",
+     "sub": "zona Meta / Microsoft",
+     "color": "blue",
+     "sync": "dieciocho"
+    }
+   }
+  },
+  {
+   "texto": "Veredicto: Google no está perdiendo la carrera. La está pagando, y muy cara. Esto es educativo, no es recomendación. ¿Vale la pena tanto gasto? Comenta. La próxima magnífica: Microsoft.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NO LA PIERDE:",
+     "LA PAGA"
+    ],
+    "syncs": [
+     null,
+     "pagando"
+    ],
+    "button": "¿VALE LA PENA?",
+    "button_sync": "comenta"
+   }
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "serie": "Inside the Magnificent 7",
+ "titulo": "Inside Google (2/3): chips, Nobels, robotaxis & quantum 🧬 #shorts",
+ "descripcion": "Inside the Magnificent 7 · Google, part 2 of 3: what it's researching.\n\n🧬 DeepMind: AlphaFold, 2024 Nobel Prize in Chemistry (Hassabis & Jumper) · Gemini app at 1B users\n🔧 TPUs: 8th generation (TPU 8t for training, TPU 8i for inference), April 2026; also sold to other companies\n⚛️ Willow: a sub-5-minute calculation that would take a supercomputer 10^25 years (Dec 2024) · Michel Devoret, 2025 Nobel Prize in Physics\n🚕 Waymo: ~500,000 paid rides/week in 10 cities (March 2026), goal of 1M by year end\n💸 Other Bets: $2.04B loss in Jul–Sep 2026",
+ "hashtags": "#google #gemini #ai #stocks #magnificent7 #shorts",
+ "fuentes": [
+  "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/",
+  "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/",
+  "https://blog.google/technology/research/google-willow-quantum-chip/",
+  "https://www.nobelprize.org/prizes/chemistry/2024/summary/",
+  "https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/"
+ ],
+ "escenas": [
+  {
+   "texto": "Google isn't just a search engine. Part two of three: its four big bets on the future.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "INSIDE GOOGLE · PART 2 OF 3",
+    "word": "4 BIG BETS",
+    "sub": "chips · Nobel · robotaxis · quantum",
+    "sync": "search",
+    "color": "blue",
+    "size": 190
+   }
+  },
+  {
+   "texto": "Bet one: DeepMind, its A I lab. It built AlphaFold, which predicts the shape of proteins, and that's why Demis Hassabis and John Jumper won the Nobel Prize in Chemistry in twenty twenty four.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "bet 1 · DeepMind",
+    "word": "NOBEL 2024",
+    "sub": "AlphaFold predicts protein shapes",
+    "sync": "nobel",
+    "color": "green",
+    "size": 190,
+    "sub_sync": "alphafold"
+   }
+  },
+  {
+   "texto": "DeepMind also makes Gemini. Its app now has one billion users, and it's the fastest growing product in Google's history.",
+   "visual": {
+    "tipo": "captura",
+    "src": "google_q3_blog_m.png",
+    "recorte": [
+     0,
+     0.19635820084250577,
+     1,
+     0.23508628889794808
+    ],
+    "alto_max": 820,
+    "pre": "Gemini, according to Google",
+    "titulo": "1 BILLION USERS",
+    "fuente": "Google blog · Oct 28, 2026",
+    "resaltar": [
+     0.02,
+     0.77,
+     0.98,
+     0.99
+    ],
+    "resaltar_sync": "billion"
+   }
+  },
+  {
+   "texto": "Bet two: its own chips, called TPUs. In April it unveiled the eighth generation, split in two: one chip to train models and one to run them. And it now sells them to other companies, including Anthropic, the maker of Claude.",
+   "visual": {
+    "tipo": "captura",
+    "src": "google_tpu8_blog.png",
+    "recorte": [
+     0.025,
+     0.016935757028339167,
+     0.975,
+     0.1179857739640962
+    ],
+    "alto_max": 820,
+    "pre": "bet 2 · its own chips",
+    "titulo": "TPU: 8TH GENERATION",
+    "fuente": "Google blog · April 2026"
+   }
+  },
+  {
+   "texto": "Bet three: quantum computing. Its Willow chip did a calculation in under five minutes that would take a supercomputer ten septillion years.",
+   "visual": {
+    "tipo": "captura",
+    "src": "google_willow_blog_m.png",
+    "recorte": [
+     0,
+     0.12678288431061807,
+     1,
+     0.15478077126254622
+    ],
+    "alto_max": 820,
+    "pre": "bet 3 · the Willow quantum chip",
+    "titulo": "5 MINUTES VS. 10²⁵ YEARS",
+    "fuente": "Google blog · Dec 2024",
+    "resaltar": [
+     0.02,
+     0.47,
+     0.98,
+     0.98
+    ],
+    "resaltar_sync": "five"
+   }
+  },
+  {
+   "texto": "And its chief scientist for quantum hardware, Michel Devoret, won the Nobel Prize in Physics in twenty twenty five.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Google Quantum AI",
+    "word": "NOBEL 2025",
+    "sub": "in Physics, for its hardware chief scientist",
+    "sync": "nobel",
+    "color": "green",
+    "size": 190
+   }
+  },
+  {
+   "texto": "Bet four: Waymo, driverless taxis. By March it was giving half a million paid rides a week in ten U S cities, and its goal is one million before the year ends.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Jaguar I-Pace (Waymo) on Westwood Boulevard (2024).jpg",
+    "titulo": "500,000/WEEK",
+    "titulo_sync": "half",
+    "chip": "bet 4 · Waymo · goal: 1 million",
+    "chip_sync": "goal",
+    "chip_color": "green",
+    "brillo": 0.8,
+    "tsize": 130
+   }
+  },
+  {
+   "texto": "And what does all this cost? The other bets, including Waymo, lost two point zero four billion dollars this quarter alone.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "\"Other Bets\" loss, Jul–Sep 2026",
+    "word": "−$2.04B",
+    "sub": "includes Waymo",
+    "sync": "lost",
+    "color": "warm",
+    "size": 190
+   }
+  },
+  {
+   "texto": "In part three: is Google winning the A I race? And is its stock cheap or expensive? Subscribe.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PART 3:",
+     "IS IT WINNING?"
+    ],
+    "syncs": [
+     null,
+     "winning"
+    ],
+    "button": "SUBSCRIBE",
+    "button_sync": "subscribe"
+   }
+  }
+ ]
+}

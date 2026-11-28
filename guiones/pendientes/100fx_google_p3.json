@@ -1,0 +1,231 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "serie": "Inside the Magnificent 7",
+ "titulo": "Inside Google (3/3): is it winning AI? Is the stock cheap? 🏆 #shorts",
+ "descripcion": "Inside the Magnificent 7 · Google, part 3 of 3: is it winning the AI race? Educational, not investment advice.\n\n🧪 Artificial Analysis (Nov 27, 2026): 1) Claude Fable 5.2 65 · 2) GPT-6.2 Astra 62 · 3) Gemini 4 Neon 62 · 4) Gemini 4 Carbon 60 · 5) Claude Opus 5.5 59\n🗳️ LMArena (Nov 18, 2026, 9.2M votes): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518\n⚙️ ~32B tokens per minute on its APIs (4x in a year)\n🏗️ Capex Jul–Sep 2026: $51.4B\n💲 Trailing P/E ~14 (includes investment gains) · Forward P/E ~18 (Yahoo Finance, Nov 27)",
+ "hashtags": "#google #gemini #ai #stocks #magnificent7 #shorts",
+ "fuentes": [
+  "https://artificialanalysis.ai/en/leaderboards/models",
+  "https://arena.ai/leaderboard/text",
+  "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/",
+  "https://finance.yahoo.com/quote/GOOGL/key-statistics/"
+ ],
+ "escenas": [
+  {
+   "texto": "Is Google winning the A I race? It depends on who you ask. Part three of three.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "INSIDE GOOGLE · PART 3 OF 3",
+    "word": "WINNING?",
+    "sub": "the AI race",
+    "sync": "winning",
+    "color": "green",
+    "size": 200
+   }
+  },
+  {
+   "texto": "On Artificial Analysis, which tests A I models on reasoning, science and coding, Gemini ties for second with OpenAI, behind Anthropic's Claude.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Claude Fable 5.2",
+      "value": 65,
+      "value_text": "65",
+      "color": "blue",
+      "sync": "behind"
+     },
+     {
+      "label": "GPT-6.2 Astra",
+      "value": 62,
+      "value_text": "62",
+      "color": "blue",
+      "sync": "openai"
+     },
+     {
+      "label": "Gemini 4 Neon",
+      "value": 62,
+      "value_text": "62",
+      "color": "green",
+      "sync": "ties",
+      "resaltar": true
+     },
+     {
+      "label": "Gemini 4 Carbon",
+      "value": 60,
+      "value_text": "60",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Claude Opus 5.5",
+      "value": 59,
+      "value_text": "59",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "Artificial Analysis · exams",
+    "titulo": "GEMINI: TIED 2ND",
+    "vmax": 66,
+    "nota": "Source: artificialanalysis.ai · Nov 27, 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 400
+   }
+  },
+  {
+   "texto": "But on LMArena, where people vote blind between two answers, with over nine million votes, the top three spots all belong to Gemini.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Gemini 4 Carbon",
+      "value": 1526,
+      "value_text": "1526",
+      "color": "green",
+      "sync": "three",
+      "resaltar": true
+     },
+     {
+      "label": "Gemini 4 Argon",
+      "value": 1521,
+      "value_text": "1521",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Gemini 4 Neon",
+      "value": 1518,
+      "value_text": "1518",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Muse (Meta)",
+      "value": 1511,
+      "value_text": "1511",
+      "color": "blue",
+      "sync": null
+     },
+     {
+      "label": "Claude Opus 5.5",
+      "value": 1507,
+      "value_text": "1507",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "LMArena · people's votes",
+    "titulo": "TOP 3: ALL GEMINI",
+    "vmax": 1530,
+    "nota": "Source: arena.ai · Nov 18, 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 400
+   }
+  },
+  {
+   "texto": "So: on exams, second. On what people prefer, first.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "EXAMS",
+     "value": "2nd",
+     "sub": "Artificial Analysis",
+     "color": "blue",
+     "sync": "exams"
+    },
+    "right": {
+     "label": "PEOPLE",
+     "value": "1st",
+     "sub": "LMArena",
+     "color": "green",
+     "sync": "people"
+    }
+   }
+  },
+  {
+   "texto": "And people use it: its models now process almost thirty two billion tokens per minute, four times more than a year ago.",
+   "visual": {
+    "tipo": "captura",
+    "src": "google_q3_blog_m.png",
+    "recorte": [
+     0,
+     0.19635820084250577,
+     1,
+     0.23508628889794808
+    ],
+    "alto_max": 820,
+    "pre": "real usage, per Google",
+    "titulo": "32B TOKENS PER MINUTE",
+    "fuente": "Google blog · Oct 28, 2026",
+    "resaltar": [
+     0.02,
+     0.115,
+     0.98,
+     0.47
+    ],
+    "resaltar_sync": "thirty"
+   }
+  },
+  {
+   "texto": "To keep all that running, it invested fifty one point four billion dollars in a single quarter, mostly in data centers like this one.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Google Data Center, Council Bluffs Iowa (49062863796).jpg",
+    "titulo": "$51.4B",
+    "titulo_sync": "fifty",
+    "chip": "invested in one quarter",
+    "chip_sync": "quarter",
+    "chip_color": "warm",
+    "brillo": 0.8,
+    "tsize": 170
+   }
+  },
+  {
+   "texto": "And the stock? Its trailing P E is fourteen, but that looks low because it made big gains on its stakes in other companies. On analysts' expected profits it's eighteen, in Meta and Microsoft territory.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "TRAILING P/E",
+     "value": "14",
+     "sub": "boosted by investments",
+     "color": "grey",
+     "sync": "fourteen"
+    },
+    "right": {
+     "label": "FORWARD P/E",
+     "value": "18",
+     "sub": "Meta / Microsoft zone",
+     "color": "blue",
+     "sync": "eighteen"
+    }
+   }
+  },
+  {
+   "texto": "The verdict: Google isn't losing the race. It's paying for it, and paying a lot. This is educational, not investment advice. Is all that spending worth it? Comment below. Next magnificent: Microsoft.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NOT LOSING:",
+     "PAYING"
+    ],
+    "syncs": [
+     null,
+     "paying"
+    ],
+    "button": "WORTH IT?",
+    "button_sync": "comment"
+   }
+  }
+ ]
+}

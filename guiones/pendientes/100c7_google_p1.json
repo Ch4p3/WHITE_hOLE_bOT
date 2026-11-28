@@ -1,0 +1,179 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "serie": "Inside the Magnificent 7",
+ "titulo": "Inside Google (1/3): where the money comes from 💵 #shorts",
+ "descripcion": "Inside the Magnificent 7 · Google, part 1 of 3: where the money comes from. Data from the Q3 2026 earnings release (Jul–Sep) and Google's official blog.\n\n💵 Revenue: $127.6B (+25%) · Search $63.4B (+12%) · Cloud $30.7B (+103%, operating income $11.1B) · Subscriptions, Play & devices $14.3B · YouTube ads $11.2B · Ad network $7.5B\n📺 150M YouTube Music & Premium subscribers (incl. trials)\n📊 Operating margin 31.8% · Ads: 72.5% → 64.3% of revenue in one year",
+ "hashtags": "#google #gemini #ai #stocks #magnificent7 #shorts",
+ "fuentes": [
+  "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm",
+  "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/"
+ ],
+ "escenas": [
+  {
+   "texto": "Google sold one hundred twenty seven point six billion dollars in three months. That's a pace of half a trillion a year. Where does all that money come from? This is part one of three.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "INSIDE GOOGLE · PART 1 OF 3",
+    "word": "$127.6B",
+    "sub": "in 3 months (Jul–Sep 2026)",
+    "sync": "sold",
+    "color": "green",
+    "size": 200
+   }
+  },
+  {
+   "texto": "Sixty three billion came from search. Thirty one from the cloud. Fourteen from subscriptions, the Play Store and phones. Eleven from YouTube ads. And seven and a half from ads on other sites.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Search",
+      "value": 63.35,
+      "value_text": "$63.4B",
+      "color": "blue",
+      "sync": "search"
+     },
+     {
+      "label": "Cloud",
+      "value": 30.71,
+      "value_text": "$30.7B",
+      "color": "green",
+      "sync": "cloud"
+     },
+     {
+      "label": "Subscriptions",
+      "value": 14.29,
+      "value_text": "$14.3B",
+      "color": "blue",
+      "sync": "subscriptions"
+     },
+     {
+      "label": "YouTube",
+      "value": 11.21,
+      "value_text": "$11.2B",
+      "color": "blue",
+      "sync": "youtube"
+     },
+     {
+      "label": "Ad network",
+      "value": 7.46,
+      "value_text": "$7.5B",
+      "color": "blue",
+      "sync": "sites"
+     }
+    ],
+    "pre": "where the money comes from (3 months)",
+    "titulo": "ALMOST HALF: SEARCH",
+    "nota": "Source: Alphabet Q3 2026 earnings release",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 380
+   }
+  },
+  {
+   "texto": "Search is still king, growing twelve percent. The fear was that chatbots would kill it, but Google's own CEO said it: searches are growing at the fastest pace in five years.",
+   "visual": {
+    "tipo": "captura",
+    "src": "google_q3_blog_m.png",
+    "recorte": [
+     0,
+     0.13996466911265118,
+     1,
+     0.15898899306971057
+    ],
+    "alto_max": 820,
+    "pre": "straight from Google's CEO",
+    "titulo": "SEARCH ISN'T DYING",
+    "fuente": "Google blog · Oct 28, 2026",
+    "resaltar": [
+     0.02,
+     0.645,
+     0.98,
+     0.97
+    ],
+    "resaltar_sync": "five"
+   }
+  },
+  {
+   "texto": "But the star is the cloud. In one year, quarterly sales went from fifteen billion to thirty point seven billion. And its profit tripled: from three point six to eleven point one billion.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "2025",
+     "value": "$15.2B",
+     "sub": "profit: $3.6B",
+     "color": "grey",
+     "sync": "fifteen"
+    },
+    "right": {
+     "label": "2026",
+     "value": "$30.7B",
+     "sub": "profit: $11.1B",
+     "color": "green",
+     "sync": "thirty"
+    }
+   }
+  },
+  {
+   "texto": "That's why Google depends less and less on ads: advertising went from seventy two to sixty four percent of everything it sells.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "share of revenue from ads",
+    "word": "72% → 64%",
+    "sub": "in just one year",
+    "sync": "seventy",
+    "color": "warm",
+    "size": 170
+   }
+  },
+  {
+   "texto": "And YouTube isn't just ads anymore: between Music and Premium it has one hundred fifty million subscribers.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "YouTube Music + Premium",
+    "word": "150M",
+    "sub": "subscribers (including trials)",
+    "sync": "hundred",
+    "color": "blue",
+    "size": 220
+   }
+  },
+  {
+   "texto": "In the end, out of every hundred dollars it sells, almost thirty two are operating profit.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "operating margin",
+    "word": "31.8%",
+    "sub": "out of $100, ~$32 is profit",
+    "sync": "thirty",
+    "color": "green",
+    "size": 220
+   }
+  },
+  {
+   "texto": "In part two: what Google is researching. Its own chips, a Nobel Prize, driverless taxis and a quantum computer. Subscribe so you don't miss it.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PART 2:",
+     "WHAT IT'S",
+     "RESEARCHING"
+    ],
+    "syncs": [
+     null,
+     "researching",
+     "nobel"
+    ],
+    "button": "SUBSCRIBE",
+    "button_sync": "subscribe"
+   }
+  }
+ ]
+}

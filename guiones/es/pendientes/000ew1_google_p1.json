@@ -1,0 +1,179 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Las 7 magníficas por dentro",
+ "titulo": "Google por dentro (1/3): ¿de dónde sale su plata? 💵",
+ "descripcion": "Las 7 magníficas por dentro · Google, parte 1 de 3: de dónde sale la plata. Datos del informe del 3er trimestre de 2026 (jul–sep) y del blog oficial de Google.\n\n💵 Ventas: $127.600 M (+25 %) · Buscador $63.400 M (+12 %) · Nube $30.700 M (+103 %, ganancia $11.100 M) · Suscripciones, Play y equipos $14.300 M · YouTube anuncios $11.200 M · Red de anuncios $7.500 M\n📺 150 M suscriptores de YouTube Music y Premium (incluye pruebas)\n📊 Margen operativo: 31,8 % · Anuncios: del 72,5 % al 64,3 % de las ventas en un año",
+ "hashtags": "#google #alphabet #gemini #inteligenciaartificial #bolsa #WhiteHole #reels",
+ "fuentes": [
+  "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm",
+  "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/"
+ ],
+ "escenas": [
+  {
+   "texto": "Google vendió ciento veintisiete mil seiscientos millones de dólares en tres meses. Va a un ritmo de quinientos mil millones al año. ¿De dónde sale tanta plata? Esta es la parte uno de tres.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "GOOGLE POR DENTRO · PARTE 1 DE 3",
+    "word": "$127.600 M",
+    "sub": "en 3 meses (jul–sep 2026)",
+    "sync": "vendió",
+    "color": "green",
+    "size": 170
+   }
+  },
+  {
+   "texto": "Sesenta y tres mil millones salieron del buscador. Treinta y un mil, de la nube. Catorce mil, de suscripciones, la Play Store y los teléfonos. Once mil, de los anuncios de YouTube. Y siete mil quinientos, de anuncios en otras páginas.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Buscador",
+      "value": 63.35,
+      "value_text": "$63.400 M",
+      "color": "blue",
+      "sync": "buscador"
+     },
+     {
+      "label": "Nube",
+      "value": 30.71,
+      "value_text": "$30.700 M",
+      "color": "green",
+      "sync": "nube"
+     },
+     {
+      "label": "Suscripciones",
+      "value": 14.29,
+      "value_text": "$14.300 M",
+      "color": "blue",
+      "sync": "suscripciones"
+     },
+     {
+      "label": "YouTube",
+      "value": 11.21,
+      "value_text": "$11.200 M",
+      "color": "blue",
+      "sync": "youtube"
+     },
+     {
+      "label": "Otras páginas",
+      "value": 7.46,
+      "value_text": "$7.500 M",
+      "color": "blue",
+      "sync": "páginas"
+     }
+    ],
+    "pre": "¿de dónde sale la plata? (3 meses)",
+    "titulo": "CASI LA MITAD: EL BUSCADOR",
+    "nota": "Fuente: informe de Alphabet, 3er trimestre 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 380
+   }
+  },
+  {
+   "texto": "El buscador sigue siendo el rey, y crece doce por ciento. El miedo era que los chatbots lo mataran, pero el propio jefe de Google lo dijo: las búsquedas crecen al mayor ritmo en cinco años.",
+   "visual": {
+    "tipo": "captura",
+    "src": "google_q3_blog_m.png",
+    "recorte": [
+     0,
+     0.13996466911265118,
+     1,
+     0.15898899306971057
+    ],
+    "alto_max": 820,
+    "pre": "lo dijo el jefe de Google",
+    "titulo": "EL BUSCADOR NO MUERE",
+    "fuente": "blog de Google · 28 oct 2026",
+    "resaltar": [
+     0.02,
+     0.645,
+     0.98,
+     0.97
+    ],
+    "resaltar_sync": "cinco"
+   }
+  },
+  {
+   "texto": "Pero la estrella es la nube. En un año, sus ventas pasaron de quince mil a treinta mil setecientos millones por trimestre. Y su ganancia se triplicó: de tres mil seiscientos a once mil cien millones.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "2025",
+     "value": "$15.200 M",
+     "sub": "ganancia: $3.600 M",
+     "color": "grey",
+     "sync": "quince"
+    },
+    "right": {
+     "label": "2026",
+     "value": "$30.700 M",
+     "sub": "ganancia: $11.100 M",
+     "color": "green",
+     "sync": "treinta"
+    }
+   }
+  },
+  {
+   "texto": "Por eso Google depende cada vez menos de la publicidad: los anuncios pasaron de ser el setenta y dos al sesenta y cuatro por ciento de todo lo que vende.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "parte de las ventas que son anuncios",
+    "word": "72 % → 64 %",
+    "sub": "en solo un año",
+    "sync": "setenta",
+    "color": "warm",
+    "size": 160
+   }
+  },
+  {
+   "texto": "Y YouTube ya no vive solo de anuncios: entre Music y Premium tiene ciento cincuenta millones de suscriptores.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "YouTube Music + Premium",
+    "word": "150 M",
+    "sub": "suscriptores (incluye pruebas gratis)",
+    "sync": "ciento",
+    "color": "blue",
+    "size": 220
+   }
+  },
+  {
+   "texto": "Al final, de cada cien dólares que vende, le quedan casi treinta y dos de ganancia operativa.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "margen operativo",
+    "word": "31,8 %",
+    "sub": "de cada $100, quedan ~$32",
+    "sync": "treinta",
+    "color": "green",
+    "size": 220
+   }
+  },
+  {
+   "texto": "En la parte dos: en qué investiga Google. Chips propios, un premio Nobel, taxis sin conductor y una computadora cuántica. Síguenos para no perdértela.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PARTE 2:",
+     "EN QUÉ",
+     "INVESTIGA"
+    ],
+    "syncs": [
+     null,
+     "investiga",
+     "nobel"
+    ],
+    "button": "SÍGUENOS",
+    "button_sync": "síguenos"
+   }
+  }
+ ]
+}

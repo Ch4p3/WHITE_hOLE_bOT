@@ -7,11 +7,12 @@
   "velocidad": 1.05
  },
  "serie": "Las 7 magníficas por dentro",
- "titulo": "Google por dentro: de dónde sale su plata y por qué va ganando la IA 🔍",
- "descripcion": "Las 7 magníficas por dentro, episodio 1: Google (Alphabet). Datos del informe del 3er trimestre de 2026 (jul–sep) y del ranking LMArena. Contenido educativo, no es recomendación de inversión.\n\n💵 Ventas del trimestre: $127.600 M (+25 %)\n• Buscador: $63.400 M · Nube: $30.700 M (+103 %) · Suscripciones, Play y equipos: $14.300 M · YouTube anuncios: $11.200 M · Red de anuncios: $7.500 M\n☁️ Ganancia operativa de Google Cloud: $11.100 M\n🏗️ Capex del trimestre: $51.400 M\n🧪 Otras apuestas (incluye Waymo): pérdida de $2.040 M\n🏆 LMArena texto (18 nov 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518 · 4) Muse Wonder (Meta) 1511 · 5) Claude Opus 5.5 1507",
+ "titulo": "Google por dentro: de dónde sale su plata y cómo va en la carrera de la IA 🔍",
+ "descripcion": "Las 7 magníficas por dentro, episodio 1: Google (Alphabet). Datos del informe del 3er trimestre de 2026 (jul–sep) y del ranking LMArena. Contenido educativo, no es recomendación de inversión.\n\n💵 Ventas del trimestre: $127.600 M (+25 %)\n• Buscador: $63.400 M · Nube: $30.700 M (+103 %) · Suscripciones, Play y equipos: $14.300 M · YouTube anuncios: $11.200 M · Red de anuncios: $7.500 M\n☁️ Ganancia operativa de Google Cloud: $11.100 M\n🏗️ Capex del trimestre: $51.400 M\n🧪 Otras apuestas (incluye Waymo): pérdida de $2.040 M\n🏆 Artificial Analysis, índice de inteligencia (27 nov 2026): 1) Claude Fable 5.2 (Anthropic) 65 · 2) GPT-6.2 Astra (OpenAI) 62 · 3) Gemini 4 Neon (Google) 62 · 4) Gemini 4 Carbon (Google) 60 · 5) Claude Opus 5.5 (Anthropic) 59\n🗳️ LMArena, votos de la gente (18 nov 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518",
  "hashtags": "#google #alphabet #gemini #inteligenciaartificial #bolsa #WhiteHole #reels",
  "fuentes": [
   "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm",
+  "https://artificialanalysis.ai/en/leaderboards/models",
   "https://arena.ai/leaderboard/text"
  ],
  "escenas": [
@@ -102,51 +103,51 @@
    }
   },
   {
-   "texto": "Su laboratorio, DeepMind, crea los modelos Gemini. Y en LMArena, el ranking donde la gente vota a ciegas entre dos inteligencias artificiales, con más de nueve millones de votos, hoy los tres primeros puestos son de Gemini.",
+   "texto": "Su laboratorio, DeepMind, crea Gemini. En Artificial Analysis, que examina a las inteligencias artificiales en razonamiento, ciencia y programación, Gemini 4 Neon empata en segundo lugar con OpenAI, detrás de Claude, de Anthropic. Donde sí va primero es en LMArena, donde vota la gente.",
    "visual": {
     "tipo": "ranking",
     "items": [
      {
-      "label": "Gemini 4 Carbon",
-      "value": 1526,
-      "value_text": "1526",
-      "color": "green",
-      "sync": "tres",
-      "resaltar": true
+      "label": "Claude Fable 5.2",
+      "value": 65,
+      "value_text": "65",
+      "color": "blue",
+      "sync": "detrás"
      },
      {
-      "label": "Gemini 4 Argon",
-      "value": 1521,
-      "value_text": "1521",
-      "color": "green",
-      "sync": null
+      "label": "GPT-6.2 Astra",
+      "value": 62,
+      "value_text": "62",
+      "color": "blue",
+      "sync": "openai"
      },
      {
       "label": "Gemini 4 Neon",
-      "value": 1518,
-      "value_text": "1518",
+      "value": 62,
+      "value_text": "62",
       "color": "green",
-      "sync": null
+      "sync": "neon",
+      "resaltar": true
      },
      {
-      "label": "Muse (Meta)",
-      "value": 1511,
-      "value_text": "1511",
-      "color": "blue",
+      "label": "Gemini 4 Carbon",
+      "value": 60,
+      "value_text": "60",
+      "color": "green",
       "sync": null
      },
      {
       "label": "Claude Opus 5.5",
-      "value": 1507,
-      "value_text": "1507",
+      "value": 59,
+      "value_text": "59",
       "color": "blue",
       "sync": null
      }
     ],
-    "pre": "LMArena · ranking de texto",
-    "titulo": "TOP 3: TODO GEMINI",
-    "vmax": 1530,
-    "nota": "Fuente: LMArena (arena.ai) · 18 nov 2026",
+    "pre": "Artificial Analysis · índice de inteligencia",
+    "titulo": "GEMINI: 2.º (EMPATADO)",
+    "vmax": 66,
+    "nota": "Fuente: artificialanalysis.ai · 27 nov 2026",
     "nota_color": "grey",
     "y": 600,
     "alto_fila": 140,
@@ -166,7 +167,7 @@
    }
   },
   {
-   "texto": "¿El riesgo? Que la inteligencia artificial se coma su buscador. Por ahora pasa lo contrario: las búsquedas crecen al mayor ritmo en cinco años. Y sus otras apuestas, como Waymo, perdieron dos mil millones en el trimestre.",
+   "texto": "¿El riesgo? Que la inteligencia artificial se coma su buscador. Por ahora pasa lo contrario: las búsquedas crecen al mayor ritmo en cinco años. Y sus otras apuestas, como Waymo, perdieron dos mil millones.",
    "visual": {
     "tipo": "versus",
     "left": {

@@ -6,11 +6,12 @@
   "lang": "en-us",
   "velocidad": 1.0
  },
- "titulo": "Inside Google: where the money comes from and why it's winning AI 🔍 #shorts",
- "descripcion": "Inside the Magnificent 7, episode 1: Google (Alphabet). Data from the Q3 2026 earnings release (Jul–Sep) and the LMArena leaderboard. Educational, not investment advice.\n\n💵 Quarterly revenue: $127.6B (+25%)\n• Search: $63.4B · Cloud: $30.7B (+103%) · Subscriptions, Play & devices: $14.3B · YouTube ads: $11.2B · Ad network: $7.5B\n☁️ Google Cloud operating income: $11.1B\n🏗️ Quarterly capex: $51.4B\n🧪 Other Bets (incl. Waymo): $2.04B loss\n🏆 LMArena text (Nov 18, 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518 · 4) Muse Wonder (Meta) 1511 · 5) Claude Opus 5.5 1507",
+ "titulo": "Inside Google: where the money comes from and how it's doing in the AI race 🔍 #shorts",
+ "descripcion": "Inside the Magnificent 7, episode 1: Google (Alphabet). Data from the Q3 2026 earnings release (Jul–Sep) and the LMArena leaderboard. Educational, not investment advice.\n\n💵 Quarterly revenue: $127.6B (+25%)\n• Search: $63.4B · Cloud: $30.7B (+103%) · Subscriptions, Play & devices: $14.3B · YouTube ads: $11.2B · Ad network: $7.5B\n☁️ Google Cloud operating income: $11.1B\n🏗️ Quarterly capex: $51.4B\n🧪 Other Bets (incl. Waymo): $2.04B loss\n🏆 Artificial Analysis Intelligence Index (Nov 27, 2026): 1) Claude Fable 5.2 (Anthropic) 65 · 2) GPT-6.2 Astra (OpenAI) 62 · 3) Gemini 4 Neon (Google) 62 · 4) Gemini 4 Carbon (Google) 60 · 5) Claude Opus 5.5 (Anthropic) 59\n🗳️ LMArena, human votes (Nov 18, 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518",
  "hashtags": "#google #gemini #ai #stocks #magnificent7 #shorts",
  "fuentes": [
   "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm",
+  "https://artificialanalysis.ai/en/leaderboards/models",
   "https://arena.ai/leaderboard/text"
  ],
  "escenas": [
@@ -101,51 +102,51 @@
    }
   },
   {
-   "texto": "Its lab, DeepMind, builds the Gemini models. And on LMArena, the ranking where people vote blind between two A I models, with over nine million votes, the top three spots right now all belong to Gemini.",
+   "texto": "Its lab, DeepMind, builds Gemini. On Artificial Analysis, which tests A I models on reasoning, science and coding, Gemini 4 Neon ties for second with OpenAI, behind Anthropic's Claude. Where it does rank first is LMArena, where people vote.",
    "visual": {
     "tipo": "ranking",
     "items": [
      {
-      "label": "Gemini 4 Carbon",
-      "value": 1526,
-      "value_text": "1526",
-      "color": "green",
-      "sync": "three",
-      "resaltar": true
+      "label": "Claude Fable 5.2",
+      "value": 65,
+      "value_text": "65",
+      "color": "blue",
+      "sync": "behind"
      },
      {
-      "label": "Gemini 4 Argon",
-      "value": 1521,
-      "value_text": "1521",
-      "color": "green",
-      "sync": null
+      "label": "GPT-6.2 Astra",
+      "value": 62,
+      "value_text": "62",
+      "color": "blue",
+      "sync": "openai"
      },
      {
       "label": "Gemini 4 Neon",
-      "value": 1518,
-      "value_text": "1518",
+      "value": 62,
+      "value_text": "62",
       "color": "green",
-      "sync": null
+      "sync": "neon",
+      "resaltar": true
      },
      {
-      "label": "Muse (Meta)",
-      "value": 1511,
-      "value_text": "1511",
-      "color": "blue",
+      "label": "Gemini 4 Carbon",
+      "value": 60,
+      "value_text": "60",
+      "color": "green",
       "sync": null
      },
      {
       "label": "Claude Opus 5.5",
-      "value": 1507,
-      "value_text": "1507",
+      "value": 59,
+      "value_text": "59",
       "color": "blue",
       "sync": null
      }
     ],
-    "pre": "LMArena · text leaderboard",
-    "titulo": "TOP 3: ALL GEMINI",
-    "vmax": 1530,
-    "nota": "Source: LMArena (arena.ai) · Nov 18, 2026",
+    "pre": "Artificial Analysis · Intelligence Index",
+    "titulo": "GEMINI: TIED 2ND",
+    "vmax": 66,
+    "nota": "Source: artificialanalysis.ai · Nov 27, 2026",
     "nota_color": "grey",
     "y": 600,
     "alto_fila": 140,
@@ -165,7 +166,7 @@
    }
   },
   {
-   "texto": "The risk? That A I eats its search business. So far the opposite is happening: searches are growing at the fastest pace in five years. And its other bets, like Waymo, lost two billion in the quarter.",
+   "texto": "The risk? That A I eats its search business. So far the opposite is happening: searches are growing at the fastest pace in five years. And its other bets, like Waymo, lost two billion.",
    "visual": {
     "tipo": "versus",
     "left": {

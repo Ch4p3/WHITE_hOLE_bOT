@@ -1,0 +1,205 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Las 7 magníficas por dentro",
+ "titulo": "Google por dentro: de dónde sale su plata y por qué va ganando la IA 🔍",
+ "descripcion": "Las 7 magníficas por dentro, episodio 1: Google (Alphabet). Datos del informe del 3er trimestre de 2026 (jul–sep) y del ranking LMArena. Contenido educativo, no es recomendación de inversión.\n\n💵 Ventas del trimestre: $127.600 M (+25 %)\n• Buscador: $63.400 M · Nube: $30.700 M (+103 %) · Suscripciones, Play y equipos: $14.300 M · YouTube anuncios: $11.200 M · Red de anuncios: $7.500 M\n☁️ Ganancia operativa de Google Cloud: $11.100 M\n🏗️ Capex del trimestre: $51.400 M\n🧪 Otras apuestas (incluye Waymo): pérdida de $2.040 M\n🏆 LMArena texto (18 nov 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518 · 4) Muse Wonder (Meta) 1511 · 5) Claude Opus 5.5 1507",
+ "hashtags": "#google #alphabet #gemini #inteligenciaartificial #bolsa #WhiteHole #reels",
+ "fuentes": [
+  "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm",
+  "https://arena.ai/leaderboard/text"
+ ],
+ "escenas": [
+  {
+   "texto": "Google vendió ciento veintisiete mil seiscientos millones de dólares en tres meses. ¿De dónde sale tanta plata, y va ganando la carrera de la inteligencia artificial?",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "GOOGLE (ALPHABET) · JUL–SEP 2026",
+    "word": "$127.600 M",
+    "size": 170,
+    "sync": "vendió",
+    "sub": "en solo 3 meses",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Casi la mitad sale del buscador: sesenta y tres mil millones en anuncios. Luego la nube, con treinta y un mil; las suscripciones, la Play Store y los teléfonos, catorce mil; y los anuncios de YouTube, once mil.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Buscador",
+      "value": 63.35,
+      "value_text": "$63.400 M",
+      "color": "blue",
+      "sync": "buscador"
+     },
+     {
+      "label": "Nube",
+      "value": 30.71,
+      "value_text": "$30.700 M",
+      "color": "green",
+      "sync": "nube"
+     },
+     {
+      "label": "Suscripciones",
+      "value": 14.29,
+      "value_text": "$14.300 M",
+      "color": "blue",
+      "sync": "suscripciones"
+     },
+     {
+      "label": "YouTube",
+      "value": 11.21,
+      "value_text": "$11.200 M",
+      "color": "blue",
+      "sync": "youtube"
+     },
+     {
+      "label": "Red de anuncios",
+      "value": 7.46,
+      "value_text": "$7.500 M",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "¿de dónde sale la plata? (3 meses)",
+    "titulo": "CASI LA MITAD: EL BUSCADOR",
+    "nota": "Fuente: informe de Alphabet, 3er trimestre 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 380
+   }
+  },
+  {
+   "texto": "Y lo que más crece es la nube: Google Cloud duplicó sus ventas en un año. Le alquila cómputo para inteligencia artificial a otras empresas, y ya gana once mil millones por trimestre.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Google Cloud, en un año",
+    "word": "+103 %",
+    "size": 230,
+    "sync": "duplicó",
+    "sub": "ganancia operativa: $11.100 M en 3 meses",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Su arma secreta son sus propios chips de inteligencia artificial, las TPU. Los diseña para no depender tanto de Nvidia, y ahora también se los vende a otras empresas.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "sus propios chips de IA",
+    "word": "TPU",
+    "size": 260,
+    "sync": "TPU",
+    "sub": "para depender menos de Nvidia",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Su laboratorio, DeepMind, crea los modelos Gemini. Y en LMArena, el ranking donde la gente vota a ciegas entre dos inteligencias artificiales, con más de nueve millones de votos, hoy los tres primeros puestos son de Gemini.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Gemini 4 Carbon",
+      "value": 1526,
+      "value_text": "1526",
+      "color": "green",
+      "sync": "tres",
+      "resaltar": true
+     },
+     {
+      "label": "Gemini 4 Argon",
+      "value": 1521,
+      "value_text": "1521",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Gemini 4 Neon",
+      "value": 1518,
+      "value_text": "1518",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Muse (Meta)",
+      "value": 1511,
+      "value_text": "1511",
+      "color": "blue",
+      "sync": null
+     },
+     {
+      "label": "Claude Opus 5.5",
+      "value": 1507,
+      "value_text": "1507",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "LMArena · ranking de texto",
+    "titulo": "TOP 3: TODO GEMINI",
+    "vmax": 1530,
+    "nota": "Fuente: LMArena (arena.ai) · 18 nov 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 400
+   }
+  },
+  {
+   "texto": "Para sostener todo eso, gasta como pocos: cincuenta y un mil millones de dólares en un solo trimestre, sobre todo en centros de datos.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "inversión (capex), jul–sep 2026",
+    "word": "$51.400 M",
+    "size": 170,
+    "sync": "cincuenta",
+    "sub": "sobre todo en centros de datos",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "¿El riesgo? Que la inteligencia artificial se coma su buscador. Por ahora pasa lo contrario: las búsquedas crecen al mayor ritmo en cinco años. Y sus otras apuestas, como Waymo, perdieron dos mil millones en el trimestre.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "A FAVOR",
+     "value": "BÚSQUEDAS ↑",
+     "sub": "el mayor ritmo en 5 años",
+     "color": "green",
+     "sync": "búsquedas"
+    },
+    "right": {
+     "label": "EN CONTRA",
+     "value": "−$2.000 M",
+     "sub": "Waymo y otras apuestas",
+     "color": "warm",
+     "sync": "perdieron"
+    }
+   }
+  },
+  {
+   "texto": "Esto es educativo, no es recomendación de inversión. La próxima magnífica: Microsoft. Comenta cuál quieres después.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "PRÓXIMA:",
+     "MICROSOFT"
+    ],
+    "syncs": [
+     null,
+     "microsoft"
+    ],
+    "button": "COMENTA",
+    "button_sync": "comenta"
+   }
+  }
+ ]
+}

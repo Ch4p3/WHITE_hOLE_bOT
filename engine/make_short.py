@@ -976,7 +976,7 @@ def v_ranking(img, d, t, sc, p):
     if p.get("titulo"):
         slide(d, (W // 2, 410), p["titulo"], fit(d, p["titulo"], 76, "black", 960), WHITE, t, 0.1, weight="black")
     vmax = p.get("vmax") or max(min(float(it["value"]), 1e18) for it in items if not it.get("tope")) or 1
-    x0, lw, maxw = 90, 250, 610
+    x0 = 90; lw = p.get("ancho_etiqueta", 250); maxw = 860 - lw
     y = p.get("y", 540); hf = p.get("alto_fila", 112)
     for i, it in enumerate(items):
         st = at(sc, it.get("sync"), 0.12 * i)

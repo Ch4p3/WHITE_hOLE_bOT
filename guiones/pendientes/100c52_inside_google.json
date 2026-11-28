@@ -1,0 +1,204 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "Inside Google: where the money comes from and why it's winning AI 🔍 #shorts",
+ "descripcion": "Inside the Magnificent 7, episode 1: Google (Alphabet). Data from the Q3 2026 earnings release (Jul–Sep) and the LMArena leaderboard. Educational, not investment advice.\n\n💵 Quarterly revenue: $127.6B (+25%)\n• Search: $63.4B · Cloud: $30.7B (+103%) · Subscriptions, Play & devices: $14.3B · YouTube ads: $11.2B · Ad network: $7.5B\n☁️ Google Cloud operating income: $11.1B\n🏗️ Quarterly capex: $51.4B\n🧪 Other Bets (incl. Waymo): $2.04B loss\n🏆 LMArena text (Nov 18, 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518 · 4) Muse Wonder (Meta) 1511 · 5) Claude Opus 5.5 1507",
+ "hashtags": "#google #gemini #ai #stocks #magnificent7 #shorts",
+ "fuentes": [
+  "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm",
+  "https://arena.ai/leaderboard/text"
+ ],
+ "escenas": [
+  {
+   "texto": "Google sold one hundred twenty seven point six billion dollars in three months. Where does all that money come from, and is it winning the A I race?",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "GOOGLE (ALPHABET) · JUL–SEP 2026",
+    "word": "$127.6B",
+    "size": 200,
+    "sync": "sold",
+    "sub": "in just 3 months",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Almost half comes from search: sixty three billion in ads. Then the cloud, with thirty one billion; subscriptions, the Play Store and phones, fourteen; and YouTube ads, eleven.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Search",
+      "value": 63.35,
+      "value_text": "$63.4B",
+      "color": "blue",
+      "sync": "search"
+     },
+     {
+      "label": "Cloud",
+      "value": 30.71,
+      "value_text": "$30.7B",
+      "color": "green",
+      "sync": "cloud"
+     },
+     {
+      "label": "Subscriptions",
+      "value": 14.29,
+      "value_text": "$14.3B",
+      "color": "blue",
+      "sync": "subscriptions"
+     },
+     {
+      "label": "YouTube",
+      "value": 11.21,
+      "value_text": "$11.2B",
+      "color": "blue",
+      "sync": "youtube"
+     },
+     {
+      "label": "Ad network",
+      "value": 7.46,
+      "value_text": "$7.5B",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "where the money comes from (3 months)",
+    "titulo": "ALMOST HALF: SEARCH",
+    "nota": "Source: Alphabet Q3 2026 earnings release",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 380
+   }
+  },
+  {
+   "texto": "And the fastest grower is the cloud: Google Cloud doubled its sales in a year. It rents A I computing to other companies, and already earns eleven billion a quarter.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "Google Cloud, year over year",
+    "word": "+103%",
+    "size": 230,
+    "sync": "doubled",
+    "sub": "operating income: $11.1B in 3 months",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Its secret weapon is its own A I chips, called TPUs. Google designs them to depend less on Nvidia, and now it sells them to other companies too.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "its own AI chips",
+    "word": "TPU",
+    "size": 260,
+    "sync": "TPUs",
+    "sub": "to depend less on Nvidia",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Its lab, DeepMind, builds the Gemini models. And on LMArena, the ranking where people vote blind between two A I models, with over nine million votes, the top three spots right now all belong to Gemini.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Gemini 4 Carbon",
+      "value": 1526,
+      "value_text": "1526",
+      "color": "green",
+      "sync": "three",
+      "resaltar": true
+     },
+     {
+      "label": "Gemini 4 Argon",
+      "value": 1521,
+      "value_text": "1521",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Gemini 4 Neon",
+      "value": 1518,
+      "value_text": "1518",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Muse (Meta)",
+      "value": 1511,
+      "value_text": "1511",
+      "color": "blue",
+      "sync": null
+     },
+     {
+      "label": "Claude Opus 5.5",
+      "value": 1507,
+      "value_text": "1507",
+      "color": "blue",
+      "sync": null
+     }
+    ],
+    "pre": "LMArena · text leaderboard",
+    "titulo": "TOP 3: ALL GEMINI",
+    "vmax": 1530,
+    "nota": "Source: LMArena (arena.ai) · Nov 18, 2026",
+    "nota_color": "grey",
+    "y": 600,
+    "alto_fila": 140,
+    "ancho_etiqueta": 400
+   }
+  },
+  {
+   "texto": "To keep all that going, it spends like few others: fifty one billion dollars in a single quarter, mostly on data centers.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "capex, Jul–Sep 2026",
+    "word": "$51.4B",
+    "size": 200,
+    "sync": "fifty",
+    "sub": "mostly on data centers",
+    "color": "warm"
+   }
+  },
+  {
+   "texto": "The risk? That A I eats its search business. So far the opposite is happening: searches are growing at the fastest pace in five years. And its other bets, like Waymo, lost two billion in the quarter.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "FOR",
+     "value": "SEARCHES ↑",
+     "sub": "fastest pace in 5 years",
+     "color": "green",
+     "sync": "searches"
+    },
+    "right": {
+     "label": "AGAINST",
+     "value": "−$2B",
+     "sub": "Waymo & other bets",
+     "color": "warm",
+     "sync": "lost"
+    }
+   }
+  },
+  {
+   "texto": "This is educational, not investment advice. Next magnificent: Microsoft. Comment which one you want after that.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "NEXT:",
+     "MICROSOFT"
+    ],
+    "syncs": [
+     null,
+     "microsoft"
+    ],
+    "button": "COMMENT",
+    "button_sync": "comment"
+   }
+  }
+ ]
+}

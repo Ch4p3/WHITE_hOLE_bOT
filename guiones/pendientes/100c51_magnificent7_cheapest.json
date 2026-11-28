@@ -1,0 +1,307 @@
+{
+ "idioma": "en",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "am_michael",
+  "lang": "en-us",
+  "velocidad": 1.0
+ },
+ "titulo": "The Magnificent 7: which one is cheapest right now? 📊 #shorts",
+ "descripcion": "All 7 tech giants compared with real Yahoo Finance data (Nov 27, 2026 close). Educational content, not investment advice.\n\n📉 Drop from 52-week high: Nvidia −38% · Google −33% · Tesla −20% · Meta −19% · Microsoft −12% · Amazon −12% · Apple −1%\n💲 Forward P/E: Nvidia 9 · Meta 18 · Google 18 · Microsoft 20 · Amazon 23 · Apple 34 · Tesla 185\n📈 Sales growth, past year: Nvidia +103% · Meta +26% · Google +25% · Microsoft +19% · Amazon +12% · Apple +12% · Tesla 0%\n🏗️ Capex, last quarter: Amazon $77B · Google $51B · Microsoft $39B · Meta $34B\n\nForward P/E uses analyst estimates. Nvidia Elliott waves, parts 1 & 2, on the channel.",
+ "hashtags": "#stocks #nvidia #apple #tesla #investing #magnificent7 #shorts",
+ "fuentes": [
+  "https://finance.yahoo.com/quote/NVDA/key-statistics/"
+ ],
+ "escenas": [
+  {
+   "texto": "Nvidia is down thirty eight percent from its high. So what about the other six tech giants? Today I'll show you which one is cheapest, with real numbers.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "THE MAGNIFICENT 7 · NOV 27",
+    "word": "WHICH?",
+    "size": 230,
+    "sync": "cheapest",
+    "sub": "the cheapest of the 7 giants",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "First, how far they've fallen from their one year high. Nvidia, minus thirty eight. Google, minus thirty three. Tesla and Meta, about minus twenty. Microsoft and Amazon, minus twelve. And Apple is basically at its high.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Nvidia",
+      "value": 38,
+      "value_text": "−38%",
+      "color": "warm",
+      "sync": "Nvidia"
+     },
+     {
+      "label": "Google",
+      "value": 33,
+      "value_text": "−33%",
+      "color": "warm",
+      "sync": "Google"
+     },
+     {
+      "label": "Tesla",
+      "value": 20,
+      "value_text": "−20%",
+      "color": "warm",
+      "sync": "Tesla"
+     },
+     {
+      "label": "Meta",
+      "value": 19,
+      "value_text": "−19%",
+      "color": "warm",
+      "sync": "Meta"
+     },
+     {
+      "label": "Microsoft",
+      "value": 12,
+      "value_text": "−12%",
+      "color": "warm",
+      "sync": "Microsoft"
+     },
+     {
+      "label": "Amazon",
+      "value": 12,
+      "value_text": "−12%",
+      "color": "warm",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Apple",
+      "value": 0.6,
+      "value_text": "−1%",
+      "color": "warm",
+      "sync": "Apple"
+     }
+    ],
+    "pre": "drop from 52-week high",
+    "titulo": "HOW FAR HAVE THEY FALLEN?",
+    "vmax": 40,
+    "nota": "Yahoo Finance · Nov 27, 2026 close",
+    "nota_color": "grey"
+   }
+  },
+  {
+   "texto": "But falling doesn't make a stock cheap. For that we use the P E ratio: how many years of profits you pay for the stock. A P E of twenty means paying twenty years of profits.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "P/E = price ÷ earnings",
+    "word": "P/E 20",
+    "size": 220,
+    "sync": "twenty",
+    "sub": "= paying 20 years of profits",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Using the profits analysts expect next year: Nvidia trades at nine. Meta and Google, eighteen. Microsoft, twenty. Amazon, twenty three. Apple, thirty four. And Tesla… one hundred eighty five.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Nvidia",
+      "value": 9.1,
+      "value_text": "9",
+      "color": "green",
+      "sync": "Nvidia",
+      "resaltar": true
+     },
+     {
+      "label": "Meta",
+      "value": 17.6,
+      "value_text": "18",
+      "color": "blue",
+      "sync": "Meta"
+     },
+     {
+      "label": "Google",
+      "value": 18.0,
+      "value_text": "18",
+      "color": "blue",
+      "sync": "Google"
+     },
+     {
+      "label": "Microsoft",
+      "value": 20.4,
+      "value_text": "20",
+      "color": "blue",
+      "sync": "Microsoft"
+     },
+     {
+      "label": "Amazon",
+      "value": 23.3,
+      "value_text": "23",
+      "color": "blue",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Apple",
+      "value": 33.9,
+      "value_text": "34",
+      "color": "blue",
+      "sync": "Apple"
+     },
+     {
+      "label": "Tesla",
+      "value": 184.9,
+      "value_text": "185",
+      "color": "warm",
+      "sync": "Tesla",
+      "tope": true
+     }
+    ],
+    "pre": "forward P/E (expected earnings)",
+    "titulo": "LOWER = CHEAPER",
+    "vmax": 36,
+    "nota": "Yahoo Finance · Nov 27, 2026 close",
+    "nota_color": "grey"
+   }
+  },
+  {
+   "texto": "And cheap isn't everything: growth matters. Nvidia's sales doubled in a year. Meta and Google are growing twenty five percent. Amazon and Apple, twelve. And Tesla, zero.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Nvidia",
+      "value": 103,
+      "value_text": "+103%",
+      "color": "green",
+      "sync": "Nvidia"
+     },
+     {
+      "label": "Meta",
+      "value": 26,
+      "value_text": "+26%",
+      "color": "green",
+      "sync": "Meta"
+     },
+     {
+      "label": "Google",
+      "value": 25,
+      "value_text": "+25%",
+      "color": "green",
+      "sync": "Google"
+     },
+     {
+      "label": "Microsoft",
+      "value": 19,
+      "value_text": "+19%",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Amazon",
+      "value": 12,
+      "value_text": "+12%",
+      "color": "green",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Apple",
+      "value": 12,
+      "value_text": "+12%",
+      "color": "green",
+      "sync": "Apple"
+     },
+     {
+      "label": "Tesla",
+      "value": 0,
+      "value_text": "0%",
+      "color": "warm",
+      "sync": "Tesla"
+     }
+    ],
+    "pre": "sales growth, past year",
+    "titulo": "HOW FAST DO THEY GROW?",
+    "vmax": 103,
+    "nota": "Yahoo Finance · Nov 27, 2026 close",
+    "nota_color": "grey"
+   }
+  },
+  {
+   "texto": "And where's the money going? In the last quarter alone, Amazon invested seventy seven billion dollars, Google fifty one, Microsoft thirty nine and Meta thirty four. Most of it goes into A I data centers, packed with Nvidia chips.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Amazon",
+      "value": 77,
+      "value_text": "$77B",
+      "color": "blue",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Google",
+      "value": 51,
+      "value_text": "$51B",
+      "color": "blue",
+      "sync": "Google"
+     },
+     {
+      "label": "Microsoft",
+      "value": 39,
+      "value_text": "$39B",
+      "color": "blue",
+      "sync": "Microsoft"
+     },
+     {
+      "label": "Meta",
+      "value": 34,
+      "value_text": "$34B",
+      "color": "blue",
+      "sync": "Meta"
+     }
+    ],
+    "pre": "capex, last quarter",
+    "titulo": "THE AI SPENDING SPREE",
+    "y": 600,
+    "alto_fila": 150,
+    "nota": "…and the chips come from Nvidia",
+    "nota_sync": "chips"
+   }
+  },
+  {
+   "texto": "The verdict, by the numbers alone: the cheapest is Nvidia, a P E of nine with sales doubling. The most expensive, Tesla. But careful: Nvidia is cheap for a reason, its CEO crisis. And forward P E depends on analyst estimates, which can be wrong.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "CHEAPEST",
+     "value": "NVIDIA",
+     "sub": "P/E 9",
+     "color": "green",
+     "sync": "cheapest"
+    },
+    "right": {
+     "label": "PRICIEST",
+     "value": "TESLA",
+     "sub": "P/E 185",
+     "color": "warm",
+     "sync": "expensive"
+    }
+   }
+  },
+  {
+   "texto": "This is educational, not investment advice. Which one do you think is cheapest? Comment below. And if you missed the Elliott waves on Nvidia, they're on the channel.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "WHICH ONE IS",
+     "CHEAPEST?"
+    ],
+    "syncs": [
+     null,
+     "cheapest"
+    ],
+    "button": "COMMENT",
+    "button_sync": "comment"
+   }
+  }
+ ]
+}

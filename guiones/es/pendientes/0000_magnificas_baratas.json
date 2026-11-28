@@ -1,0 +1,308 @@
+{
+ "idioma": "es",
+ "velocidad": 0.95,
+ "kokoro": {
+  "voz": "em_alex",
+  "lang": "es",
+  "velocidad": 1.05
+ },
+ "serie": "Aprende a leer el mercado",
+ "titulo": "Las 7 magníficas: ¿cuál está más barata hoy? (Nvidia, Apple, Google…) 📊",
+ "descripcion": "Comparamos a las 7 gigantes con datos reales de Yahoo Finance (cierre del 27 nov 2026). Contenido educativo, no es recomendación de inversión.\n\n📉 Caída desde el máximo de 52 semanas: Nvidia −38% · Google −33% · Tesla −20% · Meta −19% · Microsoft −12% · Amazon −12% · Apple −1%\n💲 PER futuro: Nvidia 9 · Meta 18 · Google 18 · Microsoft 20 · Amazon 23 · Apple 34 · Tesla 185\n📈 Ventas último año: Nvidia +103% · Meta +26% · Google +25% · Microsoft +19% · Amazon +12% · Apple +12% · Tesla 0%\n🏗️ Capex último trimestre: Amazon $77 mil M · Google $51 mil M · Microsoft $39 mil M · Meta $34 mil M\n\nEl PER futuro usa estimaciones de analistas. ¿Ondas de Elliott en Nvidia? Partes 1 y 2 en el perfil 👇",
+ "hashtags": "#nvidia #apple #google #microsoft #amazon #meta #tesla #bolsa #inversion #WhiteHole #reels",
+ "fuentes": [
+  "https://finance.yahoo.com/quote/NVDA/key-statistics/"
+ ],
+ "escenas": [
+  {
+   "texto": "Nvidia cayó treinta y ocho por ciento desde su máximo. ¿Y las otras seis gigantes de la tecnología? Hoy te digo cuál está más barata, con números reales.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "LAS 7 MAGNÍFICAS · 27 NOV",
+    "word": "¿CUÁL?",
+    "size": 230,
+    "sync": "barata",
+    "sub": "la más barata de las 7 gigantes",
+    "color": "green"
+   }
+  },
+  {
+   "texto": "Primero, cuánto han caído desde su máximo del último año. Nvidia, menos treinta y ocho. Google, menos treinta y tres. Tesla y Meta, cerca de menos veinte. Microsoft y Amazon, menos doce. Y Apple está prácticamente en su máximo.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Nvidia",
+      "value": 38,
+      "value_text": "−38%",
+      "color": "warm",
+      "sync": "Nvidia"
+     },
+     {
+      "label": "Google",
+      "value": 33,
+      "value_text": "−33%",
+      "color": "warm",
+      "sync": "Google"
+     },
+     {
+      "label": "Tesla",
+      "value": 20,
+      "value_text": "−20%",
+      "color": "warm",
+      "sync": "Tesla"
+     },
+     {
+      "label": "Meta",
+      "value": 19,
+      "value_text": "−19%",
+      "color": "warm",
+      "sync": "Meta"
+     },
+     {
+      "label": "Microsoft",
+      "value": 12,
+      "value_text": "−12%",
+      "color": "warm",
+      "sync": "Microsoft"
+     },
+     {
+      "label": "Amazon",
+      "value": 12,
+      "value_text": "−12%",
+      "color": "warm",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Apple",
+      "value": 0.6,
+      "value_text": "−1%",
+      "color": "warm",
+      "sync": "Apple"
+     }
+    ],
+    "pre": "caída desde el máximo de 52 semanas",
+    "titulo": "¿CUÁNTO HAN CAÍDO?",
+    "vmax": 40,
+    "nota": "Yahoo Finance · cierre del 27 nov 2026",
+    "nota_color": "grey"
+   }
+  },
+  {
+   "texto": "Pero que haya caído no significa que esté barata. Para eso se usa el PER: cuántos años de ganancias pagas por la acción. Un PER de veinte es pagar veinte años de ganancias.",
+   "visual": {
+    "tipo": "bigword",
+    "pre": "el PER = precio ÷ ganancias",
+    "word": "PER 20",
+    "size": 220,
+    "sync": "veinte",
+    "sub": "= pagas 20 años de ganancias",
+    "color": "blue"
+   }
+  },
+  {
+   "texto": "Con las ganancias que esperan los analistas para el próximo año: Nvidia está en nueve. Meta y Google, en dieciocho. Microsoft, veinte. Amazon, veintitrés. Apple, treinta y cuatro. Y Tesla… ciento ochenta y cinco.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Nvidia",
+      "value": 9.1,
+      "value_text": "9",
+      "color": "green",
+      "sync": "Nvidia",
+      "resaltar": true
+     },
+     {
+      "label": "Meta",
+      "value": 17.6,
+      "value_text": "18",
+      "color": "blue",
+      "sync": "Meta"
+     },
+     {
+      "label": "Google",
+      "value": 18.0,
+      "value_text": "18",
+      "color": "blue",
+      "sync": "Google"
+     },
+     {
+      "label": "Microsoft",
+      "value": 20.4,
+      "value_text": "20",
+      "color": "blue",
+      "sync": "Microsoft"
+     },
+     {
+      "label": "Amazon",
+      "value": 23.3,
+      "value_text": "23",
+      "color": "blue",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Apple",
+      "value": 33.9,
+      "value_text": "34",
+      "color": "blue",
+      "sync": "Apple"
+     },
+     {
+      "label": "Tesla",
+      "value": 184.9,
+      "value_text": "185",
+      "color": "warm",
+      "sync": "Tesla",
+      "tope": true
+     }
+    ],
+    "pre": "PER futuro (ganancias esperadas)",
+    "titulo": "MENOS = MÁS BARATA",
+    "vmax": 36,
+    "nota": "Yahoo Finance · cierre del 27 nov 2026",
+    "nota_color": "grey"
+   }
+  },
+  {
+   "texto": "Y barato tampoco es todo: importa cuánto crecen. Las ventas de Nvidia se duplicaron en un año. Meta y Google crecen al veinticinco por ciento. Amazon y Apple, al doce. Y Tesla, nada.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Nvidia",
+      "value": 103,
+      "value_text": "+103%",
+      "color": "green",
+      "sync": "Nvidia"
+     },
+     {
+      "label": "Meta",
+      "value": 26,
+      "value_text": "+26%",
+      "color": "green",
+      "sync": "Meta"
+     },
+     {
+      "label": "Google",
+      "value": 25,
+      "value_text": "+25%",
+      "color": "green",
+      "sync": "Google"
+     },
+     {
+      "label": "Microsoft",
+      "value": 19,
+      "value_text": "+19%",
+      "color": "green",
+      "sync": null
+     },
+     {
+      "label": "Amazon",
+      "value": 12,
+      "value_text": "+12%",
+      "color": "green",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Apple",
+      "value": 12,
+      "value_text": "+12%",
+      "color": "green",
+      "sync": "Apple"
+     },
+     {
+      "label": "Tesla",
+      "value": 0,
+      "value_text": "0%",
+      "color": "warm",
+      "sync": "Tesla"
+     }
+    ],
+    "pre": "crecimiento de ventas en un año",
+    "titulo": "¿CUÁNTO CRECEN?",
+    "vmax": 103,
+    "nota": "Yahoo Finance · cierre del 27 nov 2026",
+    "nota_color": "grey"
+   }
+  },
+  {
+   "texto": "¿Y en qué se gastan la plata? Solo en el último trimestre, Amazon invirtió setenta y siete mil millones de dólares, Google cincuenta y uno, Microsoft treinta y nueve y Meta treinta y cuatro. Casi todo va a centros de datos de inteligencia artificial, llenos de chips de Nvidia.",
+   "visual": {
+    "tipo": "ranking",
+    "items": [
+     {
+      "label": "Amazon",
+      "value": 77,
+      "value_text": "$77 mil M",
+      "color": "blue",
+      "sync": "Amazon"
+     },
+     {
+      "label": "Google",
+      "value": 51,
+      "value_text": "$51 mil M",
+      "color": "blue",
+      "sync": "Google"
+     },
+     {
+      "label": "Microsoft",
+      "value": 39,
+      "value_text": "$39 mil M",
+      "color": "blue",
+      "sync": "Microsoft"
+     },
+     {
+      "label": "Meta",
+      "value": 34,
+      "value_text": "$34 mil M",
+      "color": "blue",
+      "sync": "Meta"
+     }
+    ],
+    "pre": "inversión (capex) del último trimestre",
+    "titulo": "LA FIEBRE DE LA IA",
+    "y": 600,
+    "alto_fila": 150,
+    "nota": "…y los chips se los compran a Nvidia",
+    "nota_sync": "chips"
+   }
+  },
+  {
+   "texto": "Veredicto, solo por números: la más barata es Nvidia, con PER de nueve y ventas que se duplican. La más cara, Tesla. Pero ojo: Nvidia está barata por algo, la crisis de su CEO. Y el PER futuro depende de estimaciones de analistas, que pueden fallar.",
+   "visual": {
+    "tipo": "versus",
+    "left": {
+     "label": "MÁS BARATA",
+     "value": "NVIDIA",
+     "sub": "PER 9",
+     "color": "green",
+     "sync": "barata"
+    },
+    "right": {
+     "label": "MÁS CARA",
+     "value": "TESLA",
+     "sub": "PER 185",
+     "color": "warm",
+     "sync": "cara"
+    }
+   }
+  },
+  {
+   "texto": "Esto es educativo, no es recomendación de inversión. ¿Cuál crees tú que está más barata? Comenta. Y si te perdiste las ondas de Elliott en Nvidia, están en el perfil.",
+   "visual": {
+    "tipo": "outro",
+    "lines": [
+     "¿CUÁL ESTÁ",
+     "MÁS BARATA?"
+    ],
+    "syncs": [
+     null,
+     "barata"
+    ],
+    "button": "COMENTA",
+    "button_sync": "comenta"
+   }
+  }
+ ]
+}

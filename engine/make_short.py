@@ -967,7 +967,43 @@ def v_captura(img, d, t, sc, p):
 _CAPT = {}
 
 
-VISUALS = {"captura": v_captura, "mercado": v_mercado, "lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
+def v_ranking(img, d, t, sc, p):
+    """Ranking compacto (hasta 8 filas): etiqueta, barra y valor. p: pre, titulo, items=[{label, value, value_text,
+    color, sync, tope(bool: la barra se corta con flecha)}], vmax (opcional), y, alto_fila, nota, nota_sync"""
+    items = p["items"]
+    if p.get("pre"):
+        slide(d, (W // 2, 330), p["pre"], 44, GREY, t, 0.0, weight="xbold")
+    if p.get("titulo"):
+        slide(d, (W // 2, 410), p["titulo"], fit(d, p["titulo"], 76, "black", 960), WHITE, t, 0.1, weight="black")
+    vmax = p.get("vmax") or max(min(float(it["value"]), 1e18) for it in items if not it.get("tope")) or 1
+    x0, lw, maxw = 90, 250, 610
+    y = p.get("y", 540); hf = p.get("alto_fila", 112)
+    for i, it in enumerate(items):
+        st = at(sc, it.get("sync"), 0.12 * i)
+        k = ease_out(prog(t, st, 0.7))
+        if k <= 0: y += hf; continue
+        c2 = col(it.get("color"), BLUE)
+        d.rounded_rectangle([x0 - 20, y - hf / 2 + 8, W - x0 + 20, y + hf / 2 - 8], 18, fill=PANEL if not it.get("resaltar") else (30, 44, 80))
+        text(d, (x0, y), it["label"], fit(d, it["label"], 46, "black", lw - 20), WHITE, "black", "lm")
+        frac = 0.86 if it.get("tope") else max(0.0, float(it["value"])) / vmax
+        wb = max(18, maxw * min(1.0, frac) * k)
+        bx = x0 + lw
+        d.rounded_rectangle([bx, y - 26, bx + wb, y + 26], 14, fill=c2)
+        if it.get("tope") and k > 0.9:
+            d.polygon([(bx + wb, y - 34), (bx + wb + 34, y), (bx + wb, y + 34)], fill=c2)
+        if k > 0.5:
+            vt = it.get("value_text", str(it["value"]))
+            f = font(44, "black"); tw = d.textlength(vt, font=f)
+            if wb > tw + 40 or it.get("tope"):
+                d.text((bx + wb - 16, y), vt, font=f, fill=BG, anchor="rm")
+            else:
+                d.text((bx + wb + (44 if it.get("tope") else 16), y), vt, font=f, fill=WHITE, anchor="lm")
+        y += hf
+    if p.get("nota"):
+        pop(d, (W // 2, y + 30), p["nota"], 52, col(p.get("nota_color"), WARM), t, at(sc, p.get("nota_sync"), 1.2))
+
+
+VISUALS = {"ranking": v_ranking, "captura": v_captura, "mercado": v_mercado, "lista": v_lista, "title": v_title, "counter": v_counter, "bars": v_bars, "versus": v_versus,
            "equation": v_equation, "bigword": v_bigword, "card": v_card, "outro": v_outro,
            "mapa": v_mapa, "grafica": v_grafica, "emoji": v_emoji, "foto": v_foto,
            "primos": v_primos, "formula": v_formula, "espiral": v_espiral, "franja": v_franja}

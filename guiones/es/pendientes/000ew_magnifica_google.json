@@ -7,8 +7,8 @@
   "velocidad": 1.05
  },
  "serie": "Las 7 magníficas por dentro",
- "titulo": "Google por dentro: de dónde sale su plata y cómo va en la carrera de la IA 🔍",
- "descripcion": "Las 7 magníficas por dentro, episodio 1: Google (Alphabet). Datos del informe del 3er trimestre de 2026 (jul–sep) y del ranking LMArena. Contenido educativo, no es recomendación de inversión.\n\n💵 Ventas del trimestre: $127.600 M (+25 %)\n• Buscador: $63.400 M · Nube: $30.700 M (+103 %) · Suscripciones, Play y equipos: $14.300 M · YouTube anuncios: $11.200 M · Red de anuncios: $7.500 M\n☁️ Ganancia operativa de Google Cloud: $11.100 M\n🏗️ Capex del trimestre: $51.400 M\n🧪 Otras apuestas (incluye Waymo): pérdida de $2.040 M\n🏆 Artificial Analysis, índice de inteligencia (27 nov 2026): 1) Claude Fable 5.2 (Anthropic) 65 · 2) GPT-6.2 Astra (OpenAI) 62 · 3) Gemini 4 Neon (Google) 62 · 4) Gemini 4 Carbon (Google) 60 · 5) Claude Opus 5.5 (Anthropic) 59\n🗳️ LMArena, votos de la gente (18 nov 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518",
+ "titulo": "Google por dentro: ¿está perdiendo la guerra de la IA o la está pagando? 🔍",
+ "descripcion": "Las 7 magníficas por dentro, episodio 1: Google (Alphabet). Datos del informe del 3er trimestre de 2026 (jul–sep) y del ranking LMArena. Contenido educativo, no es recomendación de inversión.\n\n💵 Ventas del trimestre: $127.600 M (+25 %)\n• Buscador: $63.400 M · Nube: $30.700 M (+103 %) · Suscripciones, Play y equipos: $14.300 M · YouTube anuncios: $11.200 M · Red de anuncios: $7.500 M\n☁️ Ganancia operativa de Google Cloud: $11.100 M\n🏗️ Capex del trimestre: $51.400 M\n🧪 Otras apuestas (incluye Waymo): pérdida de $2.040 M\n🏆 Artificial Analysis, índice de inteligencia (27 nov 2026): 1) Claude Fable 5.2 (Anthropic) 65 · 2) GPT-6.2 Astra (OpenAI) 62 · 3) Gemini 4 Neon (Google) 62 · 4) Gemini 4 Carbon (Google) 60 · 5) Claude Opus 5.5 (Anthropic) 59\n🗳️ LMArena, votos de la gente (18 nov 2026): 1) Gemini 4 Carbon 1526 · 2) Gemini 4 Argon 1521 · 3) Gemini 4 Neon 1518\n\nImágenes: Wikimedia Commons (créditos en pantalla).",
  "hashtags": "#google #alphabet #gemini #inteligenciaartificial #bolsa #WhiteHole #reels",
  "fuentes": [
   "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm",
@@ -17,19 +17,20 @@
  ],
  "escenas": [
   {
-   "texto": "Google vendió ciento veintisiete mil seiscientos millones de dólares en tres meses. ¿De dónde sale tanta plata, y va ganando la carrera de la inteligencia artificial?",
+   "texto": "Casi la mitad de lo que gana Google sale de lo que tú escribes en el buscador. Y la inteligencia artificial amenaza con quitárselo. ¿Quién va ganando?",
    "visual": {
-    "tipo": "bigword",
-    "pre": "GOOGLE (ALPHABET) · JUL–SEP 2026",
-    "word": "$127.600 M",
-    "size": 170,
-    "sync": "vendió",
-    "sub": "en solo 3 meses",
-    "color": "green"
+    "tipo": "foto",
+    "src": "commons:File:Googleplex - panoramio (6).jpg",
+    "titulo": "GOOGLE POR DENTRO",
+    "titulo_sync": "google",
+    "brillo": 0.8,
+    "chip": "$127.600 M en 3 meses",
+    "chip_sync": "mitad",
+    "chip_color": "green"
    }
   },
   {
-   "texto": "Casi la mitad sale del buscador: sesenta y tres mil millones en anuncios. Luego la nube, con treinta y un mil; las suscripciones, la Play Store y los teléfonos, catorce mil; y los anuncios de YouTube, once mil.",
+   "texto": "En tres meses vendió ciento veintisiete mil millones de dólares. Sesenta y tres mil salieron del buscador, treinta y un mil de la nube, y once mil de YouTube.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -52,7 +53,7 @@
       "value": 14.29,
       "value_text": "$14.300 M",
       "color": "blue",
-      "sync": "suscripciones"
+      "sync": null
      },
      {
       "label": "YouTube",
@@ -69,7 +70,7 @@
       "sync": null
      }
     ],
-    "pre": "¿de dónde sale la plata? (3 meses)",
+    "pre": "ventas de jul–sep 2026",
     "titulo": "CASI LA MITAD: EL BUSCADOR",
     "nota": "Fuente: informe de Alphabet, 3er trimestre 2026",
     "nota_color": "grey",
@@ -79,31 +80,54 @@
    }
   },
   {
-   "texto": "Y lo que más crece es la nube: Google Cloud duplicó sus ventas en un año. Le alquila cómputo para inteligencia artificial a otras empresas, y ya gana once mil millones por trimestre.",
+   "texto": "El miedo era obvio: si le preguntas todo a un chatbot, ya no buscas en Google. Pero pasó lo contrario: las búsquedas crecen al ritmo más alto en cinco años.",
    "visual": {
-    "tipo": "bigword",
-    "pre": "Google Cloud, en un año",
-    "word": "+103 %",
-    "size": 230,
-    "sync": "duplicó",
-    "sub": "ganancia operativa: $11.100 M en 3 meses",
-    "color": "green"
+    "tipo": "foto",
+    "src": "commons:File:Google analytics phone (Unsplash).jpg",
+    "titulo": "EL MIEDO",
+    "titulo_sync": "miedo",
+    "brillo": 0.8,
+    "chip": "búsquedas: el mayor ritmo en 5 años",
+    "chip_sync": "contrario",
+    "chip_color": "green"
    }
   },
   {
-   "texto": "Su arma secreta son sus propios chips de inteligencia artificial, las TPU. Los diseña para no depender tanto de Nvidia, y ahora también se los vende a otras empresas.",
+   "texto": "Y Google contraataca con tres armas. La primera: sus propios chips, las TPU, para no depender de Nvidia. Y ahora también se los vende a otras empresas.",
    "visual": {
-    "tipo": "bigword",
-    "pre": "sus propios chips de IA",
-    "word": "TPU",
-    "size": 260,
-    "sync": "TPU",
-    "sub": "para depender menos de Nvidia",
-    "color": "blue"
+    "tipo": "versus",
+    "left": {
+     "label": "MENOS",
+     "value": "NVIDIA",
+     "sub": "depender de sus chips",
+     "color": "warm",
+     "sync": "nvidia"
+    },
+    "right": {
+     "label": "MÁS",
+     "value": "TPU",
+     "sub": "chips propios… y los vende",
+     "color": "blue",
+     "sync": "TPU"
+    }
    }
   },
   {
-   "texto": "Su laboratorio, DeepMind, crea Gemini. En Artificial Analysis, que examina a las inteligencias artificiales en razonamiento, ciencia y programación, Gemini 4 Neon empata en segundo lugar con OpenAI, detrás de Claude, de Anthropic. Donde sí va primero es en LMArena, donde vota la gente.",
+   "texto": "La segunda: la nube. Le alquila esa potencia a otras empresas, y ese negocio duplicó sus ventas en un año.",
+   "visual": {
+    "tipo": "foto",
+    "src": "commons:File:Google Datacenter - The Dalles, Oregon (17832143871).jpg",
+    "titulo": "+103 %",
+    "titulo_sync": "duplicó",
+    "brillo": 0.8,
+    "tsize": 170,
+    "chip": "arma 2 · Google Cloud en un año",
+    "chip_sync": "nube",
+    "chip_color": "green"
+   }
+  },
+  {
+   "texto": "La tercera: Gemini, de su laboratorio DeepMind. En los exámenes de Artificial Analysis empata en segundo lugar, detrás de Claude. Y en LMArena, donde vota la gente, es el número uno.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -119,14 +143,14 @@
       "value": 62,
       "value_text": "62",
       "color": "blue",
-      "sync": "openai"
+      "sync": null
      },
      {
       "label": "Gemini 4 Neon",
       "value": 62,
       "value_text": "62",
       "color": "green",
-      "sync": "neon",
+      "sync": "empata",
       "resaltar": true
      },
      {
@@ -144,10 +168,10 @@
       "sync": null
      }
     ],
-    "pre": "Artificial Analysis · índice de inteligencia",
-    "titulo": "GEMINI: 2.º (EMPATADO)",
+    "pre": "arma 3 · Gemini · Artificial Analysis",
+    "titulo": "2.º EN EXÁMENES · 1.º EN VOTOS",
     "vmax": 66,
-    "nota": "Fuente: artificialanalysis.ai · 27 nov 2026",
+    "nota": "Fuentes: artificialanalysis.ai (27 nov) · arena.ai (18 nov)",
     "nota_color": "grey",
     "y": 600,
     "alto_fila": 140,
@@ -155,50 +179,46 @@
    }
   },
   {
-   "texto": "Para sostener todo eso, gasta como pocos: cincuenta y un mil millones de dólares en un solo trimestre, sobre todo en centros de datos.",
+   "texto": "Pero todo eso se paga: cincuenta y un mil millones de dólares en un trimestre, en centros de datos como este.",
    "visual": {
-    "tipo": "bigword",
-    "pre": "inversión (capex), jul–sep 2026",
-    "word": "$51.400 M",
-    "size": 170,
-    "sync": "cincuenta",
-    "sub": "sobre todo en centros de datos",
-    "color": "warm"
+    "tipo": "foto",
+    "src": "commons:File:Google Data Center, Council Bluffs Iowa (49062863796).jpg",
+    "titulo": "$51.400 M",
+    "titulo_sync": "cincuenta",
+    "brillo": 0.8,
+    "tsize": 170,
+    "chip": "inversión en un solo trimestre",
+    "chip_sync": "trimestre",
+    "chip_color": "warm"
    }
   },
   {
-   "texto": "¿El riesgo? Que la inteligencia artificial se coma su buscador. Por ahora pasa lo contrario: las búsquedas crecen al mayor ritmo en cinco años. Y sus otras apuestas, como Waymo, perdieron dos mil millones.",
+   "texto": "Y sus otras apuestas, como los taxis sin conductor de Waymo, perdieron dos mil millones.",
    "visual": {
-    "tipo": "versus",
-    "left": {
-     "label": "A FAVOR",
-     "value": "BÚSQUEDAS ↑",
-     "sub": "el mayor ritmo en 5 años",
-     "color": "green",
-     "sync": "búsquedas"
-    },
-    "right": {
-     "label": "EN CONTRA",
-     "value": "−$2.000 M",
-     "sub": "Waymo y otras apuestas",
-     "color": "warm",
-     "sync": "perdieron"
-    }
+    "tipo": "foto",
+    "src": "commons:File:Jaguar I-Pace (Waymo) on Westwood Boulevard (2024).jpg",
+    "titulo": "−$2.000 M",
+    "titulo_sync": "perdieron",
+    "brillo": 0.8,
+    "tsize": 170,
+    "chip": "Waymo y otras apuestas",
+    "chip_sync": "waymo",
+    "chip_color": "warm"
    }
   },
   {
-   "texto": "Esto es educativo, no es recomendación de inversión. La próxima magnífica: Microsoft. Comenta cuál quieres después.",
+   "texto": "Veredicto: Google no está perdiendo la carrera de la inteligencia artificial. La está pagando, y muy cara. ¿Vale la pena? Comenta. Esto es educativo, no es recomendación.",
    "visual": {
     "tipo": "outro",
     "lines": [
-     "PRÓXIMA:",
-     "MICROSOFT"
+     "NO LA PIERDE:",
+     "LA PAGA"
     ],
     "syncs": [
      null,
-     "microsoft"
+     "pagando"
     ],
-    "button": "COMENTA",
+    "button": "¿VALE LA PENA?",
     "button_sync": "comenta"
    }
   }

@@ -85,8 +85,8 @@ jobs:
           git config user.email "white-hole-bot@users.noreply.github.com"
           name=$(basename "${{ inputs.guion }}" .json)
           cp out/es.mp4 /tmp/$name.mp4
-          git fetch -q origin previews && git checkout -q previews || git checkout -q --orphan previews
-          git rm -rq --cached . 2>/dev/null || true
-          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          cp /tmp/$name.mp4 .
-          git add "$name.mp4" && git commit -qm "Vista previa $name" && git push -q origin previews
+          git stash -q -u || true
+          git fetch -q origin previews && git checkout -q previews
+          mkdir -p pruebas && cp /tmp/$name.mp4 pruebas/
+          ls -t pruebas/*.mp4 | tail -n +9 | xargs -r git rm -q   # guarda solo las últimas 8 pruebas (antes borraba TODA la rama)
+          git add pruebas && git commit -qm "Vista previa $name" && git push -q origin previews

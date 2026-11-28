@@ -1,0 +1,72 @@
+name: Fundamentales (Yahoo Finance)
+
+on:
+  workflow_dispatch:
+    inputs:
+      simbolos:
+        description: "Símbolos separados por coma"
+        default: "AAPL,MSFT,GOOGL,AMZN,META,NVDA,TSLA"
+
+permissions:
+  contents: write
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q yfinance pandas
+      - name: Descargar
+        env:
+          SIMBOLOS: ${{ inputs.simbolos }}
+        run: |
+          python - <<'PY'
+          import os, json, datetime, yfinance as yf, pandas as pd
+          os.makedirs("out/datos", exist_ok=True)
+          res = {"fecha": datetime.datetime.utcnow().isoformat() + "Z", "empresas": {}}
+          K = ["shortName","currentPrice","marketCap","trailingPE","forwardPE","pegRatio","priceToSalesTrailing12Months",
+               "revenueGrowth","earningsGrowth","earningsQuarterlyGrowth","grossMargins","operatingMargins","profitMargins",
+               "freeCashflow","operatingCashflow","totalRevenue","netIncomeToCommon","trailingEps","forwardEps",
+               "fiftyTwoWeekHigh","fiftyTwoWeekLow","fiftyDayAverage","twoHundredDayAverage","totalCash","totalDebt"]
+          for s in os.environ["SIMBOLOS"].split(","):
+              s = s.strip(); t = yf.Ticker(s); d = {}
+              try:
+                  info = t.info; d = {k: info.get(k) for k in K}
+              except Exception as e: d["error_info"] = str(e)
+              try:
+                  cf = t.quarterly_cashflow
+                  row = [r for r in cf.index if "Capital Expenditure" in r]
+                  if row:
+                      q = cf.loc[row[0]].dropna()
+                      d["capex_trimestres"] = {str(k.date()): float(v) for k, v in q.items()}
+                      d["capex_ttm"] = float(q.iloc[:4].sum())
+                  fcf = [r for r in cf.index if r == "Free Cash Flow"]
+                  if fcf:
+                      q = cf.loc[fcf[0]].dropna(); d["fcf_ttm"] = float(q.iloc[:4].sum())
+              except Exception as e: d["error_cf"] = str(e)
+              try:
+                  cfa = t.cashflow
+                  row = [r for r in cfa.index if "Capital Expenditure" in r]
+                  if row: d["capex_anual"] = {str(k.date()): float(v) for k, v in cfa.loc[row[0]].dropna().items()}
+              except Exception as e: d["error_cfa"] = str(e)
+              try:
+                  h = t.history(period="2y", interval="1d")["Close"]
+                  d["precio_hace_1a"] = float(h.iloc[-252]) if len(h) > 252 else None
+                  d["max_2a"] = float(h.max()); d["cierres_60d"] = [[str(i.date()), round(float(v), 2)] for i, v in h.tail(60).items()]
+              except Exception as e: d["error_hist"] = str(e)
+              res["empresas"][s] = d
+              print(s, {k: d.get(k) for k in ["currentPrice","trailingPE","forwardPE","capex_ttm","earningsGrowth"]})
+          json.dump(res, open("out/datos/fundamentales.json", "w"), indent=1, default=str)
+          PY
+      - name: Guardar en la rama previews
+        run: |
+          git config user.name "white-hole-bot"
+          git config user.email "white-hole-bot@users.noreply.github.com"
+          cp -r out/datos /tmp/datos
+          git fetch -q origin previews && git checkout -q previews
+          mkdir -p datos && cp /tmp/datos/* datos/
+          git add datos && git commit -qm "Fundamentales" && git push -q origin previews

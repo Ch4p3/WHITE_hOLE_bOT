@@ -8,7 +8,7 @@
  },
  "serie": "Aprende a leer el mercado",
  "titulo": "Las 7 magníficas: ¿cuál está más barata hoy? (Nvidia, Apple, Google…) 📊",
- "descripcion": "Comparamos a las 7 gigantes con datos reales de Yahoo Finance (cierre del 27 nov 2026). Contenido educativo, no es recomendación de inversión.\n\n📉 Caída desde el máximo de 52 semanas: Nvidia −38% · Google −33% · Tesla −20% · Meta −19% · Microsoft −12% · Amazon −12% · Apple −1%\n💲 PER futuro: Nvidia 9 · Meta 18 · Google 18 · Microsoft 20 · Amazon 23 · Apple 34 · Tesla 185\n📈 Ventas último año: Nvidia +103% · Meta +26% · Google +25% · Microsoft +19% · Amazon +12% · Apple +12% · Tesla 0%\n🏗️ Capex último trimestre: Amazon $77 mil M · Google $51 mil M · Microsoft $39 mil M · Meta $34 mil M\n\nEl PER futuro usa estimaciones de analistas. ¿Ondas de Elliott en Nvidia? Partes 1 y 2 en el perfil 👇",
+ "descripcion": "Comparamos a las 7 gigantes con datos reales de Yahoo Finance (cierre del 27 nov 2026). Contenido educativo, no es recomendación de inversión.\n\n📉 Caída desde el máximo de 52 semanas: Nvidia −38% · Google −33% · Tesla −20% · Meta −19% · Microsoft −12% · Amazon −12% · Apple −1%\n💲 PER últimos 12 meses: Google 14 · Nvidia 16 · Amazon 21 · Meta 21 · Microsoft 26 · Apple 40 · Tesla 440\n🔮 PER con ganancias esperadas (estimaciones de analistas, Yahoo): Nvidia ~9–10 · Meta 18 · Google 18 · Microsoft 20 · Amazon 23 · Apple 34 · Tesla 185\n📈 Ventas último año: Nvidia +103% · Meta +26% · Google +25% · Microsoft +19% · Amazon +12% · Apple +12% · Tesla 0%\n🏗️ Capex último trimestre: Amazon $77 mil M · Google $51 mil M · Microsoft $39 mil M · Meta $34 mil M\n\n¿Ondas de Elliott en Nvidia? Partes 1 y 2 en el perfil 👇",
  "hashtags": "#nvidia #apple #google #microsoft #amazon #meta #tesla #bolsa #inversion #WhiteHole #reels",
  "fuentes": [
   "https://finance.yahoo.com/quote/NVDA/key-statistics/"
@@ -101,65 +101,64 @@
    }
   },
   {
-   "texto": "Con las ganancias esperadas para el próximo año: Nvidia, nueve. Meta y Google, dieciocho. Microsoft, veinte. Amazon, veintitrés. Apple, treinta y cuatro. Y Tesla, ciento ochenta y cinco.",
+   "texto": "El PER de los últimos doce meses, el que ves en Yahoo o en Investing: Google, catorce. Nvidia, dieciséis. Amazon y Meta, veintiuno. Microsoft, veintiséis. Apple, cuarenta. Y Tesla, cuatrocientos cuarenta.",
    "visual": {
     "tipo": "ranking",
     "items": [
      {
-      "label": "Nvidia",
-      "value": 9.1,
-      "value_text": "9",
-      "color": "green",
-      "sync": "Nvidia",
-      "resaltar": true
-     },
-     {
-      "label": "Meta",
-      "value": 17.6,
-      "value_text": "18",
-      "color": "blue",
-      "sync": "Meta"
-     },
-     {
       "label": "Google",
-      "value": 18.0,
-      "value_text": "18",
-      "color": "blue",
+      "value": 14.4,
+      "value_text": "14",
+      "color": "green",
       "sync": "Google"
      },
      {
-      "label": "Microsoft",
-      "value": 20.4,
-      "value_text": "20",
-      "color": "blue",
-      "sync": "Microsoft"
+      "label": "Nvidia",
+      "value": 16.2,
+      "value_text": "16",
+      "color": "green",
+      "sync": "Nvidia"
      },
      {
       "label": "Amazon",
-      "value": 23.3,
-      "value_text": "23",
+      "value": 20.5,
+      "value_text": "21",
       "color": "blue",
       "sync": "Amazon"
      },
      {
+      "label": "Meta",
+      "value": 21.5,
+      "value_text": "21",
+      "color": "blue",
+      "sync": "Meta"
+     },
+     {
+      "label": "Microsoft",
+      "value": 25.7,
+      "value_text": "26",
+      "color": "blue",
+      "sync": "Microsoft"
+     },
+     {
       "label": "Apple",
-      "value": 33.9,
-      "value_text": "34",
+      "value": 39.9,
+      "value_text": "40",
       "color": "blue",
       "sync": "Apple"
      },
      {
       "label": "Tesla",
-      "value": 184.9,
-      "value_text": "185",
+      "value": 440,
+      "value_text": "440",
       "color": "warm",
       "sync": "Tesla",
       "tope": true
      }
     ],
-    "pre": "PER futuro (ganancias esperadas)",
+    "pre": "PER de los últimos 12 meses",
     "titulo": "MENOS = MÁS BARATA",
-    "vmax": 36,
+    "vmax": 42,
     "nota": "Yahoo Finance · cierre del 27 nov 2026",
     "nota_color": "grey"
    }
@@ -269,20 +268,20 @@
    }
   },
   {
-   "texto": "Veredicto, solo por números: la más barata es Nvidia. La más cara, Tesla. Pero ojo: Nvidia está barata por algo, la crisis de su CEO, y el PER futuro depende de estimaciones que pueden fallar.",
+   "texto": "Veredicto, solo por números: por PER, las más baratas son Google y Nvidia. Pero Nvidia crece mucho más, y con las ganancias que esperan los analistas, su PER baja a cerca de diez. La más cara, Tesla. Ojo: Nvidia está barata por algo, la crisis de su CEO.",
    "visual": {
     "tipo": "versus",
     "left": {
      "label": "MÁS BARATA",
      "value": "NVIDIA",
-     "sub": "PER 9",
+     "sub": "PER 16 · esperado ~10",
      "color": "green",
-     "sync": "barata"
+     "sync": "baratas"
     },
     "right": {
      "label": "MÁS CARA",
      "value": "TESLA",
-     "sub": "PER 185",
+     "sub": "PER 440",
      "color": "warm",
      "sync": "cara"
     }

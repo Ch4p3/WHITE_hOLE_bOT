@@ -7,7 +7,7 @@
   "velocidad": 1.0
  },
  "titulo": "The Magnificent 7: which one is cheapest right now? 📊 #shorts",
- "descripcion": "All 7 tech giants compared with real Yahoo Finance data (Nov 27, 2026 close). Educational content, not investment advice.\n\n📉 Drop from 52-week high: Nvidia −38% · Google −33% · Tesla −20% · Meta −19% · Microsoft −12% · Amazon −12% · Apple −1%\n💲 Forward P/E: Nvidia 9 · Meta 18 · Google 18 · Microsoft 20 · Amazon 23 · Apple 34 · Tesla 185\n📈 Sales growth, past year: Nvidia +103% · Meta +26% · Google +25% · Microsoft +19% · Amazon +12% · Apple +12% · Tesla 0%\n🏗️ Capex, last quarter: Amazon $77B · Google $51B · Microsoft $39B · Meta $34B\n\nForward P/E uses analyst estimates. Nvidia Elliott waves, parts 1 & 2, on the channel.",
+ "descripcion": "All 7 tech giants compared with real Yahoo Finance data (Nov 27, 2026 close). Educational content, not investment advice.\n\n📉 Drop from 52-week high: Nvidia −38% · Google −33% · Tesla −20% · Meta −19% · Microsoft −12% · Amazon −12% · Apple −1%\n💲 Trailing 12-month P/E: Google 14 · Nvidia 16 · Amazon 21 · Meta 21 · Microsoft 26 · Apple 40 · Tesla 440\n🔮 Forward P/E (analyst estimates, Yahoo): Nvidia ~9–10 · Meta 18 · Google 18 · Microsoft 20 · Amazon 23 · Apple 34 · Tesla 185\n📈 Sales growth, past year: Nvidia +103% · Meta +26% · Google +25% · Microsoft +19% · Amazon +12% · Apple +12% · Tesla 0%\n🏗️ Capex, last quarter: Amazon $77B · Google $51B · Microsoft $39B · Meta $34B\n\nNvidia Elliott waves, parts 1 & 2, on the channel.",
  "hashtags": "#stocks #nvidia #apple #tesla #investing #magnificent7 #shorts",
  "fuentes": [
   "https://finance.yahoo.com/quote/NVDA/key-statistics/"
@@ -100,65 +100,64 @@
    }
   },
   {
-   "texto": "Using next year's expected profits: Nvidia, nine. Meta and Google, eighteen. Microsoft, twenty. Amazon, twenty three. Apple, thirty four. And Tesla, one hundred eighty five.",
+   "texto": "The trailing twelve month P E, the one you see on Yahoo or Investing: Google, fourteen. Nvidia, sixteen. Amazon and Meta, twenty one. Microsoft, twenty six. Apple, forty. And Tesla, four hundred forty.",
    "visual": {
     "tipo": "ranking",
     "items": [
      {
-      "label": "Nvidia",
-      "value": 9.1,
-      "value_text": "9",
-      "color": "green",
-      "sync": "Nvidia",
-      "resaltar": true
-     },
-     {
-      "label": "Meta",
-      "value": 17.6,
-      "value_text": "18",
-      "color": "blue",
-      "sync": "Meta"
-     },
-     {
       "label": "Google",
-      "value": 18.0,
-      "value_text": "18",
-      "color": "blue",
+      "value": 14.4,
+      "value_text": "14",
+      "color": "green",
       "sync": "Google"
      },
      {
-      "label": "Microsoft",
-      "value": 20.4,
-      "value_text": "20",
-      "color": "blue",
-      "sync": "Microsoft"
+      "label": "Nvidia",
+      "value": 16.2,
+      "value_text": "16",
+      "color": "green",
+      "sync": "Nvidia"
      },
      {
       "label": "Amazon",
-      "value": 23.3,
-      "value_text": "23",
+      "value": 20.5,
+      "value_text": "21",
       "color": "blue",
       "sync": "Amazon"
      },
      {
+      "label": "Meta",
+      "value": 21.5,
+      "value_text": "21",
+      "color": "blue",
+      "sync": "Meta"
+     },
+     {
+      "label": "Microsoft",
+      "value": 25.7,
+      "value_text": "26",
+      "color": "blue",
+      "sync": "Microsoft"
+     },
+     {
       "label": "Apple",
-      "value": 33.9,
-      "value_text": "34",
+      "value": 39.9,
+      "value_text": "40",
       "color": "blue",
       "sync": "Apple"
      },
      {
       "label": "Tesla",
-      "value": 184.9,
-      "value_text": "185",
+      "value": 440,
+      "value_text": "440",
       "color": "warm",
       "sync": "Tesla",
       "tope": true
      }
     ],
-    "pre": "forward P/E (expected earnings)",
+    "pre": "trailing 12-month P/E",
     "titulo": "LOWER = CHEAPER",
-    "vmax": 36,
+    "vmax": 42,
     "nota": "Yahoo Finance · Nov 27, 2026 close",
     "nota_color": "grey"
    }
@@ -268,20 +267,20 @@
    }
   },
   {
-   "texto": "The verdict, by the numbers: the cheapest is Nvidia. The priciest, Tesla. But careful: Nvidia is cheap for a reason, its CEO crisis, and forward P E depends on estimates that can be wrong.",
+   "texto": "The verdict, by the numbers: on P E, the cheapest are Google and Nvidia. But Nvidia grows much faster, and on analysts' expected profits its P E drops to about ten. The priciest, Tesla. Careful: Nvidia is cheap for a reason, its CEO crisis.",
    "visual": {
     "tipo": "versus",
     "left": {
      "label": "CHEAPEST",
      "value": "NVIDIA",
-     "sub": "P/E 9",
+     "sub": "P/E 16 · expected ~10",
      "color": "green",
      "sync": "cheapest"
     },
     "right": {
      "label": "PRICIEST",
      "value": "TESLA",
-     "sub": "P/E 185",
+     "sub": "P/E 440",
      "color": "warm",
      "sync": "priciest"
     }

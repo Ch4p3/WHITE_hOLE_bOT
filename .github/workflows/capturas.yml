@@ -32,7 +32,7 @@ jobs:
               b = p.chromium.launch()
               for it in json.loads(os.environ["LISTA"]):
                   pg = b.new_page(viewport={"width": it.get("ancho", 1200), "height": it.get("alto", 900)}, device_scale_factor=2,
-                                  locale="en-US", color_scheme=it.get("tema", "light"))
+                                  locale="en-US", color_scheme=it.get("tema", "light"), **({"user_agent": it["ua"]} if it.get("ua") else {}))
                   try:
                       pg.goto(it["url"], wait_until=it.get("esperar", "domcontentloaded"), timeout=60000)
                       pg.wait_for_timeout(it.get("espera", 3000))

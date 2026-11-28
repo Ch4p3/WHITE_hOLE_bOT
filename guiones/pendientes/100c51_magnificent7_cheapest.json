@@ -14,7 +14,7 @@
  ],
  "escenas": [
   {
-   "texto": "Nvidia is down thirty eight percent from its high. So what about the other six tech giants? Today I'll show you which one is cheapest, with real numbers.",
+   "texto": "Nvidia is down thirty eight percent from its high. What about the other six giants? Here's which one is cheapest, with real numbers.",
    "visual": {
     "tipo": "bigword",
     "pre": "THE MAGNIFICENT 7 · NOV 27",
@@ -26,7 +26,7 @@
    }
   },
   {
-   "texto": "First, how far they've fallen from their one year high. Nvidia, minus thirty eight. Google, minus thirty three. Tesla and Meta, about minus twenty. Microsoft and Amazon, minus twelve. And Apple is basically at its high.",
+   "texto": "First, how far they've fallen from their one year high. Nvidia, minus thirty eight. Google, minus thirty three. Tesla and Meta, minus twenty. Microsoft and Amazon, minus twelve. And Apple, barely at all.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -88,19 +88,19 @@
    }
   },
   {
-   "texto": "But falling doesn't make a stock cheap. For that we use the P E ratio: how many years of profits you pay for the stock. A P E of twenty means paying twenty years of profits.",
+   "texto": "But falling isn't the same as cheap. That's what the P E ratio is for: how many years of profits you pay for the stock.",
    "visual": {
     "tipo": "bigword",
     "pre": "P/E = price ÷ earnings",
     "word": "P/E 20",
     "size": 220,
-    "sync": "twenty",
+    "sync": "years",
     "sub": "= paying 20 years of profits",
     "color": "blue"
    }
   },
   {
-   "texto": "Using the profits analysts expect next year: Nvidia trades at nine. Meta and Google, eighteen. Microsoft, twenty. Amazon, twenty three. Apple, thirty four. And Tesla… one hundred eighty five.",
+   "texto": "Using next year's expected profits: Nvidia, nine. Meta and Google, eighteen. Microsoft, twenty. Amazon, twenty three. Apple, thirty four. And Tesla, one hundred eighty five.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -164,7 +164,7 @@
    }
   },
   {
-   "texto": "And cheap isn't everything: growth matters. Nvidia's sales doubled in a year. Meta and Google are growing twenty five percent. Amazon and Apple, twelve. And Tesla, zero.",
+   "texto": "And cheap isn't everything: growth matters. Nvidia doubled its sales in a year. Meta and Google grow twenty five percent. Amazon and Apple, twelve. Tesla, zero.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -226,7 +226,7 @@
    }
   },
   {
-   "texto": "And where's the money going? In the last quarter alone, Amazon invested seventy seven billion dollars, Google fifty one, Microsoft thirty nine and Meta thirty four. Most of it goes into A I data centers, packed with Nvidia chips.",
+   "texto": "And where's the money going? In the last quarter alone: Amazon, seventy seven billion dollars. Google, fifty one. Microsoft, thirty nine. Meta, thirty four. Mostly A I data centers, packed with Nvidia chips.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -268,7 +268,7 @@
    }
   },
   {
-   "texto": "The verdict, by the numbers alone: the cheapest is Nvidia, a P E of nine with sales doubling. The most expensive, Tesla. But careful: Nvidia is cheap for a reason, its CEO crisis. And forward P E depends on analyst estimates, which can be wrong.",
+   "texto": "The verdict, by the numbers: the cheapest is Nvidia. The priciest, Tesla. But careful: Nvidia is cheap for a reason, its CEO crisis, and forward P E depends on estimates that can be wrong.",
    "visual": {
     "tipo": "versus",
     "left": {
@@ -283,12 +283,12 @@
      "value": "TESLA",
      "sub": "P/E 185",
      "color": "warm",
-     "sync": "expensive"
+     "sync": "priciest"
     }
    }
   },
   {
-   "texto": "This is educational, not investment advice. Which one do you think is cheapest? Comment below. And if you missed the Elliott waves on Nvidia, they're on the channel.",
+   "texto": "This is educational, not investment advice. Which one do you think is cheapest? Comment below.",
    "visual": {
     "tipo": "outro",
     "lines": [

@@ -15,7 +15,7 @@
  ],
  "escenas": [
   {
-   "texto": "Nvidia cayó treinta y ocho por ciento desde su máximo. ¿Y las otras seis gigantes de la tecnología? Hoy te digo cuál está más barata, con números reales.",
+   "texto": "Nvidia cayó treinta y ocho por ciento desde su máximo. ¿Y las otras seis gigantes? Hoy te digo cuál está más barata, con números reales.",
    "visual": {
     "tipo": "bigword",
     "pre": "LAS 7 MAGNÍFICAS · 27 NOV",
@@ -27,7 +27,7 @@
    }
   },
   {
-   "texto": "Primero, cuánto han caído desde su máximo del último año. Nvidia, menos treinta y ocho. Google, menos treinta y tres. Tesla y Meta, cerca de menos veinte. Microsoft y Amazon, menos doce. Y Apple está prácticamente en su máximo.",
+   "texto": "Primero, cuánto han caído desde su máximo del año. Nvidia, menos treinta y ocho. Google, menos treinta y tres. Tesla y Meta, menos veinte. Microsoft y Amazon, menos doce. Y Apple, casi nada.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -89,19 +89,19 @@
    }
   },
   {
-   "texto": "Pero que haya caído no significa que esté barata. Para eso se usa el PER: cuántos años de ganancias pagas por la acción. Un PER de veinte es pagar veinte años de ganancias.",
+   "texto": "Pero caer no es estar barata. Para eso está el PER: cuántos años de ganancias pagas por la acción.",
    "visual": {
     "tipo": "bigword",
     "pre": "el PER = precio ÷ ganancias",
     "word": "PER 20",
     "size": 220,
-    "sync": "veinte",
+    "sync": "años",
     "sub": "= pagas 20 años de ganancias",
     "color": "blue"
    }
   },
   {
-   "texto": "Con las ganancias que esperan los analistas para el próximo año: Nvidia está en nueve. Meta y Google, en dieciocho. Microsoft, veinte. Amazon, veintitrés. Apple, treinta y cuatro. Y Tesla… ciento ochenta y cinco.",
+   "texto": "Con las ganancias esperadas para el próximo año: Nvidia, nueve. Meta y Google, dieciocho. Microsoft, veinte. Amazon, veintitrés. Apple, treinta y cuatro. Y Tesla, ciento ochenta y cinco.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -165,7 +165,7 @@
    }
   },
   {
-   "texto": "Y barato tampoco es todo: importa cuánto crecen. Las ventas de Nvidia se duplicaron en un año. Meta y Google crecen al veinticinco por ciento. Amazon y Apple, al doce. Y Tesla, nada.",
+   "texto": "Y barato no es todo: importa cuánto crecen. Nvidia duplicó sus ventas en un año. Meta y Google crecen veinticinco por ciento. Amazon y Apple, doce. Tesla, nada.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -227,7 +227,7 @@
    }
   },
   {
-   "texto": "¿Y en qué se gastan la plata? Solo en el último trimestre, Amazon invirtió setenta y siete mil millones de dólares, Google cincuenta y uno, Microsoft treinta y nueve y Meta treinta y cuatro. Casi todo va a centros de datos de inteligencia artificial, llenos de chips de Nvidia.",
+   "texto": "¿Y en qué gastan? Solo en el último trimestre: Amazon, setenta y siete mil millones de dólares. Google, cincuenta y uno. Microsoft, treinta y nueve. Meta, treinta y cuatro. Casi todo en centros de datos de inteligencia artificial, llenos de chips de Nvidia.",
    "visual": {
     "tipo": "ranking",
     "items": [
@@ -269,7 +269,7 @@
    }
   },
   {
-   "texto": "Veredicto, solo por números: la más barata es Nvidia, con PER de nueve y ventas que se duplican. La más cara, Tesla. Pero ojo: Nvidia está barata por algo, la crisis de su CEO. Y el PER futuro depende de estimaciones de analistas, que pueden fallar.",
+   "texto": "Veredicto, solo por números: la más barata es Nvidia. La más cara, Tesla. Pero ojo: Nvidia está barata por algo, la crisis de su CEO, y el PER futuro depende de estimaciones que pueden fallar.",
    "visual": {
     "tipo": "versus",
     "left": {
@@ -289,7 +289,7 @@
    }
   },
   {
-   "texto": "Esto es educativo, no es recomendación de inversión. ¿Cuál crees tú que está más barata? Comenta. Y si te perdiste las ondas de Elliott en Nvidia, están en el perfil.",
+   "texto": "Esto es educativo, no es recomendación de inversión. ¿Cuál crees que está más barata? Comenta.",
    "visual": {
     "tipo": "outro",
     "lines": [
